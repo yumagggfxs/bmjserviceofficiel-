@@ -1,0 +1,1771 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*==================================================
+        BMJ SERVICE
+        CHAPITRE 6 - CREATION DE CONTENU
+==================================================*/
+
+
+        * {
+
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', Arial, sans-serif;
+
+        }
+
+
+
+        body {
+
+            background: #f4f7fb;
+
+            color: #333;
+
+            line-height: 1.7;
+
+        }
+
+
+
+
+
+
+
+
+        /*====================================
+            HEADER
+=====================================*/
+
+
+        header {
+
+            position: fixed;
+
+            top: 0;
+
+            left: 0;
+
+            width: 100%;
+
+            height: 75px;
+
+            background: white;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            padding: 0 40px;
+
+            box-shadow: 0 5px 20px rgba(0, 0, 0, .08);
+
+            z-index: 1000;
+
+        }
+
+
+
+        .logo {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+        }
+
+
+
+        .logo img {
+
+            width: 50px;
+
+            height: 50px;
+
+            border-radius: 50%;
+
+        }
+
+
+
+        .logo h2 {
+
+            color: #145A86;
+
+        }
+
+
+
+        .logo span {
+
+            color: #D4AF37;
+
+        }
+
+
+
+
+
+
+        .student-profile {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+        }
+
+
+
+        .student-profile img {
+
+            width: 50px;
+
+            height: 50px;
+
+            border-radius: 50%;
+
+            object-fit: cover;
+
+            border: 3px solid #D4AF37;
+
+        }
+
+
+
+        .student-profile h4 {
+
+            color: #145A86;
+
+        }
+
+
+
+        .student-profile small {
+
+            color: #777;
+
+        }
+
+
+
+
+
+
+
+
+
+        /*====================================
+            HERO COURS
+=====================================*/
+
+
+        .course-hero {
+
+            margin-top: 75px;
+
+            height: 480px;
+
+
+            background:
+
+                linear-gradient(rgba(20, 90, 134, .85),
+
+                    rgba(0, 0, 0, .75)),
+
+                url(images/creation-contenu.jpg);
+
+
+
+            background-size: cover;
+
+            background-position: center;
+
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+
+        }
+
+
+
+        .hero-text {
+
+            width: 90%;
+
+            max-width: 1100px;
+
+            color: white;
+
+            text-align: center;
+
+        }
+
+
+
+        .hero-text span {
+
+            background: #D4AF37;
+
+            color: #145A86;
+
+            padding: 8px 25px;
+
+            border-radius: 30px;
+
+            font-weight: bold;
+
+        }
+
+
+
+        .hero-text h1 {
+
+            font-size: 45px;
+
+            margin: 25px 0;
+
+        }
+
+
+
+        .hero-text p {
+
+            font-size: 18px;
+
+            max-width: 900px;
+
+            margin: auto;
+
+        }
+
+
+
+
+
+
+
+
+
+        /*====================================
+            BUTTONS
+=====================================*/
+
+
+        .course-buttons {
+
+            margin-top: 30px;
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 20px;
+
+        }
+
+
+
+        .course-buttons button {
+
+            padding: 15px 30px;
+
+            border: none;
+
+            border-radius: 30px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            transition: .3s;
+
+        }
+
+
+
+        .course-buttons button:first-child {
+
+            background: #D4AF37;
+
+            color: #145A86;
+
+        }
+
+
+
+        .course-buttons button:last-child {
+
+            background: white;
+
+            color: #145A86;
+
+        }
+
+
+
+        .course-buttons button:hover {
+
+            transform: translateY(-5px);
+
+        }
+
+
+
+
+
+
+
+
+
+        /*====================================
+        DETAILS COURS
+=====================================*/
+
+
+        .course-details {
+
+            width: 90%;
+
+            max-width: 1100px;
+
+            margin: 45px auto;
+
+
+            display: grid;
+
+            grid-template-columns: repeat(4, 1fr);
+
+            gap: 20px;
+
+        }
+
+
+
+        .detail-card {
+
+            background: white;
+
+            padding: 25px;
+
+            text-align: center;
+
+            border-radius: 20px;
+
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+
+        }
+
+
+
+        .detail-card i {
+
+            font-size: 35px;
+
+            color: #D4AF37;
+
+            margin-bottom: 15px;
+
+        }
+
+
+
+        .detail-card h3 {
+
+            color: #145A86;
+
+        }
+
+
+
+
+
+
+
+
+
+        /*====================================
+        PROGRESSION
+=====================================*/
+
+
+        .chapter-progress {
+
+            width: 90%;
+
+            max-width: 1100px;
+
+            margin: 40px auto;
+
+            background: white;
+
+            padding: 30px;
+
+            border-radius: 20px;
+
+            text-align: center;
+
+        }
+
+
+
+        .chapter-progress h2 {
+
+            color: #145A86;
+
+        }
+
+
+
+        .progress-box {
+
+            height: 20px;
+
+            background: #ddd;
+
+            border-radius: 20px;
+
+            overflow: hidden;
+
+            margin: 20px 0;
+
+        }
+
+
+
+        #chapterProgress {
+
+            width: 0%;
+
+            height: 100%;
+
+            background: #D4AF37;
+
+            transition: .5s;
+
+        }
+
+
+
+
+
+
+
+
+
+        /*====================================
+            LESSONS
+=====================================*/
+
+
+        .lessons {
+
+            width: 90%;
+
+            max-width: 1100px;
+
+            margin: 40px auto;
+
+        }
+
+
+
+        .lessons h2 {
+
+            text-align: center;
+
+            color: #145A86;
+
+            margin-bottom: 35px;
+
+        }
+
+
+
+
+
+        .lesson-card {
+
+            background: white;
+
+            display: flex;
+
+            gap: 25px;
+
+            padding: 30px;
+
+            border-radius: 20px;
+
+            margin-bottom: 25px;
+
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+
+        }
+
+
+
+
+
+        .lesson-number {
+
+            min-width: 70px;
+
+            height: 70px;
+
+            border-radius: 50%;
+
+            background: #145A86;
+
+            color: white;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-size: 25px;
+
+            font-weight: bold;
+
+        }
+
+
+
+
+
+        .lesson-content h3 {
+
+            color: #145A86;
+
+            margin-bottom: 15px;
+
+        }
+
+
+
+
+
+        .lesson-content ul {
+
+            margin: 20px 0 20px 25px;
+
+        }
+
+
+
+
+
+        .lesson-content li {
+
+            margin-bottom: 10px;
+
+        }
+
+
+
+
+
+        .lesson-content button {
+
+            background: #D4AF37;
+
+            color: #145A86;
+
+            border: none;
+
+            padding: 14px 30px;
+
+            border-radius: 30px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+        }
+
+
+
+        .lesson-content button:hover {
+
+            transform: translateY(-4px);
+
+        }
+
+
+
+
+
+
+
+
+
+        /*====================================
+            QUIZ FINAL
+=====================================*/
+
+
+        .lesson-card.final {
+
+            border: 3px solid #D4AF37;
+
+        }
+
+
+
+        .lesson-card.final .lesson-number {
+
+            background: #D4AF37;
+
+            color: #145A86;
+
+        }
+
+
+
+
+
+
+
+
+
+        /*====================================
+            FOOTER
+=====================================*/
+
+
+        footer {
+
+            background: #145A86;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 40px;
+
+        }
+
+
+
+        footer h3 {
+
+            color: #D4AF37;
+
+            margin-bottom: 10px;
+
+        }
+
+
+
+
+
+
+
+
+
+        /*====================================
+            TABLETTE
+=====================================*/
+
+
+        @media(max-width:900px) {
+
+
+            .course-details {
+
+                grid-template-columns: repeat(2, 1fr);
+
+            }
+
+
+
+            .hero-text h1 {
+
+                font-size: 35px;
+
+            }
+
+
+
+        }
+
+
+
+
+
+
+
+
+
+        /*====================================
+            MOBILE
+=====================================*/
+
+
+        @media(max-width:600px) {
+
+
+
+            header {
+
+                padding: 0 15px;
+
+            }
+
+
+
+            .logo h2 {
+
+                font-size: 18px;
+
+            }
+
+
+
+            .logo img {
+
+                width: 40px;
+
+                height: 40px;
+
+            }
+
+
+
+            .student-profile small {
+
+                display: none;
+
+            }
+
+
+
+            .course-hero {
+
+                height: 520px;
+
+            }
+
+
+
+            .hero-text h1 {
+
+                font-size: 28px;
+
+            }
+
+
+
+            .hero-text p {
+
+                font-size: 15px;
+
+            }
+
+
+
+            .course-buttons {
+
+                flex-direction: column;
+
+            }
+
+
+
+            .course-details {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+
+            .lesson-card {
+
+                flex-direction: column;
+
+            }
+
+
+
+            .lesson-number {
+
+                margin: auto;
+
+            }
+
+
+
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <!--====================================
+            HEADER
+=====================================-->
+
+    <header>
+
+
+        <div class="logo">
+
+
+            <img src="images/logo.png" alt="BMJ SERVICE">
+
+
+
+            <h2>
+
+                BMJ <span>SERVICE</span>
+
+            </h2>
+
+
+        </div>
+
+
+
+
+
+
+
+        <div class="student-profile">
+
+
+            <img id="photoUtilisateur" src="images/user.png" alt="Utilisateur">
+
+
+
+
+
+            <div>
+
+
+                <h4 id="nomUtilisateur">
+
+                    Apprenant
+
+                </h4>
+
+
+
+
+
+                <small id="domaineUtilisateur">
+
+                    Marketing Digital
+
+                </small>
+
+
+
+            </div>
+
+
+        </div>
+
+
+
+    </header>
+
+
+
+
+
+
+
+
+
+    <!--====================================
+            HERO CHAPITRE
+=====================================-->
+
+    <section class="course-hero">
+
+
+        <div class="hero-text">
+
+
+            <span>
+
+                CHAPITRE 6
+
+            </span>
+
+
+
+
+
+            <h1>
+
+                Création de contenu
+
+            </h1>
+
+
+
+
+
+            <p>
+
+                Apprenez à créer des contenus professionnels capables
+                d'attirer l'attention, de convaincre votre audience et
+                de renforcer l'image d'une marque.
+
+                Découvrez les techniques du copywriting, du storytelling,
+                de la création vidéo et les méthodes pour produire des
+                contenus adaptés aux besoins des clients.
+
+            </p>
+
+
+
+
+
+            <div class="course-buttons">
+
+
+                <button onclick="commencerCours()">
+
+                    ▶ Commencer la leçon
+
+                </button>
+
+
+
+
+
+                <button onclick="telechargerSupport()">
+
+                    📄 Télécharger le support
+
+                </button>
+
+
+
+            </div>
+
+
+
+        </div>
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+    <!--====================================
+        INFORMATIONS DU CHAPITRE
+=====================================-->
+
+    <section class="course-details">
+
+
+
+        <div class="detail-card">
+
+
+            <i class="fa-solid fa-book"></i>
+
+
+            <h3>
+
+                1 Leçon
+
+            </h3>
+
+
+            <p>
+
+                Formation complète
+
+            </p>
+
+
+        </div>
+
+
+
+
+
+
+
+        <div class="detail-card">
+
+
+            <i class="fa-solid fa-clock"></i>
+
+
+            <h3>
+
+                2h00
+
+            </h3>
+
+
+            <p>
+
+                Durée
+
+            </p>
+
+
+        </div>
+
+
+
+
+
+
+
+        <div class="detail-card">
+
+
+            <i class="fa-solid fa-chart-line"></i>
+
+
+            <h3>
+
+                Intermédiaire
+
+            </h3>
+
+
+            <p>
+
+                Niveau
+
+            </p>
+
+
+        </div>
+
+
+
+
+
+
+
+        <div class="detail-card">
+
+
+            <i class="fa-solid fa-certificate"></i>
+
+
+            <h3>
+
+                Certificat
+
+            </h3>
+
+
+            <p>
+
+                Après validation
+
+            </p>
+
+
+        </div>
+
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+    <!--====================================
+            PROGRESSION
+=====================================-->
+
+    <section class="chapter-progress">
+
+
+        <h2>
+
+            Votre progression
+
+        </h2>
+
+
+
+
+
+        <div class="progress-box">
+
+
+            <div id="chapterProgress"></div>
+
+
+        </div>
+
+
+
+
+
+        <p>
+
+
+            <span id="progressText">
+
+                0
+
+            </span>
+
+            %
+
+            terminé
+
+
+        </p>
+
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+    <!--====================================
+            PROGRAMME
+=====================================-->
+
+    <section class="lessons">
+
+
+        <h2>
+
+            Programme du chapitre
+
+        </h2>
+
+
+
+
+
+
+
+
+
+        <!--============= LEÇON UNIQUE =============-->
+
+        <div class="lesson-card" data-lecon="1">
+
+
+
+            <div class="lesson-number">
+
+
+                01
+
+
+            </div>
+
+
+
+
+
+
+
+            <div class="lesson-content">
+
+
+
+                <h3>
+
+                    Créer des contenus professionnels et engageants
+
+                </h3>
+
+
+
+
+
+                <p>
+
+                    Découvrez comment concevoir des contenus qui captent
+                    l'attention de votre audience, transmettent un message
+                    clair et permettent à une entreprise de développer
+                    sa visibilité en ligne.
+
+                </p>
+
+
+
+
+
+                <ul>
+
+
+                    <li>
+
+                        Comprendre les bases du copywriting
+
+                    </li>
+
+
+
+
+                    <li>
+
+                        Utiliser le storytelling pour raconter une histoire
+
+                    </li>
+
+
+
+
+                    <li>
+
+                        Créer des contenus adaptés aux réseaux sociaux
+
+                    </li>
+
+
+
+
+                    <li>
+
+                        Concevoir des vidéos professionnelles
+
+                    </li>
+
+
+
+
+                    <li>
+
+                        Développer une stratégie de contenu efficace
+
+                    </li>
+
+
+
+                </ul>
+
+
+
+
+
+                <button onclick="ouvrirLecon('contenulecon1.html')">
+
+
+                    Commencer la leçon
+
+
+                </button>
+
+
+
+            </div>
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+        <!--============= QUIZ FINAL =============-->
+
+        <div class="lesson-card final">
+
+
+            <div class="lesson-number">
+
+
+                02
+
+
+            </div>
+
+
+
+
+
+            <div class="lesson-content">
+
+
+                <h3>
+
+                    Évaluation finale
+
+                </h3>
+
+
+
+
+
+                <p>
+
+                    Testez vos connaissances sur la création de contenu,
+                    le copywriting, le storytelling et les techniques
+                    de communication digitale.
+
+                </p>
+
+
+
+
+
+                <button onclick="quizContenu()">
+
+
+                    🎓 Passer le quiz
+
+
+                </button>
+
+
+
+            </div>
+
+
+
+        </div>
+
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+    <!--====================================
+            FOOTER
+=====================================-->
+
+    <footer>
+
+
+        <h3>
+
+            BMJ SERVICE
+
+        </h3>
+
+
+
+
+
+        <p>
+
+            Formation professionnelle en ligne
+
+        </p>
+
+
+
+    </footer>
+    <script>
+        //==================================================
+        // BMJ SERVICE
+        // CHAPITRE 6 : CREATION DE CONTENU
+        // SCRIPT
+        //==================================================
+
+
+
+
+
+
+        //====================================
+        // CHARGEMENT PAGE
+        //====================================
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+
+
+            let utilisateur = JSON.parse(
+
+                localStorage.getItem("bmj_current_user")
+
+            );
+
+
+
+
+
+            if (utilisateur) {
+
+
+
+                let nom = document.getElementById(
+
+                    "nomUtilisateur"
+
+                );
+
+
+
+                if (nom) {
+
+
+                    nom.innerHTML = utilisateur.nom;
+
+
+                }
+
+
+
+
+
+
+                let photo = document.getElementById(
+
+                    "photoUtilisateur"
+
+                );
+
+
+
+                if (photo && utilisateur.photo) {
+
+
+                    photo.src = utilisateur.photo;
+
+
+                }
+
+
+
+            }
+
+
+
+
+
+
+
+            afficherProgression();
+
+
+
+        });
+
+
+
+
+
+
+
+
+
+        //====================================
+        // COMMENCER LE COURS
+        //====================================
+
+
+        function commencerCours() {
+
+
+
+            window.location.href = "contenulecon1.html";
+
+
+        }
+
+
+
+
+
+
+
+
+
+        //====================================
+        // TELECHARGER SUPPORT
+        //====================================
+
+
+        function telechargerSupport() {
+
+
+
+            let fichier = "supports/creation-contenu.pdf";
+
+
+
+            window.open(
+
+                fichier,
+
+                "_blank"
+
+            );
+
+
+        }
+
+
+
+
+
+
+
+
+
+        //====================================
+        // OUVRIR LEÇON
+        //====================================
+
+
+        function ouvrirLecon(page) {
+
+
+
+            window.location.href = page;
+
+
+
+        }
+
+
+
+
+
+
+
+
+
+        //====================================
+        // PROGRESSION
+        //====================================
+
+
+        function afficherProgression() {
+
+
+
+            let termine = localStorage.getItem(
+
+                "contenu_lecon1"
+
+            );
+
+
+
+
+
+            let progression = 0;
+
+
+
+
+
+            if (termine === "true") {
+
+
+
+                progression = 100;
+
+
+            }
+
+
+
+
+
+
+
+            let barre = document.getElementById(
+
+                "chapterProgress"
+
+            );
+
+
+
+            let texte = document.getElementById(
+
+                "progressText"
+
+            );
+
+
+
+
+
+            if (barre) {
+
+
+
+                barre.style.width = progression + "%";
+
+
+            }
+
+
+
+
+
+            if (texte) {
+
+
+
+                texte.innerHTML = progression;
+
+
+            }
+
+
+
+        }
+
+
+
+
+
+
+
+
+
+        //====================================
+        // TERMINER LEÇON
+        //====================================
+
+
+        function terminerLecon() {
+
+
+
+            localStorage.setItem(
+
+                "contenu_lecon1",
+
+                "true"
+
+            );
+
+
+
+
+
+
+
+            afficherProgression();
+
+
+
+
+
+
+            alert(
+
+                "✅ Leçon terminée !\n\nVous pouvez maintenant passer à l'évaluation finale."
+
+            );
+
+
+
+        }
+
+
+
+
+
+
+
+
+
+        //====================================
+        // QUIZ FINAL
+        //====================================
+
+
+        function quizContenu() {
+
+
+
+            let termine = localStorage.getItem(
+
+                "contenu_lecon1"
+
+            );
+
+
+
+
+
+            if (termine !== "true") {
+
+
+
+                alert(
+
+                    "🔒 Vous devez terminer la leçon avant de passer le quiz."
+
+                );
+
+
+
+                return;
+
+
+            }
+
+
+
+
+
+
+
+            window.location.href = "contenuquiz.html";
+
+
+
+        }
+    </script>
+</body>
+
+</html>

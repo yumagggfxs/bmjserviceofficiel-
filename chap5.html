@@ -1,0 +1,2124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*==================================================
+        BMJ SERVICE
+        CHAPITRE 6 - SEO ET REFERENCEMENT
+==================================================*/
+
+
+        * {
+
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+
+        }
+
+
+        html {
+
+            scroll-behavior: smooth;
+
+        }
+
+
+
+        body {
+
+            background: #f4f7fb;
+
+            color: #333;
+
+            line-height: 1.8;
+
+        }
+
+
+
+
+
+
+
+
+
+        /*=====================================
+            HEADER
+======================================*/
+
+
+        header {
+
+            position: fixed;
+
+            top: 0;
+
+            left: 0;
+
+            width: 100%;
+
+            height: 75px;
+
+            background: #fff;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            padding: 0 40px;
+
+            box-shadow: 0 5px 20px rgba(0, 0, 0, .08);
+
+            z-index: 1000;
+
+        }
+
+
+
+        .logo {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+        }
+
+
+
+        .logo img {
+
+            width: 50px;
+
+            height: 50px;
+
+            border-radius: 50%;
+
+            border: 3px solid #D4AF37;
+
+        }
+
+
+
+        .logo h2 {
+
+            color: #145A86;
+
+        }
+
+
+
+        .logo span {
+
+            color: #D4AF37;
+
+        }
+
+
+
+
+
+
+
+        .student-profile {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+        }
+
+
+
+        .student-profile img {
+
+            width: 50px;
+
+            height: 50px;
+
+            border-radius: 50%;
+
+            object-fit: cover;
+
+            border: 3px solid #145A86;
+
+        }
+
+
+
+        .student-profile h4 {
+
+            color: #145A86;
+
+        }
+
+
+
+        .student-profile small {
+
+            color: #777;
+
+        }
+
+
+
+
+
+
+
+
+
+        /*=====================================
+            HERO SEO
+======================================*/
+
+
+        .course-hero {
+
+            margin-top: 75px;
+
+            height: 480px;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+
+            background:
+
+
+                linear-gradient(rgba(20, 90, 134, .88),
+
+                    rgba(0, 0, 0, .75)),
+
+
+                url(images/seo-banner.jpg);
+
+
+
+            background-size: cover;
+
+            background-position: center;
+
+        }
+
+
+
+
+
+        .hero-text {
+
+            width: 90%;
+
+            max-width: 1000px;
+
+            text-align: center;
+
+            color: white;
+
+        }
+
+
+
+
+
+        .hero-text span {
+
+            background: #D4AF37;
+
+            color: #145A86;
+
+            padding: 8px 25px;
+
+            border-radius: 50px;
+
+            font-weight: bold;
+
+        }
+
+
+
+
+
+        .hero-text h1 {
+
+            font-size: 52px;
+
+            margin: 20px 0;
+
+        }
+
+
+
+
+
+        .hero-text p {
+
+            font-size: 20px;
+
+        }
+
+
+
+
+
+
+
+
+
+        /*=====================================
+            BUTTONS
+======================================*/
+
+
+        .course-buttons {
+
+            margin-top: 35px;
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 20px;
+
+        }
+
+
+
+        .course-buttons button {
+
+            padding: 15px 30px;
+
+            border: none;
+
+            border-radius: 12px;
+
+            font-size: 16px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            transition: .3s;
+
+        }
+
+
+
+        .course-buttons button:first-child {
+
+            background: #D4AF37;
+
+            color: #145A86;
+
+        }
+
+
+
+        .course-buttons button:last-child {
+
+            background: #fff;
+
+            color: #145A86;
+
+        }
+
+
+
+        .course-buttons button:hover {
+
+            transform: translateY(-5px);
+
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .2);
+
+        }
+
+
+
+
+
+
+
+
+
+        /*=====================================
+        INFORMATIONS COURS
+======================================*/
+
+
+        .course-details {
+
+            width: 90%;
+
+            max-width: 1100px;
+
+            margin: 40px auto;
+
+
+            display: grid;
+
+            grid-template-columns: repeat(4, 1fr);
+
+            gap: 25px;
+
+        }
+
+
+
+
+
+        .detail-card {
+
+            background: white;
+
+            padding: 30px 20px;
+
+            text-align: center;
+
+            border-radius: 20px;
+
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+
+            transition: .3s;
+
+        }
+
+
+
+        .detail-card:hover {
+
+            transform: translateY(-8px);
+
+        }
+
+
+
+        .detail-card i {
+
+            font-size: 35px;
+
+            color: #D4AF37;
+
+            margin-bottom: 15px;
+
+        }
+
+
+
+        .detail-card h3 {
+
+            color: #145A86;
+
+        }
+
+
+
+
+
+
+
+
+
+        /*=====================================
+        PROGRESSION
+======================================*/
+
+
+        .chapter-progress {
+
+            width: 90%;
+
+            max-width: 1100px;
+
+            margin: 40px auto;
+
+            padding: 35px;
+
+            background: #fff;
+
+            border-radius: 20px;
+
+            text-align: center;
+
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+
+        }
+
+
+
+        .chapter-progress h2 {
+
+            color: #145A86;
+
+            margin-bottom: 20px;
+
+        }
+
+
+
+        .progress-box {
+
+            width: 100%;
+
+            height: 25px;
+
+            background: #eee;
+
+            border-radius: 50px;
+
+            overflow: hidden;
+
+        }
+
+
+
+        #chapterProgress {
+
+            width: 0%;
+
+            height: 100%;
+
+            background: linear-gradient(90deg,
+
+                    #145A86,
+
+                    #D4AF37);
+
+            transition: 1s;
+
+        }
+
+
+
+        .chapter-progress p {
+
+            margin-top: 15px;
+
+            font-weight: bold;
+
+        }
+
+
+
+
+
+
+
+
+
+        /*=====================================
+            LESSONS
+======================================*/
+
+
+        .lessons {
+
+            width: 90%;
+
+            max-width: 1100px;
+
+            margin: 50px auto;
+
+        }
+
+
+
+        .lessons h2 {
+
+            color: #145A86;
+
+            border-left: 6px solid #D4AF37;
+
+            padding-left: 15px;
+
+            margin-bottom: 30px;
+
+        }
+
+
+
+
+
+
+
+
+
+        .lesson-card {
+
+            background: #fff;
+
+            display: flex;
+
+            gap: 25px;
+
+            padding: 30px;
+
+            margin-bottom: 30px;
+
+            border-radius: 20px;
+
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+
+            transition: .3s;
+
+        }
+
+
+
+        .lesson-card:hover {
+
+            transform: translateY(-5px);
+
+        }
+
+
+
+
+
+
+
+
+
+        .lesson-number {
+
+            width: 80px;
+
+            height: 80px;
+
+            min-width: 80px;
+
+            background: #145A86;
+
+            color: white;
+
+            border-radius: 20px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-size: 28px;
+
+            font-weight: bold;
+
+        }
+
+
+
+
+
+
+
+
+
+        .lesson-content h3 {
+
+            color: #145A86;
+
+            margin-bottom: 15px;
+
+        }
+
+
+
+        .lesson-content p {
+
+            text-align: justify;
+
+        }
+
+
+
+        .lesson-content ul {
+
+            margin: 15px 0 20px 25px;
+
+        }
+
+
+
+        .lesson-content li {
+
+            margin-bottom: 8px;
+
+        }
+
+
+
+
+
+
+
+
+
+        .lesson-content button {
+
+            background: #145A86;
+
+            color: white;
+
+            border: none;
+
+            padding: 13px 25px;
+
+            border-radius: 12px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            transition: .3s;
+
+        }
+
+
+
+        .lesson-content button:hover {
+
+            background: #D4AF37;
+
+            color: #145A86;
+
+        }
+
+
+
+
+
+
+
+
+
+        /*=====================================
+            QUIZ FINAL
+======================================*/
+
+
+        .lesson-card.final {
+
+            background:
+
+                linear-gradient(135deg,
+
+                    #145A86,
+
+                    #082d44);
+
+
+
+            color: white;
+
+        }
+
+
+
+        .final .lesson-number {
+
+            background: #D4AF37;
+
+            color: #145A86;
+
+        }
+
+
+
+        .final h3 {
+
+            color: white;
+
+        }
+
+
+
+        .final button {
+
+            background: #D4AF37;
+
+            color: #145A86;
+
+        }
+
+
+
+
+
+
+
+
+
+        /*=====================================
+            FOOTER
+======================================*/
+
+
+        footer {
+
+            background: #145A86;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 35px;
+
+        }
+
+
+
+        footer h3 {
+
+            color: #D4AF37;
+
+            font-size: 28px;
+
+        }
+
+
+
+
+
+
+
+
+
+        /*=====================================
+            TABLETTE
+======================================*/
+
+
+        @media(max-width:900px) {
+
+
+            .course-details {
+
+                grid-template-columns: repeat(2, 1fr);
+
+            }
+
+
+
+            .hero-text h1 {
+
+                font-size: 38px;
+
+            }
+
+
+
+            .lesson-card {
+
+                flex-direction: column;
+
+            }
+
+
+        }
+
+
+
+
+
+
+
+
+
+        /*=====================================
+            MOBILE
+======================================*/
+
+
+        @media(max-width:600px) {
+
+
+            header {
+
+                padding: 0 15px;
+
+            }
+
+
+
+            .logo img {
+
+                width: 40px;
+
+                height: 40px;
+
+            }
+
+
+
+            .logo h2 {
+
+                font-size: 18px;
+
+            }
+
+
+
+            .student-profile small {
+
+                display: none;
+
+            }
+
+
+
+            .course-hero {
+
+                height: 430px;
+
+            }
+
+
+
+            .hero-text h1 {
+
+                font-size: 30px;
+
+            }
+
+
+
+            .hero-text p {
+
+                font-size: 15px;
+
+            }
+
+
+
+            .course-buttons {
+
+                flex-direction: column;
+
+            }
+
+
+
+            .course-buttons button {
+
+                width: 100%;
+
+            }
+
+
+
+            .course-details {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+
+            .lesson-card {
+
+                padding: 20px;
+
+            }
+
+
+
+            .lesson-number {
+
+                width: 65px;
+
+                height: 65px;
+
+            }
+
+
+
+            .lesson-content h3 {
+
+                font-size: 19px;
+
+            }
+
+
+
+            .lesson-content p {
+
+                font-size: 15px;
+
+            }
+
+
+
+            footer h3 {
+
+                font-size: 24px;
+
+            }
+
+
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <!--====================================
+            HEADER
+=====================================-->
+
+    <header>
+
+
+        <div class="logo">
+
+            <img src="images/logo.png" alt="BMJ SERVICE">
+
+
+            <h2>
+
+                BMJ <span>SERVICE</span>
+
+            </h2>
+
+
+        </div>
+
+
+
+
+
+        <div class="student-profile">
+
+
+            <img id="photoUtilisateur" src="images/user.png" alt="Utilisateur">
+
+
+            <div>
+
+
+                <h4 id="nomUtilisateur">
+
+                    Apprenant
+
+                </h4>
+
+
+
+                <small id="domaineUtilisateur">
+
+                    Marketing Digital
+
+                </small>
+
+
+            </div>
+
+
+        </div>
+
+
+    </header>
+
+
+
+
+
+
+
+
+
+    <!--====================================
+            HERO COURS
+=====================================-->
+
+    <section class="course-hero">
+
+
+        <div class="hero-text">
+
+
+            <span>
+
+                CHAPITRE 6
+
+            </span>
+
+
+
+
+            <h1>
+
+                SEO et référencement
+
+            </h1>
+
+
+
+
+
+            <p>
+
+                Découvrez comment améliorer la visibilité d'un site web,
+                optimiser son positionnement sur Google et attirer plus
+                de visiteurs grâce aux techniques du référencement naturel.
+
+            </p>
+
+
+
+
+
+            <div class="course-buttons">
+
+
+                <button onclick="commencerCours()">
+
+                    ▶ Commencer le cours
+
+                </button>
+
+
+
+
+                <button onclick="telechargerSupport()">
+
+                    📄 Télécharger le support
+
+                </button>
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+    <!--====================================
+        INFORMATIONS DU COURS
+=====================================-->
+
+    <section class="course-details">
+
+
+        <div class="detail-card">
+
+
+            <i class="fa-solid fa-book"></i>
+
+
+            <h3>
+
+                3 Leçons
+
+            </h3>
+
+
+            <p>
+
+                Formation complète
+
+            </p>
+
+
+        </div>
+
+
+
+
+
+
+
+        <div class="detail-card">
+
+
+            <i class="fa-solid fa-clock"></i>
+
+
+            <h3>
+
+                2h30
+
+            </h3>
+
+
+            <p>
+
+                Durée
+
+            </p>
+
+
+        </div>
+
+
+
+
+
+
+
+        <div class="detail-card">
+
+
+            <i class="fa-solid fa-chart-line"></i>
+
+
+            <h3>
+
+                Intermédiaire
+
+            </h3>
+
+
+            <p>
+
+                Niveau
+
+            </p>
+
+
+        </div>
+
+
+
+
+
+
+
+        <div class="detail-card">
+
+
+            <i class="fa-solid fa-certificate"></i>
+
+
+            <h3>
+
+                Certificat
+
+            </h3>
+
+
+            <p>
+
+                Après validation
+
+            </p>
+
+
+        </div>
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+    <!--====================================
+        PROGRESSION
+=====================================-->
+
+    <section class="chapter-progress">
+
+
+        <h2>
+
+            Votre progression
+
+        </h2>
+
+
+
+        <div class="progress-box">
+
+
+            <div id="chapterProgress"></div>
+
+
+        </div>
+
+
+
+
+        <p>
+
+
+            <span id="progressText">
+
+                0
+
+            </span>
+
+
+            % terminé
+
+
+        </p>
+
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+    <!--====================================
+            LESSONS
+=====================================-->
+
+    <section class="lessons">
+
+
+        <h2>
+
+            Programme du chapitre
+
+        </h2>
+
+
+
+
+
+
+
+
+
+        <!--============= LEÇON 1 =============-->
+
+        <div class="lesson-card" data-lecon="1">
+
+
+            <div class="lesson-number">
+
+                01
+
+            </div>
+
+
+
+
+
+            <div class="lesson-content">
+
+
+                <h3>
+
+                    Comprendre le SEO et le référencement
+
+                </h3>
+
+
+
+
+
+                <p>
+
+                    Découvrez le fonctionnement du référencement naturel,
+                    son importance pour les entreprises et comment Google
+                    classe les pages web dans ses résultats de recherche.
+
+                </p>
+
+
+
+
+
+                <ul>
+
+
+                    <li>
+
+                        Définition du SEO
+
+                    </li>
+
+
+
+                    <li>
+
+                        Fonctionnement des moteurs de recherche
+
+                    </li>
+
+
+
+                    <li>
+
+                        Importance du référencement naturel
+
+                    </li>
+
+
+                </ul>
+
+
+
+
+
+                <button onclick="ouvrirLecon('seolecon1.html')">
+
+                    Commencer la leçon
+
+                </button>
+
+
+            </div>
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+        <!--============= LEÇON 2 =============-->
+
+        <div class="lesson-card" data-lecon="2">
+
+
+            <div class="lesson-number">
+
+                02
+
+            </div>
+
+
+
+
+
+            <div class="lesson-content">
+
+
+                <h3>
+
+                    Les mots-clés et l'optimisation du contenu
+
+                </h3>
+
+
+
+
+
+                <p>
+
+                    Apprenez à choisir les bons mots-clés,
+                    optimiser vos textes et créer un contenu
+                    adapté aux recherches des utilisateurs.
+
+                </p>
+
+
+
+
+
+                <ul>
+
+
+                    <li>
+
+                        Recherche des mots-clés
+
+                    </li>
+
+
+
+                    <li>
+
+                        Optimisation des titres et descriptions
+
+                    </li>
+
+
+
+                    <li>
+
+                        Création de contenu SEO
+
+                    </li>
+
+
+                </ul>
+
+
+
+
+
+                <button onclick="ouvrirLecon('seolecon2.html')">
+
+                    Commencer la leçon
+
+                </button>
+
+
+            </div>
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+        <!--============= LEÇON 3 =============-->
+
+        <div class="lesson-card" data-lecon="3">
+
+
+            <div class="lesson-number">
+
+                03
+
+            </div>
+
+
+
+
+
+            <div class="lesson-content">
+
+
+                <h3>
+
+                    Améliorer la visibilité d'un site web
+
+                </h3>
+
+
+
+
+
+                <p>
+
+                    Découvrez les techniques permettant d'améliorer
+                    le positionnement d'un site, augmenter son trafic
+                    et suivre ses performances sur Google.
+
+                </p>
+
+
+
+
+
+                <ul>
+
+
+                    <li>
+
+                        Optimisation technique du site
+
+                    </li>
+
+
+
+                    <li>
+
+                        Les backlinks
+
+                    </li>
+
+
+
+                    <li>
+
+                        Analyse des performances
+
+                    </li>
+
+
+                </ul>
+
+
+
+
+
+                <button onclick="ouvrirLecon('seolecon3.html')">
+
+                    Commencer la leçon
+
+                </button>
+
+
+            </div>
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+        <!--============= QUIZ =============-->
+
+        <div class="lesson-card final">
+
+
+            <div class="lesson-number">
+
+                04
+
+            </div>
+
+
+
+
+
+            <div class="lesson-content">
+
+
+                <h3>
+
+                    Évaluation finale
+
+                </h3>
+
+
+
+
+
+                <p>
+
+                    Testez vos connaissances sur le SEO,
+                    les mots-clés et le référencement afin
+                    de valider ce chapitre de votre formation.
+
+                </p>
+
+
+
+
+
+                <button onclick="quizSEO()">
+
+                    🎓 Passer le quiz
+
+                </button>
+
+
+            </div>
+
+
+        </div>
+
+
+
+
+
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+    <!--====================================
+            FOOTER
+=====================================-->
+
+    <footer>
+
+
+        <h3>
+
+            BMJ SERVICE
+
+        </h3>
+
+
+        <p>
+
+            Formation professionnelle en ligne
+
+        </p>
+
+
+    </footer>
+
+    <script>
+
+
+        //==================================================
+        // BMJ SERVICE
+        // CHAPITRE 6 : SEO ET REFERENCEMENT
+        // SCRIPT PRINCIPAL
+        //==================================================
+
+
+
+
+
+        //====================================
+        // CHARGEMENT DE LA PAGE
+        //====================================
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+
+
+            let utilisateur = JSON.parse(
+
+                localStorage.getItem("bmj_current_user")
+
+            );
+
+
+
+
+
+            //==============================
+            // AFFICHAGE PROFIL
+            //==============================
+
+
+            if (utilisateur) {
+
+
+
+                document.getElementById("nomUtilisateur").innerHTML = utilisateur.nom;
+
+
+
+                if (utilisateur.photo && utilisateur.photo !== "") {
+
+
+                    document.getElementById("photoUtilisateur").src = utilisateur.photo;
+
+
+                }
+
+
+            }
+
+
+
+
+
+            afficherProgressionSEO();
+
+
+
+        });
+
+
+
+
+
+
+
+
+
+        //====================================
+        // COMMENCER LE COURS
+        //====================================
+
+
+        function commencerCours() {
+
+
+
+            document.querySelector(".lessons").scrollIntoView({
+
+
+                behavior: "smooth"
+
+
+            });
+
+
+        }
+
+
+
+
+
+
+
+
+
+        //====================================
+        // TELECHARGER SUPPORT
+        //====================================
+
+
+        function telechargerSupport() {
+
+
+
+            let fichier = document.createElement("a");
+
+
+
+            fichier.href = "supports/seo-referencement.pdf";
+
+
+
+            fichier.download = "SEO_et_Referencement.pdf";
+
+
+
+            fichier.click();
+
+
+
+        }
+
+
+
+
+
+
+
+
+
+        //====================================
+        // OUVRIR UNE LEÇON
+        //====================================
+
+
+        function ouvrirLecon(page) {
+
+
+
+            window.location.href = page;
+
+
+
+        }
+
+
+
+
+
+
+
+
+
+        //====================================
+        // ACCES AU QUIZ
+        //====================================
+
+
+        function quizSEO() {
+
+
+
+            let progression = JSON.parse(
+
+
+                localStorage.getItem("seo_progression")
+
+
+            ) || [];
+
+
+
+
+
+            if (progression.length < 3) {
+
+
+
+                alert(
+
+                    "🔒 Vous devez terminer les 3 leçons du chapitre avant de passer l'évaluation."
+
+                );
+
+
+
+                return;
+
+
+
+            }
+
+
+
+
+
+            window.location.href = "seoquiz.html";
+
+
+
+        }
+
+
+
+
+
+
+
+
+
+        //====================================
+        // AFFICHAGE PROGRESSION
+        //====================================
+
+
+        function afficherProgressionSEO() {
+
+
+
+            let progression = JSON.parse(
+
+
+                localStorage.getItem("seo_progression")
+
+
+            ) || [];
+
+
+
+
+
+
+            let total = 3;
+
+
+
+            let pourcentage = Math.round(
+
+
+
+                (progression.length / total) * 100
+
+
+
+            );
+
+
+
+
+
+
+
+
+            if (document.getElementById("chapterProgress")) {
+
+
+                document.getElementById("chapterProgress").style.width = pourcentage + "%";
+
+
+            }
+
+
+
+
+
+
+
+            if (document.getElementById("progressText")) {
+
+
+                document.getElementById("progressText").innerHTML = pourcentage;
+
+
+            }
+
+
+
+
+
+
+
+
+
+            //================================
+            // VERROUILLAGE DES LEÇONS
+            //================================
+
+
+
+            let lessons = document.querySelectorAll(".lesson-card");
+
+
+
+
+
+            lessons.forEach(function (card) {
+
+
+
+                let numero = card.dataset.lecon;
+
+
+
+
+
+                if (numero) {
+
+
+
+                    let bouton = card.querySelector("button");
+
+
+
+
+
+                    if (numero > progression.length + 1) {
+
+
+
+                        bouton.disabled = true;
+
+
+
+                        bouton.innerHTML = "🔒 Leçon verrouillée";
+
+
+
+                        bouton.style.background = "#999";
+
+
+
+                    }
+
+
+
+                }
+
+
+
+            });
+
+
+
+        }
+
+
+
+
+
+
+
+
+
+        //====================================
+        // VERIFICATION CHAPITRE VALIDE
+        //====================================
+
+
+        function chapitreSEOValide() {
+
+
+
+            let utilisateur = JSON.parse(
+
+
+                localStorage.getItem("bmj_current_user")
+
+
+            );
+
+
+
+
+
+            if (!utilisateur) {
+
+
+                return false;
+
+
+            }
+
+
+
+
+
+            if (utilisateur.chapitresValides &&
+
+                utilisateur.chapitresValides.includes("Chapitre 6")) {
+
+
+                return true;
+
+
+            }
+
+
+
+
+            return false;
+
+
+
+        }
+
+
+
+
+
+
+
+
+
+        //====================================
+        // MISE A JOUR AUTOMATIQUE
+        //====================================
+
+
+        window.addEventListener("storage", function () {
+
+
+
+            afficherProgressionSEO();
+
+
+
+        });
+
+
+
+    </script>
+</body>
+
+</html>

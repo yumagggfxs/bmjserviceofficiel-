@@ -1,0 +1,2166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*==================================================
+        BMJ SERVICE
+        QUIZ CREATION DE CONTENU
+==================================================*/
+
+
+        * {
+
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', Arial, sans-serif;
+
+        }
+
+
+
+        body {
+
+            background: #f4f7fb;
+
+            color: #333;
+
+            line-height: 1.7;
+
+        }
+
+
+
+
+
+
+
+
+
+        /*====================================
+            HEADER
+=====================================*/
+
+
+        header {
+
+            position: fixed;
+
+            top: 0;
+
+            left: 0;
+
+            width: 100%;
+
+            height: 75px;
+
+            background: white;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            padding: 0 40px;
+
+            box-shadow: 0 5px 20px rgba(0, 0, 0, .08);
+
+            z-index: 1000;
+
+        }
+
+
+
+        .logo {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+        }
+
+
+
+        .logo img {
+
+            width: 50px;
+
+            height: 50px;
+
+            border-radius: 50%;
+
+        }
+
+
+
+        .logo h2 {
+
+            color: #145A86;
+
+        }
+
+
+
+        .logo span {
+
+            color: #D4AF37;
+
+        }
+
+
+
+
+
+
+        .student-profile {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+        }
+
+
+
+        .student-profile img {
+
+            width: 50px;
+
+            height: 50px;
+
+            border-radius: 50%;
+
+            object-fit: cover;
+
+            border: 3px solid #D4AF37;
+
+        }
+
+
+
+        .student-profile h4 {
+
+            color: #145A86;
+
+        }
+
+
+
+
+
+
+
+
+
+        /*====================================
+            HERO QUIZ
+=====================================*/
+
+
+        .quiz-hero {
+
+            margin-top: 75px;
+
+            height: 430px;
+
+
+            background:
+
+                linear-gradient(rgba(20, 90, 134, .85),
+
+                    rgba(0, 0, 0, .75)),
+
+                url(images/contenuquiz.jpg);
+
+
+
+            background-size: cover;
+
+            background-position: center;
+
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+
+        }
+
+
+
+        .quiz-overlay {
+
+            width: 90%;
+
+            max-width: 1100px;
+
+            text-align: center;
+
+            color: white;
+
+        }
+
+
+
+        .quiz-overlay span {
+
+            background: #D4AF37;
+
+            color: #145A86;
+
+            padding: 8px 25px;
+
+            border-radius: 30px;
+
+            font-weight: bold;
+
+        }
+
+
+
+        .quiz-overlay h1 {
+
+            font-size: 42px;
+
+            margin: 25px 0;
+
+        }
+
+
+
+        .quiz-overlay p {
+
+            font-size: 18px;
+
+        }
+
+
+
+
+
+
+
+
+
+        /*====================================
+        INFORMATIONS QUIZ
+=====================================*/
+
+
+        .quiz-info,
+        .quiz-rules,
+        .quiz-container {
+
+
+            width: 90%;
+
+            max-width: 1100px;
+
+            margin: 45px auto;
+
+            background: white;
+
+            padding: 35px;
+
+            border-radius: 20px;
+
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+
+
+        }
+
+
+
+
+
+        .quiz-info h2,
+        .quiz-rules h2,
+        .quiz-container h2 {
+
+
+            color: #145A86;
+
+            border-left: 6px solid #D4AF37;
+
+            padding-left: 15px;
+
+            margin-bottom: 30px;
+
+
+        }
+
+
+
+
+
+
+
+
+
+        /*====================================
+            CARTES INFO
+=====================================*/
+
+
+        .quiz-cards {
+
+
+            display: grid;
+
+            grid-template-columns: repeat(4, 1fr);
+
+            gap: 20px;
+
+
+        }
+
+
+
+        .quiz-card {
+
+
+            background: #f4f8fc;
+
+            padding: 25px;
+
+            border-radius: 15px;
+
+            text-align: center;
+
+
+            transition: .3s;
+
+
+        }
+
+
+
+        .quiz-card:hover {
+
+
+            transform: translateY(-8px);
+
+
+        }
+
+
+
+        .quiz-card i {
+
+
+            color: #D4AF37;
+
+            font-size: 35px;
+
+            margin-bottom: 15px;
+
+
+        }
+
+
+
+        .quiz-card h3 {
+
+
+            color: #145A86;
+
+
+        }
+
+
+
+
+
+
+
+
+
+        /*====================================
+            REGLES
+=====================================*/
+
+
+        .quiz-rules li {
+
+
+            list-style: none;
+
+            margin-bottom: 15px;
+
+
+        }
+
+
+
+        .quiz-rules li::before {
+
+
+            content: "✓";
+
+            color: #D4AF37;
+
+            font-weight: bold;
+
+            margin-right: 10px;
+
+
+        }
+
+
+
+
+
+
+
+
+
+        /*====================================
+            QUESTIONS
+=====================================*/
+
+
+        .question {
+
+
+            background: #f8fafc;
+
+            padding: 25px;
+
+            margin-bottom: 25px;
+
+            border-radius: 15px;
+
+            border-left: 5px solid #145A86;
+
+
+        }
+
+
+
+        .question h3 {
+
+
+            color: #145A86;
+
+            margin-bottom: 20px;
+
+
+        }
+
+
+
+        .question label {
+
+
+            display: block;
+
+            background: white;
+
+            padding: 12px;
+
+            margin-bottom: 10px;
+
+            border-radius: 10px;
+
+            cursor: pointer;
+
+            transition: .3s;
+
+
+        }
+
+
+
+        .question label:hover {
+
+
+            background: #eef7ff;
+
+
+        }
+
+
+
+        .question input {
+
+
+            margin-right: 10px;
+
+
+        }
+
+
+
+
+
+
+
+
+
+        /*====================================
+        BOUTON VALIDATION
+=====================================*/
+
+
+        .quiz-submit {
+
+
+            text-align: center;
+
+            margin-top: 35px;
+
+
+        }
+
+
+
+        .quiz-submit button {
+
+
+            background: #D4AF37;
+
+            color: #145A86;
+
+            border: none;
+
+            padding: 16px 40px;
+
+            border-radius: 30px;
+
+            font-size: 17px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            transition: .3s;
+
+
+        }
+
+
+
+        .quiz-submit button:hover {
+
+
+            transform: translateY(-5px);
+
+            box-shadow: 0 10px 20px rgba(0, 0, 0, .15);
+
+
+        }
+
+
+
+
+
+
+
+
+
+        /*====================================
+            FOOTER
+=====================================*/
+
+
+        footer {
+
+
+            background: #145A86;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 40px;
+
+
+        }
+
+
+
+        footer h3 {
+
+
+            color: #D4AF37;
+
+            margin-bottom: 10px;
+
+
+        }
+
+
+
+
+
+
+
+
+
+        /*====================================
+            TABLETTE
+=====================================*/
+
+
+        @media(max-width:900px) {
+
+
+
+            .quiz-cards {
+
+
+                grid-template-columns: repeat(2, 1fr);
+
+
+            }
+
+
+
+
+            .quiz-overlay h1 {
+
+
+                font-size: 32px;
+
+
+            }
+
+
+        }
+
+
+
+
+
+
+
+
+
+        /*====================================
+            MOBILE
+=====================================*/
+
+
+        @media(max-width:600px) {
+
+
+
+            header {
+
+
+                padding: 0 15px;
+
+
+            }
+
+
+
+            .logo h2 {
+
+
+                font-size: 18px;
+
+
+            }
+
+
+
+            .logo img {
+
+
+                width: 40px;
+
+                height: 40px;
+
+
+            }
+
+
+
+            .student-profile small {
+
+
+                display: none;
+
+
+            }
+
+
+
+            .quiz-hero {
+
+
+                height: 500px;
+
+
+            }
+
+
+
+            .quiz-overlay h1 {
+
+
+                font-size: 27px;
+
+
+            }
+
+
+
+            .quiz-overlay p {
+
+
+                font-size: 15px;
+
+
+            }
+
+
+
+
+            .quiz-info,
+            .quiz-rules,
+            .quiz-container {
+
+
+                padding: 25px;
+
+
+            }
+
+
+
+            .quiz-cards {
+
+
+                grid-template-columns: 1fr;
+
+
+            }
+
+
+
+            .question {
+
+
+                padding: 18px;
+
+
+            }
+
+
+
+            .quiz-submit button {
+
+
+                width: 100%;
+
+
+            }
+
+
+
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <!--====================================
+            HEADER
+=====================================-->
+
+    <header>
+
+
+        <div class="logo">
+
+
+            <img src="images/logo.png" alt="BMJ SERVICE">
+
+
+
+            <h2>
+
+                BMJ <span>SERVICE</span>
+
+            </h2>
+
+
+        </div>
+
+
+
+
+
+
+
+        <div class="student-profile">
+
+
+            <img id="photoUtilisateur" src="images/user.png" alt="Utilisateur">
+
+
+
+
+
+            <div>
+
+
+                <h4 id="nomUtilisateur">
+
+                    Apprenant
+
+                </h4>
+
+
+
+
+
+                <small id="domaineUtilisateur">
+
+                    Marketing Digital
+
+                </small>
+
+
+
+            </div>
+
+
+        </div>
+
+
+
+    </header>
+
+
+
+
+
+
+
+
+
+    <!--====================================
+            HERO QUIZ
+=====================================-->
+
+    <section class="quiz-hero">
+
+
+        <div class="quiz-overlay">
+
+
+            <span>
+
+                ÉVALUATION FINALE
+
+            </span>
+
+
+
+
+
+            <h1>
+
+                Quiz Création de contenu
+
+            </h1>
+
+
+
+
+
+            <p>
+
+                Testez vos connaissances sur le copywriting,
+                le storytelling, la création vidéo et la stratégie
+                de contenu.
+
+                Réussissez cette évaluation pour valider le chapitre.
+
+            </p>
+
+
+
+        </div>
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+    <!--====================================
+        INFORMATIONS QUIZ
+=====================================-->
+
+    <section class="quiz-info">
+
+
+        <h2>
+
+            📚 Informations de l'évaluation
+
+        </h2>
+
+
+
+
+
+        <div class="quiz-cards">
+
+
+
+
+
+            <div class="quiz-card">
+
+
+                <i class="fa-solid fa-question"></i>
+
+
+                <h3>
+
+                    10 Questions
+
+                </h3>
+
+
+                <p>
+
+                    Test du chapitre
+
+                </p>
+
+
+            </div>
+
+
+
+
+
+
+
+
+            <div class="quiz-card">
+
+
+                <i class="fa-solid fa-clock"></i>
+
+
+                <h3>
+
+                    15 Minutes
+
+                </h3>
+
+
+                <p>
+
+                    Temps disponible
+
+                </p>
+
+
+            </div>
+
+
+
+
+
+
+
+
+            <div class="quiz-card">
+
+
+                <i class="fa-solid fa-check"></i>
+
+
+                <h3>
+
+                    70%
+
+                </h3>
+
+
+                <p>
+
+                    Score minimum
+
+                </p>
+
+
+            </div>
+
+
+
+
+
+
+
+
+            <div class="quiz-card">
+
+
+                <i class="fa-solid fa-certificate"></i>
+
+
+                <h3>
+
+                    Certificat
+
+                </h3>
+
+
+                <p>
+
+                    Après réussite
+
+                </p>
+
+
+            </div>
+
+
+
+
+        </div>
+
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+    <!--====================================
+            REGLES
+=====================================-->
+
+    <section class="quiz-rules">
+
+
+        <h2>
+
+            📌 Règles du quiz
+
+        </h2>
+
+
+
+
+
+        <ul>
+
+
+            <li>
+
+                Une seule réponse est correcte par question.
+
+            </li>
+
+
+
+
+            <li>
+
+                Répondez à toutes les questions avant validation.
+
+            </li>
+
+
+
+
+            <li>
+
+                Un score minimum de 70% est nécessaire.
+
+            </li>
+
+
+
+
+            <li>
+
+                La réussite débloque la validation du chapitre.
+
+            </li>
+
+
+
+        </ul>
+
+
+
+    </section>
+    <!--====================================
+            QUESTIONS QUIZ
+=====================================-->
+
+    <section class="quiz-container">
+
+
+        <h2>
+
+            📝 Questions d'évaluation
+
+        </h2>
+
+
+
+
+
+
+
+        <!-- QUESTION 1 -->
+
+        <div class="question">
+
+
+            <h3>
+
+                1. Qu'est-ce que la création de contenu ?
+
+            </h3>
+
+
+
+
+            <label>
+
+                <input type="radio" name="q1" value="1">
+
+                Produire des informations utiles pour attirer et informer une audience
+
+            </label>
+
+
+
+
+            <label>
+
+                <input type="radio" name="q1" value="0">
+
+                Créer uniquement des publicités payantes
+
+            </label>
+
+
+
+
+            <label>
+
+                <input type="radio" name="q1" value="0">
+
+                Supprimer les contenus d'une entreprise
+
+            </label>
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+        <!-- QUESTION 2 -->
+
+        <div class="question">
+
+
+            <h3>
+
+                2. Quel est l'objectif principal du copywriting ?
+
+            </h3>
+
+
+
+
+            <label>
+
+                <input type="radio" name="q2" value="1">
+
+                Écrire des textes capables de convaincre et provoquer une action
+
+            </label>
+
+
+
+
+            <label>
+
+                <input type="radio" name="q2" value="0">
+
+                Créer uniquement des images
+
+            </label>
+
+
+
+
+            <label>
+
+                <input type="radio" name="q2" value="0">
+
+                Remplacer une stratégie marketing complète
+
+            </label>
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+        <!-- QUESTION 3 -->
+
+        <div class="question">
+
+
+            <h3>
+
+                3. Le storytelling consiste à :
+
+            </h3>
+
+
+
+
+            <label>
+
+                <input type="radio" name="q3" value="1">
+
+                Utiliser une histoire pour transmettre un message
+
+            </label>
+
+
+
+
+            <label>
+
+                <input type="radio" name="q3" value="0">
+
+                Copier les contenus des concurrents
+
+            </label>
+
+
+
+
+            <label>
+
+                <input type="radio" name="q3" value="0">
+
+                Publier sans objectif précis
+
+            </label>
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+        <!-- QUESTION 4 -->
+
+        <div class="question">
+
+
+            <h3>
+
+                4. Pourquoi les vidéos sont-elles importantes en marketing digital ?
+
+            </h3>
+
+
+
+
+            <label>
+
+                <input type="radio" name="q4" value="1">
+
+                Elles permettent de présenter rapidement un produit ou une idée
+
+            </label>
+
+
+
+
+            <label>
+
+                <input type="radio" name="q4" value="0">
+
+                Elles empêchent les clients de découvrir une marque
+
+            </label>
+
+
+
+
+            <label>
+
+                <input type="radio" name="q4" value="0">
+
+                Elles remplacent tous les autres contenus
+
+            </label>
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+        <!-- QUESTION 5 -->
+
+        <div class="question">
+
+
+            <h3>
+
+                5. Une bonne stratégie de contenu commence par :
+
+            </h3>
+
+
+
+
+            <label>
+
+                <input type="radio" name="q5" value="1">
+
+                Identifier son audience et ses besoins
+
+            </label>
+
+
+
+
+            <label>
+
+                <input type="radio" name="q5" value="0">
+
+                Publier au hasard sans objectif
+
+            </label>
+
+
+
+
+            <label>
+
+                <input type="radio" name="q5" value="0">
+
+                Copier les publications d'autres marques
+
+            </label>
+
+
+
+        </div>
+        <!-- QUESTION 6 -->
+
+        <div class="question">
+
+
+            <h3>
+
+                6. Quel élément permet de rendre un contenu plus attractif ?
+
+            </h3>
+
+
+
+
+            <label>
+
+                <input type="radio" name="q6" value="1">
+
+                Un titre intéressant et un message clair
+
+            </label>
+
+
+
+
+            <label>
+
+                <input type="radio" name="q6" value="0">
+
+                Un texte sans structure
+
+            </label>
+
+
+
+
+            <label>
+
+                <input type="radio" name="q6" value="0">
+
+                Une publication sans objectif
+
+            </label>
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+        <!-- QUESTION 7 -->
+
+        <div class="question">
+
+
+            <h3>
+
+                7. Un appel à l'action (Call To Action) sert à :
+
+            </h3>
+
+
+
+
+            <label>
+
+                <input type="radio" name="q7" value="1">
+
+                Encourager le client à réaliser une action précise
+
+            </label>
+
+
+
+
+            <label>
+
+                <input type="radio" name="q7" value="0">
+
+                Empêcher les visiteurs de réagir
+
+            </label>
+
+
+
+
+            <label>
+
+                <input type="radio" name="q7" value="0">
+
+                Décorer uniquement une publication
+
+            </label>
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+        <!-- QUESTION 8 -->
+
+        <div class="question">
+
+
+            <h3>
+
+                8. Quel contenu est adapté aux réseaux sociaux ?
+
+            </h3>
+
+
+
+
+            <label>
+
+                <input type="radio" name="q8" value="1">
+
+                Vidéos courtes, images, conseils et publications engageantes
+
+            </label>
+
+
+
+
+            <label>
+
+                <input type="radio" name="q8" value="0">
+
+                Des contenus sans rapport avec l'audience
+
+            </label>
+
+
+
+
+            <label>
+
+                <input type="radio" name="q8" value="0">
+
+                Uniquement des messages très longs
+
+            </label>
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+        <!-- QUESTION 9 -->
+
+        <div class="question">
+
+
+            <h3>
+
+                9. Pourquoi faut-il connaître son audience avant de créer du contenu ?
+
+            </h3>
+
+
+
+
+            <label>
+
+                <input type="radio" name="q9" value="1">
+
+                Pour proposer des contenus adaptés à ses besoins
+
+            </label>
+
+
+
+
+            <label>
+
+                <input type="radio" name="q9" value="0">
+
+                Pour publier sans stratégie
+
+            </label>
+
+
+
+
+            <label>
+
+                <input type="radio" name="q9" value="0">
+
+                Pour éviter toute communication
+
+            </label>
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+        <!-- QUESTION 10 -->
+
+        <div class="question">
+
+
+            <h3>
+
+                10. Quel est le rôle principal du contenu marketing ?
+
+            </h3>
+
+
+
+
+            <label>
+
+                <input type="radio" name="q10" value="1">
+
+                Attirer, informer et fidéliser les clients
+
+            </label>
+
+
+
+
+            <label>
+
+                <input type="radio" name="q10" value="0">
+
+                Supprimer la présence d'une marque en ligne
+
+            </label>
+
+
+
+
+            <label>
+
+                <input type="radio" name="q10" value="0">
+
+                Remplacer tous les produits d'une entreprise
+
+            </label>
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+        <!--====================================
+            BOUTON VALIDATION
+    =====================================-->
+
+        <div class="quiz-submit">
+
+
+            <button onclick="corrigerQuiz()">
+
+                🎓 Valider l'évaluation
+
+            </button>
+
+
+        </div>
+
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+    <!--====================================
+            FOOTER
+=====================================-->
+
+    <footer>
+
+
+        <h3>
+
+            BMJ SERVICE
+
+        </h3>
+
+
+
+
+
+        <p>
+
+            Formation professionnelle en ligne
+
+            <br>
+
+            Création de contenu et marketing digital.
+
+        </p>
+
+
+
+    </footer>
+
+
+
+    <script>
+        //==================================================
+        // BMJ SERVICE
+        // CHAPITRE 6 : CREATION DE CONTENU
+        // QUIZ FINAL
+        //==================================================
+
+
+
+
+
+        //====================================
+        // CHARGEMENT PAGE
+        //====================================
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+
+
+            let utilisateur = JSON.parse(
+
+                localStorage.getItem("bmj_current_user")
+
+            );
+
+
+
+
+
+
+            if (utilisateur) {
+
+
+
+                let nom = document.getElementById(
+
+                    "nomUtilisateur"
+
+                );
+
+
+
+                if (nom) {
+
+
+                    nom.innerHTML = utilisateur.nom;
+
+
+                }
+
+
+
+
+
+
+
+                let photo = document.getElementById(
+
+                    "photoUtilisateur"
+
+                );
+
+
+
+                if (photo && utilisateur.photo) {
+
+
+                    photo.src = utilisateur.photo;
+
+
+                }
+
+
+
+            }
+
+
+
+        });
+
+
+
+
+
+
+
+
+
+        //====================================
+        // CORRECTION QUIZ
+        //====================================
+
+
+        function corrigerQuiz() {
+
+
+
+            let score = 0;
+
+
+            let total = 10;
+
+
+
+
+
+            for (let i = 1; i <= total; i++) {
+
+
+
+                let reponse = document.querySelector(
+
+                    'input[name="q' + i + '"]:checked'
+
+                );
+
+
+
+
+
+                if (!reponse) {
+
+
+
+                    alert(
+
+                        "⚠️ Veuillez répondre à toutes les questions."
+
+                    );
+
+
+                    return;
+
+
+                }
+
+
+
+
+
+
+                score += Number(reponse.value);
+
+
+
+            }
+
+
+
+
+
+
+
+
+            let pourcentage = Math.round(
+
+                (score / total) * 100
+
+            );
+
+
+
+
+
+
+
+
+            afficherResultat(pourcentage);
+
+
+
+        }
+
+
+
+
+
+
+
+
+
+        //====================================
+        // AFFICHAGE RESULTAT
+        //====================================
+
+
+        function afficherResultat(score) {
+
+
+
+
+
+            if (score >= 70) {
+
+
+
+
+
+                alert(
+
+                    "🎉 Félicitations !\n\nVotre score : "
+
+                    + score +
+
+                    "%\n\nVous avez réussi le quiz Création de contenu."
+
+                );
+
+
+
+
+
+
+
+                validerChapitre();
+
+
+
+
+
+            }
+
+            else {
+
+
+
+
+
+                alert(
+
+                    "❌ Échec de l'évaluation.\n\nVotre score : "
+
+                    + score +
+
+                    "%\n\nVous devez obtenir au minimum 70%."
+
+                );
+
+
+
+            }
+
+
+
+        }
+
+
+
+
+
+
+
+
+
+        //====================================
+        // VALIDATION CHAPITRE
+        //====================================
+
+
+        function validerChapitre() {
+
+
+
+            localStorage.setItem(
+
+                "contenu_valide",
+
+                "true"
+
+            );
+
+
+
+
+
+
+
+
+            let utilisateur = JSON.parse(
+
+                localStorage.getItem("bmj_current_user")
+
+            );
+
+
+
+
+
+
+
+
+            if (utilisateur) {
+
+
+
+
+
+                utilisateur.chapitresValides =
+
+                    utilisateur.chapitresValides || [];
+
+
+
+
+
+
+
+                if (!utilisateur.chapitresValides.includes(
+
+                    "Création de contenu"
+
+                )) {
+
+
+
+                    utilisateur.chapitresValides.push(
+
+                        "Création de contenu"
+
+                    );
+
+
+
+                }
+
+
+
+
+
+
+
+
+                utilisateur.certificats =
+
+                    utilisateur.certificats || [];
+
+
+
+
+
+
+
+
+                if (!utilisateur.certificats.includes(
+
+                    "Création de contenu"
+
+                )) {
+
+
+
+                    utilisateur.certificats.push(
+
+                        "Création de contenu"
+
+                    );
+
+
+
+                }
+
+
+
+
+
+
+
+
+                utilisateur.progressionContenu = 100;
+
+
+
+
+
+
+
+
+                localStorage.setItem(
+
+                    "bmj_current_user",
+
+                    JSON.stringify(utilisateur)
+
+                );
+
+
+
+            }
+
+
+
+
+
+
+
+
+            setTimeout(function () {
+
+
+
+                window.location.href = "contenu.php";
+
+
+
+            }, 1500);
+
+
+
+        }
+    </script>
+
+</body>
+
+</html>

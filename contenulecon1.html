@@ -1,0 +1,2097 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*==================================================
+        BMJ SERVICE
+        LEÇON - CREATION DE CONTENU
+==================================================*/
+
+
+        * {
+
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', Arial, sans-serif;
+
+        }
+
+
+
+        body {
+
+            background: #f4f7fb;
+
+            color: #333;
+
+            line-height: 1.8;
+
+        }
+
+
+
+
+
+
+
+
+
+        /*====================================
+            HEADER
+=====================================*/
+
+
+        header {
+
+            position: fixed;
+
+            top: 0;
+
+            left: 0;
+
+            width: 100%;
+
+            height: 75px;
+
+            background: white;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            padding: 0 40px;
+
+            box-shadow: 0 5px 20px rgba(0, 0, 0, .08);
+
+            z-index: 1000;
+
+        }
+
+
+
+        .logo {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+        }
+
+
+
+        .logo img {
+
+            width: 50px;
+
+            height: 50px;
+
+            border-radius: 50%;
+
+        }
+
+
+
+        .logo h2 {
+
+            color: #145A86;
+
+        }
+
+
+
+        .logo span {
+
+            color: #D4AF37;
+
+        }
+
+
+
+
+
+
+        .student-profile {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+        }
+
+
+
+        .student-profile img {
+
+            width: 50px;
+
+            height: 50px;
+
+            border-radius: 50%;
+
+            border: 3px solid #D4AF37;
+
+            object-fit: cover;
+
+        }
+
+
+
+        .student-profile h4 {
+
+            color: #145A86;
+
+        }
+
+
+
+
+
+
+
+
+
+        /*====================================
+            HERO LEÇON
+=====================================*/
+
+
+        .lesson-hero {
+
+            margin-top: 75px;
+
+            height: 450px;
+
+            background:
+
+                linear-gradient(rgba(20, 90, 134, .85),
+
+                    rgba(0, 0, 0, .75)),
+
+                url(images/creation-contenu.jpg);
+
+
+
+            background-size: cover;
+
+            background-position: center;
+
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+
+        }
+
+
+
+        .lesson-overlay {
+
+            width: 90%;
+
+            max-width: 1100px;
+
+            text-align: center;
+
+            color: white;
+
+        }
+
+
+
+        .lesson-overlay span {
+
+            background: #D4AF37;
+
+            color: #145A86;
+
+            padding: 8px 25px;
+
+            border-radius: 30px;
+
+            font-weight: bold;
+
+        }
+
+
+
+        .lesson-overlay h1 {
+
+            font-size: 42px;
+
+            margin: 25px 0;
+
+        }
+
+
+
+        .lesson-overlay p {
+
+            font-size: 18px;
+
+        }
+
+
+
+
+
+
+
+
+
+        /*====================================
+        BLOCS CONTENU
+=====================================*/
+
+
+        .objectif,
+        .cours,
+        .exemple,
+        .important,
+        .exercice,
+        .video-cours {
+
+
+            width: 90%;
+
+            max-width: 1100px;
+
+            margin: 45px auto;
+
+            background: white;
+
+            padding: 35px;
+
+            border-radius: 20px;
+
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+
+
+        }
+
+
+
+
+
+        .objectif h2,
+        .cours h2,
+        .exemple h2,
+        .important h2,
+        .exercice h2,
+        .video-cours h2 {
+
+
+            color: #145A86;
+
+            border-left: 6px solid #D4AF37;
+
+            padding-left: 15px;
+
+            margin-bottom: 25px;
+
+
+        }
+
+
+
+
+
+
+
+
+
+        /*====================================
+            COURS
+=====================================*/
+
+
+        .cours h3 {
+
+            color: #145A86;
+
+            margin-top: 30px;
+
+            margin-bottom: 15px;
+
+        }
+
+
+
+        .cours p {
+
+            text-align: justify;
+
+            margin-bottom: 15px;
+
+        }
+
+
+
+        .cours ul,
+        .objectif ul,
+        .exemple ul,
+        .exercice ul {
+
+            margin-left: 25px;
+
+        }
+
+
+
+        .cours li,
+        .objectif li,
+        .exemple li,
+        .exercice li {
+
+            margin-bottom: 10px;
+
+        }
+
+
+
+
+
+
+
+
+
+        /*====================================
+            EXEMPLE
+=====================================*/
+
+
+        .exemple {
+
+            background: #eef7ff;
+
+            border-left: 6px solid #145A86;
+
+        }
+
+
+
+
+
+
+
+
+
+        /*====================================
+            VIDEO
+=====================================*/
+
+
+        .video-cours iframe {
+
+            width: 100%;
+
+            height: 400px;
+
+            border-radius: 15px;
+
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .15);
+
+        }
+
+
+
+
+
+
+
+
+
+        /*====================================
+            A RETENIR
+=====================================*/
+
+
+        .important {
+
+            background: #145A86;
+
+            color: white;
+
+        }
+
+
+
+        .important h2 {
+
+            color: white;
+
+            border-color: #D4AF37;
+
+        }
+
+
+
+        .important p {
+
+            margin-bottom: 15px;
+
+        }
+
+
+
+
+
+
+
+
+
+        /*====================================
+            EXERCICE
+=====================================*/
+
+
+        .exercice textarea {
+
+            width: 100%;
+
+            height: 180px;
+
+            margin-top: 20px;
+
+            padding: 15px;
+
+            border-radius: 15px;
+
+            border: 2px solid #ddd;
+
+            font-size: 16px;
+
+            resize: none;
+
+        }
+
+
+
+        .exercice textarea:focus {
+
+            outline: none;
+
+            border-color: #145A86;
+
+        }
+
+
+
+
+
+
+
+
+
+        /*====================================
+        NAVIGATION
+=====================================*/
+
+
+        .navigation {
+
+            width: 90%;
+
+            max-width: 1100px;
+
+            margin: 40px auto 60px;
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 20px;
+
+        }
+
+
+
+        .navigation button {
+
+            padding: 16px 35px;
+
+            border: none;
+
+            border-radius: 30px;
+
+            cursor: pointer;
+
+            font-weight: bold;
+
+            transition: .3s;
+
+        }
+
+
+
+        .navigation button:first-child {
+
+            background: #145A86;
+
+            color: white;
+
+        }
+
+
+
+        .navigation button:last-child {
+
+            background: #D4AF37;
+
+            color: #145A86;
+
+        }
+
+
+
+        .navigation button:hover {
+
+            transform: translateY(-5px);
+
+        }
+
+
+
+
+
+
+
+
+
+        /*====================================
+            FOOTER
+=====================================*/
+
+
+        footer {
+
+            background: #145A86;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 40px;
+
+        }
+
+
+
+        footer h3 {
+
+            color: #D4AF37;
+
+            margin-bottom: 10px;
+
+        }
+
+
+
+
+
+
+
+
+
+        /*====================================
+            TABLETTE
+=====================================*/
+
+
+        @media(max-width:800px) {
+
+
+
+            .lesson-overlay h1 {
+
+                font-size: 32px;
+
+            }
+
+
+
+            .objectif,
+            .cours,
+            .exemple,
+            .important,
+            .exercice,
+            .video-cours {
+
+                padding: 25px;
+
+            }
+
+
+
+        }
+
+
+
+
+
+
+
+
+
+        /*====================================
+            MOBILE
+=====================================*/
+
+
+        @media(max-width:600px) {
+
+
+
+            header {
+
+                padding: 0 15px;
+
+            }
+
+
+
+            .logo h2 {
+
+                font-size: 18px;
+
+            }
+
+
+
+            .logo img {
+
+                width: 40px;
+
+                height: 40px;
+
+            }
+
+
+
+            .student-profile small {
+
+                display: none;
+
+            }
+
+
+
+            .lesson-hero {
+
+                height: 500px;
+
+            }
+
+
+
+            .lesson-overlay h1 {
+
+                font-size: 26px;
+
+            }
+
+
+
+            .lesson-overlay p {
+
+                font-size: 15px;
+
+            }
+
+
+
+            .navigation {
+
+                flex-direction: column;
+
+            }
+
+
+
+            .navigation button {
+
+                width: 100%;
+
+            }
+
+
+
+            .video-cours iframe {
+
+                height: 220px;
+
+            }
+
+
+
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <!--====================================
+            HEADER
+=====================================-->
+
+    <header>
+
+
+        <div class="logo">
+
+
+            <img src="images/logo.png" alt="BMJ SERVICE">
+
+
+
+            <h2>
+
+                BMJ <span>SERVICE</span>
+
+            </h2>
+
+
+        </div>
+
+
+
+
+
+
+
+        <div class="student-profile">
+
+
+            <img id="photoUtilisateur" src="images/user.png" alt="Utilisateur">
+
+
+
+
+
+            <div>
+
+
+                <h4 id="nomUtilisateur">
+
+                    Apprenant
+
+                </h4>
+
+
+
+
+
+                <small id="domaineUtilisateur">
+
+                    Marketing Digital
+
+                </small>
+
+
+
+            </div>
+
+
+        </div>
+
+
+
+    </header>
+
+
+
+
+
+
+
+
+
+    <!--====================================
+            HERO LEÇON
+=====================================-->
+
+    <section class="lesson-hero">
+
+
+        <div class="lesson-overlay">
+
+
+            <span>
+
+                CHAPITRE 6
+
+            </span>
+
+
+
+
+
+            <h1>
+
+                Création de contenu professionnel
+
+            </h1>
+
+
+
+
+
+            <p>
+
+                Apprenez à créer des contenus efficaces grâce au
+                copywriting, au storytelling et aux formats modernes
+                comme les vidéos.
+
+                Découvrez comment produire des messages capables
+                d'attirer, informer et convertir une audience.
+
+            </p>
+
+
+
+        </div>
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+    <!--====================================
+        OBJECTIFS DE LA LEÇON
+=====================================-->
+
+    <section class="objectif">
+
+
+        <h2>
+
+            🎯 Objectifs de la leçon
+
+        </h2>
+
+
+
+
+
+        <ul>
+
+
+            <li>
+
+                Comprendre le rôle du contenu dans une stratégie marketing.
+
+            </li>
+
+
+
+
+            <li>
+
+                Apprendre les bases du copywriting pour écrire des messages
+                convaincants.
+
+            </li>
+
+
+
+
+            <li>
+
+                Utiliser le storytelling pour créer une connexion émotionnelle
+                avec les clients.
+
+            </li>
+
+
+
+
+            <li>
+
+                Découvrir les techniques de création de vidéos professionnelles.
+
+            </li>
+
+
+
+
+            <li>
+
+                Construire une stratégie de contenu adaptée à une marque.
+
+            </li>
+
+
+        </ul>
+
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+    <!--====================================
+            CONTENU COURS
+=====================================-->
+
+    <section class="cours">
+
+
+        <h2>
+
+            📚 Cours : Création de contenu
+
+        </h2>
+
+
+
+
+
+        <h3>
+
+            1. Comprendre la création de contenu
+
+        </h3>
+
+
+
+
+
+        <p>
+
+            La création de contenu consiste à produire et partager des
+            informations utiles afin d'attirer une audience, développer
+            une relation avec les clients et renforcer la visibilité
+            d'une entreprise.
+
+        </p>
+
+
+
+
+
+        <p>
+
+            Dans le marketing digital, le contenu est devenu un élément
+            essentiel car les consommateurs recherchent aujourd'hui
+            des informations avant de prendre une décision d'achat.
+
+        </p>
+
+
+
+
+
+
+
+
+
+        <h3>
+
+            2. Le copywriting : écrire pour convaincre
+
+        </h3>
+
+
+
+
+
+        <p>
+
+            Le copywriting est une technique d'écriture utilisée pour
+            créer des textes qui poussent le lecteur à réaliser une action :
+            acheter un produit, s'inscrire à une formation ou contacter
+            une entreprise.
+
+        </p>
+
+
+
+
+
+        <ul>
+
+
+            <li>
+
+                Utiliser des titres attirants.
+
+            </li>
+
+
+
+
+            <li>
+
+                Comprendre les besoins du client.
+
+            </li>
+
+
+
+
+            <li>
+
+                Mettre en avant les avantages d'un produit ou service.
+
+            </li>
+
+
+
+
+            <li>
+
+                Ajouter un appel à l'action clair.
+
+            </li>
+
+
+
+        </ul>
+
+
+
+
+
+
+
+
+
+        <h3>
+
+            3. Le storytelling : raconter une histoire
+
+        </h3>
+
+
+
+
+
+        <p>
+
+            Le storytelling consiste à utiliser une histoire pour
+            transmettre un message.
+
+            Les marques utilisent cette technique pour créer une
+            émotion, améliorer leur image et créer une relation plus
+            forte avec leur communauté.
+
+        </p>
+
+
+
+
+
+        <p>
+
+            Une bonne histoire présente généralement :
+
+        </p>
+
+
+
+
+
+        <ul>
+
+
+            <li>
+
+                Un personnage principal.
+
+            </li>
+
+
+
+
+            <li>
+
+                Un problème à résoudre.
+
+            </li>
+
+
+
+
+            <li>
+
+                Une solution apportée par la marque.
+
+            </li>
+
+
+
+        </ul>
+
+
+
+
+
+
+
+
+
+        <h3>
+
+            4. La création de contenus vidéo
+
+        </h3>
+
+
+
+
+
+        <p>
+
+            Les vidéos sont aujourd'hui parmi les contenus les plus
+            consommés sur Internet.
+
+            Elles permettent d'expliquer rapidement un produit,
+            présenter une entreprise ou partager une expérience.
+
+        </p>
+
+
+
+
+
+        <ul>
+
+
+            <li>
+
+                Vidéos éducatives.
+
+            </li>
+
+
+
+
+            <li>
+
+                Présentation de produits.
+
+            </li>
+
+
+
+
+            <li>
+
+                Témoignages clients.
+
+            </li>
+
+
+
+
+            <li>
+
+                Vidéos courtes pour les réseaux sociaux.
+
+            </li>
+
+
+
+        </ul>
+
+
+        <!--====================================
+            EXEMPLE CONCRET
+=====================================-->
+
+        <section class="exemple">
+
+
+            <h2>
+
+                💡 Exemple concret
+
+            </h2>
+
+
+
+
+
+            <p>
+
+                Une boutique de vêtements souhaite attirer plus de clients
+                sur Internet.
+
+                Au lieu de publier uniquement des photos de ses produits,
+                elle crée différents types de contenus :
+
+            </p>
+
+
+
+
+
+            <ul>
+
+
+                <li>
+
+                    Des articles donnant des conseils de mode.
+
+                </li>
+
+
+
+
+                <li>
+
+                    Des vidéos montrant comment porter ses vêtements.
+
+                </li>
+
+
+
+
+                <li>
+
+                    Des histoires présentant l'origine de la marque.
+
+                </li>
+
+
+
+
+                <li>
+
+                    Des publications qui expliquent les avantages de ses produits.
+
+                </li>
+
+
+
+            </ul>
+
+
+
+
+
+            <p>
+
+                Grâce à cette stratégie de contenu, la boutique attire une
+                communauté, gagne la confiance des clients et augmente ses ventes.
+
+            </p>
+
+
+
+        </section>
+
+
+
+
+
+
+
+
+
+        <!--====================================
+            STRATEGIE DE CONTENU
+=====================================-->
+
+        <section class="cours">
+
+
+            <h3>
+
+                5. Construire une stratégie de contenu efficace
+
+            </h3>
+
+
+
+
+
+            <p>
+
+                Une stratégie de contenu permet d'organiser les publications
+                d'une entreprise afin d'atteindre des objectifs précis.
+
+                Elle consiste à définir quoi publier, pour qui publier et
+                comment mesurer les résultats.
+
+            </p>
+
+
+
+
+
+            <ul>
+
+
+                <li>
+
+                    Identifier son audience cible.
+
+                </li>
+
+
+
+
+                <li>
+
+                    Définir les objectifs du contenu.
+
+                </li>
+
+
+
+
+                <li>
+
+                    Choisir les bons formats de publication.
+
+                </li>
+
+
+
+
+                <li>
+
+                    Planifier les contenus avec un calendrier éditorial.
+
+                </li>
+
+
+
+
+                <li>
+
+                    Analyser les performances et améliorer la stratégie.
+
+                </li>
+
+
+
+            </ul>
+
+
+
+        </section>
+
+
+
+
+
+
+
+
+
+        <!--====================================
+            VIDEO COURS
+=====================================-->
+
+        <section class="video-cours">
+
+
+            <h2>
+
+                📹 Vidéo explicative
+
+            </h2>
+
+
+
+
+
+            <iframe width="100%" height="400" src="https://www.youtube.com/embed/7q7depQBIqA"
+                title="Création de contenu marketing" frameborder="0" allowfullscreen>
+
+
+            </iframe>
+
+
+
+        </section>
+        <!--====================================
+            A RETENIR
+=====================================-->
+
+        <section class="important">
+
+
+            <h2>
+
+                📌 À retenir
+
+            </h2>
+
+
+
+
+
+            <p>
+
+                ✔ La création de contenu permet à une entreprise
+                d'attirer, informer et fidéliser son audience.
+
+            </p>
+
+
+
+
+
+            <p>
+
+                ✔ Le copywriting utilise des techniques d'écriture
+                pour convaincre et encourager une action.
+
+            </p>
+
+
+
+
+
+            <p>
+
+                ✔ Le storytelling permet de créer une connexion
+                émotionnelle entre une marque et ses clients.
+
+            </p>
+
+
+
+
+
+            <p>
+
+                ✔ Les vidéos sont des formats puissants pour présenter
+                des produits, expliquer des concepts et développer
+                une communauté.
+
+            </p>
+
+
+
+
+
+            <p>
+
+                ✔ Une bonne stratégie de contenu repose sur la
+                connaissance de son audience, la planification et
+                l'analyse des résultats.
+
+            </p>
+
+
+
+        </section>
+
+
+
+
+
+
+
+
+
+        <!--====================================
+            EXERCICE
+=====================================-->
+
+        <section class="exercice">
+
+
+            <h2>
+
+                📝 Exercice pratique
+
+            </h2>
+
+
+
+
+
+            <p>
+
+                Imaginez que vous êtes responsable marketing d'une
+                nouvelle entreprise qui vend des produits en ligne.
+
+                Proposez une idée de stratégie de contenu pour attirer
+                de nouveaux clients.
+
+            </p>
+
+
+
+
+
+            <ul>
+
+
+                <li>
+
+                    Quel type de contenu allez-vous créer ?
+
+                </li>
+
+
+
+
+                <li>
+
+                    Quel message souhaitez-vous transmettre ?
+
+                </li>
+
+
+
+
+                <li>
+
+                    Quelle histoire pourriez-vous raconter autour de votre marque ?
+
+                </li>
+
+
+
+
+                <li>
+
+                    Quelle vidéo pourriez-vous réaliser pour promouvoir votre produit ?
+
+                </li>
+
+
+
+            </ul>
+
+
+
+
+
+            <textarea placeholder="Écrivez votre réponse ici...">
+
+
+    </textarea>
+
+
+
+        </section>
+
+
+
+
+
+
+
+
+
+        <!--====================================
+            VALIDATION LEÇON
+=====================================-->
+
+        <section class="navigation">
+
+
+            <button onclick="retourChapitre()">
+
+                ← Retour au chapitre
+
+            </button>
+
+
+
+
+
+            <button onclick="terminerLecon()">
+
+                ✓ Terminer la leçon
+
+            </button>
+
+
+
+        </section>
+
+
+
+
+
+
+
+
+
+        <!--====================================
+            FOOTER
+=====================================-->
+
+        <footer>
+
+
+            <h3>
+
+                BMJ SERVICE
+
+            </h3>
+
+
+
+
+
+            <p>
+
+                Formation professionnelle en ligne
+
+                <br>
+
+                Création de contenu, marketing digital et communication.
+
+            </p>
+
+
+
+        </footer>
+
+        <script>
+
+            //==================================================
+            // BMJ SERVICE
+            // CHAPITRE 6 : CREATION DE CONTENU
+            // LEÇON 1 : CREATION DE CONTENU PROFESSIONNEL
+            // SCRIPT
+            //==================================================
+
+
+
+
+
+            //====================================
+            // CHARGEMENT PAGE
+            //====================================
+
+
+            document.addEventListener("DOMContentLoaded", function () {
+
+
+
+                let utilisateur = JSON.parse(
+
+                    localStorage.getItem("bmj_current_user")
+
+                );
+
+
+
+
+
+
+                //===============================
+                // AFFICHAGE PROFIL
+                //===============================
+
+
+                if (utilisateur) {
+
+
+
+                    let nom = document.getElementById(
+
+                        "nomUtilisateur"
+
+                    );
+
+
+
+                    if (nom) {
+
+
+                        nom.innerHTML = utilisateur.nom;
+
+
+                    }
+
+
+
+
+
+
+
+                    let photo = document.getElementById(
+
+                        "photoUtilisateur"
+
+                    );
+
+
+
+                    if (photo && utilisateur.photo) {
+
+
+                        photo.src = utilisateur.photo;
+
+
+                    }
+
+
+
+                }
+
+
+
+
+
+
+
+
+                chargerReponse();
+
+
+
+            });
+
+
+
+
+
+
+
+
+
+            //====================================
+            // RETOUR CHAPITRE
+            //====================================
+
+
+            function retourChapitre() {
+
+
+
+                window.location.href = "contenu.php";
+
+
+            }
+
+
+
+
+
+
+
+
+
+            //====================================
+            // SAUVEGARDE EXERCICE
+            //====================================
+
+
+            function sauvegarderReponse() {
+
+
+
+                let reponse = document.querySelector(
+
+                    "textarea"
+
+                ).value;
+
+
+
+
+
+                localStorage.setItem(
+
+                    "contenu_exercice",
+
+                    reponse
+
+                );
+
+
+
+
+
+                alert(
+
+                    "✅ Votre réponse a été sauvegardée."
+
+                );
+
+
+
+            }
+
+
+
+
+
+
+
+
+
+            //====================================
+            // CHARGER REPONSE
+            //====================================
+
+
+            function chargerReponse() {
+
+
+
+                let ancienneReponse = localStorage.getItem(
+
+                    "contenu_exercice"
+
+                );
+
+
+
+
+
+                let zone = document.querySelector(
+
+                    "textarea"
+
+                );
+
+
+
+
+
+                if (zone && ancienneReponse) {
+
+
+                    zone.value = ancienneReponse;
+
+
+                }
+
+
+
+            }
+
+
+
+
+
+
+
+
+
+            //====================================
+            // TERMINER LA LEÇON
+            //====================================
+
+
+            function terminerLecon() {
+
+
+
+                localStorage.setItem(
+
+                    "contenu_lecon1",
+
+                    "true"
+
+                );
+
+
+
+
+
+
+
+
+                // Progression chapitre
+
+
+                localStorage.setItem(
+
+                    "contenu_progression",
+
+                    "100"
+
+                );
+
+
+
+
+
+
+
+
+                let utilisateur = JSON.parse(
+
+                    localStorage.getItem("bmj_current_user")
+
+                );
+
+
+
+
+
+
+
+                if (utilisateur) {
+
+
+
+                    utilisateur.progressionContenu = 100;
+
+
+
+
+
+
+
+                    utilisateur.coursTermines =
+
+                        utilisateur.coursTermines || [];
+
+
+
+
+
+
+
+
+                    if (!utilisateur.coursTermines.includes(
+
+                        "Création de contenu"
+
+                    )) {
+
+
+                        utilisateur.coursTermines.push(
+
+                            "Création de contenu"
+
+                        );
+
+
+                    }
+
+
+
+
+
+
+
+
+                    localStorage.setItem(
+
+                        "bmj_current_user",
+
+                        JSON.stringify(utilisateur)
+
+                    );
+
+
+
+                }
+
+
+
+
+
+
+
+
+                alert(
+
+                    "🎉 Félicitations !\n\nVous avez terminé la leçon Création de contenu.\n\nLe quiz final est maintenant disponible."
+
+                );
+
+
+
+
+
+
+
+
+                window.location.href = "contenu.php";
+
+
+
+            }
+
+
+
+
+
+
+
+
+
+            //====================================
+            // ALLER AU QUIZ
+            //====================================
+
+
+            function allerQuiz() {
+
+
+
+                let validation = localStorage.getItem(
+
+                    "contenu_lecon1"
+
+                );
+
+
+
+
+
+                if (validation !== "true") {
+
+
+
+                    alert(
+
+                        "🔒 Terminez d'abord la leçon avant de passer le quiz."
+
+                    );
+
+
+
+                    return;
+
+
+                }
+
+
+
+
+
+
+
+                window.location.href = "contenuquiz.html";
+
+
+
+            }
+        </script>
+</body>
+
+</html>

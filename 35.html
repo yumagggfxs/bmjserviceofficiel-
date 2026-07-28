@@ -1,0 +1,2482 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*==================================================
+        BMJ SERVICE - LEÇON 5 MARKETING
+        DEVELOPPEMENT D'UNE MARQUE DURABLE
+==================================================*/
+
+
+        * {
+
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+
+        }
+
+
+
+        html {
+
+            scroll-behavior: smooth;
+
+        }
+
+
+
+        body {
+
+            background: #f4f7fb;
+
+            color: #333;
+
+            line-height: 1.8;
+
+        }
+
+
+
+
+
+        /*=====================================
+            HEADER MODERNE
+======================================*/
+
+
+        header {
+
+            position: fixed;
+
+            top: 0;
+
+            left: 0;
+
+            width: 100%;
+
+            height: 75px;
+
+            background: rgba(255, 255, 255, .95);
+
+            backdrop-filter: blur(10px);
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            padding: 0 45px;
+
+            box-shadow: 0 8px 25px rgba(0, 0, 0, .08);
+
+            z-index: 1000;
+
+        }
+
+
+
+
+        .logo {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+        }
+
+
+
+        .logo img {
+
+            width: 52px;
+
+            height: 52px;
+
+            border-radius: 50%;
+
+            border: 3px solid #D4AF37;
+
+        }
+
+
+
+        .logo h2 {
+
+            color: #145A86;
+
+            font-size: 24px;
+
+        }
+
+
+
+        .logo span {
+
+            color: #D4AF37;
+
+        }
+
+
+
+
+
+        .student-profile {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+        }
+
+
+
+        .student-profile img {
+
+            width: 50px;
+
+            height: 50px;
+
+            border-radius: 50%;
+
+            object-fit: cover;
+
+            border: 3px solid #145A86;
+
+        }
+
+
+
+        .student-profile h4 {
+
+            color: #145A86;
+
+        }
+
+
+
+
+
+        /*=====================================
+            HERO
+======================================*/
+
+
+        .lesson-hero {
+
+            margin-top: 75px;
+
+            height: 450px;
+
+            background:
+
+                linear-gradient(135deg,
+
+                    rgba(20, 90, 134, .9),
+
+                    rgba(0, 0, 0, .75)),
+
+                url(images/marque-durable-banner.jpg);
+
+
+
+            background-size: cover;
+
+            background-position: center;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+
+        }
+
+
+
+        .overlay {
+
+            width: 90%;
+
+            max-width: 1000px;
+
+            text-align: center;
+
+            color: white;
+
+        }
+
+
+
+        .overlay span {
+
+            display: inline-block;
+
+            background: #D4AF37;
+
+            color: #145A86;
+
+            padding: 8px 25px;
+
+            border-radius: 50px;
+
+            font-weight: bold;
+
+            margin-bottom: 20px;
+
+        }
+
+
+
+        .overlay h1 {
+
+            font-size: 55px;
+
+            line-height: 1.2;
+
+            margin-bottom: 20px;
+
+        }
+
+
+
+        .overlay p {
+
+            font-size: 21px;
+
+        }
+
+
+
+
+
+
+
+
+        /*=====================================
+        BLOCS PRINCIPAUX
+======================================*/
+
+
+        .objectif,
+        .cours,
+        .images-cours,
+        .exercice {
+
+
+            width: 90%;
+
+            max-width: 1150px;
+
+            margin: 45px auto;
+
+            background: white;
+
+            padding: 40px;
+
+            border-radius: 25px;
+
+            box-shadow:
+
+                0 15px 35px rgba(0, 0, 0, .08);
+
+
+            transition: .3s;
+
+
+        }
+
+
+
+        .objectif:hover,
+        .cours:hover,
+        .images-cours:hover,
+        .exercice:hover {
+
+            transform: translateY(-5px);
+
+        }
+
+
+
+
+
+
+
+        .objectif h2,
+        .cours h2,
+        .images-cours h2,
+        .exercice h2 {
+
+
+            color: #145A86;
+
+            font-size: 28px;
+
+            border-left: 7px solid #D4AF37;
+
+            padding-left: 15px;
+
+            margin-bottom: 25px;
+
+
+        }
+
+
+
+
+
+        .cours h3 {
+
+
+            color: #145A86;
+
+            margin-top: 30px;
+
+            font-size: 22px;
+
+        }
+
+
+
+        .cours p {
+
+            text-align: justify;
+
+            margin-bottom: 18px;
+
+        }
+
+
+
+        .cours ul,
+        .objectif ul,
+        .exercice ul {
+
+            margin-left: 25px;
+
+        }
+
+
+
+        .cours li,
+        .objectif li,
+        .exercice li {
+
+            margin-bottom: 12px;
+
+        }
+
+
+
+
+
+
+
+        /*=====================================
+            CARTES IMAGES
+======================================*/
+
+
+        .image-container {
+
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 30px;
+
+
+        }
+
+
+
+
+        .image-card {
+
+
+            background: #f8fbff;
+
+            border-radius: 20px;
+
+            overflow: hidden;
+
+            box-shadow: 0 8px 20px rgba(0, 0, 0, .1);
+
+            transition: .4s;
+
+        }
+
+
+
+
+        .image-card:hover {
+
+
+            transform: translateY(-12px);
+
+        }
+
+
+
+        .image-card img {
+
+
+            width: 100%;
+
+            height: 230px;
+
+            object-fit: cover;
+
+
+        }
+
+
+
+        .image-card h3 {
+
+
+            text-align: center;
+
+            color: #145A86;
+
+            margin: 18px 0 10px;
+
+
+        }
+
+
+
+        .image-card p {
+
+
+            padding: 0 20px 25px;
+
+            text-align: center;
+
+        }
+
+
+
+
+
+
+
+
+        /*=====================================
+            A RETENIR
+======================================*/
+
+
+        .important {
+
+
+            width: 90%;
+
+            max-width: 1150px;
+
+            margin: 45px auto;
+
+
+            background:
+
+                linear-gradient(135deg,
+
+                    #145A86,
+
+                    #0d3e5c);
+
+
+            color: white;
+
+            padding: 40px;
+
+            border-radius: 25px;
+
+            box-shadow: 0 15px 35px rgba(0, 0, 0, .2);
+
+
+        }
+
+
+
+        .important h2 {
+
+
+            color: white;
+
+            border-left: 7px solid #D4AF37;
+
+            padding-left: 15px;
+
+            margin-bottom: 25px;
+
+        }
+
+
+
+        .important p {
+
+
+            font-size: 18px;
+
+            margin-bottom: 15px;
+
+        }
+
+
+
+
+
+
+
+
+
+        /*=====================================
+            EXERCICE
+======================================*/
+
+
+        .exercice textarea {
+
+
+            width: 100%;
+
+            height: 200px;
+
+            margin-top: 25px;
+
+            padding: 20px;
+
+            border-radius: 18px;
+
+            border: 2px solid #ddd;
+
+            font-size: 16px;
+
+            resize: none;
+
+            outline: none;
+
+
+        }
+
+
+
+        .exercice textarea:focus {
+
+
+            border-color: #145A86;
+
+            box-shadow: 0 0 10px rgba(20, 90, 134, .2);
+
+
+        }
+
+
+
+
+
+
+
+
+
+        /*=====================================
+            NAVIGATION
+======================================*/
+
+
+        .navigation {
+
+
+            width: 90%;
+
+            max-width: 1150px;
+
+            margin: 40px auto 70px;
+
+            display: flex;
+
+            gap: 25px;
+
+
+        }
+
+
+
+        .navigation button {
+
+
+            flex: 1;
+
+            padding: 18px;
+
+            border: none;
+
+            border-radius: 15px;
+
+            font-size: 17px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            transition: .4s;
+
+
+        }
+
+
+
+        .navigation button:first-child {
+
+
+            background: #145A86;
+
+            color: white;
+
+
+        }
+
+
+
+        .navigation button:last-child {
+
+
+            background: #D4AF37;
+
+            color: #145A86;
+
+
+        }
+
+
+
+        .navigation button:hover {
+
+
+            transform: translateY(-6px);
+
+            box-shadow: 0 15px 25px rgba(0, 0, 0, .2);
+
+
+        }
+
+
+
+
+
+
+
+
+
+        /*=====================================
+            FOOTER
+======================================*/
+
+
+        footer {
+
+
+            background: #145A86;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 40px 20px;
+
+
+        }
+
+
+
+        footer h3 {
+
+
+            color: #D4AF37;
+
+            font-size: 28px;
+
+            margin-bottom: 15px;
+
+
+        }
+
+
+
+        footer p {
+
+
+            max-width: 900px;
+
+            margin: auto;
+
+
+        }
+
+
+
+
+
+
+
+
+
+        /*=====================================
+            RESPONSIVE MOBILE
+======================================*/
+
+
+        @media(max-width:900px) {
+
+
+            header {
+
+                padding: 0 15px;
+
+            }
+
+
+
+            .student-profile small {
+
+                display: none;
+
+            }
+
+
+
+            .overlay h1 {
+
+                font-size: 35px;
+
+            }
+
+
+
+            .overlay p {
+
+                font-size: 16px;
+
+            }
+
+
+
+            .objectif,
+            .cours,
+            .images-cours,
+            .important,
+            .exercice {
+
+
+                width: 94%;
+
+                padding: 25px;
+
+            }
+
+
+
+            .image-container {
+
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+
+            .navigation {
+
+
+                flex-direction: column;
+
+            }
+
+
+
+        }
+
+
+
+
+
+        @media(max-width:480px) {
+
+
+
+            .logo h2 {
+
+                font-size: 18px;
+
+            }
+
+
+
+            .lesson-hero {
+
+
+                height: 350px;
+
+            }
+
+
+
+            .overlay h1 {
+
+
+                font-size: 27px;
+
+            }
+
+
+
+            .overlay p {
+
+
+                font-size: 14px;
+
+            }
+
+
+
+            .cours h2,
+            .objectif h2 {
+
+
+                font-size: 22px;
+
+            }
+
+
+
+            .important p {
+
+
+                font-size: 15px;
+
+            }
+
+
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <!--====================================
+            HEADER
+=====================================-->
+
+    <header>
+
+
+        <div class="logo">
+
+
+            <img src="images/logo.png" alt="BMJ SERVICE">
+
+
+            <h2>
+
+                BMJ <span>SERVICE</span>
+
+            </h2>
+
+
+        </div>
+
+
+
+
+
+        <div class="student-profile">
+
+
+            <img id="photoUtilisateur" src="images/user.png" alt="Photo">
+
+
+
+            <div>
+
+
+                <h4 id="nomUtilisateur">
+
+                    Apprenant
+
+                </h4>
+
+
+
+                <small id="domaineUtilisateur">
+
+                    Marketing Digital
+
+                </small>
+
+
+            </div>
+
+
+        </div>
+
+
+    </header>
+
+
+
+
+
+
+
+
+
+    <!--====================================
+            HERO
+=====================================-->
+
+    <section class="lesson-hero">
+
+
+        <div class="overlay">
+
+
+
+            <span>
+
+                LEÇON 5
+
+            </span>
+
+
+
+
+            <h1>
+
+                Développer une marque durable
+
+            </h1>
+
+
+
+
+
+            <p>
+
+                Découvrez comment maintenir une identité cohérente,
+                fidéliser vos clients et faire évoluer votre marque
+                dans le temps afin de rester compétitif.
+
+            </p>
+
+
+
+        </div>
+
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+    <!--====================================
+            OBJECTIFS
+=====================================-->
+
+    <section class="objectif">
+
+
+        <h2>
+
+            Objectifs de cette leçon
+
+        </h2>
+
+
+
+
+        <ul>
+
+
+            <li>
+
+                Comprendre comment construire une marque durable.
+
+            </li>
+
+
+
+            <li>
+
+                Découvrir l'importance de la fidélisation des clients.
+
+            </li>
+
+
+
+            <li>
+
+                Maintenir une identité de marque cohérente.
+
+            </li>
+
+
+
+            <li>
+
+                Comprendre pourquoi une marque doit évoluer avec le temps.
+
+            </li>
+
+
+
+            <li>
+
+                Identifier les actions permettant de renforcer une marque.
+
+            </li>
+
+
+        </ul>
+
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+    <!--====================================
+            COURS
+=====================================-->
+
+    <section class="cours">
+
+
+
+        <h2>
+
+            1. La fidélisation des clients
+
+        </h2>
+
+
+
+
+        <p>
+
+            La fidélisation consiste à créer une relation durable
+            entre une entreprise et ses clients afin qu'ils continuent
+            à utiliser ses produits ou services.
+
+        </p>
+
+
+
+
+        <p>
+
+            Une marque durable ne cherche pas seulement à attirer
+            de nouveaux clients. Elle travaille également à conserver
+            ses clients existants en leur offrant une expérience
+            positive et une valeur constante.
+
+        </p>
+
+
+
+
+        <p>
+
+            Les clients fidèles deviennent souvent des ambassadeurs
+            de la marque en recommandant l'entreprise à leur entourage.
+
+        </p>
+
+
+
+
+
+
+
+        <h3>
+
+            📚 Enseignements du cours
+
+        </h3>
+
+
+
+
+        <p>
+
+            À la fin de cette partie, l'apprenant doit être capable de :
+
+        </p>
+
+
+
+
+        <ul>
+
+
+            <li>
+
+                Définir la fidélisation client.
+
+            </li>
+
+
+
+            <li>
+
+                Comprendre pourquoi garder un client est important.
+
+            </li>
+
+
+
+            <li>
+
+                Identifier les techniques pour fidéliser les consommateurs.
+
+            </li>
+
+
+
+            <li>
+
+                Comprendre le rôle de la satisfaction client.
+
+            </li>
+
+
+        </ul>
+
+
+
+
+
+
+
+        <h3>
+
+            Les moyens de fidéliser les clients
+
+        </h3>
+
+
+
+
+        <ul>
+
+
+            <li>
+
+                ✔ Offrir une qualité constante.
+
+            </li>
+
+
+
+            <li>
+
+                ✔ Écouter les besoins des clients.
+
+            </li>
+
+
+
+            <li>
+
+                ✔ Proposer un service client efficace.
+
+            </li>
+
+
+
+            <li>
+
+                ✔ Créer une relation personnalisée.
+
+            </li>
+
+
+
+            <li>
+
+                ✔ Récompenser les clients fidèles.
+
+            </li>
+
+
+        </ul>
+
+
+
+
+
+
+
+        <h3>
+
+            Exemple concret
+
+        </h3>
+
+
+
+
+        <p>
+
+            BMJ SERVICE fidélise ses apprenants en proposant
+            des formations structurées, des contenus régulièrement
+            améliorés et une expérience d'apprentissage adaptée
+            aux besoins des utilisateurs.
+
+        </p>
+
+
+
+
+    </section>
+    <!--====================================
+            COURS
+=====================================-->
+
+    <section class="cours">
+
+
+        <h2>
+
+            2. La cohérence de la marque
+
+        </h2>
+
+
+
+
+        <p>
+
+            La cohérence de la marque représente la capacité d'une
+            entreprise à conserver la même identité, les mêmes valeurs
+            et le même message sur tous ses supports de communication.
+
+        </p>
+
+
+
+
+        <p>
+
+            Une marque cohérente permet aux clients de la reconnaître
+            facilement et de créer une relation de confiance durable.
+            Le logo, les couleurs, la typographie, le ton de communication
+            et l'expérience client doivent toujours transmettre la même image.
+
+        </p>
+
+
+
+
+        <p>
+
+            Une entreprise qui change constamment son apparence ou son
+            message risque de perdre la confiance de son public et de
+            rendre sa marque difficile à identifier.
+
+        </p>
+
+
+
+
+
+
+
+        <h3>
+
+            📚 Enseignements du cours
+
+        </h3>
+
+
+
+
+        <p>
+
+            À la fin de cette partie, l'apprenant doit être capable de :
+
+        </p>
+
+
+
+
+        <ul>
+
+
+            <li>
+
+                Comprendre l'importance de la cohérence d'une marque.
+
+            </li>
+
+
+
+            <li>
+
+                Identifier les éléments qui doivent rester constants.
+
+            </li>
+
+
+
+            <li>
+
+                Comprendre l'impact d'une identité stable sur les clients.
+
+            </li>
+
+
+
+            <li>
+
+                Maintenir une image professionnelle dans le temps.
+
+            </li>
+
+
+        </ul>
+
+
+
+
+
+
+
+        <h3>
+
+            Les éléments de cohérence d'une marque
+
+        </h3>
+
+
+
+
+        <ul>
+
+
+            <li>
+
+                ✔ Le logo et l'identité visuelle.
+
+            </li>
+
+
+
+            <li>
+
+                ✔ Les couleurs principales de la marque.
+
+            </li>
+
+
+
+            <li>
+
+                ✔ La typographie utilisée.
+
+            </li>
+
+
+
+            <li>
+
+                ✔ Le ton utilisé dans les communications.
+
+            </li>
+
+
+
+            <li>
+
+                ✔ Les valeurs et la mission de l'entreprise.
+
+            </li>
+
+
+        </ul>
+
+
+
+
+
+
+
+        <h3>
+
+            Pourquoi la cohérence est importante ?
+
+        </h3>
+
+
+
+
+        <p>
+
+            Lorsqu'une marque conserve une identité stable, les clients
+            développent plus facilement une habitude et une confiance.
+            Ils peuvent reconnaître l'entreprise rapidement, quel que soit
+            le support utilisé : site web, réseaux sociaux, publicité ou
+            application mobile.
+
+        </p>
+
+
+
+
+
+
+
+        <h3>
+
+            Exemple concret
+
+        </h3>
+
+
+
+
+        <p>
+
+            BMJ SERVICE utilise une identité visuelle constante avec
+            ses couleurs principales, son logo et son style professionnel
+            afin que les apprenants puissent reconnaître facilement la
+            plateforme sur tous les supports numériques.
+
+        </p>
+
+
+
+
+
+    </section>
+    <!--====================================
+            COURS
+=====================================-->
+
+    <section class="cours">
+
+
+        <h2>
+
+            3. L'évolution de la marque
+
+        </h2>
+
+
+
+
+        <p>
+
+            Une marque durable doit être capable d'évoluer avec le temps
+            afin de répondre aux changements du marché, aux nouvelles
+            attentes des clients et aux nouvelles technologies.
+
+        </p>
+
+
+
+
+        <p>
+
+            Faire évoluer une marque ne signifie pas changer complètement
+            son identité. Il s'agit plutôt d'améliorer certains éléments
+            tout en conservant ses valeurs principales et ce qui fait
+            sa reconnaissance auprès du public.
+
+        </p>
+
+
+
+
+        <p>
+
+            Les entreprises qui réussissent sur le long terme sont celles
+            qui savent s'adapter tout en gardant une image cohérente et
+            fidèle à leur mission.
+
+        </p>
+
+
+
+
+
+
+
+        <h3>
+
+            📚 Enseignements du cours
+
+        </h3>
+
+
+
+
+        <p>
+
+            À la fin de cette partie, l'apprenant doit être capable de :
+
+        </p>
+
+
+
+
+        <ul>
+
+
+            <li>
+
+                Comprendre pourquoi une marque doit évoluer.
+
+            </li>
+
+
+
+            <li>
+
+                Identifier les changements nécessaires pour rester compétitif.
+
+            </li>
+
+
+
+            <li>
+
+                Adapter une marque aux besoins des clients.
+
+            </li>
+
+
+
+            <li>
+
+                Maintenir les valeurs essentielles d'une entreprise.
+
+            </li>
+
+
+        </ul>
+
+
+
+
+
+
+
+        <h3>
+
+            Pourquoi une marque doit-elle évoluer ?
+
+        </h3>
+
+
+
+
+        <ul>
+
+
+            <li>
+
+                ✔ Les besoins des clients changent avec le temps.
+
+            </li>
+
+
+
+            <li>
+
+                ✔ Les technologies évoluent rapidement.
+
+            </li>
+
+
+
+            <li>
+
+                ✔ Les concurrents proposent de nouvelles solutions.
+
+            </li>
+
+
+
+            <li>
+
+                ✔ Le marché devient de plus en plus compétitif.
+
+            </li>
+
+
+
+            <li>
+
+                ✔ L'entreprise doit améliorer son expérience client.
+
+            </li>
+
+
+        </ul>
+
+
+
+
+
+
+
+        <h3>
+
+            Les façons de faire évoluer une marque
+
+        </h3>
+
+
+
+
+        <ul>
+
+
+            <li>
+
+                🔹 Améliorer les produits ou services proposés.
+
+            </li>
+
+
+
+            <li>
+
+                🔹 Moderniser l'identité visuelle.
+
+            </li>
+
+
+
+            <li>
+
+                🔹 Utiliser de nouveaux outils numériques.
+
+            </li>
+
+
+
+            <li>
+
+                🔹 Écouter les retours des clients.
+
+            </li>
+
+
+
+            <li>
+
+                🔹 Développer de nouvelles offres adaptées au public.
+
+            </li>
+
+
+        </ul>
+
+
+
+
+
+
+
+        <h3>
+
+            Exemple concret
+
+        </h3>
+
+
+
+
+        <p>
+
+            BMJ SERVICE fait évoluer sa plateforme de formation en ajoutant
+            de nouveaux cours, en améliorant l'expérience utilisateur et en
+            adaptant ses contenus aux besoins des apprenants.
+
+        </p>
+
+
+
+
+        <p>
+
+            Cette évolution permet à la marque de rester moderne,
+            utile et compétitive dans le domaine de la formation numérique.
+
+        </p>
+
+
+
+
+
+
+
+        <h3>
+
+            À retenir
+
+        </h3>
+
+
+
+
+        <p>
+
+            Une marque durable repose sur trois éléments essentiels :
+            fidéliser ses clients, garder une identité cohérente et savoir
+            évoluer avec son environnement. Une entreprise qui combine
+            ces trois éléments peut construire une image forte et durable.
+
+        </p>
+
+
+
+    </section>
+    <!--====================================
+            IMAGES ILLUSTRATIVES
+=====================================-->
+
+    <section class="images-cours">
+
+
+        <h2>
+
+            🖼️ Illustrations du cours
+
+        </h2>
+
+
+
+
+        <div class="image-container">
+
+
+
+            <div class="image-card">
+
+
+                <img src="images/fidelisation-client.jpg" alt="Fidélisation client">
+
+
+
+                <h3>
+
+                    Fidélisation
+
+                </h3>
+
+
+
+
+                <p>
+
+                    Une marque durable crée une relation forte avec
+                    ses clients afin de les conserver sur le long terme.
+
+                </p>
+
+
+            </div>
+
+
+
+
+
+
+            <div class="image-card">
+
+
+                <img src="images/coherence-marque.jpg" alt="Cohérence de marque">
+
+
+
+                <h3>
+
+                    Cohérence
+
+                </h3>
+
+
+
+
+                <p>
+
+                    Une identité stable permet aux clients de reconnaître
+                    facilement une entreprise.
+
+                </p>
+
+
+            </div>
+
+
+
+
+
+
+            <div class="image-card">
+
+
+                <img src="images/evolution-marque.jpg" alt="Evolution de marque">
+
+
+
+                <h3>
+
+                    Évolution de la marque
+
+                </h3>
+
+
+
+
+                <p>
+
+                    Une marque doit s'adapter aux changements du marché
+                    tout en gardant ses valeurs principales.
+
+                </p>
+
+
+            </div>
+
+
+
+
+        </div>
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+    <!--====================================
+            À RETENIR
+=====================================-->
+
+    <section class="important">
+
+
+        <h2>
+
+            📌 À retenir
+
+        </h2>
+
+
+
+
+        <p>
+
+            ✔ Une marque durable doit créer une relation forte avec ses clients.
+
+        </p>
+
+
+
+
+        <p>
+
+            ✔ La fidélisation permet de garder les clients et de développer
+            une communauté autour de la marque.
+
+        </p>
+
+
+
+
+        <p>
+
+            ✔ La cohérence garantit une identité claire et professionnelle.
+
+        </p>
+
+
+
+
+        <p>
+
+            ✔ Une marque doit évoluer pour rester adaptée aux besoins du marché.
+
+        </p>
+
+
+
+
+        <p>
+
+            ✔ Une identité forte, une bonne relation client et une capacité
+            d'adaptation permettent de construire une marque durable.
+
+        </p>
+
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+    <!--====================================
+            EXERCICE
+=====================================-->
+
+    <section class="exercice">
+
+
+        <h2>
+
+            📝 Exercice
+
+        </h2>
+
+
+
+
+        <p>
+
+            Imaginez que vous souhaitez développer une marque
+            durable pour votre entreprise.
+
+            Décrivez votre stratégie en précisant :
+
+        </p>
+
+
+
+
+        <ul>
+
+
+            <li>
+
+                Les méthodes utilisées pour fidéliser vos clients.
+
+            </li>
+
+
+
+            <li>
+
+                Les éléments qui permettront de garder une identité cohérente.
+
+            </li>
+
+
+
+            <li>
+
+                Les améliorations que vous pourriez apporter à votre marque
+                dans le futur.
+
+            </li>
+
+
+
+            <li>
+
+                Les actions pour maintenir une bonne relation avec vos clients.
+
+            </li>
+
+
+        </ul>
+
+
+
+
+
+        <textarea placeholder="Écrivez votre réponse ici..."></textarea>
+
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+    <!--====================================
+            NAVIGATION
+=====================================-->
+
+    <section class="navigation">
+
+
+        <button onclick="retourCours()">
+
+            ← Retour au chapitre
+
+        </button>
+
+
+
+
+
+        <button onclick="terminerLecon()">
+
+            ✓ Terminer la leçon
+
+        </button>
+
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+    <!--====================================
+            FOOTER
+=====================================-->
+
+    <footer>
+
+
+        <h3>
+
+            BMJ SERVICE
+
+        </h3>
+
+
+
+
+        <p>
+
+            Félicitations ! Vous avez terminé la Leçon 5 du chapitre
+            <strong>Identité de marque</strong>.
+
+            Vous avez appris comment développer une marque durable grâce
+            à la fidélisation, la cohérence et l'évolution continue.
+
+        </p>
+
+
+
+    </footer>
+    <script>
+
+
+
+        //====================================
+        // CHARGEMENT DE LA PAGE
+        //====================================
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+
+            let utilisateur = JSON.parse(
+
+                localStorage.getItem("bmj_current_user")
+
+            );
+
+
+
+            //=========================
+            // AFFICHAGE DU PROFIL
+            //=========================
+
+
+            if (utilisateur) {
+
+
+                document.getElementById("nomUtilisateur").innerHTML = utilisateur.nom;
+
+
+
+                if (utilisateur.photo && utilisateur.photo !== "") {
+
+
+                    document.getElementById("photoUtilisateur").src = utilisateur.photo;
+
+
+                }
+
+
+
+            } else {
+
+
+                document.getElementById("nomUtilisateur").innerHTML = "Apprenant";
+
+
+                document.getElementById("domaineUtilisateur").innerHTML = "Marketing Digital";
+
+
+            }
+
+
+
+        });
+
+
+
+
+
+
+
+
+
+        //====================================
+        // RETOUR AU CHAPITRE MARKETING
+        //====================================
+
+
+        function retourCours() {
+
+
+            window.location.href = "marketing.php";
+
+
+        }
+
+
+
+
+
+
+
+
+
+        //====================================
+        // TERMINER LA LEÇON 5
+        //====================================
+
+
+        function terminerLecon() {
+
+
+
+            let utilisateur = JSON.parse(
+
+                localStorage.getItem("bmj_current_user")
+
+            );
+
+
+
+
+
+            //--------------------------------
+            // RECUPERATION PROGRESSION
+            //--------------------------------
+
+
+            let progression = JSON.parse(
+
+                localStorage.getItem("marketing_progression")
+
+            ) || [];
+
+
+
+
+
+
+
+
+            //================================
+            // VERIFICATION EXISTENCE LEÇON
+            //================================
+
+
+            if (progression.includes("5")) {
+
+
+                alert(
+
+                    "Cette Leçon 5 est déjà terminée."
+
+                );
+
+
+                window.location.href = "marketing.php";
+
+
+                return;
+
+
+            }
+
+
+
+
+
+
+
+
+            //--------------------------------
+            // AJOUT LEÇON 5
+            //--------------------------------
+
+
+            progression.push("5");
+
+
+
+            localStorage.setItem(
+
+                "marketing_progression",
+
+                JSON.stringify(progression)
+
+            );
+
+
+
+
+
+
+
+
+
+            //================================
+            // SAUVEGARDE SI UTILISATEUR CONNECTÉ
+            //================================
+
+
+            if (utilisateur) {
+
+
+
+                if (!utilisateur.coursSuivis) {
+
+
+                    utilisateur.coursSuivis = [];
+
+
+                }
+
+
+
+
+
+
+                if (!utilisateur.coursSuivis.includes(
+
+                    "Marketing Leçon 5"
+
+                )) {
+
+
+                    utilisateur.coursSuivis.push(
+
+                        "Marketing Leçon 5"
+
+                    );
+
+
+                }
+
+
+
+
+
+
+
+
+
+                //--------------------------------
+                // CALCUL PROGRESSION
+                //--------------------------------
+
+
+                utilisateur.progression = progression.length * 20;
+
+
+
+                if (utilisateur.progression > 100) {
+
+
+                    utilisateur.progression = 100;
+
+
+                }
+
+
+
+
+
+
+
+
+
+                //--------------------------------
+                // SAUVEGARDE SESSION
+                //--------------------------------
+
+
+                localStorage.setItem(
+
+                    "bmj_current_user",
+
+                    JSON.stringify(utilisateur)
+
+                );
+
+
+
+
+
+
+
+
+
+                //--------------------------------
+                // MISE A JOUR LISTE UTILISATEURS
+                //--------------------------------
+
+
+                let utilisateurs = JSON.parse(
+
+                    localStorage.getItem("bmj_users")
+
+                ) || [];
+
+
+
+
+
+
+                let index = utilisateurs.findIndex(
+
+                    u => u.id === utilisateur.id
+
+                );
+
+
+
+
+
+
+                if (index !== -1) {
+
+
+                    utilisateurs[index] = utilisateur;
+
+
+                }
+
+
+
+
+
+
+                localStorage.setItem(
+
+                    "bmj_users",
+
+                    JSON.stringify(utilisateurs)
+
+                );
+
+
+
+            }
+
+
+
+
+
+
+
+
+
+            //--------------------------------
+            // MESSAGE DE FIN
+            //--------------------------------
+
+
+            alert(
+
+
+                "🎉 Félicitations !\n\nVous avez terminé la Leçon 5 : Développer une marque durable."
+
+
+            );
+
+
+
+
+
+
+
+
+
+            //--------------------------------
+            // RETOUR AU CHAPITRE
+            //--------------------------------
+
+
+            window.location.href = "marketing.php";
+
+
+
+        }
+
+
+
+    </script>
+</body>
+
+</html>

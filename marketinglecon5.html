@@ -1,0 +1,4006 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*========================================
+        BMJ SERVICE - MARKETING LEÇON 5
+========================================*/
+
+
+        * {
+
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', Arial, sans-serif;
+
+        }
+
+
+
+        body {
+
+            background: #f4f7fb;
+
+            color: #333;
+
+            line-height: 1.8;
+
+        }
+
+
+
+
+
+
+        /*========================================
+                HEADER
+========================================*/
+
+
+        header {
+
+
+            position: fixed;
+
+            top: 0;
+
+            left: 0;
+
+            width: 100%;
+
+
+            height: 75px;
+
+
+            background: white;
+
+
+            display: flex;
+
+
+            align-items: center;
+
+
+            justify-content: space-between;
+
+
+            padding: 0 40px;
+
+
+            box-shadow: 0 5px 20px rgba(0, 0, 0, .08);
+
+
+            z-index: 1000;
+
+
+        }
+
+
+
+
+
+        .logo {
+
+
+            display: flex;
+
+
+            align-items: center;
+
+
+            gap: 12px;
+
+
+        }
+
+
+
+        .logo img {
+
+
+            width: 50px;
+
+
+            height: 50px;
+
+
+            border-radius: 50%;
+
+
+        }
+
+
+
+
+        .logo h2 {
+
+
+            color: #145A86;
+
+
+        }
+
+
+
+        .logo span {
+
+
+            color: #D4AF37;
+
+
+        }
+
+
+
+
+
+
+        .student-profile {
+
+
+            display: flex;
+
+
+            align-items: center;
+
+
+            gap: 12px;
+
+
+        }
+
+
+
+
+        .student-profile img {
+
+
+            width: 50px;
+
+
+            height: 50px;
+
+
+            border-radius: 50%;
+
+
+            object-fit: cover;
+
+
+            border: 3px solid #D4AF37;
+
+
+        }
+
+
+
+
+
+        .student-profile h4 {
+
+
+            color: #145A86;
+
+
+        }
+
+
+
+
+
+
+
+
+        /*========================================
+                HERO
+========================================*/
+
+
+        .lesson-hero {
+
+
+            margin-top: 75px;
+
+
+            height: 430px;
+
+
+
+            background:
+
+
+
+                linear-gradient(rgba(20, 90, 134, .88),
+
+                    rgba(0, 0, 0, .75)),
+
+
+
+
+                url(images/fidelisation.jpg);
+
+
+
+            background-size: cover;
+
+
+            background-position: center;
+
+
+            display: flex;
+
+
+            justify-content: center;
+
+
+            align-items: center;
+
+
+        }
+
+
+
+
+
+
+        .overlay {
+
+
+            width: 90%;
+
+
+            max-width: 1100px;
+
+
+            text-align: center;
+
+
+            color: white;
+
+
+        }
+
+
+
+        .overlay span {
+
+
+            display: inline-block;
+
+
+            background: #D4AF37;
+
+
+            color: #145A86;
+
+
+            padding: 8px 25px;
+
+
+            border-radius: 30px;
+
+
+            font-weight: bold;
+
+
+        }
+
+
+
+
+        .overlay h1 {
+
+
+            font-size: 45px;
+
+
+            line-height: 1.3;
+
+
+            margin: 25px 0;
+
+
+        }
+
+
+
+
+
+        .overlay p {
+
+
+            font-size: 19px;
+
+
+        }
+
+
+
+
+
+
+
+
+
+        /*========================================
+        BLOCS COURS
+========================================*/
+
+
+        .objectif,
+        .cours,
+        .exercice {
+
+
+            width: 90%;
+
+
+            max-width: 1100px;
+
+
+            margin: 40px auto;
+
+
+            background: white;
+
+
+            padding: 35px;
+
+
+            border-radius: 20px;
+
+
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+
+
+        }
+
+
+
+
+
+        .objectif h2,
+        .cours h2,
+        .exercice h2 {
+
+
+            color: #145A86;
+
+
+            border-left: 6px solid #D4AF37;
+
+
+            padding-left: 15px;
+
+
+            margin-bottom: 25px;
+
+
+        }
+
+
+
+
+
+
+
+        .cours h3 {
+
+
+            color: #145A86;
+
+
+            margin: 25px 0 15px;
+
+
+        }
+
+
+
+
+
+        .cours p {
+
+
+            margin-bottom: 18px;
+
+
+            text-align: justify;
+
+
+        }
+
+
+
+
+
+
+
+        .cours ul,
+        .objectif ul {
+
+
+            margin-left: 30px;
+
+
+        }
+
+
+
+
+
+        .cours li,
+        .objectif li {
+
+
+            margin-bottom: 12px;
+
+
+        }
+
+
+
+
+
+
+
+
+        /*========================================
+            TABLEAU COMPARATIF
+========================================*/
+
+
+        table {
+
+
+            width: 100%;
+
+
+            border-collapse: collapse;
+
+
+            margin-top: 30px;
+
+
+        }
+
+
+
+        table th {
+
+
+            background: #145A86;
+
+
+            color: white;
+
+
+            padding: 15px;
+
+
+            font-size: 17px;
+
+
+        }
+
+
+
+        table td {
+
+
+            padding: 15px;
+
+
+            border: 1px solid #ddd;
+
+
+            text-align: center;
+
+
+        }
+
+
+
+
+
+        table tr:nth-child(even) {
+
+
+            background: #f4f9ff;
+
+
+        }
+
+
+
+
+
+
+
+
+        /*========================================
+            EXEMPLE
+========================================*/
+
+
+        .exemple {
+
+
+            margin-top: 25px;
+
+
+            padding: 25px;
+
+
+            background: #eef7ff;
+
+
+            border-left: 6px solid #145A86;
+
+
+            border-radius: 15px;
+
+
+        }
+
+
+
+        .exemple h3 {
+
+
+            color: #145A86;
+
+
+            margin-bottom: 10px;
+
+
+        }
+
+
+
+
+
+
+
+
+
+        /*========================================
+            IMPORTANT
+========================================*/
+
+
+        .important {
+
+
+            margin-top: 30px;
+
+
+            padding: 30px;
+
+
+            background: #145A86;
+
+
+            color: white;
+
+
+            border-radius: 20px;
+
+
+        }
+
+
+
+        .important h3 {
+
+
+            color: #D4AF37;
+
+
+            margin-bottom: 15px;
+
+
+        }
+
+
+
+
+
+
+
+
+        /*========================================
+            TEXTAREA
+========================================*/
+
+
+        textarea {
+
+
+            width: 100%;
+
+
+            height: 180px;
+
+
+            margin-top: 20px;
+
+
+            padding: 20px;
+
+
+            font-size: 16px;
+
+
+            border-radius: 15px;
+
+
+            border: 2px solid #ddd;
+
+
+            resize: none;
+
+
+        }
+
+
+
+        textarea:focus {
+
+
+            outline: none;
+
+
+            border-color: #145A86;
+
+
+        }
+
+
+
+
+
+
+
+
+        /*========================================
+            NAVIGATION
+========================================*/
+
+
+        .navigation {
+
+
+            width: 90%;
+
+
+            max-width: 1100px;
+
+
+            margin: 50px auto;
+
+
+            display: flex;
+
+
+            gap: 20px;
+
+
+        }
+
+
+
+
+        .navigation button {
+
+
+            flex: 1;
+
+
+            padding: 18px;
+
+
+            border: none;
+
+
+            border-radius: 15px;
+
+
+            cursor: pointer;
+
+
+            font-size: 17px;
+
+
+            font-weight: bold;
+
+
+            transition: .3s;
+
+
+        }
+
+
+
+
+
+        .navigation button:first-child {
+
+
+            background: #145A86;
+
+
+            color: white;
+
+
+        }
+
+
+
+
+
+        .navigation button:last-child {
+
+
+            background: #D4AF37;
+
+
+            color: #145A86;
+
+
+        }
+
+
+
+
+
+
+        .navigation button:hover {
+
+
+            transform: translateY(-5px);
+
+
+            box-shadow: 0 10px 20px rgba(0, 0, 0, .15);
+
+
+        }
+
+
+
+
+
+
+
+
+        /*========================================
+                FOOTER
+========================================*/
+
+
+        footer {
+
+
+            background: #145A86;
+
+
+            color: white;
+
+
+            text-align: center;
+
+
+            padding: 35px;
+
+
+        }
+
+
+
+
+
+
+
+
+
+        /*========================================
+                MOBILE
+========================================*/
+
+
+        @media(max-width:768px) {
+
+
+
+            header {
+
+
+                padding: 0 15px;
+
+
+            }
+
+
+
+            .logo h2 {
+
+
+                font-size: 20px;
+
+
+            }
+
+
+
+
+            .student-profile small {
+
+
+                display: none;
+
+
+            }
+
+
+
+
+
+            .lesson-hero {
+
+
+                height: 380px;
+
+
+            }
+
+
+
+
+
+            .overlay h1 {
+
+
+                font-size: 30px;
+
+
+            }
+
+
+
+
+
+            .overlay p {
+
+
+                font-size: 16px;
+
+
+            }
+
+
+
+
+
+
+
+            .objectif,
+            .cours,
+            .exercice {
+
+
+                padding: 22px;
+
+
+            }
+
+
+
+
+
+            .navigation {
+
+
+                flex-direction: column;
+
+
+            }
+
+
+
+
+
+            table {
+
+
+                font-size: 13px;
+
+
+            }
+
+
+
+
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <!--====================================
+            HEADER
+=====================================-->
+
+    <header>
+
+
+        <div class="logo">
+
+
+            <img src="images/logo.png">
+
+
+
+            <h2>
+
+                BMJ <span>SERVICE</span>
+
+            </h2>
+
+
+
+        </div>
+
+
+
+
+
+
+        <div class="student-profile">
+
+
+            <img id="photoUtilisateur" src="images/user.png">
+
+
+
+            <div>
+
+
+                <h4 id="nomUtilisateur">
+
+                    Apprenant
+
+                </h4>
+
+
+
+                <small id="domaineUtilisateur">
+
+                    Marketing Digital
+
+                </small>
+
+
+
+            </div>
+
+
+
+        </div>
+
+
+
+    </header>
+
+
+
+
+
+
+
+
+
+    <!--====================================
+            HERO LEÇON 5
+=====================================-->
+
+    <section class="lesson-hero">
+
+
+        <div class="overlay">
+
+
+
+            <span>
+
+                LEÇON 5
+
+            </span>
+
+
+
+
+            <h1>
+
+                Vendre ou faire du Marketing : Comprendre la différence
+
+            </h1>
+
+
+
+
+            <p>
+
+
+                Découvrez pourquoi les entreprises modernes
+                ne cherchent plus seulement à vendre mais à
+                créer une relation durable avec leurs clients.
+
+
+            </p>
+
+
+
+
+        </div>
+
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+    <!--====================================
+        OBJECTIFS
+=====================================-->
+
+    <section class="objectif">
+
+
+        <h2>
+            🎯 Objectifs de la leçon
+        </h2>
+
+
+
+        <p>
+            Cette leçon permet de comprendre comment les entreprises peuvent créer une
+            relation durable avec leurs clients en allant au-delà de la simple vente.
+            Le marketing moderne ne consiste pas seulement à vendre un produit, mais à
+            apporter une valeur réelle au consommateur et à construire une relation de
+            confiance.
+        </p>
+
+
+
+        <ul>
+
+
+            <li>
+                Comprendre la différence entre la vente et le marketing.
+            </li>
+
+
+            <li>
+                Découvrir la notion de création de valeur client.
+            </li>
+
+
+            <li>
+                Comprendre comment une entreprise peut satisfaire les attentes de ses
+                clients.
+            </li>
+
+
+            <li>
+                Apprendre les différentes techniques de fidélisation.
+            </li>
+
+
+            <li>
+                Comprendre l'importance de la satisfaction client.
+            </li>
+
+
+            <li>
+                Savoir construire une relation durable avec les consommateurs.
+            </li>
+
+
+        </ul>
+
+
+
+
+        <h3>
+            📚 Enseignements attendus
+        </h3>
+
+
+        <p>
+            À la fin de cette leçon, l'apprenant sera capable de :
+        </p>
+
+
+        <ul>
+
+
+            <li>
+                Expliquer pourquoi fidéliser un client est important pour une entreprise.
+            </li>
+
+
+            <li>
+                Identifier les éléments qui créent de la valeur pour un consommateur.
+            </li>
+
+
+            <li>
+                Différencier une approche orientée vente et une approche orientée client.
+            </li>
+
+
+            <li>
+                Proposer des actions permettant d'améliorer l'expérience client.
+            </li>
+
+
+            <li>
+                Comprendre comment transformer un client satisfait en client fidèle.
+            </li>
+
+
+        </ul>
+
+
+
+    </section>
+
+
+
+
+
+
+
+
+    <!--====================================
+        PARTIE 1
+=====================================-->
+
+    <section class="cours">
+
+
+        <h2>
+            1. La différence entre vendre et faire du marketing
+        </h2>
+
+
+
+        <p>
+            La vente et le marketing sont deux activités liées mais différentes.
+            La vente consiste principalement à convaincre un client d'acheter un produit
+            ou un service, tandis que le marketing cherche d'abord à comprendre les
+            besoins des consommateurs afin de proposer une offre adaptée.
+        </p>
+
+
+        <p>
+            La vente intervient généralement au moment où le client prend sa décision
+            d'achat. Le marketing commence bien avant la vente, avec l'étude du marché,
+            l'analyse des besoins, la création du produit et la communication.
+        </p>
+
+
+        <p>
+            Le marketing continue également après l'achat afin de satisfaire le client,
+            recueillir son avis et construire une relation durable.
+        </p>
+
+
+
+
+        <h3>
+            📚 Enseignements du cours
+        </h3>
+
+
+        <p>
+            À la fin de cette partie, l'apprenant doit être capable de :
+        </p>
+
+
+        <ul>
+
+
+            <li>
+                Comprendre la différence entre une approche commerciale et une approche
+                marketing.
+            </li>
+
+
+            <li>
+                Identifier le rôle de la vente dans le processus commercial.
+            </li>
+
+
+            <li>
+                Comprendre pourquoi le marketing commence avant la vente.
+            </li>
+
+
+            <li>
+                Comprendre l'importance de la relation client après l'achat.
+            </li>
+
+
+            <li>
+                Adopter une approche orientée vers les besoins des consommateurs.
+            </li>
+
+
+        </ul>
+
+
+
+
+        <h3>
+            Comparaison entre Vente et Marketing
+        </h3>
+
+
+
+        <table border="1">
+
+
+            <tr>
+
+
+                <th>
+                    Vente
+                </th>
+
+
+                <th>
+                    Marketing
+                </th>
+
+
+            </tr>
+
+
+
+
+            <tr>
+
+
+                <td>
+                    Cherche principalement à vendre rapidement un produit.
+                </td>
+
+
+                <td>
+                    Cherche à comprendre les besoins du client avant de proposer une
+                    solution.
+                </td>
+
+
+            </tr>
+
+
+
+
+
+            <tr>
+
+
+                <td>
+                    Se concentre principalement sur le produit disponible.
+                </td>
+
+
+                <td>
+                    Se concentre sur les attentes et problèmes du consommateur.
+                </td>
+
+
+            </tr>
+
+
+
+
+
+            <tr>
+
+
+                <td>
+                    Objectif : obtenir une transaction immédiate.
+                </td>
+
+
+                <td>
+                    Objectif : créer une relation durable avec le client.
+                </td>
+
+
+            </tr>
+
+
+
+
+
+            <tr>
+
+
+                <td>
+                    Action souvent orientée vers le court terme.
+                </td>
+
+
+                <td>
+                    Stratégie basée sur le long terme.
+                </td>
+
+
+            </tr>
+
+
+
+        </table>
+
+
+
+
+
+        <div class="exemple">
+
+
+            <h3>
+                Exemple pratique :
+            </h3>
+
+
+            <p>
+                Une boutique de téléphones qui utilise uniquement la vente cherche à
+                convaincre un client d'acheter un téléphone disponible en stock.
+            </p>
+
+
+            <p>
+                Une boutique qui utilise le marketing commence par analyser les besoins
+                des clients : budget, utilisation du téléphone, préférences, puis elle
+                propose le modèle le plus adapté et assure un suivi après l'achat.
+            </p>
+
+
+        </div>
+
+
+
+
+        <h3>
+            Pourquoi le marketing est plus large que la vente ?
+        </h3>
+
+
+        <ul>
+
+
+            <li>
+                Il aide à mieux connaître les clients.
+            </li>
+
+
+            <li>
+                Il permet de créer des produits adaptés.
+            </li>
+
+
+            <li>
+                Il améliore la satisfaction des consommateurs.
+            </li>
+
+
+            <li>
+                Il favorise la fidélisation.
+            </li>
+
+
+            <li>
+                Il augmente les chances de réussite d'une entreprise.
+            </li>
+
+
+        </ul>
+
+
+
+
+        <h3>
+            À retenir
+        </h3>
+
+
+        <p>
+            La vente cherche principalement à obtenir un achat, tandis que le marketing
+            cherche à comprendre, satisfaire et fidéliser les clients. Une entreprise
+            performante combine les deux approches pour développer son activité.
+        </p>
+
+
+
+
+        <!-- VIDEO DU COURS -->
+
+
+        <div class="video-cours">
+
+
+            <h3>
+                📹 Vidéo explicative
+            </h3>
+
+
+            <iframe width="100%" height="400" src="https://www.youtube.com/embed/eeeMA_keyRc"
+                title="Différence entre vente et marketing" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+
+
+        </div>
+
+
+
+    </section>
+
+
+
+
+
+
+    <!--====================================
+        PARTIE 2
+=====================================-->
+
+    <section class="cours">
+
+
+        <h2>
+            2. La création de valeur pour le client
+        </h2>
+
+
+
+        <p>
+            Créer de la valeur pour le client signifie offrir un produit ou un service
+            qui répond réellement à ses besoins, résout ses problèmes et améliore son
+            expérience.
+        </p>
+
+
+        <p>
+            Aujourd'hui, les consommateurs ne recherchent plus uniquement un produit.
+            Ils recherchent une solution, une expérience positive et une relation de
+            confiance avec l'entreprise.
+        </p>
+
+
+        <p>
+            Une entreprise qui crée de la valeur se différencie de ses concurrents et
+            augmente ses chances de satisfaire et fidéliser ses clients.
+        </p>
+
+
+
+
+        <h3>
+            📚 Enseignements du cours
+        </h3>
+
+
+        <p>
+            À la fin de cette partie, l'apprenant doit être capable de :
+        </p>
+
+
+        <ul>
+
+
+            <li>
+                Comprendre la notion de valeur client.
+            </li>
+
+
+            <li>
+                Identifier les éléments qui influencent la satisfaction d'un client.
+            </li>
+
+
+            <li>
+                Comprendre pourquoi un client choisit une entreprise plutôt qu'une autre.
+            </li>
+
+
+            <li>
+                Créer une offre qui apporte une réelle utilité aux consommateurs.
+            </li>
+
+
+            <li>
+                Développer une relation basée sur la confiance.
+            </li>
+
+
+        </ul>
+
+
+
+
+        <h3>
+            Les éléments qui créent de la valeur
+        </h3>
+
+
+
+
+        <ul>
+
+
+            <li>
+
+                <strong>Un produit de qualité :</strong>
+
+                Un produit fiable, performant et adapté aux attentes du client augmente
+                sa satisfaction.
+
+                <br><br>
+
+                <strong>Exemple :</strong>
+                Un smartphone avec une bonne autonomie et une caméra performante.
+
+            </li>
+
+
+
+            <li>
+
+                <strong>Un bon service client :</strong>
+
+                L'accompagnement, l'écoute et la rapidité de réponse renforcent la
+                confiance du consommateur.
+
+                <br><br>
+
+                <strong>Exemple :</strong>
+                Une entreprise qui répond rapidement aux questions de ses clients.
+
+            </li>
+
+
+
+            <li>
+
+                <strong>Une expérience simple et agréable :</strong>
+
+                Le client doit pouvoir acheter, utiliser ou contacter l'entreprise
+                facilement.
+
+                <br><br>
+
+                <strong>Exemple :</strong>
+                Une application mobile facile à utiliser.
+
+            </li>
+
+
+
+            <li>
+
+                <strong>Une solution adaptée au problème du client :</strong>
+
+                L'entreprise doit proposer une réponse qui correspond réellement au
+                besoin du consommateur.
+
+                <br><br>
+
+                <strong>Exemple :</strong>
+                Une formation adaptée au niveau et aux objectifs de l'apprenant.
+
+            </li>
+
+
+
+            <li>
+
+                <strong>Une relation basée sur la confiance :</strong>
+
+                La transparence, la qualité du service et le respect des engagements
+                permettent de construire une relation durable.
+
+            </li>
+
+
+        </ul>
+
+
+
+
+
+        <div class="exemple">
+
+
+            <h3>
+                Exemple :
+            </h3>
+
+
+
+            <p>
+                Une plateforme de formation ne vend pas seulement des vidéos de cours.
+                Elle vend une opportunité d'apprendre, de développer des compétences et
+                d'améliorer l'avenir professionnel des apprenants.
+            </p>
+
+
+            <p>
+                La valeur créée vient de plusieurs éléments : la qualité des formations,
+                l'accompagnement des étudiants, l'accès facile aux contenus et la
+                possibilité d'obtenir de nouvelles opportunités professionnelles.
+            </p>
+
+
+        </div>
+
+
+
+
+
+        <h3>
+            Comment une entreprise peut augmenter la valeur client ?
+        </h3>
+
+
+        <ul>
+
+
+            <li>
+                Écouter les besoins et les avis des clients.
+            </li>
+
+
+            <li>
+                Améliorer continuellement ses produits et services.
+            </li>
+
+
+            <li>
+                Proposer une expérience personnalisée.
+            </li>
+
+
+            <li>
+                Offrir un bon accompagnement après l'achat.
+            </li>
+
+
+            <li>
+                Créer une relation durable avec les consommateurs.
+            </li>
+
+
+        </ul>
+
+
+
+
+        <h3>
+            À retenir
+        </h3>
+
+
+        <p>
+            La création de valeur permet à une entreprise de dépasser la simple vente
+            d'un produit. Elle consiste à apporter une solution utile, une expérience
+            positive et une relation de confiance afin de satisfaire durablement les
+            clients.
+        </p>
+
+
+
+
+        <!-- VIDEO DU COURS -->
+
+
+        <div class="video-cours">
+
+
+            <h3>
+                📹 Vidéo explicative
+            </h3>
+
+
+            <iframe width="100%" height="400" src="https://www.youtube.com/embed/7q7depQBIqA"
+                title="La création de valeur client en marketing" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+
+
+        </div>
+
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+    <!--====================================
+        PARTIE 3
+=====================================-->
+
+    <section class="cours">
+
+
+        <h2>
+            3. Pourquoi fidéliser les clients ?
+        </h2>
+
+
+
+        <p>
+            La fidélisation consiste à mettre en place des actions permettant de garder
+            les clients sur le long terme et de les encourager à continuer d'acheter
+            auprès d'une entreprise.
+        </p>
+
+
+        <p>
+            Un client fidèle représente une grande valeur pour une entreprise car il
+            peut acheter plusieurs fois, parler positivement de la marque et attirer de
+            nouveaux clients grâce aux recommandations.
+        </p>
+
+
+        <p>
+            Dans un marché où la concurrence est forte, fidéliser un client est souvent
+            plus avantageux que chercher constamment de nouveaux acheteurs.
+        </p>
+
+
+
+
+        <h3>
+            📚 Enseignements du cours
+        </h3>
+
+
+        <p>
+            À la fin de cette partie, l'apprenant doit être capable de :
+        </p>
+
+
+        <ul>
+
+
+            <li>
+                Comprendre l'importance de la fidélisation client.
+            </li>
+
+
+            <li>
+                Identifier les avantages d'avoir des clients fidèles.
+            </li>
+
+
+            <li>
+                Comprendre la différence entre attirer un client et le conserver.
+            </li>
+
+
+            <li>
+                Découvrir les méthodes utilisées pour renforcer la relation client.
+            </li>
+
+
+            <li>
+                Comprendre l'impact de la fidélisation sur la croissance d'une entreprise.
+            </li>
+
+
+        </ul>
+
+
+
+
+        <h3>
+            Les avantages de la fidélisation
+        </h3>
+
+
+
+
+        <ul>
+
+
+            <li>
+
+                <strong>Augmentation des ventes :</strong>
+
+                Un client satisfait revient acheter régulièrement, ce qui augmente le
+                chiffre d'affaires de l'entreprise.
+
+            </li>
+
+
+
+            <li>
+
+                <strong>Réduction des coûts publicitaires :</strong>
+
+                Garder un client existant coûte souvent moins cher que trouver un nouveau
+                client.
+
+            </li>
+
+
+
+            <li>
+
+                <strong>Création d'une communauté autour de la marque :</strong>
+
+                Les clients fidèles peuvent devenir des ambassadeurs qui parlent de
+                l'entreprise à leur entourage.
+
+            </li>
+
+
+
+            <li>
+
+                <strong>Meilleure réputation de l'entreprise :</strong>
+
+                Les avis positifs des clients améliorent l'image de la marque.
+
+            </li>
+
+
+
+            <li>
+
+                <strong>Confiance durable avec les clients :</strong>
+
+                Une bonne relation permet de créer un lien basé sur la satisfaction et
+                la confiance.
+
+            </li>
+
+
+        </ul>
+
+
+
+
+
+        <div class="exemple">
+
+
+            <h3>
+                Exemple :
+            </h3>
+
+
+            <p>
+                Une boutique en ligne qui offre un bon service client, propose des
+                réductions aux anciens clients et envoie régulièrement des nouveautés
+                augmente les chances que ses clients reviennent acheter.
+            </p>
+
+
+            <p>
+                Avec le temps, ces clients satisfaits peuvent recommander la boutique à
+                leurs amis et contribuer au développement de l'entreprise.
+            </p>
+
+
+        </div>
+
+
+
+
+
+        <h3>
+            Les techniques de fidélisation
+        </h3>
+
+
+        <ul>
+
+
+            <li>
+                Programmes de fidélité et récompenses.
+            </li>
+
+
+            <li>
+                Offres spéciales pour les anciens clients.
+            </li>
+
+
+            <li>
+                Service après-vente efficace.
+            </li>
+
+
+            <li>
+                Communication régulière avec les clients.
+            </li>
+
+
+            <li>
+                Personnalisation des offres selon les besoins.
+            </li>
+
+
+        </ul>
+
+
+
+
+        <div class="important">
+
+
+            <h3>
+                Pourquoi un client fidèle est important ?
+            </h3>
+
+
+            <p>
+                Un client fidèle ne représente pas seulement une vente. Il devient un
+                partenaire de l'entreprise en partageant son expérience et en contribuant
+                à améliorer la réputation de la marque.
+            </p>
+
+
+        </div>
+
+
+
+
+        <h3>
+            À retenir
+        </h3>
+
+
+        <p>
+            Fidéliser les clients permet à une entreprise d'assurer une croissance
+            durable. Un client satisfait revient acheter, recommande la marque et aide
+            l'entreprise à développer sa réputation.
+        </p>
+
+
+
+
+        <!-- VIDEO DU COURS -->
+
+
+        <div class="video-cours">
+
+
+            <h3>
+                📹 Vidéo explicative
+            </h3>
+
+
+            <iframe width="100%" height="400" src="https://www.youtube.com/embed/R4wK6_Z3iDU"
+                title="Pourquoi fidéliser les clients" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+
+
+        </div>
+
+
+
+    </section>
+
+
+
+
+
+
+
+    <!--====================================
+        PARTIE 4
+=====================================-->
+
+    <section class="cours">
+
+
+        <h2>
+            4. Les stratégies de fidélisation client
+        </h2>
+
+
+
+        <p>
+            La fidélisation client regroupe l'ensemble des actions mises en place par
+            une entreprise pour conserver ses clients, renforcer leur satisfaction et
+            les encourager à continuer d'utiliser ses produits ou services.
+        </p>
+
+
+        <p>
+            Une bonne stratégie de fidélisation permet de créer une relation durable
+            entre l'entreprise et ses clients. Elle ne consiste pas seulement à vendre,
+            mais aussi à accompagner, écouter et apporter une meilleure expérience.
+        </p>
+
+
+        <p>
+            Les entreprises utilisent différentes méthodes pour transformer des clients
+            occasionnels en clients réguliers.
+        </p>
+
+
+
+
+        <h3>
+            📚 Enseignements du cours
+        </h3>
+
+
+        <p>
+            À la fin de cette partie, l'apprenant doit être capable de :
+        </p>
+
+
+        <ul>
+
+
+            <li>
+                Comprendre les différentes techniques de fidélisation.
+            </li>
+
+
+            <li>
+                Identifier les actions permettant d'améliorer la satisfaction client.
+            </li>
+
+
+            <li>
+                Comprendre l'importance de la relation après achat.
+            </li>
+
+
+            <li>
+                Mettre en place des stratégies pour garder les clients.
+            </li>
+
+
+            <li>
+                Comprendre comment transformer les clients en ambassadeurs d'une marque.
+            </li>
+
+
+        </ul>
+
+
+
+
+        <h3>
+            Les principales stratégies de fidélisation
+        </h3>
+
+
+
+
+        <ul>
+
+
+            <li>
+
+
+                <strong>Programme de fidélité :</strong>
+
+                Il consiste à récompenser les clients réguliers afin de les encourager
+                à acheter davantage.
+
+                <br><br>
+
+                <strong>Exemple :</strong>
+                Une boutique offre une réduction après plusieurs achats réalisés.
+
+            </li>
+
+
+
+
+            <li>
+
+
+                <strong>Communication personnalisée :</strong>
+
+                L'entreprise adapte ses messages selon les besoins, les préférences et
+                l'historique du client.
+
+                <br><br>
+
+                <strong>Exemple :</strong>
+                Envoyer une offre spéciale correspondant aux produits déjà consultés
+                par un client.
+
+            </li>
+
+
+
+
+            <li>
+
+
+                <strong>Service après-vente :</strong>
+
+                Il permet d'accompagner le client après son achat, de résoudre ses
+                problèmes et de maintenir sa confiance.
+
+                <br><br>
+
+                <strong>Exemple :</strong>
+                Assistance technique, garantie ou support client disponible.
+
+            </li>
+
+
+
+
+            <li>
+
+
+                <strong>Création de communauté :</strong>
+
+                Elle consiste à créer un espace où les clients peuvent échanger,
+                participer et se sentir proches de la marque.
+
+                <br><br>
+
+                <strong>Exemple :</strong>
+                Une communauté Facebook où les clients partagent leurs expériences.
+
+            </li>
+
+
+
+
+            <li>
+
+
+                <strong>Amélioration continue :</strong>
+
+                L'entreprise recueille les avis des clients afin d'améliorer ses
+                produits et services.
+
+                <br><br>
+
+                <strong>Exemple :</strong>
+                Utiliser les commentaires clients pour corriger les problèmes d'un
+                produit.
+
+            </li>
+
+
+        </ul>
+
+
+
+
+
+        <div class="exemple">
+
+
+            <h3>
+                Exemple pratique : Une plateforme de formation en ligne
+            </h3>
+
+
+            <p>
+                Une plateforme de formation souhaite garder ses apprenants. Elle peut
+                proposer des certificats, envoyer des recommandations de cours,
+                répondre rapidement aux questions et créer une communauté d'étudiants.
+            </p>
+
+
+            <p>
+                Grâce à ces actions, les apprenants restent engagés et continuent à
+                utiliser la plateforme.
+            </p>
+
+
+        </div>
+
+
+
+
+        <h3>
+            Les règles d'une bonne fidélisation
+        </h3>
+
+
+        <ul>
+
+
+            <li>
+                Toujours écouter les besoins des clients.
+            </li>
+
+
+            <li>
+                Tenir ses promesses.
+            </li>
+
+
+            <li>
+                Offrir une expérience simple et agréable.
+            </li>
+
+
+            <li>
+                Récompenser la confiance des clients.
+            </li>
+
+
+            <li>
+                Maintenir une communication régulière.
+            </li>
+
+
+        </ul>
+
+
+
+
+        <div class="important">
+
+
+            <h3>
+                Pourquoi la fidélisation est stratégique ?
+            </h3>
+
+
+            <p>
+                Un client fidèle est plus susceptible d'acheter plusieurs fois, de
+                recommander l'entreprise et de contribuer à la croissance de la marque.
+                La fidélisation représente donc un avantage important face aux
+                concurrents.
+            </p>
+
+
+        </div>
+
+
+
+
+        <h3>
+            À retenir
+        </h3>
+
+
+        <p>
+            Les stratégies de fidélisation permettent de construire une relation durable
+            avec les clients. Une entreprise qui écoute, accompagne et récompense ses
+            consommateurs augmente leur satisfaction et leur confiance.
+        </p>
+
+
+
+
+        <!-- VIDEO DU COURS -->
+
+
+        <div class="video-cours">
+
+
+            <h3>
+                📹 Vidéo explicative
+            </h3>
+
+
+            <iframe width="100%" height="400" src="https://www.youtube.com/embed/oZSgVhyMaYk"
+                title="Les stratégies de fidélisation client" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+
+
+        </div>
+
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+    <!--====================================
+        PARTIE 5
+=====================================-->
+
+    <section class="cours">
+
+
+        <h2>
+            5. Le marketing relationnel
+        </h2>
+
+
+
+        <p>
+            Le marketing relationnel est une approche marketing qui consiste à créer,
+            développer et maintenir une relation durable entre une entreprise et ses
+            clients.
+        </p>
+
+
+        <p>
+            Contrairement au marketing traditionnel qui cherche principalement à réaliser
+            une vente, le marketing relationnel cherche à construire une relation basée
+            sur la confiance, la satisfaction et l'engagement du client.
+        </p>
+
+
+        <p>
+            L'objectif n'est plus seulement de vendre une fois, mais de transformer un
+            acheteur occasionnel en client fidèle qui continue à utiliser les produits
+            ou services de l'entreprise.
+        </p>
+
+
+
+
+        <h3>
+            📚 Enseignements du cours
+        </h3>
+
+
+        <p>
+            À la fin de cette partie, l'apprenant doit être capable de :
+        </p>
+
+
+        <ul>
+
+
+            <li>
+                Comprendre le concept du marketing relationnel.
+            </li>
+
+
+            <li>
+                Comprendre l'importance de la relation client dans une entreprise.
+            </li>
+
+
+            <li>
+                Identifier les moyens utilisés pour créer une relation durable.
+            </li>
+
+
+            <li>
+                Comprendre comment développer la confiance des consommateurs.
+            </li>
+
+
+            <li>
+                Différencier une simple transaction d'une relation client durable.
+            </li>
+
+
+        </ul>
+
+
+
+
+        <h3>
+            Les principes du marketing relationnel
+        </h3>
+
+
+
+
+        <ul>
+
+
+            <li>
+
+                <strong>Connaître ses clients :</strong>
+
+                Une entreprise doit comprendre les besoins, les préférences et les
+                comportements de ses consommateurs.
+
+            </li>
+
+
+
+
+            <li>
+
+                <strong>Communiquer régulièrement :</strong>
+
+                L'entreprise doit maintenir un contact avec ses clients grâce aux
+                messages, réseaux sociaux, newsletters ou offres personnalisées.
+
+            </li>
+
+
+
+
+            <li>
+
+                <strong>Créer une relation de confiance :</strong>
+
+                Le respect des engagements et la qualité du service renforcent la
+                confiance du client.
+
+            </li>
+
+
+
+
+            <li>
+
+                <strong>Personnaliser l'expérience :</strong>
+
+                Chaque client doit avoir l'impression que l'entreprise comprend ses
+                besoins spécifiques.
+
+            </li>
+
+
+
+
+            <li>
+
+                <strong>Créer une communauté :</strong>
+
+                Les clients doivent pouvoir participer, échanger et partager leur
+                expérience avec la marque.
+
+            </li>
+
+
+        </ul>
+
+
+
+
+
+        <div class="exemple">
+
+
+            <h3>
+                Exemple :
+            </h3>
+
+
+            <p>
+                Une plateforme de formation en ligne ne cherche pas seulement à vendre
+                un cours. Elle accompagne les apprenants, leur propose de nouveaux
+                contenus adaptés, répond à leurs questions et crée une communauté
+                d'étudiants.
+            </p>
+
+
+            <p>
+                Grâce à cette relation, les apprenants restent engagés et recommandent
+                la plateforme à d'autres personnes.
+            </p>
+
+
+        </div>
+
+
+
+
+        <h3>
+            Marketing transactionnel vs Marketing relationnel
+        </h3>
+
+
+
+
+        <table border="1">
+
+
+            <tr>
+
+
+                <th>
+                    Marketing transactionnel
+                </th>
+
+
+                <th>
+                    Marketing relationnel
+                </th>
+
+
+            </tr>
+
+
+
+
+            <tr>
+
+
+                <td>
+                    Cherche principalement une vente.
+                </td>
+
+
+                <td>
+                    Cherche à construire une relation durable.
+                </td>
+
+
+            </tr>
+
+
+
+
+            <tr>
+
+
+                <td>
+                    Relation courte avec le client.
+                </td>
+
+
+                <td>
+                    Relation basée sur la confiance.
+                </td>
+
+
+            </tr>
+
+
+
+
+            <tr>
+
+
+                <td>
+                    Se concentre sur le produit.
+                </td>
+
+
+                <td>
+                    Se concentre sur le client.
+                </td>
+
+
+            </tr>
+
+
+
+
+            <tr>
+
+
+                <td>
+                    Objectif : vendre rapidement.
+                </td>
+
+
+                <td>
+                    Objectif : fidéliser sur le long terme.
+                </td>
+
+
+            </tr>
+
+
+
+        </table>
+
+
+
+
+
+        <div class="important">
+
+
+            <h3>
+                Une règle importante :
+            </h3>
+
+
+            <p>
+                Un bon marketing ne cherche pas seulement des clients, il cherche à
+                construire une communauté autour de la marque.
+            </p>
+
+
+            <p>
+                Une entreprise qui crée une relation forte avec ses clients obtient
+                davantage de confiance, de fidélité et de recommandations.
+            </p>
+
+
+        </div>
+
+
+
+
+        <h3>
+            À retenir
+        </h3>
+
+
+        <p>
+            Le marketing relationnel place le client au centre de la stratégie. Il
+            permet de créer une relation durable grâce à l'écoute, la communication,
+            la confiance et la satisfaction.
+        </p>
+
+
+
+
+        <!-- VIDEO DU COURS -->
+
+
+        <div class="video-cours">
+
+
+            <h3>
+                📹 Vidéo explicative
+            </h3>
+
+
+            <iframe width="100%" height="400" src="https://www.youtube.com/embed/7q7depQBIqA"
+                title="Le marketing relationnel et la relation client" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+
+
+        </div>
+
+
+
+    </section>
+    <!--====================================
+        CAS PRATIQUE
+=====================================-->
+
+    <section class="cours">
+
+
+        <h2>
+            6. Cas pratique : Une boutique en ligne
+        </h2>
+
+
+
+        <p>
+            Une boutique de vêtements en ligne souhaite développer son activité et
+            améliorer sa relation avec ses clients.
+        </p>
+
+
+        <p>
+            Pour réussir, elle ne se limite pas uniquement à vendre des vêtements.
+            Elle utilise une stratégie marketing basée sur la compréhension des besoins
+            des clients, la création de valeur et la fidélisation.
+        </p>
+
+
+
+
+        <h3>
+            📚 Enseignements du cas pratique
+        </h3>
+
+
+        <p>
+            À travers cet exemple, l'apprenant doit comprendre comment une entreprise
+            peut appliquer les concepts étudiés :
+        </p>
+
+
+        <ul>
+
+
+            <li>
+                Analyser le comportement des consommateurs.
+            </li>
+
+
+            <li>
+                Adapter son offre aux besoins des clients.
+            </li>
+
+
+            <li>
+                Créer une relation durable avec les acheteurs.
+            </li>
+
+
+            <li>
+                Utiliser les outils numériques pour communiquer.
+            </li>
+
+
+            <li>
+                Mettre en place des actions de fidélisation.
+            </li>
+
+
+        </ul>
+
+
+
+
+        <h3>
+            Les actions réalisées par la boutique
+        </h3>
+
+
+
+
+        <ul>
+
+
+            <li>
+
+                <strong>Analyse des goûts des clients :</strong>
+
+                La boutique étudie les préférences des consommateurs :
+                styles recherchés, couleurs populaires, tailles demandées et tendances
+                du marché.
+
+            </li>
+
+
+
+
+            <li>
+
+                <strong>Proposition de produits adaptés :</strong>
+
+                Grâce aux informations collectées, elle propose des vêtements qui
+                correspondent réellement aux attentes des clients.
+
+            </li>
+
+
+
+
+            <li>
+
+                <strong>Communication sur les réseaux sociaux :</strong>
+
+                Elle utilise Facebook, Instagram et TikTok pour présenter ses produits,
+                partager des nouveautés et échanger avec sa communauté.
+
+            </li>
+
+
+
+
+            <li>
+
+                <strong>Offres pour les clients fidèles :</strong>
+
+                Elle récompense les clients réguliers avec des réductions, des offres
+                spéciales ou des avantages personnalisés.
+
+            </li>
+
+
+
+
+            <li>
+
+                <strong>Collecte des avis clients :</strong>
+
+                Après chaque achat, elle demande l'opinion des consommateurs afin
+                d'améliorer ses produits et services.
+
+            </li>
+
+
+        </ul>
+
+
+
+
+
+        <div class="exemple">
+
+
+            <h3>
+                Analyse du résultat :
+            </h3>
+
+
+            <p>
+                Grâce à ces stratégies, la boutique améliore l'expérience client.
+                Les consommateurs se sentent compris et bénéficient d'un service plus
+                personnalisé.
+            </p>
+
+
+            <p>
+                Résultat : les clients reviennent acheter, parlent positivement de la
+                boutique et recommandent la marque à leurs proches.
+            </p>
+
+
+        </div>
+
+
+
+
+        <h3>
+            Les stratégies utilisées dans ce cas
+        </h3>
+
+
+        <table border="1">
+
+
+            <tr>
+
+
+                <th>
+                    Action
+                </th>
+
+
+                <th>
+                    Objectif marketing
+                </th>
+
+
+            </tr>
+
+
+
+            <tr>
+
+
+                <td>
+                    Analyse des besoins clients
+                </td>
+
+
+                <td>
+                    Comprendre les attentes des consommateurs.
+                </td>
+
+
+            </tr>
+
+
+
+            <tr>
+
+
+                <td>
+                    Produits adaptés
+                </td>
+
+
+                <td>
+                    Créer de la valeur pour le client.
+                </td>
+
+
+            </tr>
+
+
+
+            <tr>
+
+
+                <td>
+                    Réseaux sociaux
+                </td>
+
+
+                <td>
+                    Développer la visibilité de la marque.
+                </td>
+
+
+            </tr>
+
+
+
+            <tr>
+
+
+                <td>
+                    Réductions fidélité
+                </td>
+
+
+                <td>
+                    Encourager les achats répétés.
+                </td>
+
+
+            </tr>
+
+
+
+            <tr>
+
+
+                <td>
+                    Avis clients
+                </td>
+
+
+                <td>
+                    Améliorer continuellement les services.
+                </td>
+
+
+            </tr>
+
+
+
+        </table>
+
+
+
+
+
+        <div class="important">
+
+
+            <h3>
+                Leçon à retenir du cas pratique :
+            </h3>
+
+
+            <p>
+                Une entreprise qui connaît ses clients, crée de la valeur et entretient
+                une bonne relation avec eux possède plus de chances de réussir sur le
+                long terme.
+            </p>
+
+
+        </div>
+
+
+
+
+        <h3>
+            À retenir
+        </h3>
+
+
+        <p>
+            La réussite d'une boutique en ligne ne dépend pas seulement de ses produits,
+            mais aussi de sa capacité à comprendre ses clients, communiquer avec eux et
+            construire une relation durable.
+        </p>
+
+
+
+
+        <!-- VIDEO DU COURS -->
+
+
+        <div class="video-cours">
+
+
+            <h3>
+                📹 Vidéo explicative
+            </h3>
+
+
+            <iframe width="100%" height="400" src="https://www.youtube.com/embed/IzGsA98eAIA"
+                title="Fidélisation client et stratégie marketing" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+
+
+        </div>
+
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+    <!--====================================
+        RESUME CHAPITRE
+=====================================-->
+
+    <section class="objectif">
+
+
+        <h2>
+            📚 Résumé du chapitre Marketing
+        </h2>
+
+
+
+        <p>
+            Ce chapitre a permis de découvrir les principes fondamentaux du marketing,
+            son rôle dans l'entreprise et son importance dans la création d'une relation
+            durable avec les clients.
+        </p>
+
+
+        <p>
+            Le marketing moderne ne consiste pas uniquement à vendre un produit. Il
+            consiste à comprendre les besoins des consommateurs, créer une offre adaptée,
+            communiquer efficacement et fidéliser les clients.
+        </p>
+
+
+
+
+        <h3>
+            🎯 Les principaux enseignements du chapitre
+        </h3>
+
+
+
+
+        <ul>
+
+
+            <li>
+
+                <strong>Comprendre le client :</strong>
+
+                Le marketing commence par l'étude des besoins, des attentes et du
+                comportement des consommateurs afin de proposer des solutions adaptées.
+
+            </li>
+
+
+
+
+            <li>
+
+                <strong>Construire une stratégie avec les 4P :</strong>
+
+                Le produit, le prix, la distribution et la promotion permettent à une
+                entreprise d'organiser efficacement son offre.
+
+            </li>
+
+
+
+
+            <li>
+
+                <strong>Analyser le comportement du consommateur :</strong>
+
+                Comprendre pourquoi et comment les clients achètent aide l'entreprise à
+                prendre de meilleures décisions.
+
+            </li>
+
+
+
+
+            <li>
+
+                <strong>Créer de la valeur client :</strong>
+
+                Une entreprise doit apporter une solution utile, une bonne expérience
+                et une relation basée sur la confiance.
+
+            </li>
+
+
+
+
+            <li>
+
+                <strong>Développer la fidélisation :</strong>
+
+                Garder les clients permet d'assurer une croissance durable et de créer
+                une communauté autour de la marque.
+
+            </li>
+
+
+
+
+            <li>
+
+                <strong>Utiliser le marketing relationnel :</strong>
+
+                Le marketing moderne cherche à construire une relation durable plutôt
+                qu'une simple transaction.
+
+            </li>
+
+
+        </ul>
+
+
+
+
+
+        <h3>
+            Les notions importantes à retenir
+        </h3>
+
+
+
+
+        <table border="1">
+
+
+            <tr>
+
+
+                <th>
+                    Notion
+                </th>
+
+
+                <th>
+                    Signification
+                </th>
+
+
+            </tr>
+
+
+
+
+            <tr>
+
+
+                <td>
+                    Marketing
+                </td>
+
+
+                <td>
+                    Ensemble des techniques permettant de comprendre, satisfaire et
+                    fidéliser les clients.
+                </td>
+
+
+            </tr>
+
+
+
+
+            <tr>
+
+
+                <td>
+                    Marketing Mix (4P)
+                </td>
+
+
+                <td>
+                    Méthode basée sur le Produit, Prix, Place et Promotion.
+                </td>
+
+
+            </tr>
+
+
+
+
+            <tr>
+
+
+                <td>
+                    Persona
+                </td>
+
+
+                <td>
+                    Représentation du client idéal d'une entreprise.
+                </td>
+
+
+            </tr>
+
+
+
+
+            <tr>
+
+
+                <td>
+                    Création de valeur
+                </td>
+
+
+                <td>
+                    Capacité à proposer une solution utile et une expérience positive.
+                </td>
+
+
+            </tr>
+
+
+
+
+            <tr>
+
+
+                <td>
+                    Fidélisation
+                </td>
+
+
+                <td>
+                    Actions permettant de garder les clients sur le long terme.
+                </td>
+
+
+            </tr>
+
+
+
+        </table>
+
+
+
+
+
+        <div class="exemple">
+
+
+            <h3>
+                Exemple global :
+            </h3>
+
+
+            <p>
+                Une entreprise qui souhaite réussir doit connaître ses clients, proposer
+                un produit adapté, choisir un prix correct, utiliser les bons canaux de
+                communication et créer une relation de confiance après l'achat.
+            </p>
+
+
+        </div>
+
+
+
+
+
+        <div class="important">
+
+
+            <h3>
+                Message final du chapitre :
+            </h3>
+
+
+            <p>
+                Le marketing moderne ne cherche pas seulement à vendre. Il cherche à
+                comprendre les clients, créer de la valeur et construire une relation
+                durable avec eux.
+            </p>
+
+
+        </div>
+
+
+
+
+
+        <!-- VIDEO DE REVISION -->
+
+
+        <div class="video-cours">
+
+
+            <h3>
+                📹 Vidéo de révision du chapitre
+            </h3>
+
+
+            <iframe width="100%" height="400" src="https://www.youtube.com/embed/R4wK6_Z3iDU"
+                title="Résumé du marketing" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+
+
+        </div>
+
+
+
+    </section>
+
+
+
+
+
+
+
+
+    <!--====================================
+        EXERCICE FINAL
+=====================================-->
+
+    <section class="exercice">
+
+
+        <h2>
+            ✍️ Exercice pratique : Analyse d'une stratégie marketing
+        </h2>
+
+
+
+        <p>
+            Choisissez une entreprise de votre choix et analysez sa stratégie marketing
+            en utilisant les notions étudiées dans ce chapitre.
+        </p>
+
+
+        <p>
+            L'objectif est de comprendre comment une entreprise attire ses clients,
+            crée de la valeur et construit une relation durable avec eux.
+        </p>
+
+
+
+
+        <h3>
+            🎯 Objectifs de l'exercice
+        </h3>
+
+
+        <ul>
+
+
+            <li>
+                Identifier les méthodes utilisées par une entreprise pour attirer ses
+                clients.
+            </li>
+
+
+            <li>
+                Comprendre la valeur proposée aux consommateurs.
+            </li>
+
+
+            <li>
+                Analyser les techniques utilisées pour fidéliser les clients.
+            </li>
+
+
+            <li>
+                Faire la différence entre une simple vente et une véritable stratégie
+                marketing.
+            </li>
+
+
+        </ul>
+
+
+
+
+        <h3>
+            📌 Consigne
+        </h3>
+
+
+        <p>
+            Choisissez une entreprise (boutique, banque, restaurant, plateforme en
+            ligne, entreprise technologique...) puis répondez aux questions suivantes :
+        </p>
+
+
+
+
+        <ul>
+
+
+            <li>
+
+                <strong>Comment attire-t-elle ses clients ?</strong>
+
+                <br>
+                Analysez ses moyens de communication : publicité, réseaux sociaux,
+                promotions, recommandations ou autres techniques.
+
+            </li>
+
+
+
+            <li>
+
+                <strong>Quelle valeur apporte-t-elle ?</strong>
+
+                <br>
+                Expliquez ce qui rend son produit ou service utile pour les clients :
+                qualité, prix, expérience, accompagnement ou innovation.
+
+            </li>
+
+
+
+            <li>
+
+                <strong>Comment fidélise-t-elle ses clients ?</strong>
+
+                <br>
+                Identifiez ses actions de fidélisation : programmes de récompense,
+                service client, offres spéciales ou communication régulière.
+
+            </li>
+
+
+
+            <li>
+
+                <strong>Quelle différence voyez-vous entre vendre et faire du marketing ?</strong>
+
+                <br>
+                Expliquez pourquoi le marketing va au-delà de la simple vente d'un
+                produit.
+
+            </li>
+
+
+        </ul>
+
+
+
+
+
+        <div class="exemple">
+
+
+            <h3>
+                Exemple :
+            </h3>
+
+
+            <p>
+                <strong>Entreprise choisie :</strong> Une boutique de vêtements en ligne.
+            </p>
+
+
+            <p>
+                <strong>Attraction des clients :</strong>
+                Elle utilise Facebook, Instagram et TikTok pour présenter ses produits.
+            </p>
+
+
+            <p>
+                <strong>Valeur apportée :</strong>
+                Elle propose des vêtements modernes, des prix accessibles et une
+                livraison rapide.
+            </p>
+
+
+            <p>
+                <strong>Fidélisation :</strong>
+                Elle offre des réductions aux clients réguliers et demande leurs avis.
+            </p>
+
+
+            <p>
+                <strong>Différence vente/marketing :</strong>
+                La vente cherche à réaliser un achat, tandis que le marketing cherche à
+                comprendre le client et créer une relation durable.
+            </p>
+
+
+        </div>
+
+
+
+
+        <h3>
+            Votre analyse :
+        </h3>
+
+
+
+        <textarea placeholder="Écrivez votre analyse marketing ici...">
+    </textarea>
+
+
+
+    </section>
+
+
+
+    <!--====================================
+        NAVIGATION
+=====================================-->
+
+    <section class="navigation">
+
+
+        <button onclick="retourCours()">
+
+            ← Retour au chapitre
+
+        </button>
+
+
+
+
+
+        <button onclick="terminerLecon()">
+
+            ✓ Terminer la leçon
+
+        </button>
+
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+    <footer>
+
+
+        <h3>
+
+            BMJ SERVICE
+
+        </h3>
+
+
+
+        <p>
+
+            Félicitations ! Après cette leçon vous pourrez passer
+            au quiz de validation Marketing.
+
+        </p>
+
+
+    </footer>
+
+    <script>
+
+
+        //====================================
+        // CHARGEMENT DE LA PAGE
+        //====================================
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+
+
+            let utilisateur = JSON.parse(
+
+                localStorage.getItem("bmj_current_user")
+
+            );
+
+
+
+
+
+            if (!utilisateur) {
+
+
+                window.location.href = "connexion.html";
+
+                return;
+
+
+            }
+
+
+
+
+
+
+
+            //=========================
+            // AFFICHAGE PROFIL
+            //=========================
+
+
+            document.getElementById("nomUtilisateur").innerHTML =
+
+                utilisateur.nom;
+
+
+
+
+
+            if (utilisateur.photo && utilisateur.photo !== "") {
+
+
+                document.getElementById("photoUtilisateur").src =
+
+                    utilisateur.photo;
+
+
+            }
+
+
+
+
+        });
+
+
+
+
+
+
+
+
+
+        //====================================
+        // RETOUR AU CHAPITRE
+        //====================================
+
+
+        function retourCours() {
+
+
+            window.location.href = "marketing.html";
+
+
+        }
+
+
+
+
+
+
+
+
+
+        //====================================
+        // TERMINER LEÇON 5
+        //====================================
+
+
+        function terminerLecon() {
+
+
+
+            let utilisateur = JSON.parse(
+
+                localStorage.getItem("bmj_current_user")
+
+            );
+
+
+
+
+
+            if (!utilisateur) {
+
+
+                window.location.href = "connexion.html";
+
+                return;
+
+
+            }
+
+
+
+
+
+
+
+
+
+            //--------------------------------
+            // RECUPERATION PROGRESSION
+            //--------------------------------
+
+
+            let progression = JSON.parse(
+
+                localStorage.getItem("marketing_progression")
+
+            ) || [];
+
+
+
+
+
+
+
+
+
+            //================================
+            // VERIFICATION DOUBLON
+            //================================
+
+
+            if (progression.includes("5")) {
+
+
+
+                alert(
+
+                    "Cette leçon est déjà terminée.\n\nVous pouvez la revoir quand vous voulez."
+
+                );
+
+
+
+                window.location.href = "quiz_marketing.html";
+
+
+                return;
+
+
+            }
+
+
+
+
+
+
+
+
+
+            //--------------------------------
+            // AJOUT DE LA LEÇON 5
+            //--------------------------------
+
+
+            progression.push("5");
+
+
+
+
+
+
+
+            localStorage.setItem(
+
+                "marketing_progression",
+
+                JSON.stringify(progression)
+
+            );
+
+
+
+
+
+
+
+
+
+            //--------------------------------
+            // COURS SUIVIS
+            //--------------------------------
+
+
+            if (!utilisateur.coursSuivis) {
+
+
+                utilisateur.coursSuivis = [];
+
+
+            }
+
+
+
+
+
+
+
+            if (!utilisateur.coursSuivis.includes(
+
+                "Marketing Leçon 5"
+
+            )) {
+
+
+                utilisateur.coursSuivis.push(
+
+                    "Marketing Leçon 5"
+
+                );
+
+
+            }
+
+
+
+
+
+
+
+
+
+            //--------------------------------
+            // CALCUL PROGRESSION
+            //--------------------------------
+
+
+            utilisateur.progression = progression.length * 20;
+
+
+
+
+
+            if (utilisateur.progression > 100) {
+
+
+                utilisateur.progression = 100;
+
+
+            }
+
+
+
+
+
+
+
+
+
+            //--------------------------------
+            // SAUVEGARDE SESSION
+            //--------------------------------
+
+
+            localStorage.setItem(
+
+                "bmj_current_user",
+
+                JSON.stringify(utilisateur)
+
+            );
+
+
+
+
+
+
+
+
+
+            //--------------------------------
+            // SAUVEGARDE BASE UTILISATEURS
+            //--------------------------------
+
+
+            let utilisateurs = JSON.parse(
+
+                localStorage.getItem("bmj_users")
+
+            ) || [];
+
+
+
+
+
+
+
+
+            let index = utilisateurs.findIndex(
+
+                u => u.id === utilisateur.id
+
+            );
+
+
+
+
+
+
+
+            if (index !== -1) {
+
+
+                utilisateurs[index] = utilisateur;
+
+
+            }
+
+
+
+
+
+
+
+
+            localStorage.setItem(
+
+                "bmj_users",
+
+                JSON.stringify(utilisateurs)
+
+            );
+
+
+
+
+
+
+
+
+
+            //--------------------------------
+            // MESSAGE
+            //--------------------------------
+
+
+            alert(
+
+                "🎉 Félicitations !\n\nVous avez terminé le chapitre Marketing Digital.\n\nVotre progression est maintenant à 100%."
+
+            );
+
+
+
+
+
+
+
+
+
+            //--------------------------------
+            // ALLER AU QUIZ
+            //--------------------------------
+
+
+            window.location.href = "quiz_marketing.html";
+
+
+
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

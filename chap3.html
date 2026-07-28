@@ -1,0 +1,1641 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*==================================================
+        BMJ SERVICE
+        CHAPITRE 3 : IDENTITÉ DE MARQUE
+==================================================*/
+
+        * {
+
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", sans-serif;
+
+        }
+
+        body {
+
+            background: #f5f7fb;
+            color: #333;
+            line-height: 1.7;
+
+        }
+
+
+
+
+        /*=========================================
+HEADER
+=========================================*/
+
+        header {
+
+            position: sticky;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: #145a86;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 8%;
+            z-index: 999;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, .15);
+
+        }
+
+        .logo {
+
+            display: flex;
+            align-items: center;
+            gap: 15px;
+
+        }
+
+        .logo img {
+
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            background: #fff;
+            padding: 5px;
+
+        }
+
+        .logo h2 {
+
+            color: #fff;
+            font-size: 26px;
+
+        }
+
+        .logo span {
+
+            color: #ffc107;
+
+        }
+
+
+
+
+        .student-profile {
+
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: rgba(255, 255, 255, .12);
+            padding: 8px 15px;
+            border-radius: 40px;
+
+        }
+
+        .student-profile img {
+
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            border: 3px solid #ffc107;
+            object-fit: cover;
+
+        }
+
+        .student-profile h4 {
+
+            color: #fff;
+            font-size: 16px;
+
+        }
+
+        .student-profile small {
+
+            color: #ddd;
+            font-size: 13px;
+
+        }
+
+
+
+
+        /*=========================================
+HERO
+=========================================*/
+
+        .course-hero {
+
+            padding: 90px 8%;
+            background:
+
+                linear-gradient(rgba(20, 90, 134, .88),
+                    rgba(20, 90, 134, .80)),
+
+                url(images/identite-marque.jpg);
+
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+
+        }
+
+        .hero-text {
+
+            max-width: 850px;
+
+        }
+
+        .hero-text span {
+
+            display: inline-block;
+            background: #ffc107;
+            color: #145a86;
+            font-weight: bold;
+            padding: 8px 20px;
+            border-radius: 30px;
+            margin-bottom: 20px;
+
+        }
+
+        .hero-text h1 {
+
+            font-size: 52px;
+            margin-bottom: 20px;
+
+        }
+
+        .hero-text p {
+
+            font-size: 19px;
+            line-height: 1.8;
+            margin-bottom: 35px;
+            color: #f1f1f1;
+
+        }
+
+
+
+
+        .course-buttons {
+
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+
+        }
+
+        .course-buttons button {
+
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: .35s;
+
+        }
+
+        .course-buttons button:first-child {
+
+            background: #ffc107;
+            color: #145a86;
+
+        }
+
+        .course-buttons button:last-child {
+
+            background: #fff;
+            color: #145a86;
+
+        }
+
+        .course-buttons button:hover {
+
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
+
+        }
+
+        /*=========================================
+INFORMATIONS DU COURS
+=========================================*/
+
+        .course-details {
+
+            padding: 70px 8%;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+            background: #fff;
+
+        }
+
+        .detail-card {
+
+            background: #ffffff;
+            border-radius: 15px;
+            padding: 35px 25px;
+            text-align: center;
+            transition: .35s;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+            border-top: 5px solid #145a86;
+
+        }
+
+        .detail-card:hover {
+
+            transform: translateY(-8px);
+            box-shadow: 0 20px 35px rgba(20, 90, 134, .18);
+
+        }
+
+        .detail-card i {
+
+            font-size: 45px;
+            color: #145a86;
+            margin-bottom: 18px;
+
+        }
+
+        .detail-card h3 {
+
+            font-size: 28px;
+            color: #145a86;
+            margin-bottom: 8px;
+
+        }
+
+        .detail-card p {
+
+            color: #666;
+            font-size: 15px;
+
+        }
+
+
+
+
+        /*=========================================
+PROGRESSION
+=========================================*/
+
+        .chapter-progress {
+
+            padding: 70px 8%;
+            background: #f8f9fc;
+            text-align: center;
+
+        }
+
+        .chapter-progress h2 {
+
+            font-size: 34px;
+            color: #145a86;
+            margin-bottom: 35px;
+
+        }
+
+        .progress-box {
+
+            width: 100%;
+            max-width: 900px;
+            height: 18px;
+            background: #d8d8d8;
+            margin: auto;
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: inset 0 3px 10px rgba(0, 0, 0, .12);
+
+        }
+
+        #chapterProgress {
+
+            width: 0%;
+            height: 100%;
+            background: linear-gradient(90deg, #145a86, #ffc107);
+            border-radius: 30px;
+            transition: 1s;
+
+        }
+
+        .chapter-progress p {
+
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #145a86;
+
+        }
+
+        #progressText {
+
+            color: #ffc107;
+            font-size: 24px;
+
+        }
+
+        /*=========================================
+PROGRAMME DU CHAPITRE
+=========================================*/
+
+        .lessons {
+
+            padding: 80px 8%;
+            background: #ffffff;
+
+        }
+
+        .lessons h2 {
+
+            text-align: center;
+            font-size: 36px;
+            color: #145a86;
+            margin-bottom: 50px;
+
+        }
+
+
+
+
+        /*=========================================
+CARTE LEÇON
+=========================================*/
+
+        .lesson-card {
+
+            display: flex;
+            align-items: flex-start;
+            gap: 30px;
+            background: #fff;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 18px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
+            border-left: 6px solid #145a86;
+            transition: .35s;
+
+        }
+
+        .lesson-card:hover {
+
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(20, 90, 134, .15);
+
+        }
+
+
+
+
+        .lesson-number {
+
+            min-width: 85px;
+            height: 85px;
+            background: linear-gradient(135deg, #145a86, #1d74ab);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            font-weight: bold;
+            border-radius: 50%;
+            box-shadow: 0 8px 20px rgba(20, 90, 134, .25);
+
+        }
+
+
+
+
+        .lesson-content {
+
+            flex: 1;
+
+        }
+
+        .lesson-content h3 {
+
+            font-size: 28px;
+            color: #145a86;
+            margin-bottom: 15px;
+
+        }
+
+        .lesson-content p {
+
+            font-size: 17px;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 20px;
+
+        }
+
+
+
+
+        .lesson-content ul {
+
+            padding-left: 20px;
+            margin-bottom: 25px;
+
+        }
+
+        .lesson-content ul li {
+
+            margin-bottom: 10px;
+            color: #444;
+            font-size: 16px;
+
+        }
+
+        .lesson-content ul li::marker {
+
+            color: #ffc107;
+
+        }
+
+
+
+
+        .lesson-content button {
+
+            background: #145a86;
+            color: #fff;
+            border: none;
+            padding: 14px 28px;
+            font-size: 15px;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: .3s;
+
+        }
+
+        .lesson-content button:hover {
+
+            background: #ffc107;
+            color: #145a86;
+            transform: translateY(-3px);
+
+        }
+
+
+
+
+        /*=========================================
+LEÇON TERMINÉE
+=========================================*/
+
+        .lesson-card.completed {
+
+            border-left: 6px solid #28a745;
+            background: #f5fff7;
+
+        }
+
+        .lesson-card.completed .lesson-number {
+
+            background: #28a745;
+
+        }
+
+        .lesson-card.completed button {
+
+            background: #28a745;
+
+        }
+
+        .lesson-card.completed button:hover {
+
+            background: #23923d;
+            color: #fff;
+
+        }
+
+
+
+
+        /*=========================================
+QUIZ FINAL
+=========================================*/
+
+        .lesson-card.final {
+
+            border-left: 6px solid #ffc107;
+            background: linear-gradient(135deg, #fff9e8, #ffffff);
+
+        }
+
+        .lesson-card.final .lesson-number {
+
+            background: #ffc107;
+            color: #145a86;
+
+        }
+
+        .lesson-card.final button {
+
+            background: #ffc107;
+            color: #145a86;
+
+        }
+
+        .lesson-card.final button:hover {
+
+            background: #145a86;
+            color: #fff;
+
+        }
+
+        /*=========================================
+FOOTER
+=========================================*/
+
+        footer {
+
+            background: #145a86;
+            padding: 45px 20px;
+            text-align: center;
+            color: #fff;
+            margin-top: 80px;
+
+        }
+
+        footer h3 {
+
+            font-size: 28px;
+            margin-bottom: 10px;
+
+        }
+
+        footer p {
+
+            color: #d9e7f2;
+            font-size: 15px;
+
+        }
+
+
+
+
+        /*=========================================
+ANIMATIONS
+=========================================*/
+
+        @keyframes fadeUp {
+
+            from {
+
+                opacity: 0;
+                transform: translateY(40px);
+
+            }
+
+            to {
+
+                opacity: 1;
+                transform: translateY(0);
+
+            }
+
+        }
+
+        .course-hero,
+        .detail-card,
+        .lesson-card,
+        .chapter-progress {
+
+            animation: fadeUp .8s ease;
+
+        }
+
+
+
+
+        /*=========================================
+RESPONSIVE TABLET
+=========================================*/
+
+        @media(max-width:992px) {
+
+            header {
+
+                padding: 15px 5%;
+
+            }
+
+            .course-hero {
+
+                padding: 70px 5%;
+
+            }
+
+            .course-details {
+
+                grid-template-columns: repeat(2, 1fr);
+                padding: 60px 5%;
+
+            }
+
+            .chapter-progress {
+
+                padding: 60px 5%;
+
+            }
+
+            .lessons {
+
+                padding: 60px 5%;
+
+            }
+
+            .lesson-card {
+
+                flex-direction: column;
+                text-align: center;
+
+            }
+
+            .lesson-number {
+
+                margin: auto;
+
+            }
+
+            .lesson-content ul {
+
+                text-align: left;
+
+            }
+
+        }
+
+
+
+
+        /*=========================================
+RESPONSIVE MOBILE
+=========================================*/
+
+        @media(max-width:768px) {
+
+            header {
+
+                flex-direction: column;
+                gap: 20px;
+                padding: 20px;
+
+            }
+
+            .logo {
+
+                justify-content: center;
+
+            }
+
+            .logo h2 {
+
+                font-size: 24px;
+
+            }
+
+            .student-profile {
+
+                width: 100%;
+                justify-content: center;
+
+            }
+
+            .course-hero {
+
+                padding: 60px 20px;
+                text-align: center;
+
+            }
+
+            .hero-text h1 {
+
+                font-size: 34px;
+
+            }
+
+            .hero-text p {
+
+                font-size: 16px;
+
+            }
+
+            .course-buttons {
+
+                flex-direction: column;
+
+            }
+
+            .course-buttons button {
+
+                width: 100%;
+
+            }
+
+            .course-details {
+
+                grid-template-columns: 1fr;
+                padding: 40px 20px;
+
+            }
+
+            .detail-card {
+
+                padding: 30px 20px;
+
+            }
+
+            .chapter-progress {
+
+                padding: 50px 20px;
+
+            }
+
+            .chapter-progress h2 {
+
+                font-size: 28px;
+
+            }
+
+            .lessons {
+
+                padding: 50px 20px;
+
+            }
+
+            .lessons h2 {
+
+                font-size: 30px;
+
+            }
+
+            .lesson-card {
+
+                padding: 25px 20px;
+
+            }
+
+            .lesson-number {
+
+                width: 70px;
+                height: 70px;
+                font-size: 24px;
+
+            }
+
+            .lesson-content h3 {
+
+                font-size: 22px;
+
+            }
+
+            .lesson-content p {
+
+                font-size: 15px;
+
+            }
+
+            .lesson-content button {
+
+                width: 100%;
+
+            }
+
+            footer {
+
+                padding: 35px 20px;
+
+            }
+
+        }
+
+
+
+
+        /*=========================================
+PETITS SMARTPHONES
+=========================================*/
+
+        @media(max-width:480px) {
+
+            .hero-text span {
+
+                font-size: 13px;
+
+            }
+
+            .hero-text h1 {
+
+                font-size: 28px;
+
+            }
+
+            .hero-text p {
+
+                font-size: 15px;
+
+            }
+
+            .logo img {
+
+                width: 45px;
+                height: 45px;
+
+            }
+
+            .student-profile img {
+
+                width: 45px;
+                height: 45px;
+
+            }
+
+            .student-profile h4 {
+
+                font-size: 15px;
+
+            }
+
+            .detail-card h3 {
+
+                font-size: 24px;
+
+            }
+
+            .lesson-content h3 {
+
+                font-size: 20px;
+
+            }
+
+            .lesson-content ul li {
+
+                font-size: 14px;
+
+            }
+
+            .lesson-content button {
+
+                font-size: 14px;
+                padding: 12px 20px;
+
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--====================================
+            HEADER
+=====================================-->
+
+    <header>
+
+        <div class="logo">
+
+            <img src="images/logo.png" alt="BMJ SERVICE">
+
+            <h2>
+
+                BMJ <span>SERVICE</span>
+
+            </h2>
+
+        </div>
+
+        <div class="student-profile">
+
+            <img id="photoUtilisateur" src="images/user.png" alt="Utilisateur">
+
+            <div>
+
+                <h4 id="nomUtilisateur">
+
+                    Apprenant
+
+                </h4>
+
+                <small id="domaineUtilisateur">
+
+                    Marketing Digital
+
+                </small>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+
+
+    <!--====================================
+            HERO COURS
+=====================================-->
+
+    <section class="course-hero">
+
+        <div class="hero-text">
+
+            <span>
+
+                CHAPITRE 3
+
+            </span>
+
+            <h1>
+
+                Identité de marque
+
+            </h1>
+
+            <p>
+
+                Découvrez comment construire une identité de marque forte,
+                créer une image professionnelle, développer une personnalité
+                unique et renforcer la confiance de vos clients grâce à une
+                communication cohérente et une identité visuelle efficace.
+
+            </p>
+
+            <div class="course-buttons">
+
+                <button onclick="commencerCours()">
+
+                    ▶ Commencer le cours
+
+                </button>
+
+                <button onclick="telechargerSupport()">
+
+                    📄 Télécharger le support
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+
+
+    <!--====================================
+        INFORMATIONS DU COURS
+=====================================-->
+
+    <section class="course-details">
+
+        <div class="detail-card">
+
+            <i class="fa-solid fa-book"></i>
+
+            <h3>
+
+                5 Leçons
+
+            </h3>
+
+            <p>
+
+                Formation complète
+
+            </p>
+
+        </div>
+
+
+
+        <div class="detail-card">
+
+            <i class="fa-solid fa-clock"></i>
+
+            <h3>
+
+                3h00
+
+            </h3>
+
+            <p>
+
+                Durée
+
+            </p>
+
+        </div>
+
+
+
+        <div class="detail-card">
+
+            <i class="fa-solid fa-chart-line"></i>
+
+            <h3>
+
+                Intermédiaire
+
+            </h3>
+
+            <p>
+
+                Niveau
+
+            </p>
+
+        </div>
+
+
+
+        <div class="detail-card">
+
+            <i class="fa-solid fa-certificate"></i>
+
+            <h3>
+
+                Certificat
+
+            </h3>
+
+            <p>
+
+                Après validation
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+    <!--====================================
+        PROGRESSION
+=====================================-->
+
+    <section class="chapter-progress">
+
+        <h2>
+
+            Votre progression
+
+        </h2>
+
+        <div class="progress-box">
+
+            <div id="chapterProgress"></div>
+
+        </div>
+
+        <p>
+
+            <span id="progressText">
+
+                0
+
+            </span>
+
+            %
+
+            terminé
+
+        </p>
+
+    </section>
+
+
+
+
+
+
+
+    <!--====================================
+            LESSONS
+=====================================-->
+
+    <section class="lessons">
+
+        <h2>
+
+            Programme du chapitre
+
+        </h2>
+
+
+
+
+
+        <!--============= LEÇON 1 =============-->
+
+        <div class="lesson-card" data-lecon="1">
+
+            <div class="lesson-number">
+
+                01
+
+            </div>
+
+            <div class="lesson-content">
+
+                <h3>
+
+                    Comprendre l'identité de marque
+
+                </h3>
+
+                <p>
+
+                    Découvrez ce qu'est une identité de marque,
+                    son rôle dans une entreprise et pourquoi
+                    elle est essentielle pour se différencier.
+
+                </p>
+
+                <ul>
+
+                    <li>Définition de l'identité de marque</li>
+
+                    <li>Pourquoi créer une identité forte ?</li>
+
+                    <li>Les avantages pour une entreprise</li>
+
+                </ul>
+
+                <button onclick="ouvrirLecon('31.html')">
+
+                    Commencer la leçon
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+
+
+        <!--============= LEÇON 2 =============-->
+
+        <div class="lesson-card" data-lecon="2">
+
+            <div class="lesson-number">
+
+                02
+
+            </div>
+
+            <div class="lesson-content">
+
+                <h3>
+
+                    Les éléments de l'identité visuelle
+
+                </h3>
+
+                <p>
+
+                    Apprenez à construire une identité visuelle
+                    cohérente grâce au logo, aux couleurs,
+                    aux typographies et aux supports graphiques.
+
+                </p>
+
+                <ul>
+
+                    <li>Le logo</li>
+
+                    <li>Les couleurs</li>
+
+                    <li>La charte graphique</li>
+
+                </ul>
+
+                <button onclick="ouvrirLecon('32.html')">
+
+                    Commencer la leçon
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+
+
+        <!--============= LEÇON 3 =============-->
+
+        <div class="lesson-card" data-lecon="3">
+
+            <div class="lesson-number">
+
+                03
+
+            </div>
+
+            <div class="lesson-content">
+
+                <h3>
+
+                    Les valeurs et la personnalité de la marque
+
+                </h3>
+
+                <p>
+
+                    Découvrez comment définir les valeurs,
+                    la mission et la personnalité qui
+                    caractérisent votre entreprise.
+
+                </p>
+
+                <ul>
+
+                    <li>Les valeurs</li>
+
+                    <li>La mission</li>
+
+                    <li>La personnalité</li>
+
+                </ul>
+
+                <button onclick="ouvrirLecon('33.html')">
+
+                    Commencer la leçon
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+
+
+        <!--============= LEÇON 4 =============-->
+
+        <div class="lesson-card" data-lecon="4">
+
+            <div class="lesson-number">
+
+                04
+
+            </div>
+
+            <div class="lesson-content">
+
+                <h3>
+
+                    Construire une image de marque
+
+                </h3>
+
+                <p>
+
+                    Comprenez comment améliorer
+                    votre réputation, gagner la confiance
+                    des clients et développer votre notoriété.
+
+                </p>
+
+                <ul>
+
+                    <li>Réputation</li>
+
+                    <li>Confiance des clients</li>
+
+                    <li>Notoriété</li>
+
+                </ul>
+
+                <button onclick="ouvrirLecon('34.html')">
+
+                    Commencer la leçon
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+
+
+        <!--============= LEÇON 5 =============-->
+
+        <div class="lesson-card" data-lecon="5">
+
+            <div class="lesson-number">
+
+                05
+
+            </div>
+
+            <div class="lesson-content">
+
+                <h3>
+
+                    Développer une marque durable
+
+                </h3>
+
+                <p>
+
+                    Découvrez comment maintenir une identité
+                    cohérente, fidéliser vos clients et faire évoluer
+                    votre marque dans le temps.
+
+                </p>
+
+                <ul>
+
+                    <li>Fidélisation</li>
+
+                    <li>Cohérence</li>
+
+                    <li>Évolution de la marque</li>
+
+                </ul>
+
+                <button onclick="ouvrirLecon('35.html')">
+
+                    Commencer la leçon
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+
+
+        <!--============= QUIZ =============-->
+
+        <div class="lesson-card final">
+
+            <div class="lesson-number">
+
+                06
+
+            </div>
+
+            <div class="lesson-content">
+
+                <h3>
+
+                    Évaluation finale
+
+                </h3>
+
+                <p>
+
+                    Vérifiez vos connaissances sur
+                    l'identité de marque et validez
+                    le troisième chapitre de votre formation.
+
+                </p>
+
+                <button onclick="quizIdentite()">
+
+                    🎓 Passer le quiz
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+
+
+    <!--====================================
+            FOOTER
+=====================================-->
+
+    <footer>
+
+        <h3>
+
+            BMJ SERVICE
+
+        </h3>
+
+        <p>
+
+            Formation professionnelle en ligne
+
+        </p>
+
+    </footer>
+    <script>
+        <script>
+
+    //==========================================
+            // CHARGEMENT DE LA PAGE
+            //==========================================
+
+            document.addEventListener("DOMContentLoaded", function () {
+
+                //--------------------------------------
+                // UTILISATEUR CONNECTÉ
+                //--------------------------------------
+
+                let utilisateur = JSON.parse(
+
+            localStorage.getItem("bmj_current_user")
+
+            );
+
+            if (!utilisateur) {
+
+                window.location.href = "connexion.html";
+
+            return;
+
+        }
+
+            //--------------------------------------
+            // PROFIL
+            //--------------------------------------
+
+            document.getElementById("nomUtilisateur").textContent =
+
+            utilisateur.nom;
+
+            document.getElementById("domaineUtilisateur").textContent =
+
+            utilisateur.domaine || "Marketing Digital";
+
+            if (utilisateur.photo && utilisateur.photo !== "") {
+
+                document.getElementById("photoUtilisateur").src =
+
+                utilisateur.photo;
+
+        }
+
+            //--------------------------------------
+            // PROGRESSION DU CHAPITRE
+            //--------------------------------------
+
+            let progression = JSON.parse(
+
+            localStorage.getItem("identite_progression")
+
+            ) || [];
+
+            let totalLecons = 5;
+
+            let pourcentage = Math.min(
+
+            Math.round((progression.length / totalLecons) * 100),
+
+            100
+
+            );
+
+            document.getElementById("chapterProgress").style.width =
+
+            pourcentage + "%";
+
+            document.getElementById("progressText").textContent =
+
+            pourcentage;
+
+            //--------------------------------------
+            // LEÇONS TERMINÉES
+            //--------------------------------------
+
+            document.querySelectorAll(".lesson-card").forEach(function (carte) {
+
+                let numero = carte.dataset.lecon;
+
+            let bouton = carte.querySelector("button");
+
+            if (!bouton) return;
+
+            if (progression.includes(numero)) {
+
+                carte.classList.add("completed");
+
+            bouton.innerHTML = "📖 Revoir la leçon";
+
+            }
+
+        });
+
+    });
+
+
+
+
+
+
+            //==========================================
+            // COMMENCER LE COURS
+            //==========================================
+
+            function commencerCours() {
+
+                ouvrirLecon("identitelecon1.html");
+
+    }
+
+
+
+
+
+            //==========================================
+            // OUVRIR UNE LEÇON
+            //==========================================
+
+            function ouvrirLecon(page) {
+
+                window.location.href = page;
+
+    }
+
+
+
+
+
+            //==========================================
+            // SUPPORT PDF
+            //==========================================
+
+            function telechargerSupport() {
+
+                alert(
+
+                    "Le support PDF du chapitre Identité de marque sera bientôt disponible."
+
+                );
+
+    }
+
+
+
+
+
+            //==========================================
+            // QUIZ FINAL
+            //==========================================
+
+            function quizIdentite() {
+
+                let progression = JSON.parse(
+
+            localStorage.getItem("identite_progression")
+
+            ) || [];
+
+            if (progression.length < 5) {
+
+                alert(
+
+                    "Vous devez terminer toutes les leçons avant de passer le quiz."
+
+                );
+
+            return;
+
+        }
+
+            window.location.href =
+
+            "quiz_identite.html";
+
+    }
+
+    </script>
+</body>
+
+</html>

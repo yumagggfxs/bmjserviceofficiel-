@@ -1,0 +1,2780 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*==================================================
+        BMJ SERVICE - STRATEGIE MARKETING
+        LEÇON 4
+==================================================*/
+
+
+        * {
+
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', Arial, sans-serif;
+
+        }
+
+
+
+        html {
+
+            scroll-behavior: smooth;
+
+        }
+
+
+
+        body {
+
+            background: #f4f7fb;
+            color: #333;
+            line-height: 1.8;
+
+        }
+
+
+
+
+
+
+        /*=====================================
+            HEADER
+======================================*/
+
+
+        header {
+
+            position: fixed;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 75px;
+
+            background: white;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            padding: 0 40px;
+
+            box-shadow: 0 5px 20px rgba(0, 0, 0, .08);
+
+            z-index: 1000;
+
+        }
+
+
+
+
+
+        .logo {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+        }
+
+
+
+
+        .logo img {
+
+            width: 50px;
+
+            height: 50px;
+
+            border-radius: 50%;
+
+        }
+
+
+
+
+        .logo h2 {
+
+            color: #145A86;
+
+        }
+
+
+
+
+
+        .logo span {
+
+            color: #D4AF37;
+
+        }
+
+
+
+
+
+
+
+        .student-profile {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+        }
+
+
+
+
+        .student-profile img {
+
+            width: 48px;
+
+            height: 48px;
+
+            border-radius: 50%;
+
+            object-fit: cover;
+
+            border: 3px solid #D4AF37;
+
+        }
+
+
+
+
+        .student-profile h4 {
+
+            color: #145A86;
+
+        }
+
+
+
+
+        .student-profile small {
+
+            color: #777;
+
+        }
+
+
+
+
+
+
+
+
+
+        /*=====================================
+            HERO
+======================================*/
+
+
+        .lesson-hero {
+
+
+            margin-top: 75px;
+
+
+            height: 420px;
+
+
+
+            background:
+
+
+                linear-gradient(rgba(20, 90, 134, .82),
+
+                    rgba(0, 0, 0, .75)),
+
+
+                url(images/objectifs-marketing.jpg);
+
+
+
+
+
+            background-size: cover;
+
+
+            background-position: center;
+
+
+
+            display: flex;
+
+
+            align-items: center;
+
+
+            justify-content: center;
+
+
+
+        }
+
+
+
+
+        .overlay {
+
+
+            width: 90%;
+
+
+            max-width: 900px;
+
+
+            color: white;
+
+
+            text-align: center;
+
+
+
+        }
+
+
+
+
+
+        .overlay h1 {
+
+
+            font-size: 52px;
+
+
+            margin-bottom: 20px;
+
+
+
+        }
+
+
+
+
+
+        .overlay p {
+
+
+            font-size: 21px;
+
+
+        }
+
+
+
+
+
+
+
+
+
+
+        /*=====================================
+            SECTIONS
+======================================*/
+
+
+        .objectif,
+        .cours,
+        .important,
+        .exercice {
+
+
+            width: 90%;
+
+
+            max-width: 1100px;
+
+
+            margin: 40px auto;
+
+
+            background: white;
+
+
+            border-radius: 20px;
+
+
+            padding: 35px;
+
+
+            box-shadow:
+
+                0 10px 25px rgba(0, 0, 0, .08);
+
+
+
+        }
+
+
+
+
+
+
+        .objectif h2,
+        .cours h2,
+        .important h2,
+        .exercice h2 {
+
+
+            color: #145A86;
+
+
+            margin-bottom: 20px;
+
+
+            border-left: 6px solid #D4AF37;
+
+
+            padding-left: 15px;
+
+
+
+        }
+
+
+
+
+
+
+
+        .cours p {
+
+
+            margin-bottom: 18px;
+
+
+            text-align: justify;
+
+
+
+        }
+
+
+
+
+
+
+        .objectif ul,
+        .cours ul {
+
+
+            margin-left: 25px;
+
+
+            margin-top: 15px;
+
+
+
+        }
+
+
+
+
+
+        .objectif li,
+        .cours li {
+
+
+            margin-bottom: 10px;
+
+
+        }
+
+
+
+
+
+
+        .cours h3 {
+
+
+            color: #145A86;
+
+
+            margin-top: 25px;
+
+
+            margin-bottom: 15px;
+
+
+        }
+
+
+
+
+
+
+
+
+
+
+        /*=====================================
+            EXEMPLE
+======================================*/
+
+
+        .exemple {
+
+
+            background: #f8fbff;
+
+
+            border-left: 6px solid #145A86;
+
+
+            padding: 25px;
+
+
+            border-radius: 12px;
+
+
+            margin-top: 25px;
+
+
+
+        }
+
+
+
+
+
+        .exemple h3 {
+
+
+            color: #145A86;
+
+
+            margin-bottom: 15px;
+
+
+
+        }
+
+
+
+
+
+
+
+
+
+        /*=====================================
+            VIDEO
+======================================*/
+
+
+        .video-cours {
+
+
+            margin-top: 30px;
+
+
+            background: #f8fbff;
+
+
+            padding: 20px;
+
+
+            border-radius: 15px;
+
+
+
+        }
+
+
+
+
+
+        .video-cours h3 {
+
+
+            color: #145A86;
+
+
+            margin-bottom: 20px;
+
+
+
+        }
+
+
+
+
+
+
+        .video-cours iframe {
+
+
+            border-radius: 15px;
+
+
+        }
+
+
+
+
+
+
+
+
+
+        /*=====================================
+            IMPORTANT
+======================================*/
+
+
+        .important {
+
+
+            background: #145A86;
+
+
+            color: white;
+
+
+
+        }
+
+
+
+
+        .important h2 {
+
+
+            color: white;
+
+
+            border-left-color: #D4AF37;
+
+
+
+        }
+
+
+
+
+        .important p {
+
+
+            margin-bottom: 15px;
+
+
+            font-size: 18px;
+
+
+
+        }
+
+
+
+
+
+
+
+
+
+        /*=====================================
+            EXERCICE
+======================================*/
+
+
+        .exercice ol {
+
+
+            margin: 20px 0 20px 25px;
+
+
+
+        }
+
+
+
+
+
+        .exercice li {
+
+
+            margin-bottom: 12px;
+
+
+
+        }
+
+
+
+
+
+
+
+        textarea {
+
+
+            width: 100%;
+
+
+            height: 180px;
+
+
+            border: 2px solid #ddd;
+
+
+            border-radius: 12px;
+
+
+            padding: 15px;
+
+
+            resize: vertical;
+
+
+            font-size: 16px;
+
+
+            margin-top: 20px;
+
+
+            outline: none;
+
+
+
+        }
+
+
+
+
+
+        textarea:focus {
+
+
+            border-color: #145A86;
+
+
+
+        }
+
+
+
+
+
+
+
+
+
+        /*=====================================
+            NAVIGATION
+======================================*/
+
+
+        .navigation {
+
+
+            width: 90%;
+
+
+            max-width: 1100px;
+
+
+            margin: 40px auto 70px;
+
+
+            display: flex;
+
+
+            justify-content: space-between;
+
+
+            gap: 20px;
+
+
+
+        }
+
+
+
+
+
+
+        .navigation button {
+
+
+            flex: 1;
+
+
+            padding: 18px;
+
+
+            border: none;
+
+
+            border-radius: 12px;
+
+
+            font-size: 17px;
+
+
+            font-weight: bold;
+
+
+            cursor: pointer;
+
+
+            transition: .35s;
+
+
+
+        }
+
+
+
+
+
+
+        .navigation button:first-child {
+
+
+            background: #145A86;
+
+
+            color: white;
+
+
+
+        }
+
+
+
+
+
+
+        .navigation button:last-child {
+
+
+            background: #D4AF37;
+
+
+            color: #145A86;
+
+
+
+        }
+
+
+
+
+
+
+        .navigation button:hover {
+
+
+            transform: translateY(-5px);
+
+
+            box-shadow: 0 12px 25px rgba(0, 0, 0, .15);
+
+
+
+        }
+
+
+
+
+
+
+
+
+
+        /*=====================================
+            FOOTER
+======================================*/
+
+
+        footer {
+
+
+            background: #145A86;
+
+
+            color: white;
+
+
+            text-align: center;
+
+
+            padding: 35px;
+
+
+
+        }
+
+
+
+
+
+        footer h3 {
+
+
+            margin-bottom: 10px;
+
+
+
+        }
+
+
+
+
+
+
+
+
+
+        /*=====================================
+            RESPONSIVE
+======================================*/
+
+
+        @media(max-width:768px) {
+
+
+
+            header {
+
+
+                padding: 0 15px;
+
+
+            }
+
+
+
+
+            .student-profile small {
+
+
+                display: none;
+
+
+            }
+
+
+
+
+
+            .overlay h1 {
+
+
+                font-size: 34px;
+
+
+
+            }
+
+
+
+
+            .overlay p {
+
+
+                font-size: 17px;
+
+
+
+            }
+
+
+
+
+
+            .objectif,
+            .cours,
+            .important,
+            .exercice {
+
+
+                padding: 22px;
+
+
+
+            }
+
+
+
+
+
+            .navigation {
+
+
+                flex-direction: column;
+
+
+
+            }
+
+
+
+        }
+
+
+
+
+
+
+
+        @media(max-width:500px) {
+
+
+
+            .logo h2 {
+
+
+                font-size: 20px;
+
+
+            }
+
+
+
+
+            .student-profile h4 {
+
+
+                font-size: 15px;
+
+
+
+            }
+
+
+
+
+
+            .overlay h1 {
+
+
+                font-size: 28px;
+
+
+
+            }
+
+
+
+
+
+            .overlay p {
+
+
+                font-size: 15px;
+
+
+
+            }
+
+
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <body>
+
+
+        <!--====================================
+            HEADER
+=====================================-->
+
+        <header>
+
+
+            <div class="logo">
+
+                <img src="images/logo.png">
+
+
+                <h2>
+
+                    BMJ <span>SERVICE</span>
+
+                </h2>
+
+
+            </div>
+
+
+
+
+            <div class="student-profile">
+
+
+                <img id="photoUtilisateur" src="images/user.png">
+
+
+
+                <div>
+
+
+                    <h4 id="nomUtilisateur">
+
+                        Apprenant
+
+                    </h4>
+
+
+
+                    <small>
+
+                        Marketing Digital
+
+                    </small>
+
+
+                </div>
+
+
+            </div>
+
+
+        </header>
+
+
+
+
+
+
+
+
+
+        <!--====================================
+            BANNIÈRE LEÇON
+=====================================-->
+
+        <section class="lesson-hero">
+
+
+            <div class="overlay">
+
+
+                <h1>
+
+                    Leçon 4 : Définir les objectifs marketing
+
+                </h1>
+
+
+
+                <p>
+
+
+                    Découvrez comment fixer des objectifs marketing
+                    clairs, mesurables et adaptés aux besoins
+                    d'une entreprise.
+
+
+                </p>
+
+
+
+            </div>
+
+
+        </section>
+
+
+
+
+
+
+
+
+
+        <!--====================================
+            OBJECTIFS
+=====================================-->
+
+        <section class="objectif">
+
+
+            <h2>
+
+                Objectifs de cette leçon
+
+            </h2>
+
+
+
+            <ul>
+
+
+                <li>
+
+                    Comprendre l'importance des objectifs marketing.
+
+                </li>
+
+
+
+                <li>
+
+                    Découvrir la méthode SMART.
+
+                </li>
+
+
+
+                <li>
+
+                    Apprendre à définir des objectifs efficaces.
+
+                </li>
+
+
+
+                <li>
+
+                    Comprendre le rôle des indicateurs de performance.
+
+                </li>
+
+
+
+            </ul>
+
+
+        </section>
+
+
+
+
+
+
+
+
+
+        <!--====================================
+            COURS 1
+=====================================-->
+
+        <section class="cours">
+
+
+            <h2>
+
+                1. Comprendre les objectifs marketing
+
+            </h2>
+
+
+
+            <p>
+
+
+                Les objectifs marketing représentent les résultats
+                qu'une entreprise souhaite atteindre grâce à ses
+                actions marketing.
+
+
+            </p>
+
+
+
+            <p>
+
+
+                Ils permettent de donner une direction claire aux
+                équipes marketing et de mesurer l'efficacité des
+                stratégies mises en place.
+
+
+            </p>
+
+
+
+            <p>
+
+
+                Sans objectifs précis, une entreprise risque de
+                réaliser des actions sans savoir si elles produisent
+                réellement des résultats.
+
+
+            </p>
+
+
+
+
+
+
+            <h3>
+
+                Pourquoi définir des objectifs marketing ?
+
+            </h3>
+
+
+
+            <ul>
+
+
+                <li>
+
+                    Donner une direction aux actions marketing.
+
+                </li>
+
+
+
+                <li>
+
+                    Mesurer les résultats obtenus.
+
+                </li>
+
+
+
+                <li>
+
+                    Améliorer les décisions stratégiques.
+
+                </li>
+
+
+
+                <li>
+
+                    Optimiser les ressources disponibles.
+
+                </li>
+
+
+
+                <li>
+
+                    Augmenter les performances commerciales.
+
+                </li>
+
+
+
+            </ul>
+
+
+
+        </section>
+
+
+
+
+
+
+
+
+
+        <!--====================================
+            COURS 2
+=====================================-->
+
+        <section class="cours">
+
+
+            <h2>
+
+                2. Les différents types d'objectifs marketing
+
+            </h2>
+
+
+
+            <p>
+
+
+                Les entreprises peuvent définir plusieurs types
+                d'objectifs selon leurs besoins et leur stratégie
+                globale.
+
+
+            </p>
+
+
+
+
+            <h3>
+
+                Objectifs de notoriété
+
+            </h3>
+
+
+
+            <p>
+
+
+                Ils consistent à faire connaître une marque, un
+                produit ou un service auprès d'un public cible.
+
+
+            </p>
+
+
+
+            <p>
+
+
+                Exemple : augmenter la visibilité d'une entreprise
+                sur les réseaux sociaux.
+
+
+            </p>
+
+
+
+
+
+            <h3>
+
+                Objectifs commerciaux
+
+            </h3>
+
+
+
+            <p>
+
+
+                Ils concernent directement les ventes et les revenus
+                générés par l'entreprise.
+
+
+            </p>
+
+
+
+            <p>
+
+
+                Exemple : augmenter les ventes de 20% pendant une
+                période donnée.
+
+
+            </p>
+
+
+
+
+
+
+            <h3>
+
+                Objectifs de fidélisation
+
+            </h3>
+
+
+
+            <p>
+
+
+                Ils visent à conserver les clients existants et à
+                renforcer leur relation avec l'entreprise.
+
+
+            </p>
+
+
+
+            <p>
+
+
+                Exemple : améliorer la satisfaction client grâce
+                à un programme de fidélité.
+
+
+            </p>
+
+
+
+        </section>
+        <!--====================================
+            COURS 3
+=====================================-->
+
+        <section class="cours">
+
+
+            <h2>
+
+                3. La méthode SMART pour définir des objectifs
+
+            </h2>
+
+
+
+            <p>
+
+
+                Pour être efficaces, les objectifs marketing doivent
+                être bien définis. La méthode SMART est un outil
+                utilisé par les professionnels pour créer des
+                objectifs clairs et réalisables.
+
+
+            </p>
+
+
+
+            <p>
+
+
+                SMART est un acronyme composé de cinq critères qui
+                permettent de vérifier la qualité d'un objectif.
+
+
+            </p>
+
+
+
+
+
+
+            <h3>
+
+                Les critères SMART
+
+            </h3>
+
+
+
+            <ul>
+
+
+                <li>
+
+
+                    <strong>S - Spécifique :</strong>
+
+                    l'objectif doit être précis et clairement défini.
+
+
+                </li>
+
+
+
+
+                <li>
+
+
+                    <strong>M - Mesurable :</strong>
+
+                    il doit être possible de mesurer les résultats
+                    obtenus.
+
+
+                </li>
+
+
+
+
+                <li>
+
+
+                    <strong>A - Atteignable :</strong>
+
+                    l'objectif doit être réalisable avec les moyens
+                    disponibles.
+
+
+                </li>
+
+
+
+
+                <li>
+
+
+                    <strong>R - Réaliste :</strong>
+
+                    il doit correspondre à la situation réelle de
+                    l'entreprise.
+
+
+                </li>
+
+
+
+
+                <li>
+
+
+                    <strong>T - Temporel :</strong>
+
+                    il doit avoir une durée ou une date limite.
+
+
+                </li>
+
+
+
+            </ul>
+
+
+
+
+
+
+
+            <h3>
+
+                Exemple d'objectif SMART
+
+            </h3>
+
+
+
+            <div class="exemple">
+
+
+                <h3>
+
+                    Objectif général :
+
+                </h3>
+
+
+
+                <p>
+
+
+                    Augmenter les ventes d'une boutique de vêtements.
+
+
+                </p>
+
+
+
+
+
+                <h3>
+
+                    Objectif SMART :
+
+                </h3>
+
+
+
+                <p>
+
+
+                    Augmenter les ventes de 25% en trois mois
+                    grâce à une campagne publicitaire sur les
+                    réseaux sociaux et à des promotions ciblées.
+
+
+                </p>
+
+
+
+
+
+                <h3>
+
+                    Analyse de l'objectif
+
+                </h3>
+
+
+
+                <ul>
+
+
+                    <li>
+
+                        Spécifique : augmenter les ventes.
+
+                    </li>
+
+
+
+                    <li>
+
+                        Mesurable : 25% d'augmentation.
+
+                    </li>
+
+
+
+                    <li>
+
+                        Atteignable : grâce aux actions marketing.
+
+                    </li>
+
+
+
+                    <li>
+
+                        Réaliste : objectif adapté à l'entreprise.
+
+                    </li>
+
+
+
+                    <li>
+
+                        Temporel : trois mois.
+
+                    </li>
+
+
+
+                </ul>
+
+
+
+            </div>
+
+
+
+        </section>
+
+
+
+
+
+
+
+
+
+        <!--====================================
+            COURS 4
+=====================================-->
+
+        <section class="cours">
+
+
+            <h2>
+
+                4. Les indicateurs de performance marketing (KPI)
+
+            </h2>
+
+
+
+
+            <p>
+
+
+                Les KPI (Key Performance Indicators), appelés
+                indicateurs clés de performance, permettent de
+                mesurer les résultats des actions marketing.
+
+
+            </p>
+
+
+
+            <p>
+
+
+                Ils permettent de savoir si les objectifs fixés
+                sont atteints et d'identifier les actions qui
+                doivent être améliorées.
+
+
+            </p>
+
+
+
+
+
+
+            <h3>
+
+                Exemples de KPI marketing
+
+            </h3>
+
+
+
+            <ul>
+
+
+                <li>
+
+
+                    <strong>Nombre de visiteurs :</strong>
+
+                    mesure la fréquentation d'un site web.
+
+
+                </li>
+
+
+
+                <li>
+
+
+                    <strong>Taux de conversion :</strong>
+
+                    indique le nombre de visiteurs qui deviennent
+                    des clients.
+
+
+                </li>
+
+
+
+                <li>
+
+
+                    <strong>Nombre de ventes :</strong>
+
+                    permet de suivre les performances commerciales.
+
+
+                </li>
+
+
+
+                <li>
+
+
+                    <strong>Taux d'engagement :</strong>
+
+                    mesure les interactions sur les réseaux sociaux.
+
+
+                </li>
+
+
+
+                <li>
+
+
+                    <strong>Satisfaction client :</strong>
+
+                    permet d'évaluer la qualité du service.
+
+
+                </li>
+
+
+
+            </ul>
+
+
+
+
+
+
+            <h3>
+
+                Exemple pratique
+
+            </h3>
+
+
+
+            <p>
+
+
+                Une entreprise lance une publicité sur Facebook pour
+                promouvoir un nouveau produit.
+
+
+            </p>
+
+
+
+            <p>
+
+
+                Elle analyse ensuite plusieurs indicateurs :
+                le nombre de personnes touchées, les clics obtenus,
+                les demandes reçues et les ventes réalisées.
+
+
+            </p>
+
+
+
+            <p>
+
+
+                Grâce à ces données, elle peut savoir si sa campagne
+                marketing est efficace ou si elle doit être améliorée.
+
+
+            </p>
+
+
+
+        </section>
+        <!--====================================
+            COURS 5
+=====================================-->
+
+        <section class="cours">
+
+
+            <h2>
+
+                5. Construire un plan marketing efficace
+
+            </h2>
+
+
+
+            <p>
+
+
+                Le plan marketing est un document qui présente
+                l'ensemble des actions qu'une entreprise doit réaliser
+                pour atteindre ses objectifs marketing.
+
+
+            </p>
+
+
+
+            <p>
+
+
+                Il permet d'organiser les différentes étapes d'une
+                stratégie marketing et de coordonner les efforts
+                des équipes.
+
+
+            </p>
+
+
+
+
+
+
+            <h3>
+
+                Les principales étapes d'un plan marketing
+
+            </h3>
+
+
+
+            <ul>
+
+
+                <li>
+
+
+                    <strong>1. Analyse du marché :</strong>
+
+                    étudier les clients, les concurrents et les
+                    tendances du secteur.
+
+
+                </li>
+
+
+
+
+                <li>
+
+
+                    <strong>2. Définition de la cible :</strong>
+
+                    identifier précisément les consommateurs que
+                    l'entreprise souhaite atteindre.
+
+
+                </li>
+
+
+
+
+                <li>
+
+
+                    <strong>3. Fixation des objectifs :</strong>
+
+                    déterminer les résultats attendus avec des
+                    objectifs mesurables.
+
+
+                </li>
+
+
+
+
+                <li>
+
+
+                    <strong>4. Choix des actions marketing :</strong>
+
+                    sélectionner les moyens de communication,
+                    de promotion et de distribution.
+
+
+                </li>
+
+
+
+
+                <li>
+
+
+                    <strong>5. Mesure des résultats :</strong>
+
+                    analyser les performances grâce aux indicateurs
+                    KPI.
+
+
+                </li>
+
+
+
+            </ul>
+
+
+
+
+
+
+
+            <h3>
+
+                Exemple pratique : lancement d'une application mobile
+
+            </h3>
+
+
+
+            <div class="exemple">
+
+
+                <p>
+
+
+                    Une entreprise souhaite lancer une application
+                    mobile de réservation de services.
+
+
+                </p>
+
+
+
+                <h3>
+
+                    Analyse :
+
+                </h3>
+
+
+
+                <p>
+
+
+                    Elle étudie les besoins des utilisateurs et
+                    analyse les applications concurrentes.
+
+
+                </p>
+
+
+
+
+
+                <h3>
+
+                    Objectif :
+
+                </h3>
+
+
+
+                <p>
+
+
+                    Obtenir 10 000 utilisateurs durant les six
+                    premiers mois après le lancement.
+
+
+                </p>
+
+
+
+
+
+                <h3>
+
+                    Actions marketing :
+
+                </h3>
+
+
+
+                <ul>
+
+
+                    <li>
+
+                        Création de pages sur les réseaux sociaux.
+
+                    </li>
+
+
+
+                    <li>
+
+                        Publicités Facebook, Instagram et TikTok.
+
+                    </li>
+
+
+
+                    <li>
+
+                        Partenariats avec des influenceurs.
+
+                    </li>
+
+
+
+                    <li>
+
+                        Offres promotionnelles pour les nouveaux
+                        utilisateurs.
+
+                    </li>
+
+
+
+                </ul>
+
+
+
+
+
+                <h3>
+
+                    Résultat attendu :
+
+                </h3>
+
+
+
+                <p>
+
+
+                    Augmenter la visibilité de l'application,
+                    attirer des utilisateurs et développer une
+                    clientèle fidèle.
+
+
+                </p>
+
+
+
+            </div>
+
+
+
+        </section>
+
+
+
+
+
+
+
+
+
+        <!--====================================
+            VIDEO
+=====================================-->
+
+        <section class="cours">
+
+
+            <h2>
+
+                📹 Vidéo explicative
+
+            </h2>
+
+
+
+            <div class="video-cours">
+
+
+                <iframe width="100%" height="400" src="https://www.youtube.com/embed/R4wK6_Z3iDU"
+                    title="Stratégie marketing" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+
+
+                </iframe>
+
+
+            </div>
+
+
+        </section>
+        <!--====================================
+            À RETENIR
+=====================================-->
+
+        <section class="important">
+
+
+            <h2>
+
+                📌 À retenir
+
+            </h2>
+
+
+
+            <p>
+
+                ✔ Les objectifs marketing permettent de donner une
+                direction claire aux actions d'une entreprise.
+
+            </p>
+
+
+
+            <p>
+
+                ✔ Un bon objectif doit être précis, mesurable,
+                atteignable, réaliste et limité dans le temps.
+
+            </p>
+
+
+
+            <p>
+
+                ✔ La méthode SMART aide les entreprises à définir
+                des objectifs efficaces.
+
+            </p>
+
+
+
+            <p>
+
+                ✔ Les KPI permettent de mesurer les performances
+                des actions marketing réalisées.
+
+            </p>
+
+
+
+            <p>
+
+                ✔ Un plan marketing organise les différentes étapes
+                nécessaires pour atteindre les objectifs fixés.
+
+            </p>
+
+
+
+            <p>
+
+                ✔ Une stratégie marketing efficace doit toujours
+                être analysée et améliorée grâce aux résultats
+                obtenus.
+
+            </p>
+
+
+
+        </section>
+
+
+
+
+
+
+
+
+        <!--====================================
+            EXERCICE
+=====================================-->
+
+        <section class="exercice">
+
+
+            <h2>
+
+                📝 Exercice pratique
+
+            </h2>
+
+
+
+
+            <p>
+
+
+                Vous êtes responsable marketing d'une boutique de
+                vêtements qui souhaite augmenter ses ventes.
+
+
+            </p>
+
+
+
+
+            <p>
+
+
+                Proposez une stratégie marketing avec des objectifs
+                précis.
+
+
+            </p>
+
+
+
+
+
+            <h3>
+
+                Répondez aux questions suivantes :
+
+            </h3>
+
+
+
+
+            <ol>
+
+
+                <li>
+
+                    Quel est votre objectif marketing principal ?
+
+                </li>
+
+
+
+                <li>
+
+                    Transformez cet objectif en objectif SMART.
+
+                </li>
+
+
+
+                <li>
+
+                    Quels moyens utiliserez-vous pour atteindre cet
+                    objectif ?
+
+                </li>
+
+
+
+                <li>
+
+                    Quels indicateurs utiliserez-vous pour mesurer
+                    les résultats ?
+
+                </li>
+
+
+
+                <li>
+
+                    Comment allez-vous améliorer votre stratégie si
+                    les résultats ne sont pas satisfaisants ?
+
+                </li>
+
+
+
+            </ol>
+
+
+
+
+            <p>
+
+                Écrivez votre réponse dans la zone ci-dessous.
+
+            </p>
+
+
+
+
+            <textarea rows="10" placeholder="Écrivez votre réponse ici...">
+
+    </textarea>
+
+
+
+        </section>
+
+
+
+
+
+
+
+
+        <!--====================================
+            NAVIGATION
+=====================================-->
+
+        <section class="navigation">
+
+
+
+            <button onclick="retourCours()">
+
+
+                ← Retour au chapitre
+
+
+            </button>
+
+
+
+
+
+            <button onclick="terminerLecon()">
+
+
+                ✓ Terminer la leçon
+
+
+            </button>
+
+
+
+        </section>
+
+
+
+
+
+
+
+
+        <!--====================================
+            FOOTER
+=====================================-->
+
+        <footer>
+
+
+            <h3>
+
+                BMJ SERVICE
+
+            </h3>
+
+
+
+            <p>
+
+                Plateforme professionnelle de formation en ligne.
+
+            </p>
+
+
+
+        </footer>
+        <script>
+            //====================================
+            // CHARGEMENT DE LA PAGE
+            //====================================
+
+            document.addEventListener("DOMContentLoaded", function () {
+
+
+
+                let utilisateur = JSON.parse(
+
+                    localStorage.getItem("bmj_current_user")
+
+                );
+
+
+
+                if (!utilisateur) {
+
+
+                    window.location.href = "connexion.html";
+
+                    return;
+
+
+                }
+
+
+
+
+
+
+
+                //=========================
+                // PROFIL UTILISATEUR
+                //=========================
+
+
+                document.getElementById("nomUtilisateur").innerHTML = utilisateur.nom;
+
+
+
+
+
+                if (utilisateur.photo && utilisateur.photo !== "") {
+
+
+                    document.getElementById("photoUtilisateur").src = utilisateur.photo;
+
+
+                }
+
+
+
+            });
+
+
+
+
+
+
+
+
+
+            //====================================
+            // RETOUR AU CHAPITRE STRATEGIE
+            //====================================
+
+            function retourCours() {
+
+
+                window.location.href = "strategie.html";
+
+
+            }
+
+
+
+
+
+
+
+
+
+            //====================================
+            // TERMINER LA LEÇON 4
+            //====================================
+
+            function terminerLecon() {
+
+
+
+                let utilisateur = JSON.parse(
+
+                    localStorage.getItem("bmj_current_user")
+
+                );
+
+
+
+
+
+                if (!utilisateur) {
+
+
+                    window.location.href = "connexion.html";
+
+                    return;
+
+
+                }
+
+
+
+
+
+
+
+
+                //--------------------------------
+                // PROGRESSION STRATEGIE
+                //--------------------------------
+
+
+                let progression = JSON.parse(
+
+                    localStorage.getItem("strategie_progression")
+
+                ) || [];
+
+
+
+
+
+
+
+
+
+                //=============================
+                // VERIFICATION
+                //=============================
+
+
+                if (progression.includes("4")) {
+
+
+                    alert("Cette leçon est déjà terminée.");
+
+
+                    window.location.href = "strategie.html";
+
+
+                    return;
+
+
+                }
+
+
+
+
+
+
+
+
+                //--------------------------------
+                // AJOUT LEÇON 4
+                //--------------------------------
+
+
+                progression.push("4");
+
+
+
+
+
+                localStorage.setItem(
+
+                    "strategie_progression",
+
+                    JSON.stringify(progression)
+
+                );
+
+
+
+
+
+
+
+
+
+                //--------------------------------
+                // COURS SUIVIS
+                //--------------------------------
+
+
+                if (!utilisateur.coursSuivis) {
+
+
+                    utilisateur.coursSuivis = [];
+
+
+                }
+
+
+
+
+
+
+
+                if (!utilisateur.coursSuivis.includes(
+
+                    "Stratégie Marketing Leçon 4"
+
+                )) {
+
+
+                    utilisateur.coursSuivis.push(
+
+                        "Stratégie Marketing Leçon 4"
+
+                    );
+
+
+                }
+
+
+
+
+
+
+
+
+
+                //--------------------------------
+                // CALCUL PROGRESSION
+                //--------------------------------
+
+
+                utilisateur.progression =
+
+                    progression.length * 20;
+
+
+
+
+                if (utilisateur.progression > 100) {
+
+
+                    utilisateur.progression = 100;
+
+
+                }
+
+
+
+
+
+
+
+
+
+                //--------------------------------
+                // SAUVEGARDE SESSION
+                //--------------------------------
+
+
+                localStorage.setItem(
+
+                    "bmj_current_user",
+
+                    JSON.stringify(utilisateur)
+
+                );
+
+
+
+
+
+
+
+
+
+                //--------------------------------
+                // SAUVEGARDE LISTE UTILISATEURS
+                //--------------------------------
+
+
+                let utilisateurs = JSON.parse(
+
+                    localStorage.getItem("bmj_users")
+
+                ) || [];
+
+
+
+
+
+
+
+                let index = utilisateurs.findIndex(
+
+                    u => u.id === utilisateur.id
+
+                );
+
+
+
+
+
+
+
+
+                if (index !== -1) {
+
+
+                    utilisateurs[index] = utilisateur;
+
+
+                }
+
+
+
+
+
+
+
+                localStorage.setItem(
+
+                    "bmj_users",
+
+                    JSON.stringify(utilisateurs)
+
+                );
+
+
+
+
+
+
+
+
+
+                //--------------------------------
+                // MESSAGE DE VALIDATION
+                //--------------------------------
+
+
+                alert(
+
+                    "🎉 Félicitations !\n\nVous avez terminé la Leçon 4."
+
+                );
+
+
+
+
+
+
+
+
+
+                //--------------------------------
+                // RETOUR AU CHAPITRE
+                //--------------------------------
+
+
+                window.location.href = "strategie.html";
+
+
+
+            }
+        </script>
+    </body>
+
+</html>

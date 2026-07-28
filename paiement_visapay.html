@@ -1,0 +1,1736 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*==================================================
+            BMJ SERVICE - PAIEMENT VISAPAY
+==================================================*/
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #f4f7fb;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        /*==================================
+            HEADER
+==================================*/
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 75px;
+            background: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 40px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, .08);
+            z-index: 1000;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        .logo h2 {
+            color: #145A86;
+        }
+
+        .logo span {
+            color: #D4AF37;
+        }
+
+        /*==================================
+        PROFIL
+==================================*/
+
+        .student-profile {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .student-profile img {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #D4AF37;
+        }
+
+        .student-profile h4 {
+            color: #145A86;
+        }
+
+        .student-profile small {
+            color: #666;
+        }
+
+        /*==================================
+            HERO
+==================================*/
+
+        .payment-hero {
+            margin-top: 75px;
+            min-height: 330px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px;
+            color: white;
+            background:
+                linear-gradient(rgba(20, 90, 134, .88), rgba(20, 90, 134, .88)),
+                url("images/payment-banner.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .hero-content span {
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 30px;
+            background: #D4AF37;
+            color: #145A86;
+            font-weight: bold;
+        }
+
+        .hero-content h1 {
+            margin: 25px 0;
+            font-size: 42px;
+        }
+
+        .hero-content p {
+            line-height: 1.8;
+            font-size: 18px;
+        }
+
+        /*==================================
+        CONTENEUR
+==================================*/
+
+        .payment-container {
+            width: 92%;
+            max-width: 1300px;
+            margin: 60px auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 35px;
+        }
+
+        /*==================================
+        TITRES
+==================================*/
+
+        .payment-left h2,
+        .payment-right h2 {
+            color: #145A86;
+            margin-bottom: 20px;
+        }
+
+        /*==================================
+        CARTE
+==================================*/
+
+        .resume-card,
+        .payment-card {
+            background: white;
+            border-radius: 22px;
+            padding: 35px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, .08);
+        }
+
+        /*==================================
+        LIGNES
+==================================*/
+
+        .ligne {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .total {
+            margin-top: 15px;
+            border: none;
+            font-size: 22px;
+            font-weight: bold;
+            color: #145A86;
+        }
+
+        /*==================================
+        VISAPAY
+==================================*/
+
+        .payment-card {
+            text-align: center;
+        }
+
+        .payment-card img {
+            width: 120px;
+            margin-bottom: 20px;
+        }
+
+        .numero {
+            margin: 20px 0;
+            background: #145A86;
+            color: white;
+            padding: 16px;
+            border-radius: 12px;
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .reference {
+            margin: 18px 0 25px;
+            background: #f4f7fb;
+            padding: 15px;
+            border-radius: 12px;
+            font-size: 18px;
+            color: #145A86;
+            font-weight: bold;
+        }
+
+        /*==================================
+        INPUT
+==================================*/
+
+        .payment-card label {
+            display: block;
+            text-align: left;
+            margin-top: 20px;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .payment-card input {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #ddd;
+            border-radius: 12px;
+            outline: none;
+            transition: .3s;
+        }
+
+        .payment-card input:focus {
+            border-color: #145A86;
+        }
+
+        /*==================================
+        BOUTON
+==================================*/
+
+        .payment-card button {
+            width: 100%;
+            margin-top: 30px;
+            padding: 17px;
+            border: none;
+            border-radius: 40px;
+            background: #145A86;
+            color: white;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: .35s;
+        }
+
+        .payment-card button:hover {
+            background: #D4AF37;
+            color: #145A86;
+            transform: translateY(-4px);
+            box-shadow: 0 12px 25px rgba(212, 175, 55, .35);
+        }
+
+        /*==================================
+        ETAPES
+==================================*/
+
+        .payment-steps {
+            width: 92%;
+            max-width: 1000px;
+            margin: 70px auto;
+        }
+
+        .payment-steps h2 {
+            color: #145A86;
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .step {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            background: white;
+            margin-bottom: 18px;
+            padding: 22px;
+            border-radius: 18px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, .08);
+            transition: .3s;
+        }
+
+        .step:hover {
+            transform: translateX(8px);
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: #145A86;
+            color: #D4AF37;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 22px;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        /*==================================
+        SECURITE
+==================================*/
+
+        .security {
+            width: 92%;
+            max-width: 1200px;
+            margin: 70px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+        }
+
+        .security-card {
+            background: white;
+            padding: 35px;
+            border-radius: 22px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+            transition: .35s;
+        }
+
+        .security-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .security-card i {
+            font-size: 45px;
+            color: #D4AF37;
+            margin-bottom: 20px;
+        }
+
+        .security-card h3 {
+            color: #145A86;
+            margin-bottom: 12px;
+        }
+
+        .security-card p {
+            color: #666;
+            line-height: 1.7;
+        }
+
+        /*==================================
+        FOOTER
+==================================*/
+
+        footer {
+            margin-top: 60px;
+            background: #145A86;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        footer h3 {
+            margin-bottom: 10px;
+        }
+
+        /*==================================
+        RESPONSIVE
+==================================*/
+
+        @media(max-width:900px) {
+
+            .payment-container {
+
+                grid-template-columns: 1fr;
+
+            }
+
+        }
+
+        @media(max-width:768px) {
+
+            header {
+
+                padding: 0 15px;
+
+            }
+
+            .logo h2 {
+
+                font-size: 20px;
+
+            }
+
+            .student-profile small {
+
+                display: none;
+
+            }
+
+            .hero-content h1 {
+
+                font-size: 30px;
+
+            }
+
+            .hero-content p {
+
+                font-size: 16px;
+
+            }
+
+            .payment-hero {
+
+                padding: 25px;
+
+            }
+
+            .resume-card,
+            .payment-card {
+
+                padding: 25px;
+
+            }
+
+            .numero {
+
+                font-size: 18px;
+
+            }
+
+            .step {
+
+                flex-direction: column;
+                text-align: center;
+
+            }
+
+        }
+
+        @media(max-width:500px) {
+
+            .student-profile h4 {
+
+                font-size: 15px;
+
+            }
+
+            .payment-card button {
+
+                font-size: 15px;
+
+            }
+
+            .hero-content h1 {
+
+                font-size: 26px;
+
+            }
+
+        }
+
+        .success-modal {
+
+            position: fixed;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+
+            background: rgba(0, 0, 0, .65);
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            visibility: hidden;
+
+            opacity: 0;
+
+            transition: .4s;
+
+            z-index: 99999;
+
+        }
+
+        .success-modal.active {
+
+            visibility: visible;
+
+            opacity: 1;
+
+        }
+
+        .success-box {
+
+            width: 450px;
+
+            max-width: 95%;
+
+            background: #fff;
+
+            padding: 40px;
+
+            border-radius: 25px;
+
+            text-align: center;
+
+            animation: zoom .4s;
+
+            box-shadow: 0 20px 50px rgba(0, 0, 0, .25);
+
+        }
+
+        .success-icon {
+
+            font-size: 75px;
+
+            color: #16a34a;
+
+            margin-bottom: 20px;
+
+        }
+
+        .success-box h2 {
+
+            color: #145A86;
+
+            margin-bottom: 15px;
+
+        }
+
+        .success-box p {
+
+            line-height: 28px;
+
+            color: #555;
+
+        }
+
+        .success-box .info {
+
+            background: #f5f7fb;
+
+            padding: 20px;
+
+            margin: 25px 0;
+
+            border-radius: 15px;
+
+            text-align: left;
+
+        }
+
+        .success-box .info p {
+
+            margin: 8px 0;
+
+        }
+
+        .success-box button {
+
+            width: 100%;
+
+            padding: 15px;
+
+            border: none;
+
+            border-radius: 40px;
+
+            background: #145A86;
+
+            color: #fff;
+
+            font-size: 17px;
+
+            cursor: pointer;
+
+            transition: .3s;
+
+        }
+
+        .success-box button:hover {
+
+            background: #0d4466;
+
+            transform: translateY(-3px);
+
+        }
+
+        @keyframes zoom {
+
+            from {
+
+                transform: scale(.7);
+
+                opacity: 0;
+
+            }
+
+            to {
+
+                transform: scale(1);
+
+                opacity: 1;
+
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--====================================
+                HEADER
+    =====================================-->
+
+    <header>
+
+        <div class="logo">
+
+            <img src="images/logo.png" alt="BMJ SERVICE">
+
+            <h2>
+
+                BMJ <span>SERVICE</span>
+
+            </h2>
+
+        </div>
+
+
+
+        <div class="student-profile">
+
+            <img id="photoUtilisateur" src="images/user.png">
+
+            <div>
+
+                <h4 id="nomUtilisateur">
+
+                    Apprenant
+
+                </h4>
+
+                <small>
+
+                    Paiement sécurisé
+
+                </small>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!--====================================
+                HERO
+    =====================================-->
+
+    <section class="payment-hero">
+
+        <div class="hero-content">
+
+            <span>
+
+                🔒 PAIEMENT 100% SÉCURISÉ
+
+            </span>
+
+            <h1>
+
+                Finalisez votre abonnement Premium
+
+            </h1>
+
+            <p>
+
+                Effectuez votre paiement via VisaPay afin d'activer votre abonnement
+                Premium BMJ SERVICE et débloquer votre certificat officiel.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!--====================================
+            INFORMATIONS COMMANDE
+    =====================================-->
+
+    <section class="payment-container">
+
+        <div class="payment-left">
+
+            <h2>
+
+                Résumé de votre commande
+
+            </h2>
+
+
+
+            <div class="resume-card">
+
+                <div class="ligne">
+
+                    <span>Nom</span>
+
+                    <strong id="resumeNom">
+
+                        -
+
+                    </strong>
+
+                </div>
+
+
+
+                <div class="ligne">
+
+                    <span>Offre</span>
+
+                    <strong id="resumeOffre">
+
+                        -
+
+                    </strong>
+
+                </div>
+
+
+
+                <div class="ligne">
+
+                    <span>Montant</span>
+
+                    <strong id="resumeMontant">
+
+                        -
+
+                    </strong>
+
+                </div>
+
+
+
+                <div class="ligne">
+
+                    <span>Devise</span>
+
+                    <strong>
+
+                        USD
+
+                    </strong>
+
+                </div>
+
+
+
+                <div class="ligne">
+
+                    <span>Méthode</span>
+
+                    <strong>
+
+                        VisaPay
+
+                    </strong>
+
+                </div>
+
+
+
+                <div class="ligne total">
+
+                    <span>Total à payer</span>
+
+                    <strong id="resumeTotal">
+
+                        -
+
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!--====================================
+                PAIEMENT
+        =====================================-->
+
+        <div class="payment-right">
+
+            <h2>
+
+                Paiement VisaPay
+
+            </h2>
+
+
+
+            <div class="payment-card">
+
+                <img src="images/visapay.png" alt="VisaPay">
+
+
+
+                <p>
+
+                    Envoyez le montant indiqué au numéro VisaPay suivant :
+
+                </p>
+
+
+
+                <div class="numero">
+
+                    +243 XXX XXX XXX
+
+                </div>
+
+
+
+                <p>
+
+                    Référence de paiement
+
+                </p>
+
+
+
+                <div class="reference">
+
+                    <strong id="referencePaiement">
+
+                        -
+
+                    </strong>
+
+                </div>
+
+
+
+                <label>
+
+                    Numéro utilisé pour le paiement
+
+                </label>
+
+
+
+                <input type="text" id="numeroClient" placeholder="+243xxxxxxxxx">
+
+
+
+                <label>
+
+                    Référence de transaction VisaPay
+
+                </label>
+
+
+
+                <input type="text" id="transaction" placeholder="Ex : VP45896213">
+
+
+
+                <button onclick="validerPaiement()">
+
+                    Confirmer le paiement
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!--====================================
+                ETAPES
+    =====================================-->
+
+    <section class="payment-steps">
+
+        <h2>
+
+            Comment effectuer votre paiement ?
+
+        </h2>
+
+
+
+        <div class="step">
+
+            <div class="step-number">
+
+                1
+
+            </div>
+
+            <div>
+
+                <h3>
+
+                    Ouvrez votre application VisaPay
+
+                </h3>
+
+                <p>
+
+                    Connectez-vous à votre compte VisaPay.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="step">
+
+            <div class="step-number">
+
+                2
+
+            </div>
+
+            <div>
+
+                <h3>
+
+                    Envoyez le montant indiqué
+
+                </h3>
+
+                <p>
+
+                    Utilisez le numéro affiché ci-dessus.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="step">
+
+            <div class="step-number">
+
+                3
+
+            </div>
+
+            <div>
+
+                <h3>
+
+                    Récupérez votre référence
+
+                </h3>
+
+                <p>
+
+                    Après le paiement, VisaPay fournit une référence unique.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="step">
+
+            <div class="step-number">
+
+                4
+
+            </div>
+
+            <div>
+
+                <h3>
+
+                    Confirmez votre paiement
+
+                </h3>
+
+                <p>
+
+                    Entrez votre numéro et la référence puis cliquez sur
+                    <strong>Confirmer le paiement</strong>.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!--====================================
+            SECURITE
+    =====================================-->
+
+    <section class="security">
+
+        <div class="security-card">
+
+            <i class="fa-solid fa-lock"></i>
+
+            <h3>
+
+                Paiement sécurisé
+
+            </h3>
+
+            <p>
+
+                Toutes les transactions sont protégées.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="security-card">
+
+            <i class="fa-solid fa-shield-halved"></i>
+
+            <h3>
+
+                Protection des données
+
+            </h3>
+
+            <p>
+
+                Vos informations restent confidentielles.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="security-card">
+
+            <i class="fa-solid fa-certificate"></i>
+
+            <h3>
+
+                Activation Premium
+
+            </h3>
+
+            <p>
+
+                Votre certificat sera débloqué après validation.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!--====================================
+                FOOTER
+    =====================================-->
+
+    <footer>
+
+        <h3>
+
+            BMJ SERVICE
+
+        </h3>
+
+        <p>
+
+            Apprendre • Se certifier • Réussir
+
+        </p>
+
+    </footer>
+    <script>
+
+        //=====================================================
+        // BMJ SERVICE
+        // PAIEMENT VISAPAY
+        //=====================================================
+
+
+        //=====================================================
+        // CHARGEMENT DE LA PAGE
+        //=====================================================
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+            //---------------------------------------
+            // UTILISATEUR CONNECTÉ
+            //---------------------------------------
+
+            let utilisateur = JSON.parse(
+
+                localStorage.getItem("bmj_current_user")
+
+            );
+
+            if (!utilisateur) {
+
+                alert("Veuillez vous connecter.");
+
+                window.location.href = "connexion.html";
+
+                return;
+
+            }
+
+
+            //---------------------------------------
+            // COMMANDE
+            //---------------------------------------
+
+            let paiement = JSON.parse(
+
+                localStorage.getItem("bmj_payment")
+
+            );
+
+            if (!paiement) {
+
+                alert("Aucune commande trouvée.");
+
+                window.location.href =
+                    "certificat_marketing.html";
+
+                return;
+
+            }
+
+
+            //---------------------------------------
+            // PHOTO
+            //---------------------------------------
+
+            let photo = document.getElementById("photoUtilisateur");
+
+            if (photo) {
+
+                if (utilisateur.photo != "") {
+
+                    photo.src = utilisateur.photo;
+
+                }
+
+            }
+
+
+            //---------------------------------------
+            // NOM
+            //---------------------------------------
+
+            let nom = document.getElementById("nomUtilisateur");
+
+            if (nom) {
+
+                nom.innerHTML = utilisateur.nom;
+
+            }
+
+
+            //---------------------------------------
+            // DOMAINE
+            //---------------------------------------
+
+            let domaine = document.getElementById("domaineUtilisateur");
+
+            if (domaine) {
+
+                domaine.innerHTML = utilisateur.domaine;
+
+            }
+
+
+            //---------------------------------------
+            // RÉSUMÉ
+            //---------------------------------------
+
+            document.getElementById("resumeNom").innerHTML =
+                utilisateur.nom;
+
+            document.getElementById("resumeOffre").innerHTML =
+                paiement.offre;
+
+            document.getElementById("resumeMontant").innerHTML =
+                paiement.montant + " USD";
+
+            document.getElementById("resumeTotal").innerHTML =
+                paiement.montant + " USD";
+
+            document.getElementById("referencePaiement").innerHTML =
+                paiement.idPaiement;
+
+
+            //---------------------------------------
+            // SI UNE DEMANDE EXISTE DEJA
+            //---------------------------------------
+
+            let demandes = JSON.parse(
+
+                localStorage.getItem("bmj_demandes_paiement")
+
+            ) || [];
+
+
+            let existe = demandes.find(
+
+                d =>
+
+                    d.idUtilisateur == utilisateur.id &&
+
+                    d.offre == paiement.offre &&
+
+                    d.statut == "En attente"
+
+            );
+
+
+            if (existe) {
+
+                let btn = document.getElementById("btnPaiement");
+
+                if (btn) {
+
+                    btn.disabled = true;
+
+                    btn.innerHTML =
+                        "Demande déjà envoyée";
+
+                }
+
+            }
+
+        });
+        //=====================================================
+        // ENVOYER LA DEMANDE DE PAIEMENT
+        //=====================================================
+
+        function validerPaiement() {
+
+            //-----------------------------------
+            // CHAMPS
+            //-----------------------------------
+
+            let numero = document.getElementById("numeroClient").value.trim();
+
+            let transaction = document.getElementById("transaction").value.trim();
+
+            if (numero == "" || transaction == "") {
+
+                alert("Veuillez remplir tous les champs.");
+
+                return;
+
+            }
+
+
+            //-----------------------------------
+            // UTILISATEUR
+            //-----------------------------------
+
+            let utilisateur = JSON.parse(
+
+                localStorage.getItem("bmj_current_user")
+
+            );
+
+            //-----------------------------------
+            // COMMANDE
+            //-----------------------------------
+
+            let paiement = JSON.parse(
+
+                localStorage.getItem("bmj_payment")
+
+            );
+
+            if (!utilisateur || !paiement) {
+
+                alert("Impossible de retrouver la commande.");
+
+                return;
+
+            }
+
+
+            //-----------------------------------
+            // DEMANDES
+            //-----------------------------------
+
+            let demandes = JSON.parse(
+
+                localStorage.getItem("bmj_demandes_paiement")
+
+            ) || [];
+
+
+            //-----------------------------------
+            // EVITER LES DOUBLONS
+            //-----------------------------------
+
+            let existe = demandes.find(
+
+                demande =>
+
+                    demande.idUtilisateur == utilisateur.id &&
+
+                    demande.offre == paiement.offre &&
+
+                    demande.statut == "En attente"
+
+            );
+
+            if (existe) {
+
+                alert(
+
+                    "Une demande est déjà en attente de validation."
+
+                );
+
+                return;
+
+            }
+
+
+            //-----------------------------------
+            // CREATION DEMANDE
+            //-----------------------------------
+
+            let demande = {
+
+                idDemande: "DEM" + Date.now(),
+
+                idUtilisateur: utilisateur.id,
+
+                nom: utilisateur.nom,
+
+                email: utilisateur.email,
+
+                telephone: utilisateur.telephone,
+
+                domaine: utilisateur.domaine,
+
+                niveau: utilisateur.niveau,
+
+                photo: utilisateur.photo,
+
+                offre: paiement.offre,
+
+                montant: paiement.montant,
+
+                numeroVisaPay: numero,
+
+                referenceTransaction: transaction,
+
+                date: new Date().toLocaleString(),
+
+                statut: "En attente",
+
+                premium: false,
+
+                certificat: false
+
+            };
+
+
+            //-----------------------------------
+            // AJOUT DEMANDE
+            //-----------------------------------
+
+            demandes.push(demande);
+
+            localStorage.setItem(
+
+                "bmj_demandes_paiement",
+
+                JSON.stringify(demandes)
+
+            );
+
+
+            //-----------------------------------
+            // HISTORIQUE
+            //-----------------------------------
+
+            let historique = JSON.parse(
+
+                localStorage.getItem("bmj_payments")
+
+            ) || [];
+
+
+            historique.push({
+
+                idPaiement: paiement.idPaiement,
+
+                idUtilisateur: utilisateur.id,
+
+                nom: utilisateur.nom,
+
+                offre: paiement.offre,
+
+                montant: paiement.montant,
+
+                numeroVisaPay: numero,
+
+                transaction: transaction,
+
+                date: new Date().toLocaleString(),
+
+                statut: "En attente"
+
+            });
+
+
+            localStorage.setItem(
+
+                "bmj_payments",
+
+                JSON.stringify(historique)
+
+            );
+
+
+            //-----------------------------------
+            // MISE A JOUR UTILISATEUR
+            //-----------------------------------
+
+            utilisateur.demandePaiement = true;
+
+            utilisateur.statutPaiement = "En attente";
+
+            utilisateur.dateDemande = new Date().toLocaleString();
+
+
+            //-----------------------------------
+            // SESSION
+            //-----------------------------------
+
+            localStorage.setItem(
+
+                "bmj_current_user",
+
+                JSON.stringify(utilisateur)
+
+            );
+
+
+            //-----------------------------------
+            // BASE UTILISATEURS
+            //-----------------------------------
+
+            let utilisateurs = JSON.parse(
+
+                localStorage.getItem("bmj_users")
+
+            ) || [];
+
+
+            let index = utilisateurs.findIndex(
+
+                u => u.id == utilisateur.id
+
+            );
+
+            if (index != -1) {
+
+                utilisateurs[index] = utilisateur;
+
+            }
+
+
+            localStorage.setItem(
+
+                "bmj_users",
+
+                JSON.stringify(utilisateurs)
+
+            );
+
+
+            //-----------------------------------
+            // SUPPRIMER LA COMMANDE
+            //-----------------------------------
+
+            localStorage.removeItem("bmj_payment");
+
+
+            //-----------------------------------
+            // OUVRIR LA FENETRE DE SUCCES
+            //-----------------------------------
+
+            let modal = document.getElementById("successModal");
+
+            if (modal) {
+
+                modal.classList.add("active");
+
+            }
+
+        }//=====================================================
+        // RETOUR AU TABLEAU DE BORD
+        //=====================================================
+
+        function retourDashboard() {
+
+            window.location.href = "dashboard.html";
+
+        }
+
+
+
+        //=====================================================
+        // FERMER LA FENÊTRE
+        //=====================================================
+
+        function fermerMessage() {
+
+            let modal = document.getElementById("successModal");
+
+            if (modal) {
+
+                modal.classList.remove("active");
+
+            }
+
+        }
+
+
+
+        //=====================================================
+        // ACTUALISER LE STATUT DE LA DEMANDE
+        //=====================================================
+
+        function verifierStatutPaiement() {
+
+            let utilisateur = JSON.parse(
+
+                localStorage.getItem("bmj_current_user")
+
+            );
+
+            if (!utilisateur) {
+
+                return;
+
+            }
+
+
+            let demandes = JSON.parse(
+
+                localStorage.getItem("bmj_demandes_paiement")
+
+            ) || [];
+
+
+            let demande = demandes.find(
+
+                d => d.idUtilisateur == utilisateur.id
+
+            );
+
+
+            if (!demande) {
+
+                return;
+
+            }
+
+
+            //--------------------------------------
+            // SI LA DEMANDE EST EN ATTENTE
+            //--------------------------------------
+
+            if (demande.statut == "En attente") {
+
+                let btn = document.getElementById("btnPaiement");
+
+                if (btn) {
+
+                    btn.disabled = true;
+
+                    btn.innerHTML = "⏳ Validation en cours";
+
+                }
+
+            }
+
+
+            //--------------------------------------
+            // SI LA DEMANDE EST VALIDÉE
+            //--------------------------------------
+
+            if (demande.statut == "Validé") {
+
+                let btn = document.getElementById("btnPaiement");
+
+                if (btn) {
+
+                    btn.disabled = true;
+
+                    btn.innerHTML = "✅ Premium activé";
+
+                }
+
+            }
+
+
+            //--------------------------------------
+            // SI REFUSÉ
+            //--------------------------------------
+
+            if (demande.statut == "Refusé") {
+
+                let btn = document.getElementById("btnPaiement");
+
+                if (btn) {
+
+                    btn.disabled = false;
+
+                    btn.innerHTML = "Réessayer le paiement";
+
+                }
+
+            }
+
+        }
+
+
+
+        //=====================================================
+        // APPELER LA VÉRIFICATION
+        //=====================================================
+
+        document.addEventListener(
+
+            "DOMContentLoaded",
+
+            verifierStatutPaiement
+
+        );
+
+    </script>
+    <div id="successModal" class="success-modal">
+
+        <div class="success-box">
+
+            <div class="success-icon">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+
+            <h2>Demande envoyée avec succès</h2>
+
+            <p>
+
+                Votre demande de paiement a été transmise à
+                l'administration BMJ SERVICE.
+
+            </p>
+
+            <div class="info">
+
+                <p>✔ Votre demande est enregistrée.</p>
+
+                <p>✔ L'administrateur vérifiera votre paiement.</p>
+
+                <p>✔ Votre abonnement Premium sera activé après validation.</p>
+
+            </div>
+
+            <button onclick="retourDashboard()">
+
+                Retour au tableau de bord
+
+            </button>
+
+        </div>
+
+    </div>
+</body>
+
+</html>

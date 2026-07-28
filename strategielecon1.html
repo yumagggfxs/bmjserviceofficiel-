@@ -1,0 +1,1890 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*==================================================
+        BMJ SERVICE - STRATEGIE MARKETING
+        LEÇON 1
+==================================================*/
+
+
+        * {
+
+            margin: 0;
+
+            padding: 0;
+
+            box-sizing: border-box;
+
+            font-family: 'Poppins', Arial, sans-serif;
+
+        }
+
+
+
+        html {
+
+            scroll-behavior: smooth;
+
+        }
+
+
+
+        body {
+
+            background: #f4f7fb;
+
+            color: #333;
+
+            line-height: 1.8;
+
+        }
+
+
+
+
+
+
+        /*=====================================
+            HEADER
+======================================*/
+
+
+        header {
+
+            position: fixed;
+
+            top: 0;
+
+            left: 0;
+
+            width: 100%;
+
+            height: 75px;
+
+            background: #fff;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            padding: 0 40px;
+
+            box-shadow: 0 5px 20px rgba(0, 0, 0, .08);
+
+            z-index: 1000;
+
+        }
+
+
+
+        .logo {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+        }
+
+
+
+        .logo img {
+
+            width: 50px;
+
+            height: 50px;
+
+            border-radius: 50%;
+
+        }
+
+
+
+        .logo h2 {
+
+            color: #145A86;
+
+        }
+
+
+
+        .logo span {
+
+            color: #D4AF37;
+
+        }
+
+
+
+        .student-profile {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+        }
+
+
+
+        .student-profile img {
+
+            width: 48px;
+
+            height: 48px;
+
+            border-radius: 50%;
+
+            object-fit: cover;
+
+            border: 3px solid #D4AF37;
+
+        }
+
+
+
+        .student-profile h4 {
+
+            color: #145A86;
+
+        }
+
+
+
+        .student-profile small {
+
+            color: #777;
+
+        }
+
+
+
+
+
+
+
+
+        /*=====================================
+            HERO
+======================================*/
+
+
+        .lesson-hero {
+
+            margin-top: 75px;
+
+            height: 420px;
+
+            background:
+
+                linear-gradient(rgba(20, 90, 134, .82),
+                    rgba(0, 0, 0, .75)),
+
+                url(images/strategie-banner.jpg);
+
+
+            background-size: cover;
+
+            background-position: center;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+        }
+
+
+
+        .overlay {
+
+            width: 90%;
+
+            max-width: 900px;
+
+            color: white;
+
+            text-align: center;
+
+        }
+
+
+
+        .overlay h1 {
+
+            font-size: 52px;
+
+            margin-bottom: 20px;
+
+        }
+
+
+
+        .overlay p {
+
+            font-size: 21px;
+
+        }
+
+
+
+
+
+
+
+        /*=====================================
+            SECTIONS
+======================================*/
+
+
+        .objectif,
+        .cours,
+        .important,
+        .exercice {
+
+
+            width: 90%;
+
+            max-width: 1100px;
+
+            margin: 40px auto;
+
+            background: #fff;
+
+            border-radius: 20px;
+
+            padding: 35px;
+
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+
+        }
+
+
+
+        .objectif h2,
+        .cours h2,
+        .important h2,
+        .exercice h2 {
+
+
+            color: #145A86;
+
+            margin-bottom: 20px;
+
+            border-left: 6px solid #D4AF37;
+
+            padding-left: 15px;
+
+        }
+
+
+
+        .cours p {
+
+            margin-bottom: 18px;
+
+            text-align: justify;
+
+        }
+
+
+
+        .objectif ul,
+        .cours ul {
+
+
+            margin-left: 25px;
+
+            margin-top: 15px;
+
+        }
+
+
+
+        .objectif li,
+        .cours li {
+
+            margin-bottom: 10px;
+
+        }
+
+
+
+
+
+        .cours h3 {
+
+            color: #145A86;
+
+            margin-top: 25px;
+
+            margin-bottom: 15px;
+
+        }
+
+
+
+
+
+
+
+
+        /*=====================================
+            EXEMPLE
+======================================*/
+
+
+        .exemple {
+
+
+            background: #f8fbff;
+
+            border-left: 6px solid #145A86;
+
+            padding: 25px;
+
+            border-radius: 12px;
+
+            margin-top: 25px;
+
+        }
+
+
+
+        .exemple h3 {
+
+            color: #145A86;
+
+            margin-bottom: 15px;
+
+        }
+
+
+
+
+
+
+
+
+        /*=====================================
+        VIDEO
+======================================*/
+
+
+        .video-cours {
+
+
+            margin-top: 30px;
+
+            background: #f8fbff;
+
+            padding: 20px;
+
+            border-radius: 15px;
+
+        }
+
+
+
+        .video-cours h3 {
+
+            color: #145A86;
+
+            margin-bottom: 20px;
+
+        }
+
+
+
+        .video-cours iframe {
+
+            border-radius: 15px;
+
+        }
+
+
+
+
+
+
+
+
+        /*=====================================
+        POINTS IMPORTANTS
+======================================*/
+
+
+        .important {
+
+            background: #145A86;
+
+            color: white;
+
+        }
+
+
+
+        .important h2 {
+
+            color: white;
+
+            border-left-color: #D4AF37;
+
+        }
+
+
+
+        .important p {
+
+            margin-bottom: 15px;
+
+            font-size: 18px;
+
+        }
+
+
+
+
+
+
+
+        /*=====================================
+            EXERCICE
+======================================*/
+
+
+        .exercice ol {
+
+            margin: 20px 0 20px 25px;
+
+        }
+
+
+
+        .exercice li {
+
+            margin-bottom: 12px;
+
+        }
+
+
+
+        textarea {
+
+
+            width: 100%;
+
+            height: 180px;
+
+            border: 2px solid #ddd;
+
+            border-radius: 12px;
+
+            padding: 15px;
+
+            resize: vertical;
+
+            font-size: 16px;
+
+            margin-top: 20px;
+
+            outline: none;
+
+        }
+
+
+
+        textarea:focus {
+
+            border-color: #145A86;
+
+        }
+
+
+
+
+
+
+
+
+        /*=====================================
+            NAVIGATION
+======================================*/
+
+
+        .navigation {
+
+
+            width: 90%;
+
+            max-width: 1100px;
+
+            margin: 40px auto 70px;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            gap: 20px;
+
+        }
+
+
+
+        .navigation button {
+
+
+            flex: 1;
+
+            padding: 18px;
+
+            border: none;
+
+            border-radius: 12px;
+
+            font-size: 17px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            transition: .35s;
+
+        }
+
+
+
+        .navigation button:first-child {
+
+
+            background: #145A86;
+
+            color: white;
+
+        }
+
+
+
+        .navigation button:last-child {
+
+
+            background: #D4AF37;
+
+            color: #145A86;
+
+        }
+
+
+
+        .navigation button:hover {
+
+
+            transform: translateY(-5px);
+
+            box-shadow: 0 12px 25px rgba(0, 0, 0, .15);
+
+        }
+
+
+
+
+
+
+
+
+        /*=====================================
+            FOOTER
+======================================*/
+
+
+        footer {
+
+
+            background: #145A86;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 35px;
+
+        }
+
+
+
+        footer h3 {
+
+            margin-bottom: 10px;
+
+        }
+
+
+
+
+
+
+
+
+        /*=====================================
+            RESPONSIVE
+======================================*/
+
+
+        @media(max-width:768px) {
+
+
+            header {
+
+                padding: 0 15px;
+
+            }
+
+
+
+            .student-profile small {
+
+                display: none;
+
+            }
+
+
+
+            .overlay h1 {
+
+                font-size: 34px;
+
+            }
+
+
+
+            .overlay p {
+
+                font-size: 17px;
+
+            }
+
+
+
+            .objectif,
+            .cours,
+            .important,
+            .exercice {
+
+                padding: 22px;
+
+            }
+
+
+
+            .navigation {
+
+                flex-direction: column;
+
+            }
+
+
+
+        }
+
+
+
+        @media(max-width:500px) {
+
+
+            .logo h2 {
+
+                font-size: 20px;
+
+            }
+
+
+
+            .student-profile h4 {
+
+                font-size: 15px;
+
+            }
+
+
+
+            .overlay h1 {
+
+                font-size: 28px;
+
+            }
+
+
+
+            .overlay p {
+
+                font-size: 15px;
+
+            }
+
+
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--====================================
+                HEADER
+    =====================================-->
+
+    <header>
+
+        <div class="logo">
+
+            <img src="images/logo.png">
+
+            <h2>
+
+                BMJ <span>SERVICE</span>
+
+            </h2>
+
+        </div>
+
+        <div class="student-profile">
+
+            <img id="photoUtilisateur" src="images/user.png">
+
+            <div>
+
+                <h4 id="nomUtilisateur">
+
+                    Apprenant
+
+                </h4>
+
+                <small>
+
+                    Marketing Digital
+
+                </small>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+
+
+    <!--====================================
+                HERO
+    =====================================-->
+
+    <section class="lesson-hero">
+
+        <div class="overlay">
+
+            <h1>
+
+                Leçon 1 : Comprendre la stratégie marketing
+
+            </h1>
+
+            <p>
+
+                Découvrez ce qu'est une stratégie marketing,
+                pourquoi elle est essentielle au développement
+                d'une entreprise et comment elle permet
+                d'atteindre efficacement les objectifs
+                commerciaux.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+
+
+    <!--====================================
+                OBJECTIFS
+    =====================================-->
+
+    <section class="objectif">
+
+        <h2>
+
+            Objectifs de cette leçon
+
+        </h2>
+
+        <ul>
+
+            <li>
+
+                Comprendre la définition d'une stratégie marketing.
+
+            </li>
+
+            <li>
+
+                Découvrir les objectifs d'une stratégie marketing.
+
+            </li>
+
+            <li>
+
+                Identifier les éléments qui composent une stratégie.
+
+            </li>
+
+            <li>
+
+                Comprendre pourquoi chaque entreprise doit élaborer une stratégie marketing.
+
+            </li>
+
+            <li>
+
+                Découvrir les différentes étapes de sa mise en œuvre.
+
+            </li>
+
+        </ul>
+
+    </section>
+
+
+
+
+
+    <!--====================================
+                COURS 1
+    =====================================-->
+
+    <section class="cours">
+
+        <h2>
+
+            1. Qu'est-ce qu'une stratégie marketing ?
+
+        </h2>
+
+        <p>
+
+            La stratégie marketing est l'ensemble des décisions et des actions
+            qu'une entreprise met en place afin d'atteindre ses objectifs
+            commerciaux. Elle permet de déterminer comment attirer de nouveaux
+            clients, satisfaire leurs besoins, fidéliser les consommateurs
+            existants et se différencier efficacement de la concurrence.
+
+        </p>
+
+        <p>
+
+            Une stratégie marketing ne consiste pas uniquement à faire de la
+            publicité. Elle débute par une analyse approfondie du marché,
+            l'identification des besoins des consommateurs, l'étude des
+            concurrents ainsi que la définition des objectifs que l'entreprise
+            souhaite atteindre.
+
+        </p>
+
+        <p>
+
+            Grâce à une stratégie bien construite, une entreprise sait
+            précisément quels produits proposer, à quels clients, à quel prix,
+            par quels canaux de distribution et avec quelles méthodes de
+            communication.
+
+        </p>
+
+        <p>
+
+            Aujourd'hui, toutes les entreprises, qu'elles soient petites ou
+            grandes, utilisent une stratégie marketing afin d'améliorer leurs
+            performances, développer leurs ventes et assurer leur croissance sur
+            le long terme.
+
+        </p>
+
+        <h3>
+
+            Les principaux objectifs
+
+        </h3>
+
+        <ul>
+
+            <li>Développer les ventes.</li>
+
+            <li>Attirer de nouveaux clients.</li>
+
+            <li>Fidéliser les clients existants.</li>
+
+            <li>Améliorer l'image de marque.</li>
+
+            <li>Se différencier des concurrents.</li>
+
+            <li>Augmenter la rentabilité.</li>
+
+            <li>Assurer la croissance de l'entreprise.</li>
+
+        </ul>
+
+        <h3>
+
+            Exemple pratique
+
+        </h3>
+
+        <p>
+
+            Une entreprise qui fabrique des chaussures souhaite augmenter ses
+            ventes auprès des jeunes. Après une étude de marché, elle décide de
+            créer une nouvelle gamme plus moderne, de communiquer sur TikTok et
+            Instagram, puis de proposer des promotions pendant la rentrée
+            scolaire. Toutes ces décisions constituent sa stratégie marketing.
+
+        </p>
+
+        <div class="video-cours">
+
+            <h3>
+
+                📹 Vidéo explicative
+
+            </h3>
+
+            <iframe width="100%" height="400" src="https://www.youtube.com/embed/4M6N4d4l8kM"
+                title="Stratégie marketing" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+
+            </iframe>
+
+        </div>
+
+    </section>
+    <!--====================================
+                COURS 2
+    =====================================-->
+
+    <section class="cours">
+
+        <h2>
+
+            2. Pourquoi une stratégie marketing est-elle importante ?
+
+        </h2>
+
+        <p>
+
+            Une entreprise ne peut pas réussir durablement sans une bonne
+            organisation de ses actions commerciales. La stratégie marketing
+            permet de définir une direction claire et d'éviter les décisions
+            prises au hasard.
+
+        </p>
+
+        <p>
+
+            Grâce à cette stratégie, l'entreprise connaît son marché,
+            identifie ses clients potentiels, comprend leurs besoins
+            et choisit les meilleures méthodes pour leur proposer
+            ses produits ou ses services.
+
+        </p>
+
+        <p>
+
+            Une stratégie marketing permet également d'utiliser
+            efficacement les ressources financières de l'entreprise.
+            Au lieu de faire de la publicité partout, elle cible les
+            personnes réellement intéressées par les produits proposés.
+
+        </p>
+
+        <p>
+
+            Lorsqu'une entreprise adapte sa stratégie aux attentes
+            des consommateurs, elle améliore son image, augmente
+            ses ventes et développe une relation durable avec ses clients.
+
+        </p>
+
+        <h3>
+
+            Les avantages d'une stratégie marketing
+
+        </h3>
+
+        <ul>
+
+            <li>Définir des objectifs précis.</li>
+
+            <li>Mieux connaître les clients.</li>
+
+            <li>Identifier les opportunités du marché.</li>
+
+            <li>Se différencier de la concurrence.</li>
+
+            <li>Augmenter les ventes.</li>
+
+            <li>Améliorer la satisfaction des clients.</li>
+
+            <li>Renforcer l'image de marque.</li>
+
+            <li>Développer durablement l'entreprise.</li>
+
+        </ul>
+
+        <h3>
+
+            Exemple
+
+        </h3>
+
+        <p>
+
+            Deux restaurants proposent les mêmes repas.
+            Le premier publie régulièrement ses menus sur Facebook,
+            répond rapidement aux clients et propose des promotions.
+            Le second ne fait aucune publicité.
+
+            Après quelques mois, le premier attire beaucoup plus
+            de clients grâce à sa stratégie marketing.
+
+        </p>
+
+        <div class="video-cours">
+
+            <h3>
+
+                📹 Vidéo explicative
+
+            </h3>
+
+            <iframe width="100%" height="400" src="https://www.youtube.com/embed/yzQ8k3tLQ9A"
+                title="Pourquoi la stratégie marketing" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+
+            </iframe>
+
+        </div>
+
+    </section>
+    <!--====================================
+                COURS 4
+    =====================================-->
+
+    <section class="cours">
+
+        <h2>
+
+            4. Les étapes de la mise en place d'une stratégie marketing
+
+        </h2>
+
+        <p>
+
+            La réussite d'une stratégie marketing ne dépend pas du hasard.
+            Elle repose sur plusieurs étapes qui permettent à une entreprise
+            de prendre les bonnes décisions et d'atteindre efficacement ses
+            objectifs commerciaux.
+
+        </p>
+
+        <p>
+
+            Chaque étape est importante. Si l'une d'elles est négligée,
+            l'entreprise risque de proposer des produits qui ne répondent pas
+            aux attentes du marché ou de lancer des campagnes publicitaires
+            inefficaces.
+
+        </p>
+
+        <h3>
+
+            Les principales étapes
+
+        </h3>
+
+        <ul>
+
+            <li><strong>Étudier le marché :</strong> analyser les besoins des consommateurs, les tendances et les
+                concurrents.</li>
+
+            <li><strong>Définir les objectifs :</strong> augmenter les ventes, attirer de nouveaux clients ou améliorer
+                la notoriété.</li>
+
+            <li><strong>Identifier la clientèle cible :</strong> déterminer les personnes les plus susceptibles
+                d'acheter le produit ou le service.</li>
+
+            <li><strong>Choisir le positionnement :</strong> définir l'image que l'entreprise souhaite donner à son
+                produit.</li>
+
+            <li><strong>Élaborer un plan d'action :</strong> préparer les actions de communication, les promotions et
+                les canaux de distribution.</li>
+
+            <li><strong>Mettre en œuvre la stratégie :</strong> lancer les différentes actions prévues.</li>
+
+            <li><strong>Mesurer les résultats :</strong> analyser les performances afin d'apporter des améliorations si
+                nécessaire.</li>
+
+        </ul>
+
+        <h3>
+
+            Exemple pratique
+
+        </h3>
+
+        <p>
+
+            Une entreprise souhaite commercialiser une nouvelle boisson
+            énergétique. Avant son lancement, elle réalise une étude de
+            marché, identifie les jeunes sportifs comme clientèle cible,
+            fixe un prix adapté, prépare une campagne publicitaire sur les
+            réseaux sociaux et organise une distribution dans les salles de
+            sport. Après quelques semaines, elle analyse les ventes afin de
+            vérifier si les objectifs sont atteints et ajuste sa stratégie
+            si nécessaire.
+
+        </p>
+
+        <h3>
+
+            Pourquoi suivre ces étapes ?
+
+        </h3>
+
+        <p>
+
+            Ces différentes étapes permettent de réduire les risques,
+            d'utiliser efficacement le budget marketing et d'augmenter les
+            chances de réussite d'un produit ou d'un service. Une stratégie
+            bien préparée permet également d'améliorer la satisfaction des
+            clients et de renforcer la compétitivité de l'entreprise.
+
+        </p>
+
+        <div class="video-cours">
+
+            <h3>
+
+                📹 Vidéo explicative
+
+            </h3>
+
+            <iframe width="100%" height="400" src="https://www.youtube.com/embed/0o7nC4i8QK4"
+                title="Les étapes d'une stratégie marketing" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+
+            </iframe>
+
+        </div>
+
+    </section>
+    <!--====================================
+                COURS 5
+    =====================================-->
+
+    <section class="cours">
+
+        <h2>
+
+            5. Les qualités d'un bon responsable de la stratégie marketing
+
+        </h2>
+
+        <p>
+
+            Le responsable de la stratégie marketing est la personne qui
+            prépare, organise et supervise toutes les actions marketing de
+            l'entreprise. Il analyse le marché, prend des décisions
+            importantes et veille à ce que les objectifs fixés soient atteints.
+
+        </p>
+
+        <p>
+
+            Pour élaborer une stratégie efficace, il doit posséder plusieurs
+            qualités professionnelles et personnelles. Ces qualités lui
+            permettent de comprendre les consommateurs, de suivre les
+            évolutions du marché et de proposer des solutions adaptées.
+
+        </p>
+
+        <h3>
+
+            Les principales qualités
+
+        </h3>
+
+        <ul>
+
+            <li><strong>Avoir une vision stratégique :</strong> savoir planifier les actions à court, moyen et long
+                terme.</li>
+
+            <li><strong>Être à l'écoute des clients :</strong> comprendre leurs besoins et leurs attentes.</li>
+
+            <li><strong>Analyser les informations :</strong> interpréter les études de marché et les statistiques.</li>
+
+            <li><strong>Être créatif :</strong> proposer des idées innovantes pour se démarquer de la concurrence.</li>
+
+            <li><strong>Maîtriser la communication :</strong> transmettre efficacement les messages de l'entreprise.
+            </li>
+
+            <li><strong>Prendre de bonnes décisions :</strong> choisir les meilleures solutions face aux défis
+                rencontrés.</li>
+
+            <li><strong>Être organisé :</strong> gérer les campagnes marketing, les budgets et les délais.</li>
+
+            <li><strong>Savoir travailler en équipe :</strong> collaborer avec les commerciaux, designers, développeurs
+                et dirigeants.</li>
+
+            <li><strong>S'adapter aux changements :</strong> suivre l'évolution du marché et des nouvelles technologies.
+            </li>
+
+        </ul>
+
+        <h3>
+
+            Exemple
+
+        </h3>
+
+        <p>
+
+            Une entreprise constate une baisse de ses ventes. Le responsable
+            marketing analyse les résultats, interroge les clients,
+            étudie les stratégies des concurrents et décide de lancer une
+            nouvelle campagne publicitaire sur les réseaux sociaux tout en
+            améliorant le service après-vente. Quelques semaines plus tard,
+            les ventes repartent à la hausse grâce aux décisions prises.
+
+        </p>
+
+        <h3>
+
+            À retenir
+
+        </h3>
+
+        <p>
+
+            Une bonne stratégie marketing repose avant tout sur une bonne
+            préparation. Un responsable marketing compétent doit savoir
+            analyser le marché, comprendre les besoins des consommateurs,
+            planifier les actions et mesurer les résultats afin d'assurer le
+            développement durable de l'entreprise.
+
+        </p>
+
+        <div class="video-cours">
+
+            <h3>
+
+                📹 Vidéo explicative
+
+            </h3>
+
+            <iframe width="100%" height="400" src="https://www.youtube.com/embed/F4z6nq6w2jE"
+                title="Qualités d'un responsable marketing" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+
+            </iframe>
+
+        </div>
+
+    </section>
+    <!--====================================
+                À RETENIR
+    =====================================-->
+
+    <section class="important">
+
+        <h2>
+
+            📌 À retenir
+
+        </h2>
+
+
+        <p>
+
+            ✔ La stratégie marketing représente l'ensemble des décisions
+            prises par une entreprise pour atteindre ses objectifs commerciaux.
+
+        </p>
+
+
+        <p>
+
+            ✔ Elle permet de comprendre les besoins des consommateurs et
+            de proposer des produits ou services adaptés.
+
+        </p>
+
+
+        <p>
+
+            ✔ Une stratégie marketing efficace commence par une analyse du
+            marché et de la concurrence.
+
+        </p>
+
+
+        <p>
+
+            ✔ L'entreprise doit définir sa cible, son positionnement et
+            ses actions marketing avant de se lancer.
+
+        </p>
+
+
+        <p>
+
+            ✔ Une bonne stratégie permet d'attirer de nouveaux clients,
+            de fidéliser les anciens et d'améliorer les performances.
+
+        </p>
+
+
+        <p>
+
+            ✔ Les résultats doivent toujours être mesurés afin d'améliorer
+            continuellement les actions marketing.
+
+        </p>
+
+
+        <p>
+
+            ✔ Le marketing n'est pas seulement la publicité, mais une démarche
+            complète basée sur l'analyse, la planification et l'action.
+
+        </p>
+
+    </section>
+
+
+
+
+
+
+    <!--====================================
+                EXERCICE
+    =====================================-->
+
+    <section class="exercice">
+
+        <h2>
+
+            📝 Exercice pratique
+
+        </h2>
+
+
+        <p>
+
+            Vous souhaitez créer une entreprise de vente de vêtements dans
+            votre ville.
+
+        </p>
+
+
+        <p>
+
+            Avant de commencer votre activité, vous devez réfléchir à une
+            stratégie marketing adaptée.
+
+        </p>
+
+
+        <h3>
+
+            Répondez aux questions suivantes :
+
+        </h3>
+
+
+        <ol>
+
+            <li>
+
+                Quel type de vêtements souhaitez-vous vendre ?
+
+            </li>
+
+
+            <li>
+
+                Quels sont vos clients cibles ?
+
+            </li>
+
+
+            <li>
+
+                Quels besoins des consommateurs voulez-vous satisfaire ?
+
+            </li>
+
+
+            <li>
+
+                Comment allez-vous faire connaître votre entreprise ?
+
+            </li>
+
+
+            <li>
+
+                Quelles actions allez-vous utiliser pour attirer et fidéliser
+                vos clients ?
+
+            </li>
+
+
+            <li>
+
+                Quels indicateurs utiliserez-vous pour mesurer votre réussite ?
+
+            </li>
+
+        </ol>
+
+
+        <p>
+
+            Rédigez votre stratégie marketing en quelques phrases dans la
+            zone ci-dessous.
+
+        </p>
+
+
+        <textarea rows="10" placeholder="Écrivez votre réponse ici..."></textarea>
+
+
+    </section>
+
+
+
+
+
+
+
+    <!--====================================
+                NAVIGATION
+    =====================================-->
+
+    <section class="navigation">
+
+
+        <button onclick="retourCours()">
+
+            ← Retour au chapitre
+
+        </button>
+
+
+        <button onclick="terminerLecon()">
+
+            ✓ Terminer la leçon
+
+        </button>
+
+
+    </section>
+
+
+
+
+
+
+    <!--====================================
+                FOOTER
+    =====================================-->
+
+    <footer>
+
+
+        <h3>
+
+            BMJ SERVICE
+
+        </h3>
+
+
+        <p>
+
+            Plateforme professionnelle de formation en ligne.
+
+        </p>
+
+
+    </footer>
+    <script>
+
+
+        //====================================
+        // CHARGEMENT DE LA PAGE
+        //====================================
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+
+            let utilisateur = JSON.parse(
+
+                localStorage.getItem("bmj_current_user")
+
+            );
+
+
+            if (!utilisateur) {
+
+
+                window.location.href = "connexion.html";
+
+                return;
+
+
+            }
+
+
+
+
+            //=========================
+            // PROFIL UTILISATEUR
+            //=========================
+
+
+            document.getElementById("nomUtilisateur").innerHTML =
+
+                utilisateur.nom;
+
+
+
+            if (utilisateur.photo && utilisateur.photo !== "") {
+
+
+                document.getElementById("photoUtilisateur").src =
+
+                    utilisateur.photo;
+
+
+            }
+
+
+
+        });
+
+
+
+
+
+
+
+
+        //====================================
+        // RETOUR AU CHAPITRE
+        //====================================
+
+
+        function retourCours() {
+
+
+            window.location.href = "strategie.html";
+
+
+        }
+
+
+
+
+
+
+
+
+        //====================================
+        // TERMINER LA LEÇON
+        //====================================
+
+
+        function terminerLecon() {
+
+
+
+            let utilisateur = JSON.parse(
+
+                localStorage.getItem("bmj_current_user")
+
+            );
+
+
+
+            if (!utilisateur) {
+
+
+                window.location.href = "connexion.html";
+
+                return;
+
+
+            }
+
+
+
+
+            //--------------------------------
+            // PROGRESSION STRATEGIE
+            //--------------------------------
+
+
+            let progression = JSON.parse(
+
+                localStorage.getItem("strategie_progression")
+
+            ) || [];
+
+
+
+
+
+            //==================================
+            // VERIFIER SI DEJA TERMINEE
+            //==================================
+
+
+            if (progression.includes("1")) {
+
+
+                alert(
+
+                    "Cette leçon est déjà terminée."
+
+                );
+
+
+                window.location.href = "strategie.html";
+
+
+                return;
+
+
+            }
+
+
+
+
+
+            //--------------------------------
+            // AJOUT DE LA LEÇON
+            //--------------------------------
+
+
+            progression.push("1");
+
+
+
+            localStorage.setItem(
+
+                "strategie_progression",
+
+                JSON.stringify(progression)
+
+            );
+
+
+
+
+
+
+
+            //--------------------------------
+            // COURS SUIVIS UTILISATEUR
+            //--------------------------------
+
+
+            if (!utilisateur.coursSuivis) {
+
+
+                utilisateur.coursSuivis = [];
+
+
+            }
+
+
+
+
+
+            if (!utilisateur.coursSuivis.includes(
+
+                "Stratégie Marketing Leçon 1"
+
+            )) {
+
+
+                utilisateur.coursSuivis.push(
+
+                    "Stratégie Marketing Leçon 1"
+
+                );
+
+
+            }
+
+
+
+
+
+
+
+            //--------------------------------
+            // CALCUL PROGRESSION
+            //--------------------------------
+
+
+            utilisateur.progression =
+
+                progression.length * 20;
+
+
+
+
+            if (utilisateur.progression > 100) {
+
+
+                utilisateur.progression = 100;
+
+
+            }
+
+
+
+
+
+
+
+            //--------------------------------
+            // SAUVEGARDE SESSION
+            //--------------------------------
+
+
+            localStorage.setItem(
+
+                "bmj_current_user",
+
+                JSON.stringify(utilisateur)
+
+            );
+
+
+
+
+
+
+
+            //--------------------------------
+            // SAUVEGARDE BASE UTILISATEURS
+            //--------------------------------
+
+
+            let utilisateurs = JSON.parse(
+
+                localStorage.getItem("bmj_users")
+
+            ) || [];
+
+
+
+
+
+            let index = utilisateurs.findIndex(
+
+                u => u.id === utilisateur.id
+
+            );
+
+
+
+
+
+            if (index !== -1) {
+
+
+                utilisateurs[index] = utilisateur;
+
+
+            }
+
+
+
+
+
+            localStorage.setItem(
+
+                "bmj_users",
+
+                JSON.stringify(utilisateurs)
+
+            );
+
+
+
+
+
+
+
+
+            //--------------------------------
+            // MESSAGE
+            //--------------------------------
+
+
+            alert(
+
+                "🎉 Félicitations !\n\nVous avez terminé la Leçon 1 : Stratégie Marketing."
+
+            );
+
+
+
+
+
+
+
+            //--------------------------------
+            // RETOUR AU CHAPITRE
+            //--------------------------------
+
+
+            window.location.href = "strategie.html";
+
+
+
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

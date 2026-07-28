@@ -1,0 +1,2198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*==================================================
+        BMJ SERVICE
+        LEÇON 1 - IDENTITÉ DE MARQUE
+==================================================*/
+
+        * {
+
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", sans-serif;
+
+        }
+
+        body {
+
+            background: #f4f7fb;
+            color: #222;
+            line-height: 1.7;
+
+        }
+
+
+
+
+        /*=========================================
+HEADER
+=========================================*/
+
+        header {
+
+            width: 100%;
+            background: #145a86;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, .15);
+
+        }
+
+        .logo {
+
+            display: flex;
+            align-items: center;
+            gap: 15px;
+
+        }
+
+        .logo img {
+
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            background: #fff;
+            padding: 5px;
+
+        }
+
+        .logo h2 {
+
+            color: #fff;
+            font-size: 28px;
+            font-weight: 700;
+
+        }
+
+        .logo span {
+
+            color: #ffc107;
+
+        }
+
+        .student-profile {
+
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            background: rgba(255, 255, 255, .12);
+            padding: 8px 18px;
+            border-radius: 50px;
+
+        }
+
+        .student-profile img {
+
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #ffc107;
+
+        }
+
+        .student-profile h4 {
+
+            color: #fff;
+            font-size: 17px;
+
+        }
+
+        .student-profile small {
+
+            color: #d8e9f4;
+
+        }
+
+
+
+
+        /*=========================================
+HERO
+=========================================*/
+
+        .lesson-hero {
+
+            height: 350px;
+            background: linear-gradient(rgba(20, 90, 134, .85), rgba(20, 90, 134, .90)),
+                url(images/marketing.jpg);
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 40px;
+
+        }
+
+        .overlay {
+
+            max-width: 900px;
+
+        }
+
+        .overlay span {
+
+            display: inline-block;
+            background: #ffc107;
+            color: #145a86;
+            padding: 8px 18px;
+            border-radius: 30px;
+            font-weight: bold;
+            margin-bottom: 20px;
+
+        }
+
+        .overlay h1 {
+
+            color: #fff;
+            font-size: 45px;
+            margin-bottom: 20px;
+
+        }
+
+        .overlay p {
+
+            color: #f1f5f9;
+            font-size: 19px;
+
+        }
+
+
+
+
+        /*=========================================
+OBJECTIFS
+=========================================*/
+
+        .objectif {
+
+            width: 90%;
+            max-width: 1200px;
+            margin: 50px auto;
+            background: #fff;
+            padding: 40px;
+            border-radius: 18px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, .08);
+
+        }
+
+        .objectif h2 {
+
+            color: #145a86;
+            font-size: 32px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #ffc107;
+
+        }
+
+        .objectif ul {
+
+            padding-left: 25px;
+
+        }
+
+        .objectif li {
+
+            margin: 15px 0;
+            font-size: 17px;
+
+        }
+
+
+
+
+        /*=========================================
+SECTION COURS
+=========================================*/
+
+        .cours {
+
+            width: 90%;
+            max-width: 1200px;
+            margin: 40px auto;
+            background: #fff;
+            padding: 45px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+
+        }
+
+        .cours h2 {
+
+            color: #145a86;
+            font-size: 34px;
+            margin-bottom: 20px;
+            border-left: 6px solid #ffc107;
+            padding-left: 15px;
+
+        }
+
+        .cours h3 {
+
+            color: #145a86;
+            margin: 35px 0 15px;
+            font-size: 24px;
+
+        }
+
+        .cours p {
+
+            font-size: 17px;
+            margin-bottom: 18px;
+            text-align: justify;
+
+        }
+
+        .cours ul {
+
+            padding-left: 25px;
+
+        }
+
+        .cours li {
+
+            margin: 12px 0;
+            font-size: 17px;
+
+        }
+
+        /*=========================================
+VIDÉOS
+=========================================*/
+
+        .video-cours {
+
+            margin-top: 40px;
+            padding: 25px;
+            background: #eef7fd;
+            border-left: 6px solid #145a86;
+            border-radius: 15px;
+
+        }
+
+        .video-cours h3 {
+
+            color: #145a86;
+            margin-bottom: 20px;
+
+        }
+
+        .video-cours iframe {
+
+            width: 100%;
+            height: 450px;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .15);
+
+        }
+
+
+
+
+        /*=========================================
+EXEMPLE
+=========================================*/
+
+        .exemple {
+
+            margin-top: 30px;
+            padding: 30px;
+            background: #fff8e6;
+            border-left: 6px solid #ffc107;
+            border-radius: 15px;
+
+        }
+
+        .exemple h3 {
+
+            color: #145a86;
+            margin-bottom: 15px;
+
+        }
+
+        .exemple p {
+
+            margin-bottom: 15px;
+
+        }
+
+        .exemple ul {
+
+            padding-left: 25px;
+
+        }
+
+
+
+
+        /*=========================================
+TABLEAU
+=========================================*/
+
+        table {
+
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 25px;
+            overflow: hidden;
+            border-radius: 15px;
+
+        }
+
+        table th {
+
+            background: #145a86;
+            color: #fff;
+            padding: 18px;
+            font-size: 17px;
+
+        }
+
+        table td {
+
+            padding: 16px;
+            border: 1px solid #ddd;
+            text-align: center;
+            font-size: 16px;
+
+        }
+
+        table tr:nth-child(even) {
+
+            background: #f8fbfd;
+
+        }
+
+        table tr:hover {
+
+            background: #eef7fd;
+            transition: .3s;
+
+        }
+
+
+
+
+        /*=========================================
+SECTION IMPORTANTE
+=========================================*/
+
+        .important {
+
+            width: 90%;
+            max-width: 1200px;
+            margin: 40px auto;
+            background: #145a86;
+            color: #fff;
+            padding: 45px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .12);
+
+        }
+
+        .important h2 {
+
+            color: #ffc107;
+            margin-bottom: 25px;
+            font-size: 32px;
+
+        }
+
+        .important p {
+
+            font-size: 17px;
+            margin-bottom: 15px;
+
+        }
+
+        /*=========================================
+EXERCICE
+=========================================*/
+
+        .exercice {
+
+            width: 90%;
+            max-width: 1200px;
+            margin: 40px auto;
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+
+        }
+
+        .exercice h2 {
+
+            color: #145a86;
+            font-size: 32px;
+            margin-bottom: 20px;
+
+        }
+
+        .exercice p {
+
+            font-size: 17px;
+            margin-bottom: 20px;
+
+        }
+
+        .exercice ul {
+
+            padding-left: 25px;
+            margin-bottom: 25px;
+
+        }
+
+        .exercice li {
+
+            margin: 12px 0;
+
+        }
+
+        .exercice textarea {
+
+            width: 100%;
+            height: 220px;
+            padding: 20px;
+            font-size: 16px;
+            border: 2px solid #d9e6ef;
+            border-radius: 15px;
+            resize: vertical;
+            outline: none;
+            transition: .3s;
+
+        }
+
+        .exercice textarea:focus {
+
+            border-color: #145a86;
+            box-shadow: 0 0 10px rgba(20, 90, 134, .15);
+
+        }
+
+
+
+
+        /*=========================================
+NAVIGATION
+=========================================*/
+
+        .navigation {
+
+            width: 90%;
+            max-width: 1200px;
+            margin: 40px auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+
+        }
+
+        .navigation button {
+
+            background: #145a86;
+            color: #fff;
+            border: none;
+            padding: 15px 35px;
+            font-size: 17px;
+            font-weight: 600;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: .3s;
+
+        }
+
+        .navigation button:hover {
+
+            background: #0f476b;
+            transform: translateY(-3px);
+
+        }
+
+        .navigation button:last-child {
+
+            background: #ffc107;
+            color: #145a86;
+
+        }
+
+        .navigation button:last-child:hover {
+
+            background: #e0aa00;
+
+        }
+
+
+
+
+        /*=========================================
+FOOTER
+=========================================*/
+
+        footer {
+
+            margin-top: 70px;
+            background: #145a86;
+            color: #fff;
+            text-align: center;
+            padding: 50px 20px;
+
+        }
+
+        footer h3 {
+
+            font-size: 30px;
+            margin-bottom: 15px;
+
+        }
+
+        footer p {
+
+            max-width: 800px;
+            margin: auto;
+            font-size: 17px;
+            line-height: 1.8;
+
+        }
+
+        footer strong {
+
+            color: #ffc107;
+
+        }
+
+        /*=========================================
+ANIMATIONS
+=========================================*/
+
+        @keyframes fadeUp {
+
+            from {
+
+                opacity: 0;
+                transform: translateY(40px);
+
+            }
+
+            to {
+
+                opacity: 1;
+                transform: translateY(0);
+
+            }
+
+        }
+
+        .lesson-hero,
+        .objectif,
+        .cours,
+        .important,
+        .exercice {
+
+            animation: fadeUp .8s ease;
+
+        }
+
+
+
+
+        /*=========================================
+RESPONSIVE TABLETTE
+=========================================*/
+
+        @media(max-width:992px) {
+
+            header {
+
+                padding: 15px 5%;
+
+            }
+
+            .lesson-hero {
+
+                height: auto;
+                padding: 80px 30px;
+
+            }
+
+            .overlay h1 {
+
+                font-size: 38px;
+
+            }
+
+            .objectif,
+            .cours,
+            .important,
+            .exercice,
+            .navigation {
+
+                width: 95%;
+
+            }
+
+            .video-cours iframe {
+
+                height: 350px;
+
+            }
+
+        }
+
+
+
+
+        /*=========================================
+RESPONSIVE MOBILE
+=========================================*/
+
+        @media(max-width:768px) {
+
+            header {
+
+                flex-direction: column;
+                gap: 20px;
+                padding: 20px;
+
+            }
+
+            .logo {
+
+                justify-content: center;
+
+            }
+
+            .logo h2 {
+
+                font-size: 24px;
+
+            }
+
+            .student-profile {
+
+                width: 100%;
+                justify-content: center;
+
+            }
+
+            .student-profile img {
+
+                width: 50px;
+                height: 50px;
+
+            }
+
+            .lesson-hero {
+
+                padding: 70px 20px;
+                text-align: center;
+
+            }
+
+            .overlay h1 {
+
+                font-size: 30px;
+
+            }
+
+            .overlay p {
+
+                font-size: 16px;
+
+            }
+
+            .objectif,
+            .cours,
+            .important,
+            .exercice {
+
+                padding: 25px;
+
+            }
+
+            .objectif h2,
+            .cours h2,
+            .important h2,
+            .exercice h2 {
+
+                font-size: 26px;
+
+            }
+
+            .cours h3 {
+
+                font-size: 22px;
+
+            }
+
+            .cours p,
+            .cours li,
+            .objectif li,
+            .exercice p {
+
+                font-size: 15px;
+
+            }
+
+            .video-cours iframe {
+
+                height: 250px;
+
+            }
+
+            .navigation {
+
+                flex-direction: column;
+
+            }
+
+            .navigation button {
+
+                width: 100%;
+
+            }
+
+            table {
+
+                display: block;
+                overflow-x: auto;
+                white-space: nowrap;
+
+            }
+
+            footer {
+
+                padding: 40px 20px;
+
+            }
+
+        }
+
+
+
+
+        /*=========================================
+PETITS SMARTPHONES
+=========================================*/
+
+        @media(max-width:480px) {
+
+            .logo img {
+
+                width: 45px;
+                height: 45px;
+
+            }
+
+            .logo h2 {
+
+                font-size: 22px;
+
+            }
+
+            .overlay span {
+
+                font-size: 13px;
+                padding: 7px 15px;
+
+            }
+
+            .overlay h1 {
+
+                font-size: 25px;
+
+            }
+
+            .overlay p {
+
+                font-size: 15px;
+
+            }
+
+            .objectif h2,
+            .cours h2,
+            .important h2,
+            .exercice h2 {
+
+                font-size: 23px;
+
+            }
+
+            .cours h3 {
+
+                font-size: 20px;
+
+            }
+
+            .video-cours {
+
+                padding: 15px;
+
+            }
+
+            .video-cours iframe {
+
+                height: 210px;
+
+            }
+
+            footer h3 {
+
+                font-size: 24px;
+
+            }
+
+            footer p {
+
+                font-size: 15px;
+
+            }
+
+        }
+
+
+
+
+        /*=========================================
+SCROLLBAR BMJ SERVICE
+=========================================*/
+
+        ::-webkit-scrollbar {
+
+            width: 10px;
+
+        }
+
+        ::-webkit-scrollbar-track {
+
+            background: #eef3f8;
+
+        }
+
+        ::-webkit-scrollbar-thumb {
+
+            background: #145a86;
+            border-radius: 20px;
+
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+
+            background: #0d4568;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--====================================
+                HEADER
+    =====================================-->
+
+    <header>
+
+        <div class="logo">
+
+            <img src="images/logo.png" alt="BMJ SERVICE">
+
+            <h2>
+
+                BMJ <span>SERVICE</span>
+
+            </h2>
+
+        </div>
+
+        <div class="student-profile">
+
+            <img id="photoUtilisateur" src="images/user.png" alt="Photo">
+
+            <div>
+
+                <h4 id="nomUtilisateur">
+
+                    Apprenant
+
+                </h4>
+
+                <small id="domaineUtilisateur">
+
+                    Marketing Digital
+
+                </small>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+
+
+    <!--====================================
+                HERO
+    =====================================-->
+
+    <section class="lesson-hero">
+
+        <div class="overlay">
+
+            <span>
+
+                LEÇON 1
+
+            </span>
+
+            <h1>
+
+                Comprendre l'identité de marque
+
+            </h1>
+
+            <p>
+
+                Découvrez ce qu'est une identité de marque, pourquoi elle est
+                indispensable pour une entreprise et comment elle permet de se
+                différencier durablement de la concurrence.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+
+
+    <!--====================================
+            OBJECTIFS
+    =====================================-->
+
+    <section class="objectif">
+
+        <h2>
+
+            Objectifs de cette leçon
+
+        </h2>
+
+        <ul>
+
+            <li>
+                Comprendre la notion d'identité de marque.
+            </li>
+
+            <li>
+                Identifier les éléments qui composent une marque.
+            </li>
+
+            <li>
+                Comprendre pourquoi une identité forte inspire confiance.
+            </li>
+
+            <li>
+                Découvrir l'importance de la cohérence visuelle.
+            </li>
+
+            <li>
+                Savoir différencier une entreprise grâce à sa marque.
+            </li>
+
+        </ul>
+
+    </section>
+
+
+
+
+
+    <!--====================================
+            COURS
+    =====================================-->
+
+    <section class="cours">
+
+        <h2>
+
+            1. Qu'est-ce que l'identité de marque ?
+
+        </h2>
+
+        <p>
+
+            L'identité de marque représente l'ensemble des éléments qui
+            permettent d'identifier une entreprise auprès du public.
+            C'est ce qui rend une entreprise reconnaissable et différente
+            de toutes les autres.
+
+        </p>
+
+        <p>
+
+            Elle comprend notamment le nom de l'entreprise, son logo,
+            ses couleurs, sa typographie, son slogan, son style de
+            communication ainsi que les valeurs qu'elle souhaite transmettre.
+
+        </p>
+
+        <p>
+
+            Une identité de marque forte aide les consommateurs à reconnaître
+            rapidement une entreprise et à développer une relation de confiance
+            avec celle-ci.
+
+        </p>
+
+
+
+
+
+        <h3>
+
+            📚 Enseignements du cours
+
+        </h3>
+
+        <p>
+
+            À la fin de cette partie, l'apprenant doit être capable de :
+
+        </p>
+
+        <ul>
+
+            <li>
+                Définir l'identité de marque.
+            </li>
+
+            <li>
+                Expliquer son rôle dans une entreprise.
+            </li>
+
+            <li>
+                Identifier les principaux éléments d'une marque.
+            </li>
+
+            <li>
+                Comprendre pourquoi une marque doit être cohérente.
+            </li>
+
+            <li>
+                Faire la différence entre une entreprise connue et une entreprise
+                sans identité visuelle.
+            </li>
+
+        </ul>
+
+
+
+
+
+        <h3>
+
+            Les éléments qui composent une identité de marque
+
+        </h3>
+
+        <ul>
+
+            <li>🏷 Le nom de l'entreprise.</li>
+
+            <li>🎨 Les couleurs officielles.</li>
+
+            <li>🖼 Le logo.</li>
+
+            <li>✍ Le slogan.</li>
+
+            <li>🔤 La typographie.</li>
+
+            <li>💬 Le ton de communication.</li>
+
+            <li>🤝 Les valeurs de l'entreprise.</li>
+
+        </ul>
+
+
+
+
+
+        <h3>
+
+            Exemple concret
+
+        </h3>
+
+        <p>
+
+            BMJ SERVICE possède un logo, une couleur dominante bleue,
+            une identité professionnelle et un slogan qui permettent aux
+            utilisateurs de reconnaître immédiatement la plateforme.
+
+        </p>
+
+
+
+
+
+        <h3>
+
+            À retenir
+
+        </h3>
+
+        <p>
+
+            Une identité de marque est la personnalité visible d'une
+            entreprise. Plus elle est cohérente, plus elle inspire
+            confiance aux clients.
+
+        </p>
+
+
+
+
+
+        <div class="video-cours">
+
+            <h3>
+
+                📹 Vidéo explicative
+
+            </h3>
+
+            <iframe width="100%" height="400" src="https://www.youtube.com/embed/IzGsA98eAIA"
+                title="Comprendre l'identité de marque" frameborder="0" allowfullscreen>
+
+            </iframe>
+
+        </div>
+
+    </section>
+    <section class="cours">
+
+        <h2>
+
+            2. Pourquoi l'identité de marque est-elle importante ?
+
+        </h2>
+
+        <p>
+
+            Une identité de marque forte permet à une entreprise de créer une
+            image professionnelle, de gagner la confiance des consommateurs et
+            de se démarquer face à la concurrence.
+
+        </p>
+
+        <p>
+
+            Aujourd'hui, les clients choisissent souvent une entreprise non
+            seulement pour la qualité de ses produits, mais également pour
+            l'image qu'elle véhicule.
+
+        </p>
+
+        <p>
+
+            Une entreprise qui possède une identité claire est plus facile à
+            mémoriser et inspire davantage de crédibilité.
+
+        </p>
+
+
+
+        <h3>
+
+            📚 Enseignements du cours
+
+        </h3>
+
+        <p>
+
+            À la fin de cette partie, l'apprenant doit être capable de :
+
+        </p>
+
+        <ul>
+
+            <li>
+                Comprendre pourquoi une identité de marque est indispensable.
+            </li>
+
+            <li>
+                Expliquer son impact sur les clients.
+            </li>
+
+            <li>
+                Comprendre la notion de confiance.
+            </li>
+
+            <li>
+                Identifier les bénéfices d'une image professionnelle.
+            </li>
+
+            <li>
+                Expliquer pourquoi une entreprise doit être facilement reconnaissable.
+            </li>
+
+        </ul>
+
+
+
+        <h3>
+
+            Les principaux avantages
+
+        </h3>
+
+        <ul>
+
+            <li>
+                ⭐ Renforce la crédibilité de l'entreprise.
+            </li>
+
+            <li>
+                ⭐ Permet d'être rapidement reconnue.
+            </li>
+
+            <li>
+                ⭐ Inspire confiance aux clients.
+            </li>
+
+            <li>
+                ⭐ Favorise la fidélisation.
+            </li>
+
+            <li>
+                ⭐ Améliore la réputation de la marque.
+            </li>
+
+            <li>
+                ⭐ Différencie l'entreprise de ses concurrents.
+            </li>
+
+        </ul>
+
+
+
+        <h3>
+
+            Exemple concret
+
+        </h3>
+
+        <p>
+
+            Lorsqu'un client aperçoit immédiatement les couleurs, le logo ou le
+            slogan d'une entreprise connue, il est capable de reconnaître cette
+            marque en quelques secondes sans même lire son nom.
+
+        </p>
+
+
+
+        <h3>
+
+            À retenir
+
+        </h3>
+
+        <p>
+
+            Une bonne identité de marque augmente la notoriété de l'entreprise,
+            rassure les consommateurs et facilite le développement commercial
+            sur le long terme.
+
+        </p>
+
+
+
+        <div class="video-cours">
+
+            <h3>
+
+                📹 Vidéo explicative
+
+            </h3>
+
+            <iframe width="100%" height="400" src="https://www.youtube.com/embed/oZSgVhyMaYk"
+                title="Importance de l'identité de marque" frameborder="0" allowfullscreen>
+
+            </iframe>
+
+        </div>
+
+    </section>
+    <section class="cours">
+
+        <h2>
+
+            3. Les éléments d'une identité de marque
+
+        </h2>
+
+        <p>
+
+            Une identité de marque est constituée de plusieurs éléments qui
+            permettent à une entreprise d'être facilement reconnue par ses
+            clients. Ces éléments doivent être cohérents afin de transmettre
+            une image professionnelle et inspirer confiance.
+
+        </p>
+
+        <p>
+
+            Chaque composant joue un rôle important dans la communication de
+            l'entreprise et contribue à renforcer sa réputation auprès du
+            public.
+
+        </p>
+
+
+
+        <h3>
+
+            📚 Enseignements du cours
+
+        </h3>
+
+        <p>
+
+            À la fin de cette partie, l'apprenant doit être capable de :
+
+        </p>
+
+        <ul>
+
+            <li>
+                Identifier les différents éléments d'une identité de marque.
+            </li>
+
+            <li>
+                Comprendre le rôle du logo, des couleurs et du slogan.
+            </li>
+
+            <li>
+                Expliquer l'importance d'une identité visuelle cohérente.
+            </li>
+
+            <li>
+                Comprendre comment une entreprise construit son image.
+            </li>
+
+            <li>
+                Reconnaître les caractéristiques d'une marque forte.
+            </li>
+
+        </ul>
+
+
+
+        <h3>
+
+            Les principaux éléments
+
+        </h3>
+
+        <ul>
+
+            <li>
+
+                <strong>🏷 Le nom de la marque :</strong>
+
+                il doit être simple, facile à mémoriser et représenter
+                l'activité de l'entreprise.
+
+            </li>
+
+            <li>
+
+                <strong>🖼 Le logo :</strong>
+
+                symbole graphique qui représente l'entreprise et permet
+                de l'identifier rapidement.
+
+            </li>
+
+            <li>
+
+                <strong>🎨 Les couleurs :</strong>
+
+                elles transmettent des émotions et rendent la marque
+                facilement reconnaissable.
+
+            </li>
+
+            <li>
+
+                <strong>✍ Le slogan :</strong>
+
+                une courte phrase qui résume la mission ou la promesse
+                de l'entreprise.
+
+            </li>
+
+            <li>
+
+                <strong>🔤 La typographie :</strong>
+
+                les polices d'écriture utilisées doivent rester identiques
+                sur tous les supports de communication.
+
+            </li>
+
+            <li>
+
+                <strong>💬 Le ton de communication :</strong>
+
+                il représente la manière dont une entreprise s'adresse
+                à ses clients.
+
+            </li>
+
+            <li>
+
+                <strong>🤝 Les valeurs :</strong>
+
+                elles reflètent les principes, la vision et les engagements
+                de l'entreprise.
+
+            </li>
+
+        </ul>
+
+
+
+        <h3>
+
+            Exemple concret
+
+        </h3>
+
+        <p>
+
+            BMJ SERVICE utilise un logo moderne, une dominante de bleu,
+            des touches de jaune, une communication professionnelle et
+            une présentation uniforme sur toutes ses pages afin de créer
+            une identité facilement reconnaissable.
+
+        </p>
+
+
+
+        <h3>
+
+            À retenir
+
+        </h3>
+
+        <p>
+
+            Une identité de marque est l'association harmonieuse du nom,
+            du logo, des couleurs, du slogan, de la typographie et des
+            valeurs de l'entreprise. Tous ces éléments doivent être
+            cohérents afin de construire une image forte et durable.
+
+        </p>
+
+
+
+        <div class="video-cours">
+
+            <h3>
+
+                📹 Vidéo explicative
+
+            </h3>
+
+            <iframe width="100%" height="400" src="https://www.youtube.com/embed/R4wK6_Z3iDU"
+                title="Les éléments d'une identité de marque" frameborder="0" allowfullscreen>
+
+            </iframe>
+
+        </div>
+
+    </section>
+    <section class="cours">
+
+        <h2>
+
+            4. Construire une identité de marque forte
+
+        </h2>
+
+        <p>
+
+            Construire une identité de marque ne consiste pas uniquement à créer
+            un logo. Il s'agit de définir une image cohérente qui reflète la
+            personnalité, les valeurs et les objectifs de l'entreprise.
+
+        </p>
+
+        <p>
+
+            Une marque forte doit transmettre un message clair à ses clients et
+            rester facilement reconnaissable sur tous les supports de
+            communication : site web, réseaux sociaux, cartes de visite,
+            affiches, emballages ou applications mobiles.
+
+        </p>
+
+        <p>
+
+            Plus une entreprise est cohérente dans sa communication, plus les
+            consommateurs lui accordent leur confiance et se souviennent
+            facilement de sa marque.
+
+        </p>
+
+
+
+        <h3>
+
+            📚 Enseignements du cours
+
+        </h3>
+
+        <p>
+
+            À la fin de cette partie, l'apprenant doit être capable de :
+
+        </p>
+
+        <ul>
+
+            <li>
+                Comprendre les étapes de création d'une identité de marque.
+            </li>
+
+            <li>
+                Définir les valeurs d'une entreprise.
+            </li>
+
+            <li>
+                Choisir une identité visuelle cohérente.
+            </li>
+
+            <li>
+                Comprendre l'importance de la cohérence graphique.
+            </li>
+
+            <li>
+                Construire une image professionnelle durable.
+            </li>
+
+        </ul>
+
+
+
+        <h3>
+
+            Les étapes pour créer une identité de marque
+
+        </h3>
+
+        <ul>
+
+            <li>
+
+                <strong>1. Définir la mission :</strong>
+
+                expliquer pourquoi l'entreprise existe et quel problème elle
+                résout.
+
+            </li>
+
+            <li>
+
+                <strong>2. Définir les valeurs :</strong>
+
+                choisir les principes qui guideront toutes les activités de
+                l'entreprise.
+
+            </li>
+
+            <li>
+
+                <strong>3. Identifier la clientèle cible :</strong>
+
+                connaître les personnes auxquelles l'entreprise souhaite
+                s'adresser.
+
+            </li>
+
+            <li>
+
+                <strong>4. Concevoir un logo :</strong>
+
+                créer un symbole simple, professionnel et mémorable.
+
+            </li>
+
+            <li>
+
+                <strong>5. Choisir une palette de couleurs :</strong>
+
+                utiliser des couleurs qui représentent la personnalité de la
+                marque.
+
+            </li>
+
+            <li>
+
+                <strong>6. Définir un slogan :</strong>
+
+                créer une phrase courte qui résume la promesse de la marque.
+
+            </li>
+
+            <li>
+
+                <strong>7. Appliquer la même identité partout :</strong>
+
+                conserver le même style sur tous les supports de communication.
+
+            </li>
+
+        </ul>
+
+
+
+        <h3>
+
+            Exemple concret
+
+        </h3>
+
+        <p>
+
+            BMJ SERVICE utilise le bleu comme couleur principale pour inspirer
+            la confiance, le jaune pour symboliser la réussite, un logo unique
+            et une présentation identique sur toutes les pages de la plateforme.
+            Cette cohérence renforce son image professionnelle auprès des
+            apprenants.
+
+        </p>
+
+
+
+        <h3>
+
+            Les erreurs à éviter
+
+        </h3>
+
+        <ul>
+
+            <li>
+                Changer régulièrement de logo.
+            </li>
+
+            <li>
+                Utiliser plusieurs couleurs sans cohérence.
+            </li>
+
+            <li>
+                Modifier constamment le slogan.
+            </li>
+
+            <li>
+                Employer différentes polices d'écriture.
+            </li>
+
+            <li>
+                Donner une image différente selon les supports.
+            </li>
+
+        </ul>
+
+
+
+        <h3>
+
+            À retenir
+
+        </h3>
+
+        <p>
+
+            Une identité de marque forte repose sur la cohérence, la simplicité
+            et la régularité. Plus une entreprise présente une image uniforme,
+            plus elle est facilement reconnue et inspire confiance auprès de ses
+            clients.
+
+        </p>
+
+
+
+        <div class="video-cours">
+
+            <h3>
+
+                📹 Vidéo explicative
+
+            </h3>
+
+            <iframe width="100%" height="400" src="https://www.youtube.com/embed/oZSgVhyMaYk"
+                title="Construire une identité de marque" frameborder="0" allowfullscreen>
+
+            </iframe>
+
+        </div>
+
+    </section>
+    <!--====================================
+            EXEMPLE PRATIQUE
+    =====================================-->
+
+    <section class="cours">
+
+        <h2>
+
+            5. Exemple pratique
+
+        </h2>
+
+        <div class="exemple">
+
+            <h3>
+
+                BMJ SERVICE
+
+            </h3>
+
+            <p>
+
+                BMJ SERVICE est une plateforme de formation en ligne qui a
+                développé une identité de marque professionnelle afin d'inspirer
+                confiance à ses utilisateurs.
+
+            </p>
+
+            <p>
+
+                Son logo, ses couleurs bleu et jaune, son interface moderne,
+                ainsi que son style de communication sont identiques sur toutes
+                les pages de la plateforme.
+
+            </p>
+
+            <p>
+
+                Grâce à cette cohérence visuelle, les apprenants reconnaissent
+                immédiatement BMJ SERVICE et associent la plateforme à une
+                formation professionnelle de qualité.
+
+            </p>
+
+            <h3>
+
+                Résultats obtenus
+
+            </h3>
+
+            <ul>
+
+                <li>✔ Image professionnelle.</li>
+
+                <li>✔ Reconnaissance rapide de la plateforme.</li>
+
+                <li>✔ Confiance des utilisateurs.</li>
+
+                <li>✔ Fidélisation des apprenants.</li>
+
+                <li>✔ Développement de la notoriété.</li>
+
+            </ul>
+
+        </div>
+
+
+
+        <div class="video-cours">
+
+            <h3>
+
+                📹 Vidéo explicative
+
+            </h3>
+
+            <iframe width="100%" height="400" src="https://www.youtube.com/embed/eeeMA_keyRc" title="Identité de marque"
+                frameborder="0" allowfullscreen>
+
+            </iframe>
+
+        </div>
+
+    </section>
+
+
+
+
+
+    <!--====================================
+            À RETENIR
+    =====================================-->
+
+    <section class="important">
+
+        <h2>
+
+            📌 À retenir
+
+        </h2>
+
+        <p>
+
+            ✔ L'identité de marque représente la personnalité d'une entreprise.
+
+        </p>
+
+        <p>
+
+            ✔ Une marque forte est facilement reconnaissable.
+
+        </p>
+
+        <p>
+
+            ✔ Le logo, les couleurs, le slogan et les valeurs doivent être cohérents.
+
+        </p>
+
+        <p>
+
+            ✔ Une bonne identité de marque renforce la confiance des clients.
+
+        </p>
+
+        <p>
+
+            ✔ Une entreprise qui soigne son image améliore sa notoriété et sa crédibilité.
+
+        </p>
+
+    </section>
+
+
+
+
+
+    <!--====================================
+            EXERCICE
+    =====================================-->
+
+    <section class="exercice">
+
+        <h2>
+
+            Exercice
+
+        </h2>
+
+        <p>
+
+            Imaginez que vous créez votre propre entreprise.
+
+            Décrivez son identité de marque en précisant :
+
+        </p>
+
+        <ul>
+
+            <li>Le nom de votre entreprise.</li>
+
+            <li>Le logo que vous aimeriez créer.</li>
+
+            <li>Les couleurs principales.</li>
+
+            <li>Le slogan.</li>
+
+            <li>Les valeurs que vous souhaitez transmettre.</li>
+
+        </ul>
+
+        <textarea placeholder="Écrivez votre réponse ici..."></textarea>
+
+    </section>
+
+
+
+
+
+    <!--====================================
+            NAVIGATION
+    =====================================-->
+
+    <section class="navigation">
+
+        <button onclick="retourCours()">
+
+            ← Retour au chapitre
+
+        </button>
+
+        <button onclick="terminerLecon()">
+
+            ✓ Terminer la leçon
+
+        </button>
+
+    </section>
+
+
+
+
+
+    <!--====================================
+            FOOTER
+    =====================================-->
+
+    <footer>
+
+        <h3>
+
+            BMJ SERVICE
+
+        </h3>
+
+        <p>
+
+            Félicitations ! Vous avez terminé la première leçon du chapitre
+            <strong>Identité de marque</strong>.
+
+            La prochaine leçon portera sur <strong>Le logo et les couleurs de marque</strong>.
+
+        </p>
+
+    </footer>
+    <script>
+
+        //====================================
+        // CHARGEMENT DE LA PAGE
+        //====================================
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+            let utilisateur = JSON.parse(
+
+                localStorage.getItem("bmj_current_user")
+
+            );
+
+            //--------------------------------
+            // SI AUCUN UTILISATEUR
+            //--------------------------------
+
+            if (!utilisateur) {
+
+                console.log("Utilisateur non trouvé.");
+
+                return;
+
+            }
+
+            //--------------------------------
+            // PROFIL
+            //--------------------------------
+
+            document.getElementById("nomUtilisateur").innerHTML =
+
+                utilisateur.nom || "Apprenant";
+
+            if (document.getElementById("domaineUtilisateur")) {
+
+                document.getElementById("domaineUtilisateur").innerHTML =
+
+                    utilisateur.domaine || "Marketing Digital";
+
+            }
+
+            if (utilisateur.photo && utilisateur.photo != "") {
+
+                document.getElementById("photoUtilisateur").src =
+
+                    utilisateur.photo;
+
+            }
+
+        });
+
+
+
+
+        //====================================
+        // RETOUR AU CHAPITRE
+        //====================================
+
+        function retourCours() {
+
+            window.location.href = "identitemarque.html";
+
+        }
+
+
+
+
+        //====================================
+        // TERMINER LA LEÇON
+        //====================================
+
+        function terminerLecon() {
+
+            let utilisateur = JSON.parse(
+
+                localStorage.getItem("bmj_current_user")
+
+            );
+
+            if (!utilisateur) {
+
+                alert("Utilisateur introuvable.");
+
+                return;
+
+            }
+
+            //--------------------------------
+            // PROGRESSION
+            //--------------------------------
+
+            let progression = JSON.parse(
+
+                localStorage.getItem("identite_progression")
+
+            ) || [];
+
+            if (!progression.includes("1")) {
+
+                progression.push("1");
+
+            }
+
+            localStorage.setItem(
+
+                "identite_progression",
+
+                JSON.stringify(progression)
+
+            );
+
+            //--------------------------------
+            // COURS SUIVIS
+            //--------------------------------
+
+            if (!utilisateur.coursSuivis) {
+
+                utilisateur.coursSuivis = [];
+
+            }
+
+            if (!utilisateur.coursSuivis.includes("Identité de marque - Leçon 1")) {
+
+                utilisateur.coursSuivis.push(
+
+                    "Identité de marque - Leçon 1"
+
+                );
+
+            }
+
+            //--------------------------------
+            // PROGRESSION GLOBALE
+            //--------------------------------
+
+            utilisateur.progression = progression.length * 20;
+
+            if (utilisateur.progression > 100) {
+
+                utilisateur.progression = 100;
+
+            }
+
+            //--------------------------------
+            // SAUVEGARDE
+            //--------------------------------
+
+            localStorage.setItem(
+
+                "bmj_current_user",
+
+                JSON.stringify(utilisateur)
+
+            );
+
+            //--------------------------------
+            // LISTE UTILISATEURS
+            //--------------------------------
+
+            let utilisateurs = JSON.parse(
+
+                localStorage.getItem("bmj_users")
+
+            ) || [];
+
+            let index = utilisateurs.findIndex(function (u) {
+
+                return u.id == utilisateur.id;
+
+            });
+
+            if (index != -1) {
+
+                utilisateurs[index] = utilisateur;
+
+                localStorage.setItem(
+
+                    "bmj_users",
+
+                    JSON.stringify(utilisateurs)
+
+                );
+
+            }
+
+            //--------------------------------
+            // MESSAGE
+            //--------------------------------
+
+            alert(
+
+                "🎉 Félicitations !\n\nVous avez terminé cette leçon."
+
+            );
+
+            //--------------------------------
+            // LEÇON SUIVANTE
+            //--------------------------------
+
+            window.location.href = "identitelecon2.html";
+
+        }
+
+    </script>
+</body>
+
+</html>

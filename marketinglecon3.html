@@ -1,0 +1,3207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*========================================
+        BMJ SERVICE - LEÇON MARKETING 3
+========================================*/
+
+
+        * {
+
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+
+        }
+
+
+
+        body {
+
+            background: #f4f7fb;
+
+            color: #333;
+
+            line-height: 1.8;
+
+        }
+
+
+
+        /*========================================
+                HEADER
+========================================*/
+
+
+        header {
+
+            position: fixed;
+
+            top: 0;
+
+            left: 0;
+
+            width: 100%;
+
+            height: 75px;
+
+            background: white;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            padding: 0 40px;
+
+            box-shadow: 0 5px 20px rgba(0, 0, 0, .08);
+
+            z-index: 1000;
+
+        }
+
+
+
+        .logo {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+        }
+
+
+
+        .logo img {
+
+            width: 50px;
+
+            height: 50px;
+
+            border-radius: 50%;
+
+        }
+
+
+
+        .logo h2 {
+
+            color: #145A86;
+
+        }
+
+
+
+        .logo span {
+
+            color: #D4AF37;
+
+        }
+
+
+
+
+
+
+        /* PROFIL APPRENANT */
+
+
+        .student-profile {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+        }
+
+
+
+        .student-profile img {
+
+            width: 50px;
+
+            height: 50px;
+
+            border-radius: 50%;
+
+            object-fit: cover;
+
+            border: 3px solid #D4AF37;
+
+        }
+
+
+
+        .student-profile h4 {
+
+            color: #145A86;
+
+        }
+
+
+
+
+
+        /*========================================
+                HERO
+========================================*/
+
+
+        .lesson-hero {
+
+
+            margin-top: 75px;
+
+            height: 430px;
+
+
+            background:
+
+
+                linear-gradient(rgba(20, 90, 134, .85),
+
+                    rgba(0, 0, 0, .75)),
+
+
+                url(images/marketing4p.jpg);
+
+
+
+            background-size: cover;
+
+            background-position: center;
+
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+
+        }
+
+
+
+
+        .overlay {
+
+
+            width: 90%;
+
+            max-width: 1100px;
+
+            text-align: center;
+
+            color: white;
+
+
+        }
+
+
+
+        .overlay span {
+
+
+            background: #D4AF37;
+
+            color: #145A86;
+
+            padding: 8px 25px;
+
+            border-radius: 30px;
+
+            font-weight: bold;
+
+
+        }
+
+
+
+
+        .overlay h1 {
+
+
+            font-size: 45px;
+
+            margin: 25px 0;
+
+            line-height: 1.3;
+
+
+        }
+
+
+
+
+        .overlay p {
+
+
+            font-size: 19px;
+
+        }
+
+
+
+
+
+
+
+        /*========================================
+        BLOCS PRINCIPAUX
+========================================*/
+
+
+        .objectif,
+        .cours,
+        .important,
+        .exercice {
+
+
+            width: 90%;
+
+            max-width: 1100px;
+
+
+            margin: 40px auto;
+
+
+            background: white;
+
+
+            padding: 35px;
+
+
+            border-radius: 20px;
+
+
+            box-shadow:
+
+                0 10px 25px rgba(0, 0, 0, .08);
+
+
+        }
+
+
+
+
+        .objectif h2,
+        .cours h2,
+        .important h2,
+        .exercice h2 {
+
+
+            color: #145A86;
+
+
+            border-left: 6px solid #D4AF37;
+
+
+            padding-left: 15px;
+
+
+            margin-bottom: 20px;
+
+
+        }
+
+
+
+
+
+        .cours h3 {
+
+
+            color: #145A86;
+
+            margin: 20px 0 10px;
+
+
+        }
+
+
+
+
+        .cours p {
+
+
+            margin-bottom: 18px;
+
+            text-align: justify;
+
+
+        }
+
+
+
+
+
+        .cours ul,
+        .objectif ul {
+
+
+            margin-left: 30px;
+
+
+        }
+
+
+
+        .cours li,
+        .objectif li {
+
+
+            margin-bottom: 10px;
+
+
+        }
+
+
+
+
+
+        /*========================================
+            EXEMPLE
+========================================*/
+
+
+        .exemple {
+
+
+            background: #eef7ff;
+
+
+            border-left: 6px solid #145A86;
+
+
+            padding: 25px;
+
+
+            border-radius: 15px;
+
+
+            margin-top: 20px;
+
+
+        }
+
+
+
+        .exemple h3 {
+
+
+            color: #145A86;
+
+        }
+
+
+
+
+
+
+
+        /*========================================
+                TABLEAU
+========================================*/
+
+
+        table {
+
+
+            width: 100%;
+
+
+            border-collapse: collapse;
+
+
+            margin-top: 25px;
+
+
+        }
+
+
+
+        table th {
+
+
+            background: #145A86;
+
+
+            color: white;
+
+
+            padding: 15px;
+
+
+        }
+
+
+
+        table td {
+
+
+            padding: 15px;
+
+
+            border: 1px solid #ddd;
+
+
+            text-align: center;
+
+
+        }
+
+
+
+        table tr:nth-child(even) {
+
+
+            background: #f5faff;
+
+
+        }
+
+
+
+
+
+
+
+        /*========================================
+            BLOC IMPORTANT
+========================================*/
+
+
+        .important {
+
+
+            background: #145A86;
+
+
+            color: white;
+
+
+        }
+
+
+
+        .important h2 {
+
+
+            color: white;
+
+
+            border-color: #D4AF37;
+
+
+        }
+
+
+
+        .important p {
+
+
+            font-size: 18px;
+
+
+            margin-bottom: 10px;
+
+
+        }
+
+
+
+
+
+
+
+        /*========================================
+            EXERCICE
+========================================*/
+
+
+        textarea {
+
+
+            width: 100%;
+
+
+            height: 180px;
+
+
+            margin-top: 20px;
+
+
+            padding: 20px;
+
+
+            border-radius: 15px;
+
+
+            border: 2px solid #ddd;
+
+
+            resize: none;
+
+
+            font-size: 16px;
+
+
+        }
+
+
+
+
+        textarea:focus {
+
+
+            outline: none;
+
+
+            border-color: #145A86;
+
+
+        }
+
+
+
+
+
+
+
+        /*========================================
+            NAVIGATION
+========================================*/
+
+
+        .navigation {
+
+
+            width: 90%;
+
+
+            max-width: 1100px;
+
+
+            margin: 50px auto;
+
+
+            display: flex;
+
+
+            gap: 20px;
+
+
+        }
+
+
+
+        .navigation button {
+
+
+            flex: 1;
+
+
+            padding: 18px;
+
+
+            border: none;
+
+
+            border-radius: 15px;
+
+
+            font-size: 17px;
+
+
+            font-weight: bold;
+
+
+            cursor: pointer;
+
+
+            transition: .3s;
+
+
+        }
+
+
+
+        .navigation button:first-child {
+
+
+            background: #145A86;
+
+
+            color: white;
+
+
+        }
+
+
+
+        .navigation button:last-child {
+
+
+            background: #D4AF37;
+
+
+            color: #145A86;
+
+
+        }
+
+
+
+
+        .navigation button:hover {
+
+
+            transform: translateY(-5px);
+
+
+            box-shadow: 0 10px 20px rgba(0, 0, 0, .15);
+
+
+        }
+
+
+
+
+
+
+
+        /*========================================
+                FOOTER
+========================================*/
+
+
+        footer {
+
+
+            background: #145A86;
+
+
+            color: white;
+
+
+            text-align: center;
+
+
+            padding: 35px;
+
+
+        }
+
+
+
+
+
+
+
+        /*========================================
+                MOBILE
+========================================*/
+
+
+        @media(max-width:768px) {
+
+
+
+            header {
+
+
+                padding: 0 15px;
+
+
+            }
+
+
+
+            .logo h2 {
+
+
+                font-size: 20px;
+
+
+            }
+
+
+
+            .student-profile small {
+
+
+                display: none;
+
+
+            }
+
+
+
+
+            .overlay h1 {
+
+
+                font-size: 30px;
+
+
+            }
+
+
+
+            .overlay p {
+
+
+                font-size: 16px;
+
+
+            }
+
+
+
+
+            .objectif,
+            .cours,
+            .important,
+            .exercice {
+
+
+                padding: 22px;
+
+
+            }
+
+
+
+
+            .navigation {
+
+
+                flex-direction: column;
+
+
+            }
+
+
+
+            table {
+
+
+                font-size: 14px;
+
+
+            }
+
+
+
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <!--====================================
+            HEADER
+=====================================-->
+
+    <header>
+
+        <div class="logo">
+
+            <img src="images/logo.png">
+
+            <h2>
+                BMJ <span>SERVICE</span>
+            </h2>
+
+        </div>
+
+
+        <div class="student-profile">
+
+            <img id="photoUtilisateur" src="images/user.png">
+
+
+            <div>
+
+                <h4 id="nomUtilisateur">
+                    Apprenant
+                </h4>
+
+
+                <small id="domaineUtilisateur">
+                    Marketing Digital
+                </small>
+
+
+            </div>
+
+
+        </div>
+
+
+    </header>
+
+
+
+
+
+
+
+
+    <!--====================================
+            HERO LEÇON 3
+=====================================-->
+
+    <section class="lesson-hero">
+
+
+        <div class="overlay">
+
+
+            <span>
+                LEÇON 3
+            </span>
+
+
+            <h1>
+                Les 4P du Marketing : Construire une stratégie efficace
+            </h1>
+
+
+            <p>
+
+                Apprenez comment les entreprises utilisent le
+                Produit, le Prix, la Distribution et la Promotion
+                pour créer une stratégie marketing performante.
+
+            </p>
+
+
+        </div>
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+    <!--====================================
+        INTRODUCTION
+=====================================-->
+
+
+    <section class="objectif">
+
+        <h2>
+            🎯 Objectifs de la leçon
+        </h2>
+
+        <p>
+            À la fin de cette leçon, l'apprenant sera capable de comprendre le concept du
+            Marketing Mix et d'utiliser les différentes stratégies permettant à une
+            entreprise de mieux répondre aux attentes de ses clients.
+        </p>
+
+        <ul>
+
+            <li>
+                Comprendre le concept du <strong>Marketing Mix</strong> et son importance
+                dans une stratégie commerciale.
+            </li>
+
+            <li>
+                Découvrir les quatre piliers fondamentaux du marketing appelés les
+                <strong>4P</strong> : Produit, Prix, Place (Distribution) et Promotion.
+            </li>
+
+            <li>
+                Comprendre le rôle de chaque élément du Marketing Mix dans la réussite
+                d'un produit ou d'un service.
+            </li>
+
+            <li>
+                Savoir analyser les besoins des clients afin de créer une offre adaptée.
+            </li>
+
+            <li>
+                Apprendre à appliquer les principes des 4P dans un projet réel ou une
+                activité commerciale.
+            </li>
+
+            <li>
+                Être capable de définir une stratégie marketing cohérente pour attirer
+                et fidéliser les consommateurs.
+            </li>
+
+            <li>
+                Développer une vision pratique de la création et de la commercialisation
+                d'un produit ou service.
+            </li>
+
+        </ul>
+
+    </section>
+
+
+
+
+
+
+    <!--====================================
+        PARTIE 1
+=====================================-->
+
+
+    <section class="cours">
+
+        <h2>
+            1. Qu'est-ce que le Marketing Mix ?
+        </h2>
+
+
+        <p>
+            Le Marketing Mix est une méthode stratégique utilisée par les entreprises
+            pour organiser et définir leurs actions commerciales. Il permet de
+            déterminer comment présenter un produit ou un service sur un marché afin
+            de répondre aux besoins des consommateurs.
+        </p>
+
+
+        <p>
+            Cette méthode aide l'entreprise à prendre de bonnes décisions concernant
+            plusieurs éléments importants : le produit proposé, son prix, le lieu où
+            il sera vendu et les moyens utilisés pour le faire connaître.
+        </p>
+
+
+        <p>
+            Le Marketing Mix est également appelé la stratégie des <strong>4P</strong>.
+            Ces quatre éléments doivent être bien équilibrés afin de créer une offre
+            attractive et compétitive pour les clients.
+        </p>
+
+
+        <h3>
+            📚 Enseignements du cours
+        </h3>
+
+
+        <p>
+            À la fin de cette partie, l'apprenant doit être capable de :
+        </p>
+
+
+        <ul>
+
+            <li>
+                Définir le concept du Marketing Mix.
+            </li>
+
+            <li>
+                Comprendre l'importance des 4P dans une stratégie commerciale.
+            </li>
+
+            <li>
+                Identifier les différents éléments qui composent le Marketing Mix.
+            </li>
+
+            <li>
+                Expliquer comment une entreprise utilise les 4P pour réussir sur le marché.
+            </li>
+
+            <li>
+                Appliquer le Marketing Mix dans un projet réel.
+            </li>
+
+        </ul>
+
+
+        <div class="exemple">
+
+            <h3>
+                Les 4 éléments fondamentaux du Marketing Mix :
+            </h3>
+
+
+            <ul>
+
+                <li>
+                    <strong>Produit (Product) :</strong>
+                    concerne le bien ou le service proposé aux clients. Il comprend
+                    la qualité, le design, les fonctionnalités et l'image du produit.
+                </li>
+
+
+                <li>
+                    <strong>Prix (Price) :</strong>
+                    représente le montant que le client doit payer. Il doit être adapté
+                    au marché et au pouvoir d'achat des consommateurs.
+                </li>
+
+
+                <li>
+                    <strong>Distribution (Place) :</strong>
+                    concerne les moyens utilisés pour rendre le produit disponible aux
+                    clients : magasins, sites web, réseaux sociaux ou livraison.
+                </li>
+
+
+                <li>
+                    <strong>Promotion (Promotion) :</strong>
+                    regroupe toutes les actions permettant de faire connaître le produit :
+                    publicité, réseaux sociaux, promotions et communication.
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <h3>
+            Exemple concret
+        </h3>
+
+
+        <p>
+            Une entreprise qui vend des smartphones doit choisir un bon modèle de
+            téléphone (Produit), fixer un prix adapté aux clients (Prix), décider où
+            vendre les appareils (Distribution) et utiliser la publicité ou les réseaux
+            sociaux pour attirer les acheteurs (Promotion).
+        </p>
+
+
+        <h3>
+            À retenir
+        </h3>
+
+
+        <p>
+            Le Marketing Mix est un outil essentiel qui permet aux entreprises de
+            construire une stratégie commerciale efficace. Les 4P doivent fonctionner
+            ensemble pour proposer une offre qui satisfait les clients et permet à
+            l'entreprise d'atteindre ses objectifs.
+        </p>
+
+
+        <!-- VIDEO DU COURS -->
+
+        <div class="video-cours">
+
+            <h3>
+                📹 Vidéo explicative
+            </h3>
+
+
+            <iframe width="100%" height="400" src="https://www.youtube.com/embed/R4wK6_Z3iDU"
+                title="Le Marketing Mix et les 4P" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+
+
+        </div>
+
+
+    </section>
+
+
+
+
+
+
+
+
+    <!--====================================
+        PRODUIT
+=====================================-->
+
+
+    <section class="cours">
+
+
+        <h2>
+            2. Le Produit (Product)
+        </h2>
+
+
+        <p>
+            Dans le Marketing Mix, le produit représente ce que l'entreprise propose
+            au marché afin de satisfaire un besoin, résoudre un problème ou apporter
+            une solution aux consommateurs.
+        </p>
+
+
+        <p>
+            Un produit peut être un bien matériel comme un téléphone, un vêtement ou
+            une voiture, mais il peut également être un service comme une formation,
+            une application mobile, une assurance ou une prestation de conseil.
+        </p>
+
+
+        <p>
+            La stratégie produit consiste à créer une offre qui répond aux attentes
+            des clients tout en se différenciant de la concurrence.
+        </p>
+
+
+        <h3>
+            📚 Enseignements du cours
+        </h3>
+
+
+        <p>
+            À la fin de cette partie, l'apprenant doit être capable de :
+        </p>
+
+
+        <ul>
+
+            <li>
+                Comprendre le rôle du produit dans le Marketing Mix.
+            </li>
+
+            <li>
+                Identifier les éléments qui définissent un produit.
+            </li>
+
+            <li>
+                Comprendre l'importance de la qualité et du design.
+            </li>
+
+            <li>
+                Savoir créer une offre adaptée aux besoins des clients.
+            </li>
+
+            <li>
+                Comprendre comment une marque influence la décision d'achat.
+            </li>
+
+        </ul>
+
+
+
+        <h3>
+            Une bonne stratégie produit doit définir :
+        </h3>
+
+
+        <ul>
+
+
+            <li>
+                <strong>Les caractéristiques du produit :</strong>
+                les fonctionnalités, les performances et les avantages proposés aux
+                consommateurs.
+            </li>
+
+
+            <li>
+                <strong>La qualité :</strong>
+                le niveau de fiabilité, de résistance et de satisfaction attendu par
+                les clients.
+            </li>
+
+
+            <li>
+                <strong>Le design :</strong>
+                l'apparence, la forme, les couleurs et l'esthétique du produit.
+            </li>
+
+
+            <li>
+                <strong>La marque :</strong>
+                l'identité qui permet aux clients de reconnaître et de différencier
+                le produit.
+            </li>
+
+
+            <li>
+                <strong>L'expérience proposée au client :</strong>
+                l'ensemble des émotions et impressions ressenties avant, pendant et
+                après l'achat.
+            </li>
+
+
+            <li>
+                <strong>L'emballage :</strong>
+                la présentation du produit qui attire l'attention et protège le contenu.
+            </li>
+
+
+        </ul>
+
+
+
+        <div class="exemple">
+
+
+            <h3>
+                Exemple :
+            </h3>
+
+
+            <p>
+                Une entreprise qui vend des smartphones ne vend pas seulement un
+                téléphone. Elle propose également une expérience complète : la rapidité
+                de l'appareil, la qualité de l'appareil photo, la sécurité des données,
+                le design, la facilité d'utilisation et le service après-vente.
+            </p>
+
+
+            <p>
+                Si le produit répond aux attentes des utilisateurs, les clients seront
+                plus satisfaits et auront davantage confiance dans la marque.
+            </p>
+
+
+        </div>
+
+
+
+        <h3>
+            Les questions importantes pour définir un produit
+        </h3>
+
+
+        <ul>
+
+            <li>
+                Quel problème le produit permet-il de résoudre ?
+            </li>
+
+            <li>
+                Quels sont les besoins des clients ?
+            </li>
+
+            <li>
+                Qu'est-ce qui différencie ce produit des concurrents ?
+            </li>
+
+            <li>
+                Quelle valeur apporte-t-il aux consommateurs ?
+            </li>
+
+        </ul>
+
+
+
+        <h3>
+            À retenir
+        </h3>
+
+
+        <p>
+            Le produit est le premier élément du Marketing Mix. Une entreprise doit
+            proposer un produit de qualité, adapté aux besoins des consommateurs et
+            capable de se différencier afin de réussir sur le marché.
+        </p>
+
+
+
+        <!-- VIDEO DU COURS -->
+
+
+        <div class="video-cours">
+
+
+            <h3>
+                📹 Vidéo explicative
+            </h3>
+
+
+            <iframe width="100%" height="400" src="https://www.youtube.com/embed/oZSgVhyMaYk"
+                title="Le Produit dans le Marketing Mix" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+
+
+        </div>
+
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+    <!--====================================
+        PRIX
+=====================================-->
+
+
+
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+    <!--====================================
+        DISTRIBUTION
+=====================================-->
+
+    <section class="cours">
+
+
+        <h2>
+            3. Le Prix (Price)
+        </h2>
+
+
+        <p>
+            Dans le Marketing Mix, le prix représente la valeur financière que le client
+            doit payer pour obtenir un produit ou un service. Il constitue un élément
+            très important car il influence directement la décision d'achat du
+            consommateur.
+        </p>
+
+
+        <p>
+            Une entreprise doit trouver un équilibre entre un prix qui permet de réaliser
+            des bénéfices et un prix qui reste acceptable pour les clients. Un mauvais
+            choix de prix peut entraîner une perte de clients ou une diminution des
+            ventes.
+        </p>
+
+
+        <p>
+            La stratégie de prix dépend de plusieurs facteurs : le coût de production,
+            les objectifs de l'entreprise, le niveau de concurrence et le pouvoir d'achat
+            des consommateurs.
+        </p>
+
+
+
+        <h3>
+            📚 Enseignements du cours
+        </h3>
+
+
+        <p>
+            À la fin de cette partie, l'apprenant doit être capable de :
+        </p>
+
+
+        <ul>
+
+            <li>
+                Comprendre l'importance du prix dans une stratégie marketing.
+            </li>
+
+            <li>
+                Identifier les différentes stratégies de fixation des prix.
+            </li>
+
+            <li>
+                Comprendre l'influence du prix sur le comportement des consommateurs.
+            </li>
+
+            <li>
+                Savoir choisir un prix adapté au marché.
+            </li>
+
+            <li>
+                Analyser les prix des concurrents avant de prendre une décision.
+            </li>
+
+        </ul>
+
+
+
+        <h3>
+            Les stratégies de prix
+        </h3>
+
+
+        <ul>
+
+
+            <li>
+                <strong>Prix économique :</strong>
+                consiste à proposer un prix bas afin d'attirer un grand nombre de clients
+                et augmenter les ventes.
+            </li>
+
+
+            <li>
+                <strong>Prix premium :</strong>
+                permet de donner une image de qualité, de luxe ou d'exclusivité au
+                produit.
+            </li>
+
+
+            <li>
+                <strong>Réductions et promotions :</strong>
+                permettent d'attirer les clients grâce à des offres spéciales,
+                remises ou périodes de soldes.
+            </li>
+
+
+            <li>
+                <strong>Offres d'abonnement :</strong>
+                consistent à proposer un paiement régulier pour accéder à un produit ou
+                un service.
+            </li>
+
+
+            <li>
+                <strong>Prix psychologique :</strong>
+                utilise des techniques comme 9,99 $ au lieu de 10 $ afin d'influencer
+                la perception du client.
+            </li>
+
+
+        </ul>
+
+
+
+        <h3>
+            Les facteurs qui influencent le prix
+        </h3>
+
+
+        <ul>
+
+
+            <li>
+                Le coût de fabrication du produit.
+            </li>
+
+
+            <li>
+                Les prix pratiqués par les concurrents.
+            </li>
+
+
+            <li>
+                Le pouvoir d'achat des clients.
+            </li>
+
+
+            <li>
+                La qualité et la valeur perçue du produit.
+            </li>
+
+
+            <li>
+                Les objectifs commerciaux de l'entreprise.
+            </li>
+
+
+        </ul>
+
+
+
+
+        <div class="exemple">
+
+
+            <h3>
+                Exemple :
+            </h3>
+
+
+            <p>
+                Une boutique de smartphones doit fixer le prix de ses appareils. Si elle
+                choisit un prix trop élevé, certains clients peuvent acheter chez les
+                concurrents. Si elle choisit un prix trop bas, elle risque de ne pas
+                couvrir ses dépenses.
+            </p>
+
+
+            <p>
+                Elle doit donc analyser les prix du marché, la qualité de ses produits
+                et les attentes des clients afin de choisir le meilleur prix.
+            </p>
+
+
+        </div>
+
+
+
+        <h3>
+            Questions importantes pour définir un prix
+        </h3>
+
+
+        <ul>
+
+
+            <li>
+                Combien les clients sont-ils prêts à payer ?
+            </li>
+
+
+            <li>
+                Quel est le prix proposé par les concurrents ?
+            </li>
+
+
+            <li>
+                Le prix permet-il à l'entreprise de réaliser un bénéfice ?
+            </li>
+
+
+            <li>
+                Le prix correspond-il à la valeur du produit ?
+            </li>
+
+
+        </ul>
+
+
+
+        <h3>
+            À retenir
+        </h3>
+
+
+        <p>
+            Le prix est un élément essentiel du Marketing Mix. Une bonne stratégie de
+            prix permet d'attirer les clients, de rester compétitif et d'assurer la
+            rentabilité de l'entreprise.
+        </p>
+
+
+
+        <!-- VIDEO DU COURS -->
+
+
+        <div class="video-cours">
+
+
+            <h3>
+                📹 Vidéo explicative
+            </h3>
+
+
+            <iframe width="100%" height="400" src="https://www.youtube.com/embed/eeeMA_keyRc"
+                title="Le Prix dans le Marketing Mix" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+
+
+        </div>
+
+
+    </section>
+    <section class="cours">
+
+
+        <h2>
+            4. La Distribution (Place)
+        </h2>
+
+
+        <p>
+            Dans le Marketing Mix, la distribution représente l'ensemble des moyens et
+            des stratégies utilisés par une entreprise pour rendre un produit ou un
+            service disponible aux consommateurs au bon endroit et au bon moment.
+        </p>
+
+
+        <p>
+            Une bonne stratégie de distribution permet aux clients de trouver facilement
+            le produit qu'ils recherchent. Même un excellent produit peut échouer si les
+            consommateurs ne peuvent pas y accéder facilement.
+        </p>
+
+
+        <p>
+            Les entreprises doivent donc choisir les meilleurs canaux de distribution en
+            fonction de leurs clients, de leurs objectifs commerciaux et du type de
+            produit vendu.
+        </p>
+
+
+
+        <h3>
+            📚 Enseignements du cours
+        </h3>
+
+
+        <p>
+            À la fin de cette partie, l'apprenant doit être capable de :
+        </p>
+
+
+        <ul>
+
+            <li>
+                Comprendre le rôle de la distribution dans le Marketing Mix.
+            </li>
+
+            <li>
+                Identifier les différents canaux de distribution.
+            </li>
+
+            <li>
+                Comprendre l'importance de rendre un produit facilement accessible.
+            </li>
+
+            <li>
+                Choisir une méthode de distribution adaptée à un projet commercial.
+            </li>
+
+            <li>
+                Comprendre l'évolution de la distribution avec Internet et le commerce
+                électronique.
+            </li>
+
+        </ul>
+
+
+
+        <h3>
+            Les canaux de distribution
+        </h3>
+
+
+
+        <ul>
+
+
+            <li>
+                <strong>Magasin physique :</strong>
+                permet aux clients d'acheter directement les produits dans un lieu réel.
+                Exemple : boutiques, supermarchés et centres commerciaux.
+            </li>
+
+
+            <li>
+                <strong>Site web e-commerce :</strong>
+                permet aux clients de commander des produits en ligne depuis un ordinateur
+                ou un smartphone.
+            </li>
+
+
+            <li>
+                <strong>Réseaux sociaux :</strong>
+                permettent aux entreprises de présenter leurs produits et recevoir des
+                commandes directement en ligne.
+            </li>
+
+
+            <li>
+                <strong>Applications mobiles :</strong>
+                facilitent l'achat, le paiement et le suivi des commandes depuis un
+                téléphone.
+            </li>
+
+
+            <li>
+                <strong>Livraison à domicile :</strong>
+                permet aux clients de recevoir leurs achats directement chez eux.
+            </li>
+
+
+        </ul>
+
+
+
+
+        <h3>
+            Les stratégies de distribution
+        </h3>
+
+
+        <ul>
+
+
+            <li>
+                <strong>Distribution intensive :</strong>
+                consiste à rendre un produit disponible dans le plus grand nombre de
+                points de vente possible.
+            </li>
+
+
+            <li>
+                <strong>Distribution sélective :</strong>
+                consiste à choisir certains points de vente spécialisés.
+            </li>
+
+
+            <li>
+                <strong>Distribution exclusive :</strong>
+                consiste à vendre un produit uniquement dans certains endroits pour
+                préserver son image de marque.
+            </li>
+
+
+        </ul>
+
+
+
+        <div class="exemple">
+
+
+            <h3>
+                Exemple :
+            </h3>
+
+
+            <p>
+                Une boutique de vêtements peut vendre ses produits dans un magasin
+                physique, créer un site e-commerce, publier ses articles sur Facebook et
+                Instagram, puis proposer un service de livraison à domicile.
+            </p>
+
+
+            <p>
+                En utilisant plusieurs canaux de distribution, elle augmente ses chances
+                d'atteindre plus de clients et d'augmenter ses ventes.
+            </p>
+
+
+        </div>
+
+
+
+
+        <h3>
+            L'évolution de la distribution
+        </h3>
+
+
+        <p>
+            Avec le développement d'Internet, la distribution a beaucoup évolué. Les
+            consommateurs peuvent maintenant acheter des produits à distance, comparer
+            les prix et recevoir leurs commandes sans se déplacer.
+        </p>
+
+
+
+        <h3>
+            À retenir
+        </h3>
+
+
+        <p>
+            La distribution permet de mettre le produit à la disposition des clients.
+            Une entreprise doit choisir les bons canaux afin de faciliter l'achat,
+            améliorer l'expérience client et augmenter ses ventes.
+        </p>
+
+
+
+
+        <!-- VIDEO DU COURS -->
+
+
+        <div class="video-cours">
+
+
+            <h3>
+                📹 Vidéo explicative
+            </h3>
+
+
+            <iframe width="100%" height="400" src="https://www.youtube.com/embed/7q7depQBIqA"
+                title="La Distribution dans le Marketing Mix" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+
+
+        </div>
+
+
+
+    </section>
+
+
+
+
+
+
+    <!--====================================
+        PROMOTION
+=====================================-->
+
+
+    <section class="cours">
+
+
+        <h2>
+            5. La Promotion (Promotion)
+        </h2>
+
+
+        <p>
+            Dans le Marketing Mix, la promotion représente l'ensemble des actions de
+            communication utilisées par une entreprise pour informer, convaincre et
+            fidéliser les clients.
+        </p>
+
+
+        <p>
+            Elle permet de faire connaître un produit ou un service, de présenter ses
+            avantages et d'encourager les consommateurs à effectuer un achat.
+        </p>
+
+
+        <p>
+            Une bonne stratégie de promotion aide l'entreprise à améliorer sa visibilité,
+            renforcer son image de marque et créer une relation durable avec ses clients.
+        </p>
+
+
+
+        <h3>
+            📚 Enseignements du cours
+        </h3>
+
+
+        <p>
+            À la fin de cette partie, l'apprenant doit être capable de :
+        </p>
+
+
+        <ul>
+
+            <li>
+                Comprendre le rôle de la promotion dans une stratégie marketing.
+            </li>
+
+            <li>
+                Identifier les différents moyens utilisés pour communiquer avec les
+                clients.
+            </li>
+
+            <li>
+                Choisir les techniques de promotion adaptées à une entreprise.
+            </li>
+
+            <li>
+                Comprendre l'importance de la communication dans la réussite d'un produit.
+            </li>
+
+            <li>
+                Savoir utiliser les outils numériques pour promouvoir une offre.
+            </li>
+
+        </ul>
+
+
+
+        <h3>
+            Les principaux moyens de promotion
+        </h3>
+
+
+        <ul>
+
+
+            <li>
+                <strong>Publicité en ligne :</strong>
+                permet de diffuser des annonces sur Internet grâce aux moteurs de
+                recherche, aux réseaux sociaux et aux sites web.
+            </li>
+
+
+            <li>
+                <strong>Réseaux sociaux :</strong>
+                permettent aux entreprises de présenter leurs produits, échanger avec
+                les clients et développer une communauté.
+            </li>
+
+
+            <li>
+                <strong>Influence marketing :</strong>
+                consiste à collaborer avec des personnes populaires sur Internet afin
+                de promouvoir une marque auprès de leur audience.
+            </li>
+
+
+            <li>
+                <strong>Email marketing :</strong>
+                permet d'envoyer des messages, des offres et des promotions directement
+                aux clients.
+            </li>
+
+
+            <li>
+                <strong>Création de contenu :</strong>
+                consiste à produire des vidéos, articles, images ou publications utiles
+                pour attirer les consommateurs.
+            </li>
+
+
+            <li>
+                <strong>Événements et offres spéciales :</strong>
+                permettent d'attirer les clients grâce aux promotions, lancements de
+                produits et activités commerciales.
+            </li>
+
+
+        </ul>
+
+
+
+
+        <h3>
+            Les objectifs de la promotion
+        </h3>
+
+
+        <ul>
+
+
+            <li>
+                Faire connaître un produit ou une marque.
+            </li>
+
+
+            <li>
+                Attirer de nouveaux clients.
+            </li>
+
+
+            <li>
+                Augmenter les ventes.
+            </li>
+
+
+            <li>
+                Fidéliser les consommateurs existants.
+            </li>
+
+
+            <li>
+                Améliorer l'image de l'entreprise.
+            </li>
+
+
+        </ul>
+
+
+
+
+        <div class="exemple">
+
+
+            <h3>
+                Exemple :
+            </h3>
+
+
+            <p>
+                Une boutique de vêtements lance une nouvelle collection. Pour attirer
+                des clients, elle publie des photos sur Instagram, réalise des vidéos
+                sur TikTok, envoie des offres par WhatsApp Business et organise une
+                réduction spéciale pendant une semaine.
+            </p>
+
+
+            <p>
+                Grâce à ces actions de promotion, la boutique augmente sa visibilité et
+                attire davantage d'acheteurs.
+            </p>
+
+
+        </div>
+
+
+
+
+        <h3>
+            Questions importantes pour réussir une promotion
+        </h3>
+
+
+        <ul>
+
+
+            <li>
+                Quel message faut-il transmettre aux clients ?
+            </li>
+
+
+            <li>
+                Quel canal de communication utiliser ?
+            </li>
+
+
+            <li>
+                Quel public souhaite-t-on atteindre ?
+            </li>
+
+
+            <li>
+                Comment mesurer l'efficacité de la campagne ?
+            </li>
+
+
+        </ul>
+
+
+
+
+        <h3>
+            À retenir
+        </h3>
+
+
+        <p>
+            La promotion permet à une entreprise de communiquer avec ses clients et de
+            valoriser ses produits. Une bonne stratégie de promotion combine plusieurs
+            outils afin d'attirer, convaincre et fidéliser les consommateurs.
+        </p>
+
+
+
+
+        <!-- VIDEO DU COURS -->
+
+
+        <div class="video-cours">
+
+
+            <h3>
+                📹 Vidéo explicative
+            </h3>
+
+
+            <iframe width="100%" height="400" src="https://www.youtube.com/embed/IzGsA98eAIA"
+                title="La Promotion dans le Marketing Mix" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+
+
+        </div>
+
+
+
+    </section>
+
+
+
+
+
+
+
+
+    <!--====================================
+        TABLEAU RESUME
+=====================================-->
+
+
+    <section class="cours">
+
+
+        <h2>
+            6. Résumé des 4P du Marketing Mix
+        </h2>
+
+
+        <p>
+            Les 4P représentent les quatre éléments fondamentaux du Marketing Mix.
+            Ils permettent à une entreprise de construire une stratégie commerciale
+            complète en répondant aux principales questions liées à la création,
+            la vente et la communication d'un produit.
+        </p>
+
+
+        <p>
+            Pour réussir sur un marché, une entreprise doit trouver un équilibre entre
+            le Produit, le Prix, la Distribution (Place) et la Promotion. Ces quatre
+            éléments doivent fonctionner ensemble afin de satisfaire les besoins des
+            consommateurs.
+        </p>
+
+
+
+        <h3>
+            📚 Enseignements du cours
+        </h3>
+
+
+        <p>
+            À la fin de cette partie, l'apprenant doit être capable de :
+        </p>
+
+
+        <ul>
+
+            <li>
+                Comprendre la relation entre les quatre éléments du Marketing Mix.
+            </li>
+
+            <li>
+                Identifier le rôle de chaque élément dans une stratégie marketing.
+            </li>
+
+            <li>
+                Utiliser les 4P pour analyser une entreprise ou un projet.
+            </li>
+
+            <li>
+                Comprendre pourquoi une stratégie marketing doit prendre en compte
+                plusieurs dimensions.
+            </li>
+
+        </ul>
+
+
+
+        <h3>
+            Les quatre éléments du Marketing Mix
+        </h3>
+
+
+        <table border="1">
+
+
+            <tr>
+
+                <th>
+                    Élément
+                </th>
+
+
+                <th>
+                    Question à résoudre
+                </th>
+
+
+                <th>
+                    Objectif
+                </th>
+
+            </tr>
+
+
+
+            <tr>
+
+                <td>
+                    <strong>Produit (Product)</strong>
+                </td>
+
+                <td>
+                    Que proposer au client ?
+                </td>
+
+                <td>
+                    Créer une offre qui répond aux besoins des consommateurs.
+                </td>
+
+            </tr>
+
+
+
+            <tr>
+
+                <td>
+                    <strong>Prix (Price)</strong>
+                </td>
+
+                <td>
+                    Combien le client doit payer ?
+                </td>
+
+                <td>
+                    Définir un prix adapté au marché et rentable pour l'entreprise.
+                </td>
+
+            </tr>
+
+
+
+            <tr>
+
+                <td>
+                    <strong>Place (Distribution)</strong>
+                </td>
+
+                <td>
+                    Où trouver le produit ?
+                </td>
+
+                <td>
+                    Rendre le produit facilement accessible aux clients.
+                </td>
+
+            </tr>
+
+
+
+            <tr>
+
+                <td>
+                    <strong>Promotion</strong>
+                </td>
+
+                <td>
+                    Comment attirer le client ?
+                </td>
+
+                <td>
+                    Communiquer efficacement pour augmenter la visibilité du produit.
+                </td>
+
+            </tr>
+
+
+        </table>
+
+
+
+
+        <h3>
+            Exemple pratique : Une boutique de téléphones
+        </h3>
+
+
+        <div class="exemple">
+
+
+            <p>
+                Une boutique de téléphones applique les 4P de la manière suivante :
+            </p>
+
+
+            <ul>
+
+
+                <li>
+                    <strong>Produit :</strong>
+                    proposer des smartphones de qualité avec différents modèles adaptés
+                    aux besoins des clients.
+                </li>
+
+
+                <li>
+                    <strong>Prix :</strong>
+                    fixer des prix accessibles selon les différents budgets.
+                </li>
+
+
+                <li>
+                    <strong>Place :</strong>
+                    vendre dans une boutique physique, sur un site web et via WhatsApp.
+                </li>
+
+
+                <li>
+                    <strong>Promotion :</strong>
+                    utiliser Facebook, TikTok et les promotions pour attirer les clients.
+                </li>
+
+
+            </ul>
+
+
+        </div>
+
+
+
+
+        <h3>
+            À retenir
+        </h3>
+
+
+        <p>
+            Les 4P du Marketing Mix permettent à une entreprise de créer une offre
+            complète et efficace. Le Produit répond au besoin, le Prix influence
+            l'achat, la Distribution facilite l'accès et la Promotion attire les
+            clients.
+        </p>
+
+
+
+
+        <!-- VIDEO DU COURS -->
+
+
+        <div class="video-cours">
+
+
+            <h3>
+                📹 Vidéo explicative
+            </h3>
+
+
+            <iframe width="100%" height="400" src="https://www.youtube.com/embed/R4wK6_Z3iDU"
+                title="Résumé des 4P du Marketing Mix" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+
+
+        </div>
+
+
+
+    </section>
+
+
+
+
+
+
+
+
+    <!--====================================
+        CAS PRATIQUE
+=====================================-->
+
+
+    <section class="important">
+
+
+        <h2>
+            📌 Cas pratique : Boutique de vêtements
+        </h2>
+
+
+        <p>
+            Pour comprendre l'application du Marketing Mix, prenons l'exemple d'une
+            boutique de vêtements qui souhaite développer ses ventes et attirer plus
+            de clients grâce aux 4P.
+        </p>
+
+
+        <h3>
+            📚 Enseignements du cas pratique
+        </h3>
+
+
+        <p>
+            À la fin de cette étude de cas, l'apprenant doit être capable de :
+        </p>
+
+
+        <ul>
+
+            <li>
+                Appliquer les 4P du Marketing Mix dans une situation réelle.
+            </li>
+
+            <li>
+                Comprendre comment une entreprise construit son offre commerciale.
+            </li>
+
+            <li>
+                Identifier les actions nécessaires pour attirer et fidéliser les clients.
+            </li>
+
+            <li>
+                Analyser la stratégie marketing d'une petite entreprise.
+            </li>
+
+        </ul>
+
+
+
+
+        <h3>
+            Application des 4P
+        </h3>
+
+
+
+        <p>
+
+            <strong>🛍 Produit :</strong>
+            La boutique propose des vêtements modernes adaptés aux jeunes. Elle choisit
+            des modèles tendance, des couleurs attractives et des produits de qualité
+            afin de répondre aux attentes des consommateurs.
+
+        </p>
+
+
+
+        <p>
+
+            <strong>💰 Prix :</strong>
+            La boutique propose des tarifs accessibles avec des réductions et des
+            promotions afin d'attirer différents types de clients tout en restant
+            rentable.
+
+        </p>
+
+
+
+        <p>
+
+            <strong>📍 Place (Distribution) :</strong>
+            Les vêtements sont disponibles dans une boutique physique mais également
+            sur une boutique en ligne et les réseaux sociaux afin de faciliter les
+            commandes.
+
+        </p>
+
+
+
+        <p>
+
+            <strong>📢 Promotion :</strong>
+            La boutique utilise Facebook, TikTok, les publicités en ligne et les
+            influenceurs pour augmenter sa visibilité et attirer de nouveaux clients.
+
+        </p>
+
+
+
+
+        <div class="exemple">
+
+
+            <h3>
+                Analyse du résultat attendu
+            </h3>
+
+
+            <p>
+                En appliquant correctement les 4P, la boutique peut améliorer son image,
+                toucher plus de consommateurs et augmenter ses ventes.
+            </p>
+
+
+            <ul>
+
+
+                <li>
+                    Plus de visibilité grâce aux réseaux sociaux.
+                </li>
+
+
+                <li>
+                    Plus de clients grâce aux offres adaptées.
+                </li>
+
+
+                <li>
+                    Meilleure satisfaction grâce à des produits correspondant aux besoins.
+                </li>
+
+
+                <li>
+                    Augmentation du chiffre d'affaires.
+                </li>
+
+
+            </ul>
+
+
+        </div>
+
+
+
+
+        <h3>
+            Questions de réflexion
+        </h3>
+
+
+        <ul>
+
+
+            <li>
+                Quel type de clients la boutique souhaite-t-elle attirer ?
+            </li>
+
+
+            <li>
+                Quel produit répond le mieux aux besoins des jeunes ?
+            </li>
+
+
+            <li>
+                Quels moyens de communication sont les plus efficaces ?
+            </li>
+
+
+            <li>
+                Comment fidéliser les clients après un achat ?
+            </li>
+
+
+        </ul>
+
+
+
+
+        <h3>
+            À retenir
+        </h3>
+
+
+        <p>
+            Le Marketing Mix permet à une entreprise de structurer sa stratégie. En
+            maîtrisant le Produit, le Prix, la Distribution et la Promotion, une
+            boutique peut mieux répondre aux attentes de ses clients et améliorer ses
+            performances commerciales.
+        </p>
+
+
+
+
+        <!-- VIDEO DU COURS -->
+
+
+        <div class="video-cours">
+
+
+            <h3>
+                📹 Vidéo explicative
+            </h3>
+
+
+            <iframe width="100%" height="400" src="https://www.youtube.com/embed/7q7depQBIqA"
+                title="Cas pratique Marketing Mix boutique de vêtements" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+
+
+        </div>
+
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+    <!--====================================
+        EXERCICE
+=====================================-->
+
+
+    <section class="exercice">
+
+
+        <h2>
+            ✍️ Exercice pratique : Construire sa stratégie avec les 4P
+        </h2>
+
+
+        <p>
+            Vous souhaitez lancer votre propre entreprise ou créer un nouveau produit.
+            Utilisez les principes du Marketing Mix pour définir une stratégie
+            commerciale adaptée.
+        </p>
+
+
+        <h3>
+            🎯 Objectif de l'exercice
+        </h3>
+
+
+        <p>
+            Cet exercice permet de vérifier votre capacité à appliquer les 4P du
+            Marketing Mix dans une situation réelle.
+        </p>
+
+
+        <ul>
+
+            <li>
+                Identifier une offre adaptée aux besoins des clients.
+            </li>
+
+            <li>
+                Définir une stratégie de prix cohérente.
+            </li>
+
+            <li>
+                Choisir les meilleurs moyens de distribution.
+            </li>
+
+            <li>
+                Déterminer les techniques de promotion efficaces.
+            </li>
+
+        </ul>
+
+
+
+        <h3>
+            📌 Consigne
+        </h3>
+
+
+        <p>
+            Imaginez que vous créez votre propre entreprise. Décrivez votre stratégie
+            marketing en répondant aux questions suivantes :
+        </p>
+
+
+
+        <ul>
+
+
+            <li>
+                <strong>Produit :</strong>
+                Quel produit ou service allez-vous proposer aux clients ?
+            </li>
+
+
+            <li>
+                <strong>Prix :</strong>
+                Quel sera le prix de votre produit ou service ? Pourquoi avez-vous choisi
+                ce prix ?
+            </li>
+
+
+            <li>
+                <strong>Place (Distribution) :</strong>
+                Où allez-vous vendre votre produit ? (Boutique, site web, réseaux
+                sociaux, application mobile...)
+            </li>
+
+
+            <li>
+                <strong>Promotion :</strong>
+                Comment allez-vous attirer vos clients ? (Publicité, réseaux sociaux,
+                promotions, influenceurs...)
+            </li>
+
+
+        </ul>
+
+
+
+
+        <div class="exemple">
+
+
+            <h3>
+                Exemple :
+            </h3>
+
+
+            <p>
+                Une personne crée une boutique de chaussures :
+            </p>
+
+
+            <ul>
+
+
+                <li>
+                    <strong>Produit :</strong>
+                    Chaussures modernes pour jeunes.
+                </li>
+
+
+                <li>
+                    <strong>Prix :</strong>
+                    Prix accessibles avec des promotions.
+                </li>
+
+
+                <li>
+                    <strong>Place :</strong>
+                    Vente en boutique et sur WhatsApp Business.
+                </li>
+
+
+                <li>
+                    <strong>Promotion :</strong>
+                    Publicités Facebook et vidéos TikTok.
+                </li>
+
+
+            </ul>
+
+
+        </div>
+
+
+
+
+        <h3>
+            Votre réponse :
+        </h3>
+
+
+
+        <textarea placeholder="Décrivez votre stratégie Marketing Mix ici...">
+    </textarea>
+
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+    <!--====================================
+        NAVIGATION
+=====================================-->
+
+    <section class="navigation">
+
+
+        <button onclick="retourCours()">
+
+            ← Retour au chapitre
+
+        </button>
+
+
+
+        <button onclick="terminerLecon()">
+
+            ✓ Terminer la leçon
+
+        </button>
+
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+    <footer>
+
+
+        <h3>
+            BMJ SERVICE
+        </h3>
+
+
+
+        <p>
+
+            Prochaine étape :
+            Comprendre le comportement du consommateur.
+
+        </p>
+
+
+
+    </footer>
+
+    <script>
+
+
+        //====================================
+        // CHARGEMENT DE LA PAGE
+        //====================================
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+
+            let utilisateur = JSON.parse(
+
+                localStorage.getItem("bmj_current_user")
+
+            );
+
+
+
+            if (!utilisateur) {
+
+
+                window.location.href = "connexion.html";
+
+                return;
+
+
+            }
+
+
+
+            //=========================
+            // PROFIL
+            //=========================
+
+
+            document.getElementById("nomUtilisateur").innerHTML =
+
+                utilisateur.nom;
+
+
+
+
+            if (utilisateur.photo && utilisateur.photo != "") {
+
+
+                document.getElementById("photoUtilisateur").src =
+
+                    utilisateur.photo;
+
+
+            }
+
+
+
+        });
+
+
+
+
+
+
+
+        //====================================
+        // RETOUR AU CHAPITRE
+        //====================================
+
+
+        function retourCours() {
+
+
+            window.location.href = "marketing.html";
+
+
+        }
+
+
+
+
+
+
+
+
+        //====================================
+        // TERMINER LA LEÇON 3
+        //====================================
+
+
+        function terminerLecon() {
+
+
+            let utilisateur = JSON.parse(
+
+                localStorage.getItem("bmj_current_user")
+
+            );
+
+
+
+            if (!utilisateur) {
+
+
+                window.location.href = "connexion.html";
+
+                return;
+
+
+            }
+
+
+
+
+
+
+
+            //--------------------------------
+            // PROGRESSION MARKETING
+            //--------------------------------
+
+
+            let progression = JSON.parse(
+
+                localStorage.getItem("marketing_progression")
+
+            ) || [];
+
+
+
+
+
+
+
+
+
+            //==================================
+            // VERIFIER SI DEJA TERMINEE
+            //==================================
+
+
+            if (progression.includes("3")) {
+
+
+                alert(
+
+                    "Cette leçon est déjà terminée.\n\nVous pouvez la revoir quand vous voulez."
+
+                );
+
+
+
+                window.location.href = "marketing.html";
+
+
+                return;
+
+
+            }
+
+
+
+
+
+
+
+
+
+            //--------------------------------
+            // AJOUT LEÇON 3
+            //--------------------------------
+
+
+            progression.push("3");
+
+
+
+
+
+            localStorage.setItem(
+
+                "marketing_progression",
+
+                JSON.stringify(progression)
+
+            );
+
+
+
+
+
+
+
+
+
+            //--------------------------------
+            // COURS SUIVIS
+            //--------------------------------
+
+
+            if (!utilisateur.coursSuivis) {
+
+
+                utilisateur.coursSuivis = [];
+
+
+            }
+
+
+
+
+
+
+
+            if (!utilisateur.coursSuivis.includes(
+
+                "Marketing Leçon 3"
+
+            )) {
+
+
+                utilisateur.coursSuivis.push(
+
+                    "Marketing Leçon 3"
+
+                );
+
+
+            }
+
+
+
+
+
+
+
+
+
+            //--------------------------------
+            // CALCUL PROGRESSION
+            //--------------------------------
+
+
+            utilisateur.progression = progression.length * 20;
+
+
+
+
+
+            if (utilisateur.progression > 100) {
+
+
+                utilisateur.progression = 100;
+
+
+            }
+
+
+
+
+
+
+
+
+
+            //--------------------------------
+            // SAUVEGARDE SESSION
+            //--------------------------------
+
+
+            localStorage.setItem(
+
+                "bmj_current_user",
+
+                JSON.stringify(utilisateur)
+
+            );
+
+
+
+
+
+
+
+
+
+            //--------------------------------
+            // SAUVEGARDE BASE UTILISATEURS
+            //--------------------------------
+
+
+            let utilisateurs = JSON.parse(
+
+                localStorage.getItem("bmj_users")
+
+            ) || [];
+
+
+
+
+
+
+
+            let index = utilisateurs.findIndex(
+
+                u => u.id === utilisateur.id
+
+            );
+
+
+
+
+
+
+
+            if (index !== -1) {
+
+
+                utilisateurs[index] = utilisateur;
+
+
+            }
+
+
+
+
+
+
+
+            localStorage.setItem(
+
+                "bmj_users",
+
+                JSON.stringify(utilisateurs)
+
+            );
+
+
+
+
+
+
+
+
+
+            //--------------------------------
+            // MESSAGE
+            //--------------------------------
+
+
+            alert(
+
+                "🎉 Félicitations !\n\nVous avez terminé la Leçon 3 sur les 4P du Marketing."
+
+            );
+
+
+
+
+
+
+
+
+
+            //--------------------------------
+            // RETOUR AU CHAPITRE
+            //--------------------------------
+
+
+            window.location.href = "marketing.html";
+
+
+
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

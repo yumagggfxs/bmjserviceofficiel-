@@ -1,0 +1,2485 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*==================================================
+        BMJ SERVICE - CHAPITRE 4
+        SOCIAL MEDIA MARKETING - LEÇON 1
+==================================================*/
+
+
+        * {
+
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+
+        }
+
+
+
+        html {
+
+            scroll-behavior: smooth;
+
+        }
+
+
+
+        body {
+
+            background: #f4f7fb;
+            color: #333;
+            line-height: 1.8;
+
+        }
+
+
+
+
+
+        /*=====================================
+            HEADER
+======================================*/
+
+
+        header {
+
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 75px;
+            background: #fff;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 0 40px;
+
+            box-shadow: 0 5px 20px rgba(0, 0, 0, .08);
+
+            z-index: 1000;
+
+        }
+
+
+
+
+        .logo {
+
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+        }
+
+
+
+        .logo img {
+
+            width: 52px;
+            height: 52px;
+
+            border-radius: 50%;
+
+            border: 3px solid #D4AF37;
+
+        }
+
+
+
+        .logo h2 {
+
+            color: #145A86;
+
+        }
+
+
+
+        .logo span {
+
+            color: #D4AF37;
+
+        }
+
+
+
+
+
+
+        .student-profile {
+
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+        }
+
+
+
+        .student-profile img {
+
+            width: 50px;
+            height: 50px;
+
+            border-radius: 50%;
+
+            object-fit: cover;
+
+            border: 3px solid #145A86;
+
+        }
+
+
+
+        .student-profile h4 {
+
+            color: #145A86;
+
+        }
+
+
+
+        .student-profile small {
+
+            color: #777;
+
+        }
+
+
+
+
+
+
+
+
+
+        /*=====================================
+            HERO
+======================================*/
+
+
+        .lesson-hero {
+
+
+            margin-top: 75px;
+
+            height: 430px;
+
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+
+
+            background:
+
+                linear-gradient(rgba(20, 90, 134, .85),
+
+                    rgba(0, 0, 0, .75)),
+
+                url(images/social-media-banner.jpg);
+
+
+
+            background-size: cover;
+
+            background-position: center;
+
+
+        }
+
+
+
+        .overlay {
+
+
+            width: 90%;
+
+            max-width: 1000px;
+
+            color: white;
+
+            text-align: center;
+
+
+        }
+
+
+
+        .overlay span {
+
+
+            background: #D4AF37;
+
+            color: #145A86;
+
+            padding: 8px 25px;
+
+            border-radius: 50px;
+
+            font-weight: bold;
+
+            display: inline-block;
+
+            margin-bottom: 20px;
+
+
+        }
+
+
+
+        .overlay h1 {
+
+
+            font-size: 48px;
+
+            margin-bottom: 20px;
+
+
+        }
+
+
+
+        .overlay p {
+
+
+            font-size: 20px;
+
+
+        }
+
+
+
+
+
+
+
+
+
+        /*=====================================
+        BLOCS PRINCIPAUX
+======================================*/
+
+
+        .objectif,
+        .cours,
+        .important,
+        .exercice {
+
+
+            width: 90%;
+
+            max-width: 1100px;
+
+            margin: 45px auto;
+
+            background: white;
+
+            padding: 40px;
+
+            border-radius: 25px;
+
+            box-shadow:
+
+                0 10px 30px rgba(0, 0, 0, .08);
+
+
+        }
+
+
+
+
+
+
+        .objectif h2,
+        .cours h2,
+        .important h2,
+        .exercice h2 {
+
+
+            color: #145A86;
+
+            border-left: 7px solid #D4AF37;
+
+            padding-left: 15px;
+
+            margin-bottom: 25px;
+
+
+        }
+
+
+
+
+        .cours h3 {
+
+
+            color: #145A86;
+
+            margin-top: 30px;
+
+            margin-bottom: 15px;
+
+
+        }
+
+
+
+
+        .cours p {
+
+
+            text-align: justify;
+
+            margin-bottom: 18px;
+
+
+        }
+
+
+
+        .cours ul,
+        .objectif ul,
+        .exercice ul {
+
+
+            margin-left: 25px;
+
+        }
+
+
+
+        .cours li,
+        .objectif li,
+        .exercice li {
+
+
+            margin-bottom: 12px;
+
+
+        }
+
+
+
+
+
+
+
+
+
+        /*=====================================
+            VIDEO
+======================================*/
+
+
+        .video-cours {
+
+
+            margin-top: 35px;
+
+            background: #f8fbff;
+
+            padding: 25px;
+
+            border-radius: 20px;
+
+            border-left: 6px solid #145A86;
+
+
+        }
+
+
+
+        .video-cours h3 {
+
+
+            color: #145A86;
+
+            margin-bottom: 20px;
+
+
+        }
+
+
+
+        .video-cours iframe {
+
+
+            border-radius: 15px;
+
+        }
+
+
+
+
+
+
+
+
+
+        /*=====================================
+            A RETENIR
+======================================*/
+
+
+        .important {
+
+
+            background:
+
+                linear-gradient(135deg,
+
+                    #145A86,
+
+                    #0b3b59);
+
+
+            color: white;
+
+
+        }
+
+
+
+        .important h2 {
+
+
+            color: white;
+
+            border-left-color: #D4AF37;
+
+
+        }
+
+
+
+        .important p {
+
+
+            margin-bottom: 15px;
+
+            font-size: 17px;
+
+
+        }
+
+
+
+
+
+
+
+
+
+        /*=====================================
+            EXERCICE
+======================================*/
+
+
+        .exercice {
+
+
+            background: #fff;
+
+
+        }
+
+
+
+        .exercice textarea {
+
+
+            width: 100%;
+
+            height: 180px;
+
+            margin-top: 25px;
+
+            padding: 15px;
+
+            border-radius: 15px;
+
+            border: 2px solid #ddd;
+
+            resize: vertical;
+
+            font-size: 16px;
+
+            outline: none;
+
+
+        }
+
+
+
+        .exercice textarea:focus {
+
+
+            border-color: #145A86;
+
+
+        }
+
+
+
+
+
+
+
+
+
+        /*=====================================
+            NAVIGATION
+======================================*/
+
+
+        .navigation {
+
+
+            width: 90%;
+
+            max-width: 1100px;
+
+            margin: 40px auto 70px;
+
+            display: flex;
+
+            gap: 20px;
+
+
+        }
+
+
+
+
+        .navigation button {
+
+
+            flex: 1;
+
+            padding: 18px;
+
+            border: none;
+
+            border-radius: 15px;
+
+            font-size: 17px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            transition: .3s;
+
+
+        }
+
+
+
+        .navigation button:first-child {
+
+
+            background: #145A86;
+
+            color: white;
+
+
+        }
+
+
+
+
+        .navigation button:last-child {
+
+
+            background: #D4AF37;
+
+            color: #145A86;
+
+
+        }
+
+
+
+
+        .navigation button:hover {
+
+
+            transform: translateY(-5px);
+
+            box-shadow: 0 12px 25px rgba(0, 0, 0, .2);
+
+
+        }
+
+
+
+
+
+
+
+
+
+        /*=====================================
+            FOOTER
+======================================*/
+
+
+        footer {
+
+
+            background: #145A86;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 40px 25px;
+
+
+        }
+
+
+
+        footer h3 {
+
+
+            color: #D4AF37;
+
+            font-size: 28px;
+
+            margin-bottom: 15px;
+
+
+        }
+
+
+
+
+
+
+
+
+
+        /*=====================================
+            RESPONSIVE TABLETTE
+======================================*/
+
+
+        @media(max-width:900px) {
+
+
+
+            header {
+
+
+                padding: 0 15px;
+
+
+            }
+
+
+
+            .student-profile small {
+
+
+                display: none;
+
+
+            }
+
+
+
+
+            .overlay h1 {
+
+
+                font-size: 35px;
+
+
+            }
+
+
+
+            .overlay p {
+
+
+                font-size: 16px;
+
+
+            }
+
+
+
+            .objectif,
+            .cours,
+            .important,
+            .exercice {
+
+
+                width: 94%;
+
+                padding: 25px;
+
+
+            }
+
+
+
+            .navigation {
+
+
+                flex-direction: column;
+
+
+            }
+
+
+        }
+
+
+
+
+
+
+
+
+
+        /*=====================================
+            RESPONSIVE MOBILE
+======================================*/
+
+
+        @media(max-width:500px) {
+
+
+
+            .logo h2 {
+
+
+                font-size: 19px;
+
+
+            }
+
+
+
+            .logo img {
+
+
+                width: 42px;
+
+                height: 42px;
+
+
+            }
+
+
+
+
+            .lesson-hero {
+
+
+                height: 360px;
+
+
+            }
+
+
+
+
+            .overlay h1 {
+
+
+                font-size: 28px;
+
+
+            }
+
+
+
+            .overlay p {
+
+
+                font-size: 14px;
+
+
+            }
+
+
+
+            .objectif h2,
+            .cours h2,
+            .important h2,
+            .exercice h2 {
+
+
+                font-size: 22px;
+
+
+            }
+
+
+
+            .cours p {
+
+
+                text-align: left;
+
+
+            }
+
+
+
+            .video-cours iframe {
+
+
+                height: 220px;
+
+
+            }
+
+
+
+            .navigation button {
+
+
+                font-size: 15px;
+
+
+            }
+
+
+
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <!--====================================
+            HEADER
+=====================================-->
+
+    <header>
+
+
+        <div class="logo">
+
+
+            <img src="images/logo.png" alt="BMJ SERVICE">
+
+
+            <h2>
+
+                BMJ <span>SERVICE</span>
+
+            </h2>
+
+
+        </div>
+
+
+
+
+
+        <div class="student-profile">
+
+
+            <img id="photoUtilisateur" src="images/user.png" alt="Photo">
+
+
+
+            <div>
+
+
+                <h4 id="nomUtilisateur">
+
+                    Apprenant
+
+                </h4>
+
+
+
+
+                <small id="domaineUtilisateur">
+
+                    Marketing Digital
+
+                </small>
+
+
+            </div>
+
+
+        </div>
+
+
+
+    </header>
+
+
+
+
+
+
+
+
+
+    <!--====================================
+            HERO
+=====================================-->
+
+    <section class="lesson-hero">
+
+
+
+        <div class="overlay">
+
+
+
+            <span>
+
+                LEÇON 1
+
+            </span>
+
+
+
+
+            <h1>
+
+                Comprendre les réseaux sociaux et leur rôle marketing
+
+            </h1>
+
+
+
+
+
+            <p>
+
+                Découvrez comment les réseaux sociaux sont devenus
+                des outils essentiels pour communiquer avec les clients,
+                développer une marque et augmenter la visibilité d'une entreprise.
+
+            </p>
+
+
+
+
+        </div>
+
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+    <!--====================================
+            OBJECTIFS
+=====================================-->
+
+    <section class="objectif">
+
+
+
+        <h2>
+
+            Objectifs de cette leçon
+
+        </h2>
+
+
+
+
+        <ul>
+
+
+            <li>
+
+                Comprendre le concept du Social Media Marketing.
+
+            </li>
+
+
+
+
+            <li>
+
+                Découvrir l'importance des réseaux sociaux pour une entreprise.
+
+            </li>
+
+
+
+
+            <li>
+
+                Identifier les principaux réseaux sociaux utilisés en marketing.
+
+            </li>
+
+
+
+
+            <li>
+
+                Comprendre comment choisir une plateforme adaptée à son activité.
+
+            </li>
+
+
+
+
+            <li>
+
+                Découvrir les avantages d'une présence professionnelle en ligne.
+
+            </li>
+
+
+        </ul>
+
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+    <!--====================================
+            COURS
+=====================================-->
+
+    <section class="cours">
+
+
+
+        <h2>
+
+            1. Qu'est-ce que le Social Media Marketing ?
+
+        </h2>
+
+
+
+
+
+        <p>
+
+            Le Social Media Marketing désigne l'ensemble des techniques
+            utilisées par une entreprise pour promouvoir ses produits,
+            ses services ou sa marque à travers les réseaux sociaux.
+
+        </p>
+
+
+
+
+        <p>
+
+            Il permet aux entreprises de communiquer directement avec
+            leurs clients, de créer une communauté et d'améliorer leur
+            visibilité sur Internet.
+
+        </p>
+
+
+
+
+        <p>
+
+            Aujourd'hui, les réseaux sociaux sont devenus des outils
+            incontournables pour développer une activité, attirer de
+            nouveaux clients et construire une relation durable avec
+            son audience.
+
+        </p>
+
+
+
+
+
+        <h3>
+
+            📚 Enseignements du cours
+
+        </h3>
+
+
+
+
+        <p>
+
+            À la fin de cette partie, l'apprenant doit être capable de :
+
+        </p>
+
+
+
+
+        <ul>
+
+
+            <li>
+
+                Définir le Social Media Marketing.
+
+            </li>
+
+
+
+            <li>
+
+                Expliquer son importance pour une entreprise.
+
+            </li>
+
+
+
+            <li>
+
+                Identifier les différentes plateformes sociales.
+
+            </li>
+
+
+
+            <li>
+
+                Comprendre le rôle des réseaux sociaux dans une stratégie marketing.
+
+            </li>
+
+
+
+        </ul>
+
+
+
+
+
+    </section>
+    <!--====================================
+        2. LES PRINCIPAUX RESEAUX SOCIAUX
+=====================================-->
+
+    <section class="cours">
+
+
+        <h2>
+
+            2. Les principaux réseaux sociaux en marketing
+
+        </h2>
+
+
+
+
+        <p>
+
+            Chaque réseau social possède ses propres caractéristiques,
+            son type d'audience et ses objectifs marketing.
+            Une entreprise doit choisir les plateformes adaptées à
+            son activité et à ses clients.
+
+        </p>
+
+
+
+
+
+
+        <h3>
+
+            📘 Facebook
+
+        </h3>
+
+
+
+
+        <p>
+
+            Facebook est l'un des réseaux sociaux les plus utilisés
+            dans le monde. Il permet aux entreprises de créer une page
+            professionnelle, publier du contenu, communiquer avec les
+            clients et réaliser des campagnes publicitaires.
+
+        </p>
+
+
+
+
+        <ul>
+
+
+            <li>
+
+                Création d'une page entreprise.
+
+            </li>
+
+
+            <li>
+
+                Publication de photos, vidéos et actualités.
+
+            </li>
+
+
+            <li>
+
+                Interaction avec les clients.
+
+            </li>
+
+
+            <li>
+
+                Publicité ciblée grâce à Facebook Ads.
+
+            </li>
+
+
+        </ul>
+
+
+
+
+
+        <h3>
+
+            📸 Instagram
+
+        </h3>
+
+
+
+
+        <p>
+
+            Instagram est une plateforme basée principalement sur
+            le contenu visuel. Elle est très utilisée par les marques
+            pour présenter leurs produits, montrer leur identité visuelle
+            et créer une relation proche avec leur communauté.
+
+        </p>
+
+
+
+
+        <ul>
+
+
+            <li>
+
+                Publication d'images et vidéos professionnelles.
+
+            </li>
+
+
+            <li>
+
+                Utilisation des stories et reels.
+
+            </li>
+
+
+            <li>
+
+                Mise en valeur des produits et services.
+
+            </li>
+
+
+            <li>
+
+                Collaboration avec des influenceurs.
+
+            </li>
+
+
+        </ul>
+
+
+
+
+
+
+        <h3>
+
+            🎵 TikTok
+
+        </h3>
+
+
+
+
+        <p>
+
+            TikTok est un réseau social basé sur les vidéos courtes.
+            Il permet aux entreprises de toucher rapidement une grande
+            audience grâce à des contenus créatifs, divertissants et
+            adaptés aux tendances.
+
+        </p>
+
+
+
+
+        <ul>
+
+
+            <li>
+
+                Création de vidéos courtes et attractives.
+
+            </li>
+
+
+            <li>
+
+                Participation aux tendances.
+
+            </li>
+
+
+            <li>
+
+                Augmentation de la visibilité d'une marque.
+
+            </li>
+
+
+            <li>
+
+                Création d'une communauté jeune et engagée.
+
+            </li>
+
+
+        </ul>
+
+
+
+
+
+
+        <h3>
+
+            💼 LinkedIn
+
+        </h3>
+
+
+
+
+        <p>
+
+            LinkedIn est un réseau social professionnel utilisé
+            principalement par les entreprises, les entrepreneurs
+            et les professionnels. Il permet de développer son image
+            professionnelle et de créer des relations d'affaires.
+
+        </p>
+
+
+
+
+        <ul>
+
+
+            <li>
+
+                Présentation d'une entreprise.
+
+            </li>
+
+
+            <li>
+
+                Partage de contenus professionnels.
+
+            </li>
+
+
+            <li>
+
+                Recherche de partenaires.
+
+            </li>
+
+
+            <li>
+
+                Développement du réseau professionnel.
+
+            </li>
+
+
+        </ul>
+
+
+
+
+
+
+
+        <h3>
+
+            Exemple concret : BMJ SERVICE
+
+        </h3>
+
+
+
+
+        <p>
+
+            BMJ SERVICE peut utiliser Facebook pour informer les
+            apprenants sur les nouvelles formations, Instagram pour
+            présenter ses cours avec des visuels attractifs,
+            TikTok pour partager des vidéos éducatives courtes et
+            LinkedIn pour développer des relations professionnelles.
+
+        </p>
+
+
+
+
+
+    </section>
+    <!--====================================
+        3. CHOISIR LE BON RESEAU SOCIAL
+=====================================-->
+
+    <section class="cours">
+
+
+        <h2>
+
+            3. Comment choisir le bon réseau social ?
+
+        </h2>
+
+
+
+
+        <p>
+
+            Toutes les entreprises n'ont pas besoin d'être présentes
+            sur tous les réseaux sociaux. Le choix d'une plateforme
+            dépend des objectifs de l'entreprise, de son activité et
+            du profil de ses clients.
+
+        </p>
+
+
+
+
+        <p>
+
+            Une bonne stratégie consiste à identifier où se trouve
+            son audience principale et à adapter son contenu au
+            fonctionnement de chaque réseau.
+
+        </p>
+
+
+
+
+
+
+        <h3>
+
+            Les critères de choix d'un réseau social
+
+        </h3>
+
+
+
+
+        <ul>
+
+
+            <li>
+
+                🎯 Définir son objectif :
+                vendre, informer, développer sa notoriété ou créer une communauté.
+
+            </li>
+
+
+
+            <li>
+
+                👥 Connaître son audience :
+                âge, besoins, habitudes et comportement en ligne.
+
+            </li>
+
+
+
+            <li>
+
+                📱 Adapter son contenu :
+                vidéos, images, articles ou publications professionnelles.
+
+            </li>
+
+
+
+            <li>
+
+                📊 Analyser les résultats :
+                engagement, abonnés, commentaires et interactions.
+
+            </li>
+
+
+        </ul>
+
+
+
+
+
+
+        <h3>
+
+            Exemple de choix selon l'objectif
+
+        </h3>
+
+
+
+
+        <ul>
+
+
+            <li>
+
+                🛒 Une boutique en ligne peut utiliser Instagram
+                pour présenter ses produits.
+
+            </li>
+
+
+
+
+            <li>
+
+                🎓 Une plateforme de formation peut utiliser Facebook
+                et TikTok pour attirer des apprenants.
+
+            </li>
+
+
+
+
+            <li>
+
+                💼 Une entreprise professionnelle peut privilégier LinkedIn
+                pour développer ses relations.
+
+            </li>
+
+
+
+        </ul>
+
+
+
+
+
+
+
+        <h3>
+
+            Avantages du Social Media Marketing
+
+        </h3>
+
+
+
+
+        <ul>
+
+
+            <li>
+
+                ✔ Augmente la visibilité d'une entreprise.
+
+            </li>
+
+
+
+            <li>
+
+                ✔ Permet de communiquer directement avec les clients.
+
+            </li>
+
+
+
+            <li>
+
+                ✔ Aide à créer une communauté autour d'une marque.
+
+            </li>
+
+
+
+            <li>
+
+                ✔ Permet de promouvoir des produits et services rapidement.
+
+            </li>
+
+
+
+            <li>
+
+                ✔ Offre des outils pour mesurer les performances.
+
+            </li>
+
+
+
+        </ul>
+
+
+
+
+
+
+
+        <h3>
+
+            Limites des réseaux sociaux
+
+        </h3>
+
+
+
+
+        <ul>
+
+
+            <li>
+
+                ❌ Nécessitent une publication régulière.
+
+            </li>
+
+
+
+
+            <li>
+
+                ❌ Demandent du temps pour gérer une communauté.
+
+            </li>
+
+
+
+
+            <li>
+
+                ❌ La concurrence est très importante.
+
+            </li>
+
+
+
+
+            <li>
+
+                ❌ Une mauvaise communication peut nuire à l'image d'une marque.
+
+            </li>
+
+
+
+
+            <li>
+
+                ❌ Les résultats peuvent prendre du temps.
+
+            </li>
+
+
+
+        </ul>
+
+
+
+
+
+
+
+        <h3>
+
+            📌 À retenir
+
+        </h3>
+
+
+
+
+        <p>
+
+            Le Social Media Marketing ne consiste pas seulement à
+            publier sur les réseaux sociaux. Il faut créer une stratégie,
+            choisir les bonnes plateformes et proposer du contenu adapté
+            afin de construire une relation durable avec son audience.
+
+        </p>
+
+
+
+
+
+
+        <div class="video-cours">
+
+
+            <h3>
+
+                📹 Vidéo explicative
+
+            </h3>
+
+
+
+
+            <iframe width="100%" height="400" src="https://www.youtube.com/embed/7q7depQBIqA"
+                title="Social Media Marketing" frameborder="0" allowfullscreen>
+
+            </iframe>
+
+
+
+        </div>
+
+
+
+
+    </section>
+    <!--====================================
+            À RETENIR
+=====================================-->
+
+    <section class="important">
+
+
+        <h2>
+
+            📌 À retenir
+
+        </h2>
+
+
+
+
+        <p>
+
+            ✔ Le Social Media Marketing utilise les réseaux sociaux
+            pour développer la visibilité d'une entreprise.
+
+        </p>
+
+
+
+
+        <p>
+
+            ✔ Facebook, Instagram, TikTok et LinkedIn possèdent
+            chacun des objectifs et des audiences différentes.
+
+        </p>
+
+
+
+
+        <p>
+
+            ✔ Une entreprise doit choisir les plateformes adaptées
+            à ses clients et à ses objectifs.
+
+        </p>
+
+
+
+
+        <p>
+
+            ✔ La création de contenu régulier permet de construire
+            une communauté engagée.
+
+        </p>
+
+
+
+
+        <p>
+
+            ✔ Une bonne stratégie sociale améliore la notoriété
+            et la relation avec les clients.
+
+        </p>
+
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+    <!--====================================
+            EXERCICE
+=====================================-->
+
+    <section class="exercice">
+
+
+        <h2>
+
+            📝 Exercice pratique
+
+        </h2>
+
+
+
+
+        <p>
+
+            Imaginez que vous créez une entreprise et que vous
+            souhaitez la promouvoir sur les réseaux sociaux.
+
+            Répondez aux questions suivantes :
+
+        </p>
+
+
+
+
+
+        <ul>
+
+
+            <li>
+
+                Quel est le nom de votre entreprise ?
+
+            </li>
+
+
+
+
+            <li>
+
+                Quel réseau social allez-vous utiliser en priorité ?
+
+            </li>
+
+
+
+
+            <li>
+
+                Pourquoi avez-vous choisi cette plateforme ?
+
+            </li>
+
+
+
+
+            <li>
+
+                Quel type de contenu allez-vous publier ?
+
+            </li>
+
+
+
+
+            <li>
+
+                Quel objectif souhaitez-vous atteindre ?
+
+            </li>
+
+
+
+        </ul>
+
+
+
+
+
+
+        <textarea placeholder="Écrivez votre réponse ici..."></textarea>
+
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+    <!--====================================
+            NAVIGATION
+=====================================-->
+
+    <section class="navigation">
+
+
+        <button onclick="retourCours()">
+
+
+            ← Retour au chapitre
+
+
+        </button>
+
+
+
+
+
+
+        <button onclick="terminerLecon()">
+
+
+            ✓ Terminer la leçon
+
+
+        </button>
+
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+    <!--====================================
+            FOOTER
+=====================================-->
+
+    <footer>
+
+
+        <h3>
+
+            BMJ SERVICE
+
+        </h3>
+
+
+
+
+        <p>
+
+            Félicitations ! Vous avez terminé la Leçon 1 du chapitre
+
+            <strong>Social Media Marketing</strong>.
+
+            Dans la prochaine leçon, vous découvrirez comment créer
+
+            une stratégie de contenu efficace pour développer votre
+
+            présence sur les réseaux sociaux.
+
+        </p>
+
+
+
+
+    </footer>
+    <script>
+
+
+        //==================================================
+        // CHAPITRE 4 - LEÇON 1
+        // SOCIAL MEDIA MARKETING
+        //==================================================
+
+
+
+
+
+
+        //====================================
+        // CHARGEMENT DE LA PAGE
+        //====================================
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+
+
+            let utilisateur = JSON.parse(
+
+                localStorage.getItem("bmj_current_user")
+
+            );
+
+
+
+
+
+            //==============================
+            // AFFICHAGE DU PROFIL
+            //==============================
+
+
+
+            if (utilisateur) {
+
+
+
+                document.getElementById("nomUtilisateur").innerHTML = utilisateur.nom;
+
+
+
+
+                if (utilisateur.photo && utilisateur.photo !== "") {
+
+
+                    document.getElementById("photoUtilisateur").src = utilisateur.photo;
+
+
+                }
+
+
+
+            } else {
+
+
+
+                document.getElementById("nomUtilisateur").innerHTML = "Apprenant";
+
+
+                document.getElementById("domaineUtilisateur").innerHTML = "Marketing Digital";
+
+
+
+            }
+
+
+
+        });
+
+
+
+
+
+
+
+
+
+        //====================================
+        // RETOUR AU CHAPITRE
+        //====================================
+
+
+        function retourCours() {
+
+
+
+            window.location.href = "social_media.php";
+
+
+
+        }
+
+
+
+
+
+
+
+
+
+        //====================================
+        // TERMINER LA LEÇON 1
+        //====================================
+
+
+        function terminerLecon() {
+
+
+
+            let utilisateur = JSON.parse(
+
+                localStorage.getItem("bmj_current_user")
+
+            );
+
+
+
+
+
+
+
+            //==============================
+            // PROGRESSION CHAPITRE 4
+            //==============================
+
+
+
+            let progression = JSON.parse(
+
+
+                localStorage.getItem("socialmedia_progression")
+
+
+            ) || [];
+
+
+
+
+
+
+
+            //==============================
+            // VERIFICATION LEÇON DEJA FAITE
+            //==============================
+
+
+
+            if (progression.includes("1")) {
+
+
+
+                alert(
+
+                    "Cette leçon est déjà terminée."
+
+                );
+
+
+
+                window.location.href = "social_media.php";
+
+
+                return;
+
+
+
+            }
+
+
+
+
+
+
+
+
+            //==============================
+            // AJOUT LEÇON 1
+            //==============================
+
+
+
+            progression.push("1");
+
+
+
+
+
+            localStorage.setItem(
+
+
+
+                "socialmedia_progression",
+
+
+
+                JSON.stringify(progression)
+
+
+
+            );
+
+
+
+
+
+
+
+
+
+            //==============================
+            // SAUVEGARDE UTILISATEUR
+            //==============================
+
+
+
+            if (utilisateur) {
+
+
+
+
+
+
+                if (!utilisateur.coursSuivis) {
+
+
+                    utilisateur.coursSuivis = [];
+
+
+                }
+
+
+
+
+
+
+
+
+
+                if (!utilisateur.coursSuivis.includes(
+
+
+
+                    "Social Media Marketing - Leçon 1"
+
+
+
+                )) {
+
+
+
+                    utilisateur.coursSuivis.push(
+
+
+
+                        "Social Media Marketing - Leçon 1"
+
+
+
+                    );
+
+
+
+                }
+
+
+
+
+
+
+
+
+
+                //==============================
+                // CALCUL PROGRESSION
+                //==============================
+
+
+
+                let totalLecons = 3;
+
+
+                utilisateur.progressionSocialMedia =
+
+
+                    Math.round(
+
+                        (progression.length / totalLecons) * 100
+
+                    );
+
+
+
+
+
+
+                localStorage.setItem(
+
+
+
+                    "bmj_current_user",
+
+
+
+                    JSON.stringify(utilisateur)
+
+
+
+                );
+
+
+
+
+
+
+
+
+
+                //==============================
+                // MISE A JOUR DES UTILISATEURS
+                //==============================
+
+
+
+                let utilisateurs = JSON.parse(
+
+
+
+                    localStorage.getItem("bmj_users")
+
+
+
+                ) || [];
+
+
+
+
+
+
+                let index = utilisateurs.findIndex(
+
+
+
+                    u => u.id === utilisateur.id
+
+
+
+                );
+
+
+
+
+
+
+
+                if (index !== -1) {
+
+
+
+                    utilisateurs[index] = utilisateur;
+
+
+
+                }
+
+
+
+
+
+
+
+
+                localStorage.setItem(
+
+
+
+                    "bmj_users",
+
+
+
+                    JSON.stringify(utilisateurs)
+
+
+
+                );
+
+
+
+            }
+
+
+
+
+
+
+
+
+
+            //==============================
+            // MESSAGE
+            //==============================
+
+
+
+            alert(
+
+
+
+                "🎉 Félicitations !\n\nVous avez terminé la Leçon 1 : Comprendre les réseaux sociaux et leur rôle marketing."
+
+
+
+            );
+
+
+
+
+
+
+
+
+
+            //==============================
+            // RETOUR AU CHAPITRE
+            //==============================
+
+
+
+            window.location.href = "social_media.html";
+
+
+
+        }
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

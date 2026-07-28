@@ -1,0 +1,1272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*==================================================
+        BMJ SERVICE - PAGE CERTIFICAT
+==================================================*/
+
+        * {
+
+            margin: 0;
+
+            padding: 0;
+
+            box-sizing: border-box;
+
+            font-family: "Poppins", sans-serif;
+
+        }
+
+        body {
+
+            background: linear-gradient(135deg, #081b29, #0b2940, #103c5d);
+
+            overflow-x: hidden;
+
+            color: white;
+
+        }
+
+        /*==================================================
+        HERO
+==================================================*/
+
+        .hero-certificate {
+
+            position: relative;
+
+            min-height: 100vh;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            text-align: center;
+
+            padding: 40px;
+
+            overflow: hidden;
+
+        }
+
+        .hero-overlay {
+
+            position: absolute;
+
+            width: 100%;
+
+            height: 100%;
+
+            background:
+                radial-gradient(circle at top, #20c99755, transparent 55%),
+                radial-gradient(circle at bottom, #ffc10730, transparent 50%);
+
+            animation: pulseBackground 6s infinite alternate;
+
+        }
+
+        .hero-content {
+
+            position: relative;
+
+            z-index: 2;
+
+            max-width: 850px;
+
+        }
+
+        .hero-badge {
+
+            display: inline-block;
+
+            background: rgba(255, 255, 255, .15);
+
+            border: 1px solid rgba(255, 255, 255, .25);
+
+            padding: 12px 25px;
+
+            border-radius: 40px;
+
+            font-size: 14px;
+
+            margin-bottom: 25px;
+
+            backdrop-filter: blur(10px);
+
+        }
+
+        .hero-content h1 {
+
+            font-size: 65px;
+
+            margin-bottom: 20px;
+
+            color: #ffd700;
+
+            animation: zoomTitle 2s infinite alternate;
+
+        }
+
+        .hero-content p {
+
+            font-size: 20px;
+
+            line-height: 1.8;
+
+            color: #e5e5e5;
+
+        }
+
+        /*==================================================
+        BMJ SERVICE
+==================================================*/
+
+        .bmj-section {
+
+            position: relative;
+
+            padding: 120px 20px;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            overflow: hidden;
+
+        }
+
+        .circle {
+
+            position: absolute;
+
+            border-radius: 50%;
+
+            filter: blur(20px);
+
+            animation: floatCircle 8s infinite ease-in-out;
+
+        }
+
+        .circle1 {
+
+            width: 220px;
+
+            height: 220px;
+
+            background: #ffc107;
+
+            left: 10%;
+
+            top: 25%;
+
+        }
+
+        .circle2 {
+
+            width: 280px;
+
+            height: 280px;
+
+            background: #20c997;
+
+            right: 10%;
+
+            top: 10%;
+
+            animation-delay: 2s;
+
+        }
+
+        .circle3 {
+
+            width: 180px;
+
+            height: 180px;
+
+            background: #0dcaf0;
+
+            bottom: 5%;
+
+            left: 45%;
+
+            animation-delay: 4s;
+
+        }
+
+        .bmj-logo-box {
+
+            position: relative;
+
+            z-index: 2;
+
+            text-align: center;
+
+            padding: 70px 40px;
+
+            border-radius: 25px;
+
+            background: rgba(255, 255, 255, .08);
+
+            backdrop-filter: blur(15px);
+
+            border: 1px solid rgba(255, 255, 255, .15);
+
+            box-shadow: 0 0 40px rgba(255, 215, 0, .35);
+
+        }
+
+        .bmj-logo {
+
+            font-size: 70px;
+
+            color: #ffd700;
+
+            letter-spacing: 8px;
+
+            animation: glowLogo 2s infinite alternate;
+
+        }
+
+        .bmj-logo-box p {
+
+            margin-top: 20px;
+
+            font-size: 22px;
+
+            color: #ffffff;
+
+            letter-spacing: 2px;
+
+        }
+
+        /*==================================================
+        CERTIFICAT
+==================================================*/
+
+        .certificate-section {
+
+            padding: 80px 20px;
+
+            display: flex;
+
+            justify-content: center;
+
+        }
+
+        .certificate-card {
+
+            width: 900px;
+
+            max-width: 100%;
+
+            background: rgba(255, 255, 255, .08);
+
+            backdrop-filter: blur(20px);
+
+            border-radius: 30px;
+
+            padding: 50px;
+
+            border: 1px solid rgba(255, 255, 255, .15);
+
+            text-align: center;
+
+            transition: .5s;
+
+        }
+
+        .certificate-card:hover {
+
+            transform: translateY(-10px);
+
+            box-shadow: 0 25px 60px rgba(0, 0, 0, .4);
+
+        }
+
+        .certificate-icon {
+
+            font-size: 90px;
+
+            animation: rotateCup 4s linear infinite;
+
+        }
+
+        .certificate-card h2 {
+
+            color: #ffd700;
+
+            font-size: 42px;
+
+            margin: 25px 0;
+
+        }
+
+        .certificate-card p {
+
+            font-size: 18px;
+
+            color: #ddd;
+
+            line-height: 1.9;
+
+        }
+
+        .certificate-details {
+
+            margin-top: 40px;
+
+            display: grid;
+
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
+            gap: 20px;
+
+        }
+
+        .certificate-details div {
+
+            background: rgba(255, 255, 255, .08);
+
+            padding: 25px;
+
+            border-radius: 15px;
+
+        }
+
+        .certificate-details strong {
+
+            display: block;
+
+            color: #ffd700;
+
+            margin-bottom: 12px;
+
+        }
+
+        .status {
+
+            color: #00ff95;
+
+            font-weight: bold;
+
+        }
+
+        /*==================================================
+        PREMIUM
+==================================================*/
+
+        .premium-section {
+
+            position: relative;
+
+            padding: 100px 20px;
+
+            display: flex;
+
+            justify-content: center;
+
+            overflow: hidden;
+
+        }
+
+        .premium-glow {
+
+            position: absolute;
+
+            width: 550px;
+
+            height: 550px;
+
+            background: radial-gradient(#ffd70055, transparent);
+
+            animation: pulsePremium 5s infinite;
+
+        }
+
+        .premium-card {
+
+            position: relative;
+
+            z-index: 2;
+
+            width: 700px;
+
+            max-width: 100%;
+
+            padding: 60px;
+
+            text-align: center;
+
+            border-radius: 30px;
+
+            background: linear-gradient(145deg, #ffc107, #ff9800);
+
+            color: #222;
+
+            animation: premiumFloat 3s infinite ease-in-out;
+
+            box-shadow: 0 30px 60px rgba(0, 0, 0, .35);
+
+        }
+
+        .premium-star {
+
+            font-size: 70px;
+
+            animation: rotateStar 5s linear infinite;
+
+        }
+
+        .premium-card h2 {
+
+            margin: 20px 0;
+
+            font-size: 40px;
+
+        }
+
+        .premium-card p {
+
+            line-height: 1.8;
+
+            font-size: 18px;
+
+        }
+
+        .premium-card ul {
+
+            list-style: none;
+
+            margin: 35px 0;
+
+        }
+
+        .premium-card li {
+
+            padding: 12px;
+
+            font-size: 18px;
+
+        }
+
+        .premium-price {
+
+            font-size: 22px;
+
+            margin: 30px 0;
+
+        }
+
+        .premium-price strong {
+
+            display: block;
+
+            font-size: 50px;
+
+            color: #0b2940;
+
+            margin-top: 10px;
+
+        }
+
+        .premium-btn {
+
+            border: none;
+
+            background: #0b2940;
+
+            color: white;
+
+            padding: 18px 55px;
+
+            border-radius: 50px;
+
+            font-size: 19px;
+
+            cursor: pointer;
+
+            transition: .4s;
+
+        }
+
+        .premium-btn:hover {
+
+            transform: scale(1.08);
+
+            background: #05131f;
+
+        }
+
+        /*==================================================
+        MESSAGE
+==================================================*/
+
+        .success-message {
+
+            padding: 120px 20px;
+
+            text-align: center;
+
+        }
+
+        .success-message h2 {
+
+            font-size: 45px;
+
+            color: #ffd700;
+
+            margin-bottom: 25px;
+
+        }
+
+        .success-message p {
+
+            max-width: 850px;
+
+            margin: auto;
+
+            color: #ddd;
+
+            line-height: 1.9;
+
+            font-size: 19px;
+
+        }
+
+        /*==================================================
+        ANIMATIONS
+==================================================*/
+
+        @keyframes glowLogo {
+
+            from {
+
+                text-shadow: 0 0 10px gold;
+
+            }
+
+            to {
+
+                text-shadow:
+                    0 0 20px gold,
+                    0 0 40px gold,
+                    0 0 80px gold;
+
+            }
+
+        }
+
+        @keyframes floatCircle {
+
+            0% {
+
+                transform: translateY(0);
+
+            }
+
+            50% {
+
+                transform: translateY(-40px);
+
+            }
+
+            100% {
+
+                transform: translateY(0);
+
+            }
+
+        }
+
+        @keyframes zoomTitle {
+
+            from {
+
+                transform: scale(1);
+
+            }
+
+            to {
+
+                transform: scale(1.08);
+
+            }
+
+        }
+
+        @keyframes rotateCup {
+
+            from {
+
+                transform: rotate(0deg);
+
+            }
+
+            to {
+
+                transform: rotate(360deg);
+
+            }
+
+        }
+
+        @keyframes rotateStar {
+
+            from {
+
+                transform: rotate(0deg);
+
+            }
+
+            to {
+
+                transform: rotate(360deg);
+
+            }
+
+        }
+
+        @keyframes premiumFloat {
+
+            0% {
+
+                transform: translateY(0);
+
+            }
+
+            50% {
+
+                transform: translateY(-15px);
+
+            }
+
+            100% {
+
+                transform: translateY(0);
+
+            }
+
+        }
+
+        @keyframes pulsePremium {
+
+            0% {
+
+                transform: scale(.8);
+
+                opacity: .4;
+
+            }
+
+            100% {
+
+                transform: scale(1.4);
+
+                opacity: .9;
+
+            }
+
+        }
+
+        @keyframes pulseBackground {
+
+            from {
+
+                transform: scale(1);
+
+            }
+
+            to {
+
+                transform: scale(1.2);
+
+            }
+
+        }
+
+        /*==================================================
+        RESPONSIVE
+==================================================*/
+
+        @media(max-width:768px) {
+
+            .hero-content h1 {
+
+                font-size: 42px;
+
+            }
+
+            .hero-content p {
+
+                font-size: 17px;
+
+            }
+
+            .bmj-logo {
+
+                font-size: 42px;
+
+                letter-spacing: 3px;
+
+            }
+
+            .bmj-logo-box p {
+
+                font-size: 17px;
+
+            }
+
+            .certificate-card {
+
+                padding: 30px;
+
+            }
+
+            .certificate-card h2 {
+
+                font-size: 30px;
+
+            }
+
+            .premium-card {
+
+                padding: 35px;
+
+            }
+
+            .premium-card h2 {
+
+                font-size: 30px;
+
+            }
+
+            .success-message h2 {
+
+                font-size: 32px;
+
+            }
+
+
+        }
+
+        /*====================================
+        POPUP PREMIUM
+====================================*/
+
+        .premium-popup {
+
+            position: fixed;
+
+            top: 0;
+
+            left: 0;
+
+            width: 100%;
+
+            height: 100vh;
+
+            background: rgba(0, 0, 0, .75);
+
+            backdrop-filter: blur(8px);
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            opacity: 0;
+
+            visibility: hidden;
+
+            transition: .4s;
+
+            z-index: 99999;
+
+        }
+
+        .premium-popup.active {
+
+            opacity: 1;
+
+            visibility: visible;
+
+        }
+
+        .premium-modal {
+
+            transform: scale(.7);
+
+            transition: .4s;
+
+        }
+
+        .premium-popup.active .premium-modal {
+
+            transform: scale(1);
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--====================================
+            HERO CERTIFICAT
+    =====================================-->
+
+    <section class="hero-certificate">
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+
+            <div class="hero-badge">
+
+                🎓 CERTIFICATION OFFICIELLE
+
+            </div>
+
+            <h1>
+
+                Félicitations !
+
+            </h1>
+
+            <p>
+
+                Vous avez terminé avec succès tous les chapitres de la
+                formation <strong>Marketing Digital</strong>.
+
+                Vous êtes maintenant prêt à obtenir votre certificat
+                officiel délivré par <strong>BMJ SERVICE</strong>.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+
+
+    <!--====================================
+            SECTION BMJ ANIMATION
+    =====================================-->
+
+    <section class="bmj-section">
+
+        <div class="circle circle1"></div>
+
+        <div class="circle circle2"></div>
+
+        <div class="circle circle3"></div>
+
+
+
+        <div class="bmj-logo-box">
+
+            <h1 class="bmj-logo">
+
+                BMJ SERVICE
+
+            </h1>
+
+            <p>
+
+                Centre de Formation Professionnelle
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+
+
+
+    <!--====================================
+            CERTIFICAT
+    =====================================-->
+
+    <section class="certificate-section">
+
+        <div class="certificate-card">
+
+            <div class="certificate-icon">
+
+                🏆
+
+            </div>
+
+            <h2>
+
+                Certificat de réussite
+
+            </h2>
+
+            <p>
+
+                Ce certificat atteste que vous avez terminé avec succès
+                la formation complète en Marketing Digital proposée
+                par BMJ SERVICE.
+
+                Votre certificat pourra être téléchargé au format PDF
+                après validation de votre abonnement Premium.
+
+            </p>
+
+            <div class="certificate-details">
+
+                <div>
+
+                    <strong>
+
+                        Formation
+
+                    </strong>
+
+                    <span>
+
+                        Marketing Digital
+
+                    </span>
+
+                </div>
+
+                <div>
+
+                    <strong>
+
+                        Durée
+
+                    </strong>
+
+                    <span>
+
+                        Formation complète
+
+                    </span>
+
+                </div>
+
+                <div>
+
+                    <strong>
+
+                        Statut
+
+                    </strong>
+
+                    <span class="status">
+
+                        Formation terminée
+
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+    <!--====================================
+            PREMIUM
+    =====================================-->
+
+    <section class="premium-section">
+
+        <div class="premium-glow"></div>
+
+        <div class="premium-card">
+
+            <div class="premium-star">
+
+                ⭐
+
+            </div>
+
+            <h2>
+
+                Passez à BMJ PREMIUM
+
+            </h2>
+
+            <p>
+
+                Débloquez votre certificat officiel BMJ SERVICE
+                en souscrivant à l'abonnement Premium.
+
+            </p>
+
+            <ul>
+
+                <li>
+
+                    ✔ Certificat officiel en PDF
+
+                </li>
+
+                <li>
+
+                    ✔ Vérification de certificat
+
+                </li>
+
+                <li>
+
+                    ✔ Accès aux futures formations Premium
+
+                </li>
+
+                <li>
+
+                    ✔ Support prioritaire
+
+                </li>
+
+                <li>
+
+                    ✔ Badge de certification BMJ
+
+                </li>
+
+            </ul>
+
+            <div class="premium-price">
+
+                À partir de
+
+                <strong>
+
+                    10 USD
+
+                </strong>
+
+            </div>
+
+            <button class="premium-btn">
+
+                Passer à Premium
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+    <!--====================================
+            MOTIVATION
+    =====================================-->
+
+    <section class="success-message">
+
+        <h2>
+
+            Continuez votre progression 🚀
+
+        </h2>
+
+        <p>
+
+            Chaque compétence acquise vous rapproche de nouvelles
+            opportunités professionnelles.
+
+            BMJ SERVICE vous accompagne dans votre parcours
+            d'apprentissage et de réussite.
+
+        </p>
+
+    </section>
+
+    <script>
+
+        /*=========================================
+                BMJ SERVICE CERTIFICATE
+        =========================================*/
+
+        document.addEventListener("DOMContentLoaded", () => {
+
+            /*==============================
+                Apparition des sections
+            ==============================*/
+
+            const sections = document.querySelectorAll(
+                ".hero-content, .bmj-logo-box, .certificate-card, .premium-card, .success-message"
+            );
+
+            const observer = new IntersectionObserver((entries) => {
+
+                entries.forEach(entry => {
+
+                    if (entry.isIntersecting) {
+
+                        entry.target.classList.add("show");
+
+                    }
+
+                });
+
+            }, {
+
+                threshold: 0.2
+
+            });
+
+            sections.forEach(section => {
+
+                section.classList.add("hidden");
+
+                observer.observe(section);
+
+            });
+
+
+
+
+
+            /*==============================
+                Animation BMJ SERVICE
+            ==============================*/
+
+            const logo = document.querySelector(".bmj-logo");
+
+            if (logo) {
+
+                setInterval(() => {
+
+                    logo.classList.toggle("active");
+
+                }, 1200);
+
+            }
+
+
+
+
+
+            /*==============================
+                Bouton Premium
+            ==============================*/
+
+            /*=========================================
+        BOUTON PREMIUM
+=========================================*/
+
+            const premiumBtn = document.querySelector(".premium-btn");
+
+            if (premiumBtn) {
+
+                premiumBtn.onclick = () => {
+
+                    window.location.href = "paiement_visapay.html";
+
+                };
+
+            }
+
+            /*==============================
+                Confettis
+            ==============================*/
+
+            function createConfetti() {
+
+                const confetti = document.createElement("span");
+
+                confetti.className = "confetti";
+
+                confetti.innerHTML = "🎉";
+
+                confetti.style.left = Math.random() * window.innerWidth + "px";
+
+                confetti.style.fontSize = (18 + Math.random() * 25) + "px";
+
+                confetti.style.animationDuration = (4 + Math.random() * 3) + "s";
+
+                document.body.appendChild(confetti);
+
+                setTimeout(() => {
+
+                    confetti.remove();
+
+                }, 7000);
+
+            }
+
+            setInterval(createConfetti, 700);
+
+
+
+
+
+            /*==============================
+                Effet bouton Premium
+            ==============================*/
+
+            setInterval(() => {
+
+                if (premiumBtn) {
+
+                    premiumBtn.animate([
+
+                        {
+
+                            transform: "scale(1)"
+
+                        },
+
+                        {
+
+                            transform: "scale(1.08)"
+
+                        },
+
+                        {
+
+                            transform: "scale(1)"
+
+                        }
+
+                    ], {
+
+                        duration: 1000
+
+                    });
+
+                }
+
+            }, 3500);
+
+        });
+
+    </script>
+
+</body>
+
+</html>

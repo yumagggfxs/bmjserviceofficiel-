@@ -1,0 +1,2934 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*==================================================
+        BMJ SERVICE - STRATEGIE MARKETING
+        LEÇON 2
+==================================================*/
+
+
+        * {
+
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', Arial, sans-serif;
+
+        }
+
+
+        html {
+
+            scroll-behavior: smooth;
+
+        }
+
+
+        body {
+
+            background: #f4f7fb;
+            color: #333;
+            line-height: 1.8;
+
+        }
+
+
+
+
+        /*=====================================
+            HEADER
+======================================*/
+
+
+        header {
+
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 75px;
+            background: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 40px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, .08);
+            z-index: 1000;
+
+        }
+
+
+        .logo {
+
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+        }
+
+
+        .logo img {
+
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+
+        }
+
+
+        .logo h2 {
+
+            color: #145A86;
+
+        }
+
+
+        .logo span {
+
+            color: #D4AF37;
+
+        }
+
+
+
+        .student-profile {
+
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+        }
+
+
+        .student-profile img {
+
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #D4AF37;
+
+        }
+
+
+        .student-profile h4 {
+
+            color: #145A86;
+
+        }
+
+
+        .student-profile small {
+
+            color: #777;
+
+        }
+
+
+
+
+
+
+        /*=====================================
+            HERO
+======================================*/
+
+
+        .lesson-hero {
+
+            margin-top: 75px;
+            height: 420px;
+
+            background:
+
+                linear-gradient(rgba(20, 90, 134, .82),
+                    rgba(0, 0, 0, .75)),
+
+                url(images/analyse-marche.jpg);
+
+
+            background-size: cover;
+            background-position: center;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+
+
+        .overlay {
+
+            width: 90%;
+            max-width: 900px;
+            color: white;
+            text-align: center;
+
+        }
+
+
+        .overlay h1 {
+
+            font-size: 52px;
+            margin-bottom: 20px;
+
+        }
+
+
+
+        .overlay p {
+
+            font-size: 21px;
+
+        }
+
+
+
+
+
+
+
+
+        /*=====================================
+            SECTIONS
+======================================*/
+
+
+        .objectif,
+        .cours,
+        .important,
+        .exercice {
+
+
+            width: 90%;
+            max-width: 1100px;
+
+            margin: 40px auto;
+
+            background: white;
+
+            border-radius: 20px;
+
+            padding: 35px;
+
+            box-shadow:
+                0 10px 25px rgba(0, 0, 0, .08);
+
+        }
+
+
+
+
+        .objectif h2,
+        .cours h2,
+        .important h2,
+        .exercice h2 {
+
+
+            color: #145A86;
+
+            margin-bottom: 20px;
+
+            border-left: 6px solid #D4AF37;
+
+            padding-left: 15px;
+
+        }
+
+
+
+        .cours p {
+
+            margin-bottom: 18px;
+
+            text-align: justify;
+
+        }
+
+
+
+        .objectif ul,
+        .cours ul {
+
+            margin-left: 25px;
+
+            margin-top: 15px;
+
+        }
+
+
+
+        .objectif li,
+        .cours li {
+
+            margin-bottom: 10px;
+
+        }
+
+
+
+        .cours h3 {
+
+            color: #145A86;
+
+            margin-top: 25px;
+
+            margin-bottom: 15px;
+
+        }
+
+
+
+
+
+
+
+        /*=====================================
+            EXEMPLE
+======================================*/
+
+
+        .exemple {
+
+            background: #f8fbff;
+
+            border-left: 6px solid #145A86;
+
+            padding: 25px;
+
+            border-radius: 12px;
+
+            margin-top: 25px;
+
+        }
+
+
+        .exemple h3 {
+
+            color: #145A86;
+
+            margin-bottom: 15px;
+
+        }
+
+
+
+
+
+
+        /*=====================================
+            VIDEO
+======================================*/
+
+
+        .video-cours {
+
+            margin-top: 30px;
+
+            background: #f8fbff;
+
+            padding: 20px;
+
+            border-radius: 15px;
+
+        }
+
+
+
+        .video-cours h3 {
+
+            color: #145A86;
+
+            margin-bottom: 20px;
+
+        }
+
+
+
+        .video-cours iframe {
+
+            border-radius: 15px;
+
+        }
+
+
+
+
+
+
+
+        /*=====================================
+        IMPORTANT
+======================================*/
+
+
+        .important {
+
+            background: #145A86;
+
+            color: white;
+
+        }
+
+
+
+        .important h2 {
+
+            color: white;
+
+            border-left-color: #D4AF37;
+
+        }
+
+
+
+        .important p {
+
+            margin-bottom: 15px;
+
+            font-size: 18px;
+
+        }
+
+
+
+
+
+
+
+        /*=====================================
+            EXERCICE
+======================================*/
+
+
+        .exercice ol {
+
+            margin: 20px 0 20px 25px;
+
+        }
+
+
+
+        .exercice li {
+
+            margin-bottom: 12px;
+
+        }
+
+
+
+        textarea {
+
+
+            width: 100%;
+
+            height: 180px;
+
+            border: 2px solid #ddd;
+
+            border-radius: 12px;
+
+            padding: 15px;
+
+            resize: vertical;
+
+            font-size: 16px;
+
+            margin-top: 20px;
+
+            outline: none;
+
+        }
+
+
+
+        textarea:focus {
+
+            border-color: #145A86;
+
+        }
+
+
+
+
+
+
+
+
+        /*=====================================
+            NAVIGATION
+======================================*/
+
+
+        .navigation {
+
+            width: 90%;
+
+            max-width: 1100px;
+
+            margin: 40px auto 70px;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            gap: 20px;
+
+        }
+
+
+
+        .navigation button {
+
+            flex: 1;
+
+            padding: 18px;
+
+            border: none;
+
+            border-radius: 12px;
+
+            font-size: 17px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            transition: .35s;
+
+        }
+
+
+
+        .navigation button:first-child {
+
+            background: #145A86;
+
+            color: white;
+
+        }
+
+
+
+        .navigation button:last-child {
+
+            background: #D4AF37;
+
+            color: #145A86;
+
+        }
+
+
+
+        .navigation button:hover {
+
+            transform: translateY(-5px);
+
+            box-shadow: 0 12px 25px rgba(0, 0, 0, .15);
+
+        }
+
+
+
+
+
+
+
+        /*=====================================
+            FOOTER
+======================================*/
+
+
+        footer {
+
+            background: #145A86;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 35px;
+
+        }
+
+
+
+        footer h3 {
+
+            margin-bottom: 10px;
+
+        }
+
+
+
+
+
+
+
+
+        /*=====================================
+            RESPONSIVE
+======================================*/
+
+
+        @media(max-width:768px) {
+
+
+            header {
+
+                padding: 0 15px;
+
+            }
+
+
+
+            .student-profile small {
+
+                display: none;
+
+            }
+
+
+
+            .overlay h1 {
+
+                font-size: 34px;
+
+            }
+
+
+
+            .overlay p {
+
+                font-size: 17px;
+
+            }
+
+
+
+            .objectif,
+            .cours,
+            .important,
+            .exercice {
+
+                padding: 22px;
+
+            }
+
+
+
+            .navigation {
+
+                flex-direction: column;
+
+            }
+
+
+        }
+
+
+
+
+        @media(max-width:500px) {
+
+
+            .logo h2 {
+
+                font-size: 20px;
+
+            }
+
+
+
+            .student-profile h4 {
+
+                font-size: 15px;
+
+            }
+
+
+
+            .overlay h1 {
+
+                font-size: 28px;
+
+            }
+
+
+
+            .overlay p {
+
+                font-size: 15px;
+
+            }
+
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <body>
+
+
+        <!--====================================
+            HEADER
+=====================================-->
+
+        <header>
+
+
+            <div class="logo">
+
+                <img src="images/logo.png">
+
+
+                <h2>
+
+                    BMJ <span>SERVICE</span>
+
+                </h2>
+
+
+            </div>
+
+
+
+
+            <div class="student-profile">
+
+
+                <img id="photoUtilisateur" src="images/user.png">
+
+
+
+                <div>
+
+
+                    <h4 id="nomUtilisateur">
+
+                        Apprenant
+
+                    </h4>
+
+
+
+                    <small>
+
+                        Stratégie Marketing
+
+                    </small>
+
+
+
+                </div>
+
+
+            </div>
+
+
+
+        </header>
+
+
+
+
+
+
+
+
+        <!--====================================
+            BANNIÈRE
+=====================================-->
+
+        <section class="lesson-hero">
+
+
+            <div class="overlay">
+
+
+                <h1>
+
+                    Leçon 2 : Analyse du marché
+
+                </h1>
+
+
+
+
+                <p>
+
+
+                    Découvrez comment analyser un marché,
+                    identifier les besoins des consommateurs,
+                    étudier la concurrence et collecter les
+                    informations nécessaires pour construire
+                    une stratégie marketing efficace.
+
+
+                </p>
+
+
+
+            </div>
+
+
+        </section>
+
+
+
+
+
+
+
+
+
+        <!--====================================
+            OBJECTIFS
+=====================================-->
+
+
+        <section class="objectif">
+
+
+            <h2>
+
+                Objectifs de cette leçon
+
+            </h2>
+
+
+
+            <ul>
+
+
+                <li>
+
+                    Comprendre le rôle de l'analyse du marché
+                    dans une stratégie marketing.
+
+                </li>
+
+
+
+                <li>
+
+                    Identifier les différents acteurs présents
+                    sur un marché.
+
+                </li>
+
+
+
+                <li>
+
+                    Analyser les besoins et comportements
+                    des consommateurs.
+
+                </li>
+
+
+
+                <li>
+
+                    Étudier les concurrents et leurs stratégies.
+
+                </li>
+
+
+
+                <li>
+
+                    Savoir utiliser les informations du marché
+                    pour prendre de meilleures décisions.
+
+                </li>
+
+
+
+            </ul>
+
+
+
+        </section>
+
+
+
+
+
+
+
+
+
+        <!--====================================
+            COURS 1
+=====================================-->
+
+        <section class="cours">
+
+
+            <h2>
+
+                1. Comprendre le marché
+
+            </h2>
+
+
+
+            <p>
+
+
+                Avant de lancer un produit ou un service,
+                une entreprise doit connaître parfaitement
+                son marché. L'analyse du marché permet de
+                comprendre l'environnement dans lequel elle
+                évolue et d'identifier les opportunités
+                disponibles.
+
+
+
+            </p>
+
+
+
+            <p>
+
+
+                Un marché représente l'ensemble des personnes,
+                entreprises et organisations qui participent
+                à l'achat ou à la vente d'un produit ou d'un
+                service.
+
+
+
+            </p>
+
+
+
+
+            <p>
+
+
+                Pour réussir, une entreprise doit connaître
+                ses clients, leurs besoins, leurs habitudes
+                d'achat ainsi que les solutions proposées
+                par ses concurrents.
+
+
+
+            </p>
+
+
+
+
+            <h3>
+
+                Les éléments importants d'un marché
+
+            </h3>
+
+
+
+            <ul>
+
+
+                <li>
+
+                    Les consommateurs : personnes susceptibles
+                    d'acheter le produit.
+
+                </li>
+
+
+
+                <li>
+
+                    Les concurrents : entreprises proposant
+                    des produits similaires.
+
+                </li>
+
+
+
+                <li>
+
+                    Les fournisseurs : partenaires qui fournissent
+                    les ressources nécessaires.
+
+                </li>
+
+
+
+                <li>
+
+                    Les tendances : changements qui influencent
+                    les comportements des clients.
+
+                </li>
+
+
+
+                <li>
+
+                    Les conditions économiques et sociales.
+
+                </li>
+
+
+
+            </ul>
+
+
+
+        </section>
+        <!--====================================
+            COURS 2
+=====================================-->
+
+        <section class="cours">
+
+
+            <h2>
+
+                2. Les méthodes d'analyse du marché
+
+            </h2>
+
+
+
+            <p>
+
+
+                Pour construire une stratégie marketing efficace,
+                l'entreprise doit recueillir et analyser plusieurs
+                informations concernant son environnement.
+
+                Ces informations permettent de comprendre les
+                forces, les faiblesses, les opportunités et les
+                menaces qui peuvent influencer son activité.
+
+
+            </p>
+
+
+
+
+            <h3>
+
+                1. L'analyse interne
+
+            </h3>
+
+
+
+            <p>
+
+
+                L'analyse interne consiste à étudier les éléments
+                propres à l'entreprise. Elle permet d'identifier
+                ses ressources, ses compétences et ses limites.
+
+
+            </p>
+
+
+
+            <p>
+
+
+                Cette analyse aide l'entreprise à connaître ses
+                points forts afin de les utiliser comme avantages
+                concurrentiels, mais aussi ses points faibles afin
+                de trouver des solutions.
+
+
+            </p>
+
+
+
+            <h3>
+
+                Les éléments analysés
+
+            </h3>
+
+
+
+            <ul>
+
+
+                <li>
+
+                    Les ressources financières de l'entreprise.
+
+                </li>
+
+
+
+                <li>
+
+                    Les compétences des employés.
+
+                </li>
+
+
+
+                <li>
+
+                    La qualité des produits ou services.
+
+                </li>
+
+
+
+                <li>
+
+                    L'image de marque.
+
+                </li>
+
+
+
+                <li>
+
+                    Les moyens de communication disponibles.
+
+                </li>
+
+
+
+            </ul>
+
+
+
+
+
+            <h3>
+
+                2. L'analyse externe
+
+            </h3>
+
+
+
+            <p>
+
+
+                L'analyse externe consiste à étudier tous les
+                éléments extérieurs qui peuvent influencer
+                l'entreprise.
+
+                Elle permet de comprendre les changements du
+                marché et d'anticiper les évolutions futures.
+
+
+            </p>
+
+
+
+            <h3>
+
+                Les éléments analysés
+
+            </h3>
+
+
+
+            <ul>
+
+
+                <li>
+
+                    Les besoins et attentes des consommateurs.
+
+                </li>
+
+
+
+                <li>
+
+                    Les stratégies des concurrents.
+
+                </li>
+
+
+
+                <li>
+
+                    Les nouvelles tendances du marché.
+
+                </li>
+
+
+
+                <li>
+
+                    Les évolutions technologiques.
+
+                </li>
+
+
+
+                <li>
+
+                    Les changements économiques et sociaux.
+
+                </li>
+
+
+
+            </ul>
+
+
+
+
+
+
+            <h3>
+
+                3. L'analyse SWOT
+
+            </h3>
+
+
+
+            <p>
+
+
+                L'analyse SWOT est un outil stratégique qui
+                permet d'étudier la situation d'une entreprise
+                en identifiant quatre éléments principaux.
+
+
+            </p>
+
+
+
+            <ul>
+
+
+                <li>
+
+                    <strong>Forces (Strengths) :</strong>
+                    les avantages et les capacités de l'entreprise.
+
+                </li>
+
+
+
+                <li>
+
+                    <strong>Faiblesses (Weaknesses) :</strong>
+                    les limites ou difficultés rencontrées.
+
+                </li>
+
+
+
+                <li>
+
+                    <strong>Opportunités (Opportunities) :</strong>
+                    les possibilités offertes par le marché.
+
+                </li>
+
+
+
+                <li>
+
+                    <strong>Menaces (Threats) :</strong>
+                    les risques provenant de l'environnement.
+
+                </li>
+
+
+
+            </ul>
+
+
+
+
+            <h3>
+
+                Exemple pratique
+
+            </h3>
+
+
+
+            <p>
+
+
+                Une boutique de vêtements réalise une analyse
+                SWOT avant de lancer une nouvelle collection.
+
+
+            </p>
+
+
+
+            <p>
+
+
+                Ses forces peuvent être la qualité de ses produits
+                et une bonne réputation auprès des clients.
+
+                Sa faiblesse peut être un manque de présence en
+                ligne.
+
+                Une opportunité peut être l'utilisation des réseaux
+                sociaux pour toucher plus de clients.
+
+                Une menace peut être l'arrivée de nouveaux
+                concurrents dans la ville.
+
+
+            </p>
+
+
+
+        </section>
+        <!--====================================
+            COURS 3
+=====================================-->
+
+        <section class="cours">
+
+
+            <h2>
+
+                3. Comprendre les clients et analyser leur comportement
+
+            </h2>
+
+
+
+            <p>
+
+
+                La connaissance des clients est une étape essentielle
+                dans la création d'une stratégie marketing. Une
+                entreprise qui comprend ses consommateurs peut
+                proposer des produits et des services qui répondent
+                réellement à leurs attentes.
+
+
+            </p>
+
+
+
+            <p>
+
+
+                Chaque client possède des besoins, des motivations,
+                des habitudes et des comportements différents.
+                L'entreprise doit donc étudier ces éléments afin
+                d'adapter son offre et sa communication.
+
+
+            </p>
+
+
+
+
+
+            <h3>
+
+                Pourquoi analyser les clients ?
+
+            </h3>
+
+
+
+            <ul>
+
+
+                <li>
+
+                    Identifier les besoins des consommateurs.
+
+                </li>
+
+
+
+                <li>
+
+                    Comprendre les motivations d'achat.
+
+                </li>
+
+
+
+                <li>
+
+                    Connaître les habitudes de consommation.
+
+                </li>
+
+
+
+                <li>
+
+                    Adapter les produits aux attentes du marché.
+
+                </li>
+
+
+
+                <li>
+
+                    Améliorer la satisfaction et la fidélisation.
+
+                </li>
+
+
+
+            </ul>
+
+
+
+
+
+
+
+
+            <h3>
+
+                Les informations importantes sur les clients
+
+            </h3>
+
+
+
+            <p>
+
+
+                Pour mieux connaître sa clientèle, une entreprise
+                peut analyser plusieurs informations importantes.
+
+
+            </p>
+
+
+
+            <ul>
+
+
+                <li>
+
+                    <strong>L'âge :</strong>
+                    connaître la catégorie d'âge des clients permet
+                    d'adapter les produits et la communication.
+
+                </li>
+
+
+
+                <li>
+
+                    <strong>Les besoins :</strong>
+                    identifier les problèmes que les clients
+                    cherchent à résoudre.
+
+                </li>
+
+
+
+                <li>
+
+                    <strong>Le budget :</strong>
+                    connaître le montant que les consommateurs
+                    sont prêts à dépenser.
+
+                </li>
+
+
+
+                <li>
+
+                    <strong>Les habitudes d'achat :</strong>
+                    comprendre quand, où et comment les clients
+                    achètent.
+
+                </li>
+
+
+
+                <li>
+
+                    <strong>Les préférences :</strong>
+                    identifier les goûts et les attentes des
+                    consommateurs.
+
+                </li>
+
+
+
+            </ul>
+
+
+
+
+
+
+
+            <h3>
+
+                Les méthodes pour connaître les clients
+
+            </h3>
+
+
+
+            <p>
+
+
+                Les entreprises utilisent différentes méthodes
+                pour collecter des informations sur leurs clients.
+
+
+            </p>
+
+
+
+            <ul>
+
+
+                <li>
+
+                    <strong>Les questionnaires :</strong>
+                    poser des questions directement aux consommateurs.
+
+                </li>
+
+
+
+                <li>
+
+                    <strong>Les entretiens :</strong>
+                    discuter avec les clients pour comprendre
+                    leurs besoins.
+
+                </li>
+
+
+
+                <li>
+
+                    <strong>L'observation :</strong>
+                    analyser les comportements des consommateurs.
+
+                </li>
+
+
+
+                <li>
+
+                    <strong>L'analyse des données :</strong>
+                    utiliser les statistiques de vente et les
+                    informations numériques.
+
+                </li>
+
+
+
+                <li>
+
+                    <strong>Les avis clients :</strong>
+                    étudier les commentaires et suggestions.
+
+                </li>
+
+
+
+            </ul>
+
+
+
+
+
+
+
+            <h3>
+
+                Exemple pratique
+
+            </h3>
+
+
+
+            <p>
+
+
+                Une entreprise de formation en ligne souhaite
+                proposer de nouveaux cours.
+
+                Avant de créer ces formations, elle interroge
+                les étudiants pour connaître leurs besoins :
+                les domaines qu'ils souhaitent apprendre,
+                leurs difficultés et leurs objectifs.
+
+
+            </p>
+
+
+
+            <p>
+
+
+                Grâce aux réponses obtenues, l'entreprise peut
+                créer des formations adaptées et augmenter la
+                satisfaction des apprenants.
+
+
+            </p>
+
+
+
+
+
+
+            <div class="video-cours">
+
+
+                <h3>
+
+                    📹 Vidéo explicative
+
+                </h3>
+
+
+
+                <iframe width="100%" height="400" src="https://www.youtube.com/embed/oZSgVhyMaYk"
+                    title="Comprendre le comportement du consommateur" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+
+                </iframe>
+
+
+
+            </div>
+
+
+
+        </section>
+        <!--====================================
+            COURS 4
+=====================================-->
+
+        <section class="cours">
+
+
+            <h2>
+
+                4. Étudier la concurrence et se différencier sur le marché
+
+            </h2>
+
+
+
+            <p>
+
+
+                Dans un marché, une entreprise n'est généralement
+                pas seule. Elle doit faire face à d'autres entreprises
+                qui proposent des produits ou services similaires.
+
+                L'étude de la concurrence permet de comprendre les
+                stratégies utilisées par les autres acteurs afin de
+                prendre de meilleures décisions.
+
+
+            </p>
+
+
+
+            <p>
+
+
+                Une entreprise qui connaît bien ses concurrents peut
+                identifier leurs forces et leurs faiblesses, trouver
+                des opportunités et développer un avantage qui lui
+                permet de se démarquer.
+
+
+            </p>
+
+
+
+
+
+
+
+            <h3>
+
+                Pourquoi analyser la concurrence ?
+
+            </h3>
+
+
+
+            <ul>
+
+
+                <li>
+
+                    Identifier les principaux concurrents du marché.
+
+                </li>
+
+
+
+                <li>
+
+                    Comprendre leurs produits et leurs services.
+
+                </li>
+
+
+
+                <li>
+
+                    Comparer les prix proposés.
+
+                </li>
+
+
+
+                <li>
+
+                    Observer leurs méthodes de communication.
+
+                </li>
+
+
+
+                <li>
+
+                    Trouver des moyens de proposer une meilleure
+                    expérience aux clients.
+
+                </li>
+
+
+
+            </ul>
+
+
+
+
+
+
+
+
+            <h3>
+
+                Les types de concurrence
+
+            </h3>
+
+
+
+            <p>
+
+
+                Il existe plusieurs formes de concurrence qu'une
+                entreprise doit prendre en compte.
+
+
+            </p>
+
+
+
+            <ul>
+
+
+                <li>
+
+                    <strong>Concurrence directe :</strong>
+                    entreprises qui proposent le même produit ou
+                    service au même type de clients.
+
+                </li>
+
+
+
+                <li>
+
+                    <strong>Concurrence indirecte :</strong>
+                    entreprises qui proposent des solutions
+                    différentes mais qui répondent au même besoin.
+
+                </li>
+
+
+
+                <li>
+
+                    <strong>Nouveaux entrants :</strong>
+                    nouvelles entreprises qui peuvent apparaître
+                    sur le marché.
+
+                </li>
+
+
+
+            </ul>
+
+
+
+
+
+
+
+            <h3>
+
+                Comment se différencier de la concurrence ?
+
+            </h3>
+
+
+
+            <p>
+
+
+                Pour réussir, une entreprise doit proposer quelque
+                chose de différent ou de meilleur que ses concurrents.
+                Cette différence constitue son avantage concurrentiel.
+
+
+            </p>
+
+
+
+            <ul>
+
+
+                <li>
+
+                    Proposer une meilleure qualité de produit.
+
+                </li>
+
+
+
+                <li>
+
+                    Offrir un service client plus efficace.
+
+                </li>
+
+
+
+                <li>
+
+                    Développer une image de marque forte.
+
+                </li>
+
+
+
+                <li>
+
+                    Utiliser des technologies innovantes.
+
+                </li>
+
+
+
+                <li>
+
+                    Proposer des prix adaptés aux clients.
+
+                </li>
+
+
+
+                <li>
+
+                    Créer une expérience unique pour les consommateurs.
+
+                </li>
+
+
+
+            </ul>
+
+
+
+
+
+
+
+
+            <h3>
+
+                Exemple pratique
+
+            </h3>
+
+
+
+            <p>
+
+
+                Deux boutiques vendent des vêtements dans la même
+                ville.
+
+                La première vend uniquement ses produits en magasin.
+                La deuxième propose également une boutique en ligne,
+                publie régulièrement sur les réseaux sociaux et offre
+                un service de livraison rapide.
+
+
+            </p>
+
+
+
+            <p>
+
+
+                Grâce à cette stratégie de différenciation, la deuxième
+                boutique attire davantage de clients car elle répond
+                mieux aux nouvelles habitudes des consommateurs.
+
+
+            </p>
+
+
+
+
+
+
+
+            <h3>
+
+                À retenir
+
+            </h3>
+
+
+
+            <p>
+
+
+                L'analyse de la concurrence permet à une entreprise
+                de mieux comprendre son environnement et de créer
+                une stratégie capable de lui donner un avantage
+                durable sur le marché.
+
+
+            </p>
+
+
+
+        </section>
+        <!--====================================
+            COURS 5
+=====================================-->
+
+        <section class="cours">
+
+
+            <h2>
+
+                5. Collecter les données du marché
+
+            </h2>
+
+
+
+            <p>
+
+
+                Pour prendre de bonnes décisions marketing, une
+                entreprise doit disposer d'informations fiables.
+                La collecte des données permet de mieux comprendre
+                les consommateurs, le marché et les concurrents.
+
+
+            </p>
+
+
+
+            <p>
+
+
+                Ces informations servent de base pour construire
+                une stratégie marketing adaptée. Plus les données
+                recueillies sont précises, plus l'entreprise peut
+                proposer une offre répondant aux attentes des clients.
+
+
+            </p>
+
+
+
+
+
+
+            <h3>
+
+                Les principales sources de données
+
+            </h3>
+
+
+
+            <ul>
+
+
+                <li>
+
+                    <strong>Les clients :</strong>
+                    leurs avis, besoins, attentes et habitudes
+                    d'achat.
+
+                </li>
+
+
+
+                <li>
+
+                    <strong>Les études de marché :</strong>
+                    enquêtes et recherches réalisées pour comprendre
+                    l'environnement commercial.
+
+                </li>
+
+
+
+                <li>
+
+                    <strong>Les concurrents :</strong>
+                    analyse de leurs prix, produits et méthodes
+                    de communication.
+
+                </li>
+
+
+
+                <li>
+
+                    <strong>Les données internes :</strong>
+                    informations provenant des ventes, statistiques
+                    et historiques de l'entreprise.
+
+                </li>
+
+
+
+                <li>
+
+                    <strong>Internet :</strong>
+                    réseaux sociaux, recherches en ligne et
+                    commentaires des consommateurs.
+
+                </li>
+
+
+
+            </ul>
+
+
+
+
+
+
+
+            <h3>
+
+                Les outils de collecte des données
+
+            </h3>
+
+
+
+            <ul>
+
+
+                <li>
+
+                    Questionnaires en ligne.
+
+                </li>
+
+
+
+                <li>
+
+                    Interviews des consommateurs.
+
+                </li>
+
+
+
+                <li>
+
+                    Sondages sur les réseaux sociaux.
+
+                </li>
+
+
+
+                <li>
+
+                    Analyse des statistiques de vente.
+
+                </li>
+
+
+
+                <li>
+
+                    Observation du comportement des clients.
+
+                </li>
+
+
+
+                <li>
+
+                    Analyse des tendances du marché.
+
+                </li>
+
+
+
+            </ul>
+
+
+
+
+
+
+
+
+            <h3>
+
+                Exemple complet : Analyse d'une boutique de vêtements
+
+            </h3>
+
+
+
+            <div class="exemple">
+
+
+                <h3>
+
+                    Situation
+
+                </h3>
+
+
+
+                <p>
+
+
+                    Une boutique de vêtements souhaite augmenter
+                    ses ventes et attirer davantage de jeunes clients.
+
+
+                </p>
+
+
+
+
+                <h3>
+
+                    Analyse du marché
+
+                </h3>
+
+
+
+                <p>
+
+
+                    Le propriétaire réalise une enquête auprès de
+                    ses clients afin de connaître leurs préférences.
+                    Il découvre que les jeunes recherchent des
+                    vêtements modernes, accessibles et facilement
+                    disponibles en ligne.
+
+
+                </p>
+
+
+
+
+                <h3>
+
+                    Analyse de la concurrence
+
+                </h3>
+
+
+
+                <p>
+
+
+                    Il observe que plusieurs concurrents utilisent
+                    les réseaux sociaux pour présenter leurs produits
+                    et proposer des promotions.
+
+
+                </p>
+
+
+
+
+                <h3>
+
+                    Nouvelle stratégie
+
+                </h3>
+
+
+
+                <ul>
+
+
+                    <li>
+
+                        Création d'une page professionnelle sur les
+                        réseaux sociaux.
+
+                    </li>
+
+
+
+                    <li>
+
+                        Publication régulière des nouveaux produits.
+
+                    </li>
+
+
+
+                    <li>
+
+                        Mise en place d'un service de livraison.
+
+                    </li>
+
+
+
+                    <li>
+
+                        Création d'offres promotionnelles.
+
+                    </li>
+
+
+
+                </ul>
+
+
+
+
+                <h3>
+
+                    Résultats attendus
+
+                </h3>
+
+
+
+                <ul>
+
+
+                    <li>
+
+                        Augmentation du nombre de clients.
+
+                    </li>
+
+
+
+                    <li>
+
+                        Meilleure visibilité de la boutique.
+
+                    </li>
+
+
+
+                    <li>
+
+                        Augmentation des ventes.
+
+                    </li>
+
+
+
+                    <li>
+
+                        Fidélisation des consommateurs.
+
+                    </li>
+
+
+
+                </ul>
+
+
+            </div>
+
+
+
+
+
+
+            <div class="video-cours">
+
+
+                <h3>
+
+                    📹 Vidéo explicative
+
+                </h3>
+
+
+
+                <iframe width="100%" height="400" src="https://www.youtube.com/embed/R4wK6_Z3iDU"
+                    title="Analyse du marché et stratégie marketing" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+
+                </iframe>
+
+
+
+            </div>
+
+
+
+        </section>
+        <!--====================================
+            À RETENIR
+=====================================-->
+
+        <section class="important">
+
+
+            <h2>
+
+                📌 À retenir
+
+            </h2>
+
+
+
+            <p>
+
+                ✔ L'analyse du marché est une étape essentielle
+                avant de construire une stratégie marketing.
+
+            </p>
+
+
+
+            <p>
+
+                ✔ Une entreprise doit connaître ses clients,
+                ses concurrents et son environnement.
+
+            </p>
+
+
+
+            <p>
+
+                ✔ L'analyse interne permet d'identifier les forces
+                et les faiblesses de l'entreprise.
+
+            </p>
+
+
+
+            <p>
+
+                ✔ L'analyse externe permet de découvrir les
+                opportunités et les menaces du marché.
+
+            </p>
+
+
+
+            <p>
+
+                ✔ L'analyse SWOT est un outil permettant d'étudier
+                la situation stratégique d'une entreprise.
+
+            </p>
+
+
+
+            <p>
+
+                ✔ Comprendre le comportement des consommateurs aide
+                à proposer des produits adaptés à leurs besoins.
+
+            </p>
+
+
+
+            <p>
+
+                ✔ L'étude de la concurrence permet de créer un
+                avantage concurrentiel.
+
+            </p>
+
+
+
+            <p>
+
+                ✔ Les données collectées permettent de prendre de
+                meilleures décisions marketing.
+
+            </p>
+
+
+
+        </section>
+
+
+
+
+
+
+
+
+        <!--====================================
+            EXERCICE
+=====================================-->
+
+        <section class="exercice">
+
+
+            <h2>
+
+                📝 Exercice pratique
+
+            </h2>
+
+
+
+
+            <p>
+
+                Vous souhaitez créer une boutique de vêtements
+                dans votre ville.
+
+            </p>
+
+
+
+            <p>
+
+                Avant de commencer votre activité, vous devez
+                réaliser une analyse du marché.
+
+            </p>
+
+
+
+
+            <h3>
+
+                Répondez aux questions suivantes :
+
+            </h3>
+
+
+
+            <ol>
+
+
+                <li>
+
+                    Quels sont vos clients cibles ?
+
+                </li>
+
+
+
+                <li>
+
+                    Quels besoins souhaitez-vous satisfaire ?
+
+                </li>
+
+
+
+                <li>
+
+                    Quels sont vos principaux concurrents ?
+
+                </li>
+
+
+
+                <li>
+
+                    Quelles sont les forces de votre entreprise ?
+
+                </li>
+
+
+
+                <li>
+
+                    Quelles difficultés pourriez-vous rencontrer ?
+
+                </li>
+
+
+
+                <li>
+
+                    Quelles opportunités pouvez-vous exploiter ?
+
+                </li>
+
+
+
+                <li>
+
+                    Quelles stratégies utiliseriez-vous pour vous
+                    différencier ?
+
+                </li>
+
+
+
+            </ol>
+
+
+
+
+
+            <p>
+
+                Rédigez votre analyse du marché dans la zone
+                ci-dessous.
+
+            </p>
+
+
+
+            <textarea rows="10" placeholder="Écrivez votre réponse ici..."></textarea>
+
+
+
+        </section>
+
+
+
+
+
+
+
+
+        <!--====================================
+            NAVIGATION
+=====================================-->
+
+        <section class="navigation">
+
+
+            <button onclick="retourCours()">
+
+
+                ← Retour au chapitre
+
+
+            </button>
+
+
+
+
+            <button onclick="terminerLecon()">
+
+
+                ✓ Terminer la leçon
+
+
+            </button>
+
+
+
+        </section>
+
+
+
+
+
+
+
+
+        <!--====================================
+            FOOTER
+=====================================-->
+
+        <footer>
+
+
+            <h3>
+
+                BMJ SERVICE
+
+            </h3>
+
+
+
+            <p>
+
+                Plateforme professionnelle de formation en ligne.
+
+            </p>
+
+
+
+        </footer>
+        <script>
+            //====================================
+            // CHARGEMENT DE LA PAGE
+            //====================================
+
+            document.addEventListener("DOMContentLoaded", function () {
+
+
+                let utilisateur = JSON.parse(
+
+                    localStorage.getItem("bmj_current_user")
+
+                );
+
+
+                if (!utilisateur) {
+
+
+                    window.location.href = "connexion.html";
+
+                    return;
+
+
+                }
+
+
+
+                //=========================
+                // PROFIL UTILISATEUR
+                //=========================
+
+
+                document.getElementById("nomUtilisateur").innerHTML = utilisateur.nom;
+
+
+
+                if (utilisateur.photo && utilisateur.photo !== "") {
+
+
+                    document.getElementById("photoUtilisateur").src = utilisateur.photo;
+
+
+                }
+
+
+            });
+
+
+
+
+
+
+
+            //====================================
+            // RETOUR AU CHAPITRE STRATEGIE
+            //====================================
+
+            function retourCours() {
+
+
+                window.location.href = "strategie.html";
+
+
+            }
+
+
+
+
+
+
+
+
+            //====================================
+            // TERMINER LA LEÇON 2
+            //====================================
+
+            function terminerLecon() {
+
+
+
+                let utilisateur = JSON.parse(
+
+                    localStorage.getItem("bmj_current_user")
+
+                );
+
+
+
+                if (!utilisateur) {
+
+
+                    window.location.href = "connexion.html";
+
+                    return;
+
+
+                }
+
+
+
+
+
+                //--------------------------------
+                // PROGRESSION STRATEGIE
+                //--------------------------------
+
+
+                let progression = JSON.parse(
+
+                    localStorage.getItem("strategie_progression")
+
+                ) || [];
+
+
+
+
+
+
+                //=============================
+                // VERIFIER SI DEJA TERMINEE
+                //=============================
+
+
+                if (progression.includes("2")) {
+
+
+                    alert("Cette leçon est déjà terminée.");
+
+                    window.location.href = "strategie.html";
+
+                    return;
+
+
+                }
+
+
+
+
+
+                //--------------------------------
+                // AJOUT DE LA LEÇON
+                //--------------------------------
+
+
+                progression.push("2");
+
+
+
+                localStorage.setItem(
+
+                    "strategie_progression",
+
+                    JSON.stringify(progression)
+
+                );
+
+
+
+
+
+
+
+                //--------------------------------
+                // COURS SUIVIS UTILISATEUR
+                //--------------------------------
+
+
+                if (!utilisateur.coursSuivis) {
+
+
+                    utilisateur.coursSuivis = [];
+
+
+                }
+
+
+
+
+
+                if (!utilisateur.coursSuivis.includes(
+
+                    "Stratégie Marketing Leçon 2"
+
+                )) {
+
+
+                    utilisateur.coursSuivis.push(
+
+                        "Stratégie Marketing Leçon 2"
+
+                    );
+
+
+                }
+
+
+
+
+
+
+
+                //--------------------------------
+                // CALCUL PROGRESSION
+                //--------------------------------
+
+
+                utilisateur.progression =
+
+                    progression.length * 20;
+
+
+
+                if (utilisateur.progression > 100) {
+
+
+                    utilisateur.progression = 100;
+
+
+                }
+
+
+
+
+
+
+
+
+                //--------------------------------
+                // SAUVEGARDE SESSION
+                //--------------------------------
+
+
+                localStorage.setItem(
+
+                    "bmj_current_user",
+
+                    JSON.stringify(utilisateur)
+
+                );
+
+
+
+
+
+
+
+
+
+                //--------------------------------
+                // SAUVEGARDE UTILISATEURS
+                //--------------------------------
+
+
+                let utilisateurs = JSON.parse(
+
+                    localStorage.getItem("bmj_users")
+
+                ) || [];
+
+
+
+
+
+                let index = utilisateurs.findIndex(
+
+                    u => u.id === utilisateur.id
+
+                );
+
+
+
+
+
+                if (index !== -1) {
+
+
+                    utilisateurs[index] = utilisateur;
+
+
+                }
+
+
+
+
+
+                localStorage.setItem(
+
+                    "bmj_users",
+
+                    JSON.stringify(utilisateurs)
+
+                );
+
+
+
+
+
+
+
+
+                //--------------------------------
+                // MESSAGE
+                //--------------------------------
+
+
+                alert(
+
+                    "🎉 Félicitations !\n\nVous avez terminé la Leçon 2."
+
+                );
+
+
+
+
+
+
+                //--------------------------------
+                // RETOUR CHAPITRE
+                //--------------------------------
+
+
+                window.location.href = "strategie.html";
+
+
+
+            }
+        </script>
+    </body>
+
+</html>

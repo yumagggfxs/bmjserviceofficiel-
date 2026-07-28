@@ -1,0 +1,3367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*========================================
+        BMJ SERVICE - MARKETING LEÇON 4
+========================================*/
+
+
+        * {
+
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', Arial, sans-serif;
+
+        }
+
+
+
+        body {
+
+            background: #f4f7fb;
+
+            color: #333;
+
+            line-height: 1.8;
+
+        }
+
+
+
+
+
+
+
+        /*========================================
+                HEADER
+========================================*/
+
+
+        header {
+
+            position: fixed;
+
+            top: 0;
+
+            left: 0;
+
+            width: 100%;
+
+            height: 75px;
+
+
+            background: white;
+
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+
+            padding: 0 40px;
+
+
+            box-shadow: 0 5px 20px rgba(0, 0, 0, .08);
+
+
+            z-index: 1000;
+
+
+        }
+
+
+
+        .logo {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+        }
+
+
+
+        .logo img {
+
+
+            width: 50px;
+
+            height: 50px;
+
+            border-radius: 50%;
+
+
+        }
+
+
+
+        .logo h2 {
+
+            color: #145A86;
+
+        }
+
+
+
+        .logo span {
+
+            color: #D4AF37;
+
+        }
+
+
+
+
+
+        .student-profile {
+
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+
+        }
+
+
+
+        .student-profile img {
+
+
+            width: 50px;
+
+            height: 50px;
+
+            border-radius: 50%;
+
+
+            object-fit: cover;
+
+
+            border: 3px solid #D4AF37;
+
+
+        }
+
+
+
+        .student-profile h4 {
+
+
+            color: #145A86;
+
+
+        }
+
+
+
+
+
+
+
+
+        /*========================================
+                HERO
+========================================*/
+
+
+        .lesson-hero {
+
+
+            margin-top: 75px;
+
+
+            height: 430px;
+
+
+
+            background:
+
+
+                linear-gradient(rgba(20, 90, 134, .88),
+
+                    rgba(0, 0, 0, .75)),
+
+
+
+                url(images/consommateur.jpg);
+
+
+
+            background-size: cover;
+
+
+            background-position: center;
+
+
+            display: flex;
+
+
+            align-items: center;
+
+
+            justify-content: center;
+
+
+        }
+
+
+
+
+
+
+        .overlay {
+
+
+            width: 90%;
+
+
+            max-width: 1100px;
+
+
+            color: white;
+
+
+            text-align: center;
+
+
+        }
+
+
+
+
+        .overlay span {
+
+
+            display: inline-block;
+
+
+            background: #D4AF37;
+
+
+            color: #145A86;
+
+
+            padding: 8px 25px;
+
+
+            border-radius: 30px;
+
+
+            font-weight: bold;
+
+
+        }
+
+
+
+        .overlay h1 {
+
+
+            font-size: 45px;
+
+
+            margin: 25px 0;
+
+
+            line-height: 1.3;
+
+
+        }
+
+
+
+
+        .overlay p {
+
+
+            font-size: 19px;
+
+
+        }
+
+
+
+
+
+
+
+
+
+        /*========================================
+        BLOCS DE COURS
+========================================*/
+
+
+        .objectif,
+        .cours,
+        .exercice {
+
+
+            width: 90%;
+
+
+            max-width: 1100px;
+
+
+            margin: 40px auto;
+
+
+            background: white;
+
+
+            padding: 35px;
+
+
+            border-radius: 20px;
+
+
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+
+
+        }
+
+
+
+
+
+        .objectif h2,
+        .cours h2,
+        .exercice h2 {
+
+
+            color: #145A86;
+
+
+            border-left: 6px solid #D4AF37;
+
+
+            padding-left: 15px;
+
+
+            margin-bottom: 25px;
+
+
+        }
+
+
+
+
+
+
+        .cours h3 {
+
+
+            color: #145A86;
+
+
+            margin: 25px 0 15px;
+
+
+        }
+
+
+
+
+
+
+        .cours p {
+
+
+            margin-bottom: 18px;
+
+
+            text-align: justify;
+
+
+        }
+
+
+
+
+
+
+        .cours ul,
+        .objectif ul {
+
+
+            margin-left: 30px;
+
+
+        }
+
+
+
+
+
+        .cours li,
+        .objectif li {
+
+
+            margin-bottom: 12px;
+
+
+        }
+
+
+
+
+
+
+
+
+
+        /*========================================
+            EXEMPLE
+========================================*/
+
+
+        .exemple {
+
+
+            margin-top: 25px;
+
+
+            padding: 25px;
+
+
+            background: #eef7ff;
+
+
+            border-left: 6px solid #145A86;
+
+
+            border-radius: 15px;
+
+
+        }
+
+
+
+
+
+        .exemple h3 {
+
+
+            color: #145A86;
+
+
+        }
+
+
+
+
+
+
+
+
+
+        /*========================================
+            BLOC IMPORTANT
+========================================*/
+
+
+        .important {
+
+
+            margin-top: 30px;
+
+
+            padding: 25px;
+
+
+            background: #145A86;
+
+
+            color: white;
+
+
+            border-radius: 15px;
+
+
+        }
+
+
+
+
+
+        .important h3 {
+
+
+            color: #D4AF37;
+
+
+            margin-bottom: 15px;
+
+
+        }
+
+
+
+
+
+
+
+
+
+        /*========================================
+                TABLEAU
+========================================*/
+
+
+        table {
+
+
+            width: 100%;
+
+
+            border-collapse: collapse;
+
+
+            margin-top: 25px;
+
+
+        }
+
+
+
+        table th {
+
+
+            background: #145A86;
+
+
+            color: white;
+
+
+            padding: 15px;
+
+
+        }
+
+
+
+        table td {
+
+
+            padding: 15px;
+
+
+            border: 1px solid #ddd;
+
+
+            text-align: center;
+
+
+        }
+
+
+
+
+
+        table tr:nth-child(even) {
+
+
+            background: #f5faff;
+
+
+        }
+
+
+
+
+
+
+
+
+
+        /*========================================
+                EXERCICE
+========================================*/
+
+
+        textarea {
+
+
+            width: 100%;
+
+
+            height: 170px;
+
+
+            margin-top: 20px;
+
+
+            padding: 20px;
+
+
+            border-radius: 15px;
+
+
+            border: 2px solid #ddd;
+
+
+            resize: none;
+
+
+            font-size: 16px;
+
+
+        }
+
+
+
+
+
+        textarea:focus {
+
+
+            outline: none;
+
+
+            border-color: #145A86;
+
+
+        }
+
+
+
+
+
+
+
+
+
+        /*========================================
+            NAVIGATION
+========================================*/
+
+
+        .navigation {
+
+
+            width: 90%;
+
+
+            max-width: 1100px;
+
+
+            margin: 50px auto;
+
+
+            display: flex;
+
+
+            gap: 20px;
+
+
+        }
+
+
+
+        .navigation button {
+
+
+            flex: 1;
+
+
+            padding: 18px;
+
+
+            border: none;
+
+
+            border-radius: 15px;
+
+
+            cursor: pointer;
+
+
+            font-size: 17px;
+
+
+            font-weight: bold;
+
+
+            transition: .3s;
+
+
+        }
+
+
+
+
+
+        .navigation button:first-child {
+
+
+            background: #145A86;
+
+
+            color: white;
+
+
+        }
+
+
+
+
+
+
+        .navigation button:last-child {
+
+
+            background: #D4AF37;
+
+
+            color: #145A86;
+
+
+        }
+
+
+
+
+
+
+        .navigation button:hover {
+
+
+            transform: translateY(-5px);
+
+
+            box-shadow: 0 10px 20px rgba(0, 0, 0, .15);
+
+
+        }
+
+
+
+
+
+
+
+
+
+        /*========================================
+                FOOTER
+========================================*/
+
+
+        footer {
+
+
+            background: #145A86;
+
+
+            color: white;
+
+
+            text-align: center;
+
+
+            padding: 35px;
+
+
+        }
+
+
+
+
+
+
+
+
+
+        /*========================================
+                MOBILE
+========================================*/
+
+
+        @media(max-width:768px) {
+
+
+
+            header {
+
+
+                padding: 0 15px;
+
+
+            }
+
+
+
+            .logo h2 {
+
+
+                font-size: 20px;
+
+
+            }
+
+
+
+            .student-profile small {
+
+
+                display: none;
+
+
+            }
+
+
+
+
+            .lesson-hero {
+
+
+                height: 380px;
+
+
+            }
+
+
+
+            .overlay h1 {
+
+
+                font-size: 30px;
+
+
+            }
+
+
+
+
+            .overlay p {
+
+
+                font-size: 16px;
+
+
+            }
+
+
+
+
+
+            .objectif,
+            .cours,
+            .exercice {
+
+
+                padding: 22px;
+
+
+            }
+
+
+
+            .navigation {
+
+
+                flex-direction: column;
+
+
+            }
+
+
+
+
+
+            table {
+
+
+                font-size: 13px;
+
+
+            }
+
+
+
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <!--====================================
+            HEADER
+=====================================-->
+
+    <header>
+
+
+        <div class="logo">
+
+            <img src="images/logo.png">
+
+
+            <h2>
+
+                BMJ <span>SERVICE</span>
+
+            </h2>
+
+
+        </div>
+
+
+
+
+
+        <div class="student-profile">
+
+
+            <img id="photoUtilisateur" src="images/user.png">
+
+
+
+            <div>
+
+
+                <h4 id="nomUtilisateur">
+
+                    Apprenant
+
+                </h4>
+
+
+                <small id="domaineUtilisateur">
+
+                    Marketing Digital
+
+                </small>
+
+
+            </div>
+
+
+        </div>
+
+
+
+    </header>
+
+
+
+
+
+
+
+
+
+    <!--====================================
+        HERO LEÇON 4
+=====================================-->
+
+    <section class="lesson-hero">
+
+
+        <div class="overlay">
+
+
+            <span>
+
+                LEÇON 4
+
+            </span>
+
+
+
+
+            <h1>
+
+                Comprendre le comportement du consommateur
+
+            </h1>
+
+
+
+
+            <p>
+
+
+                Découvrez comment les clients réfléchissent,
+                prennent leurs décisions d'achat et comment les
+                entreprises utilisent ces informations pour créer
+                de meilleures stratégies marketing.
+
+
+            </p>
+
+
+
+        </div>
+
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+    <!--====================================
+        OBJECTIFS
+=====================================-->
+
+    <section class="objectif">
+
+
+        <h2>
+            🎯 Objectifs de la leçon
+        </h2>
+
+
+        <p>
+            Cette leçon permet de comprendre comment les consommateurs prennent leurs
+            décisions d'achat et comment les entreprises peuvent adapter leurs stratégies
+            marketing en fonction des besoins et motivations des clients.
+        </p>
+
+
+        <ul>
+
+
+            <li>
+                Comprendre pourquoi les clients achètent un produit ou un service.
+            </li>
+
+
+            <li>
+                Identifier les besoins, motivations et attentes des consommateurs.
+            </li>
+
+
+            <li>
+                Analyser les différentes étapes du parcours d'achat d'un client.
+            </li>
+
+
+            <li>
+                Comprendre l'influence des facteurs qui déterminent une décision d'achat.
+            </li>
+
+
+            <li>
+                Créer une stratégie marketing adaptée au comportement des consommateurs.
+            </li>
+
+
+        </ul>
+
+
+    </section>
+
+
+
+
+
+    <!--====================================
+        PARTIE 1
+=====================================-->
+
+
+    <section class="cours">
+
+
+        <h2>
+            1. Qu'est-ce que le comportement du consommateur ?
+        </h2>
+
+
+
+        <p>
+            Le comportement du consommateur représente l'ensemble des actions,
+            pensées, émotions et décisions qu'une personne réalise avant, pendant et
+            après l'achat d'un produit ou d'un service.
+        </p>
+
+
+        <p>
+            Il permet de comprendre pourquoi un client choisit une marque plutôt qu'une
+            autre, quels sont ses besoins, ses motivations et les éléments qui
+            influencent sa décision.
+        </p>
+
+
+        <p>
+            Pour les entreprises, l'étude du comportement du consommateur est essentielle
+            car elle permet de créer des produits adaptés, de proposer une meilleure
+            expérience client et d'améliorer les stratégies marketing.
+        </p>
+
+
+
+        <h3>
+            📚 Enseignements du cours
+        </h3>
+
+
+        <p>
+            À la fin de cette partie, l'apprenant doit être capable de :
+        </p>
+
+
+        <ul>
+
+
+            <li>
+                Définir le comportement du consommateur.
+            </li>
+
+
+            <li>
+                Comprendre l'importance de l'étude des clients dans le marketing.
+            </li>
+
+
+            <li>
+                Identifier les raisons qui influencent un achat.
+            </li>
+
+
+            <li>
+                Analyser les attentes des consommateurs.
+            </li>
+
+
+            <li>
+                Comprendre comment adapter une offre aux besoins du marché.
+            </li>
+
+
+        </ul>
+
+
+
+
+        <h3>
+            Les éléments étudiés dans le comportement du consommateur
+        </h3>
+
+
+
+        <ul>
+
+
+            <li>
+                <strong>Les besoins :</strong>
+                ce que le consommateur cherche à satisfaire grâce à un produit ou un
+                service.
+            </li>
+
+
+            <li>
+                <strong>Les motivations :</strong>
+                les raisons personnelles ou émotionnelles qui poussent une personne à
+                acheter.
+            </li>
+
+
+            <li>
+                <strong>Les préférences :</strong>
+                les choix du consommateur selon ses goûts, ses habitudes et ses valeurs.
+            </li>
+
+
+            <li>
+                <strong>La décision d'achat :</strong>
+                le processus qui conduit une personne à choisir un produit.
+            </li>
+
+
+            <li>
+                <strong>L'expérience après achat :</strong>
+                la satisfaction du client après l'utilisation du produit.
+            </li>
+
+
+        </ul>
+
+
+
+
+        <div class="exemple">
+
+
+            <h3>
+                Exemple :
+            </h3>
+
+
+            <p>
+                Une personne qui achète un smartphone ne recherche pas uniquement un
+                appareil électronique. Elle peut rechercher plusieurs avantages :
+                une bonne qualité de caméra pour prendre des photos, une grande rapidité
+                pour utiliser les applications, une marque reconnue pour son image ou
+                encore une facilité d'utilisation.
+            </p>
+
+
+            <p>
+                L'entreprise doit donc comprendre ces attentes afin de proposer un
+                smartphone qui correspond réellement aux besoins de ses clients.
+            </p>
+
+
+        </div>
+
+
+
+
+        <h3>
+            Pourquoi étudier le comportement du consommateur ?
+        </h3>
+
+
+        <ul>
+
+
+            <li>
+                Pour mieux connaître les attentes des clients.
+            </li>
+
+
+            <li>
+                Pour créer des produits plus adaptés.
+            </li>
+
+
+            <li>
+                Pour améliorer la communication marketing.
+            </li>
+
+
+            <li>
+                Pour augmenter la satisfaction et fidéliser les clients.
+            </li>
+
+
+        </ul>
+
+
+
+
+        <h3>
+            À retenir
+        </h3>
+
+
+        <p>
+            Comprendre le comportement du consommateur permet aux entreprises de prendre
+            de meilleures décisions marketing. Une entreprise qui connaît ses clients
+            peut proposer des produits plus adaptés et construire une relation durable
+            avec eux.
+        </p>
+
+
+
+
+        <!-- VIDEO DU COURS -->
+
+
+        <div class="video-cours">
+
+
+            <h3>
+                📹 Vidéo explicative
+            </h3>
+
+
+            <iframe width="100%" height="400" src="https://www.youtube.com/embed/oZSgVhyMaYk"
+                title="Le comportement du consommateur" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+
+
+        </div>
+
+
+
+    </section>
+
+
+
+
+
+
+
+
+    <!--====================================
+        PARTIE 2
+=====================================-->
+
+    <section class="cours">
+
+
+        <h2>
+            2. Les besoins du consommateur
+        </h2>
+
+
+
+        <p>
+            Chaque achat commence généralement par un besoin ou un problème que le
+            consommateur souhaite résoudre. Avant de prendre une décision d'achat, une
+            personne ressent un manque ou identifie une situation qu'elle souhaite
+            améliorer.
+        </p>
+
+
+        <p>
+            Comprendre les besoins des consommateurs permet aux entreprises de proposer
+            des produits et services qui apportent une réelle valeur aux clients.
+        </p>
+
+
+        <p>
+            Les besoins peuvent être différents selon les personnes, leur situation,
+            leurs objectifs, leur environnement et leurs habitudes de consommation.
+        </p>
+
+
+
+        <h3>
+            📚 Enseignements du cours
+        </h3>
+
+
+        <p>
+            À la fin de cette partie, l'apprenant doit être capable de :
+        </p>
+
+
+        <ul>
+
+
+            <li>
+                Comprendre pourquoi les consommateurs achètent un produit.
+            </li>
+
+
+            <li>
+                Identifier les différents types de besoins des clients.
+            </li>
+
+
+            <li>
+                Analyser les motivations qui influencent une décision d'achat.
+            </li>
+
+
+            <li>
+                Adapter une offre commerciale aux attentes des consommateurs.
+            </li>
+
+
+            <li>
+                Comprendre l'importance des besoins dans une stratégie marketing.
+            </li>
+
+
+        </ul>
+
+
+
+
+        <h3>
+            Les différents types de besoins
+        </h3>
+
+
+
+        <ul>
+
+
+            <li>
+
+                <strong>Besoins fonctionnels :</strong>
+
+                Ils correspondent à un besoin pratique ou utile. Le consommateur achète
+                un produit pour résoudre un problème précis ou faciliter une tâche.
+
+                <br><br>
+
+                <strong>Exemple :</strong>
+                Acheter un ordinateur pour travailler ou suivre une formation en ligne.
+
+            </li>
+
+
+
+            <li>
+
+                <strong>Besoins émotionnels :</strong>
+
+                Ils sont liés aux sentiments, au plaisir, au confort ou à la satisfaction
+                personnelle que le produit peut apporter.
+
+                <br><br>
+
+                <strong>Exemple :</strong>
+                Acheter un parfum pour se sentir élégant et avoir confiance en soi.
+
+            </li>
+
+
+
+            <li>
+
+                <strong>Besoins sociaux :</strong>
+
+                Ils concernent le désir d'appartenir à un groupe, d'être reconnu ou de
+                montrer une certaine image aux autres.
+
+                <br><br>
+
+                <strong>Exemple :</strong>
+                Acheter une marque connue pour montrer son style et son statut social.
+
+            </li>
+
+
+
+            <li>
+
+                <strong>Besoins de sécurité :</strong>
+
+                Ils correspondent au besoin de confiance, de protection et de garantie
+                avant ou après l'achat.
+
+                <br><br>
+
+                <strong>Exemple :</strong>
+                Choisir une assurance pour protéger sa famille ou ses biens.
+
+            </li>
+
+
+        </ul>
+
+
+
+
+        <div class="exemple">
+
+
+            <h3>
+                Exemple concret :
+            </h3>
+
+
+            <p>
+                Une personne qui achète un smartphone peut avoir plusieurs besoins :
+            </p>
+
+
+            <ul>
+
+
+                <li>
+                    Besoin fonctionnel : utiliser Internet et communiquer.
+                </li>
+
+
+                <li>
+                    Besoin émotionnel : avoir un téléphone moderne et esthétique.
+                </li>
+
+
+                <li>
+                    Besoin social : utiliser une marque populaire.
+                </li>
+
+
+                <li>
+                    Besoin de sécurité : protéger ses données personnelles.
+                </li>
+
+
+            </ul>
+
+
+        </div>
+
+
+
+
+        <h3>
+            L'importance des besoins dans le marketing
+        </h3>
+
+
+        <p>
+            Les entreprises étudient les besoins des consommateurs afin de créer des
+            produits plus adaptés. Une entreprise qui comprend les attentes de ses
+            clients peut proposer une meilleure offre et augmenter ses chances de
+            réussite.
+        </p>
+
+
+
+
+        <h3>
+            À retenir
+        </h3>
+
+
+        <p>
+            Les besoins sont à l'origine de toutes les décisions d'achat. Pour réussir,
+            une entreprise doit comprendre ce que recherchent réellement ses clients et
+            proposer des solutions adaptées à leurs attentes.
+        </p>
+
+
+
+
+        <!-- VIDEO DU COURS -->
+
+
+        <div class="video-cours">
+
+
+            <h3>
+                📹 Vidéo explicative
+            </h3>
+
+
+            <iframe width="100%" height="400" src="https://www.youtube.com/embed/eeeMA_keyRc"
+                title="Les besoins du consommateur" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+
+
+        </div>
+
+
+
+    </section>
+
+
+
+
+
+
+
+    <!--====================================
+        PARTIE 3
+=====================================-->
+
+    <section class="cours">
+
+
+        <h2>
+            3. Les motivations d'achat
+        </h2>
+
+
+
+        <p>
+            La motivation d'achat représente la raison ou l'ensemble des raisons qui
+            poussent un consommateur à acheter un produit ou un service.
+        </p>
+
+
+        <p>
+            Avant d'effectuer un achat, le consommateur analyse plusieurs éléments :
+            ses besoins, ses attentes, ses émotions, son budget et la confiance qu'il
+            accorde à une marque.
+        </p>
+
+
+        <p>
+            Comprendre les motivations d'achat permet aux entreprises de mieux présenter
+            leurs produits et de créer des messages marketing qui correspondent aux
+            attentes des clients.
+        </p>
+
+
+
+
+        <h3>
+            📚 Enseignements du cours
+        </h3>
+
+
+        <p>
+            À la fin de cette partie, l'apprenant doit être capable de :
+        </p>
+
+
+        <ul>
+
+
+            <li>
+                Comprendre ce qui pousse un consommateur à acheter.
+            </li>
+
+
+            <li>
+                Identifier les principales motivations d'achat.
+            </li>
+
+
+            <li>
+                Analyser les comportements des clients avant une décision d'achat.
+            </li>
+
+
+            <li>
+                Adapter une communication marketing aux motivations des consommateurs.
+            </li>
+
+
+            <li>
+                Comprendre le rôle des émotions dans la décision d'achat.
+            </li>
+
+
+        </ul>
+
+
+
+
+        <h3>
+            Les principales motivations d'achat
+        </h3>
+
+
+
+        <ul>
+
+
+            <li>
+
+                <strong>Recherche de qualité :</strong>
+
+                Le consommateur souhaite acheter un produit fiable, durable et qui
+                apporte de bonnes performances.
+
+                <br><br>
+
+                <strong>Exemple :</strong>
+                Une personne choisit un ordinateur plus cher car elle recherche une
+                meilleure qualité et une longue durée d'utilisation.
+
+            </li>
+
+
+
+            <li>
+
+                <strong>Recherche de prix avantageux :</strong>
+
+                Le client cherche un produit qui correspond à son budget et qui offre
+                un bon rapport qualité-prix.
+
+                <br><br>
+
+                <strong>Exemple :</strong>
+                Un client compare plusieurs téléphones avant de choisir celui qui offre
+                les meilleures caractéristiques au meilleur prix.
+
+            </li>
+
+
+
+            <li>
+
+                <strong>Besoin de reconnaissance :</strong>
+
+                Certains consommateurs achètent pour améliorer leur image, montrer leur
+                réussite ou appartenir à un groupe.
+
+                <br><br>
+
+                <strong>Exemple :</strong>
+                Acheter une marque connue pour son prestige et sa réputation.
+
+            </li>
+
+
+
+            <li>
+
+                <strong>Envie d'améliorer son quotidien :</strong>
+
+                Le consommateur recherche un produit capable de lui apporter plus de
+                confort, de facilité ou de satisfaction.
+
+                <br><br>
+
+                <strong>Exemple :</strong>
+                Acheter un appareil électroménager pour gagner du temps à la maison.
+
+            </li>
+
+
+
+            <li>
+
+                <strong>Confiance envers une marque :</strong>
+
+                Un client peut acheter parce qu'il connaît déjà la marque et qu'il a eu
+                une bonne expérience auparavant.
+
+                <br><br>
+
+                <strong>Exemple :</strong>
+                Acheter régulièrement les produits d'une entreprise connue pour son bon
+                service client.
+
+            </li>
+
+
+        </ul>
+
+
+
+
+
+        <div class="important">
+
+
+            <h3>
+                Pourquoi connaître les motivations des clients ?
+            </h3>
+
+
+
+            <p>
+                Une entreprise qui connaît les motivations de ses clients peut créer des
+                produits plus adaptés, améliorer sa communication et proposer des offres
+                qui répondent réellement aux attentes des consommateurs.
+            </p>
+
+
+            <p>
+                Cela permet également d'augmenter la satisfaction des clients et de
+                renforcer leur fidélité envers la marque.
+            </p>
+
+
+        </div>
+
+
+
+
+        <div class="exemple">
+
+
+            <h3>
+                Exemple pratique :
+            </h3>
+
+
+            <p>
+                Une boutique de vêtements remarque que ses clients recherchent à la fois
+                des vêtements modernes, des prix accessibles et une bonne qualité.
+                Elle décide donc de proposer des collections tendance avec des promotions
+                régulières.
+            </p>
+
+
+            <p>
+                Grâce à cette analyse des motivations, la boutique répond mieux aux
+                attentes de ses clients.
+            </p>
+
+
+        </div>
+
+
+
+
+        <h3>
+            À retenir
+        </h3>
+
+
+        <p>
+            Les motivations d'achat expliquent pourquoi un consommateur choisit un
+            produit plutôt qu'un autre. Les entreprises doivent comprendre ces
+            motivations afin de créer des stratégies marketing plus efficaces.
+        </p>
+
+
+
+
+        <!-- VIDEO DU COURS -->
+
+
+        <div class="video-cours">
+
+
+            <h3>
+                📹 Vidéo explicative
+            </h3>
+
+
+            <iframe width="100%" height="400" src="https://www.youtube.com/embed/7q7depQBIqA"
+                title="Les motivations d'achat du consommateur" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+
+
+        </div>
+
+
+
+    </section>
+
+
+
+
+
+
+
+
+    <!--====================================
+        PARTIE 4
+=====================================-->
+
+    <section class="cours">
+
+
+        <h2>
+            4. Le processus de décision d'achat
+        </h2>
+
+
+
+        <p>
+            Avant d'acheter un produit ou un service, un consommateur suit généralement
+            plusieurs étapes qui influencent sa décision finale.
+        </p>
+
+
+        <p>
+            Le processus d'achat permet aux entreprises de comprendre le comportement
+            des clients afin d'adapter leurs produits, leurs prix et leurs actions de
+            communication.
+        </p>
+
+
+        <p>
+            Chaque étape représente une opportunité pour l'entreprise d'attirer le client,
+            de le convaincre et de construire une relation durable avec lui.
+        </p>
+
+
+
+
+        <h3>
+            📚 Enseignements du cours
+        </h3>
+
+
+        <p>
+            À la fin de cette partie, l'apprenant doit être capable de :
+        </p>
+
+
+        <ul>
+
+
+            <li>
+                Comprendre les différentes étapes suivies par un consommateur avant un
+                achat.
+            </li>
+
+
+            <li>
+                Identifier les moments où une entreprise peut influencer la décision du
+                client.
+            </li>
+
+
+            <li>
+                Analyser le parcours d'achat d'un consommateur.
+            </li>
+
+
+            <li>
+                Créer des stratégies marketing adaptées à chaque étape du processus.
+            </li>
+
+
+            <li>
+                Comprendre l'importance de l'expérience après achat.
+            </li>
+
+
+        </ul>
+
+
+
+
+        <h3>
+            Les étapes du processus de décision d'achat
+        </h3>
+
+
+
+        <table border="1">
+
+
+            <tr>
+
+                <th>
+                    Étape
+                </th>
+
+
+                <th>
+                    Description
+                </th>
+
+
+                <th>
+                    Action marketing possible
+                </th>
+
+
+            </tr>
+
+
+
+
+
+            <tr>
+
+                <td>
+                    <strong>1. Reconnaissance du besoin</strong>
+                </td>
+
+
+                <td>
+                    Le client identifie un problème, un manque ou une envie qu'il
+                    souhaite satisfaire.
+                </td>
+
+
+                <td>
+                    L'entreprise présente une solution adaptée au besoin.
+                </td>
+
+
+            </tr>
+
+
+
+
+
+            <tr>
+
+                <td>
+                    <strong>2. Recherche d'informations</strong>
+                </td>
+
+
+                <td>
+                    Le client recherche des informations, consulte les avis et compare
+                    différentes offres.
+                </td>
+
+
+                <td>
+                    L'entreprise doit fournir des informations claires sur ses produits.
+                </td>
+
+
+            </tr>
+
+
+
+
+
+            <tr>
+
+                <td>
+                    <strong>3. Évaluation des solutions</strong>
+                </td>
+
+
+                <td>
+                    Le consommateur compare les marques, les prix, la qualité et les
+                    avantages.
+                </td>
+
+
+                <td>
+                    L'entreprise doit mettre en avant ses points forts.
+                </td>
+
+
+            </tr>
+
+
+
+
+
+            <tr>
+
+                <td>
+                    <strong>4. Décision d'achat</strong>
+                </td>
+
+
+                <td>
+                    Le client choisit le produit ou le service qu'il souhaite acheter.
+                </td>
+
+
+                <td>
+                    Les promotions, garanties et services peuvent encourager l'achat.
+                </td>
+
+
+            </tr>
+
+
+
+
+
+            <tr>
+
+                <td>
+                    <strong>5. Après achat</strong>
+                </td>
+
+
+                <td>
+                    Le client évalue son expérience et peut donner un avis ou devenir
+                    fidèle à la marque.
+                </td>
+
+
+                <td>
+                    L'entreprise doit assurer un bon suivi client.
+                </td>
+
+
+            </tr>
+
+
+
+        </table>
+
+
+
+
+        <div class="exemple">
+
+
+            <h3>
+                Exemple pratique : Achat d'un smartphone
+            </h3>
+
+
+            <p>
+                Une personne remarque que son ancien téléphone fonctionne mal
+                (reconnaissance du besoin). Elle cherche ensuite des informations sur
+                Internet, regarde les avis et compare plusieurs modèles.
+            </p>
+
+
+            <p>
+                Après avoir analysé les caractéristiques et les prix, elle choisit un
+                smartphone. Après l'achat, son expérience avec le produit et le service
+                client influencera sa fidélité envers la marque.
+            </p>
+
+
+        </div>
+
+
+
+
+        <h3>
+            L'importance du parcours client
+        </h3>
+
+
+        <p>
+            Comprendre le parcours d'achat permet aux entreprises de savoir comment
+            accompagner les consommateurs à chaque étape. Une bonne expérience augmente
+            les chances de satisfaction et de fidélisation.
+        </p>
+
+
+
+
+        <h3>
+            À retenir
+        </h3>
+
+
+        <p>
+            La décision d'achat n'est pas un acte instantané. Le consommateur passe par
+            plusieurs étapes : il identifie un besoin, recherche des informations,
+            compare les solutions, achète puis évalue son expérience.
+        </p>
+
+
+
+
+        <!-- VIDEO DU COURS -->
+
+
+        <div class="video-cours">
+
+
+            <h3>
+                📹 Vidéo explicative
+            </h3>
+
+
+            <iframe width="100%" height="400" src="https://www.youtube.com/embed/R4wK6_Z3iDU"
+                title="Le processus de décision d'achat du consommateur" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+
+
+        </div>
+
+
+
+    </section>
+
+
+
+
+
+
+
+    <!--====================================
+        PARTIE 5
+=====================================-->
+
+    <section class="cours">
+
+
+        <h2>
+            5. Le parcours client (Customer Journey)
+        </h2>
+
+
+
+        <p>
+            Le parcours client représente l'ensemble des étapes et des interactions
+            entre un consommateur et une entreprise avant, pendant et après l'achat
+            d'un produit ou d'un service.
+        </p>
+
+
+        <p>
+            Il permet de comprendre l'expérience vécue par le client depuis le moment
+            où il découvre une marque jusqu'à sa fidélisation.
+        </p>
+
+
+        <p>
+            En analysant le parcours client, une entreprise peut identifier les points
+            d'amélioration, proposer une meilleure expérience et renforcer sa relation
+            avec les consommateurs.
+        </p>
+
+
+
+
+        <h3>
+            📚 Enseignements du cours
+        </h3>
+
+
+        <p>
+            À la fin de cette partie, l'apprenant doit être capable de :
+        </p>
+
+
+        <ul>
+
+
+            <li>
+                Comprendre le concept du parcours client.
+            </li>
+
+
+            <li>
+                Identifier les différentes étapes de l'expérience client.
+            </li>
+
+
+            <li>
+                Analyser les interactions entre le client et l'entreprise.
+            </li>
+
+
+            <li>
+                Comprendre comment améliorer la satisfaction des consommateurs.
+            </li>
+
+
+            <li>
+                Créer des stratégies pour fidéliser les clients.
+            </li>
+
+
+        </ul>
+
+
+
+
+        <h3>
+            Les principales étapes du parcours client
+        </h3>
+
+
+
+        <ul>
+
+
+            <li>
+
+                <strong>1. Découverte de la marque :</strong>
+
+                Le client découvre l'existence d'une entreprise grâce à la publicité,
+                aux réseaux sociaux, aux recommandations ou aux recherches sur Internet.
+
+                <br><br>
+
+                <strong>Objectif de l'entreprise :</strong>
+                attirer l'attention du consommateur.
+
+            </li>
+
+
+
+
+            <li>
+
+                <strong>2. Visite du site ou des réseaux sociaux :</strong>
+
+                Le client consulte les informations disponibles, regarde les produits,
+                les avis et découvre l'image de la marque.
+
+                <br><br>
+
+                <strong>Objectif de l'entreprise :</strong>
+                présenter une information claire et professionnelle.
+
+            </li>
+
+
+
+
+            <li>
+
+                <strong>3. Comparaison des offres :</strong>
+
+                Le consommateur compare les prix, la qualité, les avantages et les
+                différentes solutions disponibles sur le marché.
+
+                <br><br>
+
+                <strong>Objectif de l'entreprise :</strong>
+                montrer pourquoi son offre est meilleure que celle des concurrents.
+
+            </li>
+
+
+
+
+            <li>
+
+                <strong>4. Achat du produit :</strong>
+
+                Le client prend sa décision et réalise son achat en magasin ou en ligne.
+
+                <br><br>
+
+                <strong>Objectif de l'entreprise :</strong>
+                rendre l'achat simple, rapide et sécurisé.
+
+            </li>
+
+
+
+
+            <li>
+
+                <strong>5. Fidélisation après achat :</strong>
+
+                Après l'achat, l'entreprise entretient la relation avec le client grâce
+                au service après-vente, aux offres spéciales et à la communication.
+
+                <br><br>
+
+                <strong>Objectif de l'entreprise :</strong>
+                transformer un client occasionnel en client fidèle.
+
+            </li>
+
+
+        </ul>
+
+
+
+
+        <div class="exemple">
+
+
+            <h3>
+                Exemple pratique : Achat d'un vêtement en ligne
+            </h3>
+
+
+            <p>
+                Un client découvre une boutique de vêtements grâce à une publicité
+                Facebook. Il visite la page de l'entreprise, regarde les modèles
+                disponibles, compare les prix avec d'autres boutiques puis commande
+                un vêtement.
+            </p>
+
+
+            <p>
+                Après la livraison, la boutique lui envoie des offres personnalisées.
+                Le client satisfait pourra revenir acheter d'autres produits et
+                recommander la marque à ses proches.
+            </p>
+
+
+        </div>
+
+
+
+
+        <h3>
+            Pourquoi analyser le parcours client ?
+        </h3>
+
+
+
+        <ul>
+
+
+            <li>
+                Améliorer l'expérience des consommateurs.
+            </li>
+
+
+            <li>
+                Identifier les problèmes rencontrés par les clients.
+            </li>
+
+
+            <li>
+                Augmenter les ventes.
+            </li>
+
+
+            <li>
+                Développer la fidélité envers la marque.
+            </li>
+
+
+        </ul>
+
+
+
+
+        <h3>
+            À retenir
+        </h3>
+
+
+        <p>
+            Le parcours client représente toutes les étapes vécues par un consommateur
+            avec une entreprise. Une bonne gestion de ce parcours permet d'offrir une
+            meilleure expérience et de créer une relation durable avec les clients.
+        </p>
+
+
+
+
+        <!-- VIDEO DU COURS -->
+
+
+        <div class="video-cours">
+
+
+            <h3>
+                📹 Vidéo explicative
+            </h3>
+
+
+            <iframe width="100%" height="400" src="https://www.youtube.com/embed/IzGsA98eAIA"
+                title="Le parcours client Customer Journey" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+
+
+        </div>
+
+
+
+    </section>
+
+
+
+
+
+
+
+
+    <!--====================================
+        PARTIE 6
+=====================================-->
+
+    <section class="cours">
+
+
+        <h2>
+            6. Créer un profil client (Persona)
+        </h2>
+
+
+
+        <p>
+            Un persona est une représentation fictive du client idéal d'une entreprise.
+            Il est créé à partir d'informations réelles sur les consommateurs afin de
+            mieux comprendre leurs besoins, leurs comportements et leurs attentes.
+        </p>
+
+
+        <p>
+            Le persona aide les entreprises à prendre de meilleures décisions marketing
+            en adaptant leurs produits, leurs messages et leurs offres aux personnes
+            qu'elles souhaitent atteindre.
+        </p>
+
+
+        <p>
+            Plus une entreprise connaît son client idéal, plus elle peut proposer une
+            expérience personnalisée et efficace.
+        </p>
+
+
+
+
+        <h3>
+            📚 Enseignements du cours
+        </h3>
+
+
+        <p>
+            À la fin de cette partie, l'apprenant doit être capable de :
+        </p>
+
+
+        <ul>
+
+
+            <li>
+                Comprendre le rôle d'un persona dans une stratégie marketing.
+            </li>
+
+
+            <li>
+                Identifier les informations importantes pour créer un profil client.
+            </li>
+
+
+            <li>
+                Définir les besoins et objectifs d'un consommateur.
+            </li>
+
+
+            <li>
+                Adapter une communication marketing selon le type de client.
+            </li>
+
+
+            <li>
+                Créer un profil client réaliste pour un projet commercial.
+            </li>
+
+
+        </ul>
+
+
+
+
+        <h3>
+            Les éléments d'un bon persona
+        </h3>
+
+
+
+        <ul>
+
+
+            <li>
+                <strong>Nom :</strong>
+                Permet de donner une identité au profil client.
+            </li>
+
+
+            <li>
+                <strong>Âge :</strong>
+                Permet de comprendre la génération et les habitudes du client.
+            </li>
+
+
+            <li>
+                <strong>Profession :</strong>
+                Permet d'analyser sa situation financière et ses besoins.
+            </li>
+
+
+            <li>
+                <strong>Besoins :</strong>
+                Représentent les problèmes que le client cherche à résoudre.
+            </li>
+
+
+            <li>
+                <strong>Objectifs :</strong>
+                Représentent ce que le client souhaite atteindre grâce au produit.
+            </li>
+
+
+            <li>
+                <strong>Comportements :</strong>
+                Indiquent ses habitudes d'achat et ses moyens de communication préférés.
+            </li>
+
+
+        </ul>
+
+
+
+
+        <h3>
+            Exemple de Persona
+        </h3>
+
+
+
+        <div class="exemple">
+
+
+            <p>
+                <strong>Nom :</strong> Sarah
+            </p>
+
+
+            <p>
+                <strong>Âge :</strong> 25 ans
+            </p>
+
+
+            <p>
+                <strong>Profession :</strong> Étudiante
+            </p>
+
+
+            <p>
+                <strong>Situation :</strong> Recherche des solutions d'apprentissage
+                accessibles et adaptées à son budget.
+            </p>
+
+
+            <p>
+                <strong>Besoins :</strong> Acheter des formations en ligne de qualité
+                pour développer ses compétences.
+            </p>
+
+
+            <p>
+                <strong>Objectif :</strong> Améliorer ses connaissances professionnelles
+                afin d'obtenir de meilleures opportunités.
+            </p>
+
+
+            <p>
+                <strong>Comportement :</strong> Utilise principalement Internet,
+                YouTube et les réseaux sociaux pour rechercher des informations.
+            </p>
+
+
+        </div>
+
+
+
+
+        <h3>
+            Pourquoi utiliser un Persona ?
+        </h3>
+
+
+        <ul>
+
+
+            <li>
+                Pour mieux comprendre les clients.
+            </li>
+
+
+            <li>
+                Pour créer des produits adaptés aux besoins réels.
+            </li>
+
+
+            <li>
+                Pour choisir les meilleurs canaux de communication.
+            </li>
+
+
+            <li>
+                Pour améliorer les campagnes marketing.
+            </li>
+
+
+            <li>
+                Pour offrir une meilleure expérience client.
+            </li>
+
+
+        </ul>
+
+
+
+
+        <div class="important">
+
+
+            <h3>
+                Exemple d'application dans une entreprise
+            </h3>
+
+
+            <p>
+                Une plateforme de formation en ligne qui connaît son persona Sarah peut
+                proposer des cours accessibles, des paiements adaptés aux étudiants,
+                des vidéos courtes et une communication principalement sur les réseaux
+                sociaux.
+            </p>
+
+
+        </div>
+
+
+
+
+        <h3>
+            À retenir
+        </h3>
+
+
+        <p>
+            Le persona permet à une entreprise de mieux connaître son client idéal.
+            En comprenant ses besoins, ses objectifs et ses habitudes, l'entreprise
+            peut créer des offres plus pertinentes et développer une stratégie marketing
+            plus efficace.
+        </p>
+
+
+
+
+        <!-- VIDEO DU COURS -->
+
+
+        <div class="video-cours">
+
+
+            <h3>
+                📹 Vidéo explicative
+            </h3>
+
+
+            <iframe width="100%" height="400" src="https://www.youtube.com/embed/oZSgVhyMaYk"
+                title="Créer un persona client en marketing" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+
+
+        </div>
+
+
+
+    </section>
+
+
+
+
+
+
+
+
+    <!--====================================
+        EXERCICE
+=====================================-->
+
+    <section class="exercice">
+
+
+        <h2>
+            ✍️ Exercice pratique : Analyser le comportement d'un client
+        </h2>
+
+
+
+        <p>
+            Choisissez un produit ou un service de votre choix et analysez le
+            comportement du client qui pourrait l'acheter.
+        </p>
+
+
+        <p>
+            L'objectif est d'utiliser les notions étudiées dans cette leçon :
+            besoins du consommateur, motivations d'achat, processus de décision et
+            parcours client.
+        </p>
+
+
+
+
+        <h3>
+            🎯 Objectif de l'exercice
+        </h3>
+
+
+        <ul>
+
+
+            <li>
+                Identifier le profil et les attentes d'un client.
+            </li>
+
+
+            <li>
+                Comprendre les raisons qui influencent une décision d'achat.
+            </li>
+
+
+            <li>
+                Analyser le parcours d'un consommateur avant et après l'achat.
+            </li>
+
+
+            <li>
+                Proposer une stratégie marketing adaptée au client.
+            </li>
+
+
+        </ul>
+
+
+
+
+        <h3>
+            📌 Consigne
+        </h3>
+
+
+        <p>
+            Choisissez un produit (téléphone, vêtement, formation en ligne,
+            restaurant, application mobile...) puis répondez aux questions suivantes :
+        </p>
+
+
+
+
+        <ul>
+
+
+            <li>
+
+                <strong>Quel est son besoin ?</strong>
+
+                <br>
+                Quel problème le client cherche-t-il à résoudre avec ce produit ?
+
+            </li>
+
+
+
+            <li>
+
+                <strong>Pourquoi achète-t-il ?</strong>
+
+                <br>
+                Quelle est la raison principale qui le pousse à effectuer l'achat ?
+
+            </li>
+
+
+
+            <li>
+
+                <strong>Quelles sont ses motivations ?</strong>
+
+                <br>
+                Cherche-t-il la qualité, un prix avantageux, la reconnaissance, le
+                confort ou la sécurité ?
+
+            </li>
+
+
+
+            <li>
+
+                <strong>Quel est son parcours avant l'achat ?</strong>
+
+                <br>
+                Comment découvre-t-il le produit ? Où recherche-t-il les informations ?
+                Comment compare-t-il les offres ?
+
+            </li>
+
+
+        </ul>
+
+
+
+
+        <div class="exemple">
+
+
+            <h3>
+                Exemple :
+            </h3>
+
+
+            <p>
+                Produit choisi : Formation en marketing digital
+            </p>
+
+
+            <ul>
+
+
+                <li>
+                    <strong>Besoin :</strong>
+                    Apprendre une nouvelle compétence professionnelle.
+                </li>
+
+
+                <li>
+                    <strong>Pourquoi achète-t-il :</strong>
+                    Pour améliorer ses chances de trouver un emploi ou développer son
+                    activité.
+                </li>
+
+
+                <li>
+                    <strong>Motivations :</strong>
+                    Qualité de la formation, prix accessible et possibilité d'apprendre
+                    à distance.
+                </li>
+
+
+                <li>
+                    <strong>Parcours :</strong>
+                    Il découvre la formation sur les réseaux sociaux, consulte les
+                    informations, compare les offres puis s'inscrit.
+                </li>
+
+
+            </ul>
+
+
+        </div>
+
+
+
+
+        <h3>
+            Votre analyse :
+        </h3>
+
+
+
+        <textarea placeholder="Décrivez le comportement de votre client ici...">
+    </textarea>
+
+
+
+    </section>
+
+
+
+
+
+
+    <!--====================================
+        NAVIGATION
+=====================================-->
+
+    <section class="navigation">
+
+
+        <button onclick="retourCours()">
+
+            ← Retour au chapitre
+
+        </button>
+
+
+
+
+        <button onclick="terminerLecon()">
+
+            ✓ Terminer la leçon
+
+        </button>
+
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+    <footer>
+
+
+        <h3>
+
+            BMJ SERVICE
+
+        </h3>
+
+
+        <p>
+
+            Prochaine étape : Les stratégies marketing modernes.
+
+        </p>
+
+
+    </footer>
+
+    <script>
+
+
+
+        //====================================
+        // CHARGEMENT DE LA PAGE
+        //====================================
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+
+            let utilisateur = JSON.parse(
+
+                localStorage.getItem("bmj_current_user")
+
+            );
+
+
+
+            if (!utilisateur) {
+
+
+                window.location.href = "connexion.html";
+
+                return;
+
+
+            }
+
+
+
+
+
+            //=========================
+            // AFFICHAGE PROFIL
+            //=========================
+
+
+            document.getElementById("nomUtilisateur").innerHTML =
+
+                utilisateur.nom;
+
+
+
+
+
+            if (utilisateur.photo && utilisateur.photo != "") {
+
+
+                document.getElementById("photoUtilisateur").src =
+
+                    utilisateur.photo;
+
+
+            }
+
+
+
+        });
+
+
+
+
+
+
+
+
+
+        //====================================
+        // RETOUR AU CHAPITRE
+        //====================================
+
+
+        function retourCours() {
+
+
+            window.location.href = "marketing.html";
+
+
+        }
+
+
+
+
+
+
+
+
+
+        //====================================
+        // TERMINER LEÇON 4
+        //====================================
+
+
+        function terminerLecon() {
+
+
+
+            let utilisateur = JSON.parse(
+
+                localStorage.getItem("bmj_current_user")
+
+            );
+
+
+
+
+
+            if (!utilisateur) {
+
+
+                window.location.href = "connexion.html";
+
+                return;
+
+
+            }
+
+
+
+
+
+
+
+
+
+            //--------------------------------
+            // RECUPERATION PROGRESSION
+            //--------------------------------
+
+
+            let progression = JSON.parse(
+
+                localStorage.getItem("marketing_progression")
+
+            ) || [];
+
+
+
+
+
+
+
+
+
+            //================================
+            // VERIFICATION DOUBLE VALIDATION
+            //================================
+
+
+            if (progression.includes("4")) {
+
+
+                alert(
+
+                    "Cette leçon est déjà terminée.\n\nVous pouvez la revoir quand vous voulez."
+
+                );
+
+
+
+                window.location.href = "marketing.html";
+
+
+                return;
+
+
+            }
+
+
+
+
+
+
+
+
+
+            //--------------------------------
+            // AJOUT LEÇON 4
+            //--------------------------------
+
+
+            progression.push("4");
+
+
+
+
+
+
+            localStorage.setItem(
+
+                "marketing_progression",
+
+                JSON.stringify(progression)
+
+            );
+
+
+
+
+
+
+
+
+
+            //--------------------------------
+            // COURS SUIVIS
+            //--------------------------------
+
+
+            if (!utilisateur.coursSuivis) {
+
+
+                utilisateur.coursSuivis = [];
+
+
+            }
+
+
+
+
+
+            if (!utilisateur.coursSuivis.includes(
+
+                "Marketing Leçon 4"
+
+            )) {
+
+
+                utilisateur.coursSuivis.push(
+
+                    "Marketing Leçon 4"
+
+                );
+
+
+            }
+
+
+
+
+
+
+
+
+
+            //--------------------------------
+            // CALCUL PROGRESSION
+            //--------------------------------
+
+
+            utilisateur.progression = progression.length * 20;
+
+
+
+
+
+            if (utilisateur.progression > 100) {
+
+
+                utilisateur.progression = 100;
+
+
+            }
+
+
+
+
+
+
+
+
+
+            //--------------------------------
+            // SAUVEGARDE SESSION
+            //--------------------------------
+
+
+            localStorage.setItem(
+
+                "bmj_current_user",
+
+                JSON.stringify(utilisateur)
+
+            );
+
+
+
+
+
+
+
+
+
+            //--------------------------------
+            // SAUVEGARDE BASE UTILISATEURS
+            //--------------------------------
+
+
+            let utilisateurs = JSON.parse(
+
+                localStorage.getItem("bmj_users")
+
+            ) || [];
+
+
+
+
+
+
+
+            let index = utilisateurs.findIndex(
+
+                u => u.id === utilisateur.id
+
+            );
+
+
+
+
+
+
+
+
+            if (index !== -1) {
+
+
+                utilisateurs[index] = utilisateur;
+
+
+            }
+
+
+
+
+
+
+
+            localStorage.setItem(
+
+                "bmj_users",
+
+                JSON.stringify(utilisateurs)
+
+            );
+
+
+
+
+
+
+
+
+
+            //--------------------------------
+            // MESSAGE
+            //--------------------------------
+
+
+            alert(
+
+                "🎉 Félicitations !\n\nVous avez terminé la Leçon 4 : Comprendre le comportement du consommateur."
+
+            );
+
+
+
+
+
+
+
+
+
+            //--------------------------------
+            // RETOUR CHAPITRE
+            //--------------------------------
+
+
+            window.location.href = "marketing.html";
+
+
+
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

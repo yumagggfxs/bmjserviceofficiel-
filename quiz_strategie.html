@@ -1,0 +1,2101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /*==================================================
+        BMJ SERVICE - QUIZ STRATEGIE MARKETING
+==================================================*/
+
+
+    * {
+
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', Arial, sans-serif;
+
+    }
+
+
+
+    html {
+
+        scroll-behavior: smooth;
+
+    }
+
+
+
+    body {
+
+        background: #f4f7fb;
+        color: #333;
+        line-height: 1.7;
+
+    }
+
+
+
+
+
+
+
+
+
+    /*=====================================
+            HEADER
+======================================*/
+
+
+    header {
+
+        position: fixed;
+
+        top: 0;
+
+        left: 0;
+
+        width: 100%;
+
+        height: 75px;
+
+        background: white;
+
+        display: flex;
+
+        justify-content: space-between;
+
+        align-items: center;
+
+        padding: 0 40px;
+
+        box-shadow: 0 5px 20px rgba(0, 0, 0, .08);
+
+        z-index: 1000;
+
+    }
+
+
+
+    .logo {
+
+        display: flex;
+
+        align-items: center;
+
+        gap: 12px;
+
+    }
+
+
+
+    .logo img {
+
+        width: 50px;
+
+        height: 50px;
+
+        border-radius: 50%;
+
+    }
+
+
+
+    .logo h2 {
+
+        color: #145A86;
+
+    }
+
+
+
+    .logo span {
+
+        color: #D4AF37;
+
+    }
+
+
+
+
+    .student-profile {
+
+        display: flex;
+
+        align-items: center;
+
+        gap: 12px;
+
+    }
+
+
+
+    .student-profile img {
+
+        width: 48px;
+
+        height: 48px;
+
+        border-radius: 50%;
+
+        object-fit: cover;
+
+        border: 3px solid #D4AF37;
+
+    }
+
+
+
+    .student-profile h4 {
+
+        color: #145A86;
+
+    }
+
+
+
+    .student-profile small {
+
+        color: #777;
+
+    }
+
+
+
+
+
+
+
+
+
+    /*=====================================
+            HERO
+======================================*/
+
+
+    .quiz-hero {
+
+
+        margin-top: 75px;
+
+
+        height: 400px;
+
+
+        background:
+
+
+            linear-gradient(rgba(20, 90, 134, .85),
+
+                rgba(0, 0, 0, .70)),
+
+
+            url(images/quiz-marketing.jpg);
+
+
+
+        background-size: cover;
+
+
+        background-position: center;
+
+
+        display: flex;
+
+
+        align-items: center;
+
+
+        justify-content: center;
+
+
+    }
+
+
+
+
+    .quiz-overlay {
+
+
+        text-align: center;
+
+
+        color: white;
+
+
+        width: 90%;
+
+
+        max-width: 900px;
+
+
+    }
+
+
+
+    .quiz-overlay span {
+
+
+        background: #D4AF37;
+
+
+        color: #145A86;
+
+
+        padding: 8px 20px;
+
+
+        border-radius: 30px;
+
+
+        font-weight: bold;
+
+
+    }
+
+
+
+    .quiz-overlay h1 {
+
+
+        font-size: 50px;
+
+
+        margin: 25px 0;
+
+
+    }
+
+
+
+
+    .quiz-overlay p {
+
+
+        font-size: 20px;
+
+
+    }
+
+
+
+
+
+
+
+
+
+    /*=====================================
+        INFORMATIONS QUIZ
+======================================*/
+
+
+    .quiz-info {
+
+
+        width: 90%;
+
+
+        max-width: 1100px;
+
+
+        margin: 40px auto;
+
+
+        display: grid;
+
+
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
+
+        gap: 25px;
+
+
+    }
+
+
+
+
+    .info-card {
+
+
+        background: white;
+
+
+        padding: 30px;
+
+
+        border-radius: 20px;
+
+
+        text-align: center;
+
+
+        box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+
+
+        transition: .3s;
+
+
+    }
+
+
+
+    .info-card:hover {
+
+
+        transform: translateY(-10px);
+
+
+    }
+
+
+
+    .info-card i {
+
+
+        font-size: 40px;
+
+
+        color: #D4AF37;
+
+
+        margin-bottom: 15px;
+
+
+    }
+
+
+
+    .info-card h3 {
+
+
+        color: #145A86;
+
+
+    }
+
+
+
+
+
+
+
+
+
+    /*=====================================
+            QUIZ
+======================================*/
+
+
+    .quiz-container {
+
+
+        width: 90%;
+
+
+        max-width: 1100px;
+
+
+        margin: 40px auto;
+
+
+        background: white;
+
+
+        padding: 35px;
+
+
+        border-radius: 20px;
+
+
+        box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+
+
+    }
+
+
+
+    .quiz-container h2 {
+
+
+        text-align: center;
+
+
+        color: #145A86;
+
+
+        margin-bottom: 35px;
+
+
+    }
+
+
+
+
+
+
+
+    .question {
+
+
+        background: #f8fbff;
+
+
+        padding: 25px;
+
+
+        border-radius: 15px;
+
+
+        margin-bottom: 25px;
+
+
+        border-left: 5px solid #145A86;
+
+
+    }
+
+
+
+
+    .question h3 {
+
+
+        color: #145A86;
+
+
+        margin-bottom: 20px;
+
+
+    }
+
+
+
+
+
+    .question label {
+
+
+        display: block;
+
+
+        background: white;
+
+
+        padding: 15px;
+
+
+        margin: 10px 0;
+
+
+        border-radius: 10px;
+
+
+        cursor: pointer;
+
+
+        transition: .3s;
+
+
+    }
+
+
+
+
+
+    .question label:hover {
+
+
+        background: #eef6ff;
+
+
+    }
+
+
+
+
+
+    .question input {
+
+
+        margin-right: 10px;
+
+
+    }
+
+
+
+
+
+
+
+
+
+    /*=====================================
+            BOUTON
+======================================*/
+
+
+    .quiz-action {
+
+
+        text-align: center;
+
+
+        margin-top: 30px;
+
+
+    }
+
+
+
+
+
+    .quiz-action button {
+
+
+        padding: 18px 40px;
+
+
+        border: none;
+
+
+        border-radius: 30px;
+
+
+        background: #D4AF37;
+
+
+        color: #145A86;
+
+
+        font-size: 18px;
+
+
+        font-weight: bold;
+
+
+        cursor: pointer;
+
+
+        transition: .3s;
+
+
+    }
+
+
+
+    .quiz-action button:hover {
+
+
+        background: #145A86;
+
+
+        color: white;
+
+
+        transform: translateY(-5px);
+
+
+    }
+
+
+
+
+
+
+
+
+
+    /*=====================================
+            RESULTAT
+======================================*/
+
+
+    .resultat {
+
+
+        display: none;
+
+
+        width: 90%;
+
+
+        max-width: 700px;
+
+
+        margin: 40px auto;
+
+
+        background: #145A86;
+
+
+        color: white;
+
+
+        padding: 40px;
+
+
+        border-radius: 20px;
+
+
+        text-align: center;
+
+
+    }
+
+
+
+
+    .resultat h2 {
+
+
+        color: #D4AF37;
+
+
+        margin-bottom: 20px;
+
+
+    }
+
+
+
+
+    #score {
+
+
+        font-size: 45px;
+
+
+        font-weight: bold;
+
+
+        margin: 20px;
+
+
+    }
+
+
+
+
+
+
+
+
+
+    /*=====================================
+            FOOTER
+======================================*/
+
+
+    footer {
+
+
+        background: #145A86;
+
+
+        color: white;
+
+
+        text-align: center;
+
+
+        padding: 35px;
+
+
+        margin-top: 50px;
+
+
+    }
+
+
+
+    footer h3 {
+
+
+        margin-bottom: 10px;
+
+
+    }
+
+
+
+
+
+
+
+
+
+    /*=====================================
+            RESPONSIVE
+======================================*/
+
+
+    @media(max-width:768px) {
+
+
+
+        header {
+
+
+            padding: 0 15px;
+
+
+        }
+
+
+
+
+        .student-profile small {
+
+
+            display: none;
+
+
+        }
+
+
+
+        .quiz-overlay h1 {
+
+
+            font-size: 35px;
+
+
+        }
+
+
+
+
+        .quiz-overlay p {
+
+
+            font-size: 16px;
+
+
+        }
+
+
+
+
+        .quiz-container {
+
+
+            padding: 22px;
+
+
+        }
+
+
+
+    }
+
+
+
+
+    @media(max-width:500px) {
+
+
+        .logo h2 {
+
+
+            font-size: 20px;
+
+
+        }
+
+
+
+
+        .student-profile h4 {
+
+
+            font-size: 14px;
+
+
+        }
+
+
+
+
+        .quiz-overlay h1 {
+
+
+            font-size: 28px;
+
+
+        }
+
+
+    }
+</style>
+
+<body>
+
+
+    <!--====================================
+            HEADER
+=====================================-->
+
+    <header>
+
+
+        <div class="logo">
+
+            <img src="images/logo.png">
+
+
+            <h2>
+
+                BMJ <span>SERVICE</span>
+
+            </h2>
+
+
+        </div>
+
+
+
+
+
+        <div class="student-profile">
+
+
+            <img id="photoUtilisateur" src="images/user.png">
+
+
+            <div>
+
+
+                <h4 id="nomUtilisateur">
+
+                    Apprenant
+
+                </h4>
+
+
+                <small>
+
+                    Marketing Digital
+
+                </small>
+
+
+            </div>
+
+
+        </div>
+
+
+    </header>
+
+
+
+
+
+
+
+
+
+    <!--====================================
+            HERO QUIZ
+=====================================-->
+
+    <section class="quiz-hero">
+
+
+        <div class="quiz-overlay">
+
+
+            <span>
+
+                ÉVALUATION FINALE
+
+            </span>
+
+
+
+            <h1>
+
+                Quiz : Stratégie Marketing
+
+            </h1>
+
+
+
+
+            <p>
+
+
+                Testez vos connaissances sur la création,
+                l'analyse et l'application d'une stratégie
+                marketing efficace.
+
+
+            </p>
+
+
+
+        </div>
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+    <!--====================================
+            INFORMATIONS QUIZ
+=====================================-->
+
+    <section class="quiz-info">
+
+
+        <div class="info-card">
+
+
+            <i class="fa-solid fa-question"></i>
+
+
+            <h3>
+
+                10 Questions
+
+            </h3>
+
+
+            <p>
+
+                Évaluation complète
+
+            </p>
+
+
+        </div>
+
+
+
+
+
+
+        <div class="info-card">
+
+
+            <i class="fa-solid fa-clock"></i>
+
+
+            <h3>
+
+                10 Minutes
+
+            </h3>
+
+
+            <p>
+
+                Temps conseillé
+
+            </p>
+
+
+        </div>
+
+
+
+
+
+
+        <div class="info-card">
+
+
+            <i class="fa-solid fa-star"></i>
+
+
+            <h3>
+
+                80 %
+
+            </h3>
+
+
+            <p>
+
+                Score de réussite
+
+            </p>
+
+
+        </div>
+
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+    <!--====================================
+            QUIZ
+=====================================-->
+
+    <section class="quiz-container">
+
+
+
+        <h2>
+
+            Répondez aux questions suivantes
+
+        </h2>
+
+
+
+
+
+
+
+        <!-- QUESTION 1 -->
+
+        <div class="question">
+
+
+            <h3>
+
+                1. Qu'est-ce qu'une stratégie marketing ?
+
+            </h3>
+
+
+
+            <label>
+
+                <input type="radio" name="q1" value="a">
+
+                Une méthode pour atteindre les objectifs commerciaux d'une entreprise
+
+            </label>
+
+
+
+            <label>
+
+                <input type="radio" name="q1" value="b">
+
+                Une simple publicité
+
+            </label>
+
+
+
+
+            <label>
+
+                <input type="radio" name="q1" value="c">
+
+                Une technique uniquement utilisée pour vendre
+
+            </label>
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+        <!-- QUESTION 2 -->
+
+        <div class="question">
+
+
+            <h3>
+
+                2. Quelle est la première étape d'une stratégie marketing ?
+
+            </h3>
+
+
+
+            <label>
+
+                <input type="radio" name="q2" value="a">
+
+                Créer directement un produit
+
+            </label>
+
+
+
+            <label>
+
+                <input type="radio" name="q2" value="b">
+
+                Analyser le marché
+
+            </label>
+
+
+
+
+            <label>
+
+                <input type="radio" name="q2" value="c">
+
+                Faire uniquement de la publicité
+
+            </label>
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+        <!-- QUESTION 3 -->
+
+        <div class="question">
+
+
+            <h3>
+
+                3. Le positionnement marketing permet :
+
+            </h3>
+
+
+
+            <label>
+
+                <input type="radio" name="q3" value="a">
+
+                De supprimer les concurrents
+
+            </label>
+
+
+
+            <label>
+
+                <input type="radio" name="q3" value="b">
+
+                De différencier une marque
+
+            </label>
+
+
+
+
+            <label>
+
+                <input type="radio" name="q3" value="c">
+
+                De réduire la qualité du produit
+
+            </label>
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+        <!-- QUESTION 4 -->
+
+        <div class="question">
+
+
+            <h3>
+
+                4. Pourquoi faut-il connaître sa clientèle ?
+
+            </h3>
+
+
+
+            <label>
+
+                <input type="radio" name="q4" value="a">
+
+                Pour répondre à ses besoins
+
+            </label>
+
+
+
+            <label>
+
+                <input type="radio" name="q4" value="b">
+
+                Pour augmenter les erreurs
+
+            </label>
+
+
+
+
+            <label>
+
+                <input type="radio" name="q4" value="c">
+
+                Pour éviter toute communication
+
+            </label>
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+        <!-- QUESTION 5 -->
+
+        <div class="question">
+
+
+            <h3>
+
+                5. Une action marketing digitale peut être :
+
+            </h3>
+
+
+
+            <label>
+
+                <input type="radio" name="q5" value="a">
+
+                Une publicité sur les réseaux sociaux
+
+            </label>
+
+
+
+            <label>
+
+                <input type="radio" name="q5" value="b">
+
+                Ignorer les clients
+
+            </label>
+
+
+
+
+            <label>
+
+                <input type="radio" name="q5" value="c">
+
+                Arrêter les ventes
+
+            </label>
+
+
+
+        </div>
+        <!-- QUESTION 6 -->
+
+        <div class="question">
+
+
+            <h3>
+
+                6. Quel est le rôle de l'analyse du marché ?
+
+            </h3>
+
+
+
+            <label>
+
+                <input type="radio" name="q6" value="a">
+
+                Comprendre les clients et les concurrents
+
+            </label>
+
+
+
+            <label>
+
+                <input type="radio" name="q6" value="b">
+
+                Augmenter les prix sans raison
+
+            </label>
+
+
+
+
+            <label>
+
+                <input type="radio" name="q6" value="c">
+
+                Supprimer les produits
+
+            </label>
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+        <!-- QUESTION 7 -->
+
+        <div class="question">
+
+
+            <h3>
+
+                7. Le suivi des résultats marketing permet de :
+
+            </h3>
+
+
+
+            <label>
+
+                <input type="radio" name="q7" value="a">
+
+                Mesurer l'efficacité des actions réalisées
+
+            </label>
+
+
+
+            <label>
+
+                <input type="radio" name="q7" value="b">
+
+                Arrêter toute activité
+
+            </label>
+
+
+
+
+            <label>
+
+                <input type="radio" name="q7" value="c">
+
+                Éviter les améliorations
+
+            </label>
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+        <!-- QUESTION 8 -->
+
+        <div class="question">
+
+
+            <h3>
+
+                8. Quel élément aide une entreprise à se différencier ?
+
+            </h3>
+
+
+
+            <label>
+
+                <input type="radio" name="q8" value="a">
+
+                Un positionnement clair
+
+            </label>
+
+
+
+            <label>
+
+                <input type="radio" name="q8" value="b">
+
+                L'absence de stratégie
+
+            </label>
+
+
+
+
+            <label>
+
+                <input type="radio" name="q8" value="c">
+
+                La mauvaise communication
+
+            </label>
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+        <!-- QUESTION 9 -->
+
+        <div class="question">
+
+
+            <h3>
+
+                9. La fidélisation des clients consiste à :
+
+            </h3>
+
+
+
+            <label>
+
+                <input type="radio" name="q9" value="a">
+
+                Encourager les clients à revenir
+
+            </label>
+
+
+
+            <label>
+
+                <input type="radio" name="q9" value="b">
+
+                Empêcher les clients d'acheter
+
+            </label>
+
+
+
+
+            <label>
+
+                <input type="radio" name="q9" value="c">
+
+                Réduire la satisfaction client
+
+            </label>
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+        <!-- QUESTION 10 -->
+
+        <div class="question">
+
+
+            <h3>
+
+                10. Une bonne stratégie marketing doit être :
+
+            </h3>
+
+
+
+            <label>
+
+                <input type="radio" name="q10" value="a">
+
+                Adaptée aux besoins du marché
+
+            </label>
+
+
+
+            <label>
+
+                <input type="radio" name="q10" value="b">
+
+                Identique pour toutes les entreprises
+
+            </label>
+
+
+
+
+            <label>
+
+                <input type="radio" name="q10" value="c">
+
+                Sans objectif précis
+
+            </label>
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+        <!--====================================
+            BOUTON RESULTAT
+=====================================-->
+
+        <div class="quiz-action">
+
+
+            <button onclick="corrigerQuiz()">
+
+
+                🎓 Voir mon résultat
+
+
+            </button>
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+        <!--====================================
+            RESULTAT
+=====================================-->
+
+        <section id="resultat" class="resultat">
+
+
+            <h2>
+
+                Votre résultat
+
+            </h2>
+
+
+
+            <p id="score">
+
+                0 / 10
+
+            </p>
+
+
+
+            <p id="message">
+
+            </p>
+
+
+
+        </section>
+
+
+
+
+
+
+
+
+
+        <!--====================================
+            FOOTER
+=====================================-->
+
+        <footer>
+
+
+            <h3>
+
+                BMJ SERVICE
+
+            </h3>
+
+
+
+            <p>
+
+                Plateforme professionnelle de formation en ligne.
+
+            </p>
+
+
+        </footer>
+        <script>
+
+
+            //====================================
+            // CHARGEMENT PAGE
+            //====================================
+
+
+            document.addEventListener("DOMContentLoaded", function () {
+
+
+
+                let utilisateur = JSON.parse(
+
+                    localStorage.getItem("bmj_current_user")
+
+                );
+
+
+
+                if (!utilisateur) {
+
+
+                    window.location.href = "connexion.html";
+
+                    return;
+
+
+                }
+
+
+
+
+
+
+
+                //=========================
+                // AFFICHAGE PROFIL
+                //=========================
+
+
+                document.getElementById("nomUtilisateur").innerHTML = utilisateur.nom;
+
+
+
+                if (utilisateur.photo && utilisateur.photo !== "") {
+
+
+                    document.getElementById("photoUtilisateur").src = utilisateur.photo;
+
+
+                }
+
+
+
+            });
+
+
+
+
+
+
+
+
+
+            //====================================
+            // CORRECTION DU QUIZ
+            //====================================
+
+
+            function corrigerQuiz() {
+
+
+
+                let bonnesReponses = {
+
+
+                    q1: "a",
+
+                    q2: "b",
+
+                    q3: "b",
+
+                    q4: "a",
+
+                    q5: "a",
+
+                    q6: "a",
+
+                    q7: "a",
+
+                    q8: "a",
+
+                    q9: "a",
+
+                    q10: "a"
+
+
+                };
+
+
+
+
+
+                let score = 0;
+
+
+
+
+
+
+
+                //==============================
+                // VERIFICATION DES REPONSES
+                //==============================
+
+
+
+                for (let question in bonnesReponses) {
+
+
+
+                    let reponse = document.querySelector(
+
+                        'input[name="' + question + '"]:checked'
+
+                    );
+
+
+
+
+
+                    if (reponse && reponse.value === bonnesReponses[question]) {
+
+
+                        score++;
+
+
+                    }
+
+
+                }
+
+
+
+
+
+
+
+
+                //==============================
+                // AFFICHAGE RESULTAT
+                //==============================
+
+
+                let resultat = document.getElementById("resultat");
+
+
+                resultat.style.display = "block";
+
+
+
+                document.getElementById("score").innerHTML =
+
+                    score + " / 10";
+
+
+
+
+
+
+
+
+                let message = document.getElementById("message");
+
+
+
+
+
+
+
+                if (score >= 8) {
+
+
+
+                    message.innerHTML =
+
+                        "🎉 Félicitations ! Vous maîtrisez la stratégie marketing.";
+
+
+
+                    validerQuiz();
+
+
+
+                }
+
+                else if (score >= 5) {
+
+
+
+                    message.innerHTML =
+
+                        "👍 Bon travail ! Révisez encore quelques notions.";
+
+
+
+                }
+
+                else {
+
+
+
+                    message.innerHTML =
+
+                        "📚 Continuez vos révisions avant de recommencer.";
+
+
+
+                }
+
+
+
+
+
+
+
+
+                window.scrollTo({
+
+
+                    top: document.body.scrollHeight,
+
+
+                    behavior: "smooth"
+
+
+                });
+
+
+
+            }
+
+
+
+
+
+
+
+
+
+            //====================================
+            // VALIDATION CHAPITRE
+            //====================================
+
+
+            function validerQuiz() {
+
+
+
+                let utilisateur = JSON.parse(
+
+                    localStorage.getItem("bmj_current_user")
+
+                );
+
+
+
+
+
+                if (!utilisateur) {
+
+                    return;
+
+                }
+
+
+
+
+
+
+
+                //==============================
+                // CERTIFICATION STRATEGIE
+                //==============================
+
+
+                utilisateur.certificats = utilisateur.certificats || [];
+
+
+
+
+                if (!utilisateur.certificats.includes(
+
+                    "Stratégie Marketing"
+
+                )) {
+
+
+                    utilisateur.certificats.push(
+
+                        "Stratégie Marketing"
+
+                    );
+
+
+                }
+
+
+
+
+
+
+
+                utilisateur.progression = 100;
+
+
+
+
+
+
+
+                //==============================
+                // SAUVEGARDE SESSION
+                //==============================
+
+
+                localStorage.setItem(
+
+
+                    "bmj_current_user",
+
+
+                    JSON.stringify(utilisateur)
+
+
+                );
+
+
+
+
+
+
+
+
+                //==============================
+                // SAUVEGARDE UTILISATEURS
+                //==============================
+
+
+                let utilisateurs = JSON.parse(
+
+                    localStorage.getItem("bmj_users")
+
+                ) || [];
+
+
+
+
+
+
+
+                let index = utilisateurs.findIndex(
+
+
+                    u => u.id === utilisateur.id
+
+
+                );
+
+
+
+
+
+
+
+                if (index !== -1) {
+
+
+                    utilisateurs[index] = utilisateur;
+
+
+                }
+
+
+
+
+
+
+
+                localStorage.setItem(
+
+
+                    "bmj_users",
+
+
+                    JSON.stringify(utilisateurs)
+
+
+                );
+
+
+
+
+            }
+
+
+
+
+
+        </script>
+</body>
+
+</html>

@@ -1,0 +1,2222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*==================================================
+        BMJ SERVICE
+        QUIZ SEO ET REFERENCEMENT
+==================================================*/
+
+
+        * {
+
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', Arial, sans-serif;
+
+        }
+
+
+
+        body {
+
+            background: #f4f7fb;
+
+            color: #333;
+
+            line-height: 1.7;
+
+        }
+
+
+
+
+
+
+
+
+
+        /*====================================
+            HEADER
+=====================================*/
+
+
+        header {
+
+
+            position: fixed;
+
+            top: 0;
+
+            left: 0;
+
+            width: 100%;
+
+            height: 75px;
+
+            background: white;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            padding: 0 40px;
+
+            box-shadow: 0 5px 20px rgba(0, 0, 0, .08);
+
+            z-index: 1000;
+
+
+        }
+
+
+
+
+
+        .logo {
+
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+
+        }
+
+
+
+
+        .logo img {
+
+
+            width: 50px;
+
+            height: 50px;
+
+            border-radius: 50%;
+
+
+        }
+
+
+
+
+        .logo h2 {
+
+
+            color: #145A86;
+
+
+        }
+
+
+
+
+        .logo span {
+
+
+            color: #D4AF37;
+
+
+        }
+
+
+
+
+
+
+
+
+        .student-profile {
+
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+
+        }
+
+
+
+
+        .student-profile img {
+
+
+            width: 50px;
+
+            height: 50px;
+
+            border-radius: 50%;
+
+            object-fit: cover;
+
+            border: 3px solid #D4AF37;
+
+
+        }
+
+
+
+
+        .student-profile h4 {
+
+
+            color: #145A86;
+
+
+        }
+
+
+
+
+
+
+
+
+
+        /*====================================
+            HERO QUIZ
+=====================================*/
+
+
+        .quiz-hero {
+
+
+            margin-top: 75px;
+
+            height: 420px;
+
+
+            background:
+
+
+                linear-gradient(rgba(20, 90, 134, .85),
+
+                    rgba(0, 0, 0, .75)),
+
+
+                url(images/seo-quiz.jpg);
+
+
+
+            background-size: cover;
+
+            background-position: center;
+
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+
+        }
+
+
+
+
+        .quiz-overlay {
+
+
+            width: 90%;
+
+            max-width: 1000px;
+
+            text-align: center;
+
+            color: white;
+
+
+        }
+
+
+
+
+        .quiz-overlay span {
+
+
+            background: #D4AF37;
+
+            color: #145A86;
+
+            padding: 8px 25px;
+
+            border-radius: 30px;
+
+            font-weight: bold;
+
+
+        }
+
+
+
+
+
+        .quiz-overlay h1 {
+
+
+            font-size: 42px;
+
+            margin: 25px 0;
+
+
+        }
+
+
+
+
+
+        .quiz-overlay p {
+
+
+            font-size: 18px;
+
+
+        }
+
+
+
+
+
+
+
+
+
+        /*====================================
+        INFORMATIONS QUIZ
+=====================================*/
+
+
+        .quiz-info,
+        .quiz-rules,
+        .quiz-container {
+
+
+            width: 90%;
+
+            max-width: 1100px;
+
+            margin: 45px auto;
+
+
+            background: white;
+
+
+            padding: 35px;
+
+
+            border-radius: 20px;
+
+
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+
+
+        }
+
+
+
+
+
+
+
+
+
+        .quiz-info h2,
+        .quiz-rules h2,
+        .quiz-container h2 {
+
+
+            color: #145A86;
+
+            border-left: 6px solid #D4AF37;
+
+            padding-left: 15px;
+
+            margin-bottom: 30px;
+
+
+        }
+
+
+
+
+
+
+
+
+
+        /*====================================
+        CARDS INFORMATIONS
+=====================================*/
+
+
+        .quiz-cards {
+
+
+            display: grid;
+
+            grid-template-columns: repeat(4, 1fr);
+
+            gap: 20px;
+
+
+        }
+
+
+
+
+
+        .quiz-card {
+
+
+            text-align: center;
+
+            background: #f4f8fc;
+
+            padding: 25px;
+
+
+            border-radius: 15px;
+
+
+            transition: .3s;
+
+
+        }
+
+
+
+
+
+        .quiz-card:hover {
+
+
+            transform: translateY(-8px);
+
+            box-shadow: 0 10px 20px rgba(0, 0, 0, .12);
+
+
+        }
+
+
+
+
+        .quiz-card i {
+
+
+            font-size: 35px;
+
+            color: #D4AF37;
+
+            margin-bottom: 15px;
+
+
+        }
+
+
+
+
+        .quiz-card h3 {
+
+
+            color: #145A86;
+
+            margin-bottom: 10px;
+
+
+        }
+
+
+
+
+
+
+
+
+
+        /*====================================
+            REGLES
+=====================================*/
+
+
+        .quiz-rules li {
+
+
+            margin-bottom: 15px;
+
+            list-style: none;
+
+
+        }
+
+
+
+        .quiz-rules li::before {
+
+
+            content: "✓";
+
+            color: #D4AF37;
+
+            font-weight: bold;
+
+            margin-right: 10px;
+
+
+        }
+
+
+
+
+
+
+
+
+
+        /*====================================
+            QUESTIONS
+=====================================*/
+
+
+        .question {
+
+
+            background: #f8fafc;
+
+            padding: 25px;
+
+            border-radius: 15px;
+
+
+            margin-bottom: 25px;
+
+
+            border-left: 5px solid #145A86;
+
+
+        }
+
+
+
+
+
+        .question h3 {
+
+
+            color: #145A86;
+
+            margin-bottom: 20px;
+
+
+        }
+
+
+
+
+
+        .question label {
+
+
+            display: block;
+
+            background: white;
+
+
+            padding: 12px;
+
+            margin-bottom: 10px;
+
+
+            border-radius: 10px;
+
+
+            cursor: pointer;
+
+
+            transition: .3s;
+
+
+        }
+
+
+
+
+
+        .question label:hover {
+
+
+            background: #eef7ff;
+
+
+        }
+
+
+
+
+
+        .question input {
+
+
+            margin-right: 10px;
+
+
+        }
+
+
+
+
+
+
+
+
+
+        /*====================================
+        BOUTON VALIDATION
+=====================================*/
+
+
+        .quiz-submit {
+
+
+            text-align: center;
+
+            margin-top: 40px;
+
+
+        }
+
+
+
+
+        .quiz-submit button {
+
+
+            background: #D4AF37;
+
+
+            color: #145A86;
+
+
+            border: none;
+
+
+            padding: 18px 45px;
+
+
+            border-radius: 30px;
+
+
+            font-size: 17px;
+
+
+            font-weight: bold;
+
+
+            cursor: pointer;
+
+
+            transition: .3s;
+
+
+        }
+
+
+
+
+        .quiz-submit button:hover {
+
+
+            transform: translateY(-5px);
+
+
+            box-shadow: 0 10px 20px rgba(0, 0, 0, .15);
+
+
+        }
+
+
+
+
+
+
+
+
+
+        /*====================================
+            FOOTER
+=====================================*/
+
+
+        footer {
+
+
+            background: #145A86;
+
+
+            color: white;
+
+
+            text-align: center;
+
+
+            padding: 40px;
+
+
+        }
+
+
+
+
+
+        footer h3 {
+
+
+            color: #D4AF37;
+
+
+            margin-bottom: 10px;
+
+
+        }
+
+
+
+
+
+
+
+
+
+        /*====================================
+            TABLETTE
+=====================================*/
+
+
+        @media(max-width:900px) {
+
+
+
+            .quiz-cards {
+
+
+                grid-template-columns: repeat(2, 1fr);
+
+
+            }
+
+
+
+            .quiz-overlay h1 {
+
+
+                font-size: 32px;
+
+
+            }
+
+
+        }
+
+
+
+
+
+
+
+
+
+        /*====================================
+            MOBILE
+=====================================*/
+
+
+        @media(max-width:600px) {
+
+
+
+            header {
+
+
+                padding: 0 15px;
+
+
+            }
+
+
+
+            .logo img {
+
+
+                width: 40px;
+
+                height: 40px;
+
+
+            }
+
+
+
+            .logo h2 {
+
+
+                font-size: 18px;
+
+
+            }
+
+
+
+
+            .student-profile small {
+
+
+                display: none;
+
+
+            }
+
+
+
+
+
+            .quiz-hero {
+
+
+                height: 450px;
+
+
+            }
+
+
+
+
+            .quiz-overlay h1 {
+
+
+                font-size: 25px;
+
+
+            }
+
+
+
+
+
+            .quiz-overlay p {
+
+
+                font-size: 15px;
+
+
+            }
+
+
+
+
+
+            .quiz-info,
+            .quiz-rules,
+            .quiz-container {
+
+
+                padding: 25px;
+
+
+            }
+
+
+
+
+
+            .quiz-cards {
+
+
+                grid-template-columns: 1fr;
+
+
+            }
+
+
+
+
+
+            .question {
+
+
+                padding: 18px;
+
+
+            }
+
+
+
+
+
+            .quiz-submit button {
+
+
+                width: 100%;
+
+
+            }
+
+
+
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <!--====================================
+            HEADER
+=====================================-->
+
+    <header>
+
+
+        <div class="logo">
+
+
+            <img src="images/logo.png" alt="BMJ SERVICE">
+
+
+
+            <h2>
+
+                BMJ <span>SERVICE</span>
+
+            </h2>
+
+
+        </div>
+
+
+
+
+
+
+
+        <div class="student-profile">
+
+
+            <img id="photoUtilisateur" src="images/user.png" alt="Utilisateur">
+
+
+
+
+
+            <div>
+
+
+                <h4 id="nomUtilisateur">
+
+                    Apprenant
+
+                </h4>
+
+
+
+
+
+                <small id="domaineUtilisateur">
+
+                    Marketing Digital
+
+                </small>
+
+
+
+            </div>
+
+
+        </div>
+
+
+
+    </header>
+
+
+
+
+
+
+
+
+
+    <!--====================================
+            HERO QUIZ
+=====================================-->
+
+    <section class="quiz-hero">
+
+
+        <div class="quiz-overlay">
+
+
+            <span>
+
+                ÉVALUATION FINALE
+
+            </span>
+
+
+
+
+
+            <h1>
+
+                Quiz SEO et référencement
+
+            </h1>
+
+
+
+
+
+            <p>
+
+                Testez vos connaissances sur le référencement naturel,
+                les mots-clés, l'optimisation du contenu et les techniques
+                avancées du SEO.
+
+                Réussissez l'évaluation pour valider le chapitre.
+
+            </p>
+
+
+
+        </div>
+
+
+
+    </section>
+    <!--====================================
+            INFORMATIONS QUIZ
+=====================================-->
+
+    <section class="quiz-info">
+
+
+        <h2>
+
+            📚 Informations sur l'évaluation
+
+        </h2>
+
+
+
+
+
+        <div class="quiz-cards">
+
+
+
+            <div class="quiz-card">
+
+
+                <i class="fa-solid fa-question"></i>
+
+
+                <h3>
+
+                    10 Questions
+
+                </h3>
+
+
+                <p>
+
+                    Test complet du chapitre SEO
+
+                </p>
+
+
+            </div>
+
+
+
+
+
+
+
+
+            <div class="quiz-card">
+
+
+                <i class="fa-solid fa-clock"></i>
+
+
+                <h3>
+
+                    15 Minutes
+
+                </h3>
+
+
+                <p>
+
+                    Temps maximum
+
+                </p>
+
+
+            </div>
+
+
+
+
+
+
+
+
+            <div class="quiz-card">
+
+
+                <i class="fa-solid fa-check-circle"></i>
+
+
+                <h3>
+
+                    70% Minimum
+
+                </h3>
+
+
+                <p>
+
+                    Score de réussite
+
+                </p>
+
+
+            </div>
+
+
+
+
+
+
+
+
+            <div class="quiz-card">
+
+
+                <i class="fa-solid fa-certificate"></i>
+
+
+                <h3>
+
+                    Certificat
+
+                </h3>
+
+
+                <p>
+
+                    Après validation
+
+                </p>
+
+
+            </div>
+
+
+
+
+        </div>
+
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+    <!--====================================
+            REGLES QUIZ
+=====================================-->
+
+    <section class="quiz-rules">
+
+
+        <h2>
+
+            📌 Règles de l'évaluation
+
+        </h2>
+
+
+
+
+
+        <ul>
+
+
+            <li>
+
+                Vous devez répondre à toutes les questions.
+
+            </li>
+
+
+
+
+            <li>
+
+                Une seule réponse est correcte par question.
+
+            </li>
+
+
+
+
+            <li>
+
+                Le chapitre sera validé uniquement si vous obtenez
+                au minimum 70%.
+
+            </li>
+
+
+
+
+            <li>
+
+                En cas d'échec, vous pourrez réviser les leçons
+                et refaire l'évaluation.
+
+            </li>
+
+
+
+
+            <li>
+
+                Le certificat sera disponible uniquement après réussite.
+
+            </li>
+
+
+        </ul>
+
+
+
+    </section>
+    <!--====================================
+            QUIZ QUESTIONS
+=====================================-->
+
+    <section class="quiz-container">
+
+
+        <h2>
+
+            📝 Questions d'évaluation
+
+        </h2>
+
+
+
+
+
+        <!-- QUESTION 1 -->
+
+        <div class="question">
+
+
+            <h3>
+
+                1. Que signifie SEO ?
+
+            </h3>
+
+
+
+            <label>
+
+                <input type="radio" name="q1" value="0">
+
+                Social Engine Optimization
+
+            </label>
+
+
+
+            <label>
+
+                <input type="radio" name="q1" value="1">
+
+                Search Engine Optimization
+
+            </label>
+
+
+
+            <label>
+
+                <input type="radio" name="q1" value="0">
+
+                Search Email Organization
+
+            </label>
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+        <!-- QUESTION 2 -->
+
+        <div class="question">
+
+
+            <h3>
+
+                2. Quel est le rôle principal des mots-clés en SEO ?
+
+            </h3>
+
+
+
+            <label>
+
+                <input type="radio" name="q2" value="1">
+
+                Aider Google à comprendre le contenu d'une page
+
+            </label>
+
+
+
+            <label>
+
+                <input type="radio" name="q2" value="0">
+
+                Augmenter automatiquement le nombre de publicités
+
+            </label>
+
+
+
+            <label>
+
+                <input type="radio" name="q2" value="0">
+
+                Remplacer complètement le contenu d'un site
+
+            </label>
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+        <!-- QUESTION 3 -->
+
+        <div class="question">
+
+
+            <h3>
+
+                3. Le SEO On-page concerne :
+
+            </h3>
+
+
+
+            <label>
+
+                <input type="radio" name="q3" value="1">
+
+                Les optimisations réalisées directement sur un site
+
+            </label>
+
+
+
+            <label>
+
+                <input type="radio" name="q3" value="0">
+
+                Les publicités payantes sur Internet
+
+            </label>
+
+
+
+            <label>
+
+                <input type="radio" name="q3" value="0">
+
+                Les réseaux sociaux uniquement
+
+            </label>
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+        <!-- QUESTION 4 -->
+
+        <div class="question">
+
+
+            <h3>
+
+                4. Qu'est-ce qu'un backlink ?
+
+            </h3>
+
+
+
+            <label>
+
+                <input type="radio" name="q4" value="1">
+
+                Un lien provenant d'un autre site vers votre site
+
+            </label>
+
+
+
+            <label>
+
+                <input type="radio" name="q4" value="0">
+
+                Une image utilisée dans une page web
+
+            </label>
+
+
+
+            <label>
+
+                <input type="radio" name="q4" value="0">
+
+                Un mot de passe de connexion
+
+            </label>
+
+
+
+        </div>
+        <!-- QUESTION 5 -->
+
+        <div class="question">
+
+
+            <h3>
+
+                5. Pourquoi la vitesse d'un site est-elle importante en SEO ?
+
+            </h3>
+
+
+
+            <label>
+
+                <input type="radio" name="q5" value="1">
+
+                Elle améliore l'expérience des visiteurs
+
+            </label>
+
+
+
+            <label>
+
+                <input type="radio" name="q5" value="0">
+
+                Elle remplace le besoin de contenu
+
+            </label>
+
+
+
+            <label>
+
+                <input type="radio" name="q5" value="0">
+
+                Elle empêche Google d'analyser le site
+
+            </label>
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+        <!-- QUESTION 6 -->
+
+        <div class="question">
+
+
+            <h3>
+
+                6. Quel outil permet d'analyser les performances d'un site web ?
+
+            </h3>
+
+
+
+            <label>
+
+                <input type="radio" name="q6" value="1">
+
+                Google Analytics
+
+            </label>
+
+
+
+            <label>
+
+                <input type="radio" name="q6" value="0">
+
+                Photoshop
+
+            </label>
+
+
+
+            <label>
+
+                <input type="radio" name="q6" value="0">
+
+                WordPad
+
+            </label>
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+        <!-- QUESTION 7 -->
+
+        <div class="question">
+
+
+            <h3>
+
+                7. Le SEO Off-page concerne principalement :
+
+            </h3>
+
+
+
+            <label>
+
+                <input type="radio" name="q7" value="1">
+
+                Les actions réalisées en dehors du site
+
+            </label>
+
+
+
+            <label>
+
+                <input type="radio" name="q7" value="0">
+
+                La création du logo d'une entreprise
+
+            </label>
+
+
+
+            <label>
+
+                <input type="radio" name="q7" value="0">
+
+                La modification du design uniquement
+
+            </label>
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+        <!-- QUESTION 8 -->
+
+        <div class="question">
+
+
+            <h3>
+
+                8. Pourquoi faut-il mettre régulièrement à jour un contenu SEO ?
+
+            </h3>
+
+
+
+            <label>
+
+                <input type="radio" name="q8" value="1">
+
+                Pour garder un contenu pertinent et utile
+
+            </label>
+
+
+
+            <label>
+
+                <input type="radio" name="q8" value="0">
+
+                Pour supprimer toutes les pages du site
+
+            </label>
+
+
+
+            <label>
+
+                <input type="radio" name="q8" value="0">
+
+                Pour éviter les visiteurs
+
+            </label>
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+        <!-- QUESTION 9 -->
+
+        <div class="question">
+
+
+            <h3>
+
+                9. Quel élément améliore la confiance des visiteurs ?
+
+            </h3>
+
+
+
+            <label>
+
+                <input type="radio" name="q9" value="1">
+
+                Un site sécurisé avec HTTPS
+
+            </label>
+
+
+
+            <label>
+
+                <input type="radio" name="q9" value="0">
+
+                Un grand nombre de publicités
+
+            </label>
+
+
+
+            <label>
+
+                <input type="radio" name="q9" value="0">
+
+                Des textes copiés d'autres sites
+
+            </label>
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+        <!-- QUESTION 10 -->
+
+        <div class="question">
+
+
+            <h3>
+
+                10. Le SEO permet principalement de :
+
+            </h3>
+
+
+
+            <label>
+
+                <input type="radio" name="q10" value="1">
+
+                Améliorer la visibilité d'un site sur les moteurs de recherche
+
+            </label>
+
+
+
+            <label>
+
+                <input type="radio" name="q10" value="0">
+
+                Supprimer un site Internet
+
+            </label>
+
+
+
+            <label>
+
+                <input type="radio" name="q10" value="0">
+
+                Créer uniquement des vidéos
+
+            </label>
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+        <!--====================================
+            BOUTON VALIDATION
+    =====================================-->
+
+        <div class="quiz-submit">
+
+
+            <button onclick="corrigerQuiz()">
+
+                🎓 Valider l'évaluation
+
+            </button>
+
+
+        </div>
+
+
+
+    </section>
+    <!--====================================
+            FOOTER
+=====================================-->
+
+    <footer>
+
+
+        <h3>
+
+            BMJ SERVICE
+
+        </h3>
+
+
+
+
+
+        <p>
+
+            Évaluation finale du chapitre SEO et référencement.
+
+            Réussissez le quiz pour débloquer la validation
+            du chapitre et obtenir votre certificat.
+
+        </p>
+
+
+
+
+    </footer>
+
+
+
+
+    <script>
+
+        //==================================================
+        // BMJ SERVICE
+        // CHAPITRE 6 : SEO ET REFERENCEMENT
+        // QUIZ FINAL
+        //==================================================
+
+
+
+
+
+        //====================================
+        // CHARGEMENT PAGE
+        //====================================
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+
+
+            let utilisateur = JSON.parse(
+
+                localStorage.getItem("bmj_current_user")
+
+            );
+
+
+
+
+
+            if (utilisateur) {
+
+
+
+                let nom = document.getElementById(
+
+                    "nomUtilisateur"
+
+                );
+
+
+
+                if (nom) {
+
+
+                    nom.innerHTML = utilisateur.nom;
+
+
+                }
+
+
+
+
+
+                let photo = document.getElementById(
+
+                    "photoUtilisateur"
+
+                );
+
+
+
+                if (photo && utilisateur.photo) {
+
+
+                    photo.src = utilisateur.photo;
+
+
+                }
+
+
+
+            }
+
+
+
+        });
+
+
+
+
+
+
+
+
+
+        //====================================
+        // CORRECTION DU QUIZ
+        //====================================
+
+
+        function corrigerQuiz() {
+
+
+
+            let score = 0;
+
+
+
+            let total = 10;
+
+
+
+
+
+
+            // Vérification des réponses
+
+            for (let i = 1; i <= total; i++) {
+
+
+
+                let reponse = document.querySelector(
+
+                    'input[name="q' + i + '"]:checked'
+
+                );
+
+
+
+
+
+                if (!reponse) {
+
+
+
+                    alert(
+
+                        "⚠️ Veuillez répondre à toutes les questions."
+
+                    );
+
+
+                    return;
+
+
+                }
+
+
+
+
+
+                score += Number(reponse.value);
+
+
+
+            }
+
+
+
+
+
+
+
+
+
+            // Calcul pourcentage
+
+
+            let pourcentage = Math.round(
+
+                (score / total) * 100
+
+            );
+
+
+
+
+
+
+
+
+            //===============================
+            // AFFICHAGE RESULTAT
+            //===============================
+
+
+            if (pourcentage >= 70) {
+
+
+
+
+
+                alert(
+
+                    "🎉 Félicitations !\n\nVotre score : "
+
+                    + pourcentage +
+
+                    "%\n\nVous avez réussi l'évaluation SEO."
+
+                );
+
+
+
+
+
+
+
+                validerChapitreSEO();
+
+
+
+
+
+
+            }
+
+            else {
+
+
+
+
+
+                alert(
+
+                    "❌ Évaluation non validée.\n\nVotre score : "
+
+                    + pourcentage +
+
+                    "%\n\nVous devez obtenir au minimum 70% pour valider le chapitre."
+
+                );
+
+
+
+            }
+
+
+
+        }
+
+
+
+
+
+
+
+
+
+        //====================================
+        // VALIDATION CHAPITRE SEO
+        //====================================
+
+
+        function validerChapitreSEO() {
+
+
+
+            let utilisateur = JSON.parse(
+
+                localStorage.getItem("bmj_current_user")
+
+            );
+
+
+
+
+
+
+
+
+            if (utilisateur) {
+
+
+
+
+
+                // Chapitres validés
+
+
+                if (!utilisateur.chapitresValides) {
+
+
+                    utilisateur.chapitresValides = [];
+
+
+                }
+
+
+
+
+
+
+
+
+                if (!utilisateur.chapitresValides.includes(
+
+                    "SEO et référencement"
+
+                )) {
+
+
+                    utilisateur.chapitresValides.push(
+
+                        "SEO et référencement"
+
+                    );
+
+
+                }
+
+
+
+
+
+
+
+
+
+                // Certificat débloqué
+
+
+                utilisateur.certificats =
+
+                    utilisateur.certificats || [];
+
+
+
+
+
+
+
+
+                if (!utilisateur.certificats.includes(
+
+                    "SEO et référencement"
+
+                )) {
+
+
+                    utilisateur.certificats.push(
+
+                        "SEO et référencement"
+
+                    );
+
+
+                }
+
+
+
+
+
+
+
+
+
+                // Sauvegarde utilisateur
+
+
+                localStorage.setItem(
+
+                    "bmj_current_user",
+
+                    JSON.stringify(utilisateur)
+
+                );
+
+
+
+            }
+
+
+
+
+
+
+
+
+            // Sauvegarde chapitre terminé
+
+
+            localStorage.setItem(
+
+                "seo_valide",
+
+                "true"
+
+            );
+
+
+
+
+
+
+
+
+            setTimeout(function () {
+
+
+                window.location.href = "chap5.html";
+
+
+            }, 1500);
+
+
+
+        }
+    </script>
+
+
+
+</body>
+
+</html>

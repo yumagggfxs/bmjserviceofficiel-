@@ -1,0 +1,2114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*====================================
+        RESET
+=====================================*/
+
+        * {
+
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', Arial, sans-serif;
+
+        }
+
+
+        body {
+
+            background: #f4f7fb;
+
+            color: #333;
+
+            overflow-x: hidden;
+
+        }
+
+
+
+
+
+
+        /*====================================
+        HEADER
+=====================================*/
+
+
+        header {
+
+            position: fixed;
+
+            top: 0;
+
+            left: 0;
+
+            width: 100%;
+
+            height: 75px;
+
+            background: white;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            padding: 0 40px;
+
+            box-shadow: 0 5px 20px rgba(0, 0, 0, .08);
+
+            z-index: 1000;
+
+        }
+
+
+
+
+        .logo {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+        }
+
+
+
+        .logo img {
+
+            width: 50px;
+
+            height: 50px;
+
+            border-radius: 50%;
+
+        }
+
+
+
+        .logo h2 {
+
+            color: #145A86;
+
+        }
+
+
+
+        .logo span {
+
+            color: #D4AF37;
+
+        }
+
+
+
+
+
+
+        .student-profile {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+        }
+
+
+
+
+        .student-profile img {
+
+            width: 50px;
+
+            height: 50px;
+
+            border-radius: 50%;
+
+            object-fit: cover;
+
+            border: 3px solid #D4AF37;
+
+        }
+
+
+
+        .student-profile h4 {
+
+            color: #145A86;
+
+        }
+
+
+
+
+
+
+
+
+
+        /*====================================
+        HERO
+=====================================*/
+
+
+        .premium-hero {
+
+
+            margin-top: 75px;
+
+
+            height: 430px;
+
+
+            background:
+
+
+                linear-gradient(rgba(20, 90, 134, .9),
+
+                    rgba(0, 0, 0, .75)),
+
+
+                url(images/certificate.jpg);
+
+
+
+            background-size: cover;
+
+
+            background-position: center;
+
+
+            display: flex;
+
+
+            justify-content: center;
+
+
+            align-items: center;
+
+
+            text-align: center;
+
+
+            padding: 30px;
+
+
+        }
+
+
+
+
+        .premium-content {
+
+            max-width: 900px;
+
+            color: white;
+
+        }
+
+
+
+
+
+        .premium-content span {
+
+
+            display: inline-block;
+
+
+            background: #D4AF37;
+
+
+            color: #145A86;
+
+
+            padding: 10px 25px;
+
+
+            border-radius: 30px;
+
+
+            font-weight: bold;
+
+
+        }
+
+
+
+
+
+
+
+        .premium-content h1 {
+
+
+            font-size: 45px;
+
+
+            margin: 25px 0;
+
+
+        }
+
+
+
+
+
+        .premium-content p {
+
+
+            font-size: 18px;
+
+
+            line-height: 1.8;
+
+
+        }
+
+
+
+
+
+
+
+
+
+        /*====================================
+        CERTIFICAT
+=====================================*/
+
+
+        .certificate-preview {
+
+
+            width: 90%;
+
+
+            max-width: 1000px;
+
+
+            margin: 60px auto;
+
+
+        }
+
+
+
+
+
+
+        .certificate-card {
+
+
+            background: white;
+
+
+            padding: 45px;
+
+
+            border-radius: 25px;
+
+
+            text-align: center;
+
+
+            box-shadow: 0 15px 35px rgba(0, 0, 0, .1);
+
+
+        }
+
+
+
+
+
+        .lock-icon {
+
+
+            width: 90px;
+
+
+            height: 90px;
+
+
+            margin: auto;
+
+
+            display: flex;
+
+
+            align-items: center;
+
+
+            justify-content: center;
+
+
+            background: #145A86;
+
+
+            color: #D4AF37;
+
+
+            border-radius: 50%;
+
+
+            font-size: 40px;
+
+
+        }
+
+
+
+
+        .certificate-card h2 {
+
+
+            margin: 25px 0;
+
+
+            color: #145A86;
+
+
+        }
+
+
+
+
+        .certificate-details {
+
+
+            margin-top: 35px;
+
+
+            display: grid;
+
+
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
+
+            gap: 20px;
+
+
+        }
+
+
+
+
+        .certificate-details div {
+
+
+            background: #f4f7fb;
+
+
+            padding: 20px;
+
+
+            border-radius: 15px;
+
+
+        }
+
+
+
+
+        .certificate-details strong {
+
+
+            display: block;
+
+
+            color: #145A86;
+
+
+        }
+
+
+
+
+        .blocked {
+
+
+            color: red;
+
+
+            font-weight: bold;
+
+
+        }
+
+
+
+
+
+
+
+
+
+        /*====================================
+        PREMIUM OFFRES
+=====================================*/
+
+
+        .premium-section {
+
+
+            width: 90%;
+
+
+            max-width: 1200px;
+
+
+            margin: 50px auto;
+
+
+            text-align: center;
+
+
+        }
+
+
+
+
+
+        .premium-section h2 {
+
+
+            font-size: 35px;
+
+
+            color: #145A86;
+
+
+        }
+
+
+
+
+        .subtitle {
+
+
+            margin: 15px 0 40px;
+
+
+            color: #666;
+
+
+        }
+
+
+
+
+
+
+        .plans {
+
+
+            display: grid;
+
+
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+
+
+            gap: 30px;
+
+
+        }
+
+
+
+
+
+
+
+
+        .premium-card {
+
+
+            background: white;
+
+
+            padding: 40px 30px;
+
+
+            border-radius: 25px;
+
+
+            box-shadow: 0 15px 35px rgba(0, 0, 0, .1);
+
+
+            position: relative;
+
+
+            transition: .4s;
+
+
+        }
+
+
+
+
+
+        .premium-card:hover {
+
+
+            transform: translateY(-12px);
+
+
+        }
+
+
+
+
+
+        .premium-card i {
+
+
+            font-size: 50px;
+
+
+            color: #D4AF37;
+
+
+        }
+
+
+
+
+
+        .premium-card h3 {
+
+
+            margin: 20px 0;
+
+
+            color: #145A86;
+
+
+        }
+
+
+
+
+        .premium-card h1 {
+
+
+            color: #D4AF37;
+
+
+            font-size: 45px;
+
+
+        }
+
+
+
+
+        .premium-card ul {
+
+
+            list-style: none;
+
+
+            text-align: left;
+
+
+            margin: 25px 0;
+
+
+        }
+
+
+
+
+        .premium-card li {
+
+
+            margin: 15px 0;
+
+
+        }
+
+
+
+
+
+        .premium-card button {
+
+
+            width: 100%;
+
+
+            padding: 15px;
+
+
+            border: none;
+
+
+            border-radius: 30px;
+
+
+            background: #145A86;
+
+
+            color: white;
+
+
+            font-weight: bold;
+
+
+            font-size: 16px;
+
+
+            cursor: pointer;
+
+
+            transition: .3s;
+
+
+        }
+
+
+
+
+
+        .premium-card button:hover {
+
+
+            background: #D4AF37;
+
+
+            color: #145A86;
+
+
+        }
+
+
+
+
+
+        .gold {
+
+
+            border: 3px solid #D4AF37;
+
+
+        }
+
+
+
+
+        .badge {
+
+
+            position: absolute;
+
+
+            top: 20px;
+
+
+            right: 20px;
+
+
+            background: #D4AF37;
+
+
+            color: #145A86;
+
+
+            padding: 7px 15px;
+
+
+            border-radius: 20px;
+
+
+            font-size: 12px;
+
+
+            font-weight: bold;
+
+
+        }
+
+
+
+
+
+
+
+
+
+        /*====================================
+        PAIEMENT SECURISE
+=====================================*/
+
+
+        .payment-security {
+
+
+            width: 90%;
+
+
+            max-width: 1100px;
+
+
+            margin: 60px auto;
+
+
+            text-align: center;
+
+
+        }
+
+
+
+
+
+        .payment-security h2 {
+
+
+            color: #145A86;
+
+
+            margin-bottom: 35px;
+
+
+        }
+
+
+
+
+
+        .security-box {
+
+
+            display: grid;
+
+
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+
+            gap: 25px;
+
+
+        }
+
+
+
+
+        .security-box div {
+
+
+            background: white;
+
+
+            padding: 30px;
+
+
+            border-radius: 20px;
+
+
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+
+
+        }
+
+
+
+
+
+        .security-box i {
+
+
+            font-size: 45px;
+
+
+            color: #D4AF37;
+
+
+        }
+
+
+
+
+
+        .security-box h3 {
+
+
+            color: #145A86;
+
+
+            margin: 15px;
+
+
+        }
+
+
+
+
+
+
+
+
+
+        /*====================================
+        ETAPES
+=====================================*/
+
+
+        .steps {
+
+
+            width: 90%;
+
+
+            max-width: 900px;
+
+
+            margin: 60px auto;
+
+
+        }
+
+
+
+
+
+        .steps h2 {
+
+
+            text-align: center;
+
+
+            color: #145A86;
+
+
+            margin-bottom: 30px;
+
+
+        }
+
+
+
+
+
+        .step-box {
+
+
+            background: white;
+
+
+            display: flex;
+
+
+            align-items: center;
+
+
+            gap: 25px;
+
+
+            padding: 20px;
+
+
+            margin: 15px 0;
+
+
+            border-radius: 15px;
+
+
+            box-shadow: 0 8px 20px rgba(0, 0, 0, .08);
+
+
+        }
+
+
+
+
+
+        .step-box div {
+
+
+            width: 55px;
+
+
+            height: 55px;
+
+
+            background: #145A86;
+
+
+            color: #D4AF37;
+
+
+            border-radius: 50%;
+
+
+            display: flex;
+
+
+            align-items: center;
+
+
+            justify-content: center;
+
+
+            font-size: 22px;
+
+
+            font-weight: bold;
+
+
+        }
+
+
+
+
+
+
+
+
+
+        /*====================================
+        FOOTER
+=====================================*/
+
+
+        footer {
+
+
+            background: #145A86;
+
+
+            color: white;
+
+
+            padding: 40px;
+
+
+            text-align: center;
+
+
+        }
+
+
+
+
+
+
+
+
+
+        /*====================================
+        MOBILE
+=====================================*/
+
+
+        @media(max-width:768px) {
+
+
+
+            header {
+
+                padding: 0 15px;
+
+            }
+
+
+
+            .logo h2 {
+
+                font-size: 20px;
+
+            }
+
+
+
+            .student-profile small {
+
+                display: none;
+
+            }
+
+
+
+
+            .premium-content h1 {
+
+
+                font-size: 30px;
+
+
+            }
+
+
+
+            .premium-content p {
+
+
+                font-size: 15px;
+
+
+            }
+
+
+
+            .premium-hero {
+
+
+                height: 380px;
+
+
+            }
+
+
+
+            .certificate-card {
+
+
+                padding: 25px;
+
+
+            }
+
+
+
+
+            .premium-card {
+
+
+                padding: 30px 20px;
+
+
+            }
+
+
+
+            .step-box {
+
+
+                flex-direction: column;
+
+
+                text-align: center;
+
+
+            }
+
+
+
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <!--====================================
+            HEADER
+=====================================-->
+
+    <header>
+
+
+        <div class="logo">
+
+            <img src="images/logo.png">
+
+
+            <h2>
+                BMJ <span>SERVICE</span>
+            </h2>
+
+        </div>
+
+
+
+
+        <div class="student-profile">
+
+
+            <img id="photoUtilisateur" src="images/user.png">
+
+
+            <div>
+
+                <h4 id="nomUtilisateur">
+                    Apprenant
+                </h4>
+
+
+                <small id="domaineUtilisateur">
+                    Marketing Digital
+                </small>
+
+
+            </div>
+
+
+        </div>
+
+
+    </header>
+
+
+
+
+
+
+
+
+    <!--====================================
+        HERO PREMIUM
+=====================================-->
+
+
+    <section class="premium-hero">
+
+
+        <div class="premium-content">
+
+
+            <span>
+                🎓 CERTIFICATION BMJ SERVICE
+            </span>
+
+
+
+            <h1>
+                Obtenez votre certificat professionnel
+            </h1>
+
+
+
+            <p>
+
+                Validez votre formation Marketing Digital,
+                activez votre abonnement Premium grâce à VisaPay
+                et recevez votre certificat officiel BMJ SERVICE.
+
+            </p>
+
+
+        </div>
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+    <!--====================================
+        PROFIL CERTIFICAT
+=====================================-->
+
+    <section class="certificate-preview">
+
+
+        <div class="certificate-card">
+
+
+
+            <div class="lock-icon">
+
+                <i class="fa-solid fa-lock"></i>
+
+            </div>
+
+
+
+            <h2>
+
+                Certificat Marketing Digital
+
+            </h2>
+
+
+
+
+            <p id="etatCertificat">
+
+                Certificat verrouillé.
+                Effectuez votre paiement Premium pour l'obtenir.
+
+            </p>
+
+
+
+
+
+            <div class="certificate-details">
+
+
+                <div>
+
+                    <strong>
+                        Nom apprenant
+                    </strong>
+
+                    <span id="nomCertificat">
+                        -
+                    </span>
+
+                </div>
+
+
+
+
+
+                <div>
+
+                    <strong>
+                        Formation
+                    </strong>
+
+                    <span>
+                        Marketing Digital
+                    </span>
+
+                </div>
+
+
+
+
+
+                <div>
+
+                    <strong>
+                        Statut
+                    </strong>
+
+                    <span id="statutPremium" class="blocked">
+
+                        🔒 Non Premium
+
+                    </span>
+
+
+                </div>
+
+
+
+            </div>
+
+
+
+
+        </div>
+
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+    <!--====================================
+        ABONNEMENTS
+=====================================-->
+
+
+    <section class="premium-section">
+
+
+        <h2>
+            Choisissez votre abonnement
+        </h2>
+
+
+
+        <p class="subtitle">
+
+            Le certificat sera disponible uniquement après validation du paiement.
+
+        </p>
+
+
+
+
+
+        <div class="plans">
+
+
+
+
+
+
+            <!-- CERTIFICAT SIMPLE -->
+
+
+            <div class="premium-card">
+
+
+                <i class="fa-solid fa-certificate"></i>
+
+
+                <h3>
+
+                    Certificat Marketing Digital
+
+                </h3>
+
+
+
+                <h1>
+                    9.99$
+                </h1>
+
+
+
+                <p>
+                    Paiement unique
+                </p>
+
+
+
+
+                <ul>
+
+
+                    <li>
+                        ✓ Certificat officiel BMJ
+                    </li>
+
+
+                    <li>
+                        ✓ Nom personnalisé
+                    </li>
+
+
+                    <li>
+                        ✓ Téléchargement PDF
+                    </li>
+
+
+                    <li>
+                        ✓ Badge compétence
+                    </li>
+
+
+
+                </ul>
+
+
+
+
+                <button onclick="choisirPaiement('CERTIFICAT_MARKETING','9.99')">
+
+                    Payer maintenant
+
+                </button>
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+            <!-- PREMIUM PLUS -->
+
+
+            <div class="premium-card gold">
+
+
+
+                <div class="badge">
+
+                    RECOMMANDÉ
+
+                </div>
+
+
+
+
+                <i class="fa-solid fa-crown"></i>
+
+
+
+                <h3>
+
+                    BMJ Premium Plus
+
+                </h3>
+
+
+
+
+                <h1>
+
+                    49.99$
+
+                </h1>
+
+
+
+
+                <p>
+
+                    Abonnement annuel
+
+                </p>
+
+
+
+
+                <ul>
+
+
+                    <li>
+                        ✓ Tous les certificats BMJ
+                    </li>
+
+
+                    <li>
+                        ✓ Toutes les formations Premium
+                    </li>
+
+
+                    <li>
+                        ✓ Nouveaux cours
+                    </li>
+
+
+                    <li>
+                        ✓ Badge Premium
+                    </li>
+
+
+                    <li>
+                        ✓ Support prioritaire
+                    </li>
+
+
+
+                </ul>
+
+
+
+
+
+                <button onclick="choisirPaiement('PREMIUM_PLUS','49.99')">
+
+
+                    Activer Premium
+
+
+                </button>
+
+
+
+
+            </div>
+
+
+
+
+
+        </div>
+
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+    <!--====================================
+        PAIEMENT
+=====================================-->
+
+    <section class="payment-security">
+
+
+        <h2>
+
+            Paiement VisaPay sécurisé
+
+        </h2>
+
+
+
+
+        <div class="security-box">
+
+
+            <div>
+
+                <i class="fa-solid fa-credit-card"></i>
+
+                <h3>
+                    VisaPay
+                </h3>
+
+                <p>
+                    Paiement sécurisé
+                </p>
+
+            </div>
+
+
+
+
+
+            <div>
+
+                <i class="fa-solid fa-shield"></i>
+
+                <h3>
+                    Sécurité
+                </h3>
+
+                <p>
+                    Protection des données
+                </p>
+
+            </div>
+
+
+
+
+
+
+            <div>
+
+                <i class="fa-solid fa-bolt"></i>
+
+                <h3>
+                    Activation
+                </h3>
+
+                <p>
+                    Après confirmation
+                </p>
+
+
+            </div>
+
+
+
+        </div>
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+    <!--====================================
+        ETAPES
+=====================================-->
+
+
+    <section class="steps">
+
+
+        <h2>
+            Obtention du certificat
+        </h2>
+
+
+
+
+        <div class="step-box">
+
+            <div>
+                1
+            </div>
+
+            <p>
+                Terminer la formation Marketing
+            </p>
+
+        </div>
+
+
+
+
+
+        <div class="step-box">
+
+            <div>
+                2
+            </div>
+
+            <p>
+                Réussir le quiz final
+            </p>
+
+        </div>
+
+
+
+
+
+        <div class="step-box">
+
+            <div>
+                3
+            </div>
+
+            <p>
+                Payer avec VisaPay
+            </p>
+
+        </div>
+
+
+
+
+
+        <div class="step-box">
+
+            <div>
+                4
+            </div>
+
+            <p>
+                Recevoir le certificat PDF
+            </p>
+
+        </div>
+
+
+
+
+    </section>
+
+
+
+
+
+
+
+
+    <!--====================================
+        FOOTER
+=====================================-->
+
+
+    <footer>
+
+
+        <h3>
+            BMJ SERVICE
+        </h3>
+
+
+        <p>
+            Apprendre - Se certifier - Évoluer
+        </p>
+
+
+
+    </footer>
+
+    <script>
+        //======================================
+        // CHARGEMENT PAGE
+        //======================================
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+
+
+            let utilisateur = JSON.parse(
+
+                localStorage.getItem("bmj_current_user")
+
+            );
+
+
+
+            // Vérifier connexion
+
+            if (!utilisateur) {
+
+
+                window.location.href = "connexion.html";
+
+                return;
+
+
+            }
+
+
+
+
+
+
+            //==================================
+            // AFFICHAGE PROFIL
+            //==================================
+
+
+            document.getElementById("nomUtilisateur").innerHTML =
+
+                utilisateur.nom;
+
+
+
+
+            document.getElementById("nomCertificat").innerHTML =
+
+                utilisateur.nom;
+
+
+
+
+
+            document.getElementById("domaineUtilisateur").innerHTML =
+
+                utilisateur.domaine;
+
+
+
+
+
+
+
+            if (utilisateur.photo && utilisateur.photo !== "") {
+
+
+                document.getElementById("photoUtilisateur").src =
+
+                    utilisateur.photo;
+
+
+            }
+
+
+
+
+
+
+
+
+
+            //==================================
+            // VERIFICATION PREMIUM
+            //==================================
+
+
+            if (utilisateur.premium === true) {
+
+
+
+                document.getElementById("statutPremium").innerHTML =
+
+                    "✔ Premium Actif";
+
+
+
+                document.getElementById("statutPremium").className =
+
+                    "active";
+
+
+
+
+                document.getElementById("etatCertificat").innerHTML =
+
+
+                    "Votre certificat est disponible.";
+
+
+
+
+                document.querySelector(".lock-icon").innerHTML =
+
+
+                    '<i class="fa-solid fa-unlock"></i>';
+
+
+
+            }
+
+
+
+
+
+        });
+
+
+
+
+
+
+
+
+
+
+
+        //======================================
+        // CHOISIR ABONNEMENT
+        //======================================
+
+
+        function choisirPaiement(type, prix) {
+
+
+
+            let utilisateur = JSON.parse(
+
+                localStorage.getItem("bmj_current_user")
+
+            );
+
+
+
+
+
+            if (!utilisateur) {
+
+
+                alert("Veuillez vous connecter.");
+
+                window.location.href = "connexion.html";
+
+                return;
+
+
+            }
+
+
+
+
+
+
+
+
+            // Vérifier si déjà Premium
+
+
+            if (utilisateur.premium === true) {
+
+
+                alert(
+
+                    "Votre compte Premium est déjà actif."
+
+                );
+
+
+                return;
+
+
+            }
+
+
+
+
+
+
+
+
+            //==================================
+            // CREATION COMMANDE
+            //==================================
+
+
+            let paiement = {
+
+
+
+                idPaiement:
+
+
+                    "PAY" + Date.now(),
+
+
+
+
+                utilisateurID:
+
+
+                    utilisateur.id,
+
+
+
+
+                nom:
+
+
+                    utilisateur.nom,
+
+
+
+
+                offre:
+
+
+                    type,
+
+
+
+
+                montant:
+
+
+                    prix,
+
+
+
+
+                devise:
+
+
+                    "USD",
+
+
+
+
+                methode:
+
+
+                    "VisaPay",
+
+
+
+
+                statut:
+
+
+                    "En attente",
+
+
+
+
+                date:
+
+
+                    new Date().toLocaleString()
+
+
+            };
+
+
+
+
+
+
+
+
+
+            // Sauvegarde commande
+
+
+            localStorage.setItem(
+
+                "bmj_payment",
+
+                JSON.stringify(paiement)
+
+            );
+
+
+
+
+
+
+
+
+
+            // Redirection paiement
+
+
+            window.location.href = "paiement_visapay.html";
+
+
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+        //======================================
+        // ACCES CERTIFICAT
+        //======================================
+
+
+        function ouvrirCertificat() {
+
+
+
+            let utilisateur = JSON.parse(
+
+                localStorage.getItem("bmj_current_user")
+
+            );
+
+
+
+
+            if (!utilisateur || utilisateur.premium !== true) {
+
+
+
+                alert(
+
+                    "Vous devez activer Premium avant d'obtenir votre certificat."
+
+                );
+
+
+                return;
+
+
+            }
+
+
+
+
+
+
+            window.location.href = "certificat_final.html";
+
+
+
+        }
+    </script>
+</body>
+
+</html>

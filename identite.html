@@ -1,0 +1,2129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*==================================================
+        BMJ SERVICE - IDENTITÉ DE MARQUE
+==================================================*/
+
+
+        * {
+
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', Arial, sans-serif;
+
+        }
+
+
+
+        body {
+
+            background: #f5f7fb;
+
+            color: #333;
+
+            overflow-x: hidden;
+
+        }
+
+
+
+
+
+
+
+        /*==================================================
+                HEADER
+==================================================*/
+
+
+        header {
+
+
+            position: fixed;
+
+            top: 0;
+
+            left: 0;
+
+            width: 100%;
+
+            height: 75px;
+
+            background: white;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            padding: 0 40px;
+
+            box-shadow: 0 5px 20px rgba(0, 0, 0, .1);
+
+            z-index: 1000;
+
+
+        }
+
+
+
+
+        .logo {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+        }
+
+
+
+
+        .logo img {
+
+            width: 50px;
+
+            height: 50px;
+
+            border-radius: 50%;
+
+        }
+
+
+
+
+        .logo h2 {
+
+            color: #145A86;
+
+        }
+
+
+
+
+        .logo span {
+
+            color: #D4AF37;
+
+        }
+
+
+
+
+
+
+        .course-user {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+        }
+
+
+
+
+        .course-user img {
+
+            width: 45px;
+
+            height: 45px;
+
+            border-radius: 50%;
+
+            border: 3px solid #D4AF37;
+
+            object-fit: cover;
+
+        }
+
+
+
+
+        .course-user h4 {
+
+            color: #145A86;
+
+        }
+
+
+
+
+
+
+
+
+        /*==================================================
+            HERO IDENTITÉ DE MARQUE
+==================================================*/
+
+
+        .marketing-hero {
+
+
+            margin-top: 75px;
+
+
+            height: 520px;
+
+
+            background:
+
+
+                linear-gradient(rgba(20, 90, 134, .85),
+                    rgba(0, 0, 0, .65)),
+
+
+                url(images/marque-banner.jpg);
+
+
+
+            background-size: cover;
+
+            background-position: center;
+
+
+            display: flex;
+
+            align-items: center;
+
+
+            padding: 70px;
+
+
+            color: white;
+
+
+        }
+
+
+
+
+
+
+        .hero-content {
+
+
+            max-width: 700px;
+
+
+        }
+
+
+
+
+
+        .hero-content span {
+
+
+            background: #D4AF37;
+
+
+            color: #145A86;
+
+
+            padding: 8px 20px;
+
+
+            border-radius: 30px;
+
+
+            font-weight: bold;
+
+
+        }
+
+
+
+
+
+        .hero-content h1 {
+
+
+            font-size: 60px;
+
+
+            margin: 25px 0 15px;
+
+
+        }
+
+
+
+
+
+        .hero-content p {
+
+
+            font-size: 20px;
+
+
+            line-height: 1.8;
+
+
+        }
+
+
+
+
+
+        .hero-content button {
+
+
+            margin-top: 30px;
+
+
+            padding: 16px 35px;
+
+
+            border: none;
+
+
+            border-radius: 30px;
+
+
+            background: #D4AF37;
+
+
+            color: #145A86;
+
+
+            font-weight: bold;
+
+
+            cursor: pointer;
+
+
+            transition: .4s;
+
+
+        }
+
+
+
+
+
+        .hero-content button:hover {
+
+
+            transform: translateY(-6px);
+
+
+            background: white;
+
+
+        }
+
+        /*==================================================
+            INFORMATIONS COURS
+==================================================*/
+
+
+        .course-info {
+
+
+            display: grid;
+
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(220px, 1fr));
+
+
+            gap: 25px;
+
+
+            padding: 50px;
+
+
+        }
+
+
+
+
+
+        .info-box {
+
+
+            background: white;
+
+
+            padding: 30px;
+
+
+            text-align: center;
+
+
+            border-radius: 20px;
+
+
+            box-shadow:
+
+                0 10px 25px rgba(0, 0, 0, .08);
+
+
+            transition: .4s;
+
+
+        }
+
+
+
+
+
+        .info-box:hover {
+
+
+            transform: translateY(-10px);
+
+
+            box-shadow:
+
+                0 20px 35px rgba(20, 90, 134, .15);
+
+
+        }
+
+
+
+
+
+        .info-box i {
+
+
+            font-size: 40px;
+
+
+            color: #D4AF37;
+
+
+            margin-bottom: 15px;
+
+
+        }
+
+
+
+
+
+        .info-box h3 {
+
+
+            color: #145A86;
+
+
+            margin-bottom: 10px;
+
+
+        }
+
+
+
+
+
+        .info-box p {
+
+
+            color: #666;
+
+
+        }
+
+
+
+
+
+
+
+
+
+        /*==================================================
+            PROGRESSION
+==================================================*/
+
+
+        .progress-section {
+
+
+            background: white;
+
+
+            margin: 20px 50px;
+
+
+            padding: 35px;
+
+
+            border-radius: 25px;
+
+
+            box-shadow:
+
+                0 10px 25px rgba(0, 0, 0, .08);
+
+
+        }
+
+
+
+
+
+        .progress-section h2 {
+
+
+            color: #145A86;
+
+
+            margin-bottom: 25px;
+
+
+        }
+
+
+
+
+
+        .progress-container {
+
+
+            height: 18px;
+
+
+            background: #ddd;
+
+
+            border-radius: 30px;
+
+
+            overflow: hidden;
+
+
+        }
+
+
+
+
+
+        #progressBar {
+
+
+            height: 100%;
+
+
+            width: 0%;
+
+
+            background:
+
+
+                linear-gradient(90deg,
+                    #145A86,
+                    #D4AF37);
+
+
+            transition: .5s;
+
+
+        }
+
+
+
+
+
+        .progress-section p {
+
+
+            margin-top: 15px;
+
+
+            font-weight: bold;
+
+
+        }
+
+        /*==================================================
+            CHAPITRES / LEÇONS
+==================================================*/
+
+
+        .chapitres {
+
+
+            padding: 50px;
+
+
+        }
+
+
+
+
+
+        .chapitres h2 {
+
+
+            text-align: center;
+
+
+            font-size: 35px;
+
+
+            color: #145A86;
+
+
+            margin-bottom: 40px;
+
+
+        }
+
+
+
+
+
+
+
+        .chapitre-list {
+
+
+            display: flex;
+
+
+            flex-direction: column;
+
+
+            gap: 25px;
+
+
+        }
+
+
+
+
+
+
+
+
+
+        .chapitre-card {
+
+
+            background: white;
+
+
+            display: flex;
+
+
+            align-items: center;
+
+
+            gap: 25px;
+
+
+            padding: 30px;
+
+
+            border-radius: 25px;
+
+
+            box-shadow:
+
+
+                0 10px 25px rgba(0, 0, 0, .08);
+
+
+            transition: .4s;
+
+
+            cursor: pointer;
+
+
+        }
+
+
+
+
+
+
+
+        .chapitre-card:hover {
+
+
+            transform: translateX(15px);
+
+
+            box-shadow:
+
+
+                0 20px 40px rgba(20, 90, 134, .2);
+
+
+        }
+
+
+
+
+
+
+
+
+        .chapitre-icon {
+
+
+            width: 80px;
+
+
+            height: 80px;
+
+
+            border-radius: 50%;
+
+
+            background: #145A86;
+
+
+            display: flex;
+
+
+            align-items: center;
+
+
+            justify-content: center;
+
+
+            flex-shrink: 0;
+
+
+        }
+
+
+
+
+
+
+
+        .chapitre-icon i {
+
+
+            font-size: 35px;
+
+
+            color: #D4AF37;
+
+
+        }
+
+
+
+
+
+
+
+
+        .chapitre-card h3 {
+
+
+            color: #145A86;
+
+
+            margin-bottom: 10px;
+
+
+        }
+
+
+
+
+
+
+
+        .chapitre-card p {
+
+
+            line-height: 1.7;
+
+
+            color: #666;
+
+
+        }
+
+
+
+
+
+
+
+
+        .chapitre-card button {
+
+
+            margin-top: 15px;
+
+
+            padding: 12px 25px;
+
+
+            border: none;
+
+
+            border-radius: 30px;
+
+
+            background: #145A86;
+
+
+            color: white;
+
+
+            cursor: pointer;
+
+
+            transition: .3s;
+
+
+            font-weight: bold;
+
+
+        }
+
+
+
+
+
+
+
+        .chapitre-card button:hover {
+
+
+            background: #D4AF37;
+
+
+            color: #145A86;
+
+
+        }
+
+
+
+
+
+
+
+        .final {
+
+
+            border: 3px solid #D4AF37;
+
+
+        }
+
+        /*==================================================
+                FOOTER
+==================================================*/
+
+
+        footer {
+
+
+            background: #145A86;
+
+
+            color: white;
+
+
+            text-align: center;
+
+
+            padding: 35px;
+
+
+            margin-top: 50px;
+
+
+            line-height: 2;
+
+
+        }
+
+
+
+
+
+        footer h3 {
+
+
+            margin-bottom: 10px;
+
+
+        }
+
+
+
+
+
+
+
+        /*==================================================
+                RESPONSIVE MOBILE
+==================================================*/
+
+
+        @media(max-width:900px) {
+
+
+
+            .hero-content h1 {
+
+
+                font-size: 42px;
+
+
+            }
+
+
+
+            .marketing-hero {
+
+
+                height: 450px;
+
+
+                padding: 40px;
+
+
+            }
+
+
+
+        }
+
+
+
+
+
+
+
+
+
+        @media(max-width:600px) {
+
+
+
+            header {
+
+
+                padding: 0 15px;
+
+
+            }
+
+
+
+
+            .logo h2 {
+
+
+                font-size: 20px;
+
+
+            }
+
+
+
+
+
+            .course-user small {
+
+
+                display: none;
+
+
+            }
+
+
+
+
+
+            .marketing-hero {
+
+
+                height: 500px;
+
+
+                padding: 25px;
+
+
+            }
+
+
+
+
+
+
+            .hero-content h1 {
+
+
+                font-size: 32px;
+
+
+            }
+
+
+
+
+
+
+
+            .hero-content p {
+
+
+                font-size: 16px;
+
+
+            }
+
+
+
+
+
+
+
+            .course-info {
+
+
+                padding: 25px;
+
+
+            }
+
+
+
+
+
+
+            .progress-section {
+
+
+                margin: 20px;
+
+
+                padding: 25px;
+
+
+            }
+
+
+
+
+
+
+            .chapitres {
+
+
+                padding: 25px;
+
+
+            }
+
+
+
+
+
+
+            .chapitre-card {
+
+
+                flex-direction: column;
+
+
+                align-items: flex-start;
+
+
+            }
+
+
+
+
+
+
+            .chapitre-icon {
+
+
+                width: 65px;
+
+
+                height: 65px;
+
+
+            }
+
+
+
+
+
+
+            .chapitre-icon i {
+
+
+                font-size: 28px;
+
+
+            }
+
+
+
+
+
+
+            .chapitres h2 {
+
+
+                font-size: 28px;
+
+
+            }
+
+
+
+
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <!--================================
+        HEADER
+================================-->
+
+    <header>
+
+
+        <div class="logo">
+
+            <img src="images/logo.png">
+
+            <h2>
+                BMJ <span>SERVICE</span>
+            </h2>
+
+        </div>
+
+
+
+        <div class="course-user">
+
+
+            <img id="photoUtilisateur" src="images/user.png">
+
+
+            <div>
+
+                <h4 id="nomUtilisateur">
+                    Apprenant
+                </h4>
+
+
+                <small>
+                    Marketing Digital
+                </small>
+
+            </div>
+
+
+        </div>
+
+
+
+    </header>
+
+
+
+
+
+
+
+
+    <!--================================
+        HERO IDENTITÉ DE MARQUE
+================================-->
+
+    <section class="marketing-hero">
+
+
+        <div class="hero-content">
+
+
+            <span>
+                CHAPITRE 3
+            </span>
+
+
+
+            <h1>
+
+                Identité de marque
+
+            </h1>
+
+
+
+            <p>
+
+                Découvrez comment construire une marque forte,
+                créer une image professionnelle et développer
+                une identité capable de se démarquer auprès
+                des clients.
+
+            </p>
+
+
+
+            <button>
+
+                Commencer le chapitre
+
+            </button>
+
+
+
+        </div>
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+    <!--================================
+        INFORMATIONS COURS
+================================-->
+
+    <section class="course-info">
+
+
+
+        <div class="info-box">
+
+
+            <i class="fa-solid fa-palette"></i>
+
+
+            <h3>
+
+                5 Leçons
+
+            </h3>
+
+
+            <p>
+
+                Cours complet
+
+            </p>
+
+
+        </div>
+
+
+
+
+
+        <div class="info-box">
+
+
+            <i class="fa-solid fa-clock"></i>
+
+
+            <h3>
+
+                2 Semaines
+
+            </h3>
+
+
+            <p>
+
+                Durée
+
+            </p>
+
+
+        </div>
+
+
+
+
+
+
+        <div class="info-box">
+
+
+            <i class="fa-solid fa-user-graduate"></i>
+
+
+            <h3>
+
+                Intermédiaire
+
+            </h3>
+
+
+            <p>
+
+                Niveau
+
+            </p>
+
+
+        </div>
+
+
+
+
+
+
+        <div class="info-box">
+
+
+            <i class="fa-solid fa-certificate"></i>
+
+
+            <h3>
+
+                Certificat
+
+            </h3>
+
+
+            <p>
+
+                Validation
+
+            </p>
+
+
+        </div>
+
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+    <!--================================
+        PROGRESSION
+================================-->
+
+    <section class="progress-section">
+
+
+        <h2>
+
+            Ma progression
+
+        </h2>
+
+
+
+
+        <div class="progress-container">
+
+
+            <div id="progressBar">
+
+            </div>
+
+
+        </div>
+
+
+
+
+        <p>
+
+            <span id="progressValue">
+
+                0
+
+            </span>
+
+            % terminé
+
+
+        </p>
+
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+    <!--================================
+        LEÇONS DU CHAPITRE
+================================-->
+
+    <section class="chapitres">
+
+
+        <h2>
+
+            Programme : Identité de marque
+
+        </h2>
+
+
+
+
+
+        <div class="chapitre-list">
+
+
+
+
+
+
+            <!-- LEÇON 1 -->
+
+            <div class="chapitre-card">
+
+
+                <div class="chapitre-icon">
+
+                    <i class="fa-solid fa-fingerprint"></i>
+
+                </div>
+
+
+
+                <div>
+
+
+                    <h3>
+
+                        Leçon 1 : Comprendre l'identité de marque
+
+                    </h3>
+
+
+
+                    <p>
+
+                        Découvrir ce qu'est une identité de marque,
+                        son importance et son rôle dans la perception
+                        des consommateurs.
+
+                    </p>
+
+
+
+                    <button onclick="ouvrirCours('identitemarquelecon1.html')">
+
+                        Commencer
+
+                    </button>
+
+
+
+                </div>
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+
+            <!-- LEÇON 2 -->
+
+            <div class="chapitre-card">
+
+
+                <div class="chapitre-icon">
+
+                    <i class="fa-solid fa-bullseye"></i>
+
+                </div>
+
+
+
+                <div>
+
+
+                    <h3>
+
+                        Leçon 2 : Positionnement de marque
+
+                    </h3>
+
+
+
+                    <p>
+
+                        Apprendre à définir une place unique
+                        pour une marque face aux concurrents.
+
+                    </p>
+
+
+
+                    <button onclick="ouvrirCours('identitemarquelecon2.html')">
+
+                        Commencer
+
+                    </button>
+
+
+
+                </div>
+
+
+            </div>
+
+
+
+
+
+
+
+
+
+            <!-- LEÇON 3 -->
+
+
+            <div class="chapitre-card">
+
+
+                <div class="chapitre-icon">
+
+                    <i class="fa-solid fa-image"></i>
+
+                </div>
+
+
+
+                <div>
+
+
+                    <h3>
+
+                        Leçon 3 : Les éléments visuels d'une marque
+
+                    </h3>
+
+
+
+                    <p>
+
+                        Créer une identité visuelle avec le logo,
+                        les couleurs, les formes et la typographie.
+
+                    </p>
+
+
+
+                    <button onclick="ouvrirCours('identitemarquelecon3.html')">
+
+                        Commencer
+
+                    </button>
+
+
+
+                </div>
+
+
+            </div>
+
+
+
+
+
+
+
+
+
+            <!-- LEÇON 4 -->
+
+
+            <div class="chapitre-card">
+
+
+                <div class="chapitre-icon">
+
+                    <i class="fa-solid fa-comments"></i>
+
+                </div>
+
+
+
+                <div>
+
+
+                    <h3>
+
+                        Leçon 4 : Communication de marque
+
+                    </h3>
+
+
+
+                    <p>
+
+                        Développer une voix de marque cohérente
+                        et communiquer efficacement avec les clients.
+
+                    </p>
+
+
+
+                    <button onclick="ouvrirCours('identitemarquelecon4.html')">
+
+                        Commencer
+
+                    </button>
+
+
+
+                </div>
+
+
+            </div>
+
+
+
+
+
+
+
+
+
+            <!-- LEÇON 5 -->
+
+
+            <div class="chapitre-card final">
+
+
+                <div class="chapitre-icon">
+
+                    <i class="fa-solid fa-star"></i>
+
+                </div>
+
+
+
+                <div>
+
+
+                    <h3>
+
+                        Leçon 5 : Construire une marque forte
+
+                    </h3>
+
+
+
+                    <p>
+
+                        Mettre en pratique les stratégies permettant
+                        de créer une marque durable et mémorable.
+
+                    </p>
+
+
+
+                    <button onclick="ouvrirCours('identitemarquelecon5.html')">
+
+                        Commencer
+
+                    </button>
+
+
+
+                </div>
+
+
+            </div>
+
+
+
+
+
+
+        </div>
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+    <!--================================
+        FOOTER
+================================-->
+
+    <footer>
+
+
+        <h3>
+
+            BMJ SERVICE
+
+        </h3>
+
+
+        <p>
+
+            Formation Marketing Digital Professionnelle
+
+        </p>
+
+
+    </footer>
+
+    /*====================================
+    SCRIPT IDENTITÉ DE MARQUE
+    BMJ SERVICE
+    =====================================*/
+
+
+    <script>
+
+
+        //====================================
+        // RECUPERATION UTILISATEUR CONNECTE
+        //====================================
+
+
+        let utilisateur = JSON.parse(
+
+            localStorage.getItem("bmj_current_user")
+
+        );
+
+
+
+
+        // Vérification connexion
+
+
+        if (utilisateur) {
+
+
+            document.getElementById("nomUtilisateur").innerHTML =
+
+                utilisateur.nom;
+
+
+
+            if (utilisateur.photo) {
+
+
+                document.getElementById("photoUtilisateur").src =
+
+                    utilisateur.photo;
+
+
+            }
+
+
+
+        }
+
+        else {
+
+
+            alert("Veuillez vous connecter à votre compte BMJ SERVICE");
+
+
+            window.location = "connexion.html";
+
+
+        }
+
+
+
+
+
+
+
+
+        //====================================
+        // PROGRESSION CHAPITRE IDENTITE MARQUE
+        //====================================
+
+
+        let lecons = document.querySelectorAll(
+
+            ".chapitre-card"
+
+        );
+
+
+
+
+
+        let progression = JSON.parse(
+
+            localStorage.getItem("identite_marque_progression")
+
+        ) || [];
+
+
+
+
+
+
+
+
+        //====================================
+        // AFFICHAGE PROGRESSION
+        //====================================
+
+
+        function afficherProgression() {
+
+
+
+            let total = lecons.length;
+
+
+
+            let termine = progression.length;
+
+
+
+            let pourcentage = Math.round(
+
+                (termine / total) * 100
+
+            );
+
+
+
+
+            document.getElementById("progressBar").style.width =
+
+                pourcentage + "%";
+
+
+
+
+
+            document.getElementById("progressValue").innerHTML =
+
+                pourcentage;
+
+
+
+        }
+
+
+
+
+
+
+        afficherProgression();
+
+
+
+
+
+
+
+
+
+        //====================================
+        // VALIDATION DES LEÇONS
+        //====================================
+
+
+        lecons.forEach((lecon, index) => {
+
+
+            let bouton = lecon.querySelector("button");
+
+
+
+            bouton.onclick = function () {
+
+
+
+                if (!progression.includes(index)) {
+
+
+
+                    progression.push(index);
+
+
+
+                    localStorage.setItem(
+
+                        "identite_marque_progression",
+
+                        JSON.stringify(progression)
+
+                    );
+
+
+
+                    lecon.style.border =
+
+                        "3px solid #D4AF37";
+
+
+
+                    bouton.innerHTML =
+
+                        "✓ Terminé";
+
+
+
+                    bouton.style.background = "#D4AF37";
+
+                    bouton.style.color = "#145A86";
+
+
+
+                    afficherProgression();
+
+
+
+                    verifierCertificat();
+
+
+
+                }
+
+                else {
+
+
+                    alert("Leçon déjà terminée");
+
+
+                }
+
+
+
+
+
+            }
+
+
+
+        });
+
+
+
+
+
+
+
+
+
+        //====================================
+        // RESTAURATION DES LEÇONS TERMINÉES
+        //====================================
+
+
+        progression.forEach(index => {
+
+
+            if (lecons[index]) {
+
+
+                let bouton =
+
+                    lecons[index].querySelector("button");
+
+
+
+                lecons[index].style.border =
+
+                    "3px solid #D4AF37";
+
+
+
+                bouton.innerHTML =
+
+                    "✓ Terminé";
+
+
+
+                bouton.style.background = "#D4AF37";
+
+
+                bouton.style.color = "#145A86";
+
+
+            }
+
+
+        });
+
+
+
+
+
+
+
+
+
+        //====================================
+        // CERTIFICAT
+        //====================================
+
+
+        function verifierCertificat() {
+
+
+
+            if (progression.length === lecons.length) {
+
+
+
+                alert(
+
+                    "🎓 Félicitations !\n\n" +
+
+                    "Vous avez terminé le chapitre Identité de marque.\n\n" +
+
+                    "Votre progression a été enregistrée."
+
+                );
+
+
+
+
+
+                if (utilisateur) {
+
+
+
+                    utilisateur.progression = 100;
+
+
+
+                    localStorage.setItem(
+
+                        "bmj_current_user",
+
+                        JSON.stringify(utilisateur)
+
+                    );
+
+
+                }
+
+
+
+            }
+
+
+
+        }
+
+
+
+
+
+
+
+
+
+        //====================================
+        // BOUTON COMMENCER FORMATION
+        //====================================
+
+
+        let commencer = document.querySelector(
+
+            ".hero-content button"
+
+        );
+
+
+
+
+        commencer.onclick = function () {
+
+
+
+            document.querySelector(".chapitres").scrollIntoView({
+
+
+                behavior: "smooth"
+
+
+            });
+
+
+
+        };
+
+
+
+
+
+
+
+
+
+        //====================================
+        // OUVERTURE DES COURS
+        //====================================
+
+
+        function ouvrirCours(page) {
+
+
+            window.location.href = page;
+
+
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

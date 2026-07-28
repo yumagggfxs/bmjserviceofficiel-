@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*=========================================
+        BMJ SERVICE
+        PAGE CONNEXION
+=========================================*/
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+
+            min-height: 100vh;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            background:
+                linear-gradient(rgba(8, 30, 52, .75), rgba(8, 30, 52, .75)),
+                url("images/login-bg.jpg");
+
+            background-size: cover;
+
+            background-position: center;
+
+            background-attachment: fixed;
+
+            padding: 30px;
+
+        }
+
+        /*=========================
+        CONTAINER
+=========================*/
+
+        .container {
+
+            width: 1100px;
+
+            max-width: 100%;
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            background: rgba(255, 255, 255, .12);
+
+            backdrop-filter: blur(20px);
+
+            border-radius: 25px;
+
+            overflow: hidden;
+
+            box-shadow: 0 20px 60px rgba(0, 0, 0, .35);
+
+        }
+
+        /*=========================
+        LEFT
+=========================*/
+
+        .left {
+
+            color: white;
+
+            padding: 60px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+
+        }
+
+        .left img {
+
+            width: 90px;
+
+            margin-bottom: 25px;
+
+        }
+
+        .left h1 {
+
+            font-size: 42px;
+
+            margin-bottom: 20px;
+
+        }
+
+        .left span {
+
+            color: #FFD54F;
+
+        }
+
+        .left p {
+
+            font-size: 18px;
+
+            line-height: 1.8;
+
+            opacity: .95;
+
+            margin-bottom: 35px;
+
+        }
+
+        .left ul {
+
+            list-style: none;
+
+        }
+
+        .left ul li {
+
+            margin: 18px 0;
+
+            font-size: 17px;
+
+        }
+
+        .left ul li i {
+
+            color: #FFD54F;
+
+            margin-right: 10px;
+
+        }
+
+        /*=========================
+        RIGHT
+=========================*/
+
+        .right {
+
+            background: white;
+
+            padding: 50px;
+
+        }
+
+        .right h2 {
+
+            text-align: center;
+
+            color: #145A86;
+
+            font-size: 34px;
+
+            margin-bottom: 15px;
+
+        }
+
+        .right p {
+
+            text-align: center;
+
+            color: #666;
+
+            margin-bottom: 35px;
+
+        }
+
+        /*=========================
+        FORMULAIRE
+=========================*/
+
+        .form-group {
+
+            margin-bottom: 20px;
+
+        }
+
+        .form-group label {
+
+            display: block;
+
+            margin-bottom: 8px;
+
+            color: #444;
+
+            font-weight: 600;
+
+        }
+
+        .form-group input {
+
+            width: 100%;
+
+            padding: 15px;
+
+            border: 1px solid #ddd;
+
+            border-radius: 12px;
+
+            outline: none;
+
+            transition: .3s;
+
+            font-size: 15px;
+
+        }
+
+        .form-group input:focus {
+
+            border-color: #145A86;
+
+            box-shadow: 0 0 12px rgba(20, 90, 134, .25);
+
+        }
+
+        /*=========================
+        OPTIONS
+=========================*/
+
+        .options {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            margin-bottom: 25px;
+
+            font-size: 14px;
+
+        }
+
+        .options label {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            color: #555;
+
+        }
+
+        .options a {
+
+            color: #145A86;
+
+            text-decoration: none;
+
+            font-weight: 600;
+
+        }
+
+        .options a:hover {
+
+            color: #FFD54F;
+
+        }
+
+        /*=========================
+        BOUTON
+=========================*/
+
+        button {
+
+            width: 100%;
+
+            padding: 15px;
+
+            border: none;
+
+            border-radius: 12px;
+
+            background: linear-gradient(135deg, #145A86, #0b4d72);
+
+            color: white;
+
+            font-size: 17px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            transition: .3s;
+
+        }
+
+        button:hover {
+
+            transform: translateY(-3px);
+
+            box-shadow: 0 12px 25px rgba(0, 0, 0, .20);
+
+        }
+
+        button i {
+
+            margin-right: 10px;
+
+        }
+
+        /*=========================
+        INSCRIPTION
+=========================*/
+
+        .signup {
+
+            margin-top: 30px;
+
+            text-align: center;
+
+            color: #555;
+
+        }
+
+        .signup a {
+
+            text-decoration: none;
+
+            color: #145A86;
+
+            font-weight: bold;
+
+        }
+
+        .signup a:hover {
+
+            color: #FFD54F;
+
+        }
+
+        /*=========================
+        RESEAUX SOCIAUX
+=========================*/
+
+        .social {
+
+            margin-top: 30px;
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 15px;
+
+        }
+
+        .social a {
+
+            width: 48px;
+
+            height: 48px;
+
+            border-radius: 50%;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            background: #145A86;
+
+            color: white;
+
+            text-decoration: none;
+
+            transition: .3s;
+
+            font-size: 20px;
+
+        }
+
+        .social a:hover {
+
+            background: #FFD54F;
+
+            color: #145A86;
+
+            transform: translateY(-5px);
+
+        }
+
+        /*=========================
+        RESPONSIVE
+=========================*/
+
+        @media(max-width:900px) {
+
+            .container {
+
+                grid-template-columns: 1fr;
+
+            }
+
+            .left {
+
+                display: none;
+
+            }
+
+            .right {
+
+                padding: 35px;
+
+            }
+
+        }
+
+        @media(max-width:600px) {
+
+            body {
+
+                padding: 15px;
+
+            }
+
+            .right {
+
+                padding: 25px;
+
+            }
+
+            .right h2 {
+
+                font-size: 28px;
+
+            }
+
+            button {
+
+                font-size: 16px;
+
+            }
+
+            .options {
+
+                flex-direction: column;
+
+                align-items: flex-start;
+
+                gap: 12px;
+
+            }
+
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <div class="container">
+
+        <!-- PARTIE GAUCHE -->
+
+        <div class="left">
+
+            <img src="images/logo.png" alt="BMJ SERVICE">
+
+            <h1>
+
+                Heureux de vous revoir sur
+
+                <span>BMJ SERVICE</span>
+
+            </h1>
+
+            <p>
+
+                Connectez-vous à votre espace personnel afin de poursuivre
+                vos formations professionnelles, suivre votre progression,
+                télécharger vos certificats et développer vos compétences.
+
+            </p>
+
+            <ul>
+
+                <li>
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    Formations professionnelles certifiantes
+
+                </li>
+
+                <li>
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    Accessible sur ordinateur et téléphone
+
+                </li>
+
+                <li>
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    Suivi de votre progression
+
+                </li>
+
+                <li>
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    Certificat après réussite
+
+                </li>
+
+                <li>
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    Assistance disponible 24h/24
+
+                </li>
+
+            </ul>
+
+        </div>
+
+
+
+        <!-- PARTIE DROITE -->
+
+        <div class="right">
+
+            <h2>
+
+                Connexion
+
+            </h2>
+
+            <p>
+
+                Connectez-vous à votre compte BMJ SERVICE.
+
+            </p>
+
+            <form id="loginForm" method="POST" action="connexion.php">
+
+
+                <div class="form-group">
+
+                    <label>
+
+                        Adresse e-mail ou Identifiant BMJ
+
+                    </label>
+
+
+                    <input type="text" id="identifiant" name="identifiant" placeholder="BMJ000001 ou email@gmail.com"
+                        required>
+
+
+                </div>
+
+
+
+
+
+                <div class="form-group">
+
+
+                    <label>
+
+                        Mot de passe
+
+                    </label>
+
+
+                    <input type="password" id="password" name="password" placeholder="********" required>
+
+
+                </div>
+
+
+
+
+
+
+
+                <div class="options">
+
+
+                    <label>
+
+
+                        <input type="checkbox" id="remember" name="remember" value="1">
+
+
+                        Se souvenir de moi
+
+
+                    </label>
+
+
+
+
+
+                    <a href="motdepasse-oublie.php">
+
+
+                        Mot de passe oublié ?
+
+
+                    </a>
+
+
+                </div>
+
+
+
+
+
+
+
+                <button type="submit" name="connexion" id="btnConnexion">
+
+
+                    <i class="fa-solid fa-right-to-bracket"></i>
+
+
+                    Se connecter
+
+
+                </button>
+
+
+
+            </form>
+
+
+
+
+
+
+
+            <div class="signup">
+
+
+                Vous n'avez pas encore de compte ?
+
+
+                <br><br>
+
+
+
+                <a href="inscription.php">
+
+
+                    Créer un compte gratuitement
+
+
+                </a>
+
+
+            </div>
+
+
+
+
+
+
+
+            <div class="social">
+
+
+                <a href="#">
+
+
+                    <i class="fab fa-facebook-f"></i>
+
+
+                </a>
+
+
+
+
+                <a href="#">
+
+
+                    <i class="fab fa-whatsapp"></i>
+
+
+                </a>
+
+
+
+
+                <a href="#">
+
+
+                    <i class="fab fa-linkedin-in"></i>
+
+
+                </a>
+
+
+
+
+                <a href="#">
+
+
+                    <i class="fab fa-youtube"></i>
+
+
+                </a>
+
+
+            </div>
+
+
+
+
+
+            <br>
+
+
+
+
+            <center>
+
+
+                <small>
+
+
+                    © 2026 BMJ SERVICE
+
+
+                    <br>
+
+
+                    Plateforme de formation professionnelle.
+
+
+                </small>
+
+
+            </center>
+            <script>
+
+//==========================================
+// BMJ SERVICE
+// CONNEXION LOCALE
+//==========================================
+
+document.getElementById("btnConnexion").onclick = function(e){
+
+    e.preventDefault();
+
+    let identifiant = document.getElementById("identifiant").value.trim();
+
+    let password = document.getElementById("password").value;
+
+    let remember = document.getElementById("remember").checked;
+
+
+    //==============================
+    // VERIFICATION CHAMPS
+    //==============================
+
+    if(identifiant === "" || password === ""){
+
+        alert("Veuillez remplir tous les champs.");
+
+        return;
+
+    }
+
+
+    //==============================
+    // RECUPERATION UTILISATEUR
+    //==============================
+
+    let utilisateur = JSON.parse(localStorage.getItem("bmjUtilisateur"));
+
+
+    if(!utilisateur){
+
+        alert("Aucun compte n'a été créé.");
+
+        return;
+
+    }
+
+
+    //==============================
+    // VERIFICATION IDENTIFIANTS
+    //==============================
+
+    if(
+
+        (identifiant === utilisateur.email ||
+
+         identifiant === utilisateur.id_bmj)
+
+        &&
+
+        password === utilisateur.password
+
+    ){
+
+        if(remember){
+
+            localStorage.setItem("bmj_remember", identifiant);
+
+        }else{
+
+            localStorage.removeItem("bmj_remember");
+
+        }
+
+        localStorage.setItem("bmjConnecte","true");
+
+        window.location.href = "dashboard.html";
+
+    }
+
+    else{
+
+        alert("Identifiant ou mot de passe incorrect.");
+
+    }
+
+};
+
+
+
+
+//==========================================
+// CHARGER IDENTIFIANT MEMORISE
+//==========================================
+
+window.onload = function(){
+
+    let remember = localStorage.getItem("bmj_remember");
+
+    if(remember){
+
+        document.getElementById("identifiant").value = remember;
+
+        document.getElementById("remember").checked = true;
+
+    }
+
+};
+
+</script>
+</body>
+
+</html>

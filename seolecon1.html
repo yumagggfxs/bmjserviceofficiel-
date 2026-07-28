@@ -1,0 +1,1924 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*==================================================
+        BMJ SERVICE
+        LEÇON 1 - SEO ET REFERENCEMENT
+==================================================*/
+
+
+        * {
+
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+
+        }
+
+
+
+        html {
+
+            scroll-behavior: smooth;
+
+        }
+
+
+
+        body {
+
+            background: #f4f7fb;
+
+            color: #333;
+
+            line-height: 1.8;
+
+        }
+
+
+
+
+
+
+
+        /*=====================================
+            HEADER
+======================================*/
+
+
+        header {
+
+            position: fixed;
+
+            top: 0;
+
+            left: 0;
+
+            width: 100%;
+
+            height: 75px;
+
+            background: #fff;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            padding: 0 40px;
+
+            box-shadow: 0 5px 20px rgba(0, 0, 0, .08);
+
+            z-index: 1000;
+
+        }
+
+
+
+        .logo {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+        }
+
+
+
+        .logo img {
+
+            width: 50px;
+
+            height: 50px;
+
+            border-radius: 50%;
+
+        }
+
+
+
+        .logo h2 {
+
+            color: #145A86;
+
+        }
+
+
+
+        .logo span {
+
+            color: #D4AF37;
+
+        }
+
+
+
+
+
+
+
+        .student-profile {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+        }
+
+
+
+        .student-profile img {
+
+            width: 50px;
+
+            height: 50px;
+
+            border-radius: 50%;
+
+            object-fit: cover;
+
+            border: 3px solid #D4AF37;
+
+        }
+
+
+
+        .student-profile h4 {
+
+            color: #145A86;
+
+        }
+
+
+
+        .student-profile small {
+
+            color: #777;
+
+        }
+
+
+
+
+
+
+
+
+
+        /*=====================================
+            HERO
+======================================*/
+
+
+        .lesson-hero {
+
+            margin-top: 75px;
+
+            height: 430px;
+
+            background:
+
+                linear-gradient(rgba(20, 90, 134, .85),
+
+                    rgba(0, 0, 0, .75)),
+
+                url(images/seo-banner.jpg);
+
+
+
+            background-size: cover;
+
+            background-position: center;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+        }
+
+
+
+        .overlay {
+
+            width: 90%;
+
+            max-width: 1000px;
+
+            text-align: center;
+
+            color: white;
+
+        }
+
+
+
+        .overlay span {
+
+            background: #D4AF37;
+
+            color: #145A86;
+
+            padding: 8px 25px;
+
+            border-radius: 30px;
+
+            font-weight: bold;
+
+        }
+
+
+
+        .overlay h1 {
+
+            font-size: 45px;
+
+            margin: 25px 0;
+
+        }
+
+
+
+        .overlay p {
+
+            font-size: 19px;
+
+        }
+
+
+
+
+
+
+
+
+
+        /*=====================================
+            SECTIONS
+======================================*/
+
+
+        .objectif,
+        .cours,
+        .important,
+        .exercice {
+
+
+            width: 90%;
+
+            max-width: 1100px;
+
+            margin: 40px auto;
+
+            background: white;
+
+            padding: 35px;
+
+            border-radius: 20px;
+
+            box-shadow:
+
+                0 10px 25px rgba(0, 0, 0, .08);
+
+
+        }
+
+
+
+
+
+
+
+        .objectif h2,
+        .cours h2,
+        .important h2,
+        .exercice h2 {
+
+
+            color: #145A86;
+
+            border-left: 6px solid #D4AF37;
+
+            padding-left: 15px;
+
+            margin-bottom: 25px;
+
+        }
+
+
+
+
+
+
+
+        .cours h3 {
+
+            color: #145A86;
+
+            margin-top: 35px;
+
+            margin-bottom: 15px;
+
+        }
+
+
+
+        .cours p {
+
+            text-align: justify;
+
+            margin-bottom: 18px;
+
+        }
+
+
+
+
+
+        .objectif ul,
+        .cours ul,
+        .exercice ul {
+
+
+            margin-left: 25px;
+
+            margin-top: 15px;
+
+        }
+
+
+
+        .objectif li,
+        .cours li,
+        .exercice li {
+
+
+            margin-bottom: 10px;
+
+        }
+
+
+
+
+
+
+
+
+
+        /*=====================================
+            EXEMPLE
+======================================*/
+
+
+        .exemple {
+
+
+            background: #f8fbff;
+
+            border-left: 6px solid #145A86;
+
+            padding: 25px;
+
+            border-radius: 12px;
+
+            margin-top: 25px;
+
+        }
+
+
+
+
+
+
+
+
+
+        /*=====================================
+            VIDEO
+======================================*/
+
+
+        .video-cours {
+
+
+            margin-top: 40px;
+
+        }
+
+
+
+        .video-cours h3 {
+
+
+            color: #145A86;
+
+            margin-bottom: 20px;
+
+        }
+
+
+
+        .video-cours iframe {
+
+
+            border-radius: 15px;
+
+            box-shadow: 0 10px 20px rgba(0, 0, 0, .15);
+
+        }
+
+
+
+
+
+
+
+
+
+        /*=====================================
+            À RETENIR
+======================================*/
+
+
+        .important {
+
+
+            background: #145A86;
+
+            color: white;
+
+        }
+
+
+
+        .important h2 {
+
+
+            color: white;
+
+            border-color: #D4AF37;
+
+        }
+
+
+
+        .important p {
+
+
+            margin-bottom: 15px;
+
+            font-size: 17px;
+
+        }
+
+
+
+
+
+
+
+
+
+        /*=====================================
+            EXERCICE
+======================================*/
+
+
+        textarea {
+
+
+            width: 100%;
+
+            height: 180px;
+
+            margin-top: 20px;
+
+            padding: 15px;
+
+            border: 2px solid #ddd;
+
+            border-radius: 12px;
+
+            font-size: 16px;
+
+            resize: none;
+
+            outline: none;
+
+        }
+
+
+
+        textarea:focus {
+
+
+            border-color: #145A86;
+
+        }
+
+
+
+
+
+
+
+
+
+        /*=====================================
+            NAVIGATION
+======================================*/
+
+
+        .navigation {
+
+
+            width: 90%;
+
+            max-width: 1100px;
+
+            margin: 40px auto 70px;
+
+            display: flex;
+
+            gap: 20px;
+
+        }
+
+
+
+        .navigation button {
+
+
+            flex: 1;
+
+            padding: 18px;
+
+            border: none;
+
+            border-radius: 12px;
+
+            font-size: 16px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            transition: .3s;
+
+        }
+
+
+
+        .navigation button:first-child {
+
+
+            background: #145A86;
+
+            color: white;
+
+        }
+
+
+
+        .navigation button:last-child {
+
+
+            background: #D4AF37;
+
+            color: #145A86;
+
+        }
+
+
+
+        .navigation button:hover {
+
+
+            transform: translateY(-5px);
+
+            box-shadow: 0 10px 20px rgba(0, 0, 0, .15);
+
+        }
+
+
+
+
+
+
+
+
+
+        /*=====================================
+            FOOTER
+======================================*/
+
+
+        footer {
+
+
+            background: #145A86;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 35px;
+
+        }
+
+
+
+        footer h3 {
+
+
+            color: #D4AF37;
+
+            margin-bottom: 10px;
+
+        }
+
+
+
+
+
+
+
+
+
+        /*=====================================
+            RESPONSIVE TABLETTE
+======================================*/
+
+
+        @media(max-width:768px) {
+
+
+            header {
+
+                padding: 0 15px;
+
+            }
+
+
+
+            .student-profile small {
+
+                display: none;
+
+            }
+
+
+
+            .overlay h1 {
+
+                font-size: 32px;
+
+            }
+
+
+
+            .overlay p {
+
+                font-size: 16px;
+
+            }
+
+
+
+            .objectif,
+            .cours,
+            .important,
+            .exercice {
+
+                padding: 22px;
+
+            }
+
+
+
+            .navigation {
+
+                flex-direction: column;
+
+            }
+
+
+        }
+
+
+
+
+
+
+
+
+
+        /*=====================================
+            MOBILE
+======================================*/
+
+
+        @media(max-width:500px) {
+
+
+
+            .logo h2 {
+
+                font-size: 20px;
+
+            }
+
+
+
+            .logo img {
+
+                width: 40px;
+
+                height: 40px;
+
+            }
+
+
+
+            .student-profile h4 {
+
+                font-size: 14px;
+
+            }
+
+
+
+            .lesson-hero {
+
+                height: 420px;
+
+            }
+
+
+
+            .overlay h1 {
+
+                font-size: 26px;
+
+            }
+
+
+
+            .overlay p {
+
+                font-size: 14px;
+
+            }
+
+
+
+            .cours p {
+
+                text-align: left;
+
+            }
+
+
+
+            .video-cours iframe {
+
+                height: 220px;
+
+            }
+
+
+
+            .navigation button {
+
+                width: 100%;
+
+            }
+
+
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <!--====================================
+            HEADER
+=====================================-->
+
+    <header>
+
+
+        <div class="logo">
+
+            <img src="images/logo.png" alt="BMJ SERVICE">
+
+
+            <h2>
+
+                BMJ <span>SERVICE</span>
+
+            </h2>
+
+
+        </div>
+
+
+
+
+
+        <div class="student-profile">
+
+
+            <img id="photoUtilisateur" src="images/user.png" alt="Utilisateur">
+
+
+            <div>
+
+
+                <h4 id="nomUtilisateur">
+
+                    Apprenant
+
+                </h4>
+
+
+                <small id="domaineUtilisateur">
+
+                    Marketing Digital
+
+                </small>
+
+
+            </div>
+
+
+        </div>
+
+
+
+    </header>
+
+
+
+
+
+
+
+
+
+    <!--====================================
+            HERO LEÇON
+=====================================-->
+
+    <section class="lesson-hero">
+
+
+        <div class="overlay">
+
+
+            <span>
+
+                LEÇON 1
+
+            </span>
+
+
+
+            <h1>
+
+                Comprendre le SEO et le référencement
+
+            </h1>
+
+
+
+
+
+            <p>
+
+                Découvrez comment fonctionne le référencement naturel,
+                comment Google classe les sites web et pourquoi le SEO
+                est devenu indispensable pour améliorer la visibilité
+                d'une entreprise sur Internet.
+
+            </p>
+
+
+
+        </div>
+
+
+
+    </section>
+    <!--====================================
+            OBJECTIFS
+=====================================-->
+
+    <section class="objectif">
+
+
+        <h2>
+
+            Objectifs de cette leçon
+
+        </h2>
+
+
+
+
+        <ul>
+
+
+            <li>
+
+                Comprendre la définition du SEO.
+
+            </li>
+
+
+
+            <li>
+
+                Découvrir le fonctionnement des moteurs de recherche.
+
+            </li>
+
+
+
+            <li>
+
+                Comprendre le rôle du référencement naturel.
+
+            </li>
+
+
+
+            <li>
+
+                Identifier les avantages du SEO pour une entreprise.
+
+            </li>
+
+
+
+            <li>
+
+                Apprendre comment améliorer la visibilité d'un site web.
+
+            </li>
+
+
+        </ul>
+
+
+
+    </section>
+    <!--====================================
+            COURS
+=====================================-->
+
+    <section class="cours">
+
+
+        <h2>
+
+            1. Qu'est-ce que le SEO ?
+
+        </h2>
+
+
+
+
+        <p>
+
+            Le SEO (Search Engine Optimization), appelé aussi
+            référencement naturel, représente l'ensemble des techniques
+            utilisées pour améliorer la position d'un site web dans les
+            résultats des moteurs de recherche comme Google.
+
+        </p>
+
+
+
+
+        <p>
+
+            Lorsqu'un utilisateur effectue une recherche sur Internet,
+            les moteurs de recherche analysent plusieurs éléments afin
+            de proposer les pages les plus pertinentes selon la demande
+            de l'utilisateur.
+
+        </p>
+
+
+
+
+        <p>
+
+            Le SEO permet donc aux entreprises d'améliorer leur visibilité
+            en ligne, d'attirer plus de visiteurs et de développer leur
+            présence sur Internet sans dépendre uniquement de la publicité
+            payante.
+
+        </p>
+
+
+
+
+
+        <h3>
+
+            📚 Enseignements du cours
+
+        </h3>
+
+
+
+
+        <p>
+
+            À la fin de cette partie, l'apprenant doit être capable de :
+
+        </p>
+
+
+
+
+        <ul>
+
+
+            <li>
+
+                Définir ce qu'est le SEO.
+
+            </li>
+
+
+
+            <li>
+
+                Comprendre le rôle du référencement naturel.
+
+            </li>
+
+
+
+            <li>
+
+                Expliquer pourquoi les entreprises utilisent le SEO.
+
+            </li>
+
+
+
+            <li>
+
+                Comprendre l'importance de la visibilité sur Google.
+
+            </li>
+
+
+        </ul>
+        <h3>
+
+            2. Comment fonctionnent les moteurs de recherche ?
+
+        </h3>
+
+
+
+
+        <p>
+
+            Les moteurs de recherche comme Google utilisent des robots
+            appelés « robots d'exploration » ou « crawlers » pour parcourir
+            les pages web disponibles sur Internet.
+
+        </p>
+
+
+
+
+        <p>
+
+            Ces robots analysent le contenu des sites, enregistrent les
+            informations importantes et permettent ensuite aux moteurs de
+            recherche de classer les pages selon leur pertinence.
+
+        </p>
+
+
+
+
+        <p>
+
+            Lorsqu'un utilisateur effectue une recherche, Google utilise
+            plusieurs critères pour afficher les meilleurs résultats :
+            la qualité du contenu, les mots-clés utilisés, la rapidité du
+            site, l'expérience utilisateur et la fiabilité des informations.
+
+        </p>
+
+
+
+
+
+        <h3>
+
+            Les principales étapes du fonctionnement de Google
+
+        </h3>
+
+
+
+
+        <ul>
+
+
+            <li>
+
+                🔎 <strong>Exploration :</strong>
+                les robots découvrent et parcourent les pages web.
+
+            </li>
+
+
+
+            <li>
+
+                📚 <strong>Indexation :</strong>
+                les informations des pages sont enregistrées dans la base
+                de données du moteur de recherche.
+
+            </li>
+
+
+
+            <li>
+
+                📊 <strong>Classement :</strong>
+                Google analyse les pages et choisit celles qui répondent
+                le mieux aux recherches des utilisateurs.
+
+            </li>
+
+
+
+            <li>
+
+                🚀 <strong>Affichage :</strong>
+                les résultats les plus pertinents apparaissent dans la page
+                de recherche.
+
+            </li>
+
+
+        </ul>
+
+
+
+
+
+        <h3>
+
+            Pourquoi comprendre le fonctionnement des moteurs de recherche ?
+
+        </h3>
+
+
+
+
+        <p>
+
+            Comprendre le fonctionnement de Google permet aux entreprises
+            d'adapter leur contenu afin d'être mieux positionnées dans les
+            résultats de recherche et d'attirer davantage de visiteurs.
+
+        </p>
+
+
+
+
+        <p>
+
+            Une entreprise qui maîtrise les bases du SEO peut créer des
+            contenus plus utiles, répondre aux besoins des clients et
+            améliorer progressivement sa visibilité en ligne.
+
+        </p>
+        <h3>
+
+            3. Pourquoi le SEO est important pour une entreprise ?
+
+        </h3>
+
+
+
+
+
+        <p>
+
+            Aujourd'hui, la majorité des clients utilisent Internet
+            pour rechercher des informations, comparer des produits
+            et trouver des services. Une entreprise qui n'est pas
+            visible sur les moteurs de recherche peut perdre de
+            nombreuses opportunités.
+
+        </p>
+
+
+
+
+
+        <p>
+
+            Le SEO permet d'améliorer la présence d'une entreprise
+            sur Internet en plaçant son site dans les premiers résultats
+            de recherche. Plus un site est visible, plus il a de chances
+            d'attirer des visiteurs intéressés.
+
+        </p>
+
+
+
+
+
+        <h3>
+
+            Les avantages du référencement naturel
+
+        </h3>
+
+
+
+
+
+        <ul>
+
+
+            <li>
+
+                🌐 <strong>Augmenter la visibilité :</strong>
+                le site devient plus facile à trouver par les internautes.
+
+            </li>
+
+
+
+
+            <li>
+
+                👥 <strong>Attirer plus de visiteurs :</strong>
+                un bon positionnement permet de recevoir davantage de trafic.
+
+            </li>
+
+
+
+
+            <li>
+
+                🤝 <strong>Renforcer la crédibilité :</strong>
+                les utilisateurs font davantage confiance aux sites bien
+                positionnés sur Google.
+
+            </li>
+
+
+
+
+            <li>
+
+                📈 <strong>Développer la notoriété :</strong>
+                une meilleure visibilité aide l'entreprise à être connue
+                par un plus grand nombre de personnes.
+
+            </li>
+
+
+
+
+            <li>
+
+                💰 <strong>Réduire les coûts publicitaires :</strong>
+                contrairement aux annonces payantes, le SEO permet d'obtenir
+                des résultats durables.
+
+            </li>
+
+
+        </ul>
+
+
+
+
+
+
+        <h3>
+
+            Exemple concret
+
+        </h3>
+
+
+
+
+
+        <div class="exemple">
+
+
+            <p>
+
+                Une entreprise de formation en ligne comme BMJ SERVICE
+                souhaite attirer de nouveaux apprenants.
+
+                Grâce au SEO, elle peut optimiser ses pages avec des mots-clés
+                comme « formation marketing digital en ligne » ou
+                « apprendre le marketing digital ».
+
+                Ainsi, lorsqu'un utilisateur recherche ces informations sur
+                Google, la plateforme augmente ses chances d'apparaître
+                dans les résultats.
+
+            </p>
+
+
+        </div>
+        <!--====================================
+            VIDEO COURS
+    =====================================-->
+
+        <div class="video-cours">
+
+
+            <h3>
+
+                📹 Vidéo explicative
+
+            </h3>
+
+
+
+            <iframe width="100%" height="400" src="https://www.youtube.com/embed/7q7depQBIqA"
+                title="Comprendre le SEO et le référencement" frameborder="0" allowfullscreen>
+
+
+            </iframe>
+
+
+
+        </div>
+
+
+
+    </section>
+    <!--====================================
+            À RETENIR
+=====================================-->
+
+    <section class="important">
+
+
+        <h2>
+
+            📌 À retenir
+
+        </h2>
+
+
+
+
+        <p>
+
+            ✔ Le SEO permet d'améliorer la visibilité d'un site web sur Google.
+
+        </p>
+
+
+
+
+        <p>
+
+            ✔ Le référencement naturel aide une entreprise à attirer des visiteurs
+            sans payer chaque clic.
+
+        </p>
+
+
+
+
+        <p>
+
+            ✔ Google classe les sites selon plusieurs critères comme la qualité
+            du contenu et l'expérience utilisateur.
+
+        </p>
+
+
+
+
+        <p>
+
+            ✔ Un bon référencement demande du temps, de la régularité et une
+            stratégie adaptée.
+
+        </p>
+
+
+
+
+        <p>
+
+            ✔ Toute entreprise présente sur Internet doit intégrer le SEO dans
+            sa stratégie digitale.
+
+        </p>
+
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+    <!--====================================
+            EXERCICE
+=====================================-->
+
+    <section class="exercice">
+
+
+        <h2>
+
+            Exercice
+
+        </h2>
+
+
+
+
+        <p>
+
+            Imaginez que vous créez un site web pour votre entreprise.
+
+            Expliquez comment vous pourriez utiliser le SEO pour améliorer
+            sa visibilité sur Google.
+
+        </p>
+
+
+
+
+        <ul>
+
+
+            <li>
+
+                Quel type d'entreprise souhaitez-vous promouvoir ?
+
+            </li>
+
+
+
+            <li>
+
+                Quels mots-clés pourraient rechercher vos clients ?
+
+            </li>
+
+
+
+            <li>
+
+                Quels contenus pourriez-vous publier pour attirer des visiteurs ?
+
+            </li>
+
+
+
+        </ul>
+
+
+
+
+        <textarea placeholder="Écrivez votre réponse ici..."></textarea>
+
+
+
+    </section>
+    <!--====================================
+            NAVIGATION
+=====================================-->
+
+    <section class="navigation">
+
+
+        <button onclick="retourCours()">
+
+            ← Retour au chapitre
+
+        </button>
+
+
+
+
+        <button onclick="terminerLecon()">
+
+            ✓ Terminer la leçon
+
+        </button>
+
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+    <!--====================================
+            FOOTER
+=====================================-->
+
+    <footer>
+
+
+        <h3>
+
+            BMJ SERVICE
+
+        </h3>
+
+
+
+
+        <p>
+
+            Félicitations ! Vous avez terminé la première leçon
+            du chapitre <strong>SEO et référencement</strong>.
+
+            La prochaine leçon portera sur
+            <strong>Les mots-clés et l'optimisation du contenu</strong>.
+
+        </p>
+
+
+
+    </footer>
+    <script>
+        //==================================================
+        // BMJ SERVICE
+        // LEÇON 1 - SEO ET REFERENCEMENT
+        // SCRIPT
+        //==================================================
+
+
+
+
+
+        //====================================
+        // CHARGEMENT DE LA PAGE
+        //====================================
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+
+
+            let utilisateur = JSON.parse(
+
+                localStorage.getItem("bmj_current_user")
+
+            );
+
+
+
+
+
+            //===============================
+            // AFFICHAGE PROFIL
+            //===============================
+
+
+            if (utilisateur) {
+
+
+
+                document.getElementById("nomUtilisateur").innerHTML = utilisateur.nom;
+
+
+
+                if (utilisateur.photo && utilisateur.photo !== "") {
+
+
+                    document.getElementById("photoUtilisateur").src = utilisateur.photo;
+
+
+                }
+
+
+
+            }
+
+
+
+        });
+
+
+
+
+
+
+
+
+
+        //====================================
+        // RETOUR AU CHAPITRE SEO
+        //====================================
+
+
+        function retourCours() {
+
+
+
+            window.location.href = "seo.php";
+
+
+
+        }
+
+
+
+
+
+
+
+
+
+        //====================================
+        // TERMINER LA LEÇON
+        //====================================
+
+
+        function terminerLecon() {
+
+
+
+            let utilisateur = JSON.parse(
+
+                localStorage.getItem("bmj_current_user")
+
+            );
+
+
+
+
+
+            // Aucun blocage connexion
+            // Compatible connexion.php
+
+
+
+            //--------------------------------
+            // PROGRESSION SEO
+            //--------------------------------
+
+
+            let progression = JSON.parse(
+
+
+                localStorage.getItem("seo_progression")
+
+
+            ) || [];
+
+
+
+
+
+
+
+
+            //===============================
+            // VERIFICATION DOUBLON
+            //===============================
+
+
+            if (progression.includes("1")) {
+
+
+
+                alert(
+
+                    "Cette leçon est déjà terminée."
+
+                );
+
+
+
+                window.location.href = "seo.php";
+
+
+                return;
+
+
+            }
+
+
+
+
+
+
+
+
+
+            //--------------------------------
+            // AJOUT LEÇON 1
+            //--------------------------------
+
+
+            progression.push("1");
+
+
+
+
+
+            localStorage.setItem(
+
+
+                "seo_progression",
+
+
+                JSON.stringify(progression)
+
+
+            );
+
+
+
+
+
+
+
+
+
+            //--------------------------------
+            // COURS SUIVIS UTILISATEUR
+            //--------------------------------
+
+
+            if (utilisateur) {
+
+
+
+                if (!utilisateur.coursSuivis) {
+
+
+                    utilisateur.coursSuivis = [];
+
+
+                }
+
+
+
+
+
+
+                if (!utilisateur.coursSuivis.includes(
+
+                    "SEO Leçon 1"
+
+                )) {
+
+
+                    utilisateur.coursSuivis.push(
+
+                        "SEO Leçon 1"
+
+                    );
+
+
+                }
+
+
+
+
+
+
+
+
+
+                //--------------------------------
+                // CALCUL PROGRESSION
+                //--------------------------------
+
+
+                utilisateur.progressionSEO =
+
+                    progression.length * 33.33;
+
+
+
+
+
+
+                if (utilisateur.progressionSEO > 100) {
+
+
+
+                    utilisateur.progressionSEO = 100;
+
+
+
+                }
+
+
+
+
+
+
+
+
+                //--------------------------------
+                // SAUVEGARDE UTILISATEUR
+                //--------------------------------
+
+
+                localStorage.setItem(
+
+
+                    "bmj_current_user",
+
+
+                    JSON.stringify(utilisateur)
+
+
+                );
+
+
+
+
+            }
+
+
+
+
+
+
+
+
+
+            //--------------------------------
+            // MESSAGE
+            //--------------------------------
+
+
+            alert(
+
+                "🎉 Félicitations !\n\nVous avez terminé la Leçon 1 du chapitre SEO."
+
+            );
+
+
+
+
+
+
+
+
+            //--------------------------------
+            // RETOUR CHAPITRE
+            //--------------------------------
+
+
+            window.location.href = "chap5.html";
+
+
+
+        }
+    </script>
+</body>
+
+</html>

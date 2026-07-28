@@ -1,0 +1,2397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*==================================================
+        BMJ SERVICE
+        LEÇON 3 - TECHNIQUES AVANCEES SEO
+==================================================*/
+
+
+        * {
+
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', Arial, sans-serif;
+
+        }
+
+
+
+        body {
+
+            background: #f4f7fb;
+
+            color: #333;
+
+            line-height: 1.8;
+
+        }
+
+
+
+
+
+
+
+        /*====================================
+            HEADER
+=====================================*/
+
+
+        header {
+
+
+            position: fixed;
+
+            top: 0;
+
+            left: 0;
+
+            width: 100%;
+
+            height: 75px;
+
+            background: white;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            padding: 0 40px;
+
+            box-shadow: 0 5px 20px rgba(0, 0, 0, .08);
+
+            z-index: 1000;
+
+
+        }
+
+
+
+        .logo {
+
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+
+        }
+
+
+
+        .logo img {
+
+
+            width: 50px;
+
+            height: 50px;
+
+            border-radius: 50%;
+
+
+        }
+
+
+
+        .logo h2 {
+
+
+            color: #145A86;
+
+
+        }
+
+
+
+        .logo span {
+
+
+            color: #D4AF37;
+
+
+        }
+
+
+
+
+
+
+
+        .student-profile {
+
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+
+        }
+
+
+
+        .student-profile img {
+
+
+            width: 50px;
+
+            height: 50px;
+
+            border-radius: 50%;
+
+            object-fit: cover;
+
+            border: 3px solid #D4AF37;
+
+
+        }
+
+
+
+        .student-profile h4 {
+
+
+            color: #145A86;
+
+
+        }
+
+
+
+        .student-profile small {
+
+
+            color: #777;
+
+
+        }
+
+
+
+
+
+
+
+
+
+        /*====================================
+            HERO LEÇON
+=====================================*/
+
+
+        .lesson-hero {
+
+
+            margin-top: 75px;
+
+            height: 450px;
+
+
+            background:
+
+
+                linear-gradient(rgba(20, 90, 134, .85),
+
+                    rgba(0, 0, 0, .75)),
+
+
+                url(images/seo-technique.jpg);
+
+
+
+            background-size: cover;
+
+            background-position: center;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+
+        }
+
+
+
+
+
+        .overlay {
+
+
+            width: 90%;
+
+            max-width: 1100px;
+
+            text-align: center;
+
+            color: white;
+
+
+        }
+
+
+
+        .overlay span {
+
+
+            background: #D4AF37;
+
+            color: #145A86;
+
+            padding: 8px 25px;
+
+            border-radius: 30px;
+
+            font-weight: bold;
+
+
+        }
+
+
+
+
+
+        .overlay h1 {
+
+
+            font-size: 42px;
+
+            margin: 25px 0;
+
+
+        }
+
+
+
+
+
+        .overlay p {
+
+
+            font-size: 18px;
+
+
+        }
+
+
+
+
+
+
+
+
+
+        /*====================================
+        BLOCS CONTENU
+=====================================*/
+
+
+        .objectif,
+        .cours,
+        .important,
+        .exercice {
+
+
+            width: 90%;
+
+            max-width: 1100px;
+
+            margin: 45px auto;
+
+
+            background: white;
+
+
+            padding: 35px;
+
+
+            border-radius: 20px;
+
+
+            box-shadow:
+
+                0 10px 25px rgba(0, 0, 0, .08);
+
+
+        }
+
+
+
+
+
+
+
+        .objectif h2,
+        .cours h2,
+        .important h2,
+        .exercice h2 {
+
+
+            color: #145A86;
+
+            border-left: 6px solid #D4AF37;
+
+            padding-left: 15px;
+
+            margin-bottom: 25px;
+
+
+        }
+
+
+
+
+
+
+
+
+
+        /*====================================
+            COURS
+=====================================*/
+
+
+        .cours h3 {
+
+
+            color: #145A86;
+
+            margin-top: 35px;
+
+            margin-bottom: 15px;
+
+
+        }
+
+
+
+
+
+        .cours p {
+
+
+            margin-bottom: 18px;
+
+            text-align: justify;
+
+
+        }
+
+
+
+        .cours ul,
+        .objectif ul,
+        .exercice ul {
+
+
+            margin-left: 25px;
+
+
+        }
+
+
+
+        .cours li,
+        .objectif li,
+        .exercice li {
+
+
+            margin-bottom: 12px;
+
+
+        }
+
+
+
+
+
+
+
+
+
+        /*====================================
+            EXEMPLE
+=====================================*/
+
+
+        .exemple {
+
+
+            margin-top: 25px;
+
+            padding: 25px;
+
+            background: #eef7ff;
+
+            border-left: 6px solid #145A86;
+
+            border-radius: 15px;
+
+
+        }
+
+
+
+
+
+
+
+
+
+        /*====================================
+            VIDEO
+=====================================*/
+
+
+        .video-cours {
+
+
+            margin-top: 40px;
+
+
+        }
+
+
+
+        .video-cours h3 {
+
+
+            color: #145A86;
+
+            margin-bottom: 20px;
+
+
+        }
+
+
+
+        .video-cours iframe {
+
+
+            width: 100%;
+
+            border-radius: 15px;
+
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .15);
+
+
+        }
+
+
+
+
+
+
+
+
+
+        /*====================================
+            A RETENIR
+=====================================*/
+
+
+        .important {
+
+
+            background: #145A86;
+
+            color: white;
+
+
+        }
+
+
+
+        .important h2 {
+
+
+            color: white;
+
+            border-color: #D4AF37;
+
+
+        }
+
+
+
+        .important p {
+
+
+            margin-bottom: 15px;
+
+            font-size: 17px;
+
+
+        }
+
+
+
+
+
+
+
+
+
+        /*====================================
+            EXERCICE
+=====================================*/
+
+
+        textarea {
+
+
+            width: 100%;
+
+            height: 180px;
+
+            margin-top: 20px;
+
+
+            padding: 15px;
+
+
+            border-radius: 12px;
+
+
+            border: 2px solid #ddd;
+
+
+            font-size: 16px;
+
+
+            outline: none;
+
+
+        }
+
+
+
+        textarea:focus {
+
+
+            border-color: #145A86;
+
+
+        }
+
+
+
+
+
+
+
+
+
+        /*====================================
+            NAVIGATION
+=====================================*/
+
+
+        .navigation {
+
+
+            width: 90%;
+
+            max-width: 1100px;
+
+            margin: 40px auto 70px;
+
+
+            display: flex;
+
+            gap: 20px;
+
+
+        }
+
+
+
+        .navigation button {
+
+
+            flex: 1;
+
+            padding: 18px;
+
+
+            border: none;
+
+
+            border-radius: 12px;
+
+
+            font-size: 16px;
+
+
+            font-weight: bold;
+
+
+            cursor: pointer;
+
+
+            transition: .3s;
+
+
+        }
+
+
+
+
+
+        .navigation button:first-child {
+
+
+            background: #145A86;
+
+            color: white;
+
+
+        }
+
+
+
+
+
+        .navigation button:last-child {
+
+
+            background: #D4AF37;
+
+            color: #145A86;
+
+
+        }
+
+
+
+        .navigation button:hover {
+
+
+            transform: translateY(-5px);
+
+            box-shadow: 0 10px 20px rgba(0, 0, 0, .15);
+
+
+        }
+
+
+
+
+
+
+
+
+
+        /*====================================
+            FOOTER
+=====================================*/
+
+
+        footer {
+
+
+            background: #145A86;
+
+
+            color: white;
+
+
+            text-align: center;
+
+
+            padding: 40px;
+
+
+        }
+
+
+
+        footer h3 {
+
+
+            color: #D4AF37;
+
+            margin-bottom: 10px;
+
+
+        }
+
+
+
+
+
+
+
+
+
+        /*====================================
+            TABLETTE
+=====================================*/
+
+
+        @media(max-width:768px) {
+
+
+
+            header {
+
+
+                padding: 0 15px;
+
+
+            }
+
+
+
+            .logo h2 {
+
+
+                font-size: 20px;
+
+
+            }
+
+
+
+            .student-profile small {
+
+
+                display: none;
+
+
+            }
+
+
+
+            .overlay h1 {
+
+
+                font-size: 32px;
+
+
+            }
+
+
+
+            .overlay p {
+
+
+                font-size: 16px;
+
+
+            }
+
+
+
+            .objectif,
+            .cours,
+            .important,
+            .exercice {
+
+
+                padding: 25px;
+
+
+            }
+
+
+
+            .navigation {
+
+
+                flex-direction: column;
+
+
+            }
+
+
+        }
+
+
+
+
+
+
+
+
+
+        /*====================================
+            MOBILE
+=====================================*/
+
+
+        @media(max-width:500px) {
+
+
+
+            .lesson-hero {
+
+
+                height: 430px;
+
+
+            }
+
+
+
+            .logo img {
+
+
+                width: 40px;
+
+                height: 40px;
+
+
+            }
+
+
+
+            .logo h2 {
+
+
+                font-size: 18px;
+
+
+            }
+
+
+
+            .overlay h1 {
+
+
+                font-size: 25px;
+
+
+            }
+
+
+
+            .overlay p {
+
+
+                font-size: 14px;
+
+
+            }
+
+
+
+            .cours p {
+
+
+                text-align: left;
+
+
+            }
+
+
+
+            .video-cours iframe {
+
+
+                height: 220px;
+
+
+            }
+
+
+
+            .navigation button {
+
+
+                width: 100%;
+
+
+            }
+
+
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <!--====================================
+            HEADER
+=====================================-->
+
+    <header>
+
+
+        <div class="logo">
+
+
+            <img src="images/logo.png" alt="BMJ SERVICE">
+
+
+
+            <h2>
+
+                BMJ <span>SERVICE</span>
+
+            </h2>
+
+
+        </div>
+
+
+
+
+
+
+
+        <div class="student-profile">
+
+
+            <img id="photoUtilisateur" src="images/user.png" alt="Utilisateur">
+
+
+
+
+
+            <div>
+
+
+                <h4 id="nomUtilisateur">
+
+                    Apprenant
+
+                </h4>
+
+
+
+
+
+                <small id="domaineUtilisateur">
+
+                    Marketing Digital
+
+                </small>
+
+
+
+            </div>
+
+
+        </div>
+
+
+
+    </header>
+
+
+
+
+
+
+
+
+
+    <!--====================================
+            HERO LEÇON
+=====================================-->
+
+    <section class="lesson-hero">
+
+
+        <div class="overlay">
+
+
+            <span>
+
+                LEÇON 3
+
+            </span>
+
+
+
+
+
+            <h1>
+
+                Les techniques avancées du référencement
+
+            </h1>
+
+
+
+
+
+            <p>
+
+                Découvrez les techniques avancées du SEO pour améliorer
+                la visibilité d'un site web, renforcer son autorité,
+                optimiser son positionnement sur Google et obtenir
+                des résultats durables.
+
+            </p>
+
+
+
+        </div>
+
+
+
+    </section>
+    <!--====================================
+            OBJECTIFS
+=====================================-->
+
+    <section class="objectif">
+
+
+        <h2>
+
+            Objectifs de cette leçon
+
+        </h2>
+
+
+
+
+
+        <ul>
+
+
+            <li>
+
+                Comprendre les techniques avancées utilisées en SEO.
+
+            </li>
+
+
+
+
+            <li>
+
+                Découvrir l'importance des liens et de l'autorité d'un site.
+
+            </li>
+
+
+
+
+            <li>
+
+                Apprendre les bases du SEO technique.
+
+            </li>
+
+
+
+
+            <li>
+
+                Comprendre comment améliorer l'expérience utilisateur.
+
+            </li>
+
+
+
+
+            <li>
+
+                Découvrir les méthodes permettant de maintenir un bon
+                positionnement sur Google.
+
+            </li>
+
+
+        </ul>
+
+
+
+    </section>
+    <!--====================================
+            COURS
+=====================================-->
+
+    <section class="cours">
+
+
+        <h2>
+
+            1. Les trois grandes catégories du SEO
+
+        </h2>
+
+
+
+
+
+        <p>
+
+            Le référencement naturel ne se limite pas seulement aux mots-clés.
+            Pour obtenir de meilleurs résultats sur Google, il faut travailler
+            plusieurs aspects du SEO afin d'améliorer la qualité, la visibilité
+            et la performance d'un site web.
+
+        </p>
+
+
+
+
+
+        <p>
+
+            Le SEO est généralement divisé en trois grandes catégories :
+            le SEO On-page, le SEO Off-page et le SEO technique.
+
+        </p>
+
+
+
+
+
+
+
+
+
+        <h3>
+
+            🔹 1. Le SEO On-page
+
+        </h3>
+
+
+
+
+
+        <p>
+
+            Le SEO On-page concerne toutes les améliorations réalisées
+            directement sur les pages d'un site web.
+
+            Son objectif est d'aider Google à comprendre le contenu
+            et de proposer une meilleure expérience aux visiteurs.
+
+        </p>
+
+
+
+
+
+        <ul>
+
+
+            <li>
+
+                Optimisation des titres et des sous-titres.
+
+            </li>
+
+
+
+
+            <li>
+
+                Utilisation correcte des mots-clés.
+
+            </li>
+
+
+
+
+            <li>
+
+                Création de contenus utiles et de qualité.
+
+            </li>
+
+
+
+
+            <li>
+
+                Amélioration des images et des descriptions.
+
+            </li>
+
+
+
+
+            <li>
+
+                Organisation claire des pages du site.
+
+            </li>
+
+
+        </ul>
+
+
+
+
+
+
+
+
+
+        <h3>
+
+            🔹 2. Le SEO Off-page
+
+        </h3>
+
+
+
+
+
+        <p>
+
+            Le SEO Off-page représente toutes les actions réalisées
+            en dehors du site pour améliorer sa réputation et son autorité.
+
+        </p>
+
+
+
+
+
+        <p>
+
+            L'un des éléments les plus importants du SEO Off-page est
+            l'obtention de liens provenant d'autres sites web appelés
+            backlinks.
+
+        </p>
+
+
+
+
+
+        <ul>
+
+
+            <li>
+
+                Obtenir des liens depuis des sites fiables.
+
+            </li>
+
+
+
+
+            <li>
+
+                Développer la réputation de la marque.
+
+            </li>
+
+
+
+
+            <li>
+
+                Partager les contenus sur les réseaux sociaux.
+
+            </li>
+
+
+
+
+            <li>
+
+                Améliorer la confiance des moteurs de recherche.
+
+            </li>
+
+
+        </ul>
+
+
+
+
+
+
+
+
+        <h3>
+
+            🔹 3. Le SEO technique
+
+        </h3>
+
+
+
+
+
+        <p>
+
+            Le SEO technique concerne les aspects liés au fonctionnement
+            du site web. Il permet aux moteurs de recherche d'explorer,
+            comprendre et indexer correctement les pages.
+
+        </p>
+
+
+
+
+
+        <ul>
+
+
+            <li>
+
+                Amélioration de la vitesse de chargement.
+
+            </li>
+
+
+
+
+            <li>
+
+                Adaptation du site aux appareils mobiles.
+
+            </li>
+
+
+
+
+            <li>
+
+                Sécurisation du site avec HTTPS.
+
+            </li>
+
+
+
+
+            <li>
+
+                Correction des erreurs techniques.
+
+            </li>
+
+
+        </ul>
+        <h3>
+
+            2. L'expérience utilisateur et son impact sur le SEO
+
+        </h3>
+
+
+
+
+
+        <p>
+
+            L'expérience utilisateur, appelée aussi UX (User Experience),
+            représente la manière dont les visiteurs utilisent et ressentent
+            un site web.
+
+        </p>
+
+
+
+
+
+        <p>
+
+            Aujourd'hui, Google ne se base pas uniquement sur les mots-clés.
+            Il prend également en compte la qualité de l'expérience proposée
+            aux utilisateurs.
+
+            Un site rapide, facile à utiliser et adapté aux mobiles a plus
+            de chances d'obtenir un meilleur classement.
+
+        </p>
+
+
+
+
+
+
+
+
+
+        <h3>
+
+            Les éléments importants de l'expérience utilisateur
+
+        </h3>
+
+
+
+
+
+        <ul>
+
+
+            <li>
+
+                ⚡ <strong>La vitesse du site :</strong>
+                un site qui se charge rapidement améliore la satisfaction
+                des visiteurs et réduit les abandons.
+
+            </li>
+
+
+
+
+
+            <li>
+
+                📱 <strong>L'adaptation mobile :</strong>
+                le site doit fonctionner correctement sur les smartphones
+                et les tablettes.
+
+            </li>
+
+
+
+
+
+            <li>
+
+                🧭 <strong>La navigation :</strong>
+                les visiteurs doivent pouvoir trouver facilement les
+                informations recherchées.
+
+            </li>
+
+
+
+
+
+            <li>
+
+                📖 <strong>La qualité du contenu :</strong>
+                les informations doivent être utiles, claires et répondre
+                aux besoins des utilisateurs.
+
+            </li>
+
+
+
+
+
+            <li>
+
+                🔒 <strong>La sécurité :</strong>
+                l'utilisation du protocole HTTPS renforce la confiance
+                des visiteurs.
+
+            </li>
+
+
+        </ul>
+
+
+
+
+
+
+
+
+
+        <h3>
+
+            Pourquoi l'expérience utilisateur influence Google ?
+
+        </h3>
+
+
+
+
+
+        <p>
+
+            Lorsqu'un utilisateur reste longtemps sur un site, consulte
+            plusieurs pages et trouve rapidement une réponse à son besoin,
+            Google considère que le site apporte une bonne valeur.
+
+        </p>
+
+
+
+
+
+        <p>
+
+            À l'inverse, un site lent, difficile à utiliser ou avec un
+            contenu peu utile peut perdre des positions dans les résultats
+            de recherche.
+
+        </p>
+
+
+
+
+
+
+
+
+        <h3>
+
+            Exemple concret
+
+        </h3>
+
+
+
+
+
+        <div class="exemple">
+
+
+            <p>
+
+                Une boutique en ligne possède un site avec de nombreux produits.
+                Si les pages chargent rapidement, que les images sont bien
+                présentées et que la commande est simple à effectuer, les
+                clients restent plus longtemps sur le site.
+
+                Cette bonne expérience améliore la satisfaction des visiteurs
+                et peut contribuer à un meilleur référencement Google.
+
+            </p>
+
+
+        </div>
+        <h3>
+
+            3. Les stratégies pour maintenir un bon référencement SEO
+
+        </h3>
+
+
+
+
+
+        <p>
+
+            Le référencement naturel est un travail continu.
+            Une fois qu'un site atteint une bonne position sur Google,
+            il est important de continuer à l'améliorer afin de conserver
+            sa visibilité face aux évolutions des moteurs de recherche
+            et aux nouveaux concurrents.
+
+        </p>
+
+
+
+
+
+        <p>
+
+            Une bonne stratégie SEO repose sur la régularité, l'analyse
+            des résultats et l'amélioration permanente du contenu.
+
+        </p>
+
+
+
+
+
+
+
+
+
+        <h3>
+
+            Les bonnes pratiques pour un SEO durable
+
+        </h3>
+
+
+
+
+
+        <ul>
+
+
+            <li>
+
+                🔄 <strong>Mettre à jour les contenus :</strong>
+                actualiser régulièrement les informations permet de garder
+                des pages pertinentes pour les utilisateurs.
+
+            </li>
+
+
+
+
+
+            <li>
+
+                📊 <strong>Analyser les performances :</strong>
+                utiliser des outils comme Google Analytics et Google Search
+                Console permet de suivre le trafic et d'identifier les
+                améliorations nécessaires.
+
+            </li>
+
+
+
+
+
+            <li>
+
+                ✍️ <strong>Créer régulièrement du contenu :</strong>
+                publier des articles, guides ou informations utiles aide
+                à attirer de nouveaux visiteurs.
+
+            </li>
+
+
+
+
+
+            <li>
+
+                🔗 <strong>Développer l'autorité du site :</strong>
+                obtenir des liens de qualité provenant de sites fiables
+                renforce la confiance des moteurs de recherche.
+
+            </li>
+
+
+
+
+
+            <li>
+
+                📱 <strong>S'adapter aux évolutions :</strong>
+                les techniques SEO changent régulièrement, il faut donc
+                rester informé des nouvelles pratiques.
+
+            </li>
+
+
+        </ul>
+
+
+
+
+
+
+
+
+
+        <h3>
+
+            Les erreurs SEO à éviter
+
+        </h3>
+
+
+
+
+
+        <ul>
+
+
+            <li>
+
+                ❌ Utiliser trop de mots-clés de manière artificielle.
+
+            </li>
+
+
+
+
+            <li>
+
+                ❌ Copier le contenu d'autres sites.
+
+            </li>
+
+
+
+
+            <li>
+
+                ❌ Négliger la version mobile du site.
+
+            </li>
+
+
+
+
+            <li>
+
+                ❌ Ignorer la vitesse de chargement des pages.
+
+            </li>
+
+
+
+
+            <li>
+
+                ❌ Acheter des liens de mauvaise qualité.
+
+            </li>
+
+
+        </ul>
+
+
+
+
+
+
+
+
+
+        <h3>
+
+            Exemple concret
+
+        </h3>
+
+
+
+
+
+        <div class="exemple">
+
+
+            <p>
+
+                Une entreprise qui possède un site de formation en ligne
+                doit régulièrement ajouter de nouveaux cours, améliorer
+                ses pages existantes et analyser les recherches des
+                utilisateurs.
+
+                Grâce à cette stratégie, elle conserve une bonne visibilité
+                sur Google et continue d'attirer de nouveaux apprenants.
+
+            </p>
+
+
+        </div>
+        <!--====================================
+            VIDEO COURS
+    =====================================-->
+
+        <div class="video-cours">
+
+
+            <h3>
+
+                📹 Vidéo explicative
+
+            </h3>
+
+
+
+
+            <iframe width="100%" height="400" src="https://www.youtube.com/embed/eeeMA_keyRc"
+                title="Techniques avancées du référencement SEO" frameborder="0" allowfullscreen>
+
+
+            </iframe>
+
+
+
+        </div>
+
+
+
+    </section>
+    <!--====================================
+            À RETENIR
+=====================================-->
+
+    <section class="important">
+
+
+        <h2>
+
+            📌 À retenir
+
+        </h2>
+
+
+
+
+        <p>
+
+            ✔ Le SEO avancé repose sur trois éléments : SEO On-page,
+            SEO Off-page et SEO technique.
+
+        </p>
+
+
+
+
+        <p>
+
+            ✔ L'expérience utilisateur influence directement le classement
+            d'un site dans les résultats de Google.
+
+        </p>
+
+
+
+
+        <p>
+
+            ✔ La vitesse, la sécurité et l'adaptation mobile sont des
+            éléments importants pour un bon référencement.
+
+        </p>
+
+
+
+
+        <p>
+
+            ✔ Un bon référencement demande un travail régulier et une
+            amélioration continue du contenu.
+
+        </p>
+
+
+
+
+        <p>
+
+            ✔ Une stratégie SEO durable permet d'améliorer la visibilité,
+            la crédibilité et la notoriété d'une entreprise.
+
+        </p>
+
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+    <!--====================================
+            EXERCICE
+=====================================-->
+
+    <section class="exercice">
+
+
+        <h2>
+
+            Exercice
+
+        </h2>
+
+
+
+
+
+        <p>
+
+            Imaginez que vous possédez un site web d'entreprise.
+
+            Proposez une stratégie SEO permettant d'améliorer son
+            positionnement sur Google.
+
+        </p>
+
+
+
+
+
+        <ul>
+
+
+            <li>
+
+                Quelles améliorations pourriez-vous faire sur votre site ?
+
+            </li>
+
+
+
+
+            <li>
+
+                Quels contenus pourriez-vous créer régulièrement ?
+
+            </li>
+
+
+
+
+            <li>
+
+                Comment pourriez-vous améliorer l'expérience des visiteurs ?
+
+            </li>
+
+
+
+
+            <li>
+
+                Quelles techniques SEO utiliseriez-vous pour développer
+                la visibilité du site ?
+
+            </li>
+
+
+        </ul>
+
+
+
+
+
+        <textarea placeholder="Écrivez votre réponse ici..."></textarea>
+
+
+
+    </section>
+    <!--====================================
+            NAVIGATION
+=====================================-->
+
+    <section class="navigation">
+
+
+        <button onclick="retourCours()">
+
+            ← Retour au chapitre
+
+        </button>
+
+
+
+
+
+        <button onclick="terminerLecon()">
+
+            ✓ Terminer la leçon
+
+        </button>
+
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+    <!--====================================
+            FOOTER
+=====================================-->
+
+    <footer>
+
+
+        <h3>
+
+            BMJ SERVICE
+
+        </h3>
+
+
+
+
+
+        <p>
+
+            Félicitations ! Vous avez terminé la troisième leçon
+            du chapitre <strong>SEO et référencement</strong>.
+
+            Vous pouvez maintenant passer à l'évaluation finale
+            pour valider votre chapitre.
+
+        </p>
+
+
+
+    </footer>
+    <script>
+        //==================================================
+        // BMJ SERVICE
+        // CHAPITRE 6 : SEO ET REFERENCEMENT
+        // LEÇON 3 : TECHNIQUES AVANCEES DU REFERENCEMENT
+        // SCRIPT
+        //==================================================
+
+
+
+
+
+        //====================================
+        // CHARGEMENT PAGE
+        //====================================
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+
+
+            let utilisateur = JSON.parse(
+
+                localStorage.getItem("bmj_current_user")
+
+            );
+
+
+
+
+
+            //===============================
+            // AFFICHAGE PROFIL
+            //===============================
+
+
+            if (utilisateur) {
+
+
+
+                let nom = document.getElementById(
+
+                    "nomUtilisateur"
+
+                );
+
+
+
+                if (nom) {
+
+
+                    nom.innerHTML = utilisateur.nom;
+
+
+                }
+
+
+
+
+
+
+                let photo = document.getElementById(
+
+                    "photoUtilisateur"
+
+                );
+
+
+
+                if (photo && utilisateur.photo) {
+
+
+                    photo.src = utilisateur.photo;
+
+
+                }
+
+
+
+            }
+
+
+
+        });
+
+
+
+
+
+
+
+
+
+        //====================================
+        // RETOUR AU CHAPITRE
+        //====================================
+
+
+        function retourCours() {
+
+
+
+            window.location.href = "seo.php";
+
+
+        }
+
+
+
+
+
+
+
+
+
+        //====================================
+        // TERMINER LA LEÇON 3
+        //====================================
+
+
+        function terminerLecon() {
+
+
+
+            let utilisateur = JSON.parse(
+
+                localStorage.getItem("bmj_current_user")
+
+            );
+
+
+
+
+
+
+
+            // Récupération progression
+
+
+            let progression = JSON.parse(
+
+
+                localStorage.getItem("seo_progression")
+
+
+            ) || [];
+
+
+
+
+
+
+
+
+
+            //===============================
+            // VERIFICATION
+            //===============================
+
+
+            if (progression.includes("3")) {
+
+
+                alert(
+
+                    "Cette leçon est déjà terminée."
+
+                );
+
+
+                window.location.href = "seo.php";
+
+
+                return;
+
+
+            }
+
+
+
+
+
+
+
+
+
+            //===============================
+            // AJOUT LEÇON 3
+            //===============================
+
+
+            progression.push("3");
+
+
+
+
+
+
+            localStorage.setItem(
+
+
+                "seo_progression",
+
+
+                JSON.stringify(progression)
+
+
+            );
+
+
+
+
+
+
+
+
+
+            //===============================
+            // MISE A JOUR UTILISATEUR
+            //===============================
+
+
+            if (utilisateur) {
+
+
+
+                if (!utilisateur.coursSuivis) {
+
+
+                    utilisateur.coursSuivis = [];
+
+
+                }
+
+
+
+
+
+
+
+
+                if (!utilisateur.coursSuivis.includes(
+
+                    "SEO Leçon 3"
+
+                )) {
+
+
+                    utilisateur.coursSuivis.push(
+
+                        "SEO Leçon 3"
+
+                    );
+
+
+                }
+
+
+
+
+
+
+
+
+                // Progression finale
+
+
+                utilisateur.progressionSEO = 100;
+
+
+
+
+
+
+
+
+                // Chapitre terminé
+
+
+                utilisateur.chapitresTermines =
+
+                    utilisateur.chapitresTermines || [];
+
+
+
+
+
+
+
+
+                if (!utilisateur.chapitresTermines.includes(
+
+                    "SEO et référencement"
+
+                )) {
+
+
+                    utilisateur.chapitresTermines.push(
+
+                        "SEO et référencement"
+
+                    );
+
+
+                }
+
+
+
+
+
+
+
+
+
+                localStorage.setItem(
+
+                    "bmj_current_user",
+
+                    JSON.stringify(utilisateur)
+
+                );
+
+
+
+            }
+
+
+
+
+
+
+
+
+
+            //===============================
+            // MESSAGE
+            //===============================
+
+
+            alert(
+
+
+                "🎉 Félicitations !\n\nVous avez terminé toutes les leçons du chapitre SEO.\n\nVous pouvez maintenant passer à l'évaluation finale."
+
+
+            );
+
+
+
+
+
+
+
+
+
+            //===============================
+            // REDIRECTION QUIZ
+            //===============================
+
+
+            window.location.href = "seoquiz.html";
+
+
+
+        }
+    </script>
+</body>
+
+</html>

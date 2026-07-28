@@ -1,0 +1,2417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*==================================================
+        BMJ SERVICE - LEÇON 3 MARKETING
+        VALEURS ET PERSONNALITÉ DE LA MARQUE
+==================================================*/
+
+
+        * {
+
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+
+        }
+
+
+
+        html {
+
+            scroll-behavior: smooth;
+
+        }
+
+
+
+        body {
+
+            background: #f4f7fb;
+            color: #333;
+            line-height: 1.8;
+
+        }
+
+
+
+
+
+        /*=====================================
+            HEADER
+======================================*/
+
+
+        header {
+
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 75px;
+
+            background: #fff;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 0 40px;
+
+            box-shadow:
+                0 5px 20px rgba(0, 0, 0, .08);
+
+            z-index: 1000;
+
+        }
+
+
+
+        .logo {
+
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+        }
+
+
+
+        .logo img {
+
+            width: 50px;
+            height: 50px;
+
+            border-radius: 50%;
+            object-fit: cover;
+
+        }
+
+
+
+        .logo h2 {
+
+            color: #145A86;
+
+        }
+
+
+
+        .logo span {
+
+            color: #D4AF37;
+
+        }
+
+
+
+
+
+        .student-profile {
+
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+        }
+
+
+
+        .student-profile img {
+
+            width: 48px;
+            height: 48px;
+
+            border-radius: 50%;
+
+            object-fit: cover;
+
+            border: 3px solid #D4AF37;
+
+        }
+
+
+
+        .student-profile h4 {
+
+            color: #145A86;
+
+        }
+
+
+
+        .student-profile small {
+
+            color: #777;
+
+        }
+
+
+
+
+
+
+
+        /*=====================================
+            HERO
+======================================*/
+
+
+        .lesson-hero {
+
+            margin-top: 75px;
+
+            height: 420px;
+
+
+            background:
+
+                linear-gradient(rgba(20, 90, 134, .85),
+                    rgba(0, 0, 0, .75)),
+
+                url(images/brand-values.jpg);
+
+
+
+            background-size: cover;
+
+            background-position: center;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+        }
+
+
+
+        .overlay {
+
+            width: 90%;
+
+            max-width: 950px;
+
+            color: white;
+
+            text-align: center;
+
+        }
+
+
+
+        .overlay span {
+
+            display: inline-block;
+
+            background: #D4AF37;
+
+            color: #145A86;
+
+            padding: 8px 20px;
+
+            border-radius: 30px;
+
+            font-weight: bold;
+
+            margin-bottom: 20px;
+
+        }
+
+
+
+        .overlay h1 {
+
+            font-size: 50px;
+
+            margin-bottom: 20px;
+
+        }
+
+
+
+        .overlay p {
+
+            font-size: 20px;
+
+        }
+
+
+
+
+
+
+
+
+        /*=====================================
+        OBJECTIFS + COURS
+======================================*/
+
+
+        .objectif,
+        .cours {
+
+
+            width: 90%;
+
+            max-width: 1100px;
+
+            margin: 40px auto;
+
+
+            background: #fff;
+
+
+            padding: 35px;
+
+
+            border-radius: 20px;
+
+
+            box-shadow:
+
+                0 10px 25px rgba(0, 0, 0, .08);
+
+
+        }
+
+
+
+
+        .objectif h2,
+        .cours h2 {
+
+
+            color: #145A86;
+
+
+            border-left: 6px solid #D4AF37;
+
+
+            padding-left: 15px;
+
+
+            margin-bottom: 25px;
+
+
+        }
+
+
+
+
+        .cours h3 {
+
+
+            color: #145A86;
+
+
+            margin-top: 30px;
+
+
+            margin-bottom: 15px;
+
+
+            border-bottom: 2px solid #D4AF37;
+
+
+            padding-bottom: 8px;
+
+
+        }
+
+
+
+
+
+        .cours p {
+
+
+            margin-bottom: 18px;
+
+            text-align: justify;
+
+        }
+
+
+
+
+
+        .objectif ul,
+        .cours ul {
+
+
+            margin-left: 25px;
+
+            margin-top: 15px;
+
+
+        }
+
+
+
+        .objectif li,
+        .cours li {
+
+
+            margin-bottom: 10px;
+
+
+        }
+
+
+
+        .cours li::marker {
+
+            color: #D4AF37;
+
+        }
+
+
+
+        .cours strong {
+
+            color: #145A86;
+
+        }
+
+
+
+
+
+
+
+        /*=====================================
+            À RETENIR
+======================================*/
+
+
+        .important {
+
+
+            width: 90%;
+
+            max-width: 1100px;
+
+
+            margin: 40px auto;
+
+
+            background: #145A86;
+
+
+            color: white;
+
+
+            padding: 35px;
+
+
+            border-radius: 20px;
+
+
+            box-shadow:
+
+                0 10px 25px rgba(0, 0, 0, .12);
+
+
+        }
+
+
+
+        .important h2 {
+
+
+            color: white;
+
+
+            border-left: 6px solid #D4AF37;
+
+
+            padding-left: 15px;
+
+
+            margin-bottom: 25px;
+
+
+        }
+
+
+
+        .important p {
+
+
+            font-size: 18px;
+
+
+            margin-bottom: 15px;
+
+
+            padding: 10px;
+
+
+            border-radius: 10px;
+
+
+            transition: .3s;
+
+
+        }
+
+
+
+        .important p:hover {
+
+
+            background: rgba(255, 255, 255, .1);
+
+
+            transform: translateX(8px);
+
+
+        }
+
+
+
+
+
+
+
+        /*=====================================
+            EXERCICE
+======================================*/
+
+
+        .exercice {
+
+
+            width: 90%;
+
+
+            max-width: 1100px;
+
+
+            margin: 40px auto;
+
+
+            background: white;
+
+
+            padding: 35px;
+
+
+            border-radius: 20px;
+
+
+            box-shadow:
+
+                0 10px 25px rgba(0, 0, 0, .08);
+
+
+        }
+
+
+
+
+        .exercice h2 {
+
+
+            color: #145A86;
+
+
+            border-left: 6px solid #D4AF37;
+
+
+            padding-left: 15px;
+
+
+            margin-bottom: 20px;
+
+
+        }
+
+
+
+
+        .exercice p {
+
+
+            margin-bottom: 20px;
+
+        }
+
+
+
+
+        .exercice ul {
+
+
+            margin-left: 25px;
+
+
+            margin-bottom: 25px;
+
+
+        }
+
+
+
+
+        .exercice li {
+
+
+            margin-bottom: 12px;
+
+
+        }
+
+
+
+
+
+        textarea {
+
+
+            width: 100%;
+
+
+            height: 180px;
+
+
+            padding: 18px;
+
+
+            border-radius: 15px;
+
+
+            border: 2px solid #ddd;
+
+
+            font-size: 16px;
+
+
+            outline: none;
+
+
+            resize: vertical;
+
+
+        }
+
+
+
+        textarea:focus {
+
+
+            border-color: #145A86;
+
+
+        }
+
+
+
+
+
+
+
+
+        /*=====================================
+            NAVIGATION
+======================================*/
+
+
+        .navigation {
+
+
+            width: 90%;
+
+
+            max-width: 1100px;
+
+
+            margin: 40px auto 70px;
+
+
+            display: flex;
+
+
+            justify-content: space-between;
+
+
+            gap: 20px;
+
+
+        }
+
+
+
+
+        .navigation button {
+
+
+            flex: 1;
+
+
+            padding: 18px;
+
+
+            border: none;
+
+
+            border-radius: 12px;
+
+
+            font-size: 17px;
+
+
+            font-weight: bold;
+
+
+            cursor: pointer;
+
+
+            transition: .35s;
+
+
+        }
+
+
+
+
+        .navigation button:first-child {
+
+
+            background: #145A86;
+
+            color: white;
+
+
+        }
+
+
+
+
+        .navigation button:last-child {
+
+
+            background: #D4AF37;
+
+
+            color: #145A86;
+
+
+        }
+
+
+
+
+        .navigation button:hover {
+
+
+            transform: translateY(-5px);
+
+
+            box-shadow:
+
+                0 12px 25px rgba(0, 0, 0, .15);
+
+
+        }
+
+
+
+
+
+
+
+        /*=====================================
+            FOOTER
+======================================*/
+
+
+        footer {
+
+
+            background: #145A86;
+
+
+            color: white;
+
+
+            text-align: center;
+
+
+            padding: 35px;
+
+
+        }
+
+
+
+        footer h3 {
+
+
+            color: #D4AF37;
+
+
+            margin-bottom: 15px;
+
+
+            font-size: 25px;
+
+
+        }
+
+
+
+        footer p {
+
+
+            max-width: 900px;
+
+
+            margin: auto;
+
+
+            font-size: 17px;
+
+
+        }
+
+
+
+        footer strong {
+
+
+            color: #D4AF37;
+
+
+        }
+
+
+
+
+
+
+
+        /*=====================================
+            RESPONSIVE
+======================================*/
+
+
+        @media(max-width:768px) {
+
+
+
+            header {
+
+
+                padding: 0 15px;
+
+
+            }
+
+
+
+            .logo h2 {
+
+
+                font-size: 20px;
+
+
+            }
+
+
+
+            .student-profile small {
+
+
+                display: none;
+
+
+            }
+
+
+
+            .overlay h1 {
+
+
+                font-size: 34px;
+
+
+            }
+
+
+
+            .overlay p {
+
+
+                font-size: 16px;
+
+
+            }
+
+
+
+            .objectif,
+            .cours,
+            .important,
+            .exercice {
+
+
+                padding: 22px;
+
+
+            }
+
+
+
+            .navigation {
+
+
+                flex-direction: column;
+
+
+            }
+
+
+
+        }
+
+
+
+        @media(max-width:500px) {
+
+
+
+            .logo img {
+
+
+                width: 40px;
+
+                height: 40px;
+
+
+            }
+
+
+
+            .logo h2 {
+
+
+                font-size: 18px;
+
+
+            }
+
+
+
+            .student-profile img {
+
+
+                width: 40px;
+
+                height: 40px;
+
+
+            }
+
+
+
+            .overlay h1 {
+
+
+                font-size: 27px;
+
+
+            }
+
+
+
+            .overlay p {
+
+
+                font-size: 14px;
+
+
+            }
+
+
+
+            textarea {
+
+
+                height: 140px;
+
+
+            }
+
+
+
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <!--====================================
+            HEADER
+=====================================-->
+
+    <header>
+
+
+        <div class="logo">
+
+
+            <img src="images/logo.png" alt="BMJ SERVICE">
+
+
+            <h2>
+
+                BMJ <span>SERVICE</span>
+
+            </h2>
+
+
+        </div>
+
+
+
+
+
+        <div class="student-profile">
+
+
+            <img id="photoUtilisateur" src="images/user.png" alt="Photo">
+
+
+            <div>
+
+
+                <h4 id="nomUtilisateur">
+
+                    Apprenant
+
+                </h4>
+
+
+
+                <small>
+
+                    Marketing Digital
+
+                </small>
+
+
+            </div>
+
+
+        </div>
+
+
+    </header>
+
+
+
+
+
+
+
+    <!--====================================
+            HERO
+=====================================-->
+
+
+    <section class="lesson-hero">
+
+
+        <div class="overlay">
+
+
+            <span>
+
+                LEÇON 3
+
+            </span>
+
+
+
+
+            <h1>
+
+                Les valeurs et la personnalité de la marque
+
+            </h1>
+
+
+
+
+            <p>
+
+                Découvrez comment définir les valeurs, la mission et
+                la personnalité qui caractérisent votre entreprise afin
+                de construire une marque forte, authentique et proche
+                de ses clients.
+
+            </p>
+
+
+
+        </div>
+
+
+    </section>
+
+
+
+
+
+
+
+    <!--====================================
+            OBJECTIFS
+=====================================-->
+
+
+    <section class="objectif">
+
+
+        <h2>
+
+            Objectifs de cette leçon
+
+        </h2>
+
+
+
+        <ul>
+
+
+            <li>
+
+                Comprendre le rôle des valeurs d'une marque.
+
+            </li>
+
+
+
+
+            <li>
+
+                Découvrir comment définir la mission d'une entreprise.
+
+            </li>
+
+
+
+
+            <li>
+
+                Comprendre la personnalité d'une marque.
+
+            </li>
+
+
+
+
+            <li>
+
+                Apprendre à créer une marque authentique.
+
+            </li>
+
+
+
+
+            <li>
+
+                Identifier les éléments qui rendent une marque unique.
+
+            </li>
+
+
+
+        </ul>
+
+
+    </section>
+
+
+
+
+
+
+
+    <!--====================================
+            COURS
+=====================================-->
+
+
+
+    <section class="cours">
+
+
+
+        <h2>
+
+            1. Les valeurs d'une marque
+
+        </h2>
+
+
+
+
+        <p>
+
+            Les valeurs d'une marque représentent les principes,
+            les croyances et les engagements qui guident une entreprise
+            dans ses actions et ses décisions.
+
+        </p>
+
+
+
+
+        <p>
+
+            Elles permettent aux clients de comprendre ce que représente
+            une entreprise, ce qu'elle défend et pourquoi ils devraient
+            lui faire confiance.
+
+        </p>
+
+
+
+
+        <p>
+
+            Une marque qui possède des valeurs clairement définies
+            crée une relation plus forte avec son public et se différencie
+            facilement de ses concurrents.
+
+        </p>
+
+
+
+
+
+        <h3>
+
+            📚 Enseignements du cours
+
+        </h3>
+
+
+
+
+        <p>
+
+            À la fin de cette partie, l'apprenant doit être capable de :
+
+        </p>
+
+
+
+
+        <ul>
+
+
+            <li>
+
+                Définir les valeurs d'une marque.
+
+            </li>
+
+
+
+            <li>
+
+                Comprendre leur importance dans une entreprise.
+
+            </li>
+
+
+
+            <li>
+
+                Identifier les valeurs qui correspondent à une marque.
+
+            </li>
+
+
+
+            <li>
+
+                Expliquer comment les valeurs influencent les clients.
+
+            </li>
+
+
+
+        </ul>
+
+
+
+
+
+        <h3>
+
+            Exemples de valeurs d'entreprise
+
+        </h3>
+
+
+
+
+        <ul>
+
+
+            <li>
+
+                ✔ Innovation.
+
+            </li>
+
+
+            <li>
+
+                ✔ Qualité.
+
+            </li>
+
+
+            <li>
+
+                ✔ Respect.
+
+            </li>
+
+
+            <li>
+
+                ✔ Transparence.
+
+            </li>
+
+
+            <li>
+
+                ✔ Excellence.
+
+            </li>
+
+
+            <li>
+
+                ✔ Responsabilité.
+
+            </li>
+
+
+        </ul>
+
+
+
+
+        <h3>
+
+            Exemple concret
+
+        </h3>
+
+
+
+
+        <p>
+
+            BMJ SERVICE met en avant des valeurs comme l'innovation,
+            l'accessibilité et l'excellence afin d'offrir une formation
+            numérique de qualité aux apprenants.
+
+        </p>
+
+
+
+    </section>
+    <!--====================================
+            COURS
+=====================================-->
+
+    <section class="cours">
+
+
+        <h2>
+
+            2. La mission d'une marque
+
+        </h2>
+
+
+
+
+        <p>
+
+            La mission d'une marque représente sa raison d'exister.
+            Elle explique pourquoi l'entreprise a été créée, quel problème
+            elle souhaite résoudre et quelle valeur elle veut apporter
+            à ses clients.
+
+        </p>
+
+
+
+
+        <p>
+
+            Une mission claire permet à une entreprise de définir sa direction
+            et de guider toutes ses actions : la communication, les produits,
+            les services et les relations avec les clients.
+
+        </p>
+
+
+
+
+        <p>
+
+            Les grandes marques possèdent généralement une mission forte qui
+            permet aux consommateurs de comprendre rapidement leur objectif
+            et leur engagement.
+
+        </p>
+
+
+
+
+
+        <h3>
+
+            📚 Enseignements du cours
+
+        </h3>
+
+
+
+
+        <p>
+
+            À la fin de cette partie, l'apprenant doit être capable de :
+
+        </p>
+
+
+
+
+        <ul>
+
+
+            <li>
+
+                Comprendre la définition d'une mission d'entreprise.
+
+            </li>
+
+
+
+            <li>
+
+                Identifier l'objectif principal d'une marque.
+
+            </li>
+
+
+
+            <li>
+
+                Différencier une mission d'un simple slogan.
+
+            </li>
+
+
+
+            <li>
+
+                Créer une mission adaptée à une entreprise.
+
+            </li>
+
+
+        </ul>
+
+
+
+
+
+
+
+        <h3>
+
+            Les caractéristiques d'une bonne mission
+
+        </h3>
+
+
+
+
+        <ul>
+
+
+            <li>
+
+                ✔ Être claire et facile à comprendre.
+
+            </li>
+
+
+
+            <li>
+
+                ✔ Expliquer l'utilité de l'entreprise.
+
+            </li>
+
+
+
+            <li>
+
+                ✔ Répondre aux besoins des clients.
+
+            </li>
+
+
+
+            <li>
+
+                ✔ Représenter les objectifs de la marque.
+
+            </li>
+
+
+
+            <li>
+
+                ✔ Inspirer confiance et motivation.
+
+            </li>
+
+
+        </ul>
+
+
+
+
+
+
+
+        <h3>
+
+            Exemple concret
+
+        </h3>
+
+
+
+
+        <p>
+
+            La mission de BMJ SERVICE est de rendre la formation
+            numérique accessible à tous en proposant des cours pratiques,
+            modernes et adaptés aux besoins des apprenants.
+
+        </p>
+
+
+
+
+        <p>
+
+            Cette mission permet à la plateforme de rester orientée vers
+            son objectif principal : accompagner les personnes dans le
+            développement de leurs compétences professionnelles.
+
+        </p>
+
+
+
+
+    </section>
+    <!--====================================
+            COURS
+=====================================-->
+
+    <section class="cours">
+
+
+        <h2>
+
+            3. La personnalité de la marque
+
+        </h2>
+
+
+
+
+        <p>
+
+            La personnalité d'une marque correspond aux traits humains
+            que l'on associe à une entreprise. Elle permet de donner
+            une identité unique à la marque et de créer une relation
+            émotionnelle avec les consommateurs.
+
+        </p>
+
+
+
+
+        <p>
+
+            Tout comme une personne possède un caractère, une marque peut
+            être perçue comme moderne, sérieuse, dynamique, créative,
+            proche de ses clients ou encore innovante.
+
+        </p>
+
+
+
+
+        <p>
+
+            Définir une personnalité de marque permet à une entreprise
+            d'adopter un ton de communication cohérent et de mieux
+            transmettre ses valeurs auprès de son public.
+
+        </p>
+
+
+
+
+
+        <h3>
+
+            📚 Enseignements du cours
+
+        </h3>
+
+
+
+
+        <p>
+
+            À la fin de cette partie, l'apprenant doit être capable de :
+
+        </p>
+
+
+
+
+        <ul>
+
+
+            <li>
+
+                Comprendre ce qu'est la personnalité d'une marque.
+
+            </li>
+
+
+
+            <li>
+
+                Identifier les traits qui caractérisent une entreprise.
+
+            </li>
+
+
+
+            <li>
+
+                Choisir une personnalité adaptée à son public cible.
+
+            </li>
+
+
+
+            <li>
+
+                Créer une communication cohérente avec l'image de marque.
+
+            </li>
+
+
+        </ul>
+
+
+
+
+
+
+
+        <h3>
+
+            Les différents types de personnalité d'une marque
+
+        </h3>
+
+
+
+
+        <ul>
+
+
+            <li>
+
+                🔵 <strong>Professionnelle :</strong>
+                sérieuse, fiable et experte dans son domaine.
+
+            </li>
+
+
+
+            <li>
+
+                🟡 <strong>Dynamique :</strong>
+                énergique, moderne et orientée vers l'action.
+
+            </li>
+
+
+
+            <li>
+
+                🟢 <strong>Bienveillante :</strong>
+                proche des clients, attentive et humaine.
+
+            </li>
+
+
+
+            <li>
+
+                🔴 <strong>Audacieuse :</strong>
+                innovante, créative et prête à relever des défis.
+
+            </li>
+
+
+
+            <li>
+
+                ⚫ <strong>Premium :</strong>
+                élégante, prestigieuse et orientée vers la qualité.
+
+            </li>
+
+
+        </ul>
+
+
+
+
+
+
+
+        <h3>
+
+            Comment définir la personnalité d'une marque ?
+
+        </h3>
+
+
+
+
+        <ul>
+
+
+            <li>
+
+                Identifier les valeurs principales de l'entreprise.
+
+            </li>
+
+
+
+            <li>
+
+                Connaître le public cible.
+
+            </li>
+
+
+
+            <li>
+
+                Choisir les émotions que la marque souhaite transmettre.
+
+            </li>
+
+
+
+            <li>
+
+                Adapter le langage, le design et la communication.
+
+            </li>
+
+
+
+        </ul>
+
+
+
+
+
+
+
+        <h3>
+
+            Exemple concret
+
+        </h3>
+
+
+
+
+        <p>
+
+            BMJ SERVICE possède une personnalité professionnelle,
+            moderne et accessible. La plateforme utilise une communication
+            simple et motivante afin de créer une relation de confiance
+            avec les apprenants.
+
+        </p>
+
+
+
+
+        <p>
+
+            Son objectif est d'être perçue comme une marque innovante
+            qui accompagne les utilisateurs dans l'apprentissage
+            des compétences numériques.
+
+        </p>
+
+
+
+
+
+        <h3>
+
+            À retenir
+
+        </h3>
+
+
+
+
+        <p>
+
+            Les valeurs, la mission et la personnalité d'une marque
+            travaillent ensemble pour construire une identité forte.
+            Elles permettent aux clients de comprendre l'entreprise,
+            de s'identifier à ses objectifs et de développer une relation
+            durable avec elle.
+
+        </p>
+
+
+
+
+    </section>
+    <!--====================================
+            À RETENIR
+=====================================-->
+
+    <section class="important">
+
+
+        <h2>
+
+            📌 À retenir
+
+        </h2>
+
+
+
+
+        <p>
+
+            ✔ Les valeurs représentent les principes et les engagements
+            qui guident une entreprise.
+
+        </p>
+
+
+
+
+        <p>
+
+            ✔ La mission explique la raison d'exister d'une marque
+            et l'objectif qu'elle souhaite atteindre.
+
+        </p>
+
+
+
+
+        <p>
+
+            ✔ La personnalité donne un caractère humain à une marque
+            afin de créer une relation avec les clients.
+
+        </p>
+
+
+
+
+        <p>
+
+            ✔ Une marque forte doit être cohérente entre ses valeurs,
+            sa mission et sa communication.
+
+        </p>
+
+
+
+
+        <p>
+
+            ✔ Une identité de marque bien définie permet de se différencier
+            des concurrents et de gagner la confiance du public.
+
+        </p>
+
+
+
+    </section>
+
+
+
+
+
+
+
+    <!--====================================
+            EXERCICE
+=====================================-->
+
+    <section class="exercice">
+
+
+        <h2>
+
+            📝 Exercice
+
+        </h2>
+
+
+
+
+        <p>
+
+            Imaginez que vous créez votre propre entreprise.
+
+            Définissez son identité en précisant :
+
+        </p>
+
+
+
+
+        <ul>
+
+
+            <li>
+
+                Le nom de votre entreprise.
+
+            </li>
+
+
+
+            <li>
+
+                Les valeurs principales que votre entreprise souhaite défendre.
+
+            </li>
+
+
+
+            <li>
+
+                La mission de votre entreprise.
+
+            </li>
+
+
+
+            <li>
+
+                La personnalité que vous souhaitez donner à votre marque.
+
+            </li>
+
+
+
+            <li>
+
+                Le type de relation que vous voulez créer avec vos clients.
+
+            </li>
+
+
+        </ul>
+
+
+
+
+
+        <textarea placeholder="Écrivez votre réponse ici..."></textarea>
+
+
+
+    </section>
+
+
+
+
+
+
+
+    <!--====================================
+            NAVIGATION
+=====================================-->
+
+    <section class="navigation">
+
+
+
+        <button onclick="retourCours()">
+
+            ← Retour au chapitre
+
+        </button>
+
+
+
+
+
+        <button onclick="terminerLecon()">
+
+            ✓ Terminer la leçon
+
+        </button>
+
+
+
+    </section>
+
+
+
+
+
+
+
+    <!--====================================
+            FOOTER
+=====================================-->
+
+    <footer>
+
+
+
+        <h3>
+
+            BMJ SERVICE
+
+        </h3>
+
+
+
+
+        <p>
+
+            Félicitations ! Vous avez terminé la Leçon 3 du chapitre
+            <strong>Identité de marque</strong>.
+
+            Vous avez appris comment définir les valeurs,
+            la mission et la personnalité d'une marque afin de
+            construire une entreprise forte et reconnaissable.
+
+        </p>
+
+
+
+    </footer>
+    <script>
+
+
+        //====================================
+        // CHARGEMENT DE LA PAGE
+        //====================================
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+
+            let utilisateur = JSON.parse(
+
+                localStorage.getItem("bmj_current_user")
+
+            );
+
+
+
+            //=========================
+            // AFFICHAGE DU PROFIL
+            //=========================
+
+
+            if (utilisateur) {
+
+
+                document.getElementById("nomUtilisateur").innerHTML = utilisateur.nom;
+
+
+
+                if (utilisateur.photo && utilisateur.photo !== "") {
+
+
+                    document.getElementById("photoUtilisateur").src = utilisateur.photo;
+
+
+                }
+
+
+            } else {
+
+
+                document.getElementById("nomUtilisateur").innerHTML = "Apprenant";
+
+
+                document.getElementById("domaineUtilisateur").innerHTML = "Marketing Digital";
+
+
+            }
+
+
+
+        });
+
+
+
+
+
+
+
+
+
+        //====================================
+        // RETOUR AU CHAPITRE MARKETING
+        //====================================
+
+
+        function retourCours() {
+
+
+            window.location.href = "marketing.php";
+
+
+        }
+
+
+
+
+
+
+
+
+
+        //====================================
+        // TERMINER LA LEÇON 3
+        //====================================
+
+
+        function terminerLecon() {
+
+
+
+            let utilisateur = JSON.parse(
+
+                localStorage.getItem("bmj_current_user")
+
+            );
+
+
+
+
+
+            //--------------------------------
+            // RECUPERATION PROGRESSION
+            //--------------------------------
+
+
+            let progression = JSON.parse(
+
+                localStorage.getItem("marketing_progression")
+
+            ) || [];
+
+
+
+
+
+
+
+
+            //================================
+            // VERIFIER SI DEJA TERMINEE
+            //================================
+
+
+            if (progression.includes("3")) {
+
+
+                alert(
+
+                    "Cette Leçon 3 est déjà terminée."
+
+                );
+
+
+                window.location.href = "marketing.php";
+
+
+                return;
+
+
+            }
+
+
+
+
+
+
+
+
+            //--------------------------------
+            // AJOUT DE LA LEÇON 3
+            //--------------------------------
+
+
+            progression.push("3");
+
+
+
+            localStorage.setItem(
+
+                "marketing_progression",
+
+                JSON.stringify(progression)
+
+            );
+
+
+
+
+
+
+
+
+
+            //================================
+            // SAUVEGARDE UTILISATEUR
+            //================================
+
+
+            if (utilisateur) {
+
+
+
+                if (!utilisateur.coursSuivis) {
+
+
+                    utilisateur.coursSuivis = [];
+
+
+                }
+
+
+
+
+
+
+                if (!utilisateur.coursSuivis.includes(
+
+                    "Marketing Leçon 3"
+
+                )) {
+
+
+                    utilisateur.coursSuivis.push(
+
+                        "Marketing Leçon 3"
+
+                    );
+
+
+                }
+
+
+
+
+
+
+
+
+
+                //--------------------------------
+                // CALCUL DE PROGRESSION
+                //--------------------------------
+
+
+                utilisateur.progression = progression.length * 20;
+
+
+
+                if (utilisateur.progression > 100) {
+
+
+                    utilisateur.progression = 100;
+
+
+                }
+
+
+
+
+
+
+
+
+
+                //--------------------------------
+                // SAUVEGARDE SESSION LOCALE
+                //--------------------------------
+
+
+                localStorage.setItem(
+
+                    "bmj_current_user",
+
+                    JSON.stringify(utilisateur)
+
+                );
+
+
+
+
+
+
+
+
+
+                //--------------------------------
+                // MISE A JOUR DES UTILISATEURS
+                //--------------------------------
+
+
+                let utilisateurs = JSON.parse(
+
+                    localStorage.getItem("bmj_users")
+
+                ) || [];
+
+
+
+
+
+
+                let index = utilisateurs.findIndex(
+
+                    u => u.id === utilisateur.id
+
+                );
+
+
+
+
+
+
+                if (index !== -1) {
+
+
+                    utilisateurs[index] = utilisateur;
+
+
+                }
+
+
+
+
+
+
+                localStorage.setItem(
+
+                    "bmj_users",
+
+                    JSON.stringify(utilisateurs)
+
+                );
+
+
+
+            }
+
+
+
+
+
+
+
+
+
+            //--------------------------------
+            // MESSAGE DE FIN
+            //--------------------------------
+
+
+            alert(
+
+
+                "🎉 Félicitations !\n\nVous avez terminé la Leçon 3 : Les valeurs et la personnalité de la marque."
+
+
+            );
+
+
+
+
+
+
+
+
+
+            //--------------------------------
+            // RETOUR AU CHAPITRE
+            //--------------------------------
+
+
+            window.location.href = "marketing.php";
+
+
+
+        }
+
+
+
+    </script>
+</body>
+
+</html>

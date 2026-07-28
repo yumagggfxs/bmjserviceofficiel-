@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*=====================================
+        BMJ SERVICE
+======================================*/
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+
+            background: #f5f8fc;
+            color: #333;
+            overflow-x: hidden;
+
+        }
+
+        /*=====================================
+        NAVBAR
+======================================*/
+
+        header {
+
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+
+            background: rgba(20, 90, 134, .95);
+
+            backdrop-filter: blur(15px);
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            padding: 18px 8%;
+
+            box-shadow: 0 10px 30px rgba(0, 0, 0, .15);
+
+        }
+
+        .logo {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 15px;
+
+        }
+
+        .logo img {
+
+            width: 55px;
+
+            height: 55px;
+
+            border-radius: 50%;
+
+            background: white;
+
+        }
+
+        .logo h2 {
+
+            color: white;
+
+            font-size: 28px;
+
+            font-weight: 700;
+
+        }
+
+        .logo span {
+
+            color: #FFD54F;
+
+        }
+
+        nav {
+
+            display: flex;
+
+            gap: 30px;
+
+        }
+
+        nav a {
+
+            text-decoration: none;
+
+            color: white;
+
+            font-weight: 500;
+
+            transition: .3s;
+
+        }
+
+        nav a:hover {
+
+            color: #FFD54F;
+
+        }
+
+        /*=====================================
+        BUTTONS
+======================================*/
+
+        .btn {
+
+            background: #FFD54F;
+
+            color: #145A86;
+
+            padding: 13px 28px;
+
+            border-radius: 40px;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+            transition: .3s;
+
+            display: inline-block;
+
+        }
+
+        .btn:hover {
+
+            transform: translateY(-4px);
+
+            box-shadow: 0 10px 20px rgba(0, 0, 0, .20);
+
+        }
+
+        .btn2 {
+
+            margin-left: 15px;
+
+            background: white;
+
+            color: #145A86;
+
+        }
+
+        /*=====================================
+        HERO
+======================================*/
+
+        .hero {
+
+            width: 100%;
+
+            min-height: 100vh;
+
+            background:
+
+                linear-gradient(rgba(0, 0, 0, .55), rgba(0, 0, 0, .55)),
+
+                url("images/banner.jpg") center/cover;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            text-align: center;
+
+            padding: 100px 10%;
+
+        }
+
+        .hero-content {
+
+            max-width: 900px;
+
+        }
+
+        .hero h1 {
+
+            color: white;
+
+            font-size: 60px;
+
+            margin-bottom: 25px;
+
+        }
+
+        .hero h1 span {
+
+            color: #FFD54F;
+
+        }
+
+        .hero p {
+
+            color: #f1f1f1;
+
+            font-size: 22px;
+
+            line-height: 1.8;
+
+            margin-bottom: 40px;
+
+        }
+
+        /*=====================================
+        SECTION
+======================================*/
+
+        section {
+
+            padding: 90px 8%;
+
+        }
+
+        .title {
+
+            text-align: center;
+
+            margin-bottom: 60px;
+
+        }
+
+        .title h2 {
+
+            color: #145A86;
+
+            font-size: 42px;
+
+        }
+
+        .title p {
+
+            margin-top: 10px;
+
+            color: #666;
+
+        }
+
+        /*=====================================
+        CARDS
+======================================*/
+
+        .cards {
+
+            display: grid;
+
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+            gap: 30px;
+
+        }
+
+        .card {
+
+            background: white;
+
+            border-radius: 20px;
+
+            overflow: hidden;
+
+            transition: .4s;
+
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+
+        }
+
+        .card:hover {
+
+            transform: translateY(-10px);
+
+        }
+
+        .card img {
+
+            width: 100%;
+
+            height: 220px;
+
+            object-fit: cover;
+
+        }
+
+        .card-content {
+
+            padding: 25px;
+
+        }
+
+        .card-content i {
+
+            font-size: 45px;
+
+            color: #145A86;
+
+            margin-bottom: 15px;
+
+        }
+
+        .card-content h3 {
+
+            color: #145A86;
+
+            margin-bottom: 15px;
+
+        }
+
+        .card-content p {
+
+            color: #666;
+
+            line-height: 1.7;
+
+        }
+
+        /*=====================================
+        FEATURES
+======================================*/
+
+        .features {
+
+            display: grid;
+
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+
+            gap: 25px;
+
+        }
+
+        .feature {
+
+            background: white;
+
+            padding: 35px;
+
+            border-radius: 20px;
+
+            text-align: center;
+
+            box-shadow: 0 10px 20px rgba(0, 0, 0, .08);
+
+        }
+
+        .feature i {
+
+            font-size: 55px;
+
+            color: #FFD54F;
+
+            margin-bottom: 20px;
+
+        }
+
+        .feature h3 {
+
+            color: #145A86;
+
+            margin-bottom: 15px;
+
+        }
+
+        /*=====================================
+        FOOTER
+======================================*/
+
+        footer {
+
+            background: #145A86;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 50px 20px;
+
+        }
+
+        footer h3 {
+
+            font-size: 30px;
+
+            margin-bottom: 15px;
+
+        }
+
+        footer p {
+
+            opacity: .8;
+
+            margin: 10px 0;
+
+        }
+
+        .social {
+
+            margin-top: 20px;
+
+        }
+
+        .social a {
+
+            display: inline-flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            width: 50px;
+
+            height: 50px;
+
+            background: white;
+
+            color: #145A86;
+
+            border-radius: 50%;
+
+            margin: 0 8px;
+
+            text-decoration: none;
+
+            transition: .3s;
+
+        }
+
+        .social a:hover {
+
+            background: #FFD54F;
+
+            transform: translateY(-5px);
+
+        }
+
+        /*=====================================
+        MOBILE MENU
+======================================*/
+
+        .menu-toggle {
+
+            display: none;
+
+            color: white;
+
+            font-size: 30px;
+
+            cursor: pointer;
+
+        }
+
+        /*=====================================
+        RESPONSIVE
+======================================*/
+
+        @media(max-width:992px) {
+
+            .hero h1 {
+
+                font-size: 45px;
+
+            }
+
+            nav {
+
+                gap: 18px;
+
+            }
+
+        }
+
+        @media(max-width:768px) {
+
+            header {
+
+                padding: 18px 20px;
+
+            }
+
+            nav {
+
+                position: fixed;
+
+                top: 90px;
+
+                left: -100%;
+
+                width: 100%;
+
+                background: #145A86;
+
+                flex-direction: column;
+
+                padding: 30px;
+
+                transition: .4s;
+
+            }
+
+            nav.active {
+
+                left: 0;
+
+            }
+
+            .menu-toggle {
+
+                display: block;
+
+            }
+
+            .hero {
+
+                padding: 120px 25px;
+
+            }
+
+            .hero h1 {
+
+                font-size: 35px;
+
+            }
+
+            .hero p {
+
+                font-size: 18px;
+
+            }
+
+            .btn {
+
+                display: block;
+
+                margin: 15px auto;
+
+            }
+
+            .btn2 {
+
+                margin-left: 0;
+
+            }
+
+            .title h2 {
+
+                font-size: 30px;
+
+            }
+
+        }
+
+        @media(max-width:500px) {
+
+            .hero h1 {
+
+                font-size: 28px;
+
+            }
+
+            .hero p {
+
+                font-size: 16px;
+
+            }
+
+            .logo h2 {
+
+                font-size: 22px;
+
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <body>
+
+        <!-- ================= HEADER ================= -->
+
+        <header>
+
+            <div class="logo">
+
+                <img src="images/logo.png" alt="BMJ SERVICE">
+
+                <h2>BMJ <span>SERVICE</span></h2>
+
+            </div>
+
+            <div class="menu-toggle">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </div>
+
+            <nav>
+
+                <a href="#">Accueil</a>
+
+                <a href="#formations">Formations</a>
+
+                <a href="#categories">Catégories</a>
+
+                <a href="#apropos">À propos</a>
+
+                <a href="#contact">Contact</a>
+
+                <a href="connexion.html">Connexion</a>
+
+                <a href="inscription.html" class="btn">Créer un compte</a>
+
+            </nav>
+
+        </header>
+
+        <!-- ================= HERO ================= -->
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <h1>
+
+                    Développez vos compétences avec
+
+                    <span>BMJ SERVICE</span>
+
+                </h1>
+
+                <p>
+
+                    BMJ SERVICE est une plateforme moderne de formation professionnelle
+                    accessible sur ordinateur, tablette et téléphone.
+                    Apprenez auprès des meilleurs formateurs dans plusieurs domaines
+                    et obtenez des compétences recherchées sur le marché du travail.
+
+                </p>
+
+                <a href="inscription.html" class="btn">
+
+                    Commencer maintenant
+
+                </a>
+
+                <a href="inscription.html" class="btn btn2">
+
+                    Explorer les formations
+
+                </a>
+
+            </div>
+
+        </section>
+
+        <!-- ================= DOMAINES ================= -->
+
+        <section id="categories">
+
+            <div class="title">
+
+                <h2>Nos domaines de formation</h2>
+
+                <p>
+
+                    Choisissez le domaine qui correspond à votre carrière.
+
+                </p>
+
+            </div>
+
+            <div class="cards">
+
+                <div class="card">
+
+                    <img src="images/entrepreneuriat.jpg">
+
+                    <div class="card-content">
+
+                        <i class="fa-solid fa-briefcase"></i>
+
+                        <h3>Entrepreneuriat</h3>
+
+                        <p>
+
+                            Apprenez à créer, développer et gérer votre entreprise
+                            avec des méthodes modernes.
+
+                        </p>
+
+                        <br>
+
+                        <a href="#" class="btn">
+
+                            Découvrir
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div class="card">
+
+                    <img src="images/leadership.jpg">
+
+                    <div class="card-content">
+
+                        <i class="fa-solid fa-crown"></i>
+
+                        <h3>Leadership</h3>
+
+                        <p>
+
+                            Développez votre leadership afin de mieux gérer
+                            vos équipes et vos projets.
+
+                        </p>
+
+                        <br>
+
+                        <a href="#" class="btn">
+
+                            Découvrir
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div class="card">
+
+                    <img src="images/marketing.jpg">
+
+                    <div class="card-content">
+
+                        <i class="fa-solid fa-chart-line"></i>
+
+                        <h3>Marketing Digital</h3>
+
+                        <p>
+
+                            Maîtrisez Facebook Ads,
+                            Google Ads,
+                            TikTok,
+                            Instagram,
+                            le référencement et bien plus.
+
+                        </p>
+
+                        <br>
+
+                        <a href="#" class="btn">
+
+                            Découvrir
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div class="card">
+
+                    <img src="images/sante.jpg">
+
+                    <div class="card-content">
+
+                        <i class="fa-solid fa-heart-pulse"></i>
+
+                        <h3>Santé & Environnement</h3>
+
+                        <p>
+
+                            Découvrez les bonnes pratiques en santé,
+                            hygiène,
+                            sécurité
+                            et protection de l'environnement.
+
+                        </p>
+
+                        <br>
+
+                        <a href="#" class="btn">
+
+                            Découvrir
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div class="card">
+
+                    <img src="images/education.jpg">
+
+                    <div class="card-content">
+
+                        <i class="fa-solid fa-graduation-cap"></i>
+
+                        <h3>Éducation</h3>
+
+                        <p>
+
+                            Des formations pédagogiques destinées aux
+                            enseignants,
+                            étudiants
+                            et professionnels.
+
+                        </p>
+
+                        <br>
+
+                        <a href="#" class="btn">
+
+                            Découvrir
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+    </body>
+
+</html>

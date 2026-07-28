@@ -1,0 +1,2585 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*==================================================
+        BMJ SERVICE - STRATEGIE MARKETING
+        LEÇON 3
+==================================================*/
+
+        * {
+
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', Arial, sans-serif;
+
+        }
+
+
+        html {
+
+            scroll-behavior: smooth;
+
+        }
+
+
+
+        body {
+
+            background: #f4f7fb;
+            color: #333;
+            line-height: 1.8;
+
+        }
+
+
+
+
+
+        /*=====================================
+            HEADER
+======================================*/
+
+
+        header {
+
+            position: fixed;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 75px;
+
+            background: white;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            padding: 0 40px;
+
+            box-shadow: 0 5px 20px rgba(0, 0, 0, .08);
+
+            z-index: 1000;
+
+        }
+
+
+
+        .logo {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+        }
+
+
+
+        .logo img {
+
+            width: 50px;
+
+            height: 50px;
+
+            border-radius: 50%;
+
+        }
+
+
+
+        .logo h2 {
+
+            color: #145A86;
+
+        }
+
+
+
+        .logo span {
+
+            color: #D4AF37;
+
+        }
+
+
+
+
+        .student-profile {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+        }
+
+
+
+        .student-profile img {
+
+            width: 48px;
+
+            height: 48px;
+
+            border-radius: 50%;
+
+            object-fit: cover;
+
+            border: 3px solid #D4AF37;
+
+        }
+
+
+
+        .student-profile h4 {
+
+            color: #145A86;
+
+        }
+
+
+
+        .student-profile small {
+
+            color: #777;
+
+        }
+
+
+
+
+
+
+
+
+        /*=====================================
+            HERO
+======================================*/
+
+
+        .lesson-hero {
+
+
+            margin-top: 75px;
+
+            height: 420px;
+
+
+            background:
+
+                linear-gradient(rgba(20, 90, 134, .82),
+
+                    rgba(0, 0, 0, .75)),
+
+                url(images/cible-marketing.jpg);
+
+
+
+            background-size: cover;
+
+            background-position: center;
+
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+
+        }
+
+
+
+        .overlay {
+
+            width: 90%;
+
+            max-width: 900px;
+
+            color: white;
+
+            text-align: center;
+
+        }
+
+
+
+
+        .overlay h1 {
+
+            font-size: 52px;
+
+            margin-bottom: 20px;
+
+        }
+
+
+
+        .overlay p {
+
+            font-size: 21px;
+
+        }
+
+
+
+
+
+
+
+
+        /*=====================================
+            SECTIONS
+======================================*/
+
+
+        .objectif,
+        .cours,
+        .important,
+        .exercice {
+
+
+            width: 90%;
+
+            max-width: 1100px;
+
+
+            margin: 40px auto;
+
+
+            background: white;
+
+
+            border-radius: 20px;
+
+
+            padding: 35px;
+
+
+            box-shadow:
+
+                0 10px 25px rgba(0, 0, 0, .08);
+
+
+        }
+
+
+
+
+
+        .objectif h2,
+        .cours h2,
+        .important h2,
+        .exercice h2 {
+
+
+            color: #145A86;
+
+
+            margin-bottom: 20px;
+
+
+            border-left: 6px solid #D4AF37;
+
+
+            padding-left: 15px;
+
+
+        }
+
+
+
+
+
+        .cours p {
+
+
+            margin-bottom: 18px;
+
+            text-align: justify;
+
+
+        }
+
+
+
+
+
+        .objectif ul,
+        .cours ul {
+
+
+            margin-left: 25px;
+
+            margin-top: 15px;
+
+
+        }
+
+
+
+
+        .objectif li,
+        .cours li {
+
+
+            margin-bottom: 10px;
+
+
+        }
+
+
+
+
+        .cours h3 {
+
+
+            color: #145A86;
+
+            margin-top: 25px;
+
+            margin-bottom: 15px;
+
+
+        }
+
+
+
+
+
+
+
+
+
+        /*=====================================
+            EXEMPLE
+======================================*/
+
+
+        .exemple {
+
+
+            background: #f8fbff;
+
+
+            border-left: 6px solid #145A86;
+
+
+            padding: 25px;
+
+
+            border-radius: 12px;
+
+
+            margin-top: 25px;
+
+
+        }
+
+
+
+
+        .exemple h3 {
+
+
+            color: #145A86;
+
+
+            margin-bottom: 15px;
+
+
+        }
+
+
+
+
+
+
+
+
+
+        /*=====================================
+            VIDEO
+======================================*/
+
+
+        .video-cours {
+
+
+            margin-top: 30px;
+
+
+            background: #f8fbff;
+
+
+            padding: 20px;
+
+
+            border-radius: 15px;
+
+
+        }
+
+
+
+
+        .video-cours h3 {
+
+
+            color: #145A86;
+
+
+            margin-bottom: 20px;
+
+
+        }
+
+
+
+
+
+        .video-cours iframe {
+
+
+            border-radius: 15px;
+
+
+        }
+
+
+
+
+
+
+
+
+
+        /*=====================================
+            IMPORTANT
+======================================*/
+
+
+        .important {
+
+
+            background: #145A86;
+
+
+            color: white;
+
+
+        }
+
+
+
+        .important h2 {
+
+
+            color: white;
+
+
+            border-left-color: #D4AF37;
+
+
+        }
+
+
+
+
+
+        .important p {
+
+
+            margin-bottom: 15px;
+
+
+            font-size: 18px;
+
+
+        }
+
+
+
+
+
+
+
+
+
+        /*=====================================
+            EXERCICE
+======================================*/
+
+
+        .exercice ol {
+
+
+            margin: 20px 0 20px 25px;
+
+
+        }
+
+
+
+
+        .exercice li {
+
+
+            margin-bottom: 12px;
+
+
+        }
+
+
+
+
+
+        textarea {
+
+
+            width: 100%;
+
+
+            height: 180px;
+
+
+            border: 2px solid #ddd;
+
+
+            border-radius: 12px;
+
+
+            padding: 15px;
+
+
+            resize: vertical;
+
+
+            font-size: 16px;
+
+
+            margin-top: 20px;
+
+
+            outline: none;
+
+
+        }
+
+
+
+
+        textarea:focus {
+
+
+            border-color: #145A86;
+
+
+        }
+
+
+
+
+
+
+
+
+
+        /*=====================================
+            NAVIGATION
+======================================*/
+
+
+        .navigation {
+
+
+            width: 90%;
+
+
+            max-width: 1100px;
+
+
+            margin: 40px auto 70px;
+
+
+            display: flex;
+
+
+            justify-content: space-between;
+
+
+            gap: 20px;
+
+
+        }
+
+
+
+
+        .navigation button {
+
+
+            flex: 1;
+
+
+            padding: 18px;
+
+
+            border: none;
+
+
+            border-radius: 12px;
+
+
+            font-size: 17px;
+
+
+            font-weight: bold;
+
+
+            cursor: pointer;
+
+
+            transition: .35s;
+
+
+        }
+
+
+
+
+
+        .navigation button:first-child {
+
+
+            background: #145A86;
+
+
+            color: white;
+
+
+        }
+
+
+
+
+        .navigation button:last-child {
+
+
+            background: #D4AF37;
+
+
+            color: #145A86;
+
+
+        }
+
+
+
+
+
+        .navigation button:hover {
+
+
+            transform: translateY(-5px);
+
+
+            box-shadow: 0 12px 25px rgba(0, 0, 0, .15);
+
+
+        }
+
+
+
+
+
+
+
+
+
+        /*=====================================
+            FOOTER
+======================================*/
+
+
+        footer {
+
+
+            background: #145A86;
+
+
+            color: white;
+
+
+            text-align: center;
+
+
+            padding: 35px;
+
+
+        }
+
+
+
+
+        footer h3 {
+
+
+            margin-bottom: 10px;
+
+
+        }
+
+
+
+
+
+
+
+
+
+        /*=====================================
+            RESPONSIVE
+======================================*/
+
+
+        @media(max-width:768px) {
+
+
+
+            header {
+
+
+                padding: 0 15px;
+
+
+            }
+
+
+
+            .student-profile small {
+
+
+                display: none;
+
+
+            }
+
+
+
+
+            .overlay h1 {
+
+
+                font-size: 34px;
+
+
+            }
+
+
+
+
+            .overlay p {
+
+
+                font-size: 17px;
+
+
+            }
+
+
+
+
+            .objectif,
+            .cours,
+            .important,
+            .exercice {
+
+
+                padding: 22px;
+
+
+            }
+
+
+
+
+            .navigation {
+
+
+                flex-direction: column;
+
+
+            }
+
+
+        }
+
+
+
+
+
+        @media(max-width:500px) {
+
+
+
+            .logo h2 {
+
+
+                font-size: 20px;
+
+
+            }
+
+
+
+
+            .student-profile h4 {
+
+
+                font-size: 15px;
+
+
+            }
+
+
+
+
+
+            .overlay h1 {
+
+
+                font-size: 28px;
+
+
+            }
+
+
+
+
+            .overlay p {
+
+
+                font-size: 15px;
+
+
+            }
+
+
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <body>
+
+
+        <!--====================================
+            HEADER
+=====================================-->
+
+        <header>
+
+
+            <div class="logo">
+
+                <img src="images/logo.png">
+
+                <h2>
+
+                    BMJ <span>SERVICE</span>
+
+                </h2>
+
+            </div>
+
+
+
+            <div class="student-profile">
+
+
+                <img id="photoUtilisateur" src="images/user.png">
+
+
+
+                <div>
+
+
+                    <h4 id="nomUtilisateur">
+
+                        Apprenant
+
+                    </h4>
+
+
+
+                    <small>
+
+                        Marketing Digital
+
+                    </small>
+
+
+                </div>
+
+
+            </div>
+
+
+
+        </header>
+
+
+
+
+
+
+
+
+
+        <!--====================================
+            BANNIÈRE LEÇON
+=====================================-->
+
+        <section class="lesson-hero">
+
+
+            <div class="overlay">
+
+
+                <h1>
+
+                    Leçon 3 : Définir sa cible marketing
+
+                </h1>
+
+
+
+                <p>
+
+
+                    Apprenez à identifier vos clients idéaux,
+                    comprendre leurs besoins et construire une
+                    stratégie marketing adaptée à votre audience.
+
+
+                </p>
+
+
+
+            </div>
+
+
+        </section>
+
+
+
+
+
+
+
+
+
+        <!--====================================
+            OBJECTIFS
+=====================================-->
+
+        <section class="objectif">
+
+
+            <h2>
+
+                Objectifs de cette leçon
+
+            </h2>
+
+
+
+
+            <ul>
+
+
+                <li>
+
+                    Comprendre l'importance de la segmentation du marché.
+
+                </li>
+
+
+
+                <li>
+
+                    Identifier les différents types de cibles marketing.
+
+                </li>
+
+
+
+                <li>
+
+                    Apprendre à créer un profil client idéal.
+
+                </li>
+
+
+
+                <li>
+
+                    Adapter son offre aux besoins des consommateurs.
+
+                </li>
+
+
+
+            </ul>
+
+
+        </section>
+
+
+
+
+
+
+
+
+
+        <!--====================================
+            COURS 1
+=====================================-->
+
+        <section class="cours">
+
+
+            <h2>
+
+                1. Comprendre la cible marketing
+
+            </h2>
+
+
+
+            <p>
+
+
+                La cible marketing représente l'ensemble des
+                personnes qu'une entreprise souhaite atteindre
+                avec ses produits ou ses services.
+
+
+            </p>
+
+
+
+            <p>
+
+
+                Avant de lancer une offre, une entreprise doit
+                savoir à qui elle s'adresse. Une bonne connaissance
+                de la clientèle permet de proposer des produits
+                adaptés et de communiquer efficacement.
+
+
+            </p>
+
+
+
+            <p>
+
+
+                Une entreprise qui essaie de vendre à tout le monde
+                risque de perdre en efficacité. Il est donc
+                important de définir précisément les personnes
+                qui ont le plus besoin de son produit.
+
+
+            </p>
+
+
+
+
+            <h3>
+
+                Pourquoi définir une cible ?
+
+            </h3>
+
+
+
+            <ul>
+
+
+                <li>
+
+                    Mieux comprendre les attentes des clients.
+
+                </li>
+
+
+
+                <li>
+
+                    Adapter les produits aux besoins réels.
+
+                </li>
+
+
+
+                <li>
+
+                    Choisir les bons moyens de communication.
+
+                </li>
+
+
+
+                <li>
+
+                    Réduire les dépenses publicitaires inutiles.
+
+                </li>
+
+
+
+                <li>
+
+                    Augmenter les chances de vendre.
+
+                </li>
+
+
+
+            </ul>
+
+
+        </section>
+
+
+
+
+
+
+
+
+        <!--====================================
+            COURS 2
+=====================================-->
+
+        <section class="cours">
+
+
+            <h2>
+
+                2. La segmentation du marché
+
+            </h2>
+
+
+
+
+            <p>
+
+
+                La segmentation consiste à diviser un marché en
+                plusieurs groupes de consommateurs ayant des
+                caractéristiques ou des besoins similaires.
+
+
+            </p>
+
+
+
+            <p>
+
+
+                Cette méthode permet à l'entreprise de mieux adapter
+                ses produits et ses messages marketing pour chaque
+                catégorie de clients.
+
+
+            </p>
+
+
+
+
+            <h3>
+
+                Les principaux critères de segmentation
+
+            </h3>
+
+
+
+            <ul>
+
+
+                <li>
+
+
+                    <strong>Segmentation démographique :</strong>
+                    âge, sexe, profession, revenu, niveau d'étude.
+
+                </li>
+
+
+
+                <li>
+
+
+                    <strong>Segmentation géographique :</strong>
+                    pays, ville, région ou lieu d'habitation.
+
+                </li>
+
+
+
+                <li>
+
+
+                    <strong>Segmentation comportementale :</strong>
+                    habitudes d'achat, fréquence d'utilisation,
+                    préférences.
+
+                </li>
+
+
+
+                <li>
+
+
+                    <strong>Segmentation psychologique :</strong>
+                    valeurs, motivations, style de vie.
+
+                </li>
+
+
+
+            </ul>
+
+
+
+        </section>
+        <!--====================================
+            COURS 3
+=====================================-->
+
+        <section class="cours">
+
+
+            <h2>
+
+                3. Créer un profil client idéal (Persona)
+
+            </h2>
+
+
+
+            <p>
+
+
+                Après avoir segmenté le marché, l'entreprise doit
+                identifier précisément le type de client qu'elle
+                souhaite atteindre. Pour cela, elle utilise un outil
+                appelé le <strong>persona marketing</strong>.
+
+
+            </p>
+
+
+
+            <p>
+
+
+                Un persona est une représentation fictive du client
+                idéal d'une entreprise. Il est créé à partir des
+                informations collectées sur les consommateurs :
+                leurs besoins, leurs habitudes, leurs motivations
+                et leurs difficultés.
+
+
+            </p>
+
+
+
+
+            <h3>
+
+                Les éléments d'un persona
+
+            </h3>
+
+
+
+            <ul>
+
+
+                <li>
+
+                    <strong>Nom fictif :</strong>
+                    donner une identité au client pour mieux le
+                    représenter.
+
+                </li>
+
+
+
+                <li>
+
+                    <strong>Âge et situation :</strong>
+                    connaître son profil démographique.
+
+                </li>
+
+
+
+                <li>
+
+                    <strong>Profession :</strong>
+                    comprendre son environnement professionnel.
+
+                </li>
+
+
+
+                <li>
+
+                    <strong>Besoins :</strong>
+                    identifier ce qu'il recherche réellement.
+
+                </li>
+
+
+
+                <li>
+
+                    <strong>Problèmes :</strong>
+                    connaître les difficultés qu'il rencontre.
+
+                </li>
+
+
+
+                <li>
+
+                    <strong>Motivations :</strong>
+                    comprendre ce qui influence ses décisions.
+
+                </li>
+
+
+
+                <li>
+
+                    <strong>Canaux utilisés :</strong>
+                    savoir où communiquer avec lui
+                    (réseaux sociaux, site web, magasin...).
+
+                </li>
+
+
+
+            </ul>
+
+
+
+
+
+
+            <h3>
+
+                Exemple de persona marketing
+
+            </h3>
+
+
+
+            <div class="exemple">
+
+
+                <h3>
+
+                    Persona : Sarah, étudiante de 25 ans
+
+                </h3>
+
+
+
+                <p>
+
+
+                    Sarah est une étudiante qui souhaite améliorer
+                    ses compétences professionnelles grâce aux
+                    formations en ligne.
+
+
+                </p>
+
+
+
+                <p>
+
+
+                    Elle recherche des cours accessibles,
+                    pratiques et adaptés à son emploi du temps.
+                    Elle utilise principalement son téléphone,
+                    les réseaux sociaux et les plateformes numériques
+                    pour apprendre.
+
+
+                </p>
+
+
+
+
+                <h3>
+
+                    Ses besoins
+
+                </h3>
+
+
+
+                <ul>
+
+
+                    <li>
+
+                        Apprendre rapidement de nouvelles compétences.
+
+                    </li>
+
+
+
+                    <li>
+
+                        Obtenir une certification.
+
+                    </li>
+
+
+
+                    <li>
+
+                        Suivre des formations à distance.
+
+                    </li>
+
+
+
+                    <li>
+
+                        Avoir un contenu simple et pratique.
+
+                    </li>
+
+
+
+                </ul>
+
+
+
+
+
+                <h3>
+
+                    Comment l'entreprise peut répondre ?
+
+                </h3>
+
+
+
+                <p>
+
+
+                    Une plateforme de formation peut proposer des
+                    cours accessibles sur téléphone, des vidéos
+                    explicatives, des exercices pratiques et des
+                    certificats après validation.
+
+
+                </p>
+
+
+
+            </div>
+
+
+
+        </section>
+
+
+
+
+
+
+
+
+
+        <!--====================================
+            COURS 4
+=====================================-->
+
+        <section class="cours">
+
+
+            <h2>
+
+                4. Adapter sa stratégie à sa cible
+
+            </h2>
+
+
+
+            <p>
+
+
+                Une fois la cible définie, l'entreprise doit adapter
+                son produit, son message et ses actions marketing
+                aux attentes de ses clients.
+
+
+            </p>
+
+
+
+            <p>
+
+
+                Une stratégie efficace consiste à proposer la bonne
+                offre, au bon client, au bon moment et avec le bon
+                message.
+
+
+            </p>
+
+
+
+
+            <h3>
+
+                Les éléments à adapter
+
+            </h3>
+
+
+
+            <ul>
+
+
+                <li>
+
+                    <strong>Le produit :</strong>
+                    répondre aux besoins spécifiques des clients.
+
+                </li>
+
+
+
+                <li>
+
+                    <strong>Le prix :</strong>
+                    proposer un tarif adapté au pouvoir d'achat
+                    de la cible.
+
+                </li>
+
+
+
+                <li>
+
+                    <strong>La communication :</strong>
+                    utiliser les plateformes préférées des clients.
+
+                </li>
+
+
+
+                <li>
+
+                    <strong>La distribution :</strong>
+                    rendre le produit facilement accessible.
+
+                </li>
+
+
+
+            </ul>
+
+
+
+
+
+            <h3>
+
+                Exemple pratique
+
+            </h3>
+
+
+
+            <p>
+
+
+                Une entreprise qui vend des formations destinées
+                aux étudiants ne communiquera pas de la même manière
+                qu'une entreprise qui vend des formations aux
+                dirigeants d'entreprises.
+
+
+            </p>
+
+
+
+            <p>
+
+
+                Pour les étudiants, elle utilisera davantage les
+                réseaux sociaux, proposera des prix accessibles et
+                mettra en avant la possibilité d'apprendre depuis
+                un téléphone.
+
+
+            </p>
+
+
+
+        </section>
+        <!--====================================
+            COURS 5
+=====================================-->
+
+        <section class="cours">
+
+
+            <h2>
+
+                5. Choisir les bons canaux de communication
+
+            </h2>
+
+
+
+            <p>
+
+
+                Après avoir défini sa cible marketing, une entreprise
+                doit choisir les meilleurs moyens pour communiquer
+                avec ses clients.
+
+
+            </p>
+
+
+
+            <p>
+
+
+                Le choix des canaux dépend du profil des consommateurs,
+                de leurs habitudes et des plateformes qu'ils utilisent
+                quotidiennement.
+
+
+            </p>
+
+
+
+
+
+
+            <h3>
+
+                Les principaux canaux de communication
+
+            </h3>
+
+
+
+            <ul>
+
+
+                <li>
+
+                    <strong>Les réseaux sociaux :</strong>
+                    Facebook, Instagram, TikTok et LinkedIn permettent
+                    d'atteindre rapidement une grande audience.
+
+                </li>
+
+
+
+                <li>
+
+                    <strong>Le site web :</strong>
+                    il présente l'entreprise, ses produits et permet
+                    aux clients d'obtenir des informations.
+
+                </li>
+
+
+
+                <li>
+
+                    <strong>L'email marketing :</strong>
+                    permet d'envoyer des informations, promotions
+                    et offres personnalisées aux clients.
+
+                </li>
+
+
+
+                <li>
+
+                    <strong>La publicité en ligne :</strong>
+                    permet de cibler des personnes selon leurs
+                    intérêts et leurs comportements.
+
+                </li>
+
+
+
+                <li>
+
+                    <strong>Le magasin physique :</strong>
+                    reste important pour les entreprises qui vendent
+                    directement aux consommateurs.
+
+                </li>
+
+
+
+            </ul>
+
+
+
+
+
+
+
+            <h3>
+
+                L'importance du message marketing
+
+            </h3>
+
+
+
+            <p>
+
+
+                Une entreprise ne doit pas seulement choisir le bon
+                canal, elle doit également transmettre un message
+                adapté à sa cible.
+
+
+            </p>
+
+
+
+            <p>
+
+
+                Un bon message doit être clair, simple et montrer
+                la valeur du produit ou du service proposé.
+
+
+            </p>
+
+
+
+
+
+            <h3>
+
+                Exemple pratique
+
+            </h3>
+
+
+
+            <div class="exemple">
+
+
+                <h3>
+
+                    Exemple : Application de formation en ligne
+
+                </h3>
+
+
+
+                <p>
+
+
+                    Une plateforme de formation souhaite attirer
+                    des étudiants âgés de 18 à 30 ans.
+
+
+                </p>
+
+
+
+                <p>
+
+
+                    Après analyse de sa cible, elle choisit de
+                    communiquer principalement sur TikTok, Instagram
+                    et WhatsApp.
+
+
+                </p>
+
+
+
+                <p>
+
+
+                    Son message marketing est :
+
+                    <strong>
+                        "Apprenez de nouvelles compétences depuis
+                        votre téléphone et obtenez votre certificat."
+                    </strong>
+
+
+                </p>
+
+
+
+                <p>
+
+
+                    Cette communication correspond aux besoins des
+                    étudiants qui recherchent une formation flexible
+                    et accessible.
+
+
+                </p>
+
+
+
+            </div>
+
+
+
+
+
+
+
+            <h3>
+
+                À retenir
+
+            </h3>
+
+
+
+            <p>
+
+
+                Définir correctement sa cible permet à une entreprise
+                de mieux communiquer, de réduire ses dépenses marketing
+                et d'obtenir de meilleurs résultats.
+
+
+            </p>
+
+
+
+            <p>
+
+
+                Une stratégie marketing efficace commence toujours
+                par une bonne connaissance des clients.
+
+
+            </p>
+
+
+
+
+
+            <div class="video-cours">
+
+
+                <h3>
+
+                    📹 Vidéo explicative
+
+                </h3>
+
+
+
+                <iframe width="100%" height="400" src="https://www.youtube.com/embed/IzGsA98eAIA"
+                    title="Définir sa cible marketing" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+
+                </iframe>
+
+
+
+            </div>
+
+
+
+        </section>
+        <!--====================================
+            À RETENIR
+=====================================-->
+
+        <section class="important">
+
+
+            <h2>
+
+                📌 À retenir
+
+            </h2>
+
+
+
+            <p>
+
+                ✔ Une entreprise doit connaître précisément ses clients
+                avant de mettre en place une stratégie marketing.
+
+            </p>
+
+
+
+            <p>
+
+                ✔ La cible marketing représente le groupe de personnes
+                que l'entreprise souhaite atteindre.
+
+            </p>
+
+
+
+            <p>
+
+                ✔ La segmentation permet de diviser le marché en
+                plusieurs groupes de consommateurs.
+
+            </p>
+
+
+
+            <p>
+
+                ✔ Le persona représente le client idéal d'une
+                entreprise.
+
+            </p>
+
+
+
+            <p>
+
+                ✔ Une bonne connaissance des besoins des clients
+                permet de proposer une offre adaptée.
+
+            </p>
+
+
+
+            <p>
+
+                ✔ Les canaux de communication doivent être choisis
+                selon les habitudes de la cible.
+
+            </p>
+
+
+
+            <p>
+
+                ✔ Une stratégie marketing efficace consiste à envoyer
+                le bon message au bon client au bon moment.
+
+            </p>
+
+
+
+        </section>
+
+
+
+
+
+
+
+
+        <!--====================================
+            EXERCICE
+=====================================-->
+
+        <section class="exercice">
+
+
+            <h2>
+
+                📝 Exercice pratique
+
+            </h2>
+
+
+
+
+            <p>
+
+
+                Vous souhaitez créer une plateforme de formation
+                en ligne destinée aux jeunes.
+
+
+            </p>
+
+
+
+
+            <p>
+
+
+                Avant de lancer votre activité, vous devez définir
+                votre cible marketing.
+
+
+            </p>
+
+
+
+
+            <h3>
+
+                Répondez aux questions suivantes :
+
+            </h3>
+
+
+
+
+            <ol>
+
+
+                <li>
+
+                    Qui sont vos clients cibles ?
+
+                </li>
+
+
+
+                <li>
+
+                    Quel âge ont-ils ?
+
+                </li>
+
+
+
+                <li>
+
+                    Quels sont leurs besoins principaux ?
+
+                </li>
+
+
+
+                <li>
+
+                    Quels problèmes cherchent-ils à résoudre ?
+
+                </li>
+
+
+
+                <li>
+
+                    Quels réseaux sociaux utilisent-ils ?
+
+                </li>
+
+
+
+                <li>
+
+                    Quel message marketing allez-vous utiliser
+                    pour les attirer ?
+
+                </li>
+
+
+
+            </ol>
+
+
+
+
+
+            <p>
+
+                Rédigez votre persona client et votre stratégie
+                de communication ci-dessous.
+
+            </p>
+
+
+
+
+            <textarea rows="10" placeholder="Écrivez votre réponse ici...">
+
+    </textarea>
+
+
+
+        </section>
+
+
+
+
+
+
+
+
+        <!--====================================
+            NAVIGATION
+=====================================-->
+
+        <section class="navigation">
+
+
+
+            <button onclick="retourCours()">
+
+
+                ← Retour au chapitre
+
+
+            </button>
+
+
+
+
+
+            <button onclick="terminerLecon()">
+
+
+                ✓ Terminer la leçon
+
+
+            </button>
+
+
+
+        </section>
+
+
+
+
+
+
+
+
+        <!--====================================
+            FOOTER
+=====================================-->
+
+        <footer>
+
+
+            <h3>
+
+                BMJ SERVICE
+
+            </h3>
+
+
+
+            <p>
+
+                Plateforme professionnelle de formation en ligne.
+
+            </p>
+
+
+
+        </footer>
+        <script>
+            //====================================
+            // CHARGEMENT DE LA PAGE
+            //====================================
+
+            document.addEventListener("DOMContentLoaded", function () {
+
+
+                let utilisateur = JSON.parse(
+
+                    localStorage.getItem("bmj_current_user")
+
+                );
+
+
+
+                if (!utilisateur) {
+
+
+                    window.location.href = "connexion.html";
+
+                    return;
+
+
+                }
+
+
+
+
+
+                //=========================
+                // PROFIL UTILISATEUR
+                //=========================
+
+
+                document.getElementById("nomUtilisateur").innerHTML = utilisateur.nom;
+
+
+
+
+                if (utilisateur.photo && utilisateur.photo !== "") {
+
+
+                    document.getElementById("photoUtilisateur").src = utilisateur.photo;
+
+
+                }
+
+
+
+            });
+
+
+
+
+
+
+
+
+
+            //====================================
+            // RETOUR AU CHAPITRE STRATEGIE
+            //====================================
+
+            function retourCours() {
+
+
+                window.location.href = "strategie.html";
+
+
+            }
+
+
+
+
+
+
+
+
+
+            //====================================
+            // TERMINER LA LEÇON 3
+            //====================================
+
+            function terminerLecon() {
+
+
+
+                let utilisateur = JSON.parse(
+
+                    localStorage.getItem("bmj_current_user")
+
+                );
+
+
+
+
+                if (!utilisateur) {
+
+
+                    window.location.href = "connexion.html";
+
+                    return;
+
+
+                }
+
+
+
+
+
+
+
+                //--------------------------------
+                // PROGRESSION STRATEGIE
+                //--------------------------------
+
+
+                let progression = JSON.parse(
+
+                    localStorage.getItem("strategie_progression")
+
+                ) || [];
+
+
+
+
+
+
+
+
+
+                //=============================
+                // VERIFICATION
+                //=============================
+
+
+                if (progression.includes("3")) {
+
+
+                    alert("Cette leçon est déjà terminée.");
+
+
+                    window.location.href = "strategie.html";
+
+
+                    return;
+
+
+                }
+
+
+
+
+
+
+
+
+                //--------------------------------
+                // AJOUT LEÇON 3
+                //--------------------------------
+
+
+                progression.push("3");
+
+
+
+
+                localStorage.setItem(
+
+                    "strategie_progression",
+
+                    JSON.stringify(progression)
+
+                );
+
+
+
+
+
+
+
+
+
+                //--------------------------------
+                // COURS SUIVIS
+                //--------------------------------
+
+
+                if (!utilisateur.coursSuivis) {
+
+
+                    utilisateur.coursSuivis = [];
+
+
+                }
+
+
+
+
+
+
+                if (!utilisateur.coursSuivis.includes(
+
+                    "Stratégie Marketing Leçon 3"
+
+                )) {
+
+
+                    utilisateur.coursSuivis.push(
+
+                        "Stratégie Marketing Leçon 3"
+
+                    );
+
+
+                }
+
+
+
+
+
+
+
+
+
+                //--------------------------------
+                // CALCUL PROGRESSION
+                //--------------------------------
+
+
+                utilisateur.progression =
+
+                    progression.length * 20;
+
+
+
+                if (utilisateur.progression > 100) {
+
+
+                    utilisateur.progression = 100;
+
+
+                }
+
+
+
+
+
+
+
+
+
+                //--------------------------------
+                // SAUVEGARDE SESSION
+                //--------------------------------
+
+
+                localStorage.setItem(
+
+                    "bmj_current_user",
+
+                    JSON.stringify(utilisateur)
+
+                );
+
+
+
+
+
+
+
+
+
+                //--------------------------------
+                // SAUVEGARDE BASE UTILISATEURS
+                //--------------------------------
+
+
+                let utilisateurs = JSON.parse(
+
+                    localStorage.getItem("bmj_users")
+
+                ) || [];
+
+
+
+
+
+
+                let index = utilisateurs.findIndex(
+
+                    u => u.id === utilisateur.id
+
+                );
+
+
+
+
+
+
+
+                if (index !== -1) {
+
+
+                    utilisateurs[index] = utilisateur;
+
+
+                }
+
+
+
+
+
+
+
+                localStorage.setItem(
+
+                    "bmj_users",
+
+                    JSON.stringify(utilisateurs)
+
+                );
+
+
+
+
+
+
+
+
+
+                //--------------------------------
+                // MESSAGE
+                //--------------------------------
+
+
+                alert(
+
+                    "🎉 Félicitations !\n\nVous avez terminé la Leçon 3."
+
+                );
+
+
+
+
+
+
+
+
+                //--------------------------------
+                // RETOUR CHAPITRE
+                //--------------------------------
+
+
+                window.location.href = "strategie.html";
+
+
+
+            }
+        </script>
+    </body>
+
+</html>

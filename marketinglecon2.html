@@ -1,0 +1,2187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*==================================================
+        BMJ SERVICE - MARKETING LEÇON 2
+==================================================*/
+
+        * {
+
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+
+        }
+
+
+        body {
+
+            background: #f4f7fb;
+            color: #333;
+            line-height: 1.8;
+
+        }
+
+
+        /*====================================
+            HEADER
+=====================================*/
+
+
+        header {
+
+            position: fixed;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 75px;
+
+            background: white;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 0 40px;
+
+            box-shadow: 0 5px 20px rgba(0, 0, 0, .08);
+
+            z-index: 1000;
+
+        }
+
+
+
+        .logo {
+
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+        }
+
+
+
+        .logo img {
+
+            width: 50px;
+            height: 50px;
+
+            border-radius: 50%;
+
+        }
+
+
+
+        .logo h2 {
+
+            color: #145A86;
+
+        }
+
+
+        .logo span {
+
+            color: #D4AF37;
+
+        }
+
+
+
+        /* PROFIL */
+
+
+        .student-profile {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+        }
+
+
+
+        .student-profile img {
+
+            width: 50px;
+
+            height: 50px;
+
+            border-radius: 50%;
+
+            object-fit: cover;
+
+            border: 3px solid #D4AF37;
+
+        }
+
+
+
+        .student-profile h4 {
+
+            color: #145A86;
+
+        }
+
+
+
+        /*====================================
+            HERO
+=====================================*/
+
+
+        .lesson-hero {
+
+            margin-top: 75px;
+
+            height: 430px;
+
+
+            background:
+
+                linear-gradient(rgba(20, 90, 134, .85),
+                    rgba(0, 0, 0, .75)),
+
+                url(images/marketing-digital.jpg);
+
+
+
+            background-size: cover;
+
+            background-position: center;
+
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+        }
+
+
+
+
+        .overlay {
+
+            width: 90%;
+
+            max-width: 1000px;
+
+            text-align: center;
+
+            color: white;
+
+        }
+
+
+
+        .overlay span {
+
+            background: #D4AF37;
+
+            color: #145A86;
+
+            padding: 8px 20px;
+
+            border-radius: 30px;
+
+            font-weight: bold;
+
+        }
+
+
+
+        .overlay h1 {
+
+            font-size: 45px;
+
+            margin: 25px 0;
+
+        }
+
+
+
+        .overlay p {
+
+            font-size: 19px;
+
+        }
+
+
+
+
+
+
+        /*====================================
+        BLOCS COURS
+=====================================*/
+
+
+        .objectif,
+        .cours,
+        .important,
+        .exercice {
+
+
+            width: 90%;
+
+            max-width: 1100px;
+
+            margin: 40px auto;
+
+
+            background: white;
+
+
+            padding: 35px;
+
+
+            border-radius: 20px;
+
+
+            box-shadow:
+
+                0 10px 25px rgba(0, 0, 0, .08);
+
+
+        }
+
+
+
+        .objectif h2,
+        .cours h2,
+        .important h2,
+        .exercice h2 {
+
+
+            color: #145A86;
+
+            border-left: 6px solid #D4AF37;
+
+            padding-left: 15px;
+
+            margin-bottom: 20px;
+
+        }
+
+
+
+
+        .cours p {
+
+            text-align: justify;
+
+            margin-bottom: 18px;
+
+        }
+
+
+
+
+        .cours ul,
+        .objectif ul {
+
+
+            margin-left: 30px;
+
+        }
+
+
+
+        .cours li,
+        .objectif li {
+
+            margin-bottom: 10px;
+
+        }
+
+
+
+
+
+        /*====================================
+        EXEMPLE PRATIQUE
+=====================================*/
+
+
+        .exemple {
+
+
+            background: #eef7ff;
+
+            border-left: 6px solid #145A86;
+
+            padding: 25px;
+
+            border-radius: 15px;
+
+
+        }
+
+
+
+        .exemple h3 {
+
+            color: #145A86;
+
+            margin-bottom: 15px;
+
+        }
+
+
+
+
+
+        /*====================================
+        TABLEAU COMPARATIF
+=====================================*/
+
+
+        table {
+
+
+            width: 100%;
+
+            border-collapse: collapse;
+
+            margin-top: 25px;
+
+
+        }
+
+
+
+        table th {
+
+
+            background: #145A86;
+
+            color: white;
+
+            padding: 15px;
+
+            font-size: 17px;
+
+
+        }
+
+
+
+        table td {
+
+
+            padding: 15px;
+
+            border: 1px solid #ddd;
+
+            text-align: center;
+
+
+        }
+
+
+
+        table tr:nth-child(even) {
+
+            background: #f7fbff;
+
+        }
+
+
+
+
+
+
+        /*====================================
+        ZONE IMPORTANT
+=====================================*/
+
+
+        .important {
+
+
+            background: #145A86;
+
+            color: white;
+
+
+        }
+
+
+
+        .important h2 {
+
+            color: white;
+
+            border-color: #D4AF37;
+
+        }
+
+
+
+        .important p {
+
+
+            font-size: 18px;
+
+            margin-bottom: 12px;
+
+
+        }
+
+
+
+
+
+        /*====================================
+            EXERCICE
+=====================================*/
+
+
+        textarea {
+
+
+            width: 100%;
+
+            height: 180px;
+
+            margin-top: 20px;
+
+            padding: 20px;
+
+
+            border-radius: 15px;
+
+
+            border: 2px solid #ddd;
+
+
+            resize: none;
+
+
+            font-size: 16px;
+
+
+        }
+
+
+
+        textarea:focus {
+
+
+            outline: none;
+
+            border-color: #145A86;
+
+
+        }
+
+
+
+
+
+        /*====================================
+        BOUTONS
+=====================================*/
+
+
+        .navigation {
+
+
+            width: 90%;
+
+            max-width: 1100px;
+
+
+            margin: 50px auto;
+
+
+            display: flex;
+
+            gap: 20px;
+
+
+        }
+
+
+
+        .navigation button {
+
+
+            flex: 1;
+
+            padding: 18px;
+
+
+            border: none;
+
+
+            border-radius: 15px;
+
+
+            cursor: pointer;
+
+
+            font-size: 17px;
+
+
+            font-weight: bold;
+
+
+            transition: .3s;
+
+
+        }
+
+
+
+
+        .navigation button:first-child {
+
+
+            background: #145A86;
+
+            color: white;
+
+
+        }
+
+
+
+
+
+        .navigation button:last-child {
+
+
+            background: #D4AF37;
+
+            color: #145A86;
+
+
+        }
+
+
+
+
+
+        .navigation button:hover {
+
+
+            transform: translateY(-5px);
+
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .15);
+
+
+        }
+
+
+
+
+
+        /*====================================
+            FOOTER
+=====================================*/
+
+
+        footer {
+
+
+            background: #145A86;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 35px;
+
+
+        }
+
+
+
+
+
+        /*====================================
+        RESPONSIVE MOBILE
+=====================================*/
+
+
+        @media(max-width:768px) {
+
+
+            header {
+
+                padding: 0 15px;
+
+            }
+
+
+
+            .logo h2 {
+
+                font-size: 20px;
+
+            }
+
+
+
+            .student-profile small {
+
+                display: none;
+
+            }
+
+
+
+            .overlay h1 {
+
+                font-size: 30px;
+
+            }
+
+
+
+            .overlay p {
+
+                font-size: 16px;
+
+            }
+
+
+
+            .objectif,
+            .cours,
+            .important,
+            .exercice {
+
+
+                padding: 22px;
+
+            }
+
+
+
+            .navigation {
+
+                flex-direction: column;
+
+            }
+
+
+
+            table {
+
+                font-size: 14px;
+
+            }
+
+
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--====================================
+                HEADER
+    =====================================-->
+
+    <header>
+
+        <div class="logo">
+
+            <img src="images/logo.png" alt="BMJ SERVICE">
+
+            <h2>BMJ <span>SERVICE</span></h2>
+
+        </div>
+
+        <div class="student-profile">
+
+            <img id="photoUtilisateur" src="images/user.png" alt="Photo">
+
+            <div>
+
+                <h4 id="nomUtilisateur">Apprenant</h4>
+
+                <small>Marketing Digital</small>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!--====================================
+                HERO
+    =====================================-->
+
+    <section class="lesson-hero">
+
+        <div class="overlay">
+
+            <span>LEÇON 2</span>
+
+            <h1>L'évolution du Marketing Traditionnel au Marketing Digital</h1>
+
+            <p>
+
+                Découvrez comment Internet et les nouvelles technologies ont
+                complètement transformé les méthodes utilisées par les entreprises
+                pour communiquer, vendre leurs produits et fidéliser leurs clients.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!--====================================
+            OBJECTIFS
+    =====================================-->
+
+    <section class="objectif">
+
+        <h2>Objectifs de cette leçon</h2>
+
+        <ul>
+
+            <li>Comprendre ce qu'est le marketing traditionnel.</li>
+
+            <li>Découvrir l'origine du marketing digital.</li>
+
+            <li>Comparer les deux approches.</li>
+
+            <li>Identifier les avantages du marketing numérique.</li>
+
+            <li>Comprendre pourquoi les entreprises investissent sur Internet.</li>
+
+        </ul>
+
+    </section>
+
+
+
+    <!--====================================
+            COURS
+    =====================================-->
+
+    <section class="cours">
+
+        <h2>1. Le marketing traditionnel</h2>
+
+        <p>
+            Pendant plusieurs décennies, les entreprises utilisaient principalement
+            les moyens de communication classiques comme la télévision, la radio,
+            les journaux, les affiches publicitaires, les panneaux géants et les
+            prospectus pour faire connaître leurs produits et services.
+        </p>
+
+        <p>
+            Cette méthode est appelée <strong>marketing traditionnel</strong>.
+            Elle consiste à utiliser les médias traditionnels pour transmettre un
+            message publicitaire à un grand nombre de personnes dans le but d'attirer
+            des clients et d'augmenter les ventes.
+        </p>
+
+        <p>
+            Le marketing traditionnel était basé sur une communication à sens unique :
+            l'entreprise envoyait son message aux consommateurs sans avoir beaucoup
+            de possibilités d'obtenir directement leurs réactions ou leurs avis.
+        </p>
+
+
+        <h3>📚 Enseignements du cours</h3>
+
+        <p>
+            À la fin de cette leçon, l'apprenant doit être capable de :
+        </p>
+
+        <ul>
+
+            <li>
+                Comprendre la définition du marketing traditionnel.
+            </li>
+
+            <li>
+                Identifier les différents moyens utilisés dans le marketing traditionnel.
+            </li>
+
+            <li>
+                Expliquer le rôle de la télévision, de la radio, des journaux et des
+                affiches dans la communication commerciale.
+            </li>
+
+            <li>
+                Comprendre les avantages et les limites des anciennes méthodes marketing.
+            </li>
+
+            <li>
+                Faire la différence entre le marketing traditionnel et le marketing
+                digital.
+            </li>
+
+            <li>
+                Comprendre pourquoi certaines entreprises utilisent encore aujourd'hui
+                le marketing traditionnel.
+            </li>
+
+        </ul>
+
+
+        <h3>Les principaux outils du marketing traditionnel</h3>
+
+        <ul>
+
+            <li>📺 Publicités à la télévision.</li>
+
+            <li>📻 Messages publicitaires à la radio.</li>
+
+            <li>📰 Annonces dans les journaux et magazines.</li>
+
+            <li>📌 Affiches et panneaux publicitaires.</li>
+
+            <li>📄 Flyers, brochures et prospectus.</li>
+
+            <li>🎤 Salons, événements et promotions physiques.</li>
+
+        </ul>
+
+
+        <h3>Avantages du marketing traditionnel</h3>
+
+        <ul>
+
+            <li>
+                Permet d'atteindre rapidement un grand nombre de personnes.
+            </li>
+
+            <li>
+                Augmente la visibilité d'une entreprise ou d'une marque.
+            </li>
+
+            <li>
+                Renforce la confiance des consommateurs grâce aux médias connus.
+            </li>
+
+            <li>
+                Reste efficace pour certaines catégories de clients.
+            </li>
+
+        </ul>
+
+
+        <h3>Limites du marketing traditionnel</h3>
+
+        <ul>
+
+            <li>
+                Les coûts de publicité peuvent être très élevés.
+            </li>
+
+            <li>
+                Il est difficile de mesurer précisément les résultats.
+            </li>
+
+            <li>
+                La communication avec les clients est limitée.
+            </li>
+
+            <li>
+                Le message n'est pas toujours personnalisé selon chaque consommateur.
+            </li>
+
+        </ul>
+
+
+        <h3>Exemple concret</h3>
+
+        <p>
+            Une entreprise qui lance un nouveau produit peut utiliser une publicité
+            à la télévision, des affiches dans les rues et des prospectus distribués
+            dans les magasins pour informer les consommateurs.
+        </p>
+
+
+        <h3>À retenir</h3>
+
+        <p>
+            Le marketing traditionnel représente l'ensemble des techniques de
+            communication utilisées avant l'arrivée massive du numérique. Même si
+            le marketing digital est devenu très important, les méthodes
+            traditionnelles restent encore utilisées par de nombreuses entreprises.
+        </p>
+
+
+        <!-- VIDEO DU COURS -->
+
+        <div class="video-cours">
+
+            <h3>📹 Vidéo explicative</h3>
+
+            <iframe width="100%" height="400" src="https://www.youtube.com/embed/IzGsA98eAIA"
+                title="Le marketing traditionnel" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+
+        </div>
+
+
+    </section>
+
+    <section class="cours">
+
+        <h2>2. Les moyens du marketing traditionnel</h2>
+
+        <p>
+            Le marketing traditionnel utilise plusieurs moyens de communication pour
+            présenter les produits et services d'une entreprise au public. Ces outils
+            permettent de transmettre un message commercial à un grand nombre de
+            consommateurs.
+        </p>
+
+        <h3>📚 Enseignements du cours</h3>
+
+        <p>
+            À la fin de cette partie, l'apprenant doit être capable de :
+        </p>
+
+        <ul>
+
+            <li>
+                Identifier les différents moyens utilisés dans le marketing traditionnel.
+            </li>
+
+            <li>
+                Comprendre le rôle de chaque support publicitaire.
+            </li>
+
+            <li>
+                Expliquer comment les entreprises utilisent les médias classiques pour
+                attirer des clients.
+            </li>
+
+            <li>
+                Choisir un moyen de communication adapté selon le type de produit ou de
+                service.
+            </li>
+
+        </ul>
+
+
+        <h3>Les principaux moyens du marketing traditionnel</h3>
+
+        <ul>
+
+            <li>
+                <strong>Publicités à la télévision :</strong>
+                elles permettent de présenter un produit à un très grand nombre de
+                personnes grâce aux images et au son.
+            </li>
+
+            <li>
+                <strong>Publicités à la radio :</strong>
+                elles permettent de communiquer rapidement avec les auditeurs et sont
+                souvent utilisées pour annoncer des promotions.
+            </li>
+
+            <li>
+                <strong>Journaux et magazines :</strong>
+                ils permettent de diffuser des annonces détaillées et de toucher un
+                public spécifique.
+            </li>
+
+            <li>
+                <strong>Affiches publicitaires :</strong>
+                elles attirent l'attention des consommateurs dans les lieux publics
+                comme les rues, magasins et transports.
+            </li>
+
+            <li>
+                <strong>Distribution de flyers :</strong>
+                elle consiste à distribuer des documents présentant une offre, une
+                promotion ou un nouveau produit.
+            </li>
+
+            <li>
+                <strong>Salons et foires commerciales :</strong>
+                ils permettent aux entreprises de rencontrer directement leurs clients
+                et partenaires.
+            </li>
+
+        </ul>
+
+
+        <h3>Exemple</h3>
+
+        <p>
+            Une entreprise qui ouvre un nouveau restaurant peut utiliser des affiches
+            dans la ville, distribuer des flyers dans les quartiers proches et faire
+            une publicité à la radio pour informer les habitants de son ouverture.
+        </p>
+
+
+        <div class="video-cours">
+
+            <h3>📹 Vidéo explicative</h3>
+
+            <iframe width="100%" height="400" src="https://www.youtube.com/embed/IzGsA98eAIA"
+                title="Les moyens du marketing traditionnel" frameborder="0" allowfullscreen>
+            </iframe>
+
+        </div>
+
+    </section>
+
+
+
+    <section class="cours">
+
+        <h2>3. Les limites du marketing traditionnel</h2>
+
+        <p>
+            Malgré son efficacité pendant plusieurs années, le marketing traditionnel
+            présente certaines limites qui peuvent rendre son utilisation difficile pour
+            les entreprises, surtout face aux nouvelles méthodes du marketing digital.
+        </p>
+
+
+        <h3>📚 Enseignements du cours</h3>
+
+        <p>
+            À la fin de cette partie, l'apprenant doit être capable de :
+        </p>
+
+        <ul>
+
+            <li>
+                Identifier les principales difficultés du marketing traditionnel.
+            </li>
+
+            <li>
+                Comprendre pourquoi certaines entreprises adoptent le marketing digital.
+            </li>
+
+            <li>
+                Comparer les avantages et les inconvénients des méthodes traditionnelles.
+            </li>
+
+            <li>
+                Comprendre l'importance du ciblage et de la mesure des résultats.
+            </li>
+
+        </ul>
+
+
+        <h3>Les principales limites</h3>
+
+        <ul>
+
+            <li>
+                <strong>Très coûteux :</strong>
+                les campagnes publicitaires à la télévision, à la radio ou dans les
+                grands médias nécessitent souvent un budget important.
+            </li>
+
+            <li>
+                <strong>Difficile de mesurer les résultats :</strong>
+                l'entreprise ne connaît pas toujours exactement le nombre de personnes
+                ayant acheté après avoir vu une publicité.
+            </li>
+
+            <li>
+                <strong>Impossible de cibler précisément les clients :</strong>
+                le message est généralement envoyé à un grand public sans distinction.
+            </li>
+
+            <li>
+                <strong>Communication à sens unique :</strong>
+                les consommateurs reçoivent le message mais peuvent difficilement
+                répondre directement à l'entreprise.
+            </li>
+
+            <li>
+                <strong>Peu d'interaction avec les consommateurs :</strong>
+                il est difficile de créer une relation personnalisée avec chaque client.
+            </li>
+
+        </ul>
+
+
+        <h3>Exemple</h3>
+
+        <p>
+            Une entreprise qui dépense beaucoup d'argent pour une publicité télévisée
+            peut toucher des millions de personnes, mais elle ne saura pas exactement
+            combien de personnes ont acheté son produit après avoir vu cette publicité.
+        </p>
+
+
+        <h3>À retenir</h3>
+
+        <p>
+            Le marketing traditionnel reste utile, mais ses limites expliquent pourquoi
+            de nombreuses entreprises utilisent aujourd'hui le marketing digital qui
+            permet un meilleur ciblage, une interaction directe et une analyse précise
+            des résultats.
+        </p>
+
+
+        <div class="video-cours">
+
+            <h3>📹 Vidéo explicative</h3>
+
+            <iframe width="100%" height="400" src="https://www.youtube.com/embed/IzGsA98eAIA"
+                title="Les limites du marketing traditionnel" frameborder="0" allowfullscreen>
+            </iframe>
+
+        </div>
+
+    </section>
+
+    <section class="cours">
+
+        <h2>4. L'arrivée d'Internet</h2>
+
+        <p>
+            Avec le développement d'Internet, des smartphones et des réseaux sociaux,
+            les habitudes des consommateurs ont complètement changé. Les clients sont
+            devenus plus informés et plus autonomes dans leurs décisions d'achat.
+        </p>
+
+        <p>
+            Aujourd'hui, avant d'acheter un produit ou un service, la plupart des
+            personnes effectuent une recherche sur Google, regardent des vidéos sur
+            YouTube, consultent les avis des autres utilisateurs ou visitent les pages
+            des entreprises sur les réseaux sociaux.
+        </p>
+
+        <p>
+            Cette évolution a obligé les entreprises à modifier leurs stratégies de
+            communication. Elles ne se contentent plus de diffuser des publicités,
+            elles cherchent désormais à créer une relation directe avec leurs clients.
+        </p>
+
+
+        <h3>📚 Enseignements du cours</h3>
+
+        <p>
+            À la fin de cette partie, l'apprenant doit être capable de :
+        </p>
+
+        <ul>
+
+            <li>
+                Comprendre l'impact d'Internet sur le comportement des consommateurs.
+            </li>
+
+            <li>
+                Expliquer pourquoi les entreprises ont adopté de nouvelles méthodes de
+                communication.
+            </li>
+
+            <li>
+                Identifier le rôle des moteurs de recherche et des réseaux sociaux dans
+                le processus d'achat.
+            </li>
+
+            <li>
+                Comprendre la transition entre le marketing traditionnel et le marketing
+                digital.
+            </li>
+
+        </ul>
+
+
+        <h3>Les changements apportés par Internet</h3>
+
+        <ul>
+
+            <li>
+                <strong>Des clients mieux informés :</strong>
+                les consommateurs peuvent comparer les prix, lire les avis et rechercher
+                des informations avant d'acheter.
+            </li>
+
+            <li>
+                <strong>Une communication plus rapide :</strong>
+                les entreprises peuvent communiquer instantanément avec leurs clients.
+            </li>
+
+            <li>
+                <strong>Une interaction directe :</strong>
+                les clients peuvent poser des questions, donner leurs avis et échanger
+                avec les marques.
+            </li>
+
+            <li>
+                <strong>Un meilleur ciblage :</strong>
+                Internet permet aux entreprises d'adresser leurs messages aux personnes
+                réellement intéressées par leurs produits.
+            </li>
+
+        </ul>
+
+
+        <h3>Exemple concret</h3>
+
+        <p>
+            Avant Internet, une boutique utilisait principalement des affiches et des
+            publicités dans les médias pour attirer des clients. Aujourd'hui, elle peut
+            créer un site web, publier ses produits sur les réseaux sociaux, répondre
+            aux clients en ligne et vendre directement sur Internet.
+        </p>
+
+
+        <h3>À retenir</h3>
+
+        <p>
+            L'arrivée d'Internet a transformé le marketing. Les entreprises doivent
+            désormais être présentes en ligne, comprendre les comportements numériques
+            des consommateurs et utiliser les nouveaux outils pour rester compétitives.
+        </p>
+
+
+        <!-- VIDEO DU COURS -->
+
+        <div class="video-cours">
+
+            <h3>📹 Vidéo explicative</h3>
+
+            <iframe width="100%" height="400" src="https://www.youtube.com/embed/7q7depQBIqA"
+                title="L'arrivée d'Internet et la transformation du marketing" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+
+        </div>
+
+
+    </section>
+
+
+
+    <section class="cours">
+
+        <h2>5. Le marketing digital</h2>
+
+        <p>
+            Le marketing digital regroupe l'ensemble des techniques et stratégies
+            marketing utilisant Internet, les outils numériques et les nouvelles
+            technologies afin de promouvoir un produit, un service ou une entreprise.
+        </p>
+
+        <p>
+            Il permet aux entreprises d'être présentes là où se trouvent leurs clients :
+            sur les moteurs de recherche, les réseaux sociaux, les sites web, les
+            applications mobiles et les plateformes en ligne.
+        </p>
+
+        <p>
+            Contrairement au marketing traditionnel, le marketing digital permet une
+            communication plus interactive avec les consommateurs. Les entreprises
+            peuvent recevoir les avis des clients, répondre à leurs questions et créer
+            une relation durable avec eux.
+        </p>
+
+        <p>
+            Il offre également la possibilité de mesurer les résultats des campagnes
+            marketing grâce aux statistiques : nombre de visiteurs, clics, achats,
+            commentaires et interactions.
+        </p>
+
+
+        <h3>📚 Enseignements du cours</h3>
+
+        <p>
+            À la fin de cette partie, l'apprenant doit être capable de :
+        </p>
+
+        <ul>
+
+            <li>
+                Définir le concept de marketing digital.
+            </li>
+
+            <li>
+                Identifier les principaux outils utilisés dans le marketing numérique.
+            </li>
+
+            <li>
+                Comprendre les avantages du marketing digital par rapport au marketing
+                traditionnel.
+            </li>
+
+            <li>
+                Expliquer comment Internet aide les entreprises à atteindre leurs clients.
+            </li>
+
+            <li>
+                Comprendre l'importance des données et des statistiques dans les décisions
+                marketing.
+            </li>
+
+        </ul>
+
+
+        <h3>Les principaux outils du marketing digital</h3>
+
+        <ul>
+
+            <li>
+                🌐 <strong>Site web :</strong> permet de présenter l'entreprise, ses
+                produits et ses services.
+            </li>
+
+            <li>
+                📱 <strong>Réseaux sociaux :</strong> permettent de communiquer avec les
+                clients et de développer une communauté.
+            </li>
+
+            <li>
+                🔎 <strong>Référencement naturel (SEO) :</strong> améliore la visibilité
+                d'un site dans les moteurs de recherche.
+            </li>
+
+            <li>
+                📧 <strong>Email marketing :</strong> permet d'envoyer des informations et
+                des offres directement aux clients.
+            </li>
+
+            <li>
+                🎥 <strong>Marketing de contenu :</strong> consiste à créer des articles,
+                vidéos ou publications utiles pour attirer les consommateurs.
+            </li>
+
+            <li>
+                📢 <strong>Publicité en ligne :</strong> permet de diffuser des annonces
+                ciblées sur Internet.
+            </li>
+
+        </ul>
+
+
+        <h3>Avantages du marketing digital</h3>
+
+        <ul>
+
+            <li>
+                Communication rapide avec les clients.
+            </li>
+
+            <li>
+                Possibilité de cibler un public précis.
+            </li>
+
+            <li>
+                Coût souvent moins élevé que certaines publicités traditionnelles.
+            </li>
+
+            <li>
+                Mesure précise des résultats des campagnes.
+            </li>
+
+            <li>
+                Disponibilité permanente des informations en ligne.
+            </li>
+
+        </ul>
+
+
+        <h3>Exemple concret</h3>
+
+        <p>
+            Une boutique de vêtements peut utiliser Facebook, Instagram et un site web
+            pour présenter ses nouveaux produits. Elle peut également utiliser la
+            publicité en ligne pour montrer ses vêtements uniquement aux personnes
+            intéressées par la mode dans sa région.
+        </p>
+
+
+        <h3>À retenir</h3>
+
+        <p>
+            Le marketing digital est devenu indispensable pour les entreprises modernes.
+            Il permet de mieux connaître les clients, de communiquer efficacement avec
+            eux et d'améliorer les performances commerciales grâce aux outils numériques.
+        </p>
+
+
+        <!-- VIDEO DU COURS -->
+
+        <div class="video-cours">
+
+            <h3>📹 Vidéo explicative</h3>
+
+            <iframe width="100%" height="400" src="https://www.youtube.com/embed/oZSgVhyMaYk"
+                title="Le marketing digital" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+
+        </div>
+
+
+    </section>
+    <section class="cours">
+
+        <h2>6. Les principaux outils du marketing digital</h2>
+
+        <p>
+            Le marketing digital utilise plusieurs outils numériques permettant aux
+            entreprises de communiquer avec leurs clients, de promouvoir leurs produits
+            et de développer leur activité sur Internet.
+        </p>
+
+
+        <h3>📚 Enseignements du cours</h3>
+
+        <p>
+            À la fin de cette partie, l'apprenant doit être capable de :
+        </p>
+
+        <ul>
+
+            <li>
+                Identifier les principaux outils utilisés dans le marketing digital.
+            </li>
+
+            <li>
+                Comprendre le rôle de chaque plateforme numérique.
+            </li>
+
+            <li>
+                Choisir les outils adaptés selon les objectifs d'une entreprise.
+            </li>
+
+            <li>
+                Comprendre comment les entreprises utilisent Internet pour attirer des
+                clients.
+            </li>
+
+        </ul>
+
+
+        <h3>Les outils principaux</h3>
+
+        <ul>
+
+            <li>
+                <strong>Facebook :</strong> permet de créer une communauté, publier des
+                produits et diffuser des publicités ciblées.
+            </li>
+
+            <li>
+                <strong>Instagram :</strong> est utilisé pour présenter des produits à
+                travers des images, vidéos et stories.
+            </li>
+
+            <li>
+                <strong>TikTok :</strong> permet de toucher un large public grâce aux
+                vidéos courtes et créatives.
+            </li>
+
+            <li>
+                <strong>WhatsApp Business :</strong> facilite la communication avec les
+                clients, la présentation des produits et la réception des commandes.
+            </li>
+
+            <li>
+                <strong>YouTube :</strong> permet de partager des vidéos explicatives,
+                des démonstrations et des publicités.
+            </li>
+
+            <li>
+                <strong>Google :</strong> aide les entreprises à être trouvées par les
+                clients grâce au référencement et aux annonces en ligne.
+            </li>
+
+            <li>
+                <strong>Email Marketing :</strong> permet d'envoyer des offres,
+                informations et promotions directement aux clients.
+            </li>
+
+            <li>
+                <strong>Sites web :</strong> permettent de présenter une entreprise et
+                vendre des produits en ligne.
+            </li>
+
+        </ul>
+
+
+        <div class="video-cours">
+
+            <h3>📹 Vidéo explicative</h3>
+
+            <iframe width="100%" height="400" src="https://www.youtube.com/embed/eeeMA_keyRc"
+                title="Les outils du marketing digital" frameborder="0" allowfullscreen>
+            </iframe>
+
+        </div>
+
+    </section>
+
+
+
+    <section class="cours">
+
+        <h2>7. Comparaison entre le marketing traditionnel et le marketing digital</h2>
+
+        <p>
+            Le marketing traditionnel et le marketing digital ont le même objectif :
+            attirer et satisfaire les clients. Cependant, leurs méthodes de communication
+            et leurs résultats sont différents.
+        </p>
+
+
+        <h3>📚 Enseignements du cours</h3>
+
+        <p>
+            À la fin de cette partie, l'apprenant doit être capable de :
+        </p>
+
+        <ul>
+
+            <li>
+                Différencier le marketing traditionnel du marketing digital.
+            </li>
+
+            <li>
+                Comprendre les avantages de chaque méthode.
+            </li>
+
+            <li>
+                Choisir une stratégie marketing adaptée aux besoins d'une entreprise.
+            </li>
+
+        </ul>
+
+
+        <table border="1">
+
+            <tr>
+
+                <th>Marketing Traditionnel</th>
+
+                <th>Marketing Digital</th>
+
+            </tr>
+
+            <tr>
+
+                <td>TV - Radio - Journaux</td>
+
+                <td>Facebook - Google - Réseaux sociaux</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Coût souvent élevé</td>
+
+                <td>Coût généralement plus accessible</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Difficile à mesurer</td>
+
+                <td>Résultats précis grâce aux statistiques</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Communication à sens unique</td>
+
+                <td>Interaction directe avec les clients</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Public général</td>
+
+                <td>Public ciblé selon les intérêts</td>
+
+            </tr>
+
+        </table>
+
+
+        <h3>À retenir</h3>
+
+        <p>
+            Le marketing digital complète aujourd'hui le marketing traditionnel. Beaucoup
+            d'entreprises utilisent les deux méthodes afin d'obtenir de meilleurs
+            résultats.
+        </p>
+
+
+        <div class="video-cours">
+
+            <h3>📹 Vidéo explicative</h3>
+
+            <iframe width="100%" height="400" src="https://www.youtube.com/embed/R4wK6_Z3iDU"
+                title="Comparaison marketing traditionnel et digital" frameborder="0" allowfullscreen>
+            </iframe>
+
+        </div>
+
+    </section>
+
+
+
+    <section class="cours">
+
+        <h2>8. Exemple pratique</h2>
+
+        <div class="exemple">
+
+            <h3>Boutique de vêtements</h3>
+
+            <p>
+                Une boutique de vêtements située à Lubumbashi utilisait uniquement des
+                méthodes traditionnelles comme la distribution de flyers dans les rues
+                pour attirer ses clients.
+            </p>
+
+            <p>
+                Après avoir créé une page Facebook, un compte TikTok et un catalogue
+                WhatsApp Business, la boutique a commencé à présenter ses produits sur
+                Internet et à recevoir des commandes chaque jour.
+            </p>
+
+            <p>
+                Grâce au marketing digital, elle a pu toucher des clients qui se trouvent
+                dans d'autres quartiers et même dans d'autres villes.
+            </p>
+
+            <h3>Résultats obtenus</h3>
+
+            <ul>
+
+                <li>Augmentation de la visibilité.</li>
+
+                <li>Plus de commandes.</li>
+
+                <li>Nouveaux clients.</li>
+
+                <li>Meilleure communication avec les consommateurs.</li>
+
+                <li>Augmentation des ventes.</li>
+
+            </ul>
+
+        </div>
+
+
+        <div class="video-cours">
+
+            <h3>📹 Vidéo explicative</h3>
+
+            <iframe width="100%" height="400" src="https://www.youtube.com/embed/IzGsA98eAIA"
+                title="Exemple pratique marketing digital" frameborder="0" allowfullscreen>
+            </iframe>
+
+        </div>
+
+    </section>
+
+
+
+    <section class="important">
+
+        <h2>📌 À retenir</h2>
+
+        <p>
+            ✔ Le marketing traditionnel utilise les médias classiques comme la télévision,
+            la radio et les journaux.
+        </p>
+
+        <p>
+            ✔ Le marketing digital utilise Internet et les technologies numériques.
+        </p>
+
+        <p>
+            ✔ Les réseaux sociaux sont devenus des outils essentiels pour les entreprises.
+        </p>
+
+        <p>
+            ✔ Le marketing digital permet de cibler les clients et mesurer les résultats.
+        </p>
+
+        <p>
+            ✔ Une entreprise moderne doit utiliser les outils numériques pour rester
+            compétitive.
+        </p>
+
+    </section>
+
+
+    <section class="exercice">
+
+        <h2>Exercice</h2>
+
+        <p>
+
+            Vous souhaitez ouvrir un restaurant.
+
+            Quels outils du marketing digital utiliseriez-vous pour attirer
+            vos premiers clients ?
+
+            Expliquez votre choix.
+
+        </p>
+
+        <textarea placeholder="Écrivez votre réponse ici..."></textarea>
+
+    </section>
+
+
+
+    <!--====================================
+            NAVIGATION
+    =====================================-->
+
+    <section class="navigation">
+
+        <button onclick="retourCours()">
+
+            ← Retour au chapitre
+
+        </button>
+
+        <button onclick="terminerLecon()">
+
+            ✓ Terminer la leçon
+
+        </button>
+
+    </section>
+
+
+
+    <footer>
+
+        <h3>BMJ SERVICE</h3>
+
+        <p>
+
+            Continuez votre apprentissage.
+            La prochaine leçon portera sur les célèbres <strong>4P du Marketing</strong>.
+
+        </p>
+
+    </footer>
+    <script>
+
+
+        //====================================
+        // CHARGEMENT DE LA PAGE
+        //====================================
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+
+            let utilisateur = JSON.parse(
+
+                localStorage.getItem("bmj_current_user")
+
+            );
+
+
+            if (!utilisateur) {
+
+
+                window.location.href = "connexion.html";
+
+                return;
+
+
+            }
+
+
+
+            //=========================
+            // PROFIL
+            //=========================
+
+
+            document.getElementById("nomUtilisateur").innerHTML =
+
+                utilisateur.nom;
+
+
+
+
+            if (utilisateur.photo && utilisateur.photo != "") {
+
+
+                document.getElementById("photoUtilisateur").src =
+
+                    utilisateur.photo;
+
+
+            }
+
+
+
+        });
+
+
+
+
+
+        //====================================
+        // RETOUR AU CHAPITRE
+        //====================================
+
+
+        function retourCours() {
+
+
+            window.location.href = "marketing.html";
+
+
+        }
+
+
+
+
+
+
+
+        //====================================
+        // TERMINER LA LEÇON 2
+        //====================================
+
+
+        function terminerLecon() {
+
+
+            let utilisateur = JSON.parse(
+
+                localStorage.getItem("bmj_current_user")
+
+            );
+
+
+
+            if (!utilisateur) {
+
+
+                window.location.href = "connexion.html";
+
+                return;
+
+
+            }
+
+
+
+
+
+            //--------------------------------
+            // PROGRESSION DU MARKETING
+            //--------------------------------
+
+
+            let progression = JSON.parse(
+
+
+                localStorage.getItem("marketing_progression")
+
+
+            ) || [];
+
+
+
+
+
+
+
+            //==================================
+            // LEÇON DÉJÀ TERMINÉE
+            //==================================
+
+
+            if (progression.includes("2")) {
+
+
+
+                alert(
+
+                    "Cette leçon est déjà terminée.\n\nVous pouvez la revoir quand vous voulez."
+
+                );
+
+
+
+                window.location.href = "marketing.html";
+
+
+                return;
+
+
+
+            }
+
+
+
+
+
+
+
+
+
+            //--------------------------------
+            // AJOUTER LEÇON 2 UNE SEULE FOIS
+            //--------------------------------
+
+
+            progression.push("2");
+
+
+
+
+
+            localStorage.setItem(
+
+
+                "marketing_progression",
+
+
+                JSON.stringify(progression)
+
+
+            );
+
+
+
+
+
+
+
+
+
+
+
+            //--------------------------------
+            // COURS SUIVIS
+            //--------------------------------
+
+
+            if (!utilisateur.coursSuivis) {
+
+
+                utilisateur.coursSuivis = [];
+
+
+            }
+
+
+
+
+
+            if (!utilisateur.coursSuivis.includes(
+
+                "Marketing Leçon 2"
+
+            )) {
+
+
+                utilisateur.coursSuivis.push(
+
+                    "Marketing Leçon 2"
+
+                );
+
+
+            }
+
+
+
+
+
+
+
+
+
+            //--------------------------------
+            // CALCUL PROGRESSION
+            //--------------------------------
+
+
+            utilisateur.progression = progression.length * 20;
+
+
+
+            if (utilisateur.progression > 100) {
+
+
+                utilisateur.progression = 100;
+
+
+            }
+
+
+
+
+
+
+
+
+
+            //--------------------------------
+            // SAUVEGARDE SESSION
+            //--------------------------------
+
+
+            localStorage.setItem(
+
+
+                "bmj_current_user",
+
+
+                JSON.stringify(utilisateur)
+
+
+            );
+
+
+
+
+
+
+
+
+
+
+
+            //--------------------------------
+            // SAUVEGARDE BASE UTILISATEURS
+            //--------------------------------
+
+
+            let utilisateurs = JSON.parse(
+
+
+                localStorage.getItem("bmj_users")
+
+
+            ) || [];
+
+
+
+
+
+
+
+            let index = utilisateurs.findIndex(
+
+
+                u => u.id === utilisateur.id
+
+
+            );
+
+
+
+
+
+
+
+            if (index !== -1) {
+
+
+                utilisateurs[index] = utilisateur;
+
+
+            }
+
+
+
+
+
+
+
+            localStorage.setItem(
+
+
+                "bmj_users",
+
+
+                JSON.stringify(utilisateurs)
+
+
+            );
+
+
+
+
+
+
+
+
+
+
+
+            //--------------------------------
+            // MESSAGE
+            //--------------------------------
+
+
+            alert(
+
+
+                "🎉 Félicitations !\n\nVous avez terminé la Leçon 2."
+
+
+            );
+
+
+
+
+
+
+
+
+
+
+
+            //--------------------------------
+            // RETOUR AU CHAPITRE
+            //--------------------------------
+
+
+            window.location.href = "marketing.html";
+
+
+
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

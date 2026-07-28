@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*==================================================
+        BMJ SERVICE - LEÇON 1 MARKETING
+==================================================*/
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #f4f7fb;
+            color: #333;
+            line-height: 1.8;
+        }
+
+        /*=====================================
+            HEADER
+======================================*/
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 75px;
+            background: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 40px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, .08);
+            z-index: 1000;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        .logo h2 {
+            color: #145A86;
+        }
+
+        .logo span {
+            color: #D4AF37;
+        }
+
+        .student-profile {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .student-profile img {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #D4AF37;
+        }
+
+        .student-profile h4 {
+            color: #145A86;
+        }
+
+        .student-profile small {
+            color: #777;
+        }
+
+        /*=====================================
+            HERO
+======================================*/
+
+        .lesson-hero {
+            margin-top: 75px;
+            height: 420px;
+            background:
+                linear-gradient(rgba(20, 90, 134, .82), rgba(0, 0, 0, .75)),
+                url(images/marketing-banner.jpg);
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .overlay {
+            width: 90%;
+            max-width: 900px;
+            color: #fff;
+            text-align: center;
+        }
+
+        .overlay h1 {
+            font-size: 52px;
+            margin-bottom: 20px;
+        }
+
+        .overlay p {
+            font-size: 21px;
+        }
+
+        /*=====================================
+            SECTIONS
+======================================*/
+
+        .objectif,
+        .cours,
+        .important,
+        .exercice {
+            width: 90%;
+            max-width: 1100px;
+            margin: 40px auto;
+            background: #fff;
+            border-radius: 20px;
+            padding: 35px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+        }
+
+        .objectif h2,
+        .cours h2,
+        .important h2,
+        .exercice h2 {
+            color: #145A86;
+            margin-bottom: 20px;
+            border-left: 6px solid #D4AF37;
+            padding-left: 15px;
+        }
+
+        .cours p {
+            margin-bottom: 18px;
+            text-align: justify;
+        }
+
+        .objectif ul,
+        .cours ul {
+            margin-left: 25px;
+            margin-top: 15px;
+        }
+
+        .objectif li,
+        .cours li {
+            margin-bottom: 10px;
+        }
+
+        /*=====================================
+            EXEMPLE
+======================================*/
+
+        .exemple {
+            background: #f8fbff;
+            border-left: 6px solid #145A86;
+            padding: 25px;
+            border-radius: 12px;
+            margin-top: 25px;
+        }
+
+        .exemple h3 {
+            color: #145A86;
+            margin-bottom: 15px;
+        }
+
+        /*=====================================
+        POINTS IMPORTANTS
+======================================*/
+
+        .important {
+            background: #145A86;
+            color: #fff;
+        }
+
+        .important h2 {
+            color: #fff;
+            border-left-color: #D4AF37;
+        }
+
+        .important p {
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        /*=====================================
+            EXERCICE
+======================================*/
+
+        textarea {
+            width: 100%;
+            height: 180px;
+            border: 2px solid #ddd;
+            border-radius: 12px;
+            padding: 15px;
+            resize: vertical;
+            font-size: 16px;
+            margin-top: 20px;
+            outline: none;
+        }
+
+        textarea:focus {
+            border-color: #145A86;
+        }
+
+        /*=====================================
+            NAVIGATION
+======================================*/
+
+        .navigation {
+            width: 90%;
+            max-width: 1100px;
+            margin: 40px auto 70px;
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .navigation button {
+            flex: 1;
+            padding: 18px;
+            border: none;
+            border-radius: 12px;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: .35s;
+        }
+
+        .navigation button:first-child {
+            background: #145A86;
+            color: #fff;
+        }
+
+        .navigation button:last-child {
+            background: #D4AF37;
+            color: #145A86;
+        }
+
+        .navigation button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, .15);
+        }
+
+        /*=====================================
+            FOOTER
+======================================*/
+
+        footer {
+            background: #145A86;
+            color: #fff;
+            text-align: center;
+            padding: 35px;
+        }
+
+        footer h3 {
+            margin-bottom: 10px;
+        }
+
+        /*=====================================
+            RESPONSIVE
+======================================*/
+
+        @media(max-width:768px) {
+
+            header {
+                padding: 0 15px;
+            }
+
+            .student-profile small {
+                display: none;
+            }
+
+            .overlay h1 {
+                font-size: 34px;
+            }
+
+            .overlay p {
+                font-size: 17px;
+            }
+
+            .objectif,
+            .cours,
+            .important,
+            .exercice {
+                padding: 22px;
+            }
+
+            .navigation {
+                flex-direction: column;
+            }
+
+        }
+
+        @media(max-width:500px) {
+
+            .logo h2 {
+                font-size: 20px;
+            }
+
+            .student-profile h4 {
+                font-size: 15px;
+            }
+
+            .overlay h1 {
+                font-size: 28px;
+            }
+
+            .overlay p {
+                font-size: 15px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+        <div class="logo">
+
+            <img src="images/logo.png">
+
+            <h2>BMJ <span>SERVICE</span></h2>
+
+        </div>
+
+        <div class="student-profile">
+
+            <img id="photoUtilisateur" src="images/user.png">
+
+            <div>
+
+                <h4 id="nomUtilisateur">Apprenant</h4>
+
+                <small>Marketing Digital</small>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!--==============================
+        BANNIÈRE
+===============================-->
+
+    <section class="lesson-hero">
+
+        <div class="overlay">
+
+            <h1>Leçon 1 : Introduction au Marketing</h1>
+
+            <p>
+
+                Découvrez les fondements du marketing et comprenez pourquoi il est
+                indispensable à la réussite d'une entreprise moderne.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!--==============================
+        OBJECTIFS
+===============================-->
+
+    <section class="objectif">
+
+        <h2>Objectifs de cette leçon</h2>
+
+        <ul>
+
+            <li>Comprendre la définition du marketing.</li>
+
+            <li>Découvrir les principaux objectifs du marketing.</li>
+
+            <li>Identifier le rôle du client dans une entreprise.</li>
+
+            <li>Comprendre l'évolution du marketing.</li>
+
+        </ul>
+
+    </section>
+
+
+    <!--==============================
+        COURS
+===============================-->
+
+    <section class="cours">
+
+        <h2>1. Définition du marketing</h2>
+
+        <p>
+            Le marketing est l'ensemble des techniques, méthodes et stratégies utilisées
+            par une entreprise pour identifier les besoins des consommateurs, concevoir
+            des produits ou des services adaptés, fixer un prix approprié, assurer leur
+            promotion et les rendre disponibles au bon moment afin de satisfaire les
+            clients tout en réalisant des bénéfices.
+        </p>
+
+        <p>
+            Le marketing est aujourd'hui un élément essentiel de la réussite d'une
+            entreprise. Il permet de mieux comprendre les attentes des consommateurs,
+            d'étudier les tendances du marché et de proposer une offre capable de se
+            démarquer de la concurrence.
+        </p>
+
+        <p>
+            Autrefois, les entreprises produisaient d'abord leurs produits puis
+            cherchaient ensuite à les vendre. Cette méthode était centrée sur la
+            production. Aujourd'hui, les entreprises commencent par analyser les besoins
+            des consommateurs avant même de fabriquer un produit ou de lancer un service.
+            Cette approche permet de réduire les risques d'échec commercial.
+        </p>
+
+        <p>
+            Le marketing ne consiste donc pas uniquement à vendre. Il englobe également
+            l'étude du marché, la communication, la publicité, la fidélisation des
+            clients, le développement de nouveaux produits et l'amélioration continue des
+            services proposés.
+        </p>
+
+        <p>
+            Grâce au marketing, une entreprise peut attirer de nouveaux clients,
+            conserver ceux qui lui font déjà confiance et améliorer son image de marque.
+            Il contribue également à augmenter les ventes et à assurer la croissance de
+            l'entreprise sur le long terme.
+        </p>
+
+        <h3>Objectifs du marketing</h3>
+
+        <ul>
+            <li>Comprendre les besoins des consommateurs.</li>
+            <li>Créer des produits ou services adaptés.</li>
+            <li>Attirer de nouveaux clients.</li>
+            <li>Fidéliser les clients existants.</li>
+            <li>Augmenter les ventes.</li>
+            <li>Améliorer la notoriété de l'entreprise.</li>
+            <li>Développer un avantage concurrentiel.</li>
+        </ul>
+
+        <h3>Exemple pratique</h3>
+
+        <p>
+            Une entreprise souhaite vendre des téléphones portables. Avant de lancer un
+            nouveau modèle, elle réalise une étude afin de connaître les attentes des
+            consommateurs : autonomie de la batterie, qualité de l'appareil photo, prix,
+            taille de l'écran, etc. Les informations recueillies permettent de concevoir
+            un produit répondant réellement aux besoins du marché.
+        </p>
+
+        <h3>À retenir</h3>
+
+        <p>
+            Le marketing est une démarche qui consiste à comprendre les besoins des
+            consommateurs afin de leur proposer des produits ou services capables de les
+            satisfaire tout en permettant à l'entreprise d'atteindre ses objectifs
+            commerciaux.
+        </p>
+
+        <!-- ==========================
+         VIDEO DU COURS
+    =========================== -->
+        <div class="video-cours">
+
+            <h3>📹 Vidéo explicative</h3>
+
+            <iframe width="100%" height="400" src="https://www.youtube.com/embed/7q7depQBIqA"
+                title="Vidéo explicative sur le marketing" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+
+        </div>
+    </section>
+
+    <section class="cours">
+
+        <h2>2. Les objectifs du marketing</h2>
+
+        <p>
+            Le marketing poursuit plusieurs objectifs qui permettent à une entreprise de
+            développer ses activités et d'assurer sa croissance. Il ne se limite pas à la
+            vente d'un produit, mais vise également à construire une relation durable avec
+            les consommateurs.
+        </p>
+
+        <ul>
+
+            <li>Attirer de nouveaux clients.</li>
+
+            <li>Fidéliser les clients existants.</li>
+
+            <li>Augmenter les ventes et le chiffre d'affaires.</li>
+
+            <li>Améliorer la réputation et l'image de l'entreprise.</li>
+
+            <li>Répondre efficacement aux besoins des consommateurs.</li>
+
+            <li>Se différencier de la concurrence.</li>
+
+            <li>Lancer avec succès de nouveaux produits ou services.</li>
+
+            <li>Créer une relation de confiance avec les clients.</li>
+
+        </ul>
+
+        <p>
+            Une bonne stratégie marketing permet à une entreprise de mieux connaître ses
+            clients, d'améliorer continuellement ses produits et de proposer une offre
+            adaptée aux évolutions du marché.
+        </p>
+
+        <p>
+            Lorsque les objectifs du marketing sont atteints, les consommateurs sont plus
+            satisfaits, recommandent l'entreprise à leur entourage et restent fidèles à la
+            marque pendant de nombreuses années.
+        </p>
+
+        <h3>Exemple</h3>
+
+        <p>
+            Une boutique de vêtements peut organiser des promotions, publier des annonces
+            sur les réseaux sociaux et offrir une carte de fidélité afin d'attirer de
+            nouveaux clients tout en récompensant les anciens.
+        </p>
+
+        <div class="video-cours">
+
+            <h3>📹 Vidéo explicative</h3>
+
+            <iframe width="100%" height="400" src="https://www.youtube.com/embed/oZSgVhyMaYk"
+                title="Vidéo explicative sur le marketing" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+
+        </div>
+
+    </section>
+
+    <section class="cours">
+
+        <h2>3. Pourquoi le marketing est-il important ?</h2>
+
+        <p>
+            Dans un monde où la concurrence est de plus en plus forte, les consommateurs
+            disposent d'un très grand nombre de choix. Les entreprises doivent donc
+            comprendre leurs besoins afin de proposer des produits ou des services qui se
+            démarquent de ceux de leurs concurrents.
+        </p>
+
+        <p>
+            Le marketing permet de réaliser des études de marché, d'analyser les attentes
+            des clients et d'identifier les nouvelles tendances. Grâce à ces informations,
+            une entreprise peut adapter ses produits, fixer un prix adapté et choisir les
+            meilleurs moyens de communication.
+        </p>
+
+        <p>
+            Une entreprise qui applique une bonne stratégie marketing améliore sa
+            visibilité, attire davantage de clients et augmente ses chances de réaliser
+            des bénéfices sur le long terme.
+        </p>
+
+        <p>
+            À l'inverse, une entreprise qui néglige le marketing risque de produire des
+            biens ou des services qui ne correspondent pas aux besoins réels des
+            consommateurs. Elle peut alors perdre des clients au profit de ses
+            concurrents.
+        </p>
+
+        <h3>Les avantages du marketing</h3>
+
+        <ul>
+
+            <li>Mieux connaître les consommateurs.</li>
+
+            <li>Développer des produits adaptés au marché.</li>
+
+            <li>Améliorer la communication avec les clients.</li>
+
+            <li>Renforcer l'image de marque.</li>
+
+            <li>Augmenter les ventes.</li>
+
+            <li>Conserver un avantage sur les concurrents.</li>
+
+        </ul>
+
+        <h3>À retenir</h3>
+
+        <p>
+            Le marketing est indispensable au développement d'une entreprise. Il permet de
+            satisfaire les clients, de renforcer la notoriété de la marque et d'assurer la
+            pérennité des activités dans un environnement de plus en plus concurrentiel.
+        </p>
+
+        <div class="video-cours">
+
+            <h3>📹 Vidéo explicative</h3>
+
+            <iframe width="100%" height="400" src="https://www.youtube.com/embed/eeeMA_keyRc" title="Vidéo explicative"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+
+        </div>
+
+    </section>
+
+
+    <section class="cours">
+
+        <h2>4. Exemple concret</h2>
+
+        <div class="exemple">
+
+            <h3>Exemple : Une boutique de vêtements</h3>
+
+            <p>
+                Une boutique de vêtements souhaite lancer une nouvelle collection pour la
+                saison. Avant de fabriquer ou de commander les articles, elle décide de
+                réaliser une étude de marché afin de mieux comprendre les attentes de ses
+                clients.
+            </p>
+
+            <p>
+                Les responsables interrogent les consommateurs sur leurs préférences :
+                les couleurs les plus appréciées, les tailles les plus demandées, les
+                modèles à la mode, les matières préférées ainsi que les prix qu'ils sont
+                prêts à payer.
+            </p>
+
+            <p>
+                Après avoir analysé toutes les informations recueillies, la boutique ne
+                produit que les vêtements qui répondent réellement aux besoins de sa
+                clientèle. Elle met également en place une campagne publicitaire sur les
+                réseaux sociaux et propose des offres promotionnelles pour attirer encore
+                plus d'acheteurs.
+            </p>
+
+            <h3>Les résultats obtenus</h3>
+
+            <ul>
+
+                <li>Augmentation des ventes.</li>
+
+                <li>Diminution des invendus.</li>
+
+                <li>Réduction des pertes financières.</li>
+
+                <li>Clients plus satisfaits.</li>
+
+                <li>Amélioration de la réputation de la boutique.</li>
+
+                <li>Fidélisation des clients.</li>
+
+            </ul>
+
+            <h3>Leçon à retenir</h3>
+
+            <p>
+                Cet exemple montre qu'une entreprise qui connaît les besoins de ses
+                consommateurs prend de meilleures décisions. Le marketing permet ainsi de
+                produire les bons produits, de les vendre plus facilement et d'assurer la
+                croissance de l'entreprise.
+            </p>
+
+        </div>
+
+        <div class="video-cours">
+
+            <h3>📹 Vidéo explicative</h3>
+
+            <iframe width="100%" height="400" src="https://www.youtube.com/embed/R4wK6_Z3iDU" title="Vidéo explicative"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+
+        </div>
+
+    </section>
+
+
+    <section class="cours">
+
+        <h2>5. Les qualités d'un bon responsable marketing</h2>
+
+        <p>
+            Le responsable marketing est une personne chargée de développer les stratégies
+            qui permettent à une entreprise de vendre ses produits ou ses services. Il
+            analyse le marché, identifie les besoins des consommateurs et met en place des
+            actions pour attirer et fidéliser les clients.
+        </p>
+
+        <p>
+            Pour réussir dans cette fonction, il doit posséder plusieurs qualités
+            professionnelles et personnelles lui permettant de prendre de bonnes décisions
+            et d'assurer le développement de l'entreprise.
+        </p>
+
+        <h3>Les principales qualités</h3>
+
+        <ul>
+
+            <li><strong>Savoir écouter les clients :</strong> comprendre leurs besoins et leurs attentes.</li>
+
+            <li><strong>Être créatif :</strong> proposer de nouvelles idées et des campagnes publicitaires originales.
+            </li>
+
+            <li><strong>Analyser les données :</strong> interpréter les statistiques de vente et les études de marché.
+            </li>
+
+            <li><strong>Comprendre les tendances du marché :</strong> suivre les évolutions des consommateurs et de la
+                concurrence.</li>
+
+            <li><strong>Savoir communiquer :</strong> transmettre efficacement les messages de l'entreprise.</li>
+
+            <li><strong>Prendre de bonnes décisions :</strong> choisir les meilleures stratégies marketing.</li>
+
+            <li><strong>Être organisé :</strong> planifier les campagnes marketing et gérer les délais.</li>
+
+            <li><strong>Avoir l'esprit d'équipe :</strong> collaborer avec les commerciaux, les designers et les autres
+                services.</li>
+
+            <li><strong>Être capable de résoudre les problèmes :</strong> réagir rapidement face aux difficultés
+                rencontrées.</li>
+
+        </ul>
+
+        <h3>Exemple</h3>
+
+        <p>
+            Une entreprise remarque une baisse de ses ventes. Le responsable marketing
+            analyse les commentaires des clients, étudie les produits de la concurrence et
+            met en place une nouvelle campagne publicitaire accompagnée d'offres
+            promotionnelles. Grâce à cette stratégie, les ventes augmentent et de nouveaux
+            clients sont attirés.
+        </p>
+
+        <h3>À retenir</h3>
+
+        <p>
+            Un bon responsable marketing doit être à la fois créatif, organisé, capable
+            d'analyser les informations et de communiquer efficacement. Son rôle est
+            essentiel pour assurer la réussite et la croissance d'une entreprise.
+        </p>
+
+        <div class="video-cours">
+
+            <h3>📹 Vidéo explicative</h3>
+
+            <iframe width="100%" height="400" src="https://www.youtube.com/embed/IzGsA98eAIA" title="Vidéo explicative"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+
+        </div>
+
+    </section>
+
+    <section class="important">
+
+        <h2>📌 À retenir</h2>
+
+        <p>
+            ✔ Le marketing consiste à identifier, comprendre et satisfaire les besoins des consommateurs.
+        </p>
+
+        <p>
+            ✔ Le client est au centre de toutes les décisions prises par l'entreprise.
+        </p>
+
+        <p>
+            ✔ Le marketing ne se limite pas à la publicité ; il comprend également l'étude du marché, la fixation des
+            prix, la distribution et la communication.
+        </p>
+
+        <p>
+            ✔ Une bonne stratégie marketing permet d'attirer de nouveaux clients et de fidéliser les anciens.
+        </p>
+
+        <p>
+            ✔ Un client satisfait est plus susceptible de revenir acheter et de recommander l'entreprise à son
+            entourage.
+        </p>
+
+        <p>
+            ✔ Le marketing contribue directement à l'augmentation des ventes et à la croissance de l'entreprise.
+        </p>
+
+        <p>
+            ✔ Avant de lancer un produit, il est important d'étudier le marché et les attentes des consommateurs.
+        </p>
+
+    </section>
+
+    <section class="exercice">
+
+        <h2>📝 Exercice pratique</h2>
+
+        <p>
+            Vous souhaitez ouvrir une boutique spécialisée dans la vente de téléphones
+            portables dans votre ville.
+        </p>
+
+        <p>
+            Avant de commander vos premiers produits, vous devez réaliser une petite étude
+            de marché.
+        </p>
+
+        <h3>Répondez aux questions suivantes :</h3>
+
+        <ol>
+
+            <li>Quels modèles de téléphones souhaiteriez-vous vendre ?</li>
+
+            <li>Quels sont les besoins de vos futurs clients ?</li>
+
+            <li>Quel budget moyen pensez-vous que vos clients peuvent consacrer à l'achat d'un téléphone ?</li>
+
+            <li>Comment allez-vous faire connaître votre boutique ?</li>
+
+            <li>Quelles stratégies utiliserez-vous pour fidéliser vos clients ?</li>
+
+        </ol>
+
+        <p>
+            Rédigez votre réponse dans la zone ci-dessous en quelques phrases.
+        </p>
+
+        <textarea rows="10" placeholder="Écrivez votre réponse ici...">
+    </textarea>
+
+    </section>
+
+
+    <section class="navigation">
+
+        <button onclick="retourCours()">
+
+            ← Retour au chapitre
+
+        </button>
+
+        <button onclick="terminerLecon()">
+
+            ✓ Terminer la leçon
+
+        </button>
+
+    </section>
+
+
+    <footer>
+
+        <h3>BMJ SERVICE</h3>
+
+        <p>
+
+            Plateforme professionnelle de formation en ligne.
+
+        </p>
+
+    </footer>
+    <script>
+
+        //====================================
+        // CHARGEMENT DE LA PAGE
+        //====================================
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+            let utilisateur = JSON.parse(localStorage.getItem("bmj_current_user"));
+
+            if (!utilisateur) {
+
+                window.location.href = "connexion.html";
+                return;
+
+            }
+
+            //=========================
+            // PROFIL
+            //=========================
+
+            document.getElementById("nomUtilisateur").innerHTML = utilisateur.nom;
+
+            if (utilisateur.photo && utilisateur.photo != "") {
+
+                document.getElementById("photoUtilisateur").src = utilisateur.photo;
+
+            }
+
+        });
+
+
+
+        //====================================
+        // RETOUR AU CHAPITRE
+        //====================================
+
+        function retourCours() {
+
+            window.location.href = "marketing.html";
+
+        }
+
+
+
+        //====================================
+        // TERMINER LA LEÇON
+        //====================================
+
+        function terminerLecon() {
+
+            let utilisateur = JSON.parse(localStorage.getItem("bmj_current_user"));
+
+            if (!utilisateur) {
+
+                window.location.href = "connexion.html";
+                return;
+
+            }
+
+
+            //--------------------------------
+            // PROGRESSION DU MARKETING
+            //--------------------------------
+
+            let progression = JSON.parse(
+
+                localStorage.getItem("marketing_progression")
+
+            ) || [];
+
+
+            //==================================
+            // LEÇON DÉJÀ TERMINÉE
+            //==================================
+
+            if (progression.includes("1")) {
+
+                alert("Cette leçon est déjà terminée.");
+
+                window.location.href = "marketing.html";
+
+                return;
+
+            }
+
+
+            //--------------------------------
+            // AJOUTER UNE SEULE FOIS
+            //--------------------------------
+
+            progression.push("1");
+
+
+            localStorage.setItem(
+
+                "marketing_progression",
+
+                JSON.stringify(progression)
+
+            );
+
+
+            //--------------------------------
+            // COURS SUIVIS
+            //--------------------------------
+
+            if (!utilisateur.coursSuivis) {
+
+                utilisateur.coursSuivis = [];
+
+            }
+
+            if (!utilisateur.coursSuivis.includes("Marketing Leçon 1")) {
+
+                utilisateur.coursSuivis.push("Marketing Leçon 1");
+
+            }
+
+
+            //--------------------------------
+            // CALCUL PROGRESSION
+            //--------------------------------
+
+            utilisateur.progression = progression.length * 20;
+
+            if (utilisateur.progression > 100) {
+
+                utilisateur.progression = 100;
+
+            }
+
+
+            //--------------------------------
+            // SAUVEGARDE SESSION
+            //--------------------------------
+
+            localStorage.setItem(
+
+                "bmj_current_user",
+
+                JSON.stringify(utilisateur)
+
+            );
+
+
+            //--------------------------------
+            // SAUVEGARDE BASE
+            //--------------------------------
+
+            let utilisateurs = JSON.parse(
+
+                localStorage.getItem("bmj_users")
+
+            ) || [];
+
+
+            let index = utilisateurs.findIndex(
+
+                u => u.id === utilisateur.id
+
+            );
+
+
+            if (index !== -1) {
+
+                utilisateurs[index] = utilisateur;
+
+            }
+
+
+            localStorage.setItem(
+
+                "bmj_users",
+
+                JSON.stringify(utilisateurs)
+
+            );
+
+
+            //--------------------------------
+            // MESSAGE
+            //--------------------------------
+
+            alert(
+
+                "🎉 Félicitations !\n\nVous avez terminé la Leçon 1."
+
+            );
+
+
+            //--------------------------------
+            // RETOUR AU CHAPITRE
+            //--------------------------------
+
+            window.location.href = "marketing.html";
+
+        }
+
+    </script>
+</body>
+
+</html>

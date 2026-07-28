@@ -1,0 +1,2524 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*==================================================
+        BMJ SERVICE
+        CHAPITRE 4 - SOCIAL MEDIA MARKETING
+        LEÇON 2 : STRATEGIE DE CONTENU
+==================================================*/
+
+
+        * {
+
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+
+        }
+
+
+
+        html {
+
+            scroll-behavior: smooth;
+
+        }
+
+
+
+        body {
+
+            background: #f4f7fb;
+            color: #333;
+            line-height: 1.8;
+
+        }
+
+
+
+
+
+
+
+        /*=====================================
+            HEADER
+======================================*/
+
+
+        header {
+
+            position: fixed;
+
+            top: 0;
+
+            left: 0;
+
+            width: 100%;
+
+            height: 75px;
+
+            background: white;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            padding: 0 40px;
+
+            box-shadow: 0 5px 20px rgba(0, 0, 0, .08);
+
+            z-index: 1000;
+
+        }
+
+
+
+        .logo {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+        }
+
+
+
+        .logo img {
+
+            width: 52px;
+
+            height: 52px;
+
+            border-radius: 50%;
+
+            border: 3px solid #D4AF37;
+
+        }
+
+
+
+        .logo h2 {
+
+            color: #145A86;
+
+        }
+
+
+
+        .logo span {
+
+            color: #D4AF37;
+
+        }
+
+
+
+
+
+        .student-profile {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+        }
+
+
+
+        .student-profile img {
+
+            width: 50px;
+
+            height: 50px;
+
+            border-radius: 50%;
+
+            object-fit: cover;
+
+            border: 3px solid #145A86;
+
+        }
+
+
+
+        .student-profile h4 {
+
+            color: #145A86;
+
+        }
+
+
+
+        .student-profile small {
+
+            color: #777;
+
+        }
+
+
+
+
+
+
+
+
+
+        /*=====================================
+            HERO
+======================================*/
+
+
+        .lesson-hero {
+
+            margin-top: 75px;
+
+            height: 430px;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+
+            background:
+
+                linear-gradient(rgba(20, 90, 134, .85),
+
+                    rgba(0, 0, 0, .75)),
+
+                url(images/content-banner.jpg);
+
+
+            background-size: cover;
+
+            background-position: center;
+
+        }
+
+
+
+        .overlay {
+
+            width: 90%;
+
+            max-width: 1000px;
+
+            text-align: center;
+
+            color: white;
+
+        }
+
+
+
+        .overlay span {
+
+            display: inline-block;
+
+            background: #D4AF37;
+
+            color: #145A86;
+
+            padding: 8px 25px;
+
+            border-radius: 50px;
+
+            font-weight: bold;
+
+            margin-bottom: 20px;
+
+        }
+
+
+
+        .overlay h1 {
+
+            font-size: 48px;
+
+            margin-bottom: 20px;
+
+        }
+
+
+
+        .overlay p {
+
+            font-size: 20px;
+
+        }
+
+
+
+
+
+
+
+
+
+        /*=====================================
+        OBJECTIFS + COURS
+======================================*/
+
+
+        .objectif,
+        .cours,
+        .important,
+        .exercice {
+
+
+            width: 90%;
+
+            max-width: 1100px;
+
+            margin: 45px auto;
+
+            background: #fff;
+
+            padding: 40px;
+
+            border-radius: 25px;
+
+            box-shadow:
+
+                0 10px 30px rgba(0, 0, 0, .08);
+
+
+        }
+
+
+
+
+        .objectif h2,
+        .cours h2,
+        .important h2,
+        .exercice h2 {
+
+
+            color: #145A86;
+
+            border-left: 7px solid #D4AF37;
+
+            padding-left: 15px;
+
+            margin-bottom: 25px;
+
+        }
+
+
+
+        .cours h3 {
+
+
+            color: #145A86;
+
+            margin-top: 30px;
+
+            margin-bottom: 15px;
+
+        }
+
+
+
+        .cours p {
+
+
+            text-align: justify;
+
+            margin-bottom: 18px;
+
+        }
+
+
+
+        .cours ul,
+        .objectif ul,
+        .exercice ul {
+
+
+            margin-left: 25px;
+
+        }
+
+
+
+        .cours li,
+        .objectif li,
+        .exercice li {
+
+
+            margin-bottom: 12px;
+
+        }
+
+
+
+
+
+
+
+
+
+        /*=====================================
+            EXEMPLE PERSONA
+======================================*/
+
+
+        .exemple {
+
+
+            background: #f8fbff;
+
+            border-left: 6px solid #145A86;
+
+            padding: 25px;
+
+            border-radius: 15px;
+
+            margin: 25px 0;
+
+
+        }
+
+
+
+        .exemple h3 {
+
+
+            color: #145A86;
+
+            margin-bottom: 15px;
+
+        }
+
+
+
+
+
+
+
+
+
+        /*=====================================
+        VIDEO COURS
+======================================*/
+
+
+        .video-cours {
+
+
+            margin-top: 35px;
+
+            background: #f8fbff;
+
+            padding: 25px;
+
+            border-radius: 20px;
+
+            border-left: 6px solid #D4AF37;
+
+
+        }
+
+
+
+        .video-cours h3 {
+
+
+            color: #145A86;
+
+            margin-bottom: 20px;
+
+
+        }
+
+
+
+        .video-cours iframe {
+
+
+            width: 100%;
+
+            border-radius: 15px;
+
+        }
+
+
+
+
+
+
+
+
+
+        /*=====================================
+            A RETENIR
+======================================*/
+
+
+        .important {
+
+
+            background:
+
+                linear-gradient(135deg,
+
+                    #145A86,
+
+                    #07334d);
+
+            color: white;
+
+
+        }
+
+
+
+        .important h2 {
+
+
+            color: white;
+
+            border-left-color: #D4AF37;
+
+
+        }
+
+
+
+        .important p {
+
+
+            font-size: 17px;
+
+            margin-bottom: 15px;
+
+
+        }
+
+
+
+
+
+
+
+
+
+        /*=====================================
+            EXERCICE
+======================================*/
+
+
+        .exercice {
+
+
+            background: white;
+
+        }
+
+
+
+        .exercice textarea {
+
+
+            width: 100%;
+
+            height: 180px;
+
+            margin-top: 25px;
+
+            padding: 18px;
+
+            border-radius: 15px;
+
+            border: 2px solid #ddd;
+
+            font-size: 16px;
+
+            resize: vertical;
+
+            outline: none;
+
+
+        }
+
+
+
+        .exercice textarea:focus {
+
+
+            border-color: #145A86;
+
+        }
+
+
+
+
+
+
+
+
+
+        /*=====================================
+            NAVIGATION
+======================================*/
+
+
+        .navigation {
+
+
+            width: 90%;
+
+            max-width: 1100px;
+
+            margin: 40px auto 70px;
+
+            display: flex;
+
+            gap: 20px;
+
+
+        }
+
+
+
+        .navigation button {
+
+
+            flex: 1;
+
+            padding: 18px;
+
+            border: none;
+
+            border-radius: 15px;
+
+            font-size: 17px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            transition: .3s;
+
+
+        }
+
+
+
+        .navigation button:first-child {
+
+
+            background: #145A86;
+
+            color: white;
+
+        }
+
+
+
+        .navigation button:last-child {
+
+
+            background: #D4AF37;
+
+            color: #145A86;
+
+        }
+
+
+
+        .navigation button:hover {
+
+
+            transform: translateY(-5px);
+
+            box-shadow: 0 12px 25px rgba(0, 0, 0, .2);
+
+
+        }
+
+
+
+
+
+
+
+
+
+        /*=====================================
+            FOOTER
+======================================*/
+
+
+        footer {
+
+
+            background: #145A86;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 40px 25px;
+
+
+        }
+
+
+
+        footer h3 {
+
+
+            color: #D4AF37;
+
+            font-size: 28px;
+
+            margin-bottom: 15px;
+
+
+        }
+
+
+
+
+
+
+
+
+
+        /*=====================================
+            TABLETTE
+======================================*/
+
+
+        @media(max-width:900px) {
+
+
+
+            header {
+
+
+                padding: 0 15px;
+
+
+            }
+
+
+
+            .student-profile small {
+
+
+                display: none;
+
+
+            }
+
+
+
+            .overlay h1 {
+
+
+                font-size: 36px;
+
+            }
+
+
+
+            .overlay p {
+
+
+                font-size: 16px;
+
+            }
+
+
+
+            .objectif,
+            .cours,
+            .important,
+            .exercice {
+
+
+                width: 94%;
+
+                padding: 25px;
+
+
+            }
+
+
+
+            .navigation {
+
+
+                flex-direction: column;
+
+
+            }
+
+
+        }
+
+
+
+
+
+
+
+
+
+        /*=====================================
+            MOBILE
+======================================*/
+
+
+        @media(max-width:500px) {
+
+
+
+            .logo h2 {
+
+
+                font-size: 19px;
+
+            }
+
+
+
+            .logo img {
+
+
+                width: 42px;
+
+                height: 42px;
+
+
+            }
+
+
+
+            .lesson-hero {
+
+
+                height: 370px;
+
+            }
+
+
+
+            .overlay h1 {
+
+
+                font-size: 28px;
+
+
+            }
+
+
+
+            .overlay p {
+
+
+                font-size: 14px;
+
+
+            }
+
+
+
+            .objectif h2,
+            .cours h2,
+            .important h2,
+            .exercice h2 {
+
+
+                font-size: 22px;
+
+
+            }
+
+
+
+            .cours p {
+
+
+                text-align: left;
+
+
+            }
+
+
+
+            .video-cours iframe {
+
+
+                height: 220px;
+
+
+            }
+
+
+
+            .navigation button {
+
+
+                font-size: 15px;
+
+
+            }
+
+
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <!--====================================
+            HEADER
+=====================================-->
+
+    <header>
+
+
+        <div class="logo">
+
+
+            <img src="images/logo.png" alt="BMJ SERVICE">
+
+
+            <h2>
+
+                BMJ <span>SERVICE</span>
+
+            </h2>
+
+
+        </div>
+
+
+
+
+
+        <div class="student-profile">
+
+
+            <img id="photoUtilisateur" src="images/user.png" alt="Photo">
+
+
+
+            <div>
+
+
+                <h4 id="nomUtilisateur">
+
+                    Apprenant
+
+                </h4>
+
+
+
+
+                <small id="domaineUtilisateur">
+
+                    Marketing Digital
+
+                </small>
+
+
+            </div>
+
+
+        </div>
+
+
+
+    </header>
+
+
+
+
+
+
+
+
+
+    <!--====================================
+            HERO
+=====================================-->
+
+    <section class="lesson-hero">
+
+
+        <div class="overlay">
+
+
+
+            <span>
+
+                LEÇON 2
+
+            </span>
+
+
+
+
+            <h1>
+
+                Créer une stratégie de contenu efficace
+
+            </h1>
+
+
+
+
+
+            <p>
+
+                Apprenez à créer des contenus adaptés à votre audience,
+                planifier vos publications et développer une présence
+                professionnelle sur les réseaux sociaux.
+
+            </p>
+
+
+
+        </div>
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+    <!--====================================
+            OBJECTIFS
+=====================================-->
+
+    <section class="objectif">
+
+
+
+        <h2>
+
+            Objectifs de cette leçon
+
+        </h2>
+
+
+
+
+        <ul>
+
+
+            <li>
+
+                Comprendre le rôle d'une stratégie de contenu.
+
+            </li>
+
+
+
+
+            <li>
+
+                Identifier les besoins de son audience.
+
+            </li>
+
+
+
+
+            <li>
+
+                Découvrir les différents types de contenus.
+
+            </li>
+
+
+
+
+            <li>
+
+                Apprendre à organiser un calendrier de publication.
+
+            </li>
+
+
+
+
+            <li>
+
+                Créer des contenus qui attirent et fidélisent les clients.
+
+            </li>
+
+
+        </ul>
+
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+    <!--====================================
+            COURS
+=====================================-->
+
+    <section class="cours">
+
+
+
+        <h2>
+
+            1. Qu'est-ce qu'une stratégie de contenu ?
+
+        </h2>
+
+
+
+
+
+        <p>
+
+            Une stratégie de contenu est un plan qui permet à une
+            entreprise de créer, publier et gérer des contenus afin
+            d'atteindre ses objectifs marketing sur les réseaux sociaux.
+
+        </p>
+
+
+
+
+        <p>
+
+            Elle permet de publier le bon contenu, au bon moment,
+            pour la bonne audience. Une entreprise ne doit pas publier
+            au hasard, mais suivre une organisation précise.
+
+        </p>
+
+
+
+
+        <p>
+
+            Une bonne stratégie de contenu aide à augmenter la visibilité
+            d'une marque, attirer de nouveaux clients et créer une relation
+            durable avec sa communauté.
+
+        </p>
+
+
+
+
+
+
+        <h3>
+
+            📚 Enseignements du cours
+
+        </h3>
+
+
+
+
+        <p>
+
+            À la fin de cette partie, l'apprenant doit être capable de :
+
+        </p>
+
+
+
+
+
+        <ul>
+
+
+            <li>
+
+                Définir une stratégie de contenu.
+
+            </li>
+
+
+
+            <li>
+
+                Comprendre l'importance de la planification.
+
+            </li>
+
+
+
+            <li>
+
+                Identifier les objectifs d'une publication.
+
+            </li>
+
+
+
+            <li>
+
+                Adapter un contenu aux attentes des clients.
+
+            </li>
+
+
+        </ul>
+
+
+
+
+    </section>
+    <!--====================================
+        2. CONNAITRE SON AUDIENCE CIBLE
+=====================================-->
+
+    <section class="cours">
+
+
+        <h2>
+
+            2. Connaître son audience cible
+
+        </h2>
+
+
+
+
+        <p>
+
+            Avant de créer du contenu sur les réseaux sociaux,
+            une entreprise doit connaître les personnes qu'elle
+            souhaite atteindre. Cette étape permet de proposer
+            des publications adaptées aux besoins et aux attentes
+            des clients.
+
+        </p>
+
+
+
+
+        <p>
+
+            Une audience cible représente le groupe de personnes
+            qui sont les plus susceptibles d'être intéressées par
+            les produits ou services proposés par une entreprise.
+
+        </p>
+
+
+
+
+
+
+        <h3>
+
+            Les éléments à connaître sur son audience
+
+        </h3>
+
+
+
+
+        <ul>
+
+
+            <li>
+
+                👤 L'âge et le profil des clients.
+
+            </li>
+
+
+
+            <li>
+
+                📍 La localisation géographique.
+
+            </li>
+
+
+
+            <li>
+
+                🎯 Les besoins et les problèmes rencontrés.
+
+            </li>
+
+
+
+            <li>
+
+                📱 Les réseaux sociaux utilisés.
+
+            </li>
+
+
+
+            <li>
+
+                💡 Les types de contenus qui les intéressent.
+
+            </li>
+
+
+        </ul>
+
+
+
+
+
+
+
+        <h3>
+
+            Exemple de persona client
+
+        </h3>
+
+
+
+
+        <div class="exemple">
+
+
+            <h3>
+
+                👩 Sarah, apprenante en marketing digital
+
+            </h3>
+
+
+
+
+            <p>
+
+                Sarah a 25 ans et souhaite apprendre de nouvelles
+                compétences pour améliorer ses opportunités
+                professionnelles.
+
+            </p>
+
+
+
+
+            <p>
+
+                Elle utilise principalement Instagram, TikTok et
+                Facebook. Elle préfère les contenus courts,
+                les vidéos éducatives et les conseils pratiques.
+
+            </p>
+
+
+
+
+            <p>
+
+                Une plateforme de formation peut donc lui proposer
+                des vidéos courtes, des témoignages d'apprenants
+                et des conseils marketing.
+
+            </p>
+
+
+
+        </div>
+
+
+
+
+
+
+
+        <h3>
+
+            Définir ses objectifs marketing
+
+        </h3>
+
+
+
+
+        <p>
+
+            Une stratégie de contenu doit toujours avoir un objectif
+            précis. Publier sans objectif peut rendre la communication
+            inefficace.
+
+        </p>
+
+
+
+
+
+
+        <ul>
+
+
+            <li>
+
+                📢 Augmenter la notoriété :
+                faire connaître une marque auprès du public.
+
+            </li>
+
+
+
+            <li>
+
+                🛒 Générer des ventes :
+                présenter des produits ou services aux clients.
+
+            </li>
+
+
+
+            <li>
+
+                👥 Développer une communauté :
+                créer une relation avec les abonnés.
+
+            </li>
+
+
+
+            <li>
+
+                🎓 Informer et éduquer :
+                partager des connaissances utiles.
+
+            </li>
+
+
+
+        </ul>
+
+
+
+
+
+
+
+        <h3>
+
+            Exemple concret : BMJ SERVICE
+
+        </h3>
+
+
+
+
+        <p>
+
+            BMJ SERVICE peut publier des contenus éducatifs sur
+            le marketing digital afin d'attirer des apprenants,
+            partager des témoignages pour créer la confiance et
+            présenter ses formations pour encourager les inscriptions.
+
+        </p>
+
+
+
+
+    </section>
+    <!--====================================
+        3. LES TYPES DE CONTENUS
+=====================================-->
+
+    <section class="cours">
+
+
+        <h2>
+
+            3. Les différents types de contenus sur les réseaux sociaux
+
+        </h2>
+
+
+
+
+        <p>
+
+            Le contenu est l'élément principal d'une stratégie
+            de communication digitale. Pour attirer l'attention
+            des utilisateurs, une entreprise doit varier ses
+            publications et proposer des contenus intéressants,
+            utiles et adaptés à son audience.
+
+        </p>
+
+
+
+
+        <p>
+
+            Chaque format possède un objectif différent.
+            Certains contenus permettent d'informer, d'autres
+            de divertir, de convaincre ou de créer une relation
+            avec les clients.
+
+        </p>
+
+
+
+
+
+
+
+        <h3>
+
+            📸 Les images et publications visuelles
+
+        </h3>
+
+
+
+
+        <p>
+
+            Les images sont très utilisées sur les réseaux sociaux
+            car elles attirent rapidement l'attention des internautes.
+            Elles permettent de présenter un produit, une formation,
+            une annonce ou une information importante.
+
+        </p>
+
+
+
+
+        <ul>
+
+
+            <li>
+
+                Présentation de produits ou services.
+
+            </li>
+
+
+
+            <li>
+
+                Affiches promotionnelles.
+
+            </li>
+
+
+
+            <li>
+
+                Citations et conseils.
+
+            </li>
+
+
+
+            <li>
+
+                Infographies éducatives.
+
+            </li>
+
+
+        </ul>
+
+
+
+
+
+
+
+        <h3>
+
+            🎥 Les vidéos
+
+        </h3>
+
+
+
+
+        <p>
+
+            Les vidéos sont devenues l'un des contenus les plus
+            performants sur les réseaux sociaux. Elles permettent
+            d'expliquer facilement une idée et de créer plus
+            d'engagement auprès du public.
+
+        </p>
+
+
+
+
+        <ul>
+
+
+            <li>
+
+                Vidéos éducatives.
+
+            </li>
+
+
+
+            <li>
+
+                Présentation d'une entreprise.
+
+            </li>
+
+
+
+            <li>
+
+                Démonstration d'un produit.
+
+            </li>
+
+
+
+            <li>
+
+                Témoignages clients.
+
+            </li>
+
+
+        </ul>
+
+
+
+
+
+
+
+        <h3>
+
+            📱 Stories et contenus courts
+
+        </h3>
+
+
+
+
+        <p>
+
+            Les stories permettent de partager des contenus
+            rapides et temporaires. Elles sont utiles pour
+            montrer les coulisses d'une entreprise, annoncer
+            une nouveauté ou interagir avec les abonnés.
+
+        </p>
+
+
+
+
+
+        <ul>
+
+
+            <li>
+
+                Sondages.
+
+            </li>
+
+
+
+            <li>
+
+                Questions aux abonnés.
+
+            </li>
+
+
+
+            <li>
+
+                Promotions limitées.
+
+            </li>
+
+
+
+            <li>
+
+                Actualités quotidiennes.
+
+            </li>
+
+
+        </ul>
+
+
+
+
+
+
+
+        <h3>
+
+            🎬 Les Reels et vidéos courtes
+
+        </h3>
+
+
+
+
+        <p>
+
+            Les vidéos courtes comme les Reels permettent
+            d'atteindre rapidement une grande audience.
+            Elles doivent être créatives, simples et adaptées
+            aux tendances actuelles.
+
+        </p>
+
+
+
+
+
+
+
+        <h3>
+
+            📅 Le calendrier de publication
+
+        </h3>
+
+
+
+
+        <p>
+
+            Un calendrier de publication permet d'organiser
+            les contenus à publier pendant une période donnée.
+            Il aide l'entreprise à rester régulière et à mieux
+            gérer sa communication.
+
+        </p>
+
+
+
+
+        <h3>
+
+            Exemple de calendrier simple
+
+        </h3>
+
+
+
+
+        <ul>
+
+
+            <li>
+
+                Lundi : conseil ou astuce marketing.
+
+            </li>
+
+
+
+            <li>
+
+                Mercredi : vidéo éducative.
+
+            </li>
+
+
+
+            <li>
+
+                Vendredi : présentation d'un produit ou service.
+
+            </li>
+
+
+
+            <li>
+
+                Dimanche : contenu communautaire ou témoignage.
+
+            </li>
+
+
+        </ul>
+
+
+
+
+
+
+
+        <h3>
+
+            Exemple concret : BMJ SERVICE
+
+        </h3>
+
+
+
+
+        <p>
+
+            Pour promouvoir ses formations, BMJ SERVICE peut publier
+            des vidéos courtes expliquant des notions marketing,
+            partager les réussites des apprenants et présenter
+            régulièrement ses nouveaux cours.
+
+        </p>
+
+
+
+
+
+
+        <div class="video-cours">
+
+
+            <h3>
+
+                📹 Vidéo explicative
+
+            </h3>
+
+
+
+
+            <iframe width="100%" height="400" src="https://www.youtube.com/embed/IzGsA98eAIA"
+                title="Créer une stratégie de contenu" frameborder="0" allowfullscreen>
+
+            </iframe>
+
+
+
+        </div>
+
+
+
+
+    </section>
+    <!--====================================
+            À RETENIR
+=====================================-->
+
+    <section class="important">
+
+
+        <h2>
+
+            📌 À retenir
+
+        </h2>
+
+
+
+
+        <p>
+
+            ✔ Une stratégie de contenu permet de publier de manière
+            organisée et atteindre des objectifs marketing précis.
+
+        </p>
+
+
+
+
+        <p>
+
+            ✔ Il est important de connaître son audience avant de
+            créer des publications.
+
+        </p>
+
+
+
+
+        <p>
+
+            ✔ Les contenus peuvent prendre plusieurs formes :
+            images, vidéos, stories, reels et articles.
+
+        </p>
+
+
+
+
+        <p>
+
+            ✔ Un calendrier de publication aide une entreprise à
+            rester régulière et professionnelle.
+
+        </p>
+
+
+
+
+        <p>
+
+            ✔ Un bon contenu doit informer, divertir ou apporter
+            une valeur aux clients.
+
+        </p>
+
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+    <!--====================================
+            EXERCICE
+=====================================-->
+
+    <section class="exercice">
+
+
+        <h2>
+
+            📝 Exercice pratique
+
+        </h2>
+
+
+
+
+        <p>
+
+            Imaginez que vous êtes responsable de la communication
+            d'une entreprise sur les réseaux sociaux.
+
+            Créez une petite stratégie de contenu :
+
+        </p>
+
+
+
+
+
+        <ul>
+
+
+            <li>
+
+                Quel est le nom de votre entreprise ?
+
+            </li>
+
+
+
+
+            <li>
+
+                Quelle est votre audience cible ?
+
+            </li>
+
+
+
+
+            <li>
+
+                Quel réseau social allez-vous utiliser ?
+
+            </li>
+
+
+
+
+            <li>
+
+                Quels types de contenus allez-vous publier ?
+
+            </li>
+
+
+
+
+            <li>
+
+                Proposez un exemple de publication.
+
+            </li>
+
+
+        </ul>
+
+
+
+
+
+
+        <textarea placeholder="Écrivez votre réponse ici..."></textarea>
+
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+    <!--====================================
+            NAVIGATION
+=====================================-->
+
+    <section class="navigation">
+
+
+        <button onclick="retourCours()">
+
+
+            ← Retour au chapitre
+
+
+        </button>
+
+
+
+
+
+
+        <button onclick="terminerLecon()">
+
+
+            ✓ Terminer la leçon
+
+
+        </button>
+
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+    <!--====================================
+            FOOTER
+=====================================-->
+
+    <footer>
+
+
+        <h3>
+
+            BMJ SERVICE
+
+        </h3>
+
+
+
+
+        <p>
+
+            Félicitations ! Vous avez terminé la Leçon 2 du chapitre
+
+            <strong>Social Media Marketing</strong>.
+
+            Dans la prochaine leçon, vous découvrirez la gestion
+
+            des communautés et l'engagement des clients.
+
+        </p>
+
+
+
+
+    </footer>
+    <script>
+
+
+        //==================================================
+        // CHAPITRE 4
+        // SOCIAL MEDIA MARKETING
+        // LEÇON 2
+        //==================================================
+
+
+
+
+
+
+        //====================================
+        // CHARGEMENT DE LA PAGE
+        //====================================
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+
+
+            let utilisateur = JSON.parse(
+
+                localStorage.getItem("bmj_current_user")
+
+            );
+
+
+
+
+
+            //================================
+            // AFFICHAGE PROFIL
+            //================================
+
+
+
+            if (utilisateur) {
+
+
+
+                document.getElementById("nomUtilisateur").innerHTML = utilisateur.nom;
+
+
+
+
+                if (utilisateur.photo && utilisateur.photo !== "") {
+
+
+                    document.getElementById("photoUtilisateur").src = utilisateur.photo;
+
+
+                }
+
+
+
+
+            } else {
+
+
+
+                document.getElementById("nomUtilisateur").innerHTML = "Apprenant";
+
+
+                document.getElementById("domaineUtilisateur").innerHTML = "Marketing Digital";
+
+
+
+            }
+
+
+
+
+        });
+
+
+
+
+
+
+
+
+
+        //====================================
+        // RETOUR AU CHAPITRE
+        //====================================
+
+
+        function retourCours() {
+
+
+
+            window.location.href = "social_media.php";
+
+
+
+        }
+
+
+
+
+
+
+
+
+
+        //====================================
+        // TERMINER LA LEÇON 2
+        //====================================
+
+
+        function terminerLecon() {
+
+
+
+            let utilisateur = JSON.parse(
+
+                localStorage.getItem("bmj_current_user")
+
+            );
+
+
+
+
+
+            //================================
+            // PROGRESSION SOCIAL MEDIA
+            //================================
+
+
+            let progression = JSON.parse(
+
+
+                localStorage.getItem("socialmedia_progression")
+
+
+            ) || [];
+
+
+
+
+
+
+
+
+            //================================
+            // VERIFICATION EXISTANCE
+            //================================
+
+
+            if (progression.includes("2")) {
+
+
+
+                alert(
+
+                    "Cette leçon est déjà terminée."
+
+                );
+
+
+
+                window.location.href = "social_media.php";
+
+
+                return;
+
+
+
+            }
+
+
+
+
+
+
+
+
+            //================================
+            // AJOUT LEÇON 2
+            //================================
+
+
+
+            progression.push("2");
+
+
+
+
+
+            localStorage.setItem(
+
+
+                "socialmedia_progression",
+
+
+                JSON.stringify(progression)
+
+
+            );
+
+
+
+
+
+
+
+
+
+            //================================
+            // SAUVEGARDE UTILISATEUR
+            //================================
+
+
+            if (utilisateur) {
+
+
+
+
+
+                if (!utilisateur.coursSuivis) {
+
+
+
+                    utilisateur.coursSuivis = [];
+
+
+
+                }
+
+
+
+
+
+
+
+
+                if (!utilisateur.coursSuivis.includes(
+
+
+
+                    "Social Media Marketing - Leçon 2"
+
+
+
+                )) {
+
+
+
+                    utilisateur.coursSuivis.push(
+
+
+
+                        "Social Media Marketing - Leçon 2"
+
+
+
+                    );
+
+
+
+                }
+
+
+
+
+
+
+
+
+                //================================
+                // CALCUL PROGRESSION CHAPITRE 4
+                //================================
+
+
+
+                let totalLecons = 3;
+
+
+
+                utilisateur.progressionSocialMedia = Math.round(
+
+
+
+                    (progression.length / totalLecons) * 100
+
+
+
+                );
+
+
+
+
+
+
+
+                localStorage.setItem(
+
+
+
+                    "bmj_current_user",
+
+
+
+                    JSON.stringify(utilisateur)
+
+
+
+                );
+
+
+
+
+
+
+
+
+
+                //================================
+                // MISE A JOUR BASE LOCALE
+                //================================
+
+
+
+                let utilisateurs = JSON.parse(
+
+
+
+                    localStorage.getItem("bmj_users")
+
+
+
+                ) || [];
+
+
+
+
+
+
+
+                let index = utilisateurs.findIndex(
+
+
+
+                    u => u.id === utilisateur.id
+
+
+
+                );
+
+
+
+
+
+
+
+
+                if (index !== -1) {
+
+
+
+                    utilisateurs[index] = utilisateur;
+
+
+
+                }
+
+
+
+
+
+
+
+
+                localStorage.setItem(
+
+
+
+                    "bmj_users",
+
+
+
+                    JSON.stringify(utilisateurs)
+
+
+
+                );
+
+
+
+
+            }
+
+
+
+
+
+
+
+
+
+            //================================
+            // MESSAGE
+            //================================
+
+
+
+            alert(
+
+
+
+                "🎉 Félicitations !\n\nVous avez terminé la Leçon 2 : Créer une stratégie de contenu efficace."
+
+
+
+            );
+
+
+
+
+
+
+
+
+
+            //================================
+            // RETOUR CHAPITRE
+            //================================
+
+
+
+            window.location.href = "social_media.html";
+
+
+
+
+
+        }
+
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*=========================================
+            BMJ SERVICE ADMIN LOGIN
+=========================================*/
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #0f5132, #198754, #20c997);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+        }
+
+        /*=========================
+    CONTENEUR
+=========================*/
+
+        .login-container {
+            width: 1100px;
+            max-width: 100%;
+            min-height: 650px;
+            background: #fff;
+            border-radius: 25px;
+            overflow: hidden;
+            display: flex;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, .25);
+        }
+
+        /*=========================
+    PARTIE GAUCHE
+=========================*/
+
+        .login-left {
+            width: 45%;
+            background: linear-gradient(160deg, #198754, #157347);
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 50px;
+            text-align: center;
+        }
+
+        .login-left img {
+            width: 130px;
+            height: 130px;
+            object-fit: contain;
+            margin-bottom: 25px;
+        }
+
+        .login-left h1 {
+            font-size: 38px;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .login-left h1 span {
+            color: #ffd43b;
+        }
+
+        .login-left p {
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+
+        .login-left small {
+            opacity: .9;
+            line-height: 28px;
+            font-size: 15px;
+        }
+
+        /*=========================
+    PARTIE DROITE
+=========================*/
+
+        .login-right {
+            width: 55%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #f5f7fb;
+            padding: 40px;
+        }
+
+        .login-box {
+            width: 100%;
+            max-width: 450px;
+        }
+
+        .icon {
+            width: 90px;
+            height: 90px;
+            margin: auto;
+            border-radius: 50%;
+            background: #198754;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 38px;
+            margin-bottom: 25px;
+        }
+
+        .login-box h2 {
+            text-align: center;
+            color: #198754;
+            margin-bottom: 10px;
+        }
+
+        .login-box p {
+            text-align: center;
+            color: #666;
+            margin-bottom: 35px;
+        }
+
+        /*=========================
+    CHAMPS
+=========================*/
+
+        .input-box {
+            display: flex;
+            align-items: center;
+            background: #fff;
+            border: 2px solid #e5e5e5;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            transition: .3s;
+        }
+
+        .input-box:focus-within {
+            border-color: #198754;
+            box-shadow: 0 0 12px rgba(25, 135, 84, .2);
+        }
+
+        .input-box i {
+            width: 60px;
+            text-align: center;
+            color: #198754;
+            font-size: 18px;
+        }
+
+        .input-box input {
+            width: 100%;
+            border: none;
+            outline: none;
+            padding: 16px;
+            font-size: 16px;
+            background: none;
+        }
+
+        /*=========================
+    OPTIONS
+=========================*/
+
+        .options {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            font-size: 15px;
+            color: #555;
+        }
+
+        .options input {
+            margin-right: 8px;
+        }
+
+        /*=========================
+    BOUTON
+=========================*/
+
+        #btnConnexion {
+            width: 100%;
+            padding: 16px;
+            border: none;
+            border-radius: 12px;
+            background: #198754;
+            color: #fff;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        #btnConnexion:hover {
+            background: #146c43;
+            transform: translateY(-2px);
+        }
+
+        #btnConnexion i {
+            margin-right: 8px;
+        }
+
+        /*=========================
+    RETOUR
+=========================*/
+
+        .retour {
+            display: block;
+            margin-top: 25px;
+            text-align: center;
+            color: #198754;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .retour:hover {
+            color: #0f5132;
+        }
+
+        /*=========================
+    RESPONSIVE
+=========================*/
+
+        @media(max-width:900px) {
+
+            .login-container {
+                flex-direction: column;
+            }
+
+            .login-left,
+            .login-right {
+                width: 100%;
+            }
+
+            .login-left {
+                padding: 40px 25px;
+            }
+
+            .login-right {
+                padding: 30px 20px;
+            }
+
+        }
+
+        @media(max-width:500px) {
+
+            body {
+                padding: 15px;
+            }
+
+            .login-container {
+                border-radius: 18px;
+            }
+
+            .login-left img {
+                width: 90px;
+                height: 90px;
+            }
+
+            .login-left h1 {
+                font-size: 28px;
+            }
+
+            .login-left p {
+                font-size: 18px;
+            }
+
+            .login-box h2 {
+                font-size: 24px;
+            }
+
+            .icon {
+                width: 70px;
+                height: 70px;
+                font-size: 28px;
+            }
+
+            .input-box input {
+                font-size: 15px;
+                padding: 14px;
+            }
+
+            #btnConnexion {
+                padding: 15px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--====================================
+            CONNEXION ADMINISTRATEUR
+    =====================================-->
+
+    <div class="login-container">
+
+        <!-- Côté gauche -->
+
+        <div class="login-left">
+
+            <img src="images/logo.png" alt="BMJ SERVICE">
+
+            <h1>
+
+                BMJ <span>SERVICE</span>
+
+            </h1>
+
+            <p>
+
+                Tableau de bord Administrateur
+
+            </p>
+
+            <small>
+
+                Plateforme de gestion et de surveillance
+
+            </small>
+
+        </div>
+
+
+
+        <!-- Côté droit -->
+
+        <div class="login-right">
+
+            <div class="login-box">
+
+                <div class="icon">
+
+                    <i class="fa-solid fa-user-shield"></i>
+
+                </div>
+
+                <h2>
+
+                    Connexion Administrateur
+
+                </h2>
+
+                <p>
+
+                    Connectez-vous pour accéder au panneau d'administration.
+
+                </p>
+
+
+
+                <div class="input-box">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                    <input type="email" id="email" placeholder="Adresse e-mail" autocomplete="off">
+
+                </div>
+
+
+
+                <div class="input-box">
+
+                    <i class="fa-solid fa-lock"></i>
+
+                    <input type="password" id="password" placeholder="Mot de passe">
+
+                </div>
+
+
+
+                <div class="options">
+
+                    <label>
+
+                        <input type="checkbox" id="remember">
+
+                        Se souvenir de moi
+
+                    </label>
+
+                </div>
+
+
+
+                <button id="btnConnexion">
+
+                    <i class="fa-solid fa-right-to-bracket"></i>
+
+                    Se connecter
+
+                </button>
+
+
+
+                <a href="index.html" class="retour">
+
+                    <i class="fa-solid fa-arrow-left"></i>
+
+                    Retour à l'accueil
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script> //=====================================================
+        // BMJ SERVICE
+        // CONNEXION ADMINISTRATEUR
+        //=====================================================
+
+        //============================================
+        // CREATION AUTOMATIQUE DE L'ADMIN
+        //============================================
+
+        if (!localStorage.getItem("bmj_admin")) {
+
+            let admin = {
+
+                id: "ADMIN001",
+
+                nom: "Administrateur BMJ",
+
+                email: "admin@bmjservice.com",
+
+                password: "admin123",
+
+                role: "Administrateur",
+
+                photo: "images/admin.png",
+
+                statut: "Actif"
+
+            }
+
+                ;
+
+            localStorage.setItem("bmj_admin",
+
+                JSON.stringify(admin));
+
+        }
+
+        //============================================
+        // SE SOUVENIR DE MOI
+        //============================================
+
+        window.onload = function () {
+
+            let remember = JSON.parse(localStorage.getItem("bmj_admin_remember"));
+
+            if (remember) {
+
+                document.getElementById("email").value = remember.email;
+
+                document.getElementById("remember").checked = true;
+
+            }
+
+        }
+
+            ;
+
+        //============================================
+        // CONNEXION
+        //============================================
+
+        document.getElementById("btnConnexion").addEventListener("click", function () {
+
+            let email = document.getElementById("email").value.trim().toLowerCase();
+
+            let password = document.getElementById("password").value;
+
+            let remember = document.getElementById("remember").checked;
+
+            if (email === "" || password === "") {
+
+                alert("Veuillez remplir tous les champs.");
+
+                return;
+
+            }
+
+            let admin = JSON.parse(localStorage.getItem("bmj_admin"));
+
+            if (!admin) {
+
+                alert("Compte administrateur introuvable.");
+
+                return;
+
+            }
+
+            //============================================
+            // VERIFICATION
+            //============================================
+
+            if (email !== admin.email.toLowerCase() || password !== admin.password) {
+
+                alert("Email ou mot de passe incorrect.");
+
+                return;
+
+            }
+
+            if (admin.statut !== "Actif") {
+
+                alert("Compte administrateur désactivé.");
+
+                return;
+
+            }
+
+            //============================================
+            // SE SOUVENIR DE MOI
+            //============================================
+
+            if (remember) {
+
+                localStorage.setItem("bmj_admin_remember",
+
+                    JSON.stringify({
+
+                        email: email
+                    }));
+
+            }
+
+            else {
+
+                localStorage.removeItem("bmj_admin_remember"
+
+                );
+
+            }
+
+            //============================================
+            // SESSION ADMIN
+            //============================================
+
+            localStorage.setItem("bmj_admin_connecte",
+
+                JSON.stringify(admin));
+
+            //============================================
+            // HISTORIQUE
+            //============================================
+
+            let historique = JSON.parse(localStorage.getItem("bmj_historique")) || [];
+
+            historique.push({
+
+                utilisateur: admin.nom,
+
+                action: "Connexion Administrateur",
+
+                date: new Date().toLocaleDateString(),
+
+                heure: new Date().toLocaleTimeString()
+            });
+
+            localStorage.setItem("bmj_historique",
+
+                JSON.stringify(historique));
+
+            //============================================
+            // MESSAGE
+            //============================================
+
+            alert("Bienvenue " + admin.nom + "\nConnexion réussie."
+
+            );
+
+            //============================================
+            // REDIRECTION
+            //============================================
+
+            window.location.href = "admin.html";
+
+        });
+
+        //============================================
+        // TOUCHE ENTREE
+        //============================================
+
+        document.addEventListener("keydown", function (e) {
+
+            if (e.key === "Enter") {
+
+                document.getElementById("btnConnexion").click();
+
+            }
+
+        });
+
+    </script>
+</body>
+
+</html>

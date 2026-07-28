@@ -1,0 +1,2071 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*====================================================
+        BMJ SERVICE - ADMIN DASHBOARD
+====================================================*/
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #f5f7fb;
+            color: #333;
+            display: flex;
+            overflow-x: hidden;
+        }
+
+        /*====================================================
+        SIDEBAR
+====================================================*/
+
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 270px;
+            height: 100vh;
+            background: linear-gradient(180deg, #145A86, #0b3f61);
+            color: #fff;
+            overflow-y: auto;
+            z-index: 1000;
+            box-shadow: 5px 0 20px rgba(0, 0, 0, .15);
+        }
+
+        /*====================================================
+        LOGO
+====================================================*/
+
+        .logo {
+            text-align: center;
+            padding: 30px 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, .15);
+        }
+
+        .logo img {
+            width: 85px;
+            height: 85px;
+            border-radius: 50%;
+            border: 4px solid #D4AF37;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        .logo h2 {
+            font-size: 25px;
+            color: white;
+        }
+
+        .logo span {
+            color: #D4AF37;
+        }
+
+        /*====================================================
+        MENU
+====================================================*/
+
+        .sidebar nav {
+            margin-top: 20px;
+        }
+
+        .sidebar nav a {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            color: white;
+            text-decoration: none;
+            padding: 18px 25px;
+            transition: .3s;
+            font-size: 15px;
+            border-left: 4px solid transparent;
+        }
+
+        .sidebar nav a i {
+            width: 25px;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        .sidebar nav a:hover {
+            background: rgba(255, 255, 255, .12);
+            border-left: 4px solid #D4AF37;
+            padding-left: 35px;
+        }
+
+        .sidebar nav a.active {
+            background: #D4AF37;
+            color: #145A86;
+            font-weight: 600;
+            border-left: 4px solid white;
+        }
+
+        /*====================================================
+        SCROLLBAR
+====================================================*/
+
+        .sidebar::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .sidebar::-webkit-scrollbar-thumb {
+            background: #D4AF37;
+            border-radius: 30px;
+        }
+
+        /*====================================================
+        MAIN
+====================================================*/
+
+        main {
+            flex: 1;
+            margin-left: 270px;
+            padding: 30px;
+            min-height: 100vh;
+        }
+
+        /*====================================================
+        HEADER
+====================================================*/
+
+        header {
+            background: white;
+            border-radius: 20px;
+            padding: 20px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+            margin-bottom: 35px;
+        }
+
+        header h1 {
+            color: #145A86;
+            font-size: 32px;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            color: #777;
+            font-size: 15px;
+        }
+
+        /*====================================================
+        ADMIN PROFILE
+====================================================*/
+
+        .admin-profile {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            background: #f8f9fb;
+            padding: 10px 20px;
+            border-radius: 15px;
+        }
+
+        .admin-profile img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 3px solid #D4AF37;
+            object-fit: cover;
+        }
+
+        .admin-profile h3 {
+            color: #145A86;
+            font-size: 18px;
+        }
+
+        .admin-profile small {
+            color: #777;
+        }
+
+        /*====================================================
+                CARTES STATISTIQUES
+====================================================*/
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        /*====================================================
+                CARTE
+====================================================*/
+
+        .card {
+            background: #fff;
+            border-radius: 20px;
+            padding: 30px 25px;
+            text-align: center;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, .08);
+            transition: .35s ease;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            border-top: 5px solid #145A86;
+        }
+
+        /* Ligne décorative */
+
+        .card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 4px;
+            background: #D4AF37;
+            transition: .5s;
+        }
+
+        .card:hover::before {
+            left: 0;
+        }
+
+        /* Hover */
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 18px 40px rgba(20, 90, 134, .18);
+        }
+
+        /*====================================================
+                ICÔNES
+====================================================*/
+
+        .card i {
+            width: 75px;
+            height: 75px;
+            line-height: 75px;
+            border-radius: 50%;
+            background: rgba(20, 90, 134, .08);
+            color: #145A86;
+            font-size: 30px;
+            margin-bottom: 20px;
+            transition: .3s;
+        }
+
+        .card:hover i {
+            background: #145A86;
+            color: white;
+            transform: rotate(8deg) scale(1.08);
+        }
+
+        /*====================================================
+                NOMBRE
+====================================================*/
+
+        .card h2 {
+            font-size: 36px;
+            color: #145A86;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+
+        /*====================================================
+                TEXTE
+====================================================*/
+
+        .card p {
+            color: #666;
+            font-size: 15px;
+            font-weight: 500;
+        }
+
+        /*====================================================
+                COULEURS SPÉCIFIQUES
+====================================================*/
+
+        .card:nth-child(1) {
+            border-top-color: #145A86;
+        }
+
+        .card:nth-child(2) {
+            border-top-color: #28a745;
+        }
+
+        .card:nth-child(3) {
+            border-top-color: #D4AF37;
+        }
+
+        .card:nth-child(4) {
+            border-top-color: #0d6efd;
+        }
+
+        .card:nth-child(5) {
+            border-top-color: #dc3545;
+        }
+
+        .card:nth-child(6) {
+            border-top-color: #6f42c1;
+        }
+
+        /*====================================================
+                ANIMATION
+====================================================*/
+
+        .card {
+            animation: fadeCard .6s ease;
+        }
+
+        @keyframes fadeCard {
+
+            from {
+
+                opacity: 0;
+                transform: translateY(30px);
+
+            }
+
+            to {
+
+                opacity: 1;
+                transform: translateY(0);
+
+            }
+
+        }
+
+        /*====================================================
+            EFFET AU CLIC
+====================================================*/
+
+        .card:active {
+
+            transform: scale(.97);
+
+        }
+
+        /*====================================================
+            SURVEILLANCE
+====================================================*/
+
+        .monitoring {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 25px;
+            margin: 35px 0;
+        }
+
+        .box {
+            background: #fff;
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+        }
+
+        .box h2 {
+            color: #145A86;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #eee;
+            font-size: 22px;
+        }
+
+        #activites,
+        #connexions {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            max-height: 350px;
+            overflow-y: auto;
+        }
+
+        #activites div,
+        #connexions div {
+            background: #f8f9fc;
+            padding: 15px;
+            border-left: 5px solid #145A86;
+            border-radius: 10px;
+            transition: .3s;
+        }
+
+        #activites div:hover,
+        #connexions div:hover {
+            background: #eef6fb;
+            transform: translateX(5px);
+        }
+
+        /*====================================================
+            TABLEAU UTILISATEURS
+====================================================*/
+
+        .users {
+            background: #fff;
+            padding: 25px;
+            border-radius: 20px;
+            margin-top: 35px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+            overflow-x: auto;
+        }
+
+        .users h2 {
+            color: #145A86;
+            margin-bottom: 20px;
+        }
+
+        /*====================================================
+            TABLE
+====================================================*/
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 900px;
+        }
+
+        thead {
+            background: #145A86;
+            color: white;
+        }
+
+        thead th {
+            padding: 16px;
+            font-size: 15px;
+            text-align: left;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid #ececec;
+            transition: .3s;
+        }
+
+        tbody tr:hover {
+            background: #f7fbff;
+        }
+
+        tbody td {
+            padding: 14px;
+            font-size: 14px;
+            color: #444;
+        }
+
+        /*====================================================
+            BOUTONS ACTIONS
+====================================================*/
+
+        table button {
+            border: none;
+            padding: 8px 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            margin: 2px;
+            font-size: 13px;
+            transition: .3s;
+        }
+
+        .btn-edit {
+            background: #145A86;
+            color: white;
+        }
+
+        .btn-delete {
+            background: #dc3545;
+            color: white;
+        }
+
+        .btn-premium {
+            background: #D4AF37;
+            color: #145A86;
+            font-weight: bold;
+        }
+
+        table button:hover {
+            transform: scale(1.05);
+        }
+
+        /*====================================================
+        DERNIERS PREMIUM
+====================================================*/
+
+        .premium-list {
+            margin-top: 35px;
+            background: white;
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+        }
+
+        .premium-list h2 {
+            color: #145A86;
+            margin-bottom: 20px;
+        }
+
+        #listePremium {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+        }
+
+        #listePremium .premium-item {
+            background: #fff8e6;
+            border-left: 5px solid #D4AF37;
+            border-radius: 15px;
+            padding: 18px;
+            transition: .3s;
+        }
+
+        #listePremium .premium-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(212, 175, 55, .25);
+        }
+
+        /*====================================================
+            CERTIFICATS
+====================================================*/
+
+        .certificats {
+            margin-top: 35px;
+            background: white;
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+        }
+
+        .certificats h2 {
+            color: #145A86;
+            margin-bottom: 20px;
+        }
+
+        #listeCertificats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        #listeCertificats .certificat-item {
+            background: #f8f9fc;
+            border-left: 5px solid:#28a745;
+            border-radius: 15px;
+            padding: 18px;
+            transition: .3s;
+        }
+
+        #listeCertificats .certificat-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(40, 167, 69, .20);
+        }
+
+        /*====================================================
+            BADGES
+====================================================*/
+
+        .badge {
+            display: inline-block;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .badge-premium {
+            background: #D4AF37;
+            color: #145A86;
+        }
+
+        .badge-actif {
+            background: #28a745;
+            color: white;
+        }
+
+        .badge-bloque {
+            background: #dc3545;
+            color: white;
+        }
+
+        /*====================================================
+                RAPPORTS
+====================================================*/
+
+        .rapports {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+
+        .rapport {
+            background: #fff;
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+            transition: .3s;
+        }
+
+        .rapport:hover {
+            transform: translateY(-5px);
+        }
+
+        .rapport h3 {
+            color: #145A86;
+            margin-bottom: 20px;
+            font-size: 20px;
+            border-bottom: 2px solid #f1f1f1;
+            padding-bottom: 10px;
+        }
+
+        canvas {
+            width: 100% !important;
+            max-width: 100%;
+            height: 320px !important;
+        }
+
+        /*====================================================
+            SCROLLBAR
+====================================================*/
+
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #145A86;
+            border-radius: 20px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #edf2f7;
+        }
+
+        /*====================================================
+            ANIMATIONS
+====================================================*/
+
+        @keyframes fadeUp {
+
+            from {
+
+                opacity: 0;
+                transform: translateY(25px);
+
+            }
+
+            to {
+
+                opacity: 1;
+                transform: translateY(0);
+
+            }
+
+        }
+
+        .cards,
+        .monitoring,
+        .users,
+        .premium-list,
+        .certificats,
+        .rapports {
+
+            animation: fadeUp .6s ease;
+
+        }
+
+        /*====================================================
+            RESPONSIVE TABLETTE
+====================================================*/
+
+        @media(max-width:1100px) {
+
+            .sidebar {
+
+                width: 220px;
+
+            }
+
+            main {
+
+                margin-left: 220px;
+                padding: 20px;
+
+            }
+
+            header {
+
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 20px;
+
+            }
+
+            .cards {
+
+                grid-template-columns: repeat(2, 1fr);
+
+            }
+
+            .monitoring {
+
+                grid-template-columns: 1fr;
+
+            }
+
+            .rapports {
+
+                grid-template-columns: 1fr;
+
+            }
+
+        }
+
+        /*====================================================
+            RESPONSIVE MOBILE
+====================================================*/
+
+        @media(max-width:768px) {
+
+            body {
+
+                display: block;
+
+            }
+
+            /* Sidebar */
+
+            .sidebar {
+
+                position: relative;
+                width: 100%;
+                height: auto;
+
+            }
+
+            .logo {
+
+                padding: 20px;
+
+            }
+
+            .logo img {
+
+                width: 70px;
+                height: 70px;
+
+            }
+
+            /* Main */
+
+            main {
+
+                margin-left: 0;
+                width: 100%;
+                padding: 15px;
+
+            }
+
+            /* Header */
+
+            header {
+
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+
+            }
+
+            header h1 {
+
+                font-size: 24px;
+
+            }
+
+            header p {
+
+                font-size: 14px;
+
+            }
+
+            .admin-profile {
+
+                width: 100%;
+                justify-content: center;
+
+            }
+
+            /* Cards */
+
+            .cards {
+
+                grid-template-columns: 1fr;
+
+            }
+
+            .card {
+
+                padding: 25px 20px;
+
+            }
+
+            .card h2 {
+
+                font-size: 32px;
+
+            }
+
+            /* Monitoring */
+
+            .monitoring {
+
+                grid-template-columns: 1fr;
+
+            }
+
+            /* Tableau */
+
+            .users {
+
+                overflow-x: auto;
+
+            }
+
+            table {
+
+                min-width: 900px;
+
+            }
+
+            /* Premium */
+
+            #listePremium {
+
+                grid-template-columns: 1fr;
+
+            }
+
+            /* Certificats */
+
+            #listeCertificats {
+
+                grid-template-columns: 1fr;
+
+            }
+
+            /* Rapports */
+
+            .rapports {
+
+                grid-template-columns: 1fr;
+
+            }
+
+            canvas {
+
+                height: 250px !important;
+
+            }
+
+        }
+
+        /*====================================================
+            PETITS SMARTPHONES
+====================================================*/
+
+        @media(max-width:480px) {
+
+            .logo h2 {
+
+                font-size: 20px;
+
+            }
+
+            .sidebar nav a {
+
+                font-size: 14px;
+                padding: 15px;
+
+            }
+
+            header h1 {
+
+                font-size: 20px;
+
+            }
+
+            .card {
+
+                padding: 20px;
+
+            }
+
+            .card i {
+
+                width: 60px;
+                height: 60px;
+                line-height: 60px;
+                font-size: 24px;
+
+            }
+
+            .card h2 {
+
+                font-size: 28px;
+
+            }
+
+            .box h2,
+            .users h2,
+            .premium-list h2,
+            .certificats h2,
+            .rapport h3 {
+
+                font-size: 18px;
+
+            }
+
+            .admin-profile img {
+
+                width: 50px;
+                height: 50px;
+
+            }
+
+        }
+
+        /*====================================================
+                FIN
+====================================================*/
+    </style>
+</head>
+
+<body>
+
+    <!--====================================
+            SIDEBAR ADMIN
+    =====================================-->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <img src="images/logo.png">
+
+            <h2>BMJ <span>SERVICE</span></h2>
+
+        </div>
+
+        <nav>
+
+            <a href="#" class="active">
+                <i class="fa-solid fa-gauge"></i>
+                <span>Tableau de bord</span>
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-users"></i>
+                <span>Utilisateurs</span>
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-crown"></i>
+                <span>Abonnés Premium</span>
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-book"></i>
+                <span>Formations</span>
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-layer-group"></i>
+                <span>Domaines</span>
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-certificate"></i>
+                <span>Certificats</span>
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-chart-line"></i>
+                <span>Statistiques</span>
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-comments"></i>
+                <span>Messages</span>
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-bell"></i>
+                <span>Notifications</span>
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-gear"></i>
+                <span>Paramètres</span>
+            </a>
+
+            <a href="#" id="logoutAdmin">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span>Déconnexion</span>
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+
+
+
+    <!--====================================
+                CONTENU
+    =====================================-->
+
+    <main>
+
+        <!-- HEADER -->
+
+        <header>
+
+            <div>
+
+                <h1>
+
+                    Tableau de bord Administrateur
+
+                </h1>
+
+                <p>
+
+                    Surveillance complète de BMJ SERVICE
+
+                </p>
+
+            </div>
+
+            <div class="admin-profile">
+
+                <img src="images/admin.png">
+
+                <div>
+
+                    <h3>Administrateur</h3>
+
+                    <small>Contrôle total</small>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+
+
+        <!-- CARTES -->
+
+        <section class="cards">
+
+            <div class="card">
+                <i class="fa-solid fa-users"></i>
+                <h2 id="nbUtilisateurs">0</h2>
+                <p>Utilisateurs</p>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-user-check"></i>
+                <h2 id="nbActifs">0</h2>
+                <p>Utilisateurs actifs</p>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-crown"></i>
+                <h2 id="nbPremium">0</h2>
+                <p>Premium</p>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <h2 id="nbFormations">6</h2>
+                <p>Domaines</p>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-certificate"></i>
+                <h2 id="nbCertificats">0</h2>
+                <p>Certificats</p>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-eye"></i>
+                <h2 id="nbVisites">0</h2>
+                <p>Visites</p>
+            </div>
+
+        </section>
+
+
+
+
+
+        <!-- SURVEILLANCE -->
+
+        <section class="monitoring">
+
+            <div class="box">
+
+                <h2>
+
+                    Activité en temps réel
+
+                </h2>
+
+                <div id="activites"></div>
+
+            </div>
+
+            <div class="box">
+
+                <h2>
+
+                    Dernières connexions
+
+                </h2>
+
+                <div id="connexions"></div>
+
+            </div>
+
+        </section>
+
+
+
+
+
+        <!-- TABLEAU UTILISATEURS -->
+
+        <section class="users">
+
+            <h2>
+
+                Liste des utilisateurs
+
+            </h2>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>ID BMJ</th>
+
+                        <th>Nom</th>
+
+                        <th>Email</th>
+
+                        <th>Domaine</th>
+
+                        <th>Premium</th>
+
+                        <th>Progression</th>
+
+                        <th>Statut</th>
+
+                        <th>Actions</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="listeUtilisateurs">
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+
+
+
+
+        <!-- DERNIERS ABONNÉS -->
+
+        <section class="premium-list">
+
+            <h2>
+
+                Derniers abonnés Premium
+
+            </h2>
+
+            <div id="listePremium"></div>
+
+        </section>
+
+
+
+
+
+        <!-- CERTIFICATS -->
+
+        <section class="certificats">
+
+            <h2>
+
+                Certificats délivrés
+
+            </h2>
+
+            <div id="listeCertificats"></div>
+
+        </section>
+
+
+
+
+
+        <!-- RAPPORTS -->
+
+        <section class="rapports">
+
+            <div class="rapport">
+
+                <h3>Progression globale</h3>
+
+                <canvas id="progressChart"></canvas>
+            </div>
+
+            <div class="rapport">
+
+                <h3>Répartition des domaines</h3>
+
+                <canvas id="domainChart"></canvas>
+            </div>
+
+        </section>
+
+
+
+
+
+    </main>
+    <script>
+        //====================================================
+        // BMJ SERVICE
+        // TABLEAU DE BORD ADMINISTRATEUR
+        // PARTIE 1/4
+        //====================================================
+
+        //============================================
+        // VERIFICATION ADMIN
+        //============================================
+
+        let admin = JSON.parse(localStorage.getItem("bmj_admin"));
+
+        if (!admin) {
+
+            alert("Accès refusé.");
+
+            window.location.href = "admin_login.html";
+
+        }
+
+        //============================================
+        // RECUPERATION DES DONNEES
+        //============================================
+
+        let utilisateurs = JSON.parse(
+            localStorage.getItem("bmj_users")
+        ) || [];
+
+        let historique = JSON.parse(
+            localStorage.getItem("bmj_historique")
+        ) || [];
+
+        let certificats = JSON.parse(
+            localStorage.getItem("bmj_certificats")
+        ) || [];
+
+        let visites = Number(
+            localStorage.getItem("bmj_visites")
+        ) || 0;
+
+        //============================================
+        // STATISTIQUES
+        //============================================
+
+        function chargerStatistiques() {
+
+            let nbUtilisateurs = utilisateurs.length;
+
+            let nbActifs = utilisateurs.filter(
+
+                u => u.statut === "Actif"
+
+            ).length;
+
+            let nbPremium = utilisateurs.filter(
+
+                u => u.premium === true
+
+            ).length;
+
+            let nbCertificats = utilisateurs.filter(
+
+                u => u.certificat === true
+
+            ).length;
+
+            //------------------------------------
+
+            document.getElementById("nbUtilisateurs").innerHTML =
+                nbUtilisateurs;
+
+            document.getElementById("nbActifs").innerHTML =
+                nbActifs;
+
+            document.getElementById("nbPremium").innerHTML =
+                nbPremium;
+
+            document.getElementById("nbCertificats").innerHTML =
+                nbCertificats;
+
+            document.getElementById("nbVisites").innerHTML =
+                visites;
+
+        }
+
+        //============================================
+        // AFFICHAGE ADMIN
+        //============================================
+
+        window.onload = function () {
+
+            chargerStatistiques();
+
+        };
+        //====================================================
+        // PARTIE 2/4
+        // GESTION DES UTILISATEURS
+        //====================================================
+
+        //============================================
+        // AFFICHER LES UTILISATEURS
+        //============================================
+
+        function afficherUtilisateurs() {
+
+            let tbody = document.getElementById("listeUtilisateurs");
+
+            if (!tbody) return;
+
+            tbody.innerHTML = "";
+
+            utilisateurs.forEach(function (u, index) {
+
+                let premium = u.premium
+                    ? "<span style='color:#16a34a;font-weight:bold;'>⭐ Premium</span>"
+                    : "<span style='color:#666;'>Gratuit</span>";
+
+                let statut = u.statut === "Actif"
+                    ? "<span style='color:#16a34a;font-weight:bold;'>Actif</span>"
+                    : "<span style='color:#dc2626;font-weight:bold;'>Bloqué</span>";
+
+                tbody.innerHTML += `
+
+        <tr>
+
+            <td>${u.id}</td>
+
+            <td>${u.nom}</td>
+
+            <td>${u.email}</td>
+
+            <td>${u.domaine || "-"}</td>
+
+            <td>${premium}</td>
+
+            <td>${u.progression || 0}%</td>
+
+            <td>${statut}</td>
+
+            <td>
+
+                <button class="btnPremium"
+                onclick="premiumUtilisateur(${index})">
+
+                Premium
+
+                </button>
+
+                <button class="btnBlock"
+                onclick="bloquerUtilisateur(${index})">
+
+                ${u.statut === "Actif" ? "Bloquer" : "Débloquer"}
+
+                </button>
+
+                <button class="btnDelete"
+                onclick="supprimerUtilisateur(${index})">
+
+                Supprimer
+
+                </button>
+
+            </td>
+
+        </tr>
+
+        `;
+
+            });
+
+        }
+
+        //============================================
+        // SUPPRIMER
+        //============================================
+
+        function supprimerUtilisateur(index) {
+
+            if (!confirm("Supprimer cet utilisateur ?")) {
+
+                return;
+
+            }
+
+            utilisateurs.splice(index, 1);
+
+            localStorage.setItem(
+
+                "bmj_users",
+
+                JSON.stringify(utilisateurs)
+
+            );
+
+            chargerStatistiques();
+
+            afficherUtilisateurs();
+
+        }
+
+        //============================================
+        // BLOQUER / DEBLOQUER
+        //============================================
+
+        function bloquerUtilisateur(index) {
+
+            if (utilisateurs[index].statut === "Actif") {
+
+                utilisateurs[index].statut = "Bloqué";
+
+            }
+
+            else {
+
+                utilisateurs[index].statut = "Actif";
+
+            }
+
+            localStorage.setItem(
+
+                "bmj_users",
+
+                JSON.stringify(utilisateurs)
+
+            );
+
+            chargerStatistiques();
+
+            afficherUtilisateurs();
+
+        }
+
+        //============================================
+        // ACTIVER PREMIUM
+        //============================================
+
+        function premiumUtilisateur(index) {
+
+            utilisateurs[index].premium = true;
+
+            localStorage.setItem(
+
+                "bmj_users",
+
+                JSON.stringify(utilisateurs)
+
+            );
+
+            chargerStatistiques();
+
+            afficherUtilisateurs();
+
+        }
+
+        //============================================
+        // CHARGEMENT INITIAL
+        //============================================
+
+        window.addEventListener("load", function () {
+
+            afficherUtilisateurs();
+
+        });
+        //====================================================
+        // PARTIE 3/4
+        // SURVEILLANCE - PREMIUM - CERTIFICATS
+        //====================================================
+
+        //============================================
+        // ACTIVITES
+        //============================================
+
+        function afficherActivites() {
+
+            let activites = document.getElementById("activites");
+
+            if (!activites) return;
+
+            let historique = JSON.parse(
+                localStorage.getItem("bmj_historique")
+            ) || [];
+
+            activites.innerHTML = "";
+
+            if (historique.length === 0) {
+
+                activites.innerHTML = `
+            <p>Aucune activité enregistrée.</p>
+        `;
+
+                return;
+            }
+
+            historique.reverse().slice(0, 10).forEach(function (item) {
+
+                activites.innerHTML += `
+
+        <div class="activity-item">
+
+            <strong>${item.utilisateur}</strong>
+
+            <br>
+
+            ${item.action}
+
+            <br>
+
+            <small>
+
+                ${item.date} - ${item.heure}
+
+            </small>
+
+        </div>
+
+        `;
+
+            });
+
+        }
+
+        //============================================
+        // DERNIERES CONNEXIONS
+        //============================================
+
+        function afficherConnexions() {
+
+            let connexions = document.getElementById("connexions");
+
+            if (!connexions) return;
+
+            let historique = JSON.parse(
+                localStorage.getItem("bmj_historique")
+            ) || [];
+
+            connexions.innerHTML = "";
+
+            let liste = historique.filter(function (item) {
+
+                return item.action === "Connexion";
+
+            });
+
+            if (liste.length === 0) {
+
+                connexions.innerHTML = `
+            <p>Aucune connexion.</p>
+        `;
+
+                return;
+            }
+
+            liste.reverse().slice(0, 10).forEach(function (item) {
+
+                connexions.innerHTML += `
+
+        <div class="connexion-item">
+
+            👤 <strong>${item.utilisateur}</strong>
+
+            <br>
+
+            <small>
+
+                ${item.date}
+
+                à
+
+                ${item.heure}
+
+            </small>
+
+        </div>
+
+        `;
+
+            });
+
+        }
+
+        //============================================
+        // LISTE PREMIUM
+        //============================================
+
+        function afficherPremium() {
+
+            let zone = document.getElementById("listePremium");
+
+            if (!zone) return;
+
+            zone.innerHTML = "";
+
+            let premium = utilisateurs.filter(function (u) {
+
+                return u.premium === true;
+
+            });
+
+            if (premium.length === 0) {
+
+                zone.innerHTML = "<p>Aucun utilisateur Premium.</p>";
+
+                return;
+
+            }
+
+            premium.forEach(function (u) {
+
+                zone.innerHTML += `
+
+        <div class="premium-card">
+
+            <h3>
+
+                ⭐ ${u.nom}
+
+            </h3>
+
+            <p>
+
+                ${u.email}
+
+            </p>
+
+            <small>
+
+                ${u.domaine}
+
+            </small>
+
+        </div>
+
+        `;
+
+            });
+
+        }
+
+        //============================================
+        // CERTIFICATS
+        //============================================
+
+        function afficherCertificats() {
+
+            let zone = document.getElementById("listeCertificats");
+
+            if (!zone) return;
+
+            zone.innerHTML = "";
+
+            let certificats = utilisateurs.filter(function (u) {
+
+                return u.certificat === true;
+
+            });
+
+            if (certificats.length === 0) {
+
+                zone.innerHTML = "<p>Aucun certificat délivré.</p>";
+
+                return;
+
+            }
+
+            certificats.forEach(function (u) {
+
+                zone.innerHTML += `
+
+        <div class="certificat-card">
+
+            🏆
+
+            <strong>
+
+                ${u.nom}
+
+            </strong>
+
+            <br>
+
+            Domaine :
+
+            ${u.domaine}
+
+        </div>
+
+        `;
+
+            });
+
+        }
+
+        //============================================
+        // RAFRAICHISSEMENT AUTOMATIQUE
+        //============================================
+
+        setInterval(function () {
+
+            utilisateurs = JSON.parse(
+
+                localStorage.getItem("bmj_users")
+
+            ) || [];
+
+            afficherActivites();
+
+            afficherConnexions();
+
+            afficherPremium();
+
+            afficherCertificats();
+
+            chargerStatistiques();
+
+        }, 5000);
+
+        //============================================
+        // CHARGEMENT
+        //============================================
+
+        window.addEventListener("load", function () {
+
+            afficherActivites();
+
+            afficherConnexions();
+
+            afficherPremium();
+
+            afficherCertificats();
+
+        });
+        //==============================================
+        // GRAPHIQUE PROGRESSION
+        //==============================================
+
+        let progressCanvas = document.getElementById("progressChart");
+
+        if (progressCanvas) {
+
+            let moyenne = 0;
+
+            if (utilisateurs.length > 0) {
+
+                let total = 0;
+
+                utilisateurs.forEach(u => {
+
+                    total += Number(u.progression || 0);
+
+                });
+
+                moyenne = Math.round(total / utilisateurs.length);
+
+            }
+
+            new Chart(progressCanvas, {
+
+                type: "doughnut",
+
+                data: {
+
+                    labels: [
+
+                        "Progression",
+
+                        "Restant"
+
+                    ],
+
+                    datasets: [{
+
+                        data: [
+
+                            moyenne,
+
+                            100 - moyenne
+
+                        ],
+
+                        backgroundColor: [
+
+                            "#16a34a",
+
+                            "#e5e7eb"
+
+                        ],
+
+                        borderWidth: 0
+
+                    }]
+
+                },
+
+                options: {
+
+                    responsive: true,
+
+                    plugins: {
+
+                        legend: {
+
+                            position: "bottom"
+
+                        }
+
+                    }
+
+                }
+
+            });
+
+        }
+
+
+
+        //==============================================
+        // REPARTITION DES DOMAINES
+        //==============================================
+
+        let domaines = {
+
+            "Marketing Digital": 0,
+
+            "Entrepreneuriat": 0,
+
+            "Leadership": 0,
+
+            "Informatique": 0,
+
+            "Finance": 0,
+
+            "IA": 0
+
+        };
+
+        utilisateurs.forEach(u => {
+
+            if (domaines[u.domaine] !== undefined) {
+
+                domaines[u.domaine]++;
+
+            }
+
+        });
+
+        let domainCanvas = document.getElementById("domainChart");
+
+        if (domainCanvas) {
+
+            new Chart(domainCanvas, {
+
+                type: "bar",
+
+                data: {
+
+                    labels: Object.keys(domaines),
+
+                    datasets: [{
+
+                        label: "Utilisateurs",
+
+                        data: Object.values(domaines),
+
+                        backgroundColor: [
+
+                            "#16a34a",
+
+                            "#3b82f6",
+
+                            "#f59e0b",
+
+                            "#ef4444",
+
+                            "#8b5cf6",
+
+                            "#06b6d4"
+
+                        ],
+
+                        borderRadius: 8
+
+                    }]
+
+                },
+
+                options: {
+
+                    responsive: true,
+
+                    scales: {
+
+                        y: {
+
+                            beginAtZero: true
+
+                        }
+
+                    }
+
+                }
+
+            });
+
+        }
+
+
+
+        //==============================================
+        // ACTUALISATION AUTOMATIQUE
+        //==============================================
+
+        setInterval(function () {
+
+            document.getElementById("nbVisites").textContent =
+                Number(document.getElementById("nbVisites").textContent) + 1;
+
+        }, 10000);
+
+
+
+        //==============================================
+        // DECONNEXION ADMIN
+        //==============================================
+
+        let logout = document.getElementById("logoutAdmin");
+
+        if (logout) {
+
+            logout.addEventListener("click", function (e) {
+
+                e.preventDefault();
+
+                let choix = confirm(
+
+                    "Voulez-vous vraiment vous déconnecter ?"
+
+                );
+
+                if (!choix) return;
+
+                localStorage.removeItem("admin_connecte");
+
+                window.location.href = "admin_login.html";
+
+            });
+
+        }
+
+
+
+        //==============================================
+        // HORLOGE TEMPS REEL
+        //==============================================
+
+        function afficherHeure() {
+
+            let maintenant = new Date();
+
+            let heure = maintenant.toLocaleTimeString();
+
+            let date = maintenant.toLocaleDateString();
+
+            document.title =
+                "BMJ SERVICE ADMIN • " + heure;
+
+        }
+
+        setInterval(afficherHeure, 1000);
+
+
+
+        //==============================================
+        // MESSAGE DE BIENVENUE
+        //==============================================
+
+        console.log(
+
+            "====================================="
+
+        );
+
+        console.log(
+
+            "BMJ SERVICE ADMIN"
+
+        );
+
+        console.log(
+
+            "Tableau de bord chargé avec succès."
+
+        );
+
+        console.log(
+
+            "Nombre d'utilisateurs :",
+
+            utilisateurs.length
+
+        );
+
+        console.log(
+
+            "====================================="
+
+        );
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,3207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*==================================================
+        BMJ SERVICE - LEÇON 4 MARKETING
+        CONSTRUIRE UNE IMAGE DE MARQUE
+==================================================*/
+
+
+        * {
+
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+
+        }
+
+
+
+        html {
+
+            scroll-behavior: smooth;
+
+        }
+
+
+
+        body {
+
+            background: #f4f7fb;
+            color: #333;
+            line-height: 1.8;
+
+        }
+
+
+
+
+
+        /*=====================================
+            HEADER
+======================================*/
+
+
+        header {
+
+            position: fixed;
+
+            top: 0;
+
+            left: 0;
+
+            width: 100%;
+
+            height: 75px;
+
+            background: #fff;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            padding: 0 40px;
+
+            box-shadow: 0 5px 20px rgba(0, 0, 0, .08);
+
+            z-index: 1000;
+
+        }
+
+
+
+        .logo {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+        }
+
+
+
+        .logo img {
+
+            width: 50px;
+
+            height: 50px;
+
+            border-radius: 50%;
+
+            object-fit: cover;
+
+        }
+
+
+
+        .logo h2 {
+
+            color: #145A86;
+
+        }
+
+
+
+        .logo span {
+
+            color: #D4AF37;
+
+        }
+
+
+
+
+
+        .student-profile {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+        }
+
+
+
+        .student-profile img {
+
+            width: 48px;
+
+            height: 48px;
+
+            border-radius: 50%;
+
+            object-fit: cover;
+
+            border: 3px solid #D4AF37;
+
+        }
+
+
+
+        .student-profile h4 {
+
+            color: #145A86;
+
+        }
+
+
+
+        .student-profile small {
+
+            color: #777;
+
+        }
+
+
+
+
+
+
+
+
+        /*=====================================
+            HERO
+======================================*/
+
+
+        .lesson-hero {
+
+
+            margin-top: 75px;
+
+            height: 420px;
+
+
+            background:
+
+                linear-gradient(rgba(20, 90, 134, .85),
+                    rgba(0, 0, 0, .75)),
+
+                url(images/image-marque-banner.jpg);
+
+
+
+            background-size: cover;
+
+            background-position: center;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+
+        }
+
+
+
+        .overlay {
+
+
+            width: 90%;
+
+            max-width: 950px;
+
+            color: #fff;
+
+            text-align: center;
+
+
+        }
+
+
+
+        .overlay span {
+
+
+            display: inline-block;
+
+            background: #D4AF37;
+
+            color: #145A86;
+
+            padding: 8px 20px;
+
+            border-radius: 30px;
+
+            font-weight: bold;
+
+            margin-bottom: 20px;
+
+
+        }
+
+
+
+        .overlay h1 {
+
+
+            font-size: 50px;
+
+            margin-bottom: 20px;
+
+
+        }
+
+
+
+        .overlay p {
+
+
+            font-size: 20px;
+
+
+        }
+
+
+
+
+
+
+
+
+        /*=====================================
+        OBJECTIFS + COURS
+======================================*/
+
+
+        .objectif,
+        .cours {
+
+
+            width: 90%;
+
+            max-width: 1100px;
+
+            margin: 40px auto;
+
+
+            background: #fff;
+
+
+            padding: 35px;
+
+
+            border-radius: 20px;
+
+
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+
+
+        }
+
+
+
+
+        .objectif h2,
+        .cours h2 {
+
+
+            color: #145A86;
+
+
+            border-left: 6px solid #D4AF37;
+
+
+            padding-left: 15px;
+
+
+            margin-bottom: 25px;
+
+
+        }
+
+
+
+
+        .cours h3 {
+
+
+            color: #145A86;
+
+            margin-top: 30px;
+
+            margin-bottom: 15px;
+
+            border-bottom: 2px solid #D4AF37;
+
+            padding-bottom: 8px;
+
+
+        }
+
+
+
+
+
+        .cours p {
+
+
+            margin-bottom: 18px;
+
+            text-align: justify;
+
+
+        }
+
+
+
+
+        .objectif ul,
+        .cours ul {
+
+
+            margin-left: 25px;
+
+            margin-top: 15px;
+
+
+        }
+
+
+
+        .objectif li,
+        .cours li {
+
+
+            margin-bottom: 10px;
+
+
+        }
+
+
+
+        .cours li::marker {
+
+            color: #D4AF37;
+
+        }
+
+
+
+        .cours strong {
+
+            color: #145A86;
+
+        }
+
+
+
+
+
+
+
+        /*=====================================
+            IMAGES DU COURS
+======================================*/
+
+
+        .images-cours {
+
+
+            width: 90%;
+
+            max-width: 1100px;
+
+
+            margin: 40px auto;
+
+
+            background: #fff;
+
+
+            padding: 35px;
+
+
+            border-radius: 20px;
+
+
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+
+
+        }
+
+
+
+        .images-cours h2 {
+
+
+            color: #145A86;
+
+
+            border-left: 6px solid #D4AF37;
+
+
+            padding-left: 15px;
+
+
+            margin-bottom: 25px;
+
+
+        }
+
+
+
+        .image-container {
+
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 25px;
+
+
+        }
+
+
+
+
+        .image-card {
+
+
+            background: #f8fbff;
+
+
+            border-radius: 15px;
+
+
+            overflow: hidden;
+
+
+            box-shadow: 0 5px 15px rgba(0, 0, 0, .08);
+
+
+            transition: .35s;
+
+
+        }
+
+
+
+
+        .image-card:hover {
+
+
+            transform: translateY(-8px);
+
+
+        }
+
+
+
+        .image-card img {
+
+
+            width: 100%;
+
+            height: 220px;
+
+            object-fit: cover;
+
+
+        }
+
+
+
+
+        .image-card h3 {
+
+
+            color: #145A86;
+
+
+            margin: 15px 0 10px;
+
+
+            text-align: center;
+
+
+        }
+
+
+
+        .image-card p {
+
+
+            padding: 0 20px 20px;
+
+            text-align: center;
+
+
+        }
+
+
+
+
+
+
+
+        /*=====================================
+            À RETENIR
+======================================*/
+
+
+        .important {
+
+
+            width: 90%;
+
+            max-width: 1100px;
+
+
+            margin: 40px auto;
+
+
+            background: #145A86;
+
+
+            color: white;
+
+
+            padding: 35px;
+
+
+            border-radius: 20px;
+
+
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .12);
+
+
+        }
+
+
+
+
+        .important h2 {
+
+
+            color: white;
+
+
+            border-left: 6px solid #D4AF37;
+
+
+            padding-left: 15px;
+
+
+            margin-bottom: 25px;
+
+
+        }
+
+
+
+        .important p {
+
+
+            font-size: 18px;
+
+            margin-bottom: 15px;
+
+            padding: 10px;
+
+            transition: .3s;
+
+
+        }
+
+
+
+        .important p:hover {
+
+
+            transform: translateX(8px);
+
+            background: rgba(255, 255, 255, .1);
+
+
+        }
+
+
+
+
+
+
+
+
+        /*=====================================
+            EXERCICE
+======================================*/
+
+
+        .exercice {
+
+
+            width: 90%;
+
+            max-width: 1100px;
+
+
+            margin: 40px auto;
+
+
+            background: white;
+
+
+            padding: 35px;
+
+
+            border-radius: 20px;
+
+
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+
+
+        }
+
+
+
+
+        .exercice h2 {
+
+
+            color: #145A86;
+
+
+            border-left: 6px solid #D4AF37;
+
+
+            padding-left: 15px;
+
+
+            margin-bottom: 20px;
+
+
+        }
+
+
+
+        .exercice ul {
+
+
+            margin: 20px 0 25px 25px;
+
+
+        }
+
+
+
+        .exercice li {
+
+
+            margin-bottom: 10px;
+
+
+        }
+
+
+
+        textarea {
+
+
+            width: 100%;
+
+            height: 180px;
+
+
+            padding: 18px;
+
+
+            border-radius: 15px;
+
+
+            border: 2px solid #ddd;
+
+
+            font-size: 16px;
+
+
+            resize: vertical;
+
+
+            outline: none;
+
+
+        }
+
+
+
+        textarea:focus {
+
+
+            border-color: #145A86;
+
+
+        }
+
+
+
+
+
+
+
+
+        /*=====================================
+            NAVIGATION
+======================================*/
+
+
+        .navigation {
+
+
+            width: 90%;
+
+
+            max-width: 1100px;
+
+
+            margin: 40px auto 70px;
+
+
+            display: flex;
+
+
+            gap: 20px;
+
+
+        }
+
+
+
+
+        .navigation button {
+
+
+            flex: 1;
+
+
+            padding: 18px;
+
+
+            border: none;
+
+
+            border-radius: 12px;
+
+
+            font-size: 17px;
+
+
+            font-weight: bold;
+
+
+            cursor: pointer;
+
+
+            transition: .35s;
+
+
+        }
+
+
+
+
+        .navigation button:first-child {
+
+
+            background: #145A86;
+
+            color: white;
+
+
+        }
+
+
+
+
+        .navigation button:last-child {
+
+
+            background: #D4AF37;
+
+            color: #145A86;
+
+
+        }
+
+
+
+
+        .navigation button:hover {
+
+
+            transform: translateY(-5px);
+
+
+            box-shadow: 0 12px 25px rgba(0, 0, 0, .15);
+
+
+        }
+
+
+
+
+
+
+
+
+        /*=====================================
+            FOOTER
+======================================*/
+
+
+        footer {
+
+
+            background: #145A86;
+
+
+            color: white;
+
+
+            text-align: center;
+
+
+            padding: 35px;
+
+
+        }
+
+
+
+        footer h3 {
+
+
+            color: #D4AF37;
+
+
+            margin-bottom: 15px;
+
+
+        }
+
+
+
+        footer p {
+
+
+            max-width: 900px;
+
+
+            margin: auto;
+
+
+        }
+
+
+
+
+
+        footer strong {
+
+
+            color: #D4AF37;
+
+
+        }
+
+
+
+
+
+
+
+
+        /*=====================================
+            RESPONSIVE
+======================================*/
+
+
+        @media(max-width:768px) {
+
+
+
+            header {
+
+
+                padding: 0 15px;
+
+
+            }
+
+
+
+            .logo h2 {
+
+
+                font-size: 20px;
+
+
+            }
+
+
+
+            .student-profile small {
+
+
+                display: none;
+
+
+            }
+
+
+
+            .overlay h1 {
+
+
+                font-size: 34px;
+
+
+            }
+
+
+
+            .overlay p {
+
+
+                font-size: 16px;
+
+
+            }
+
+
+
+            .objectif,
+            .cours,
+            .images-cours,
+            .important,
+            .exercice {
+
+
+                padding: 22px;
+
+
+            }
+
+
+
+            .image-container {
+
+
+                grid-template-columns: 1fr;
+
+
+            }
+
+
+
+            .navigation {
+
+
+                flex-direction: column;
+
+
+            }
+
+
+
+        }
+
+
+
+
+
+        @media(max-width:500px) {
+
+
+
+            .logo img {
+
+
+                width: 40px;
+
+                height: 40px;
+
+
+            }
+
+
+
+            .logo h2 {
+
+
+                font-size: 18px;
+
+
+            }
+
+
+
+            .student-profile img {
+
+
+                width: 40px;
+
+                height: 40px;
+
+
+            }
+
+
+
+            .overlay h1 {
+
+
+                font-size: 27px;
+
+
+            }
+
+
+
+            .overlay p {
+
+
+                font-size: 14px;
+
+
+            }
+
+
+
+        }
+
+        /*==================================================
+        RESPONSIVE MOBILE - BMJ SERVICE LEÇON 4
+==================================================*/
+
+
+        @media(max-width:900px) {
+
+
+            /*=========================
+            HEADER
+    =========================*/
+
+
+            header {
+
+                height: 70px;
+
+                padding: 0 20px;
+
+            }
+
+
+            .logo {
+
+                gap: 8px;
+
+            }
+
+
+            .logo img {
+
+                width: 42px;
+
+                height: 42px;
+
+            }
+
+
+            .logo h2 {
+
+                font-size: 20px;
+
+            }
+
+
+            .student-profile img {
+
+                width: 40px;
+
+                height: 40px;
+
+            }
+
+
+
+
+            /*=========================
+            HERO
+    =========================*/
+
+
+            .lesson-hero {
+
+                height: 360px;
+
+                margin-top: 70px;
+
+            }
+
+
+
+            .overlay {
+
+                width: 95%;
+
+                padding: 20px;
+
+            }
+
+
+
+            .overlay span {
+
+                font-size: 14px;
+
+                padding: 6px 15px;
+
+            }
+
+
+
+
+            .overlay h1 {
+
+                font-size: 32px;
+
+                line-height: 1.3;
+
+            }
+
+
+
+
+            .overlay p {
+
+                font-size: 16px;
+
+                line-height: 1.6;
+
+            }
+
+
+
+
+
+
+            /*=========================
+        SECTIONS GENERALES
+    =========================*/
+
+
+            .objectif,
+            .cours,
+            .images-cours,
+            .important,
+            .exercice {
+
+
+                width: 94%;
+
+                margin: 25px auto;
+
+                padding: 22px;
+
+
+                border-radius: 15px;
+
+
+            }
+
+
+
+
+
+            .objectif h2,
+            .cours h2,
+            .images-cours h2,
+            .important h2,
+            .exercice h2 {
+
+
+                font-size: 23px;
+
+
+            }
+
+
+
+
+            .cours h3 {
+
+
+                font-size: 20px;
+
+
+            }
+
+
+
+
+            .cours p,
+            .important p,
+            .exercice p {
+
+
+                font-size: 15px;
+
+                text-align: justify;
+
+
+            }
+
+
+
+
+            .cours ul,
+            .objectif ul,
+            .exercice ul {
+
+
+                margin-left: 18px;
+
+
+            }
+
+
+
+
+            .cours li,
+            .objectif li,
+            .exercice li {
+
+
+                font-size: 15px;
+
+
+            }
+
+
+
+
+
+
+
+
+            /*=========================
+            IMAGES
+    =========================*/
+
+
+            .image-container {
+
+
+                grid-template-columns: 1fr;
+
+
+                gap: 20px;
+
+
+            }
+
+
+
+
+
+            .image-card img {
+
+
+                height: 200px;
+
+
+            }
+
+
+
+
+
+            .image-card h3 {
+
+
+                font-size: 20px;
+
+
+            }
+
+
+
+
+            .image-card p {
+
+
+                font-size: 15px;
+
+
+            }
+
+
+
+
+
+
+
+
+            /*=========================
+            EXERCICE
+    =========================*/
+
+
+            textarea {
+
+
+                height: 150px;
+
+                font-size: 15px;
+
+
+            }
+
+
+
+
+
+
+
+
+            /*=========================
+            NAVIGATION
+    =========================*/
+
+
+            .navigation {
+
+
+                width: 94%;
+
+                flex-direction: column;
+
+                gap: 15px;
+
+
+            }
+
+
+
+
+            .navigation button {
+
+
+                width: 100%;
+
+                padding: 15px;
+
+                font-size: 15px;
+
+
+            }
+
+
+
+
+
+
+
+
+            /*=========================
+            FOOTER
+    =========================*/
+
+
+            footer {
+
+
+                padding: 25px 15px;
+
+
+            }
+
+
+
+
+            footer h3 {
+
+
+                font-size: 22px;
+
+
+            }
+
+
+
+
+            footer p {
+
+
+                font-size: 14px;
+
+
+            }
+
+
+
+        }
+
+
+
+
+
+
+
+
+
+        /*==================================================
+        PETITS TELEPHONES 480px
+==================================================*/
+
+
+        @media(max-width:480px) {
+
+
+
+            header {
+
+
+                padding: 0 10px;
+
+
+            }
+
+
+
+
+            .logo h2 {
+
+
+                font-size: 17px;
+
+
+            }
+
+
+
+
+
+            .student-profile h4 {
+
+
+                font-size: 14px;
+
+
+            }
+
+
+
+
+            .student-profile small {
+
+
+                display: none;
+
+
+            }
+
+
+
+
+
+
+
+            .lesson-hero {
+
+
+                height: 330px;
+
+
+            }
+
+
+
+
+
+            .overlay h1 {
+
+
+                font-size: 26px;
+
+
+            }
+
+
+
+
+
+            .overlay p {
+
+
+                font-size: 14px;
+
+
+            }
+
+
+
+
+
+            .objectif,
+            .cours,
+            .images-cours,
+            .important,
+            .exercice {
+
+
+                padding: 18px;
+
+
+            }
+
+
+
+
+
+            .objectif h2,
+            .cours h2,
+            .images-cours h2,
+            .important h2,
+            .exercice h2 {
+
+
+                font-size: 20px;
+
+
+            }
+
+
+
+
+
+            .cours h3 {
+
+
+                font-size: 18px;
+
+
+            }
+
+
+
+
+
+            .cours p,
+            .cours li {
+
+
+                font-size: 14px;
+
+
+            }
+
+
+
+
+
+            .image-card img {
+
+
+                height: 170px;
+
+
+            }
+
+
+
+
+
+            textarea {
+
+
+                height: 130px;
+
+
+            }
+
+
+
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <!--====================================
+            HEADER
+=====================================-->
+
+    <header>
+
+
+        <div class="logo">
+
+
+            <img src="images/logo.png" alt="BMJ SERVICE">
+
+
+            <h2>
+
+                BMJ <span>SERVICE</span>
+
+            </h2>
+
+
+        </div>
+
+
+
+
+
+        <div class="student-profile">
+
+
+            <img id="photoUtilisateur" src="images/user.png" alt="Photo">
+
+
+            <div>
+
+
+                <h4 id="nomUtilisateur">
+
+                    Apprenant
+
+                </h4>
+
+
+
+
+                <small id="domaineUtilisateur">
+
+                    Marketing Digital
+
+                </small>
+
+
+            </div>
+
+
+        </div>
+
+
+    </header>
+
+
+
+
+
+
+
+    <!--====================================
+            HERO
+=====================================-->
+
+    <section class="lesson-hero">
+
+
+        <div class="overlay">
+
+
+            <span>
+
+                LEÇON 4
+
+            </span>
+
+
+
+
+            <h1>
+
+                Construire une image de marque
+
+            </h1>
+
+
+
+
+            <p>
+
+                Comprenez comment améliorer votre réputation,
+                gagner la confiance des clients et développer
+                votre notoriété afin de créer une marque forte
+                et durable.
+
+            </p>
+
+
+
+        </div>
+
+
+    </section>
+
+
+
+
+
+
+
+    <!--====================================
+            OBJECTIFS
+=====================================-->
+
+    <section class="objectif">
+
+
+        <h2>
+
+            Objectifs de cette leçon
+
+        </h2>
+
+
+
+
+        <ul>
+
+
+            <li>
+
+                Comprendre l'importance de l'image de marque.
+
+            </li>
+
+
+
+
+            <li>
+
+                Découvrir comment construire une bonne réputation.
+
+            </li>
+
+
+
+
+            <li>
+
+                Comprendre les éléments qui renforcent la confiance des clients.
+
+            </li>
+
+
+
+
+            <li>
+
+                Apprendre à développer la notoriété d'une entreprise.
+
+            </li>
+
+
+
+
+            <li>
+
+                Identifier les actions permettant de valoriser une marque.
+
+            </li>
+
+
+
+        </ul>
+
+
+    </section>
+
+
+
+
+
+
+
+    <!--====================================
+            COURS
+=====================================-->
+
+    <section class="cours">
+
+
+
+        <h2>
+
+            1. La réputation d'une marque
+
+        </h2>
+
+
+
+
+        <p>
+
+            La réputation d'une marque représente l'image et
+            l'opinion que les clients, les partenaires et le public
+            ont d'une entreprise.
+
+        </p>
+
+
+
+
+        <p>
+
+            Elle se construit progressivement grâce à la qualité
+            des produits ou services proposés, au comportement
+            de l'entreprise et aux expériences vécues par les clients.
+
+        </p>
+
+
+
+
+        <p>
+
+            Une bonne réputation permet à une entreprise de se
+            démarquer de ses concurrents et d'attirer plus facilement
+            de nouveaux clients.
+
+        </p>
+
+
+
+
+
+        <h3>
+
+            📚 Enseignements du cours
+
+        </h3>
+
+
+
+
+        <p>
+
+            À la fin de cette partie, l'apprenant doit être capable de :
+
+        </p>
+
+
+
+
+        <ul>
+
+
+            <li>
+
+                Définir la réputation d'une marque.
+
+            </li>
+
+
+
+            <li>
+
+                Comprendre les facteurs qui influencent l'image d'une entreprise.
+
+            </li>
+
+
+
+            <li>
+
+                Identifier les moyens d'améliorer une réputation.
+
+            </li>
+
+
+
+            <li>
+
+                Comprendre l'impact des avis clients sur une marque.
+
+            </li>
+
+
+
+        </ul>
+
+
+
+
+
+        <h3>
+
+            Les éléments qui influencent la réputation
+
+        </h3>
+
+
+
+
+        <ul>
+
+
+            <li>
+
+                ✔ La qualité des produits ou services.
+
+            </li>
+
+
+
+            <li>
+
+                ✔ La satisfaction des clients.
+
+            </li>
+
+
+
+            <li>
+
+                ✔ La communication de l'entreprise.
+
+            </li>
+
+
+
+            <li>
+
+                ✔ Les avis et témoignages des utilisateurs.
+
+            </li>
+
+
+
+            <li>
+
+                ✔ Le professionnalisme de la marque.
+
+            </li>
+
+
+        </ul>
+
+
+
+
+
+        <h3>
+
+            Exemple concret
+
+        </h3>
+
+
+
+
+        <p>
+
+            BMJ SERVICE construit sa réputation grâce à des formations
+            accessibles, un contenu de qualité et une expérience
+            d'apprentissage adaptée aux besoins des apprenants.
+
+        </p>
+
+
+
+    </section>
+    <!--====================================
+            COURS
+=====================================-->
+
+    <section class="cours">
+
+
+        <h2>
+
+            2. La confiance des clients
+
+        </h2>
+
+
+
+
+        <p>
+
+            La confiance des clients représente le sentiment de sécurité
+            qu'une personne ressent lorsqu'elle choisit d'acheter un produit,
+            d'utiliser un service ou de collaborer avec une entreprise.
+
+        </p>
+
+
+
+
+        <p>
+
+            Une marque qui inspire confiance possède une meilleure relation
+            avec ses clients. Ceux-ci sont plus susceptibles de revenir,
+            de recommander l'entreprise et de devenir des clients fidèles.
+
+        </p>
+
+
+
+
+        <p>
+
+            La confiance ne se construit pas uniquement avec des paroles.
+            Elle dépend surtout des actions de l'entreprise, de la qualité
+            de ses services et du respect de ses engagements.
+
+        </p>
+
+
+
+
+
+        <h3>
+
+            📚 Enseignements du cours
+
+        </h3>
+
+
+
+
+        <p>
+
+            À la fin de cette partie, l'apprenant doit être capable de :
+
+        </p>
+
+
+
+
+        <ul>
+
+
+            <li>
+
+                Comprendre pourquoi la confiance est importante pour une marque.
+
+            </li>
+
+
+
+            <li>
+
+                Identifier les éléments qui rassurent les clients.
+
+            </li>
+
+
+
+            <li>
+
+                Savoir comment créer une relation durable avec les consommateurs.
+
+            </li>
+
+
+
+            <li>
+
+                Comprendre l'impact de la confiance sur la fidélisation.
+
+            </li>
+
+
+        </ul>
+
+
+
+
+
+
+
+        <h3>
+
+            Comment gagner la confiance des clients ?
+
+        </h3>
+
+
+
+
+        <ul>
+
+
+            <li>
+
+                ✔ Proposer des produits et services de qualité.
+
+            </li>
+
+
+
+            <li>
+
+                ✔ Respecter les promesses faites aux clients.
+
+            </li>
+
+
+
+            <li>
+
+                ✔ Être transparent dans sa communication.
+
+            </li>
+
+
+
+            <li>
+
+                ✔ Offrir un bon service client.
+
+            </li>
+
+
+
+            <li>
+
+                ✔ Protéger les informations des utilisateurs.
+
+            </li>
+
+
+        </ul>
+
+
+
+
+
+
+
+        <h3>
+
+            L'importance de la relation client
+
+        </h3>
+
+
+
+
+        <p>
+
+            Une entreprise qui écoute ses clients et répond efficacement
+            à leurs besoins crée une relation positive. Cette relation
+            augmente la satisfaction et encourage les clients à parler
+            positivement de la marque autour d'eux.
+
+        </p>
+
+
+
+
+
+
+
+        <h3>
+
+            Exemple concret
+
+        </h3>
+
+
+
+
+        <p>
+
+            BMJ SERVICE développe la confiance des apprenants en proposant
+            des formations structurées, un accompagnement pédagogique et
+            une plateforme simple à utiliser.
+
+        </p>
+
+
+
+
+        <p>
+
+            En offrant une expérience de qualité, la marque renforce son
+            image professionnelle et encourage les utilisateurs à continuer
+            leur apprentissage.
+
+        </p>
+
+
+
+
+    </section>
+    <!--====================================
+            COURS
+=====================================-->
+
+    <section class="cours">
+
+
+        <h2>
+
+            3. La notoriété d'une marque
+
+        </h2>
+
+
+
+
+        <p>
+
+            La notoriété d'une marque représente le niveau de
+            reconnaissance d'une entreprise auprès du public.
+            Elle indique à quel point les consommateurs connaissent
+            et se souviennent d'une marque.
+
+        </p>
+
+
+
+
+        <p>
+
+            Une marque avec une forte notoriété est facilement identifiée
+            par les clients. Elle bénéficie d'une meilleure visibilité
+            et possède plus de chances d'être choisie face à ses concurrents.
+
+        </p>
+
+
+
+
+        <p>
+
+            Développer la notoriété d'une marque demande une communication
+            régulière, une présence sur les bons canaux et une expérience
+            positive offerte aux clients.
+
+        </p>
+
+
+
+
+
+
+        <h3>
+
+            📚 Enseignements du cours
+
+        </h3>
+
+
+
+
+        <p>
+
+            À la fin de cette partie, l'apprenant doit être capable de :
+
+        </p>
+
+
+
+
+        <ul>
+
+
+            <li>
+
+                Définir la notion de notoriété d'une marque.
+
+            </li>
+
+
+
+            <li>
+
+                Comprendre pourquoi une marque doit être connue.
+
+            </li>
+
+
+
+            <li>
+
+                Identifier les moyens d'augmenter la visibilité d'une entreprise.
+
+            </li>
+
+
+
+            <li>
+
+                Comprendre le lien entre notoriété et développement commercial.
+
+            </li>
+
+
+        </ul>
+
+
+
+
+
+
+
+        <h3>
+
+            Les niveaux de notoriété d'une marque
+
+        </h3>
+
+
+
+
+        <ul>
+
+
+            <li>
+
+                🔹 <strong>Notoriété assistée :</strong>
+                le client reconnaît une marque lorsqu'il voit son nom ou son logo.
+
+            </li>
+
+
+
+            <li>
+
+                🔹 <strong>Notoriété spontanée :</strong>
+                le client pense naturellement à une marque lorsqu'il recherche
+                un produit ou un service.
+
+            </li>
+
+
+
+            <li>
+
+                🔹 <strong>Top of mind :</strong>
+                une marque qui arrive directement dans l'esprit du consommateur
+                avant les autres.
+
+            </li>
+
+
+        </ul>
+
+
+
+
+
+
+
+        <h3>
+
+            Comment développer la notoriété d'une marque ?
+
+        </h3>
+
+
+
+
+        <ul>
+
+
+            <li>
+
+                ✔ Être présent sur les réseaux sociaux.
+
+            </li>
+
+
+
+            <li>
+
+                ✔ Créer du contenu utile et régulier.
+
+            </li>
+
+
+
+            <li>
+
+                ✔ Utiliser une identité visuelle cohérente.
+
+            </li>
+
+
+
+            <li>
+
+                ✔ Collaborer avec des partenaires ou influenceurs.
+
+            </li>
+
+
+
+            <li>
+
+                ✔ Encourager les clients satisfaits à partager leur expérience.
+
+            </li>
+
+
+        </ul>
+
+
+
+
+
+
+
+        <h3>
+
+            Exemple concret
+
+        </h3>
+
+
+
+
+        <p>
+
+            BMJ SERVICE développe sa notoriété grâce à sa présence
+            numérique, ses formations en ligne et une communication
+            basée sur une identité visuelle professionnelle.
+
+        </p>
+
+
+
+
+        <p>
+
+            Plus les apprenants découvrent la plateforme et partagent
+            leurs expériences positives, plus la marque devient connue
+            et reconnue dans le domaine de la formation numérique.
+
+        </p>
+
+
+
+
+
+        <h3>
+
+            À retenir
+
+        </h3>
+
+
+
+
+        <p>
+
+            Une bonne image de marque repose sur trois éléments essentiels :
+            une réputation positive, une relation de confiance avec les clients
+            et une forte notoriété. Ces éléments permettent à une entreprise
+            de devenir plus crédible et durable.
+
+        </p>
+
+
+
+    </section>
+    <!--====================================
+            IMAGES ILLUSTRATIVES
+=====================================-->
+
+    <section class="images-cours">
+
+
+        <h2>
+
+            🖼️ Illustrations du cours
+
+        </h2>
+
+
+
+        <div class="image-container">
+
+
+            <div class="image-card">
+
+
+                <img src="images/reputation-marque.jpg" alt="Réputation de marque">
+
+
+
+                <h3>
+
+                    Réputation
+
+                </h3>
+
+
+                <p>
+
+                    Les avis clients, la qualité des services et
+                    l'expérience utilisateur influencent l'image
+                    d'une entreprise.
+
+                </p>
+
+
+            </div>
+
+
+
+
+
+            <div class="image-card">
+
+
+                <img src="images/confiance-client.jpg" alt="Confiance des clients">
+
+
+
+                <h3>
+
+                    Confiance des clients
+
+                </h3>
+
+
+                <p>
+
+                    Une marque transparente et professionnelle
+                    crée une relation durable avec ses clients.
+
+                </p>
+
+
+            </div>
+
+
+
+
+
+            <div class="image-card">
+
+
+                <img src="images/notoriete-marque.jpg" alt="Notoriété de marque">
+
+
+
+                <h3>
+
+                    Notoriété
+
+                </h3>
+
+
+                <p>
+
+                    Une présence régulière permet à une marque
+                    d'être connue et reconnue par son public.
+
+                </p>
+
+
+            </div>
+
+
+
+        </div>
+
+
+    </section>
+
+
+
+
+
+
+
+    <!--====================================
+            À RETENIR
+=====================================-->
+
+    <section class="important">
+
+
+        <h2>
+
+            📌 À retenir
+
+        </h2>
+
+
+
+
+        <p>
+
+            ✔ Une bonne réputation permet aux clients d'avoir
+            une image positive d'une entreprise.
+
+        </p>
+
+
+
+
+        <p>
+
+            ✔ La confiance se construit grâce à la qualité,
+            la transparence et le respect des engagements.
+
+        </p>
+
+
+
+
+        <p>
+
+            ✔ La notoriété permet à une marque d'être connue
+            et facilement reconnue par son public.
+
+        </p>
+
+
+
+
+        <p>
+
+            ✔ Une image de marque forte aide une entreprise
+            à se différencier de ses concurrents.
+
+        </p>
+
+
+
+
+        <p>
+
+            ✔ La réputation, la confiance et la notoriété travaillent
+            ensemble pour construire une marque durable.
+
+        </p>
+
+
+    </section>
+
+
+
+
+
+
+
+    <!--====================================
+            EXERCICE
+=====================================-->
+
+    <section class="exercice">
+
+
+        <h2>
+
+            📝 Exercice
+
+        </h2>
+
+
+
+
+        <p>
+
+            Imaginez que vous souhaitez améliorer l'image
+            d'une nouvelle entreprise.
+
+            Décrivez votre stratégie en précisant :
+
+        </p>
+
+
+
+
+        <ul>
+
+
+            <li>
+
+                Les actions pour améliorer la réputation de l'entreprise.
+
+            </li>
+
+
+
+            <li>
+
+                Les moyens utilisés pour gagner la confiance des clients.
+
+            </li>
+
+
+
+            <li>
+
+                Les méthodes pour développer la notoriété de la marque.
+
+            </li>
+
+
+
+            <li>
+
+                Les réseaux sociaux ou supports de communication utilisés.
+
+            </li>
+
+
+
+        </ul>
+
+
+
+
+        <textarea placeholder="Écrivez votre réponse ici..."></textarea>
+
+
+
+    </section>
+
+
+
+
+
+
+
+    <!--====================================
+            NAVIGATION
+=====================================-->
+
+    <section class="navigation">
+
+
+        <button onclick="retourCours()">
+
+            ← Retour au chapitre
+
+        </button>
+
+
+
+        <button onclick="terminerLecon()">
+
+            ✓ Terminer la leçon
+
+        </button>
+
+
+    </section>
+
+
+
+
+
+
+
+    <!--====================================
+            FOOTER
+=====================================-->
+
+    <footer>
+
+
+        <h3>
+
+            BMJ SERVICE
+
+        </h3>
+
+
+
+        <p>
+
+            Félicitations ! Vous avez terminé la Leçon 4 du chapitre
+            <strong>Identité de marque</strong>.
+
+            Vous avez appris comment construire une image de marque forte
+            grâce à la réputation, la confiance des clients et la notoriété.
+
+        </p>
+
+
+    </footer>
+    <script>
+
+
+        //====================================
+        // CHARGEMENT DE LA PAGE
+        //====================================
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+
+            let utilisateur = JSON.parse(
+
+                localStorage.getItem("bmj_current_user")
+
+            );
+
+
+
+            //=========================
+            // AFFICHAGE PROFIL
+            //=========================
+
+
+            if (utilisateur) {
+
+
+                document.getElementById("nomUtilisateur").innerHTML = utilisateur.nom;
+
+
+
+                if (utilisateur.photo && utilisateur.photo !== "") {
+
+
+                    document.getElementById("photoUtilisateur").src = utilisateur.photo;
+
+
+                }
+
+
+
+            } else {
+
+
+                document.getElementById("nomUtilisateur").innerHTML = "Apprenant";
+
+
+                document.getElementById("domaineUtilisateur").innerHTML = "Marketing Digital";
+
+
+            }
+
+
+
+        });
+
+
+
+
+
+
+
+
+
+        //====================================
+        // RETOUR AU CHAPITRE
+        //====================================
+
+
+        function retourCours() {
+
+
+            window.location.href = "marketing.php";
+
+
+        }
+
+
+
+
+
+
+
+
+
+        //====================================
+        // TERMINER LA LEÇON 4
+        //====================================
+
+
+        function terminerLecon() {
+
+
+
+            let utilisateur = JSON.parse(
+
+                localStorage.getItem("bmj_current_user")
+
+            );
+
+
+
+
+
+            //--------------------------------
+            // RECUPERATION PROGRESSION
+            //--------------------------------
+
+
+            let progression = JSON.parse(
+
+                localStorage.getItem("marketing_progression")
+
+            ) || [];
+
+
+
+
+
+
+
+
+            //================================
+            // VERIFICATION SI DEJA TERMINEE
+            //================================
+
+
+            if (progression.includes("4")) {
+
+
+                alert(
+
+                    "Cette Leçon 4 est déjà terminée."
+
+                );
+
+
+                window.location.href = "marketing.php";
+
+
+                return;
+
+
+            }
+
+
+
+
+
+
+
+
+            //--------------------------------
+            // AJOUT DE LA LEÇON 4
+            //--------------------------------
+
+
+            progression.push("4");
+
+
+
+            localStorage.setItem(
+
+                "marketing_progression",
+
+                JSON.stringify(progression)
+
+            );
+
+
+
+
+
+
+
+
+
+            //================================
+            // SAUVEGARDE UTILISATEUR
+            //================================
+
+
+            if (utilisateur) {
+
+
+
+                if (!utilisateur.coursSuivis) {
+
+
+                    utilisateur.coursSuivis = [];
+
+
+                }
+
+
+
+
+
+
+                if (!utilisateur.coursSuivis.includes(
+
+                    "Marketing Leçon 4"
+
+                )) {
+
+
+                    utilisateur.coursSuivis.push(
+
+                        "Marketing Leçon 4"
+
+                    );
+
+
+                }
+
+
+
+
+
+
+
+
+
+                //--------------------------------
+                // CALCUL PROGRESSION
+                //--------------------------------
+
+
+                utilisateur.progression = progression.length * 20;
+
+
+
+                if (utilisateur.progression > 100) {
+
+
+                    utilisateur.progression = 100;
+
+
+                }
+
+
+
+
+
+
+
+
+
+                //--------------------------------
+                // SAUVEGARDE SESSION
+                //--------------------------------
+
+
+                localStorage.setItem(
+
+                    "bmj_current_user",
+
+                    JSON.stringify(utilisateur)
+
+                );
+
+
+
+
+
+
+
+
+
+                //--------------------------------
+                // MISE A JOUR UTILISATEURS
+                //--------------------------------
+
+
+                let utilisateurs = JSON.parse(
+
+                    localStorage.getItem("bmj_users")
+
+                ) || [];
+
+
+
+
+
+
+                let index = utilisateurs.findIndex(
+
+                    u => u.id === utilisateur.id
+
+                );
+
+
+
+
+
+
+                if (index !== -1) {
+
+
+                    utilisateurs[index] = utilisateur;
+
+
+                }
+
+
+
+
+
+
+                localStorage.setItem(
+
+                    "bmj_users",
+
+                    JSON.stringify(utilisateurs)
+
+                );
+
+
+
+            }
+
+
+
+
+
+
+
+
+
+            //--------------------------------
+            // MESSAGE DE FIN
+            //--------------------------------
+
+
+            alert(
+
+
+                "🎉 Félicitations !\n\nVous avez terminé la Leçon 4 : Construire une image de marque."
+
+
+            );
+
+
+
+
+
+
+
+
+
+            //--------------------------------
+            // RETOUR AU CHAPITRE
+            //--------------------------------
+
+
+            window.location.href = "marketing.php";
+
+
+
+        }
+
+
+
+    </script>
+</body>
+
+</html>

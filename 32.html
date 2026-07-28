@@ -1,0 +1,2131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*==================================================
+        BMJ SERVICE - LEÇON 2 MARKETING
+        LOGO ET COULEURS DE MARQUE
+==================================================*/
+
+
+        * {
+
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+
+        }
+
+
+        html {
+
+            scroll-behavior: smooth;
+
+        }
+
+
+        body {
+
+            background: #f4f7fb;
+            color: #333;
+            line-height: 1.8;
+
+        }
+
+
+        /*=====================================
+            HEADER
+======================================*/
+
+
+        header {
+
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 75px;
+            background: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 40px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, .08);
+            z-index: 1000;
+
+        }
+
+
+
+        .logo {
+
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+        }
+
+
+
+        .logo img {
+
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+
+        }
+
+
+
+        .logo h2 {
+
+            color: #145A86;
+
+        }
+
+
+
+        .logo span {
+
+            color: #D4AF37;
+
+        }
+
+
+
+
+        .student-profile {
+
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+        }
+
+
+
+        .student-profile img {
+
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #D4AF37;
+
+        }
+
+
+
+        .student-profile h4 {
+
+            color: #145A86;
+
+        }
+
+
+
+        .student-profile small {
+
+            color: #777;
+
+        }
+
+
+
+        /*=====================================
+            HERO
+======================================*/
+
+
+        .lesson-hero {
+
+            margin-top: 75px;
+            height: 420px;
+
+            background:
+                linear-gradient(rgba(20, 90, 134, .85),
+                    rgba(0, 0, 0, .75)),
+                url(images/logo-banner.jpg);
+
+            background-size: cover;
+            background-position: center;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+
+
+        .overlay {
+
+            width: 90%;
+            max-width: 950px;
+            color: white;
+            text-align: center;
+
+        }
+
+
+
+        .overlay span {
+
+            display: inline-block;
+            background: #D4AF37;
+            color: #145A86;
+
+            padding: 8px 20px;
+            border-radius: 30px;
+
+            font-weight: bold;
+            margin-bottom: 20px;
+
+        }
+
+
+
+        .overlay h1 {
+
+            font-size: 50px;
+            margin-bottom: 20px;
+
+        }
+
+
+
+        .overlay p {
+
+            font-size: 20px;
+
+        }
+
+
+
+        /*=====================================
+            OBJECTIFS
+======================================*/
+
+
+        .objectif,
+        .cours {
+
+            width: 90%;
+            max-width: 1100px;
+
+            margin: 40px auto;
+
+            background: white;
+
+            padding: 35px;
+
+            border-radius: 20px;
+
+            box-shadow:
+                0 10px 25px rgba(0, 0, 0, .08);
+
+        }
+
+
+
+        .objectif h2,
+        .cours h2 {
+
+            color: #145A86;
+
+            border-left: 6px solid #D4AF37;
+
+            padding-left: 15px;
+
+            margin-bottom: 25px;
+
+        }
+
+
+
+        .objectif ul,
+        .cours ul {
+
+            margin-left: 25px;
+            margin-top: 15px;
+
+        }
+
+
+
+        .objectif li,
+        .cours li {
+
+            margin-bottom: 10px;
+
+        }
+
+
+
+        /*=====================================
+            CONTENU COURS
+======================================*/
+
+
+        .cours p {
+
+            margin-bottom: 18px;
+            text-align: justify;
+
+        }
+
+
+
+        .cours h3 {
+
+            color: #145A86;
+
+            margin-top: 30px;
+
+            margin-bottom: 15px;
+
+            border-bottom: 2px solid #D4AF37;
+
+            padding-bottom: 8px;
+
+        }
+
+
+
+
+        .cours strong {
+
+            color: #145A86;
+
+        }
+
+
+
+        /*=====================================
+        LISTE IMPORTANTE
+======================================*/
+
+
+        .cours ul li::marker {
+
+            color: #D4AF37;
+
+        }
+
+
+
+        /*=====================================
+            VIDEO
+======================================*/
+
+
+        .video-cours {
+
+            margin-top: 35px;
+
+            background: #f8fbff;
+
+            padding: 25px;
+
+            border-radius: 15px;
+
+            border-left: 6px solid #145A86;
+
+        }
+
+
+
+        .video-cours h3 {
+
+            color: #145A86;
+
+            border: none;
+
+        }
+
+
+
+        .video-cours iframe {
+
+            margin-top: 15px;
+
+            border-radius: 15px;
+
+            box-shadow:
+                0 8px 20px rgba(0, 0, 0, .15);
+
+        }
+
+
+
+        /*=====================================
+        BOX CONSEILS
+======================================*/
+
+
+        .cours ul li {
+
+            transition: .3s;
+
+        }
+
+
+
+        .cours ul li:hover {
+
+            transform: translateX(5px);
+
+            color: #145A86;
+
+        }
+
+
+
+        /*=====================================
+            FOOTER
+======================================*/
+
+
+        footer {
+
+            background: #145A86;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 35px;
+
+        }
+
+
+
+        footer span {
+
+            color: #D4AF37;
+
+        }
+
+
+
+        /*=====================================
+            RESPONSIVE
+======================================*/
+
+
+        @media(max-width:768px) {
+
+
+            header {
+
+                padding: 0 15px;
+
+            }
+
+
+
+            .logo h2 {
+
+                font-size: 20px;
+
+            }
+
+
+
+            .student-profile small {
+
+                display: none;
+
+            }
+
+
+
+            .overlay h1 {
+
+                font-size: 34px;
+
+            }
+
+
+
+            .overlay p {
+
+                font-size: 16px;
+
+            }
+
+
+
+            .objectif,
+            .cours {
+
+                padding: 22px;
+
+            }
+
+
+
+            .video-cours iframe {
+
+                height: 250px;
+
+            }
+
+
+
+        }
+
+
+
+        @media(max-width:500px) {
+
+
+
+            .logo img {
+
+                width: 40px;
+                height: 40px;
+
+            }
+
+
+
+            .logo h2 {
+
+                font-size: 18px;
+
+            }
+
+
+
+            .student-profile img {
+
+                width: 40px;
+                height: 40px;
+
+            }
+
+
+
+            .overlay span {
+
+                font-size: 13px;
+
+            }
+
+
+
+            .overlay h1 {
+
+                font-size: 27px;
+
+            }
+
+
+
+            .overlay p {
+
+                font-size: 14px;
+
+            }
+
+
+
+        }
+
+        /*=====================================
+            À RETENIR
+======================================*/
+
+
+        .important {
+
+            width: 90%;
+            max-width: 1100px;
+
+            margin: 40px auto;
+
+            background: #145A86;
+
+            color: white;
+
+            padding: 35px;
+
+            border-radius: 20px;
+
+            box-shadow:
+                0 10px 25px rgba(0, 0, 0, .12);
+
+        }
+
+
+
+        .important h2 {
+
+            color: white;
+
+            border-left: 6px solid #D4AF37;
+
+            padding-left: 15px;
+
+            margin-bottom: 25px;
+
+        }
+
+
+
+        .important p {
+
+            font-size: 18px;
+
+            margin-bottom: 15px;
+
+            padding: 10px;
+
+            border-radius: 10px;
+
+            transition: .3s;
+
+        }
+
+
+
+        .important p:hover {
+
+            background: rgba(255, 255, 255, .1);
+
+            transform: translateX(8px);
+
+        }
+
+
+
+
+
+        /*=====================================
+            EXERCICE
+======================================*/
+
+
+        .exercice {
+
+            width: 90%;
+
+            max-width: 1100px;
+
+            margin: 40px auto 70px;
+
+            background: white;
+
+            padding: 35px;
+
+            border-radius: 20px;
+
+            box-shadow:
+                0 10px 25px rgba(0, 0, 0, .08);
+
+        }
+
+
+
+        .exercice h2 {
+
+            color: #145A86;
+
+            border-left: 6px solid #D4AF37;
+
+            padding-left: 15px;
+
+            margin-bottom: 20px;
+
+        }
+
+
+
+        .exercice p {
+
+            margin-bottom: 20px;
+
+            text-align: justify;
+
+        }
+
+
+
+        .exercice ul {
+
+            margin-left: 25px;
+
+            margin-bottom: 25px;
+
+        }
+
+
+
+        .exercice li {
+
+            margin-bottom: 12px;
+
+        }
+
+
+
+        .exercice li::marker {
+
+            color: #D4AF37;
+
+        }
+
+
+
+        textarea {
+
+            width: 100%;
+
+            height: 180px;
+
+            padding: 18px;
+
+            border-radius: 15px;
+
+            border: 2px solid #ddd;
+
+            font-size: 16px;
+
+            resize: vertical;
+
+            outline: none;
+
+            font-family: 'Poppins', sans-serif;
+
+        }
+
+
+
+        textarea:focus {
+
+            border-color: #145A86;
+
+            box-shadow:
+                0 0 10px rgba(20, 90, 134, .2);
+
+        }
+
+
+
+
+
+        /*=====================================
+            NAVIGATION
+======================================*/
+
+
+        .navigation {
+
+            width: 90%;
+
+            max-width: 1100px;
+
+            margin: 40px auto 70px;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            gap: 20px;
+
+        }
+
+
+
+        .navigation button {
+
+            flex: 1;
+
+            padding: 18px;
+
+            border: none;
+
+            border-radius: 12px;
+
+            font-size: 17px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            transition: .35s;
+
+        }
+
+
+
+        .navigation button:first-child {
+
+            background: #145A86;
+
+            color: white;
+
+        }
+
+
+
+        .navigation button:last-child {
+
+            background: #D4AF37;
+
+            color: #145A86;
+
+        }
+
+
+
+        .navigation button:hover {
+
+            transform: translateY(-5px);
+
+            box-shadow:
+                0 12px 25px rgba(0, 0, 0, .15);
+
+        }
+
+
+
+
+
+        /*=====================================
+            FOOTER
+======================================*/
+
+
+        footer {
+
+            background: #145A86;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 35px;
+
+        }
+
+
+
+        footer h3 {
+
+            color: #D4AF37;
+
+            margin-bottom: 15px;
+
+            font-size: 25px;
+
+        }
+
+
+
+        footer p {
+
+            max-width: 900px;
+
+            margin: auto;
+
+            font-size: 17px;
+
+        }
+
+
+
+        footer strong {
+
+            color: #D4AF37;
+
+        }
+
+
+
+
+
+        /*=====================================
+            RESPONSIVE
+======================================*/
+
+
+        @media(max-width:768px) {
+
+
+            .important,
+            .exercice {
+
+                padding: 22px;
+
+            }
+
+
+
+            .important p {
+
+                font-size: 16px;
+
+            }
+
+
+
+            .navigation {
+
+                flex-direction: column;
+
+            }
+
+
+
+            .navigation button {
+
+                width: 100%;
+
+            }
+
+
+
+            footer {
+
+                padding: 25px 15px;
+
+            }
+
+
+
+            footer p {
+
+                font-size: 15px;
+
+            }
+
+
+        }
+
+
+
+        @media(max-width:500px) {
+
+
+            .important h2,
+            .exercice h2 {
+
+                font-size: 22px;
+
+            }
+
+
+
+            textarea {
+
+                height: 140px;
+
+            }
+
+
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--====================================
+                HEADER
+    =====================================-->
+
+    <header>
+
+        <div class="logo">
+
+            <img src="images/logo.png" alt="BMJ SERVICE">
+
+            <h2>BMJ <span>SERVICE</span></h2>
+
+        </div>
+
+        <div class="student-profile">
+
+            <img id="photoUtilisateur" src="images/user.png" alt="Photo">
+
+            <div>
+
+                <h4 id="nomUtilisateur">
+
+                    Apprenant
+
+                </h4>
+
+                <small id="domaineUtilisateur">
+
+                    Marketing Digital
+
+                </small>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+
+
+    <!--====================================
+                HERO
+    =====================================-->
+
+    <section class="lesson-hero">
+
+        <div class="overlay">
+
+            <span>
+
+                LEÇON 2
+
+            </span>
+
+            <h1>
+
+                Le logo et les couleurs de marque
+
+            </h1>
+
+            <p>
+
+                Découvrez pourquoi le logo, les couleurs et l'identité visuelle
+                sont essentiels pour rendre une entreprise facilement
+                reconnaissable, inspirer confiance et développer une image
+                professionnelle auprès des clients.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+
+
+    <!--====================================
+            OBJECTIFS
+    =====================================-->
+
+    <section class="objectif">
+
+        <h2>
+
+            Objectifs de cette leçon
+
+        </h2>
+
+        <ul>
+
+            <li>Comprendre le rôle du logo.</li>
+
+            <li>Découvrir l'importance des couleurs.</li>
+
+            <li>Comprendre la signification des couleurs.</li>
+
+            <li>Créer une identité visuelle cohérente.</li>
+
+            <li>Choisir un logo adapté à une entreprise.</li>
+
+        </ul>
+
+    </section>
+
+
+
+
+
+    <!--====================================
+            COURS
+    =====================================-->
+
+    <section class="cours">
+
+        <h2>
+
+            1. Qu'est-ce qu'un logo ?
+
+        </h2>
+
+        <p>
+
+            Le logo est le symbole graphique qui représente une entreprise,
+            une organisation ou une marque. Il permet aux consommateurs
+            d'identifier rapidement une entreprise parmi plusieurs autres.
+
+        </p>
+
+        <p>
+
+            Un bon logo doit être simple, facile à reconnaître,
+            mémorable et représenter les valeurs de l'entreprise.
+
+        </p>
+
+        <p>
+
+            Il est utilisé sur les cartes de visite, les sites web,
+            les réseaux sociaux, les affiches, les emballages,
+            les applications mobiles et tous les supports de communication.
+
+        </p>
+
+
+
+        <h3>
+
+            📚 Enseignements du cours
+
+        </h3>
+
+        <p>
+
+            À la fin de cette partie, l'apprenant doit être capable de :
+
+        </p>
+
+        <ul>
+
+            <li>Définir un logo.</li>
+
+            <li>Comprendre son rôle.</li>
+
+            <li>Identifier les caractéristiques d'un bon logo.</li>
+
+            <li>Expliquer pourquoi chaque entreprise possède un logo.</li>
+
+        </ul>
+
+
+
+        <h3>
+
+            Les qualités d'un bon logo
+
+        </h3>
+
+        <ul>
+
+            <li>✔ Simple.</li>
+
+            <li>✔ Facile à mémoriser.</li>
+
+            <li>✔ Original.</li>
+
+            <li>✔ Professionnel.</li>
+
+            <li>✔ Adapté à tous les supports.</li>
+
+        </ul>
+
+
+
+        <h3>
+
+            Exemple
+
+        </h3>
+
+        <p>
+
+            Le logo de BMJ SERVICE permet aux apprenants de reconnaître
+            immédiatement la plateforme sur toutes les pages du site.
+
+        </p>
+
+
+
+        <div class="video-cours">
+
+            <h3>
+
+                📹 Vidéo explicative
+
+            </h3>
+
+            <iframe width="100%" height="400" src="https://www.youtube.com/embed/oZSgVhyMaYk" title="Le logo"
+                frameborder="0" allowfullscreen>
+
+            </iframe>
+
+        </div>
+
+    </section>
+    <section class="cours">
+
+        <h2>
+
+            2. Les couleurs de marque
+
+        </h2>
+
+        <p>
+
+            Les couleurs jouent un rôle essentiel dans l'identité visuelle d'une
+            entreprise. Elles permettent de transmettre des émotions, de renforcer
+            la personnalité d'une marque et d'être facilement reconnue par les
+            consommateurs.
+
+        </p>
+
+        <p>
+
+            Chaque couleur possède une signification particulière. Le choix des
+            couleurs ne doit donc jamais être fait au hasard. Il doit être en
+            accord avec les valeurs, les objectifs et le public cible de
+            l'entreprise.
+
+        </p>
+
+        <p>
+
+            Les grandes entreprises utilisent généralement une palette de deux ou
+            trois couleurs principales afin de conserver une image cohérente sur
+            tous leurs supports de communication.
+
+        </p>
+
+
+
+        <h3>
+
+            📚 Enseignements du cours
+
+        </h3>
+
+        <p>
+
+            À la fin de cette partie, l'apprenant doit être capable de :
+
+        </p>
+
+        <ul>
+
+            <li>
+                Comprendre l'importance des couleurs dans une marque.
+            </li>
+
+            <li>
+                Identifier la signification des principales couleurs.
+            </li>
+
+            <li>
+                Choisir des couleurs adaptées à une entreprise.
+            </li>
+
+            <li>
+                Comprendre la notion de cohérence visuelle.
+            </li>
+
+            <li>
+                Expliquer l'influence des couleurs sur les consommateurs.
+            </li>
+
+        </ul>
+
+
+
+        <h3>
+
+            Signification des principales couleurs
+
+        </h3>
+
+        <ul>
+
+            <li>
+
+                🔵 <strong>Bleu :</strong>
+                confiance, sécurité, professionnalisme et technologie.
+
+            </li>
+
+            <li>
+
+                🔴 <strong>Rouge :</strong>
+                énergie, passion, puissance et dynamisme.
+
+            </li>
+
+            <li>
+
+                🟢 <strong>Vert :</strong>
+                nature, santé, croissance et environnement.
+
+            </li>
+
+            <li>
+
+                🟡 <strong>Jaune :</strong>
+                optimisme, réussite, créativité et innovation.
+
+            </li>
+
+            <li>
+
+                ⚫ <strong>Noir :</strong>
+                élégance, luxe et prestige.
+
+            </li>
+
+            <li>
+
+                ⚪ <strong>Blanc :</strong>
+                simplicité, pureté et modernité.
+
+            </li>
+
+        </ul>
+
+
+
+        <h3>
+
+            Exemple concret
+
+        </h3>
+
+        <p>
+
+            BMJ SERVICE utilise principalement le bleu pour inspirer la confiance
+            et le professionnalisme, tandis que le jaune met en avant la réussite,
+            l'ambition et l'excellence dans la formation.
+
+        </p>
+
+
+
+        <h3>
+
+            Conseils pour bien choisir ses couleurs
+
+        </h3>
+
+        <ul>
+
+            <li>
+                Choisir deux ou trois couleurs principales.
+            </li>
+
+            <li>
+                Utiliser les mêmes couleurs sur tous les supports.
+            </li>
+
+            <li>
+                Éviter les couleurs trop nombreuses.
+            </li>
+
+            <li>
+                Respecter les valeurs de l'entreprise.
+            </li>
+
+            <li>
+                Vérifier que les couleurs restent lisibles sur mobile et ordinateur.
+            </li>
+
+        </ul>
+
+
+
+        <h3>
+
+            À retenir
+
+        </h3>
+
+        <p>
+
+            Les couleurs participent fortement à l'image d'une entreprise.
+            Une palette cohérente permet d'améliorer la reconnaissance de la
+            marque et de transmettre des émotions positives auprès des clients.
+
+        </p>
+
+
+
+        <div class="video-cours">
+
+            <h3>
+
+                📹 Vidéo explicative
+
+            </h3>
+
+            <iframe width="100%" height="400" src="https://www.youtube.com/embed/R4wK6_Z3iDU"
+                title="Les couleurs de marque" frameborder="0" allowfullscreen>
+
+            </iframe>
+
+        </div>
+
+    </section>
+    <section class="cours">
+
+        <h2>
+
+            3. La typographie et le slogan
+
+        </h2>
+
+        <p>
+
+            En plus du logo et des couleurs, une entreprise doit également
+            choisir une typographie adaptée ainsi qu'un slogan capable de
+            résumer sa mission et ses valeurs. Ces deux éléments participent
+            à la création d'une identité de marque forte et cohérente.
+
+        </p>
+
+        <p>
+
+            La typographie correspond au style d'écriture utilisé sur les
+            différents supports de communication, tandis que le slogan est une
+            phrase courte qui permet aux consommateurs de retenir facilement
+            une marque.
+
+        </p>
+
+        <p>
+
+            Lorsqu'ils sont bien choisis, ils renforcent la crédibilité de
+            l'entreprise et facilitent sa reconnaissance auprès du public.
+
+        </p>
+
+
+
+        <h3>
+
+            📚 Enseignements du cours
+
+        </h3>
+
+        <p>
+
+            À la fin de cette partie, l'apprenant doit être capable de :
+
+        </p>
+
+        <ul>
+
+            <li>
+                Comprendre ce qu'est une typographie.
+            </li>
+
+            <li>
+                Définir le rôle d'un slogan.
+            </li>
+
+            <li>
+                Choisir une police adaptée à une marque.
+            </li>
+
+            <li>
+                Rédiger un slogan simple et efficace.
+            </li>
+
+            <li>
+                Comprendre l'importance de la cohérence graphique.
+            </li>
+
+        </ul>
+
+
+
+        <h3>
+
+            La typographie
+
+        </h3>
+
+        <p>
+
+            La typographie représente le style des caractères utilisés par
+            une entreprise dans ses documents, son site web, ses publicités
+            et ses réseaux sociaux.
+
+        </p>
+
+        <p>
+
+            Une bonne typographie améliore la lisibilité des informations
+            et renforce le professionnalisme de la marque.
+
+        </p>
+
+        <h3>
+
+            Les qualités d'une bonne typographie
+
+        </h3>
+
+        <ul>
+
+            <li>✔ Facile à lire.</li>
+
+            <li>✔ Moderne et professionnelle.</li>
+
+            <li>✔ Utilisée de manière uniforme.</li>
+
+            <li>✔ Adaptée à tous les supports.</li>
+
+            <li>✔ En accord avec l'image de l'entreprise.</li>
+
+        </ul>
+
+
+
+        <h3>
+
+            Le slogan
+
+        </h3>
+
+        <p>
+
+            Le slogan est une phrase courte utilisée pour résumer l'identité,
+            les valeurs ou la promesse d'une entreprise. Il doit être simple,
+            facile à retenir et inspirer confiance.
+
+        </p>
+
+        <p>
+
+            De nombreuses marques sont connues grâce à leur slogan qui reste
+            gravé dans la mémoire des consommateurs.
+
+        </p>
+
+
+
+        <h3>
+
+            Les caractéristiques d'un bon slogan
+
+        </h3>
+
+        <ul>
+
+            <li>
+                Court et facile à mémoriser.
+            </li>
+
+            <li>
+                Clair et compréhensible.
+            </li>
+
+            <li>
+                Positif et motivant.
+            </li>
+
+            <li>
+                Représentatif des valeurs de la marque.
+            </li>
+
+            <li>
+                Original et unique.
+            </li>
+
+        </ul>
+
+
+
+        <h3>
+
+            Exemple concret
+
+        </h3>
+
+        <p>
+
+            BMJ SERVICE utilise une typographie moderne et lisible sur toute
+            la plateforme afin d'offrir une expérience agréable aux
+            apprenants. Son identité visuelle reste identique sur toutes les
+            pages, ce qui renforce son image professionnelle.
+
+        </p>
+
+
+
+        <h3>
+
+            À retenir
+
+        </h3>
+
+        <p>
+
+            La typographie et le slogan sont des éléments essentiels de
+            l'identité de marque. Une entreprise qui utilise toujours le même
+            style d'écriture et un slogan pertinent développe une image forte,
+            professionnelle et facilement reconnaissable.
+
+        </p>
+
+
+
+        <div class="video-cours">
+
+            <h3>
+
+                📹 Vidéo explicative
+
+            </h3>
+
+            <iframe width="100%" height="400" src="https://www.youtube.com/embed/eeeMA_keyRc"
+                title="Typographie et slogan" frameborder="0" allowfullscreen>
+
+            </iframe>
+
+        </div>
+
+    </section>
+    <!--====================================
+            À RETENIR
+=====================================-->
+
+    <section class="important">
+
+        <h2>
+
+            📌 À retenir
+
+        </h2>
+
+
+        <p>
+
+            ✔ Le logo est un élément essentiel qui permet aux clients
+            de reconnaître rapidement une entreprise.
+
+        </p>
+
+
+        <p>
+
+            ✔ Un bon logo doit être simple, mémorable,
+            professionnel et adapté aux différents supports.
+
+        </p>
+
+
+        <p>
+
+            ✔ Les couleurs d'une marque transmettent des émotions
+            et influencent la perception des consommateurs.
+
+        </p>
+
+
+        <p>
+
+            ✔ La typographie, les couleurs et le slogan doivent rester
+            cohérents afin de construire une identité visuelle forte.
+
+        </p>
+
+
+        <p>
+
+            ✔ Une identité visuelle bien construite renforce la confiance,
+            la crédibilité et la reconnaissance d'une entreprise.
+
+        </p>
+
+
+    </section>
+
+
+
+
+
+    <!--====================================
+            EXERCICE
+=====================================-->
+
+    <section class="exercice">
+
+
+        <h2>
+
+            📝 Exercice
+
+        </h2>
+
+
+        <p>
+
+            Imaginez que vous créez une nouvelle entreprise.
+
+            Concevez son identité visuelle en précisant :
+
+        </p>
+
+
+        <ul>
+
+            <li>
+                Le nom de votre entreprise.
+            </li>
+
+
+            <li>
+                Le type de logo que vous souhaitez créer.
+            </li>
+
+
+            <li>
+                Les couleurs principales de votre marque et leur signification.
+            </li>
+
+
+            <li>
+                La typographie que vous aimeriez utiliser.
+            </li>
+
+
+            <li>
+                Un slogan qui représente votre entreprise.
+            </li>
+
+
+        </ul>
+
+
+
+        <textarea placeholder="Écrivez votre réponse ici..."></textarea>
+
+
+    </section>
+
+
+
+
+
+    <!--====================================
+            NAVIGATION
+=====================================-->
+
+    <section class="navigation">
+
+
+        <button onclick="retourCours()">
+
+            ← Retour au chapitre
+
+        </button>
+
+
+
+        <button onclick="terminerLecon()">
+
+            ✓ Terminer la leçon
+
+        </button>
+
+
+    </section>
+
+
+
+
+
+    <!--====================================
+            FOOTER
+=====================================-->
+
+    <footer>
+
+
+        <h3>
+
+            BMJ SERVICE
+
+        </h3>
+
+
+        <p>
+
+            Félicitations ! Vous avez terminé la leçon 2 du chapitre
+            <strong>Identité de marque</strong>.
+
+            Vous avez appris l'importance du logo, des couleurs,
+            de la typographie et du slogan dans la construction
+            d'une marque professionnelle.
+
+        </p>
+
+
+    </footer>
+    <script>
+
+
+        //====================================
+        // CHARGEMENT DE LA PAGE
+        //====================================
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+
+            let utilisateur = JSON.parse(
+
+                localStorage.getItem("bmj_current_user")
+
+            );
+
+
+            if (!utilisateur) {
+
+
+                window.location.href = "connexion.html";
+
+                return;
+
+
+            }
+
+
+
+            //=========================
+            // PROFIL APPRENANT
+            //=========================
+
+
+            document.getElementById("nomUtilisateur").innerHTML = utilisateur.nom;
+
+
+
+            if (utilisateur.photo && utilisateur.photo !== "") {
+
+
+                document.getElementById("photoUtilisateur").src = utilisateur.photo;
+
+
+            }
+
+
+
+        });
+
+
+
+
+
+
+
+        //====================================
+        // RETOUR AU CHAPITRE
+        //====================================
+
+
+        function retourCours() {
+
+
+            window.location.href = "marketing.html";
+
+
+        }
+
+
+
+
+
+
+
+        //====================================
+        // TERMINER LA LEÇON 2
+        //====================================
+
+
+        function terminerLecon() {
+
+
+
+            let utilisateur = JSON.parse(
+
+                localStorage.getItem("bmj_current_user")
+
+            );
+
+
+
+            if (!utilisateur) {
+
+
+                window.location.href = "connexion.html";
+
+                return;
+
+
+            }
+
+
+
+
+
+
+
+            //--------------------------------
+            // PROGRESSION MARKETING
+            //--------------------------------
+
+
+            let progression = JSON.parse(
+
+                localStorage.getItem("marketing_progression")
+
+            ) || [];
+
+
+
+
+
+
+
+            //==================================
+            // LEÇON DÉJÀ TERMINÉE
+            //==================================
+
+
+            if (progression.includes("2")) {
+
+
+                alert(
+
+                    "Cette Leçon 2 est déjà terminée."
+
+                );
+
+
+                window.location.href = "marketing.html";
+
+
+                return;
+
+
+            }
+
+
+
+
+
+
+
+
+            //--------------------------------
+            // AJOUT DE LA LEÇON 2
+            //--------------------------------
+
+
+            progression.push("2");
+
+
+
+            localStorage.setItem(
+
+                "marketing_progression",
+
+                JSON.stringify(progression)
+
+            );
+
+
+
+
+
+
+
+
+            //--------------------------------
+            // COURS SUIVIS
+            //--------------------------------
+
+
+            if (!utilisateur.coursSuivis) {
+
+
+                utilisateur.coursSuivis = [];
+
+
+            }
+
+
+
+
+
+
+            if (!utilisateur.coursSuivis.includes(
+
+                "Marketing Leçon 2"
+
+            )) {
+
+
+                utilisateur.coursSuivis.push(
+
+                    "Marketing Leçon 2"
+
+                );
+
+
+            }
+
+
+
+
+
+
+
+
+            //--------------------------------
+            // CALCUL PROGRESSION
+            //--------------------------------
+
+
+            utilisateur.progression = progression.length * 20;
+
+
+
+            if (utilisateur.progression > 100) {
+
+
+                utilisateur.progression = 100;
+
+
+            }
+
+
+
+
+
+
+
+
+            //--------------------------------
+            // SAUVEGARDE SESSION
+            //--------------------------------
+
+
+            localStorage.setItem(
+
+                "bmj_current_user",
+
+                JSON.stringify(utilisateur)
+
+            );
+
+
+
+
+
+
+
+
+
+            //--------------------------------
+            // SAUVEGARDE LISTE UTILISATEURS
+            //--------------------------------
+
+
+            let utilisateurs = JSON.parse(
+
+                localStorage.getItem("bmj_users")
+
+            ) || [];
+
+
+
+
+
+            let index = utilisateurs.findIndex(
+
+                u => u.id === utilisateur.id
+
+            );
+
+
+
+
+
+            if (index !== -1) {
+
+
+                utilisateurs[index] = utilisateur;
+
+
+            }
+
+
+
+
+
+
+            localStorage.setItem(
+
+                "bmj_users",
+
+                JSON.stringify(utilisateurs)
+
+            );
+
+
+
+
+
+
+
+
+
+            //--------------------------------
+            // MESSAGE
+            //--------------------------------
+
+
+            alert(
+
+
+                "🎉 Félicitations !\n\nVous avez terminé la Leçon 2 : Le logo et les couleurs de marque."
+
+
+            );
+
+
+
+
+
+
+
+
+
+            //--------------------------------
+            // RETOUR AU CHAPITRE
+            //--------------------------------
+
+
+            window.location.href = "marketing.html";
+
+
+
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

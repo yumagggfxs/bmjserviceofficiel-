@@ -1,0 +1,1610 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*==================================================
+        BMJ SERVICE
+        QUIZ FINAL - CHAPITRE 4
+        SOCIAL MEDIA MARKETING
+==================================================*/
+
+
+        * {
+
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+
+        }
+
+
+
+        body {
+
+            background: #f4f7fb;
+            color: #333;
+            line-height: 1.8;
+
+        }
+
+
+
+        html {
+
+            scroll-behavior: smooth;
+
+        }
+
+
+
+
+
+
+
+        /*=====================================
+            HEADER
+======================================*/
+
+
+        header {
+
+            position: fixed;
+
+            top: 0;
+
+            left: 0;
+
+            width: 100%;
+
+            height: 75px;
+
+            background: white;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            padding: 0 40px;
+
+            box-shadow: 0 5px 20px rgba(0, 0, 0, .08);
+
+            z-index: 1000;
+
+        }
+
+
+
+        .logo {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+        }
+
+
+
+        .logo img {
+
+            width: 50px;
+
+            height: 50px;
+
+            border-radius: 50%;
+
+            border: 3px solid #D4AF37;
+
+        }
+
+
+
+        .logo h2 {
+
+            color: #145A86;
+
+        }
+
+
+
+        .logo span {
+
+            color: #D4AF37;
+
+        }
+
+
+
+
+
+        .student-profile {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+        }
+
+
+
+        .student-profile img {
+
+            width: 50px;
+
+            height: 50px;
+
+            border-radius: 50%;
+
+            object-fit: cover;
+
+            border: 3px solid #145A86;
+
+        }
+
+
+
+        .student-profile h4 {
+
+            color: #145A86;
+
+        }
+
+
+
+        .student-profile small {
+
+            color: #777;
+
+        }
+
+
+
+
+
+
+
+
+
+        /*=====================================
+            HERO
+======================================*/
+
+
+        .lesson-hero {
+
+            margin-top: 75px;
+
+            height: 400px;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+
+
+            background:
+
+                linear-gradient(rgba(20, 90, 134, .85),
+
+                    rgba(0, 0, 0, .75)),
+
+                url(images/quiz-banner.jpg);
+
+
+
+            background-size: cover;
+
+            background-position: center;
+
+        }
+
+
+
+        .overlay {
+
+            color: white;
+
+            text-align: center;
+
+            width: 90%;
+
+            max-width: 900px;
+
+        }
+
+
+
+        .overlay span {
+
+            background: #D4AF37;
+
+            color: #145A86;
+
+            padding: 8px 25px;
+
+            border-radius: 50px;
+
+            font-weight: bold;
+
+        }
+
+
+
+        .overlay h1 {
+
+            font-size: 45px;
+
+            margin: 20px 0;
+
+        }
+
+
+
+        .overlay p {
+
+            font-size: 19px;
+
+        }
+
+
+
+
+
+
+
+
+
+        /*=====================================
+            QUIZ
+======================================*/
+
+
+        .quiz {
+
+            width: 90%;
+
+            max-width: 1000px;
+
+            margin: 50px auto;
+
+            background: white;
+
+            padding: 40px;
+
+            border-radius: 25px;
+
+            box-shadow:
+
+                0 10px 30px rgba(0, 0, 0, .08);
+
+        }
+
+
+
+        .quiz h2 {
+
+            color: #145A86;
+
+            border-left: 7px solid #D4AF37;
+
+            padding-left: 15px;
+
+            margin-bottom: 20px;
+
+        }
+
+
+
+        .quiz>p {
+
+            margin-bottom: 30px;
+
+            text-align: justify;
+
+        }
+
+
+
+
+
+
+
+
+
+        /*=====================================
+            QUESTIONS
+======================================*/
+
+
+        .question {
+
+            background: #f8fbff;
+
+            padding: 25px;
+
+            border-radius: 18px;
+
+            margin-bottom: 25px;
+
+            border-left: 5px solid #145A86;
+
+        }
+
+
+
+        .question h3 {
+
+            color: #145A86;
+
+            margin-bottom: 18px;
+
+            font-size: 19px;
+
+        }
+
+
+
+        .question label {
+
+            display: block;
+
+            background: white;
+
+            padding: 14px;
+
+            margin-bottom: 10px;
+
+            border-radius: 10px;
+
+            cursor: pointer;
+
+            border: 1px solid #ddd;
+
+            transition: .3s;
+
+        }
+
+
+
+        .question label:hover {
+
+            background: #eef6ff;
+
+            border-color: #145A86;
+
+        }
+
+
+
+        .question input {
+
+            margin-right: 10px;
+
+        }
+
+
+
+
+
+
+
+
+
+        /*=====================================
+            BOUTON
+======================================*/
+
+
+        .quiz button {
+
+            width: 100%;
+
+            padding: 18px;
+
+            border: none;
+
+            border-radius: 15px;
+
+            background: #145A86;
+
+            color: white;
+
+            font-size: 18px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            transition: .3s;
+
+        }
+
+
+
+        .quiz button:hover {
+
+            background: #D4AF37;
+
+            color: #145A86;
+
+            transform: translateY(-4px);
+
+        }
+
+
+
+
+
+
+
+
+
+        /*=====================================
+            RESULTAT
+======================================*/
+
+
+        #resultat {
+
+            margin-top: 30px;
+
+            text-align: center;
+
+            font-size: 22px;
+
+            font-weight: bold;
+
+            padding: 20px;
+
+            border-radius: 15px;
+
+        }
+
+
+
+
+
+
+
+
+
+        /*=====================================
+            FOOTER
+======================================*/
+
+
+        footer {
+
+            background: #145A86;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 35px 20px;
+
+        }
+
+
+
+        footer h3 {
+
+            color: #D4AF37;
+
+            font-size: 28px;
+
+            margin-bottom: 10px;
+
+        }
+
+
+
+
+
+
+
+
+
+        /*=====================================
+            TABLETTE
+======================================*/
+
+
+        @media(max-width:900px) {
+
+
+
+            header {
+
+                padding: 0 15px;
+
+            }
+
+
+
+            .student-profile small {
+
+                display: none;
+
+            }
+
+
+
+            .overlay h1 {
+
+                font-size: 35px;
+
+            }
+
+
+
+            .quiz {
+
+                width: 94%;
+
+                padding: 25px;
+
+            }
+
+
+        }
+
+
+
+
+
+
+
+
+
+        /*=====================================
+            MOBILE
+======================================*/
+
+
+        @media(max-width:500px) {
+
+
+
+            .logo h2 {
+
+                font-size: 18px;
+
+            }
+
+
+
+            .logo img {
+
+                width: 40px;
+
+                height: 40px;
+
+            }
+
+
+
+            .lesson-hero {
+
+                height: 350px;
+
+            }
+
+
+
+            .overlay h1 {
+
+                font-size: 27px;
+
+            }
+
+
+
+            .overlay p {
+
+                font-size: 14px;
+
+            }
+
+
+
+            .quiz h2 {
+
+                font-size: 22px;
+
+            }
+
+
+
+            .question {
+
+                padding: 18px;
+
+            }
+
+
+
+            .question h3 {
+
+                font-size: 16px;
+
+            }
+
+
+
+            .question label {
+
+                font-size: 14px;
+
+            }
+
+
+
+            .quiz button {
+
+                font-size: 15px;
+
+            }
+
+
+
+            footer h3 {
+
+                font-size: 24px;
+
+            }
+
+
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <!--====================================
+            HEADER
+=====================================-->
+
+    <header>
+
+
+        <div class="logo">
+
+            <img src="images/logo.png">
+
+            <h2>
+
+                BMJ <span>SERVICE</span>
+
+            </h2>
+
+        </div>
+
+
+
+
+        <div class="student-profile">
+
+
+            <img id="photoUtilisateur" src="images/user.png">
+
+
+            <div>
+
+
+                <h4 id="nomUtilisateur">
+
+                    Apprenant
+
+                </h4>
+
+
+                <small>
+
+                    Marketing Digital
+
+                </small>
+
+
+            </div>
+
+
+        </div>
+
+
+    </header>
+
+
+
+
+
+
+
+
+
+    <!--====================================
+            HERO QUIZ
+=====================================-->
+
+    <section class="lesson-hero">
+
+
+        <div class="overlay">
+
+
+            <span>
+
+                ÉVALUATION FINALE
+
+            </span>
+
+
+
+            <h1>
+
+                Quiz - Social Media Marketing
+
+            </h1>
+
+
+
+
+            <p>
+
+                Vérifiez vos connaissances sur les réseaux sociaux,
+                la création de contenu et la gestion des communautés.
+
+            </p>
+
+
+
+        </div>
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+    <!--====================================
+            QUIZ
+=====================================-->
+
+    <section class="quiz">
+
+
+
+        <h2>
+
+            🎓 Évaluation du Chapitre 4
+
+        </h2>
+
+
+
+
+
+        <p>
+
+            Répondez aux questions suivantes pour valider votre chapitre.
+
+            Vous devez obtenir au minimum <strong>70%</strong> pour réussir.
+
+        </p>
+
+
+
+
+
+
+
+        <!-- QUESTION 1 -->
+
+        <div class="question">
+
+
+            <h3>
+
+                1. Quel est l'objectif principal du Social Media Marketing ?
+
+            </h3>
+
+
+
+            <label>
+
+                <input type="radio" name="q1" value="0">
+
+                Créer uniquement des publicités
+
+            </label>
+
+
+
+            <label>
+
+                <input type="radio" name="q1" value="1">
+
+                Créer une relation avec les clients et développer une communauté
+
+            </label>
+
+
+
+            <label>
+
+                <input type="radio" name="q1" value="0">
+
+                Publier sans stratégie
+
+            </label>
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+        <!-- QUESTION 2 -->
+
+
+        <div class="question">
+
+
+            <h3>
+
+                2. Quel est le rôle d'un Community Manager ?
+
+            </h3>
+
+
+
+            <label>
+
+                <input type="radio" name="q2" value="1">
+
+                Gérer la communauté et communiquer avec les abonnés
+
+            </label>
+
+
+
+            <label>
+
+                <input type="radio" name="q2" value="0">
+
+                Créer uniquement un logo
+
+            </label>
+
+
+
+            <label>
+
+                <input type="radio" name="q2" value="0">
+
+                Gérer seulement les ventes physiques
+
+            </label>
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+        <!-- QUESTION 3 -->
+
+
+        <div class="question">
+
+
+            <h3>
+
+                3. Quel contenu obtient souvent un fort engagement ?
+
+            </h3>
+
+
+
+            <label>
+
+                <input type="radio" name="q3" value="1">
+
+                Les vidéos et contenus interactifs
+
+            </label>
+
+
+
+            <label>
+
+                <input type="radio" name="q3" value="0">
+
+                Les publications sans image
+
+            </label>
+
+
+
+            <label>
+
+                <input type="radio" name="q3" value="0">
+
+                Les contenus copiés sans modification
+
+            </label>
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+        <!-- QUESTION 4 -->
+
+
+        <div class="question">
+
+
+            <h3>
+
+                4. Pourquoi répondre aux commentaires des clients ?
+
+            </h3>
+
+
+
+            <label>
+
+                <input type="radio" name="q4" value="1">
+
+                Pour renforcer la confiance et améliorer la relation client
+
+            </label>
+
+
+
+            <label>
+
+                <input type="radio" name="q4" value="0">
+
+                Pour supprimer tous les messages
+
+            </label>
+
+
+
+            <label>
+
+                <input type="radio" name="q4" value="0">
+
+                Pour éviter les échanges
+
+            </label>
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+        <!-- QUESTION 5 -->
+
+
+        <div class="question">
+
+
+            <h3>
+
+                5. Quels éléments permettent de mesurer l'engagement ?
+
+            </h3>
+
+
+
+            <label>
+
+                <input type="radio" name="q5" value="1">
+
+                Likes, commentaires, partages et interactions
+
+            </label>
+
+
+
+            <label>
+
+                <input type="radio" name="q5" value="0">
+
+                La couleur du logo
+
+            </label>
+
+
+
+            <label>
+
+                <input type="radio" name="q5" value="0">
+
+                Le nom de l'entreprise uniquement
+
+            </label>
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+        <button onclick="corrigerQuiz()">
+
+            Valider mon évaluation
+
+        </button>
+
+
+
+
+        <div id="resultat"></div>
+
+
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+    <!--====================================
+            FOOTER
+=====================================-->
+
+    <footer>
+
+
+        <h3>
+
+            BMJ SERVICE
+
+        </h3>
+
+
+        <p>
+
+            Terminez l'évaluation pour valider le Chapitre 4 :
+            <strong>Social Media Marketing</strong>.
+
+        </p>
+
+
+    </footer>
+
+    <script>
+
+
+        //==================================================
+        // QUIZ FINAL
+        // CHAPITRE 4 : SOCIAL MEDIA MARKETING
+        //==================================================
+
+
+
+
+
+        //====================================
+        // CHARGEMENT PAGE
+        //====================================
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+
+            let utilisateur = JSON.parse(
+
+                localStorage.getItem("bmj_current_user")
+
+            );
+
+
+
+
+            if (utilisateur) {
+
+
+                document.getElementById("nomUtilisateur").innerHTML = utilisateur.nom;
+
+
+
+
+                if (utilisateur.photo && utilisateur.photo !== "") {
+
+
+                    document.getElementById("photoUtilisateur").src = utilisateur.photo;
+
+
+                }
+
+
+            }
+
+
+
+
+        });
+
+
+
+
+
+
+
+
+
+        //====================================
+        // CORRECTION DU QUIZ
+        //====================================
+
+
+        function corrigerQuiz() {
+
+
+
+            let score = 0;
+
+
+
+            let questions = 5;
+
+
+
+
+
+
+            //===========================
+            // VERIFICATION REPONSES
+            //===========================
+
+
+            for (let i = 1; i <= questions; i++) {
+
+
+
+                let reponse = document.querySelector(
+
+                    'input[name="q' + i + '"]:checked'
+
+                );
+
+
+
+                if (!reponse) {
+
+
+
+                    alert(
+
+                        "Veuillez répondre à toutes les questions."
+
+                    );
+
+
+                    return;
+
+
+                }
+
+
+
+
+
+                score += Number(reponse.value);
+
+
+
+            }
+
+
+
+
+
+
+
+
+            //===========================
+            // CALCUL NOTE
+            //===========================
+
+
+            let note = Math.round(
+
+                (score / questions) * 100
+
+            );
+
+
+
+
+
+
+
+            let resultat = document.getElementById("resultat");
+
+
+
+
+
+
+
+
+            //===========================
+            // ECHEC
+            //===========================
+
+
+            if (note < 70) {
+
+
+
+                resultat.innerHTML =
+
+                    "❌ Échec : Votre score est de " + note + "%.<br><br>" +
+
+                    "Vous devez obtenir au minimum 70% pour valider le Chapitre 4.<br>" +
+
+                    "Révisez les leçons et essayez encore.";
+
+
+
+                resultat.style.background = "#ffe5e5";
+
+                resultat.style.color = "#c0392b";
+
+
+
+                return;
+
+
+
+            }
+
+
+
+
+
+
+
+
+
+            //===========================
+            // REUSSITE
+            //===========================
+
+
+
+            resultat.innerHTML =
+
+                "🎉 Félicitations ! Score : " + note + "%.<br><br>" +
+
+                "Le Chapitre 4 : Social Media Marketing est validé.";
+
+
+
+
+
+            resultat.style.background = "#e5fff0";
+
+            resultat.style.color = "#145A86";
+
+
+
+
+
+
+
+            validerChapitre4();
+
+
+
+
+
+        }
+
+
+
+
+
+
+
+
+
+        //====================================
+        // VALIDATION CHAPITRE 4
+        //====================================
+
+
+        function validerChapitre4() {
+
+
+
+            let utilisateur = JSON.parse(
+
+                localStorage.getItem("bmj_current_user")
+
+            );
+
+
+
+
+
+
+            if (utilisateur) {
+
+
+
+
+
+                //============================
+                // AJOUT CHAPITRE VALIDE
+                //============================
+
+
+
+                if (!utilisateur.chapitresValides) {
+
+
+
+                    utilisateur.chapitresValides = [];
+
+
+
+                }
+
+
+
+
+
+
+
+                if (!utilisateur.chapitresValides.includes("Chapitre 4")) {
+
+
+
+                    utilisateur.chapitresValides.push(
+
+                        "Chapitre 4"
+
+                    );
+
+
+                }
+
+
+
+
+
+
+
+                //============================
+                // COURS TERMINES
+                //============================
+
+
+
+                if (!utilisateur.coursSuivis) {
+
+
+
+                    utilisateur.coursSuivis = [];
+
+
+                }
+
+
+
+
+
+
+                if (!utilisateur.coursSuivis.includes(
+
+                    "Evaluation Chapitre 4 - Social Media Marketing"
+
+                )) {
+
+
+
+                    utilisateur.coursSuivis.push(
+
+                        "Evaluation Chapitre 4 - Social Media Marketing"
+
+                    );
+
+
+                }
+
+
+
+
+
+
+
+
+
+                //============================
+                // SAUVEGARDE SESSION
+                //============================
+
+
+
+                localStorage.setItem(
+
+                    "bmj_current_user",
+
+                    JSON.stringify(utilisateur)
+
+                );
+
+
+
+
+
+
+
+
+
+                //============================
+                // SAUVEGARDE UTILISATEURS
+                //============================
+
+
+
+                let utilisateurs = JSON.parse(
+
+                    localStorage.getItem("bmj_users")
+
+                ) || [];
+
+
+
+
+
+
+                let index = utilisateurs.findIndex(
+
+
+
+                    u => u.id === utilisateur.id
+
+
+
+                );
+
+
+
+
+
+
+                if (index !== -1) {
+
+
+
+                    utilisateurs[index] = utilisateur;
+
+
+
+                }
+
+
+
+
+
+
+
+                localStorage.setItem(
+
+                    "bmj_users",
+
+                    JSON.stringify(utilisateurs)
+
+                );
+
+
+
+
+
+            }
+
+
+
+
+
+
+
+
+
+            //============================
+            // MESSAGE ET REDIRECTION
+            //============================
+
+
+
+            setTimeout(function () {
+
+
+
+                alert(
+
+                    "🎓 Bravo ! Vous avez validé le Chapitre 4 : Social Media Marketing."
+
+                );
+
+
+
+                window.location.href = "social_media.php";
+
+
+
+            }, 1500);
+
+
+
+
+
+
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

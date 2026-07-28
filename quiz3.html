@@ -1,0 +1,2481 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*==================================================
+        BMJ SERVICE - LEÇON 6
+        EVALUATION FINALE IDENTITE DE MARQUE
+==================================================*/
+
+
+        * {
+
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+
+        }
+
+
+
+        html {
+
+            scroll-behavior: smooth;
+
+        }
+
+
+
+        body {
+
+            background: #f4f7fb;
+            color: #333;
+            line-height: 1.8;
+
+        }
+
+
+
+
+
+
+
+        /*=====================================
+            HEADER
+======================================*/
+
+
+        header {
+
+            position: fixed;
+
+            top: 0;
+
+            left: 0;
+
+            width: 100%;
+
+            height: 75px;
+
+            background: white;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            padding: 0 45px;
+
+            box-shadow: 0 8px 25px rgba(0, 0, 0, .08);
+
+            z-index: 1000;
+
+        }
+
+
+
+        .logo {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+        }
+
+
+
+        .logo img {
+
+            width: 52px;
+
+            height: 52px;
+
+            border-radius: 50%;
+
+            border: 3px solid #D4AF37;
+
+        }
+
+
+
+        .logo h2 {
+
+            color: #145A86;
+
+        }
+
+
+
+        .logo span {
+
+            color: #D4AF37;
+
+        }
+
+
+
+
+
+        .student-profile {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+        }
+
+
+
+        .student-profile img {
+
+            width: 50px;
+
+            height: 50px;
+
+            border-radius: 50%;
+
+            object-fit: cover;
+
+            border: 3px solid #145A86;
+
+        }
+
+
+
+        .student-profile h4 {
+
+            color: #145A86;
+
+        }
+
+
+
+
+
+
+
+
+
+        /*=====================================
+            HERO
+======================================*/
+
+
+        .lesson-hero {
+
+            margin-top: 75px;
+
+            height: 430px;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+
+            background:
+
+                linear-gradient(135deg,
+
+                    rgba(20, 90, 134, .9),
+
+                    rgba(0, 0, 0, .75)),
+
+                url(images/quiz-banner.jpg);
+
+
+
+            background-size: cover;
+
+            background-position: center;
+
+        }
+
+
+
+
+        .overlay {
+
+            color: white;
+
+            width: 90%;
+
+            max-width: 1000px;
+
+            text-align: center;
+
+        }
+
+
+
+        .overlay span {
+
+
+            display: inline-block;
+
+            background: #D4AF37;
+
+            color: #145A86;
+
+            padding: 8px 25px;
+
+            border-radius: 50px;
+
+            font-weight: bold;
+
+            margin-bottom: 20px;
+
+        }
+
+
+
+        .overlay h1 {
+
+            font-size: 52px;
+
+            margin-bottom: 20px;
+
+        }
+
+
+
+        .overlay p {
+
+            font-size: 20px;
+
+        }
+
+
+
+
+
+
+
+
+
+        /*=====================================
+        SECTIONS GENERALES
+======================================*/
+
+
+        .objectif,
+        .cours,
+        .quiz-container,
+        .important {
+
+
+            width: 90%;
+
+            max-width: 1100px;
+
+            margin: 45px auto;
+
+            background: white;
+
+            padding: 40px;
+
+            border-radius: 25px;
+
+            box-shadow: 0 15px 35px rgba(0, 0, 0, .08);
+
+
+        }
+
+
+
+        .objectif h2,
+        .cours h2,
+        .quiz-container h2,
+        .important h2 {
+
+
+            color: #145A86;
+
+            border-left: 7px solid #D4AF37;
+
+            padding-left: 15px;
+
+            margin-bottom: 25px;
+
+        }
+
+
+
+
+
+
+
+        .objectif li,
+        .cours li {
+
+
+            margin-bottom: 12px;
+
+            margin-left: 20px;
+
+        }
+
+
+
+
+
+
+
+        /*=====================================
+            BLOC QUIZ START
+======================================*/
+
+
+        .quiz-start {
+
+
+            text-align: center;
+
+            background: #f8fbff;
+
+            padding: 35px;
+
+            border-radius: 20px;
+
+        }
+
+
+
+        .quiz-start img {
+
+
+            width: 180px;
+
+            margin-bottom: 20px;
+
+
+        }
+
+
+
+        .quiz-start h3 {
+
+
+            color: #145A86;
+
+            font-size: 26px;
+
+        }
+
+
+
+        .quiz-start button {
+
+
+            margin-top: 25px;
+
+            padding: 16px 40px;
+
+            border: none;
+
+            border-radius: 50px;
+
+            background: #D4AF37;
+
+            color: #145A86;
+
+            font-size: 18px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            transition: .3s;
+
+
+        }
+
+
+
+        .quiz-start button:hover {
+
+
+            transform: translateY(-5px);
+
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .2);
+
+
+        }
+
+
+
+
+
+
+
+
+
+        /*=====================================
+            QUESTIONS QUIZ
+======================================*/
+
+
+        .question {
+
+
+            background: #f8fbff;
+
+            padding: 25px;
+
+            border-radius: 18px;
+
+            margin-bottom: 25px;
+
+            border-left: 5px solid #145A86;
+
+
+        }
+
+
+
+        .question h3 {
+
+
+            color: #145A86;
+
+            margin-bottom: 20px;
+
+        }
+
+
+
+        .question label {
+
+
+            display: block;
+
+            background: white;
+
+            padding: 15px;
+
+            margin-bottom: 12px;
+
+            border-radius: 12px;
+
+            cursor: pointer;
+
+            border: 1px solid #ddd;
+
+            transition: .3s;
+
+
+        }
+
+
+
+        .question label:hover {
+
+
+            background: #eef7ff;
+
+            border-color: #145A86;
+
+
+        }
+
+
+
+        .question input {
+
+
+            margin-right: 10px;
+
+
+        }
+
+
+
+
+
+
+
+
+        /*=====================================
+        BOUTON RESULTAT
+======================================*/
+
+
+        .btn-resultat {
+
+
+            width: 100%;
+
+            padding: 18px;
+
+            background: #145A86;
+
+            color: white;
+
+            border: none;
+
+            border-radius: 15px;
+
+            font-size: 18px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            transition: .3s;
+
+
+        }
+
+
+
+        .btn-resultat:hover {
+
+
+            background: #D4AF37;
+
+            color: #145A86;
+
+            transform: translateY(-5px);
+
+
+        }
+
+
+
+
+
+
+
+
+
+        /*=====================================
+            RESULTAT
+======================================*/
+
+
+        #resultatQuiz {
+
+
+            margin-top: 25px;
+
+            text-align: center;
+
+            font-size: 22px;
+
+            font-weight: bold;
+
+            padding: 20px;
+
+            border-radius: 15px;
+
+
+        }
+
+
+
+
+
+
+
+
+
+        /*=====================================
+            A RETENIR
+======================================*/
+
+
+        .important {
+
+
+            background:
+
+                linear-gradient(135deg,
+
+                    #145A86,
+
+                    #0c3955);
+
+
+
+            color: white;
+
+
+        }
+
+
+
+        .important h2 {
+
+            color: white;
+
+        }
+
+
+
+        .important li {
+
+
+            margin-bottom: 15px;
+
+            font-size: 17px;
+
+
+        }
+
+
+
+
+
+
+
+
+
+        /*=====================================
+            NAVIGATION
+======================================*/
+
+
+        .navigation {
+
+
+            width: 90%;
+
+            max-width: 1100px;
+
+            margin: 40px auto 70px;
+
+            display: flex;
+
+            gap: 20px;
+
+
+        }
+
+
+
+        .navigation button {
+
+
+            flex: 1;
+
+            padding: 18px;
+
+            border: none;
+
+            border-radius: 15px;
+
+            font-size: 17px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            transition: .3s;
+
+
+        }
+
+
+
+        .navigation button:first-child {
+
+
+            background: #145A86;
+
+            color: white;
+
+
+        }
+
+
+
+        .navigation button:last-child {
+
+
+            background: #D4AF37;
+
+            color: #145A86;
+
+
+        }
+
+
+
+        .navigation button:hover {
+
+
+            transform: translateY(-5px);
+
+            box-shadow: 0 12px 25px rgba(0, 0, 0, .2);
+
+
+        }
+
+
+
+
+
+
+
+
+
+        /*=====================================
+            FOOTER
+======================================*/
+
+
+        footer {
+
+
+            background: #145A86;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 40px 20px;
+
+
+        }
+
+
+
+        footer h3 {
+
+
+            color: #D4AF37;
+
+            font-size: 28px;
+
+            margin-bottom: 15px;
+
+
+        }
+
+
+
+
+
+
+
+
+
+        /*=====================================
+            RESPONSIVE MOBILE
+======================================*/
+
+
+        @media(max-width:900px) {
+
+
+
+            header {
+
+                padding: 0 15px;
+
+            }
+
+
+
+            .student-profile small {
+
+                display: none;
+
+            }
+
+
+
+            .overlay h1 {
+
+                font-size: 35px;
+
+            }
+
+
+
+            .overlay p {
+
+                font-size: 16px;
+
+            }
+
+
+
+            .objectif,
+            .cours,
+            .quiz-container,
+            .important {
+
+
+                width: 94%;
+
+                padding: 25px;
+
+
+            }
+
+
+
+            .navigation {
+
+
+                flex-direction: column;
+
+            }
+
+
+
+            .question label {
+
+
+                font-size: 15px;
+
+            }
+
+
+
+        }
+
+
+
+
+
+
+
+
+        @media(max-width:480px) {
+
+
+
+            .logo h2 {
+
+                font-size: 18px;
+
+            }
+
+
+
+            .logo img {
+
+                width: 42px;
+
+                height: 42px;
+
+            }
+
+
+
+            .lesson-hero {
+
+                height: 350px;
+
+            }
+
+
+
+            .overlay h1 {
+
+                font-size: 27px;
+
+            }
+
+
+
+            .overlay p {
+
+                font-size: 14px;
+
+            }
+
+
+
+            .objectif h2,
+            .cours h2,
+            .quiz-container h2 {
+
+
+                font-size: 22px;
+
+            }
+
+
+
+            .question {
+
+
+                padding: 18px;
+
+            }
+
+
+
+            .question h3 {
+
+                font-size: 17px;
+
+            }
+
+
+
+            .quiz-start img {
+
+                width: 130px;
+
+            }
+
+
+
+            .btn-resultat {
+
+                font-size: 15px;
+
+            }
+
+
+
+            .navigation button {
+
+                font-size: 15px;
+
+            }
+
+
+
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <!--====================================
+            HEADER
+=====================================-->
+
+    <header>
+
+
+        <div class="logo">
+
+
+            <img src="images/logo.png" alt="BMJ SERVICE">
+
+
+            <h2>
+
+                BMJ <span>SERVICE</span>
+
+            </h2>
+
+
+        </div>
+
+
+
+
+
+        <div class="student-profile">
+
+
+            <img id="photoUtilisateur" src="images/user.png" alt="Photo">
+
+
+
+            <div>
+
+
+                <h4 id="nomUtilisateur">
+
+                    Apprenant
+
+                </h4>
+
+
+
+
+                <small id="domaineUtilisateur">
+
+                    Marketing Digital
+
+                </small>
+
+
+            </div>
+
+
+        </div>
+
+
+    </header>
+
+
+
+
+
+
+
+
+
+    <!--====================================
+            HERO
+=====================================-->
+
+    <section class="lesson-hero">
+
+
+
+        <div class="overlay">
+
+
+
+            <span>
+
+                ÉVALUATION FINALE
+
+            </span>
+
+
+
+
+            <h1>
+
+                Quiz : Identité de marque
+
+            </h1>
+
+
+
+
+
+            <p>
+
+                Vérifiez vos connaissances sur l'identité de marque
+                et validez le troisième chapitre de votre formation
+                en marketing digital.
+
+            </p>
+
+
+
+        </div>
+
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+    <!--====================================
+            INTRODUCTION QUIZ
+=====================================-->
+
+    <section class="objectif">
+
+
+        <h2>
+
+            🎓 Évaluation du chapitre
+
+        </h2>
+
+
+
+
+        <p>
+
+            Cette évaluation permet de mesurer votre compréhension
+            des notions étudiées durant ce chapitre :
+
+        </p>
+
+
+
+
+        <ul>
+
+
+            <li>
+
+                ✔ Les bases de l'identité de marque.
+
+            </li>
+
+
+
+            <li>
+
+                ✔ Le rôle du logo et des couleurs.
+
+            </li>
+
+
+
+            <li>
+
+                ✔ Les valeurs et la personnalité d'une marque.
+
+            </li>
+
+
+
+            <li>
+
+                ✔ La construction d'une image de marque durable.
+
+            </li>
+
+
+
+            <li>
+
+                ✔ La fidélisation et la notoriété.
+
+            </li>
+
+
+        </ul>
+
+
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+    <!--====================================
+            QUIZ
+=====================================-->
+
+    <section class="cours">
+
+
+        <h2>
+
+            🎯 Passer le quiz
+
+        </h2>
+
+
+
+
+        <p>
+
+            Répondez aux questions suivantes afin de valider
+            vos connaissances et terminer le chapitre
+            <strong>Identité de marque</strong>.
+
+        </p>
+
+
+
+
+        <p>
+
+            Prenez votre temps, chaque réponse permet d'évaluer
+            votre compréhension des concepts importants.
+
+        </p>
+
+
+
+
+
+
+        <div class="quiz-start">
+
+
+            <img src="images/quiz-marketing.png" alt="Quiz Marketing">
+
+
+
+            <h3>
+
+                Êtes-vous prêt ?
+
+            </h3>
+
+
+
+
+            <p>
+
+                Testez vos connaissances et obtenez votre résultat.
+
+            </p>
+
+
+
+
+            <button onclick="commencerQuiz()">
+
+                🎓 Passer le quiz
+
+            </button>
+
+
+
+        </div>
+
+
+
+
+    </section>
+    <!--====================================
+            QUIZ QUESTIONS
+=====================================-->
+
+    <section class="quiz-container" id="quiz">
+
+
+        <h2>
+
+            📝 Quiz - Identité de marque
+
+        </h2>
+
+
+
+
+
+        <!-- QUESTION 1 -->
+
+        <div class="question">
+
+
+            <h3>
+
+                1. Qu'est-ce que l'identité de marque ?
+
+            </h3>
+
+
+
+            <label>
+
+                <input type="radio" name="q1" value="a">
+
+                Uniquement le logo d'une entreprise
+
+            </label>
+
+
+
+            <label>
+
+                <input type="radio" name="q1" value="b">
+
+                L'ensemble des éléments qui représentent une marque
+
+            </label>
+
+
+
+            <label>
+
+                <input type="radio" name="q1" value="c">
+
+                Le prix des produits
+
+            </label>
+
+
+        </div>
+
+
+
+
+
+
+
+
+        <!-- QUESTION 2 -->
+
+        <div class="question">
+
+
+            <h3>
+
+                2. Quel est le rôle principal d'un logo ?
+
+            </h3>
+
+
+
+            <label>
+
+                <input type="radio" name="q2" value="a">
+
+                Identifier rapidement une marque
+
+            </label>
+
+
+
+            <label>
+
+                <input type="radio" name="q2" value="b">
+
+                Augmenter automatiquement les ventes
+
+            </label>
+
+
+
+            <label>
+
+                <input type="radio" name="q2" value="c">
+
+                Remplacer tous les outils marketing
+
+            </label>
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+        <!-- QUESTION 3 -->
+
+        <div class="question">
+
+
+            <h3>
+
+                3. Pourquoi les couleurs sont-elles importantes ?
+
+            </h3>
+
+
+
+
+            <label>
+
+                <input type="radio" name="q3" value="a">
+
+                Elles transmettent des émotions et renforcent l'image
+
+                de la marque
+
+            </label>
+
+
+
+
+            <label>
+
+                <input type="radio" name="q3" value="b">
+
+                Elles servent uniquement à décorer
+
+            </label>
+
+
+
+
+            <label>
+
+                <input type="radio" name="q3" value="c">
+
+                Elles remplacent le slogan
+
+            </label>
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+        <!-- QUESTION 4 -->
+
+        <div class="question">
+
+
+            <h3>
+
+                4. Les valeurs d'une marque représentent :
+
+            </h3>
+
+
+
+
+            <label>
+
+                <input type="radio" name="q4" value="a">
+
+                Les principes et idées défendus par l'entreprise
+
+            </label>
+
+
+
+
+            <label>
+
+                <input type="radio" name="q4" value="b">
+
+                Les prix des produits
+
+            </label>
+
+
+
+
+            <label>
+
+                <input type="radio" name="q4" value="c">
+
+                Les concurrents de l'entreprise
+
+            </label>
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+        <!-- QUESTION 5 -->
+
+        <div class="question">
+
+
+            <h3>
+
+                5. Pourquoi une marque doit-elle évoluer ?
+
+            </h3>
+
+
+
+
+            <label>
+
+                <input type="radio" name="q5" value="a">
+
+                Pour s'adapter aux besoins des clients et au marché
+
+            </label>
+
+
+
+
+            <label>
+
+                <input type="radio" name="q5" value="b">
+
+                Pour changer complètement son identité chaque mois
+
+            </label>
+
+
+
+
+            <label>
+
+                <input type="radio" name="q5" value="c">
+
+                Pour supprimer ses anciennes valeurs
+
+            </label>
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+        <!-- BOUTON RESULTAT -->
+
+
+        <button class="btn-resultat" onclick="corrigerQuiz()">
+
+
+            ✅ Valider mes réponses
+
+
+        </button>
+
+
+
+
+
+
+        <!-- RESULTAT -->
+
+
+        <div id="resultatQuiz">
+
+
+        </div>
+
+
+
+
+    </section>
+    <!--====================================
+            RESULTAT FINAL
+=====================================-->
+
+    <section class="important">
+
+
+        <h2>
+
+            🏆 Validation du chapitre
+
+        </h2>
+
+
+
+
+        <p>
+
+            Après avoir terminé cette évaluation, vous pourrez
+            valider le chapitre <strong>Identité de marque</strong>
+            et continuer votre parcours de formation.
+
+        </p>
+
+
+
+
+        <p>
+
+            Une bonne maîtrise de l'identité de marque permet de
+            construire une entreprise reconnaissable, professionnelle
+            et durable.
+
+        </p>
+
+
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+    <!--====================================
+            A RETENIR
+=====================================-->
+
+    <section class="cours">
+
+
+        <h2>
+
+            📌 À retenir
+
+        </h2>
+
+
+
+
+        <ul>
+
+
+            <li>
+
+                ✔ Une marque forte possède une identité claire.
+
+            </li>
+
+
+
+
+            <li>
+
+                ✔ Le logo, les couleurs, la typographie et le slogan
+                permettent de reconnaître une entreprise.
+
+            </li>
+
+
+
+
+            <li>
+
+                ✔ Les valeurs et la personnalité donnent un sens
+                à la marque.
+
+            </li>
+
+
+
+
+            <li>
+
+                ✔ La cohérence renforce la confiance des clients.
+
+            </li>
+
+
+
+
+            <li>
+
+                ✔ Une marque durable doit évoluer avec son environnement.
+
+            </li>
+
+
+
+
+            <li>
+
+                ✔ La fidélisation et la réputation permettent de développer
+                une relation durable avec les clients.
+
+            </li>
+
+
+        </ul>
+
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+    <!--====================================
+            NAVIGATION
+=====================================-->
+
+    <section class="navigation">
+
+
+        <button onclick="retourCours()">
+
+
+            ← Retour au chapitre
+
+
+        </button>
+
+
+
+
+
+
+        <button onclick="terminerChapitre()">
+
+
+            🎓 Valider le chapitre
+
+
+        </button>
+
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+    <!--====================================
+            FOOTER
+=====================================-->
+
+    <footer>
+
+
+        <h3>
+
+            BMJ SERVICE
+
+        </h3>
+
+
+
+
+        <p>
+
+            Félicitations ! Vous avez terminé le chapitre
+            <strong>Identité de marque</strong>.
+
+            Vous avez maintenant les bases nécessaires pour
+            construire une marque professionnelle, cohérente
+            et durable.
+
+        </p>
+
+
+
+
+    </footer>
+    <script>
+
+
+        //==================================================
+        // VARIABLE DE CONTROLE DU QUIZ
+        //==================================================
+
+
+        let quizReussi = false;
+
+
+
+
+
+
+
+
+
+        //==================================================
+        // CHARGEMENT DE LA PAGE
+        //==================================================
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+
+
+            let utilisateur = JSON.parse(
+
+                localStorage.getItem("bmj_current_user")
+
+            );
+
+
+
+
+
+            //=========================
+            // AFFICHAGE PROFIL
+            //=========================
+
+
+            if (utilisateur) {
+
+
+
+                document.getElementById("nomUtilisateur").innerHTML = utilisateur.nom;
+
+
+
+
+                if (utilisateur.photo && utilisateur.photo !== "") {
+
+
+                    document.getElementById("photoUtilisateur").src = utilisateur.photo;
+
+
+                }
+
+
+
+            } else {
+
+
+
+                document.getElementById("nomUtilisateur").innerHTML = "Apprenant";
+
+
+                document.getElementById("domaineUtilisateur").innerHTML = "Marketing Digital";
+
+
+
+            }
+
+
+
+
+
+            //=========================
+            // VERIFICATION QUIZ DEJA REUSSI
+            //=========================
+
+
+            let validation = localStorage.getItem(
+
+                "identite_marque_quiz"
+
+            );
+
+
+
+            if (validation === "reussi") {
+
+
+                quizReussi = true;
+
+
+            }
+
+
+
+
+        });
+
+
+
+
+
+
+
+
+
+        //==================================================
+        // COMMENCER LE QUIZ
+        //==================================================
+
+
+        function commencerQuiz() {
+
+
+
+            document.getElementById("quiz").scrollIntoView({
+
+
+                behavior: "smooth"
+
+
+            });
+
+
+
+        }
+
+
+
+
+
+
+
+
+
+        //==================================================
+        // CORRECTION DU QUIZ
+        //==================================================
+
+
+        function corrigerQuiz() {
+
+
+
+            let score = 0;
+
+
+
+
+
+            let bonnesReponses = {
+
+
+                q1: "b",
+
+                q2: "a",
+
+                q3: "a",
+
+                q4: "a",
+
+                q5: "a"
+
+
+
+            };
+
+
+
+
+
+
+
+            for (let question in bonnesReponses) {
+
+
+
+                let reponse = document.querySelector(
+
+
+                    'input[name="' + question + '"]:checked'
+
+
+                );
+
+
+
+
+
+                if (reponse && reponse.value === bonnesReponses[question]) {
+
+
+                    score++;
+
+
+                }
+
+
+
+            }
+
+
+
+
+
+
+
+
+            let resultat = document.getElementById("resultatQuiz");
+
+
+
+
+
+            let pourcentage = (score / 5) * 100;
+
+
+
+
+
+
+
+
+
+            //===============================
+            // ECHEC
+            //===============================
+
+
+            if (score < 3) {
+
+
+
+                quizReussi = false;
+
+
+
+                localStorage.removeItem(
+
+                    "identite_marque_quiz"
+
+                );
+
+
+
+
+
+                resultat.innerHTML =
+
+
+
+                    "❌ Échec de l'évaluation<br><br>" +
+
+                    "Votre score : " + score + "/5<br><br>" +
+
+                    "Vous devez obtenir au minimum 3/5 pour valider le chapitre.";
+
+
+
+                resultat.style.background = "#ffe5e5";
+
+
+                resultat.style.color = "#b30000";
+
+
+
+                return;
+
+
+
+            }
+
+
+
+
+
+
+
+
+
+            //===============================
+            // REUSSITE
+            //===============================
+
+
+            quizReussi = true;
+
+
+
+
+            localStorage.setItem(
+
+
+                "identite_marque_quiz",
+
+
+                "reussi"
+
+
+            );
+
+
+
+
+
+
+
+            resultat.innerHTML =
+
+
+
+                "🎉 Félicitations !<br><br>" +
+
+                "Votre score : " + score + "/5<br>" +
+
+                "Résultat : " + pourcentage + "%<br><br>" +
+
+                "Vous pouvez maintenant valider le chapitre.";
+
+
+
+
+            resultat.style.background = "#e6fff0";
+
+
+            resultat.style.color = "#087f23";
+
+
+
+        }
+
+
+
+
+
+
+
+
+
+        //==================================================
+        // RETOUR AU CHAPITRE
+        //==================================================
+
+
+        function retourCours() {
+
+
+
+            window.location.href = "marketing.php";
+
+
+
+        }
+
+
+
+
+
+
+
+
+
+        //==================================================
+        // VALIDATION DU CHAPITRE 3
+        //==================================================
+
+
+        function terminerChapitre() {
+
+
+
+
+
+
+            let validation = localStorage.getItem(
+
+
+                "identite_marque_quiz"
+
+
+            );
+
+
+
+
+
+
+            //===============================
+            // BLOCAGE SI QUIZ NON REUSSI
+            //===============================
+
+
+            if (validation !== "reussi") {
+
+
+
+                alert(
+
+
+                    "⚠️ Vous devez réussir l'évaluation finale avant de valider le chapitre."
+
+
+                );
+
+
+
+                return;
+
+
+
+            }
+
+
+
+
+
+
+
+
+
+            let utilisateur = JSON.parse(
+
+
+                localStorage.getItem("bmj_current_user")
+
+
+            );
+
+
+
+
+
+
+
+
+
+            let progression = JSON.parse(
+
+
+                localStorage.getItem("marketing_progression")
+
+
+            ) || [];
+
+
+
+
+
+
+
+
+
+            //===============================
+            // AJOUT LEÇON 6
+            //===============================
+
+
+            if (!progression.includes("6")) {
+
+
+
+                progression.push("6");
+
+
+
+            }
+
+
+
+
+
+
+
+
+
+            localStorage.setItem(
+
+
+                "marketing_progression",
+
+
+                JSON.stringify(progression)
+
+
+            );
+
+
+
+
+
+
+
+
+
+            //===============================
+            // SAUVEGARDE UTILISATEUR
+            //===============================
+
+
+            if (utilisateur) {
+
+
+
+
+
+
+                if (!utilisateur.coursSuivis) {
+
+
+
+                    utilisateur.coursSuivis = [];
+
+
+
+                }
+
+
+
+
+
+
+
+
+
+                if (!utilisateur.coursSuivis.includes(
+
+
+
+                    "Evaluation finale - Identité de marque"
+
+
+
+                )) {
+
+
+
+                    utilisateur.coursSuivis.push(
+
+
+
+                        "Evaluation finale - Identité de marque"
+
+
+
+                    );
+
+
+
+                }
+
+
+
+
+
+
+
+
+
+                utilisateur.progression = 100;
+
+
+
+
+
+
+
+
+
+                localStorage.setItem(
+
+
+
+                    "bmj_current_user",
+
+
+
+                    JSON.stringify(utilisateur)
+
+
+
+                );
+
+
+
+
+
+
+
+                //===============================
+                // MISE A JOUR LISTE UTILISATEURS
+                //===============================
+
+
+
+                let utilisateurs = JSON.parse(
+
+
+
+                    localStorage.getItem("bmj_users")
+
+
+
+                ) || [];
+
+
+
+
+
+
+
+
+                let index = utilisateurs.findIndex(
+
+
+
+                    u => u.id === utilisateur.id
+
+
+
+                );
+
+
+
+
+
+
+
+
+                if (index !== -1) {
+
+
+
+                    utilisateurs[index] = utilisateur;
+
+
+
+                }
+
+
+
+
+
+
+
+                localStorage.setItem(
+
+
+
+                    "bmj_users",
+
+
+
+                    JSON.stringify(utilisateurs)
+
+
+
+                );
+
+
+
+            }
+
+
+
+
+
+
+
+
+
+            alert(
+
+
+
+                "🏆 Félicitations !\n\nVous avez validé le chapitre Identité de marque."
+
+
+
+            );
+
+
+
+
+
+
+
+
+            window.location.href = "marketing.php";
+
+
+
+
+
+        }
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
