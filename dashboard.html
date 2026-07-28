@@ -1,0 +1,4507 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*==================================================
+        BMJ SERVICE DASHBOARD STYLE
+==================================================*/
+
+
+        * {
+
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', Arial, sans-serif;
+
+        }
+
+
+        body {
+
+            background: #f4f7fb;
+            color: #333;
+            overflow-x: hidden;
+
+        }
+
+
+        html {
+
+            scroll-behavior: smooth;
+
+        }
+
+
+
+        button {
+
+            cursor: pointer;
+            border: none;
+            transition: .3s;
+
+        }
+
+
+
+
+        /*==================================================
+                SIDEBAR
+==================================================*/
+
+
+        .sidebar {
+
+            position: fixed;
+
+            left: 0;
+
+            top: 0;
+
+            width: 260px;
+
+            height: 100vh;
+
+            background:
+
+                linear-gradient(180deg,
+                    #145A86,
+                    #08344f);
+
+
+            padding: 25px 15px;
+
+            z-index: 1000;
+
+            box-shadow:
+
+                5px 0 25px rgba(0, 0, 0, .15);
+
+
+        }
+
+
+
+
+        .sidebar-logo {
+
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+            margin-bottom: 35px;
+
+            padding-left: 10px;
+
+
+        }
+
+
+
+        .sidebar-logo img {
+
+
+            width: 55px;
+
+            height: 55px;
+
+            border-radius: 50%;
+
+            object-fit: cover;
+
+            border: 3px solid #D4AF37;
+
+
+        }
+
+
+
+        .sidebar-logo h2 {
+
+
+            color: white;
+
+            font-size: 22px;
+
+
+        }
+
+
+
+        .sidebar-logo span {
+
+
+            color: #D4AF37;
+
+
+        }
+
+
+
+
+        .sidebar nav a {
+
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 15px;
+
+            padding: 15px 18px;
+
+            margin: 8px 0;
+
+            color: white;
+
+            border-radius: 15px;
+
+            text-decoration: none;
+
+            font-size: 15px;
+
+            transition: .3s;
+
+
+        }
+
+
+
+        .sidebar nav a i {
+
+
+            width: 25px;
+
+            font-size: 18px;
+
+
+        }
+
+
+
+        .sidebar nav a:hover,
+        .sidebar nav .active {
+
+
+            background: #D4AF37;
+
+            color: #145A86;
+
+            transform: translateX(8px);
+
+
+        }
+
+
+
+
+
+
+
+        /*==================================================
+                HEADER
+==================================================*/
+
+
+        header {
+
+
+            position: fixed;
+
+            top: 0;
+
+            left: 260px;
+
+            width: calc(100% - 260px);
+
+            height: 80px;
+
+            background: white;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            padding: 0 35px;
+
+
+            z-index: 900;
+
+
+            box-shadow:
+
+                0 5px 20px rgba(0, 0, 0, .08);
+
+
+        }
+
+
+
+
+        .logo-mobile {
+
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+
+        }
+
+
+
+        .logo-mobile img {
+
+
+            width: 50px;
+
+            height: 50px;
+
+            border-radius: 50%;
+
+
+        }
+
+
+
+        .logo-mobile h2 {
+
+
+            color: #145A86;
+
+            font-size: 22px;
+
+
+        }
+
+
+
+
+
+
+
+        /*==================================================
+                SEARCH
+==================================================*/
+
+
+        .search-box {
+
+
+            width: 420px;
+
+            position: relative;
+
+
+        }
+
+
+
+        .search-box i {
+
+
+            position: absolute;
+
+            top: 15px;
+
+            left: 18px;
+
+            color: #777;
+
+
+        }
+
+
+
+        .search-box input {
+
+
+            width: 100%;
+
+            padding: 14px 20px 14px 45px;
+
+            border: none;
+
+            outline: none;
+
+            border-radius: 30px;
+
+            background: #eef2f7;
+
+
+        }
+
+
+
+
+
+
+        /*==================================================
+                HEADER RIGHT
+==================================================*/
+
+
+        .header-right {
+
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 20px;
+
+
+        }
+
+
+
+        .header-right>i {
+
+
+            color: #145A86;
+
+            font-size: 20px;
+
+        }
+
+
+
+        .profile {
+
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+
+        }
+
+
+
+        .profile img {
+
+
+            width: 48px;
+
+            height: 48px;
+
+            border-radius: 50%;
+
+            object-fit: cover;
+
+            border: 3px solid #D4AF37;
+
+
+        }
+
+
+
+        .profile h4 {
+
+
+            color: #145A86;
+
+        }
+
+
+        .profile small {
+
+
+            color: #777;
+
+
+        }
+
+
+
+        #menuBtn {
+
+
+            display: none;
+
+            cursor: pointer;
+
+            font-size: 22px;
+
+        }
+
+        /*==================================================
+                MAIN CONTENT
+==================================================*/
+
+
+        main {
+
+            margin-left: 260px;
+
+            padding: 110px 35px 40px;
+
+        }
+
+
+
+
+
+
+        /*==================================================
+                HERO SECTION
+==================================================*/
+
+
+        .hero {
+
+
+            background:
+
+                linear-gradient(135deg,
+                    rgba(20, 90, 134, .95),
+                    rgba(8, 52, 79, .85));
+
+
+            min-height: 380px;
+
+            border-radius: 30px;
+
+            padding: 50px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 40px;
+
+            overflow: hidden;
+
+            color: white;
+
+
+        }
+
+
+
+
+
+        .hero-left {
+
+            max-width: 650px;
+
+        }
+
+
+
+        .hero-left span {
+
+
+            display: inline-block;
+
+            background: #D4AF37;
+
+            color: #145A86;
+
+            padding: 8px 18px;
+
+            border-radius: 30px;
+
+            font-weight: bold;
+
+            margin-bottom: 20px;
+
+
+        }
+
+
+
+
+
+        .hero-left h1 {
+
+
+            font-size: 45px;
+
+            line-height: 1.2;
+
+            margin-bottom: 20px;
+
+
+        }
+
+
+
+        .hero-left strong {
+
+
+            color: #D4AF37;
+
+
+        }
+
+
+
+
+
+        .hero-left p {
+
+
+            font-size: 17px;
+
+            line-height: 1.8;
+
+            opacity: .95;
+
+            margin-bottom: 25px;
+
+
+        }
+
+
+
+
+
+        .hero-left button {
+
+
+            background: #D4AF37;
+
+            color: #145A86;
+
+            padding: 15px 35px;
+
+            border-radius: 30px;
+
+            font-weight: bold;
+
+            font-size: 15px;
+
+
+        }
+
+
+
+        .hero-left button:hover {
+
+
+            transform: translateY(-5px);
+
+            background: white;
+
+
+        }
+
+
+
+
+        .hero-right img {
+
+
+            width: 350px;
+
+            max-width: 100%;
+
+
+        }
+
+
+
+
+
+
+        /*==================================================
+            CARTE APPRENANT
+==================================================*/
+
+
+        .student-card {
+
+
+            margin-top: 35px;
+
+            background: white;
+
+            border-radius: 25px;
+
+            padding: 30px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 30px;
+
+            box-shadow:
+
+                0 10px 30px rgba(0, 0, 0, .08);
+
+
+        }
+
+
+
+
+
+        .student-info {
+
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 20px;
+
+
+        }
+
+
+
+
+        .student-info img {
+
+
+            width: 90px;
+
+            height: 90px;
+
+            border-radius: 50%;
+
+            object-fit: cover;
+
+            border: 4px solid #D4AF37;
+
+
+        }
+
+
+
+        .student-info h2 {
+
+
+            color: #145A86;
+
+            margin-bottom: 8px;
+
+
+        }
+
+
+
+        .student-info p {
+
+
+            color: #777;
+
+        }
+
+
+
+
+
+        /*==================================================
+        PROGRESSION
+==================================================*/
+
+
+        .student-progress {
+
+
+            width: 45%;
+
+
+        }
+
+
+
+        .student-progress h3 {
+
+
+            color: #145A86;
+
+            margin-bottom: 15px;
+
+
+        }
+
+
+
+
+
+        .progress-bar {
+
+
+            width: 100%;
+
+            height: 15px;
+
+            background: #e8edf3;
+
+            border-radius: 30px;
+
+            overflow: hidden;
+
+
+        }
+
+
+
+
+
+        .progress-bar div {
+
+
+            height: 100%;
+
+            width: 0%;
+
+            background:
+
+                linear-gradient(90deg,
+                    #145A86,
+                    #D4AF37);
+
+
+            border-radius: 30px;
+
+            transition: 1s;
+
+
+        }
+
+
+
+        #progressText {
+
+
+            display: block;
+
+            text-align: right;
+
+            margin-top: 10px;
+
+            color: #145A86;
+
+            font-weight: bold;
+
+
+        }
+
+        /*==================================================
+            DOMAINES FORMATION
+==================================================*/
+
+
+        .domaines-section {
+
+
+            margin-top: 60px;
+
+
+        }
+
+
+
+        .section-header {
+
+
+            text-align: center;
+
+            margin-bottom: 40px;
+
+
+        }
+
+
+
+        .section-header h2 {
+
+
+            color: #145A86;
+
+            font-size: 35px;
+
+            margin-bottom: 12px;
+
+
+        }
+
+
+
+        .section-header p {
+
+
+            color: #777;
+
+            font-size: 16px;
+
+
+        }
+
+
+
+
+
+
+
+        /*==================================================
+            GRILLE DOMAINES
+==================================================*/
+
+
+        .domaines-grid {
+
+
+            display: grid;
+
+            grid-template-columns:
+
+                repeat(auto-fit, minmax(280px, 1fr));
+
+
+            gap: 30px;
+
+
+        }
+
+
+
+
+
+
+
+        /*==================================================
+            CARTE DOMAINE
+==================================================*/
+
+
+        .domaine-card {
+
+
+            height: 360px;
+
+            border-radius: 25px;
+
+            position: relative;
+
+            overflow: hidden;
+
+            padding: 30px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: flex-end;
+
+            color: white;
+
+            cursor: pointer;
+
+            box-shadow:
+
+                0 15px 35px rgba(0, 0, 0, .15);
+
+
+            transition: .4s;
+
+
+        }
+
+
+
+        .domaine-card::before {
+
+
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+
+            background:
+
+                linear-gradient(transparent,
+                    rgba(0, 0, 0, .85));
+
+
+        }
+
+
+
+
+
+        .domaine-card:hover {
+
+
+            transform: translateY(-12px);
+
+
+            box-shadow:
+
+                0 25px 50px rgba(20, 90, 134, .35);
+
+
+        }
+
+
+
+
+
+
+
+        /*==================================================
+        IMAGES DES DOMAINES
+==================================================*/
+
+
+        .marketing {
+
+
+            background:
+
+                url(images/marketing-bg.jpg);
+
+            background-size: cover;
+
+            background-position: center;
+
+
+        }
+
+
+
+        .entreprise {
+
+
+            background:
+
+                url(images/business-bg.jpg);
+
+            background-size: cover;
+
+            background-position: center;
+
+
+        }
+
+
+
+        .leadership {
+
+
+            background:
+
+                url(images/leadership-bg.jpg);
+
+            background-size: cover;
+
+            background-position: center;
+
+
+        }
+
+
+
+        .informatique {
+
+
+            background:
+
+                url(images/informatique-bg.jpg);
+
+            background-size: cover;
+
+            background-position: center;
+
+
+        }
+
+
+
+        .finance {
+
+
+            background:
+
+                url(images/finance-bg.jpg);
+
+            background-size: cover;
+
+            background-position: center;
+
+
+        }
+
+
+
+        .ia {
+
+
+            background:
+
+                url(images/ia-bg.jpg);
+
+            background-size: cover;
+
+            background-position: center;
+
+
+        }
+
+
+
+
+
+
+        /*==================================================
+            ICONES
+==================================================*/
+
+
+        .icon-box {
+
+
+            position: absolute;
+
+            top: 30px;
+
+            left: 30px;
+
+            z-index: 2;
+
+
+        }
+
+
+
+        .icon-box i {
+
+
+            width: 65px;
+
+            height: 65px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            background: #D4AF37;
+
+            color: #145A86;
+
+            border-radius: 20px;
+
+            font-size: 30px;
+
+
+        }
+
+
+
+
+
+        .domaine-content {
+
+
+            position: relative;
+
+            z-index: 2;
+
+
+        }
+
+
+
+        .domaine-content h3 {
+
+
+            font-size: 26px;
+
+            margin-bottom: 12px;
+
+
+        }
+
+
+
+        .domaine-content p {
+
+
+            font-size: 14px;
+
+            line-height: 1.6;
+
+            margin-bottom: 20px;
+
+
+        }
+
+
+
+
+
+
+        .domaine-content button {
+
+
+            padding: 12px 25px;
+
+            border-radius: 30px;
+
+            background: #D4AF37;
+
+            color: #145A86;
+
+            font-weight: bold;
+
+
+        }
+
+
+
+
+
+        .domaine-content button:hover {
+
+
+            background: white;
+
+
+        }
+
+
+
+
+
+
+
+        /*==================================================
+            PREMIUM LOCK
+==================================================*/
+
+
+        .premium-lock {
+
+
+            position: absolute;
+
+            top: 20px;
+
+            right: 20px;
+
+            z-index: 5;
+
+
+            background:
+
+                rgba(212, 175, 55, .95);
+
+
+            color: #145A86;
+
+            padding: 8px 15px;
+
+            border-radius: 20px;
+
+            font-weight: bold;
+
+            font-size: 13px;
+
+
+        }
+
+        /*==================================================
+        CERTIFICATS
+==================================================*/
+
+
+        .certificate-section {
+
+            margin-top: 70px;
+
+        }
+
+
+
+        .certificate-card {
+
+            background: white;
+
+            padding: 30px;
+
+            border-radius: 25px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 25px;
+
+            box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
+
+        }
+
+
+
+        .certificate-card>i {
+
+            font-size: 55px;
+
+            color: #D4AF37;
+
+        }
+
+
+
+        .certificate-card h3 {
+
+            color: #145A86;
+
+            margin-bottom: 10px;
+
+        }
+
+
+
+        .certificate-card p {
+
+            color: #666;
+
+        }
+
+
+
+        #statutCertificat {
+
+            font-weight: bold;
+
+        }
+
+
+
+        .certificate-card button {
+
+            padding: 14px 30px;
+
+            border: none;
+
+            border-radius: 30px;
+
+            background: #145A86;
+
+            color: white;
+
+            cursor: pointer;
+
+            font-weight: bold;
+
+            transition: .3s;
+
+        }
+
+
+
+        .certificate-card button:hover {
+
+            background: #D4AF37;
+
+            color: #145A86;
+
+        }
+
+
+
+
+
+
+        /*==================================================
+        STATISTIQUES
+==================================================*/
+
+
+        .stats-section {
+
+
+            margin-top: 70px;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(220px, 1fr));
+
+            gap: 25px;
+
+
+        }
+
+
+
+        .stat-card {
+
+
+            background: white;
+
+            padding: 35px 20px;
+
+            border-radius: 25px;
+
+            text-align: center;
+
+            box-shadow:
+                0 10px 30px rgba(0, 0, 0, .08);
+
+            transition: .3s;
+
+
+        }
+
+
+
+        .stat-card:hover {
+
+
+            transform: translateY(-10px);
+
+
+        }
+
+
+
+        .stat-card i {
+
+
+            font-size: 45px;
+
+            color: #D4AF37;
+
+            margin-bottom: 15px;
+
+
+        }
+
+
+
+        .stat-card h2 {
+
+
+            font-size: 35px;
+
+            color: #145A86;
+
+            margin-bottom: 8px;
+
+
+        }
+
+
+
+        .stat-card p {
+
+
+            color: #777;
+
+        }
+
+
+
+
+
+
+        /*==================================================
+        SUPPORT
+==================================================*/
+
+
+        .support-section {
+
+
+            margin-top: 70px;
+
+            background:
+
+                linear-gradient(135deg,
+                    #145A86,
+                    #0d3f5e);
+
+
+            color: white;
+
+            padding: 40px;
+
+            border-radius: 25px;
+
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 20px;
+
+
+        }
+
+
+
+        .support-section i {
+
+
+            font-size: 50px;
+
+            color: #D4AF37;
+
+            margin-bottom: 15px;
+
+
+        }
+
+
+
+        .support-section h2 {
+
+
+            font-size: 30px;
+
+            margin-bottom: 10px;
+
+
+        }
+
+
+
+        .support-section p {
+
+
+            color: #eee;
+
+        }
+
+
+
+        .support-section button {
+
+
+            padding: 15px 35px;
+
+            border: none;
+
+            border-radius: 30px;
+
+            background: #D4AF37;
+
+            color: #145A86;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            transition: .3s;
+
+
+        }
+
+
+
+        .support-section button:hover {
+
+
+            background: white;
+
+
+        }
+
+
+
+
+
+
+
+        /*==================================================
+        FOOTER
+==================================================*/
+
+
+        footer {
+
+
+            margin-top: 70px;
+
+            background: #145A86;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 40px 20px;
+
+
+        }
+
+
+
+        .footer-logo {
+
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            gap: 15px;
+
+            margin-bottom: 15px;
+
+
+        }
+
+
+
+        .footer-logo img {
+
+
+            width: 50px;
+
+            height: 50px;
+
+            border-radius: 50%;
+
+
+        }
+
+
+
+        .footer-logo h3 {
+
+
+            font-size: 25px;
+
+
+        }
+
+
+
+        .social {
+
+
+            margin: 25px 0;
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 20px;
+
+
+        }
+
+
+
+        .social i {
+
+
+            width: 40px;
+
+            height: 40px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            background: white;
+
+            color: #145A86;
+
+            border-radius: 50%;
+
+            cursor: pointer;
+
+            transition: .3s;
+
+
+        }
+
+
+
+        .social i:hover {
+
+
+            background: #D4AF37;
+
+
+        }
+
+
+
+
+
+        /*==================================================
+        RESPONSIVE TABLETTE
+==================================================*/
+
+
+        @media(max-width:1000px) {
+
+
+            .sidebar {
+
+                left: -270px;
+
+                transition: .4s;
+
+            }
+
+
+            .sidebar.active {
+
+                left: 0;
+
+            }
+
+
+
+            header {
+
+
+                left: 0;
+
+                width: 100%;
+
+            }
+
+
+
+            #menuBtn {
+
+                display: block;
+
+            }
+
+
+
+            .logo-mobile {
+
+                display: flex;
+
+            }
+
+
+
+            main {
+
+                margin-left: 0;
+
+            }
+
+
+
+            .search-box {
+
+                width: 300px;
+
+            }
+
+
+        }
+
+
+
+
+
+        /*==================================================
+        RESPONSIVE MOBILE
+==================================================*/
+
+
+        @media(max-width:700px) {
+
+
+
+            header {
+
+                padding: 0 15px;
+
+            }
+
+
+
+            .search-box {
+
+                display: none;
+
+            }
+
+
+
+            .profile div {
+
+                display: none;
+
+            }
+
+
+
+            .header-right {
+
+                gap: 15px;
+
+            }
+
+
+
+            .hero {
+
+                flex-direction: column;
+
+                padding: 30px;
+
+            }
+
+
+
+            .hero-left h1 {
+
+                font-size: 30px;
+
+            }
+
+
+
+            .student-card {
+
+
+                flex-direction: column;
+
+                align-items: flex-start;
+
+
+            }
+
+
+
+            .domaines-grid {
+
+
+                grid-template-columns: 1fr;
+
+
+            }
+
+
+
+            .certificate-card {
+
+
+                flex-direction: column;
+
+                text-align: center;
+
+
+            }
+
+
+
+            .support-section {
+
+
+                flex-direction: column;
+
+                text-align: center;
+
+
+            }
+
+
+
+            main {
+
+
+                padding: 20px;
+
+            }
+
+
+        }
+
+        /*==================================================
+        VERSION MOBILE COMPLETE
+==================================================*/
+
+
+        @media(max-width:768px) {
+
+
+            /*========================
+        SIDEBAR MOBILE
+    ========================*/
+
+
+            .sidebar {
+
+                left: -280px;
+
+                width: 260px;
+
+                transition: .4s;
+
+            }
+
+
+            .sidebar.active {
+
+                left: 0;
+
+            }
+
+
+
+            .sidebar-logo {
+
+                padding: 0 20px;
+
+                margin-bottom: 25px;
+
+            }
+
+
+
+            .sidebar nav a {
+
+                padding: 14px 20px;
+
+                font-size: 15px;
+
+            }
+
+
+
+
+            /*========================
+        HEADER MOBILE
+    ========================*/
+
+
+            header {
+
+                left: 0;
+
+                width: 100%;
+
+                height: 70px;
+
+                padding: 0 15px;
+
+
+            }
+
+
+
+            .logo-mobile {
+
+                display: flex;
+
+            }
+
+
+
+            .logo-mobile img {
+
+                width: 40px;
+
+                height: 40px;
+
+            }
+
+
+
+            .logo-mobile h2 {
+
+                font-size: 18px;
+
+            }
+
+
+
+
+            .search-box {
+
+                display: none;
+
+            }
+
+
+
+
+            .header-right {
+
+                gap: 15px;
+
+            }
+
+
+
+            .header-right>i {
+
+                font-size: 18px;
+
+            }
+
+
+
+            .profile img {
+
+                width: 40px;
+
+                height: 40px;
+
+            }
+
+
+
+            .profile div {
+
+                display: none;
+
+            }
+
+
+
+            #menuBtn {
+
+                display: block;
+
+                font-size: 22px;
+
+            }
+
+
+
+
+
+            /*========================
+            MAIN
+    ========================*/
+
+
+            main {
+
+                margin-left: 0;
+
+                padding: 15px;
+
+                margin-top: 80px;
+
+            }
+
+
+
+
+
+
+            /*========================
+            HERO
+    ========================*/
+
+
+            .hero {
+
+
+                display: flex;
+
+                flex-direction: column;
+
+                padding: 30px 20px;
+
+                border-radius: 20px;
+
+                gap: 25px;
+
+
+            }
+
+
+
+            .hero-left span {
+
+
+                font-size: 14px;
+
+
+            }
+
+
+
+            .hero-left h1 {
+
+
+                font-size: 30px;
+
+                line-height: 1.3;
+
+
+            }
+
+
+
+            .hero-left p {
+
+
+                font-size: 15px;
+
+                line-height: 1.6;
+
+
+            }
+
+
+
+            .hero button {
+
+
+                width: 100%;
+
+                padding: 14px;
+
+
+            }
+
+
+
+            .hero-right img {
+
+
+                width: 100%;
+
+
+            }
+
+
+
+
+
+
+
+            /*========================
+        CARTE APPRENANT
+    ========================*/
+
+
+            .student-card {
+
+
+                flex-direction: column;
+
+                padding: 20px;
+
+                gap: 20px;
+
+
+            }
+
+
+
+            .student-info {
+
+
+                width: 100%;
+
+
+            }
+
+
+
+            .student-info img {
+
+
+                width: 60px;
+
+                height: 60px;
+
+
+            }
+
+
+
+            .student-info h2 {
+
+
+                font-size: 20px;
+
+
+            }
+
+
+
+            .student-progress {
+
+
+                width: 100%;
+
+
+            }
+
+
+
+
+            /*========================
+        TITRES SECTIONS
+    ========================*/
+
+
+            .section-header h2 {
+
+
+                font-size: 25px;
+
+
+            }
+
+
+
+            .section-header p {
+
+
+                font-size: 14px;
+
+
+            }
+
+
+
+
+
+
+            /*========================
+        DOMAINES
+    ========================*/
+
+
+            .domaines-grid {
+
+
+                grid-template-columns: 1fr;
+
+                gap: 20px;
+
+
+            }
+
+
+
+            .domaine-card {
+
+
+                height: 360px;
+
+                border-radius: 20px;
+
+
+            }
+
+
+
+            .domaine-content {
+
+
+                padding: 20px;
+
+            }
+
+
+
+            .domaine-content h3 {
+
+
+                font-size: 23px;
+
+
+            }
+
+
+
+            .domaine-content p {
+
+
+                font-size: 14px;
+
+
+            }
+
+
+
+            .domaine-content button {
+
+
+                width: 100%;
+
+                padding: 13px;
+
+
+            }
+
+
+
+            .premium-lock {
+
+
+                top: 15px;
+
+                right: 15px;
+
+                font-size: 12px;
+
+
+            }
+
+
+
+
+
+
+            /*========================
+        FORMATIONS
+    ========================*/
+
+
+            .formation-card {
+
+
+                flex-direction: column;
+
+
+            }
+
+
+
+            .formation-image {
+
+
+                width: 100%;
+
+                height: 150px;
+
+
+            }
+
+
+
+            .formation-info {
+
+
+                padding: 20px;
+
+
+            }
+
+
+
+            .formation-info button {
+
+
+                width: 100%;
+
+
+            }
+
+
+
+
+
+
+
+            /*========================
+        CERTIFICAT
+    ========================*/
+
+
+            .certificate-card {
+
+
+                flex-direction: column;
+
+                text-align: center;
+
+                padding: 25px;
+
+
+            }
+
+
+
+            .certificate-card i {
+
+
+                font-size: 45px;
+
+
+            }
+
+
+
+            .certificate-card button {
+
+
+                width: 100%;
+
+
+            }
+
+
+
+
+
+
+            /*========================
+        STATISTIQUES
+    ========================*/
+
+
+            .stats-section {
+
+
+                grid-template-columns: 1fr;
+
+                gap: 15px;
+
+
+            }
+
+
+
+            .stat-card {
+
+
+                padding: 25px;
+
+
+            }
+
+
+
+
+
+
+            /*========================
+        SUPPORT
+    ========================*/
+
+
+            .support-section {
+
+
+                flex-direction: column;
+
+                text-align: center;
+
+                padding: 30px 20px;
+
+
+            }
+
+
+
+            .support-section button {
+
+
+                width: 100%;
+
+
+            }
+
+
+
+
+
+
+            /*========================
+        FOOTER
+    ========================*/
+
+
+            footer {
+
+
+                padding: 30px 15px;
+
+
+            }
+
+
+
+            .footer-logo h3 {
+
+
+                font-size: 20px;
+
+
+            }
+
+
+
+        }
+
+
+
+
+
+        /*==================================================
+        PETITS TELEPHONES 360px
+==================================================*/
+
+
+        @media(max-width:400px) {
+
+
+
+            .logo-mobile h2 {
+
+                font-size: 16px;
+
+            }
+
+
+
+            .hero-left h1 {
+
+                font-size: 25px;
+
+            }
+
+
+
+            .domaine-card {
+
+                height: 330px;
+
+            }
+
+
+
+            .domaine-content h3 {
+
+                font-size: 20px;
+
+            }
+
+
+
+            .stat-card h2 {
+
+                font-size: 30px;
+
+            }
+
+
+        }
+
+        /*====================================
+        POPUP PREMIUM
+====================================*/
+
+
+        .premium-popup {
+
+
+            position: fixed;
+
+            inset: 0;
+
+            background: rgba(0, 0, 0, .65);
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            z-index: 9999;
+
+
+        }
+
+
+
+
+        .premium-box {
+
+
+            width: 420px;
+
+            max-width: 90%;
+
+            background: white;
+
+            border-radius: 25px;
+
+            padding: 35px;
+
+            text-align: center;
+
+            box-shadow: 0 20px 50px rgba(0, 0, 0, .3);
+
+            animation: popup .4s ease;
+
+
+        }
+
+
+
+        @keyframes popup {
+
+
+            from {
+
+                transform: scale(.7);
+
+                opacity: 0;
+
+            }
+
+
+            to {
+
+                transform: scale(1);
+
+                opacity: 1;
+
+            }
+
+
+        }
+
+
+
+
+        .premium-icon {
+
+
+            width: 80px;
+
+            height: 80px;
+
+            margin: auto;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-size: 40px;
+
+            background: #145A86;
+
+            border-radius: 50%;
+
+        }
+
+
+
+
+        .premium-box h2 {
+
+
+            margin: 20px 0;
+
+            color: #145A86;
+
+            font-size: 28px;
+
+
+        }
+
+
+
+        .premium-box p {
+
+
+            color: #666;
+
+            line-height: 1.7;
+
+            font-size: 15px;
+
+        }
+
+
+
+
+        .premium-buttons {
+
+
+            margin-top: 25px;
+
+            display: flex;
+
+            gap: 15px;
+
+            justify-content: center;
+
+
+        }
+
+
+
+        .btn-premium {
+
+
+            padding: 14px 25px;
+
+            border: none;
+
+            border-radius: 30px;
+
+            background: #D4AF37;
+
+            color: #145A86;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+
+        }
+
+
+
+        .btn-close {
+
+
+            padding: 14px 25px;
+
+            border: none;
+
+            border-radius: 30px;
+
+            background: #eee;
+
+            color: #555;
+
+            cursor: pointer;
+
+
+        }
+
+
+
+        .btn-premium:hover {
+
+
+            transform: translateY(-3px);
+
+        }
+
+
+
+        .btn-close:hover {
+
+
+            background: #ddd;
+
+
+        }
+
+
+
+
+
+        @media(max-width:500px) {
+
+
+            .premium-box {
+
+
+                padding: 25px;
+
+
+            }
+
+
+            .premium-buttons {
+
+
+                flex-direction: column;
+
+
+            }
+
+
+            .btn-premium,
+            .btn-close {
+
+
+                width: 100%;
+
+
+            }
+
+
+
+        }
+
+        .support-btn {
+
+            display: inline-block;
+            padding: 15px 35px;
+            background: #D4AF37;
+            color: #145A86;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: .3s;
+            cursor: pointer;
+
+        }
+
+
+        .support-btn:hover {
+
+            transform: translateY(-5px);
+            background: white;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--====================================
+                MENU LATÉRAL
+    =====================================-->
+
+    <aside class="sidebar" id="sidebar">
+
+        <div class="sidebar-logo">
+
+            <img src="images/logo.png">
+
+            <h2>
+
+                BMJ <span>SERVICE</span>
+
+            </h2>
+
+        </div>
+
+
+        <nav>
+
+            <a href="dashboard.html" class="active">
+
+                <i class="fa-solid fa-house"></i>
+
+                <span>Accueil</span>
+
+            </a>
+
+
+            <a href="#domaines">
+
+                <i class="fa-solid fa-graduation-cap"></i>
+
+                <span>Domaines</span>
+
+            </a>
+
+
+            <a href="#formations">
+
+                <i class="fa-solid fa-book-open"></i>
+
+                <span>Mes formations</span>
+
+            </a>
+
+
+            <a href="#favoris">
+
+                <i class="fa-solid fa-heart"></i>
+
+                <span>Favoris</span>
+
+            </a>
+
+
+            <a href="#certificats">
+
+                <i class="fa-solid fa-certificate"></i>
+
+                <span>Mes certificats</span>
+
+            </a>
+
+
+            <a href="#profil">
+
+                <i class="fa-solid fa-user"></i>
+
+                <span>Mon profil</span>
+
+            </a>
+
+
+            <a href="#contact">
+
+                <i class="fa-solid fa-headset"></i>
+
+                <span>Support</span>
+
+            </a>
+
+
+            <a href="#" id="logout">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                <span>Déconnexion</span>
+
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+
+
+    <!--====================================
+                    HEADER
+    =====================================-->
+
+    <header>
+
+        <div class="logo-mobile">
+
+            <img src="images/logo.png">
+
+            <h2>
+
+                BMJ SERVICE
+
+            </h2>
+
+        </div>
+
+
+        <div class="search-box">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input type="text" placeholder="Rechercher une formation...">
+
+        </div>
+
+
+        <div class="header-right">
+
+            <i class="fa-regular fa-bell"></i>
+
+            <i class="fa-regular fa-envelope"></i>
+
+
+            <div class="profile">
+
+                <img id="photoUtilisateur" src="images/user.png">
+
+                <div>
+
+                    <h4 id="nomUtilisateur">
+
+                        Utilisateur
+
+                    </h4>
+
+                    <small id="roleUtilisateur">
+
+                        Apprenant
+
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <i class="fa-solid fa-bars" id="menuBtn"></i>
+
+        </div>
+
+    </header>
+
+
+
+
+    <!--====================================
+                    CONTENU
+    =====================================-->
+
+    <main>
+
+
+
+
+        <!--====================================
+                    HERO
+        =====================================-->
+
+        <section class="hero">
+
+            <div class="hero-left">
+
+                <span>
+
+                    Plateforme d'apprentissage
+
+                </span>
+
+                <h1>
+
+                    Bienvenue sur
+
+                    <strong>
+
+                        BMJ SERVICE
+
+                    </strong>
+
+                </h1>
+
+                <p>
+
+                    Développez vos compétences professionnelles grâce à des formations modernes, des exercices
+                    pratiques, des quiz et des certificats reconnus.
+
+                </p>
+
+                <button onclick="document.getElementById('domaines').scrollIntoView({behavior:'smooth'})">
+
+                    Explorer les formations
+
+                </button>
+
+            </div>
+
+
+            <div class="hero-right">
+
+                <img src="images/formation.png">
+
+            </div>
+
+        </section>
+
+
+
+
+        <!--====================================
+            CARTE APPRENANT
+        =====================================-->
+
+        <section class="student-card">
+
+            <div class="student-info">
+
+                <img id="photoProfil" src="images/user.png">
+
+                <div>
+
+                    <h2 id="nomComplet">
+
+                        Bienvenue
+
+                    </h2>
+
+                    <p id="domaineFormation">
+
+                        Marketing Digital
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="student-progress">
+
+                <h3>
+
+                    Progression générale
+
+                </h3>
+
+                <div class="progress-bar">
+
+                    <div id="progressBar"></div>
+
+                </div>
+
+                <span id="progressText">
+
+                    0%
+
+                </span>
+
+            </div>
+
+        </section>
+        <!--====================================
+              DOMAINES DE FORMATION
+        =====================================-->
+
+        <section class="domaines-section" id="domaines">
+
+
+            <div class="section-header">
+
+                <h2>
+
+                    Explorez nos domaines de formation
+
+                </h2>
+
+
+                <p>
+
+                    Apprenez de nouvelles compétences grâce à nos formations professionnelles.
+
+                </p>
+
+            </div>
+
+
+
+
+
+            <div class="domaines-grid">
+
+
+
+
+
+                <!--====================================
+                        MARKETING DIGITAL GRATUIT
+                =====================================-->
+
+                <div class="domaine-card marketing" onclick="ouvrirDomaine('marketing')">
+
+
+                    <div class="icon-box">
+
+                        <i class="fa-solid fa-bullhorn"></i>
+
+                    </div>
+
+
+
+                    <div class="domaine-content">
+
+
+                        <h3>
+
+                            Marketing Digital
+
+                        </h3>
+
+
+                        <p>
+
+                            Apprenez le marketing en ligne,
+                            les réseaux sociaux, le SEO,
+                            la publicité digitale et la création de contenu.
+
+                        </p>
+
+
+
+                        <button>
+
+                            Commencer gratuitement
+
+                        </button>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+
+
+
+
+                <!--====================================
+                        ENTREPRENEURIAT PREMIUM
+                =====================================-->
+
+                <div class="domaine-card entreprise" onclick="ouvrirDomaine('entrepreneuriat')">
+
+
+                    <div class="premium-lock">
+
+                        🔒 PREMIUM
+
+                    </div>
+
+
+                    <div class="icon-box">
+
+                        <i class="fa-solid fa-lightbulb"></i>
+
+                    </div>
+
+
+                    <div class="domaine-content">
+
+
+                        <h3>
+
+                            Entrepreneuriat
+
+                        </h3>
+
+
+                        <p>
+
+                            Apprenez à créer une entreprise,
+                            développer une idée et construire
+                            un projet rentable.
+
+                        </p>
+
+
+
+                        <button>
+
+                            Découvrir
+
+                        </button>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+
+
+
+
+
+                <!--====================================
+                        LEADERSHIP PREMIUM
+                =====================================-->
+
+                <div class="domaine-card leadership" onclick="ouvrirDomaine('leadership')">
+
+
+                    <div class="premium-lock">
+
+                        🔒 PREMIUM
+
+                    </div>
+
+
+                    <div class="icon-box">
+
+                        <i class="fa-solid fa-user-tie"></i>
+
+                    </div>
+
+
+
+                    <div class="domaine-content">
+
+
+                        <h3>
+
+                            Leadership
+
+                        </h3>
+
+
+                        <p>
+
+                            Développez votre confiance,
+                            votre communication et vos capacités
+                            de gestion d'équipe.
+
+                        </p>
+
+
+
+                        <button>
+
+                            Découvrir
+
+                        </button>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+
+
+
+
+
+
+                <!--====================================
+                        INFORMATIQUE PREMIUM
+                =====================================-->
+
+                <div class="domaine-card informatique" onclick="ouvrirDomaine('informatique')">
+
+
+                    <div class="premium-lock">
+
+                        🔒 PREMIUM
+
+                    </div>
+
+
+
+                    <div class="icon-box">
+
+                        <i class="fa-solid fa-code"></i>
+
+                    </div>
+
+
+
+                    <div class="domaine-content">
+
+
+                        <h3>
+
+                            Informatique
+
+                        </h3>
+
+
+                        <p>
+
+                            Programmation,
+                            développement web,
+                            applications mobiles,
+                            bases de données et technologies modernes.
+
+                        </p>
+
+
+
+                        <button>
+
+                            Découvrir
+
+                        </button>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+
+
+
+
+
+
+                <!--====================================
+                        FINANCE PREMIUM
+                =====================================-->
+
+                <div class="domaine-card finance" onclick="ouvrirDomaine('finance')">
+
+
+                    <div class="premium-lock">
+
+                        🔒 PREMIUM
+
+                    </div>
+
+
+
+                    <div class="icon-box">
+
+                        <i class="fa-solid fa-money-bill-trend-up"></i>
+
+                    </div>
+
+
+
+                    <div class="domaine-content">
+
+
+                        <h3>
+
+                            Finance
+
+                        </h3>
+
+
+                        <p>
+
+                            Gestion financière,
+                            investissement,
+                            épargne et développement
+                            des compétences financières.
+
+                        </p>
+
+
+
+                        <button>
+
+                            Découvrir
+
+                        </button>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+
+
+
+
+
+
+                <!--====================================
+                    INTELLIGENCE ARTIFICIELLE PREMIUM
+                =====================================-->
+
+                <div class="domaine-card ia" onclick="ouvrirDomaine('ia')">
+
+
+                    <div class="premium-lock">
+
+                        🔒 PREMIUM
+
+                    </div>
+
+
+
+                    <div class="icon-box">
+
+                        <i class="fa-solid fa-robot"></i>
+
+                    </div>
+
+
+
+                    <div class="domaine-content">
+
+
+                        <h3>
+
+                            Santé et environement
+
+                        </h3>
+
+
+                        <p>
+
+                            Découvrez la formation pour garentir votre santé ,
+                            la protection contre toutes maladies,
+                            Santé plus.
+
+                        </p>
+
+
+
+                        <button>
+
+                            Découvrir
+
+                        </button>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+
+
+            </div>
+
+
+        </section>
+        <!--====================================
+              MES FORMATIONS
+        =====================================-->
+
+        <section class="formations-section" id="formations">
+
+
+            <div class="section-header">
+
+                <h2>
+
+                    Mes formations
+
+                </h2>
+
+
+                <p>
+
+                    Continuez votre apprentissage là où vous vous êtes arrêté.
+
+                </p>
+
+            </div>
+
+
+
+
+            <div class="formation-card">
+
+
+                <div class="formation-image">
+
+                    <i class="fa-solid fa-bullhorn"></i>
+
+                </div>
+
+
+
+                <div class="formation-info">
+
+
+                    <h3>
+
+                        Marketing Digital
+
+                    </h3>
+
+
+                    <p>
+
+                        Introduction au marketing,
+                        stratégies digitales,
+                        réseaux sociaux et publicité en ligne.
+
+                    </p>
+
+
+
+                    <div class="mini-progress">
+
+
+                        <div id="formationProgress"></div>
+
+
+                    </div>
+
+
+                    <span id="formationPercent">
+
+                        0% terminé
+
+                    </span>
+
+
+
+
+                    <button onclick="window.location.href='marketing.html'">
+
+                        Continuer la formation
+
+                    </button>
+
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+
+
+
+
+
+        <!--====================================
+              MES CERTIFICATS
+        =====================================-->
+
+        <section class="certificate-section" id="certificats">
+
+
+            <div class="section-header">
+
+                <h2>
+
+                    Mes certificats
+
+                </h2>
+
+
+                <p>
+
+                    Obtenez vos certificats après validation des formations.
+
+                </p>
+
+
+            </div>
+
+
+
+
+
+            <div class="certificate-card">
+
+
+                <i class="fa-solid fa-certificate"></i>
+
+
+                <div>
+
+
+                    <h3>
+
+                        Certification Marketing Digital
+
+                    </h3>
+
+
+                    <p>
+
+                        Statut :
+
+                        <span id="statutCertificat">
+
+                            🔒 Non disponible
+
+                        </span>
+
+                    </p>
+
+
+                </div>
+
+
+
+                <button onclick="ouvrirCertificat()">
+
+
+                    Voir certificat
+
+
+                </button>
+
+
+            </div>
+
+
+
+        </section>
+
+
+
+
+
+
+
+
+
+        <!--====================================
+              STATISTIQUES
+        =====================================-->
+
+        <section class="stats-section">
+
+
+
+            <div class="stat-card">
+
+
+                <i class="fa-solid fa-graduation-cap"></i>
+
+
+                <h2>
+
+                    50+
+
+                </h2>
+
+
+                <p>
+
+                    Formations
+
+                </p>
+
+
+            </div>
+
+
+
+
+
+            <div class="stat-card">
+
+
+                <i class="fa-solid fa-users"></i>
+
+
+                <h2>
+
+                    1000+
+
+                </h2>
+
+
+                <p>
+
+                    Apprenants
+
+                </p>
+
+
+            </div>
+
+
+
+
+
+            <div class="stat-card">
+
+
+                <i class="fa-solid fa-certificate"></i>
+
+
+                <h2>
+
+                    500+
+
+                </h2>
+
+
+                <p>
+
+                    Certificats
+
+                </p>
+
+
+            </div>
+
+
+
+
+
+            <div class="stat-card">
+
+
+                <i class="fa-solid fa-clock"></i>
+
+
+                <h2>
+
+                    24/7
+
+                </h2>
+
+
+                <p>
+
+                    Disponible
+
+                </p>
+
+
+            </div>
+
+
+
+        </section>
+
+
+
+
+
+
+
+
+
+        <!--====================================
+              CONTACT / SUPPORT
+        =====================================-->
+
+        <section class="support-section" id="contact">
+
+
+            <div>
+
+
+                <i class="fa-solid fa-headset"></i>
+
+
+                <h2>
+
+                    Besoin d'aide ?
+
+                </h2>
+
+
+                <p>
+
+                    Notre équipe BMJ SERVICE est disponible
+                    pour vous accompagner.
+
+                </p>
+
+
+            </div>
+
+
+
+            <a href="mailto:mussiwajustin@gmail.com" class="support-btn">
+
+                Contacter le support
+
+            </a>
+
+
+
+        </section>
+
+
+
+
+    </main>
+
+
+
+
+
+
+
+
+    <!--====================================
+                FOOTER
+    =====================================-->
+
+    <footer>
+
+
+        <div class="footer-logo">
+
+
+            <img src="images/logo.png">
+
+
+            <h3>
+
+                BMJ SERVICE
+
+            </h3>
+
+
+        </div>
+
+
+
+        <p>
+
+            Apprendre - Développer - Réussir
+
+        </p>
+
+
+
+        <div class="social">
+
+
+            <i class="fa-brands fa-facebook"></i>
+
+
+            <i class="fa-brands fa-whatsapp"></i>
+
+
+            <i class="fa-brands fa-linkedin"></i>
+
+
+        </div>
+
+
+
+        <small>
+
+            © 2026 BMJ SERVICE - Tous droits réservés.
+
+        </small>
+
+
+    </footer>
+    <script>
+
+
+        //================================================
+        // BMJ SERVICE
+        // DASHBOARD UTILISATEUR LOCAL
+        //================================================
+
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+
+
+
+
+            //================================================
+            // RECUPERATION UTILISATEUR CONNECTE
+            //================================================
+
+
+            let utilisateur = JSON.parse(
+
+                localStorage.getItem("bmjUtilisateurConnecte")
+
+            );
+
+
+
+
+
+            // Vérification connexion
+
+
+            if (!utilisateur) {
+
+
+                window.location.href = "connexion.html";
+
+
+                return;
+
+
+            }
+
+
+
+
+
+
+
+
+
+            //================================================
+            // INFORMATIONS GENERALES
+            //================================================
+
+
+
+            afficher("nomUtilisateur", utilisateur.nom);
+
+
+            afficher(
+                "nomComplet",
+                "Bienvenue " + utilisateur.nom + " 👋"
+            );
+
+
+
+            afficher(
+                "emailUtilisateur",
+                utilisateur.email
+            );
+
+
+
+            afficher(
+                "idBMJ",
+                utilisateur.id_bmj
+            );
+
+
+
+            afficher(
+                "telephoneUtilisateur",
+                utilisateur.telephone
+            );
+
+
+
+            afficher(
+                "paysUtilisateur",
+                utilisateur.pays
+            );
+
+
+
+            afficher(
+                "villeUtilisateur",
+                utilisateur.ville
+            );
+
+
+
+            afficher(
+                "domaineFormation",
+                utilisateur.domaine
+            );
+
+
+
+            afficher(
+                "niveauFormation",
+                utilisateur.niveau
+            );
+
+
+
+
+
+
+
+
+
+            //================================================
+            // PHOTO PROFIL
+            //================================================
+
+
+
+            let imageProfil = utilisateur.photo ?
+
+                "images/" + utilisateur.photo :
+
+                "images/user.png";
+
+
+
+
+            let photoUtilisateur =
+                document.getElementById("photoUtilisateur");
+
+
+
+            if (photoUtilisateur) {
+
+
+                photoUtilisateur.src = imageProfil;
+
+
+            }
+
+
+
+
+
+            let photoProfil =
+                document.getElementById("photoProfil");
+
+
+
+            if (photoProfil) {
+
+
+                photoProfil.src = imageProfil;
+
+
+            }
+
+
+
+
+
+
+
+
+
+            //================================================
+            // STATUT PREMIUM
+            //================================================
+
+
+
+            let premium =
+                document.getElementById("statutPremium");
+
+
+
+            if (premium) {
+
+
+
+                if (utilisateur.premium === true) {
+
+
+                    premium.innerHTML = "⭐ Membre Premium";
+
+
+                    premium.className = "premium";
+
+
+                }
+
+                else {
+
+
+                    premium.innerHTML = "🔒 Compte Gratuit";
+
+
+                    premium.className = "gratuit";
+
+
+                }
+
+
+
+            }
+
+
+
+
+
+
+
+
+
+            //================================================
+            // PROGRESSION FORMATION
+            //================================================
+
+
+
+            let progression = utilisateur.progression || 0;
+
+
+
+            let barre =
+                document.getElementById("progressBar");
+
+
+
+            if (barre) {
+
+
+                barre.style.width = progression + "%";
+
+
+            }
+
+
+
+
+            afficher(
+
+                "progressText",
+
+                progression + "%"
+
+            );
+
+
+
+
+
+            afficher(
+
+                "formationPercent",
+
+                progression + "% terminé"
+
+            );
+
+
+
+
+
+
+
+
+
+            //================================================
+            // CERTIFICAT
+            //================================================
+
+
+
+            let certificat =
+                document.getElementById("certificatStatut");
+
+
+
+            if (certificat) {
+
+
+
+                if (utilisateur.certificat === true) {
+
+
+
+                    certificat.innerHTML =
+
+                        "🎓 Certificat disponible";
+
+
+
+                }
+
+                else {
+
+
+                    certificat.innerHTML =
+
+                        "📘 Formation en cours";
+
+
+                }
+
+
+
+            }
+
+
+
+
+
+
+
+
+
+            //================================================
+            // NOMBRE DE FORMATIONS
+            //================================================
+
+
+
+            let formations =
+                utilisateur.formations || [];
+
+
+
+            afficher(
+
+                "nombreFormation",
+
+                formations.length
+
+            );
+
+
+
+
+
+
+
+
+
+            //================================================
+            // DATE INSCRIPTION
+            //================================================
+
+
+
+            if (utilisateur.dateCreation) {
+
+
+                afficher(
+
+                    "dateInscription",
+
+                    utilisateur.dateCreation
+
+                );
+
+
+            }
+
+
+
+
+
+        });
+
+
+
+
+
+
+
+
+
+        //================================================
+        // FONCTION AFFICHAGE
+        //================================================
+
+
+
+        function afficher(id, valeur) {
+
+
+            let element = document.getElementById(id);
+
+
+
+            if (element) {
+
+
+                element.innerHTML = valeur || "Non renseigné";
+
+
+            }
+
+
+
+        }
+
+
+
+
+
+
+
+
+
+        //================================================
+        // OUVRIR FORMATION
+        //================================================
+
+
+
+        function ouvrirFormation(page) {
+
+
+
+            let utilisateur = JSON.parse(
+
+                localStorage.getItem("bmjUtilisateurConnecte")
+
+            );
+
+
+
+
+            if (!utilisateur) {
+
+
+                window.location.href = "connexion.html";
+
+
+                return;
+
+
+            }
+
+
+
+            window.location.href = page;
+
+
+
+        }
+
+
+
+
+
+
+
+
+
+        //================================================
+        // ACCES PREMIUM
+        //================================================
+
+
+
+        function verifierPremium(page) {
+
+
+
+            let utilisateur = JSON.parse(
+
+                localStorage.getItem("bmjUtilisateurConnecte")
+
+            );
+
+
+
+
+
+            if (utilisateur && utilisateur.premium === true) {
+
+
+                window.location.href = page;
+
+
+            }
+
+            else {
+
+
+                window.location.href = "premium.html";
+
+
+            }
+
+
+
+        }
+
+
+
+
+
+
+
+
+
+        //================================================
+        // CERTIFICAT
+        //================================================
+
+
+
+        function ouvrirCertificat() {
+
+
+
+            let utilisateur = JSON.parse(
+
+                localStorage.getItem("bmjUtilisateurConnecte")
+
+            );
+
+
+
+
+            if (utilisateur && utilisateur.certificat === true) {
+
+
+                window.location.href = "certificat_final.html";
+
+
+            }
+
+            else {
+
+
+                window.location.href = "premium.html";
+
+
+            }
+
+
+
+        }
+
+
+
+
+
+
+
+
+
+        //================================================
+        // DECONNEXION
+        //================================================
+
+
+
+        let logout =
+            document.getElementById("logout");
+
+
+
+        if (logout) {
+
+
+
+            logout.onclick = function (e) {
+
+
+
+                e.preventDefault();
+
+
+
+                localStorage.removeItem(
+
+                    "bmjUtilisateurConnecte"
+
+                );
+
+
+
+                localStorage.removeItem(
+
+                    "bmjConnecte"
+
+                );
+
+
+
+                window.location.href = "connexion.html";
+
+
+
+            }
+
+
+
+        }
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
