@@ -1,180 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Inscription - BMJ SERVICE</title>
+
+
     <style>
-        /*=====================================
-        BMJ SERVICE
-======================================*/
+
+        /* ==================================================
+                RESET
+        ================================================== */
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-            scroll-behavior: smooth;
         }
+
+
+        /* ==================================================
+                BODY
+        ================================================== */
 
         body {
 
-            background: #f5f8fc;
-            color: #333;
-            overflow-x: hidden;
-
-        }
-
-        /*=====================================
-        NAVBAR
-======================================*/
-
-        header {
-
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
-
-            background: rgba(20, 90, 134, .95);
-
-            backdrop-filter: blur(15px);
-
-            display: flex;
-
-            justify-content: space-between;
-
-            align-items: center;
-
-            padding: 18px 8%;
-
-            box-shadow: 0 10px 30px rgba(0, 0, 0, .15);
-
-        }
-
-        .logo {
-
-            display: flex;
-
-            align-items: center;
-
-            gap: 15px;
-
-        }
-
-        .logo img {
-
-            width: 55px;
-
-            height: 55px;
-
-            border-radius: 50%;
-
-            background: white;
-
-        }
-
-        .logo h2 {
-
-            color: white;
-
-            font-size: 28px;
-
-            font-weight: 700;
-
-        }
-
-        .logo span {
-
-            color: #FFD54F;
-
-        }
-
-        nav {
-
-            display: flex;
-
-            gap: 30px;
-
-        }
-
-        nav a {
-
-            text-decoration: none;
-
-            color: white;
-
-            font-weight: 500;
-
-            transition: .3s;
-
-        }
-
-        nav a:hover {
-
-            color: #FFD54F;
-
-        }
-
-        /*=====================================
-        BUTTONS
-======================================*/
-
-        .btn {
-
-            background: #FFD54F;
-
-            color: #145A86;
-
-            padding: 13px 28px;
-
-            border-radius: 40px;
-
-            text-decoration: none;
-
-            font-weight: bold;
-
-            transition: .3s;
-
-            display: inline-block;
-
-        }
-
-        .btn:hover {
-
-            transform: translateY(-4px);
-
-            box-shadow: 0 10px 20px rgba(0, 0, 0, .20);
-
-        }
-
-        .btn2 {
-
-            margin-left: 15px;
-
-            background: white;
-
-            color: #145A86;
-
-        }
-
-        /*=====================================
-        HERO
-======================================*/
-
-        .hero {
-
-            width: 100%;
-
             min-height: 100vh;
-
-            background:
-
-                linear-gradient(rgba(0, 0, 0, .55), rgba(0, 0, 0, .55)),
-
-                url("images/banner.jpg") center/cover;
 
             display: flex;
 
@@ -182,668 +40,690 @@
 
             align-items: center;
 
-            text-align: center;
+            padding: 20px;
 
-            padding: 100px 10%;
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
 
-        }
-
-        .hero-content {
-
-            max-width: 900px;
-
-        }
-
-        .hero h1 {
-
-            color: white;
-
-            font-size: 60px;
-
-            margin-bottom: 25px;
+            background: #f3f6f9;
 
         }
 
-        .hero h1 span {
 
-            color: #FFD54F;
+        /* ==================================================
+                CONTAINER
+        ================================================== */
 
-        }
+        .container {
 
-        .hero p {
+            width: 100%;
 
-            color: #f1f1f1;
-
-            font-size: 22px;
-
-            line-height: 1.8;
-
-            margin-bottom: 40px;
+            max-width: 430px;
 
         }
 
-        /*=====================================
-        SECTION
-======================================*/
 
-        section {
-
-            padding: 90px 8%;
-
-        }
-
-        .title {
-
-            text-align: center;
-
-            margin-bottom: 60px;
-
-        }
-
-        .title h2 {
-
-            color: #145A86;
-
-            font-size: 42px;
-
-        }
-
-        .title p {
-
-            margin-top: 10px;
-
-            color: #666;
-
-        }
-
-        /*=====================================
-        CARDS
-======================================*/
-
-        .cards {
-
-            display: grid;
-
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-
-            gap: 30px;
-
-        }
+        /* ==================================================
+                CARD
+        ================================================== */
 
         .card {
 
-            background: white;
-
-            border-radius: 20px;
-
-            overflow: hidden;
-
-            transition: .4s;
-
-            box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
-
-        }
-
-        .card:hover {
-
-            transform: translateY(-10px);
-
-        }
-
-        .card img {
-
-            width: 100%;
-
-            height: 220px;
-
-            object-fit: cover;
-
-        }
-
-        .card-content {
-
-            padding: 25px;
-
-        }
-
-        .card-content i {
-
-            font-size: 45px;
-
-            color: #145A86;
-
-            margin-bottom: 15px;
-
-        }
-
-        .card-content h3 {
-
-            color: #145A86;
-
-            margin-bottom: 15px;
-
-        }
-
-        .card-content p {
-
-            color: #666;
-
-            line-height: 1.7;
-
-        }
-
-        /*=====================================
-        FEATURES
-======================================*/
-
-        .features {
-
-            display: grid;
-
-            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-
-            gap: 25px;
-
-        }
-
-        .feature {
-
-            background: white;
+            background: #ffffff;
 
             padding: 35px;
 
-            border-radius: 20px;
+            border-radius: 18px;
+
+            box-shadow:
+                0 15px 40px
+                rgba(0, 0, 0, 0.10);
+
+        }
+
+
+        /* ==================================================
+                LOGO
+        ================================================== */
+
+        .logo {
 
             text-align: center;
 
-            box-shadow: 0 10px 20px rgba(0, 0, 0, .08);
+            margin-bottom: 30px;
 
         }
 
-        .feature i {
 
-            font-size: 55px;
-
-            color: #FFD54F;
-
-            margin-bottom: 20px;
-
-        }
-
-        .feature h3 {
-
-            color: #145A86;
-
-            margin-bottom: 15px;
-
-        }
-
-        /*=====================================
-        FOOTER
-======================================*/
-
-        footer {
-
-            background: #145A86;
-
-            color: white;
-
-            text-align: center;
-
-            padding: 50px 20px;
-
-        }
-
-        footer h3 {
+        .logo h1 {
 
             font-size: 30px;
 
-            margin-bottom: 15px;
+            color: #145a86;
+
+            margin-bottom: 8px;
 
         }
 
-        footer p {
 
-            opacity: .8;
+        .logo h1 span {
 
-            margin: 10px 0;
-
-        }
-
-        .social {
-
-            margin-top: 20px;
+            color: #d6a72c;
 
         }
 
-        .social a {
 
-            display: inline-flex;
+        .logo p {
 
-            justify-content: center;
+            color: #777;
 
-            align-items: center;
-
-            width: 50px;
-
-            height: 50px;
-
-            background: white;
-
-            color: #145A86;
-
-            border-radius: 50%;
-
-            margin: 0 8px;
-
-            text-decoration: none;
-
-            transition: .3s;
+            font-size: 14px;
 
         }
 
-        .social a:hover {
 
-            background: #FFD54F;
+        /* ==================================================
+                FORM
+        ================================================== */
 
-            transform: translateY(-5px);
+        .form-group {
+
+            margin-bottom: 18px;
 
         }
 
-        /*=====================================
-        MOBILE MENU
-======================================*/
 
-        .menu-toggle {
+        .form-group label {
 
-            display: none;
+            display: block;
+
+            margin-bottom: 7px;
+
+            color: #333;
+
+            font-size: 14px;
+
+            font-weight: 600;
+
+        }
+
+
+        .form-group input {
+
+            width: 100%;
+
+            padding: 13px 14px;
+
+            border: 1px solid #d9dfe5;
+
+            border-radius: 9px;
+
+            outline: none;
+
+            font-size: 15px;
+
+            transition: 0.2s;
+
+        }
+
+
+        .form-group input:focus {
+
+            border-color: #145a86;
+
+            box-shadow:
+                0 0 0 3px
+                rgba(20, 90, 134, 0.08);
+
+        }
+
+
+        /* ==================================================
+                BOUTON
+        ================================================== */
+
+        #btnInscription {
+
+            width: 100%;
+
+            border: none;
+
+            padding: 14px;
+
+            border-radius: 9px;
+
+            background: #145a86;
 
             color: white;
 
-            font-size: 30px;
+            font-size: 16px;
+
+            font-weight: bold;
 
             cursor: pointer;
 
-        }
-
-        /*=====================================
-        RESPONSIVE
-======================================*/
-
-        @media(max-width:992px) {
-
-            .hero h1 {
-
-                font-size: 45px;
-
-            }
-
-            nav {
-
-                gap: 18px;
-
-            }
+            transition: 0.2s;
 
         }
 
-        @media(max-width:768px) {
 
-            header {
+        #btnInscription:hover {
 
-                padding: 18px 20px;
+            background: #0d4568;
 
-            }
+        }
 
-            nav {
 
-                position: fixed;
+        #btnInscription:disabled {
 
-                top: 90px;
+            opacity: 0.6;
 
-                left: -100%;
+            cursor: not-allowed;
 
-                width: 100%;
+        }
 
-                background: #145A86;
 
-                flex-direction: column;
+        /* ==================================================
+                MESSAGE
+        ================================================== */
 
-                padding: 30px;
+        #message {
 
-                transition: .4s;
+            margin-top: 18px;
 
-            }
+            text-align: center;
 
-            nav.active {
+            font-size: 14px;
 
-                left: 0;
+            font-weight: 600;
 
-            }
+            min-height: 20px;
 
-            .menu-toggle {
+        }
 
-                display: block;
 
-            }
+        .success {
 
-            .hero {
+            color: #16803c;
 
-                padding: 120px 25px;
+        }
 
-            }
 
-            .hero h1 {
+        .error {
 
-                font-size: 35px;
+            color: #d62828;
 
-            }
+        }
 
-            .hero p {
 
-                font-size: 18px;
+        /* ==================================================
+                RESPONSIVE
+        ================================================== */
 
-            }
+        @media (max-width: 480px) {
 
-            .btn {
+            .card {
 
-                display: block;
-
-                margin: 15px auto;
+                padding: 25px 20px;
 
             }
 
-            .btn2 {
 
-                margin-left: 0;
+            .logo h1 {
 
-            }
-
-            .title h2 {
-
-                font-size: 30px;
+                font-size: 26px;
 
             }
 
         }
 
-        @media(max-width:500px) {
-
-            .hero h1 {
-
-                font-size: 28px;
-
-            }
-
-            .hero p {
-
-                font-size: 16px;
-
-            }
-
-            .logo h2 {
-
-                font-size: 22px;
-
-            }
-
-        }
     </style>
+
 </head>
+
 
 <body>
 
-    <body>
 
-        <!-- ================= HEADER ================= -->
+    <!-- ==================================================
+            CONTAINER
+    ================================================== -->
 
-        <header>
+    <div class="container">
+
+
+        <!-- ==================================================
+                CARD
+        ================================================== -->
+
+        <div class="card">
+
+
+            <!-- ==================================================
+                    LOGO
+            ================================================== -->
 
             <div class="logo">
 
-                <img src="images/logo.png" alt="BMJ SERVICE">
-
-                <h2>BMJ <span>SERVICE</span></h2>
-
-            </div>
-
-            <div class="menu-toggle">
-
-                <i class="fa-solid fa-bars"></i>
-
-            </div>
-
-            <nav>
-
-                <a href="#">Accueil</a>
-
-                <a href="#formations">Formations</a>
-
-                <a href="#categories">Catégories</a>
-
-                <a href="#apropos">À propos</a>
-
-                <a href="#contact">Contact</a>
-
-                <a href="connexion.html">Connexion</a>
-
-                <a href="inscription.html" class="btn">Créer un compte</a>
-
-            </nav>
-
-        </header>
-
-        <!-- ================= HERO ================= -->
-
-        <section class="hero">
-
-            <div class="hero-content">
-
                 <h1>
-
-                    Développez vos compétences avec
-
-                    <span>BMJ SERVICE</span>
-
+                    BMJ <span>SERVICE</span>
                 </h1>
 
                 <p>
-
-                    BMJ SERVICE est une plateforme moderne de formation professionnelle
-                    accessible sur ordinateur, tablette et téléphone.
-                    Apprenez auprès des meilleurs formateurs dans plusieurs domaines
-                    et obtenez des compétences recherchées sur le marché du travail.
-
-                </p>
-
-                <a href="inscription.html" class="btn">
-
-                    Commencer maintenant
-
-                </a>
-
-                <a href="inscription.html" class="btn btn2">
-
-                    Explorer les formations
-
-                </a>
-
-            </div>
-
-        </section>
-
-        <!-- ================= DOMAINES ================= -->
-
-        <section id="categories">
-
-            <div class="title">
-
-                <h2>Nos domaines de formation</h2>
-
-                <p>
-
-                    Choisissez le domaine qui correspond à votre carrière.
-
+                    Créez votre compte
                 </p>
 
             </div>
 
-            <div class="cards">
 
-                <div class="card">
+            <!-- ==================================================
+                    FORMULAIRE
+            ================================================== -->
 
-                    <img src="images/entrepreneuriat.jpg">
+            <form id="inscriptionForm">
 
-                    <div class="card-content">
 
-                        <i class="fa-solid fa-briefcase"></i>
+                <!-- NOM -->
 
-                        <h3>Entrepreneuriat</h3>
+                <div class="form-group">
 
-                        <p>
+                    <label for="nom">
+                        Nom
+                    </label>
 
-                            Apprenez à créer, développer et gérer votre entreprise
-                            avec des méthodes modernes.
-
-                        </p>
-
-                        <br>
-
-                        <a href="#" class="btn">
-
-                            Découvrir
-
-                        </a>
-
-                    </div>
+                    <input
+                        type="text"
+                        id="nom"
+                        name="nom"
+                        placeholder="Votre nom"
+                        autocomplete="family-name"
+                        required
+                    >
 
                 </div>
 
-                <div class="card">
 
-                    <img src="images/leadership.jpg">
+                <!-- PRENOM -->
 
-                    <div class="card-content">
+                <div class="form-group">
 
-                        <i class="fa-solid fa-crown"></i>
+                    <label for="prenom">
+                        Prénom
+                    </label>
 
-                        <h3>Leadership</h3>
-
-                        <p>
-
-                            Développez votre leadership afin de mieux gérer
-                            vos équipes et vos projets.
-
-                        </p>
-
-                        <br>
-
-                        <a href="#" class="btn">
-
-                            Découvrir
-
-                        </a>
-
-                    </div>
+                    <input
+                        type="text"
+                        id="prenom"
+                        name="prenom"
+                        placeholder="Votre prénom"
+                        autocomplete="given-name"
+                        required
+                    >
 
                 </div>
 
-                <div class="card">
 
-                    <img src="images/marketing.jpg">
+                <!-- EMAIL -->
 
-                    <div class="card-content">
+                <div class="form-group">
 
-                        <i class="fa-solid fa-chart-line"></i>
+                    <label for="email">
+                        Adresse e-mail
+                    </label>
 
-                        <h3>Marketing Digital</h3>
-
-                        <p>
-
-                            Maîtrisez Facebook Ads,
-                            Google Ads,
-                            TikTok,
-                            Instagram,
-                            le référencement et bien plus.
-
-                        </p>
-
-                        <br>
-
-                        <a href="#" class="btn">
-
-                            Découvrir
-
-                        </a>
-
-                    </div>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="exemple@email.com"
+                        autocomplete="email"
+                        required
+                    >
 
                 </div>
 
-                <div class="card">
 
-                    <img src="images/sante.jpg">
+                <!-- MOT DE PASSE -->
 
-                    <div class="card-content">
+                <div class="form-group">
 
-                        <i class="fa-solid fa-heart-pulse"></i>
+                    <label for="password">
+                        Mot de passe
+                    </label>
 
-                        <h3>Santé & Environnement</h3>
-
-                        <p>
-
-                            Découvrez les bonnes pratiques en santé,
-                            hygiène,
-                            sécurité
-                            et protection de l'environnement.
-
-                        </p>
-
-                        <br>
-
-                        <a href="#" class="btn">
-
-                            Découvrir
-
-                        </a>
-
-                    </div>
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Minimum 6 caractères"
+                        autocomplete="new-password"
+                        minlength="6"
+                        required
+                    >
 
                 </div>
 
-                <div class="card">
 
-                    <img src="images/education.jpg">
+                <!-- CONFIRMATION -->
 
-                    <div class="card-content">
+                <div class="form-group">
 
-                        <i class="fa-solid fa-graduation-cap"></i>
+                    <label for="confirmation">
+                        Confirmer le mot de passe
+                    </label>
 
-                        <h3>Éducation</h3>
-
-                        <p>
-
-                            Des formations pédagogiques destinées aux
-                            enseignants,
-                            étudiants
-                            et professionnels.
-
-                        </p>
-
-                        <br>
-
-                        <a href="#" class="btn">
-
-                            Découvrir
-
-                        </a>
-
-                    </div>
+                    <input
+                        type="password"
+                        id="confirmation"
+                        name="confirmation"
+                        placeholder="Confirmez votre mot de passe"
+                        autocomplete="new-password"
+                        minlength="6"
+                        required
+                    >
 
                 </div>
 
-            </div>
 
-        </section>
-    </body>
+                <!-- BOUTON -->
+
+                <button
+                    type="submit"
+                    id="btnInscription"
+                >
+
+                    Créer mon compte
+
+                </button>
+
+
+            </form>
+
+
+            <!-- ==================================================
+                    MESSAGE
+            ================================================== -->
+
+            <div id="message"></div>
+
+
+        </div>
+
+    </div>
+
+
+
+<script>
+
+/* =========================================================
+        BMJ SERVICE
+        FRONTEND INSCRIPTION
+========================================================= */
+
+
+/* =========================================================
+        URL DE NOTRE API PHP
+=========================================================
+
+        IMPORTANT :
+
+        Remplace cette adresse par le véritable
+        domaine de ton API InfinityFree.
+
+========================================================= */
+
+const API_URL =
+    "https://TON-DOMAINE-INFINITYFREE.com/api/index.php";
+
+
+/* =========================================================
+        ELEMENTS HTML
+========================================================= */
+
+const formulaire =
+    document.getElementById(
+        "inscriptionForm"
+    );
+
+
+const message =
+    document.getElementById(
+        "message"
+    );
+
+
+const bouton =
+    document.getElementById(
+        "btnInscription"
+    );
+
+
+/* =========================================================
+        INSCRIPTION
+========================================================= */
+
+formulaire.addEventListener(
+    "submit",
+    async function(event) {
+
+        event.preventDefault();
+
+
+        /* ==================================================
+                RECUPERATION
+        ================================================== */
+
+        const nom =
+            document
+            .getElementById("nom")
+            .value
+            .trim();
+
+
+        const prenom =
+            document
+            .getElementById("prenom")
+            .value
+            .trim();
+
+
+        const email =
+            document
+            .getElementById("email")
+            .value
+            .trim();
+
+
+        const password =
+            document
+            .getElementById("password")
+            .value;
+
+
+        const confirmation =
+            document
+            .getElementById("confirmation")
+            .value;
+
+
+        /* ==================================================
+                RESET MESSAGE
+        ================================================== */
+
+        message.textContent = "";
+
+        message.className = "";
+
+
+        /* ==================================================
+                VERIFICATION MOT DE PASSE
+        ================================================== */
+
+        if (password !== confirmation) {
+
+            message.textContent =
+                "Les mots de passe ne correspondent pas.";
+
+            message.className =
+                "error";
+
+            return;
+
+        }
+
+
+        /* ==================================================
+                DESACTIVER BOUTON
+        ================================================== */
+
+        bouton.disabled = true;
+
+        bouton.textContent =
+            "Création du compte...";
+
+
+        try {
+
+
+            /* ==================================================
+                    REQUETE API
+            ================================================== */
+
+            const response =
+                await fetch(
+                    API_URL,
+                    {
+
+                        method: "POST",
+
+                        headers: {
+
+                            "Content-Type":
+                                "application/json"
+
+                        },
+
+                        body:
+                            JSON.stringify({
+
+                                nom: nom,
+
+                                prenom: prenom,
+
+                                email: email,
+
+                                password: password
+
+                            })
+
+                    }
+                );
+
+
+            /* ==================================================
+                    REPONSE
+            ================================================== */
+
+            const data =
+                await response.json();
+
+
+            console.log(
+                "Réponse API :",
+                data
+            );
+
+
+            /* ==================================================
+                    SUCCES
+            ================================================== */
+
+            if (
+                response.ok &&
+                data.success
+            ) {
+
+                message.textContent =
+                    data.message;
+
+                message.className =
+                    "success";
+
+
+                formulaire.reset();
+
+
+                console.log(
+                    "Utilisateur créé :",
+                    data.user
+                );
+
+
+            }
+
+
+            /* ==================================================
+                    ERREUR
+            ================================================== */
+
+            else {
+
+                message.textContent =
+                    data.message ||
+                    "Une erreur est survenue.";
+
+                message.className =
+                    "error";
+
+            }
+
+
+        }
+
+
+        /* ==================================================
+                ERREUR RESEAU / CORS
+        ================================================== */
+
+        catch (error) {
+
+            console.error(
+                "Erreur API :",
+                error
+            );
+
+
+            message.textContent =
+                "Impossible de contacter le serveur.";
+
+
+            message.className =
+                "error";
+
+        }
+
+
+        /* ==================================================
+                REACTIVER BOUTON
+        ================================================== */
+
+        finally {
+
+            bouton.disabled = false;
+
+            bouton.textContent =
+                "Créer mon compte";
+
+        }
+
+    }
+);
+
+</script>
+
+
+</body>
 
 </html>
